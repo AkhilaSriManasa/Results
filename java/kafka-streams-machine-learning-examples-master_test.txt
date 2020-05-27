@@ -1,0 +1,85 @@
+﻿
+***********other formats****************
+data-00000-of-00001
+gitignore
+h5
+index
+json
+pb
+properties
+xml
+zip
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/LICENSE
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/readme.md
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/readme.md
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/main/resources/DL4J_Resources/iris.txt
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/readme.md
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/readme.md
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/generatedModels/CNN_inception5h/imagenet_comp_graph_label_strings.txt
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/generatedModels/CNN_inception5h/LICENSE
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/readme.md
+
+***********img file list***************
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/TensorFlow_Images/devil.png
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/TensorFlow_Images/new_airplane.jpg
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/TensorFlow_Images/trained_airplane_1.jpg
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/TensorFlow_Images/trained_airplane_2.jpg
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/TensorFlow_Images/trained_butterfly.jpg
+
+***********uml file list***************
+
+***********other file list***************
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/.gitignore
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/pom.xml
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/pom.xml
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/main/resources/log4j.properties
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/main/resources/generatedModels/DL4J/DL4J_Iris_Model.zip
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/pom.xml
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/resources/log4j.properties
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/resources/generatedModels/DeepWater_model_python_1503570558230_1.zip
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/resources/generatedModels/GBM_model_python_1503397740678_1.zip
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/src/main/resources/log4j.properties
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/pom.xml
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/log4j.properties
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/generatedModels/CNN_inception5h/tensorflow_inception_graph.pb
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/generatedModels/TensorFlow_Census/saved_model.pb
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/generatedModels/TensorFlow_Census/test.json
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/generatedModels/TensorFlow_Census/variables/variables.data-00000-of-00001
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/resources/generatedModels/TensorFlow_Census/variables/variables.index
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/pom.xml
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/src/main/resources/log4j.properties
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/src/main/resources/generatedModels/Keras/simple_mlp.h5
+
+***********other code file list***************
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/main/java/com/github/megachucky/kafka/streams/machinelearning/models/DeepLearning4J_CSV_Iris_Model.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/main/java/com/github/megachucky/kafka/streams/machinelearning/models/DeepLearning4J_CSV_Model_Inference.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/test/java/com/github/jukkakarvanen/kafka/streams/integration/utils/TestEmbeddedKafkaCluster.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/test/java/com/github/jukkakarvanen/kafka/streams/integration/utils/TestKafkaStreams.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/dl4j-deeplearning-iris/src/test/java/com/github/megachucky/kafka/streams/machinelearning/test/Kafka_Streams_MachineLearning_DL4J_DeepLearning_Iris_IntegrationTest.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_MachineLearning_H2O_Application.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_MachineLearning_H2O_DeepLearning_Example.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_MachineLearning_H2O_GBM_Example.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/java/com/github/megachucky/kafka/streams/machinelearning/models/deeplearning_fe7c1f02_08ec_4070_b784_c2531147e451.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/main/java/com/github/megachucky/kafka/streams/machinelearning/models/gbm_pojo_test.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/test/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_MachineLearning_H2O_DeepLearning_ExampleTest.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/test/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_MachineLearning_H2O_DeepLearning_Example_IntegrationTest.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/test/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_MachineLearning_H2O_GBM_ExampleTest.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/test/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_MachineLearning_H2O_GBM_Example_IntegrationTest.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/test/java/com/github/megachucky/kafka/streams/machinelearning/TestEmbeddedKafkaCluster.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/h2o-gbm/src/test/java/com/github/megachucky/kafka/streams/machinelearning/TestKafkaStreams.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/src/main/java/com/github/megachucky/kafka/streams/machinelearning/StreamsStarterApp.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/main/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_TensorFlow_Image_Recognition_Example.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/test/java/com/github/jukkakarvanen/kafka/streams/integration/utils/TestEmbeddedKafkaCluster.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/test/java/com/github/jukkakarvanen/kafka/streams/integration/utils/TestKafkaStreams.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/test/java/com/github/megachucky/kafka/streams/machinelearning/Kafka_Streams_TensorFlow_Image_Recognition_ExampleTest.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-image-recognition/src/test/java/com/github/megachucky/kafka/streams/machinelearning/test/Kafka_Streams_TensorFlow_Image_Recognition_Example_IntegrationTest.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/src/main/resources/generatedModels/Keras/keras-model-script.py
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/src/test/java/com/github/jukkakarvanen/kafka/streams/integration/utils/TestEmbeddedKafkaCluster.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/src/test/java/com/github/jukkakarvanen/kafka/streams/integration/utils/TestKafkaStreams.java
+kafka-streams-machine-learning-examples-master/kafka-streams-machine-learning-examples-master/tensorflow-keras/src/test/java/com/github/megachucky/kafka/streams/machinelearning/test/Kafka_Streams_TensorFlow_Keras_Example_IntegrationTest.java

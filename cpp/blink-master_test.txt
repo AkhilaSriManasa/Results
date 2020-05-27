@@ -1,0 +1,41 @@
+﻿
+***********other formats****************
+editorconfig
+gitignore
+hpp
+sln
+vcxproj
+vcxproj.filters
+
+***********source code file list***************
+blink-master/blink-master/source/blink.cpp
+blink-master/blink-master/source/blink_linker.cpp
+blink-master/blink-master/source/coff_reader.cpp
+blink-master/blink-master/source/main.cpp
+blink-master/blink-master/source/msf_reader.cpp
+blink-master/blink-master/source/pdb_reader.cpp
+
+***********h file list***************
+
+***********md file list***************
+blink-master/blink-master/CMakeLists.txt
+blink-master/blink-master/LICENSE.md
+blink-master/blink-master/README.md
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+blink-master/blink-master/.editorconfig
+blink-master/blink-master/.gitignore
+blink-master/blink-master/blink.sln
+blink-master/blink-master/blink.vcxproj
+blink-master/blink-master/blink.vcxproj.filters
+blink-master/blink-master/source/blink.hpp
+blink-master/blink-master/source/coff_reader.hpp
+blink-master/blink-master/source/msf_reader.hpp
+blink-master/blink-master/source/pdb_reader.hpp
+blink-master/blink-master/source/scoped_handle.hpp
+
+***********other code file list***************

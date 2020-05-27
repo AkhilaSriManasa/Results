@@ -1,0 +1,49 @@
+﻿/*
+//www.apache.org/licenses/LICENSE-2.0
+/*draw box */
+/* draw landmark */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*draw box */
+/* draw landmark */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//calculate the landmark
+//Get Final Result
+//set_box_bound(face_list,img_h,img_w);
+//switch x and y, since working_img is transposed
+/*Note: regress's value is swaped here!!!*/
+/*Note: switched x,y points value too..*/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/* Load the network. */
+//batch mode
+//calculate the landmark
+//Get Final Result
+/* load the data */
+/* filter output now */
+/* load the data */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/* To make tensor release happy...*/
+/* tensorflow related*/
+/*retrieval the forward results*/
+/* prepare input image data */
+/* tensorflow  related */
+/*retrieval the forward results*/
+/*Note: regress's value is swaped here!!!*/
+/* prepare input image data */
+/* tensorflow  related */
+/*retrieval the forward results*/
+/*Note: switched x,y points value too..*/
+// RNet
+//ONet
+//calculate the landmark
+//Get Final Result
+//switch x and y, since working_img is transposed
+/*
+//www.apache.org/licenses/LICENSE-2.0

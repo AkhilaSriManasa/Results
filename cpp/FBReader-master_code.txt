@@ -1,0 +1,2629 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\atom-tests\src\ATOMDateTests.cpp
+/*
+// test years
+// test month, any year
+// test days, year > 0, month > 0
+// test days, year = 0, month > 0
+// test days, year > 0, month = 0
+// test days, year = 0, month = 0
+// test hours, any date
+// test minutes, hours > 0, any date
+// test minutes, hours = 0, any date
+// test seconds, minutes > 0, hours > 0, any date
+// test seconds, minutes > 0, hours = 0, any date
+// test seconds, minutes = 0, hours > 0, any date
+// test seconds, minutes = 0, hours = 0, any date
+// test sfraction, any seconds, minutes > 0, hours > 0, any date
+// test sfraction, any seconds, minutes > 0, hours = 0, any date
+// test sfraction, any seconds, minutes = 0, hours > 0, any date
+// test sfraction, any seconds, minutes = 0, hours = 0, any date
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\atom-tests\src\ATOMDateTests_parse.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\atom-tests\src\ATOMDateTests_tz.cpp
+/*
+// test years
+// test month, any year
+// test hours, any date
+// test minutes, hours > 0, any date
+// test seconds, minutes > 0, hours > 0, any date
+// test sfraction, any seconds, minutes > 0, hours > 0, any date
+// test sfraction, any seconds, minutes > 0, hours = 0, any date
+// test sfraction, any seconds, minutes = 0, hours > 0, any date
+// test sfraction, any seconds, minutes = 0, hours = 0, any date
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\atom-tests\src\main.cpp
+/*
+// mch == '*'
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\moto\util\language_detector.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\blockTree\FBReaderNode.cpp
+/*
+// auxiliary makes font size and hSkip to be 70% of their normal sizes
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\bookmodel\BookModel.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\bookmodel\BookReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\BooksDB.cpp
+/*
+/* book_id */) {
+/* parent_id */
+/* book_id */
+/* file_id */
+/* paragraph */
+/* word      */
+/* char      */) {
+/* paragraph */
+/* word      */
+/* char      */) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\BooksDBQuery.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\BooksDBUtil.cpp
+/*
+// TODO: check file ???
+/*, true OR false ? */); // TODO: check file ???
+// TODO: replace with BooksDB call???
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\BooksDB_BookAuthor.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\BooksDB_BookSeries.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\BooksDB_BookTag.cpp
+/*
+// make copy of vector
+// Tag `tag` must be removed from BookTag table.
+// This tag is already in DataBase => need not to be inserted.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\ClearBooksDBRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\DeleteBookRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\DeleteFileEntriesRunnable.cpp
+/*
+/* file_id  */ ) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\FindFileIdRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\InitBooksDBRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\LoadFileEntriesRunnable.cpp
+/*
+/* name */) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\LoadRecentBooksRunnable.cpp
+/*
+/* file_id */) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\SaveAuthorsRunnable.cpp
+/*
+// save link to vector
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\SaveBookRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\SaveBookStateStackRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\SaveRecentBooksRunnable.cpp
+/*
+// copy vector
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\SaveSeriesRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\booksdb\runnables\SaveTableBookRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DataBase.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBCommand.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBCommandParameter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBConnection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBDataReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBIntValue.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBNullValue.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBRealValue.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBTextValue.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\DBValue.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\implsqlite\SQLiteCommand.cpp
+/*
+/* column = */ 0);
+/* zero-terminated string */, SQLITE_TRANSIENT);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\implsqlite\SQLiteConnection.cpp
+/*
+// TODO: error & message handling
+// TODO: error & message handling
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\implsqlite\SQLiteDataBase.cpp
+/*
+//----------- Transaction subclass -----------------
+//((DBTextValue &) *myDataBase.myMakeSavePoint->parameter("@name").value()).setValue(name());
+//myStarted = myDataBase.myMakeSavePoint->execute();
+//((DBTextValue &) *myDataBase.myCommitSavePoint->parameter("@name").value()).setValue(name());
+//myDataBase.myCommitSavePoint->execute();
+//((DBTextValue &) *myDataBase.myRollbackSavePoint->parameter("@name").value()).setValue(name());
+//myDataBase.myRollbackSavePoint->execute();
+//----------- End Transaction subclass -----------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\implsqlite\SQLiteDataReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\database\sqldb\implsqlite\SQLiteFactory.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\encodingOption\EncodingOptionEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\external\ProgramCollection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\AddBookAction.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\BooksOrderAction.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\BookTextView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\ContentsView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\FBReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\FBReaderActionCode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\FBReaderActions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\FBView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\main.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\PreferencesPopupData.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\RecentBooksPopupData.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\ScrollingAction.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\SearchActions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\SearchOnNetworkAction.cpp
+/*
+//ZLStringOption seriesOption(FBCategoryKey::SEARCH, "network", "series", "");
+//searchDialog->addOption(ZLResourceKey("series"), seriesOption);
+//std::string seriesPattern = seriesOption.value();
+//ZLStringUtil::stripWhiteSpaces(seriesPattern);
+//!seriesPattern.empty() ||
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\fbreader\TimeUpdater.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\EncodedTextReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\FormatPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\PluginCollection.cpp
+/*
+//#include "docbook/DocBookPlugin.h"
+//#include "pdf/PdfPlugin.h"
+//ourInstance->myPlugins.push_back(new DocBookPlugin());
+//ourInstance->myPlugins.push_back(new PdfPlugin());
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\BitStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\CHMFile.cpp
+/*
+// TODO: implement
+// TODO: ???
+// header start
+// DWORD total length
+// DWORD unknown
+// DWORD timestamp
+// DWORD language id
+// 0x10 bytes 1st GUID
+// 0x10 bytes 2nd GUID
+// QWORD section 0 offset
+// QWORD section 0 length
+// header end
+// additional header data start
+// additional header data end
+// header section 1 start
+// directory header start
+// DWORD version
+// DWORD length
+// DWORD 0x000A
+// DWORD chunk size
+// DWORD density
+// DWORD depth
+// DWORD root chunk number
+// DWORD first chunk number
+// DWORD last chunk number
+// DWORD -1
+// ...
+// header section 1 end
+// chunk number
+// file size is greater than 60 Mb
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\CHMFileImage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\CHMPlugin.cpp
+/*
+/*
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\CHMReferenceCollection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\E8Decoder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\HHCReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\HHCReferenceCollector.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\HtmlSectionReader.cpp
+/*
+//bookReader().endParagraph();
+//bookReader().beginParagraph();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\HuffmanDecoder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\chm\LZXDecompressor.cpp
+/*
+// no break; it's not a mistake
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\css\StyleSheetParser.cpp
+/*
+/*");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\css\StyleSheetTable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\docbook\DocBookBookReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\docbook\DocBookDescriptionReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\docbook\DocBookPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\docbook\DocBookReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\dummy\DummyBookReader.cpp
+/*
+/*
+//return readDocument(stream);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\dummy\DummyMetaInfoReader.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\dummy\DummyPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\fb2\FB2BookReader.cpp
+/*
+//const char *vOffset = attributeValue(xmlattributes, "voffset");
+//char offset = (vOffset != 0) ? atoi(vOffset) : 0;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\fb2\FB2CoverReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\fb2\FB2MetaInfoReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\fb2\FB2Plugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\fb2\FB2Reader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\fb2\FB2TagManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\html\HtmlBookReader.cpp
+/*
+/*
+//return new HtmlBreakTagAction(*this, HtmlBreakTagAction::BREAK_AT_END);
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\html\HtmlDescriptionReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\html\HtmlEntityCollection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\html\HtmlPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\html\HtmlReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\html\HtmlReaderStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\oeb\NCXReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\oeb\OEBBookReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\oeb\OEBCoverReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\oeb\OEBMetaInfoReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\oeb\OEBPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\oeb\OEBTextStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\openreader\OpenReaderPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\openreader\ORBookReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\openreader\ORDescriptionReader.cpp
+/*
+// TODO: replace "dc" by real DC scheme name
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\BitReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\DocDecompressor.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\EReaderPlugin.cpp
+/*
+//TODO maybe anything else opens stream
+// Title; Author; Rights; Publisher; isbn;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\EReaderStream.cpp
+/*
+// Inflate compression
+// PalmDoc compression
+// Use it with offset presetting to zero record offset value
+// myBase offset: ^ + 2
+// myBase offset: ^ + 12
+// myBase offset: ^ + 14
+// myBase offset: ^ + 16
+// myBase offset: ^ + 28
+// myBase offset: ^ + 30
+// myBase offset: ^ + 32
+// myBase offset: ^ + 34
+// myBase offset: ^ + 36
+// myBase offset: ^ + 38
+// myBase offset: ^ + 40
+// myBase offset: ^ + 42
+// myBase offset: ^ + 44
+// myBase offset: ^ + 46
+// myBase offset: ^ + 48
+// myBase offset: ^ + 50
+// myBase offset: ^ + 52
+// myBase offset: ^ + 54
+// Maximum size of addressable space in PalmOS 
+// not more than 8192 bytes happens in the tested examples
+//TODO take in account returned bool value
+//false if wrong footnotes amount anounced in zero record
+//or corrupted or wrong footnote ids record
+//TODO take in account returned bool value
+//false if one of image record is corrupted
+/*
+//TODO may be it's needed here more bytes
+//TODO treat situation when there isn't PNG in first 128 bytes
+/*bool EReaderStream::hasExtraSections() const {
+//return myMaxRecordIndex < header().Offsets.size() - 1;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\HtmlMetainfoReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\HuffDecompressor.cpp
+/*
+//LE
+//LE
+//if ((codelen == 0) || (codelen > 32)) {
+//	return false;
+//} 
+//if (codelen == 0) {
+//	return false;
+//} 
+//TODO need index check 
+//TODO need index check 
+//TODO need index check 
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\MobipocketHtmlBookReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\MobipocketPlugin.cpp
+/*
+// author
+// subject
+// coveroffset
+// thumboffset
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PalmDocLikePlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PalmDocLikeStream.cpp
+/*
+//myBufferOffset = 0;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PalmDocPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PalmDocStream.cpp
+/*
+//'DH'	// HuffCDic compression
+//if (myHuffDecompressorPtr->error()) {
+//	myErrorCode = ERROR_UNKNOWN;
+//} 
+// PalmDoc compression
+// No compression
+// Uses with offset presetting to zero record offset value
+// myBase offset: ^ + 2
+// myBase offset: ^ + 4
+// myBase offset: ^ + 8	
+// myBase offset: ^ + 10
+//TODO Insert in this point error message about uncompatible records and numRecords from Header
+// myBase offset: ^ + 12
+/*
+// myBase offset: ^ + 14
+//Always = 2, if encrypted 
+// myBase offset: ^ 
+// myBase offset: ^ + 20
+// myBase offset: ^ + 24
+// myBase offset: ^ + 102 (0x70)
+// myBase offset: ^ + 106 (0x74)
+// myBase offset: ^ + 110 (0x78)
+// myBase offset: ^ + 242 (0xF2) 
+// myBase offset: ^ + 244 (0xF4)
+/*
+// point to first Huff section
+// point behind last Huff section 
+// myBase offset: ^ + 14
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PdbPlugin.cpp
+/*
+//int index = fileName.find(':');
+//ZLFile baseFile = (index == -1) ? file : ZLFile(fileName.substr(0, index));
+//ZLStringOption palmTypeOption(FBCategoryKey::BOOKS, file.path(), "PalmType", "");
+//palmTypeOption.setValue(palmType);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PdbReader.cpp
+/*
+// stream offset: +32
+// stream offset: +34
+// stream offset: +60
+// stream offset: +68
+// stream offset: +76
+// stream offset: +78
+// stream offset: +78 + 8 * records number  
+/*bool PdbRecord0::read(shared_ptr<ZLInputStream> stream) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PdbStream.cpp
+/*
+// myBase offset: startOffset + 78 + 8 * records number ( myHeader.Offsets.size() )
+// myBase offset: Offset[0] - zero record
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PluckerBookReader.cpp
+/*
+/*
+// just break line instead of horizontal rule (TODO: draw horizontal rule?)
+// color setting is ignored
+// underlined text is ignored
+// underlined text is ignored
+// strike-through text is ignored
+// strike-through text is ignored
+// custom font operations are ignored
+// TODO: add table processing
+// TODO: process table
+// TODO: process table
+// this should be impossible
+//std::cerr << "Oops... function #" << (int)(unsigned char)*ptr << "\n";
+// text (TODO: found sample file and test this code)
+// compressed text
+// image
+// compressed image
+// category record is ignored
+//std::cerr << "type = " << (int)type << "; ";
+//std::cerr << "typeCode = " << typeCode << "\n";
+// style sheet record is ignored
+// font page record is ignored
+// TODO: process tables
+// TODO: process tables
+// multiimage
+//std::cerr << "type = " << (int)type << "\n";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PluckerImages.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PluckerPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PluckerTextStream.cpp
+/*
+// this record is not text record
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PmlBookReader.cpp
+/*
+//don't have to be mixed with other style tags
+//Should not be mixed with other style tags
+//newLine();
+//case EXTERNAL_HYPERLINK:
+//case BOOK_HYPERLINK:
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\PmlReader.cpp
+/*
+/* 
+//www.m.ereader.com/ereader/help/dropbook/pml.htm
+//ccit205.wikispaces.com/Palm+Markup+Language+(PML)
+// tag action description			| close	| support	|
+// new page							|	-	|	+		|	
+// new chapter and new page			|	+	|	+		|
+// center alignment block			|	+	|	+		|
+// right alignment block			|	+	|	+		|
+// italize block					|	+	|	+		|
+// underlined block					|	+	|	+		|
+// overstrike block					|	+	|	-		|
+// invisible text block				|	+	|	+		|
+// indent block						|	+	|	+		|
+// indent with value				|	-	|	+		|
+// embed text width rule			|	-	|	-		|	
+// switch to normal font			|	-	|	+		|	
+// switch to std font				|+ or \n|	+		|	
+// switch to bold font (deprecated)	|+ or \n|	-		|	
+// switch to large font				|+ or \n|	+		|	
+// mark text as bold				|	+	|	+		|	
+// smaller font size and uppercase	|	+	|	+		|	
+// insert named image				|	-	|	+		|	
+// reference to another spot		| 	+	|	+		|
+// link anchor for \q reference		|	-	|	+		|
+// soft hyphen						|	-	|	-		|
+// reference index item				|	-	|	-		|
+// XN - new chapter, n indent level	|	+	|	-		|
+// Sp - mark text as superscript	|	+	|	+		|
+// Sb - mark text as subscript		|	+	|	+		|
+// Sd -	link to a sidebar			|	+	|	-		| 
+// CN - chapter title + indent level|	-	|	-		|
+// Fn - link to a footnote			|	+	|	+		|
+//TODO add close tag processing
+//processSidebarLink();
+//addHorizontalRule(parameter);
+//std::cerr << "PmlReader: unsupported tag: name: " << tagName << "	parameter: " << parameter << "\n"; 
+// '#' character has to stand before link label , so we should omit '#' for getting label
+// In case trailing or corrupted tag we use parameter entirely
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\SimplePdbPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\ZTXTPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdb\ZTXTStream.cpp
+/*
+// Hmm, this works on examples from manybooks.net,
+// but I don't understand what this code means :((
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdf\PdfBookReader.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdf\PdfDescriptionReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdf\PdfObject.cpp
+/*
+// TODO: process escaped characters
+/*
+// TODO: process filters array
+// end of dictionary
+// end of array
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdf\PdfPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\pdf\StringStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\rtf\RtfBookReader.cpp
+/*
+//DPRINT("change style not in text.\n");
+//DPRINT("add style emphasis.\n");
+//DPRINT("add style emphasis and strong.\n");
+//DPRINT("remove style emphasis.\n");
+//DPRINT("remove style strong n emphasis, add strong.\n");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\rtf\RtfDescriptionReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\rtf\RtfImage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\rtf\RtfPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\rtf\RtfReader.cpp
+/*
+//std::cerr << "Add style index: " << val << "\n";
+//sprintf(style_attributes[0], "%i", val);
+/*if (myState.Destination == rdsContent)*/ {
+//std::cerr << "Set style index: " << val << "\n";
+//sprintf(style_attributes[0], "%i", val);
+// &bullet;
+// &ndash;
+// &mdash;
+// &nbsp;
+// &emsp;
+// &ensp;
+// &lsquo;
+// &rsquo;
+// &ldquo;
+// &rdquo;
+// TODO: optimize
+// cr and lf are noise characters...
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\rtf\RtfReaderStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\tcr\PPLBookReader.cpp
+/*
+// "PPL\r\n"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\tcr\TcrPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\tcr\TcrStream.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\txt\PlainTextFormat.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\txt\TxtBookReader.cpp
+/*
+//myLineFeedCounter = 0;
+/* Fixed by Hatred: zero value was break LINE INDENT formater -
+// TODO: implement single option in PlainTextFormat
+//		if (!myInsideContentsParagraph && (myLineFeedCounter == myFormat.emptyLinesBeforeNewSection() + 1)) {
+/* Fixed by Hatred: remove '+ 1' for emptyLinesBeforeNewSection, it looks like very strange
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\txt\TxtPlugin.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\txt\TxtReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\util\EntityFilesCollector.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\util\MergedStream.cpp
+/*
+// works for nonnegative offsets only
+// coudn't be implemented
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\util\MiscUtil.cpp
+/*
+//") ||
+//") ||
+//");
+//feedbooks.com/book/stanza/";
+//www.feedbooks.com/book/stanza/";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\util\TextFormatDetector.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\util\XMLTextStream.cpp
+/*
+/*if ((len == 0) || !myReader->readFromBuffer(myStreamBuffer.data(), len)) {
+// works for nonnegative offsets only
+// couldn't be implemented
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\formats\xhtml\XHTMLReader.cpp
+/*
+//reader.myStyleSheetTable.dump();
+// TODO: increase left indent
+// TODO: replace bullet sign by number inside OL tag
+//addAction("html",	new XHTMLTagAction());
+//addAction("title",	new XHTMLTagAction());
+//addAction("meta",	new XHTMLTagAction());
+//addAction("script",	new XHTMLTagAction());
+//addAction("font",	new XHTMLTagAction());
+//addAction("ol",	new XHTMLTagAction());
+//addAction("ul",	new XHTMLTagAction());
+//addAction("dl",	new XHTMLTagAction());
+//addAction("area",	new XHTMLTagAction());
+//addAction("map",	new XHTMLTagAction());
+//addAction("base",	new XHTMLTagAction());
+//addAction("blockquote",	new XHTMLTagAction());
+//addAction("center",	new XHTMLTagAction());
+//addAction("head",	new XHTMLTagAction());
+//addAction("hr",	new XHTMLTagAction());
+//addAction("param",	new XHTMLTagAction());
+//addAction("q",	new XHTMLTagAction());
+//addAction("s",	new XHTMLTagAction());
+//addAction("big",	new XHTMLTagAction());
+//addAction("small",	new XHTMLTagAction());
+//addAction("u",	new XHTMLTagAction());
+//addAction("table",	new XHTMLTagAction());
+//addAction("tr",	new XHTMLTagAction());
+//addAction("caption",	new XHTMLTagAction());
+//addAction("span",	new XHTMLTagAction());
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\library\Author.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\library\Book.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\library\Comparators.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\library\Library.cpp
+/*
+// TODO: zip -> any archive
+// collect books from book path
+// other books from our database
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\library\Tag.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryActions\AuthorInfoDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryActions\BooksUtil.cpp
+/*
+// TODO: select current node (?) again
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryActions\LibraryAuthorActions.cpp
+/*
+// TODO: select current node (?) again
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryActions\LibraryBookActions.cpp
+/*
+// yes, we go through this label
+// TODO: select current node (?) again
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryActions\LibraryTagActions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryTree\AuthorNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryTree\BookNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryTree\LibraryByAuthorView.cpp
+/*
+/* if (node.isInstanceOf(SeriesNode::TYPE_ID)) */ {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryTree\LibraryByTagView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryTree\LibraryView.cpp
+/*
+// TODO: replace with == for shared_ptr<Book>
+//if (((BookNode*)*it)->book() == book) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryTree\SeriesNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\libraryTree\TagNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\BookInfo.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\FB2MigrationReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\HtmlDCTagsReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\migrate.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\Migration.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\Migration_0_10_4.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\Migration_0_11_0.cpp
+/*
+//return ext == "fb2";
+//return true;
+//r.run();
+/*std::map<std::string, unsigned long> ext2time;
+/* TODO: check correctness of migration order: 
+// clean books.xml
+//ZLTime start;
+/*ZLTime end;
+// clean books.xml
+// clean books.xml
+// clean books.xml
+// clean books.xml
+/*std::cerr << "     ext" << "   time,ms" << "   time/total,%" << "   number of books" <<  "    time for 1 book,ms" << std::endl;
+//shared_ptr<Book> fileBook = infoBook;
+//shared_ptr<Book> fileBook;
+// clean state.xml
+// clean state.xml
+// clean state.xml
+//shared_ptr<Book> book = BooksDBUtil::getBook(name, false);
+// clean state.xml
+// clean state.xml
+// clean state.xml
+// clean state.xml
+// clear books.xml & state.xml
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\Migration_0_8_11.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\Migration_0_8_13.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\Migration_0_8_16.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\migration\OEBMigrationReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\BookReference.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkBookCollection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkBookItem.cpp
+/*
+// TODO: remove a book from the library
+// TODO: remove a record from the database
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkCatalogItem.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkComparators.cpp
+/*
+/*if (book0.Index != book1.Index) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkErrors.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkItem.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkLink.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkLinkCollection.cpp
+/*
+//feedbooks.com/";
+//www.feedbooks.com/";
+//feedbooks.com/book/stanza/";
+//") + 3);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\NetworkOperationData.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\SearchResult.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\UserList.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\atom\ATOMConstructs.cpp
+/*
+/* NOP */;
+//case 8:
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\atom\ATOMContainers.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\atom\ATOMMetadata.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\NetworkAuthenticationManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\basic\BasicAuthenticationManager.cpp
+/*
+// TODO: is it so necessary to clean up cookies???
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\basic\BasicAuthenticationRequest.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\litres\LitResAuthenticationDataParser.cpp
+/*
+// nop
+/*LitResDownloadErrorDataParser::LitResDownloadErrorDataParser() {
+// NOP
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\litres\LitResAuthenticationManager.cpp
+/*
+// TODO: add correct error message
+//loadPurchasedBooksOnError(purchasedBooksIds, purchasedBooksList);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\litres\LitResBookshelfItem.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\litres\LitResDataParser.cpp
+/*
+// This code duplicates code in FBReader::openInBrowser and is not required
+//robot.litres.ru/pages/catalit_download_book/?art=" + myBookId,
+/*else if (TAG_SEQUENCE == tag) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\litres\LitResGenre.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\litres\LitResGenresParser.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\authentication\litres\LitResUtil.cpp
+/*
+//robot.litres.ru/" + path;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\opds\NetworkOPDSFeedReader.cpp
+/*
+//entry.dcPublisher();
+//entry.updated();
+//entry.published();
+/*for (size_t i = 0; i < entry.contributors().size(); ++i) {
+//entry.rights();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\opds\OPDSCatalogItem.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\opds\OPDSLink.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\opds\OPDSLink_Reader.cpp
+/*
+// myState = myState
+// myState = myState
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\opds\OPDSMetadata.cpp
+/*
+//opds-spec.org/bookshelf";
+//opds-spec.org/subscriptions";
+//data.fbreader.org/catalog/author";
+//opds-spec.org/acquisition";
+//opds-spec.org/acquisition/buy";
+//opds-spec.org/acquisition/borrow";
+//opds-spec.org/acquisition/subscribe";
+//opds-spec.org/acquisition/sample";
+//data.fbreader.org/acquisition/conditional";
+//data.fbreader.org/acquisition/sampleOrFull";
+//opds-spec.org/cover";
+//opds-spec.org/thumbnail";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\network\opds\OPDSXMLParser.cpp
+/*
+//myTitle = new ATOMTitle(); // TODO:implement ATOMTextConstruct & ATOMTitle
+//myTitle->readAttributes(attributeMap);
+//mySummary = new ATOMSummary(); // TODO:implement ATOMTextConstruct & ATOMSummary
+//mySummary->readAttributes(attributeMap);
+// ???
+// ???
+//myTitle = new ATOMTitle(); // TODO:implement ATOMTextConstruct & ATOMTitle
+//myTitle->readAttributes(attributeMap);
+// TODO: remove this temporary code
+// DON'T clear myBuffer
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:title can be lost:buffer will be truncated, if there are extension tags inside the <title> tag
+// TODO:implement ATOMTextConstruct & ATOMTitle
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:summary can be lost:buffer will be truncated, if there are extension tags inside the <summary> tag
+// TODO:implement ATOMTextConstruct & ATOMSummary
+// TODO:check this accurately
+// TODO:check this accurately
+// FIXME:title can be lost:buffer will be truncated, if there are extension tags inside the <title> tag
+// TODO:implement ATOMTextConstruct & ATOMTitle
+// TODO: remove this temporary code
+// DON'T clear myBuffer
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:language can be lost:buffer will be truncated, if there are extension tags inside the <dc:language> tag
+// FIXME:issued can be lost:buffer will be truncated, if there are extension tags inside the <dc:issued> tag
+// FIXME:publisher can be lost:buffer will be truncated, if there are extension tags inside the <dc:publisher> tag
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkActions\AuthenticationDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkActions\NetworkActions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkActions\NetworkOperationRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkActions\PasswordRecoveryDialog.cpp
+/*
+//const ZLResource &resource = ZLResource::resource("dialog")["PasswordRecoveryDialog"];
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkActions\RegisterUserDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkAuthorNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkBookNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkCatalogNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkCatalogRootNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkCatalogUtil.cpp
+/*
+//");
+//");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkContainerNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkNodesFactory.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkSeriesNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\NetworkView.cpp
+/*
+// at nodeCount ??? or not???
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\networkTree\SearchResultNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\options\FBCategoryKey.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\options\FBOptions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\options\FBTextStyle.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\AbstractOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\IntegrationTab.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\bookInfo\BookInfoDialog.cpp
+/*
+//myCurrentAuthor = myCurrentAuthor;
+// else pool is over
+/*myValues.clear();
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\library\LibraryOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\lookAndFeel\FormatOptionsPage.cpp
+/*
+//new ZLSimpleSpinOptionEntry("First Line Indent", baseStyle.firstLineIndentDeltaOption(), -300, 300, 1),
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\lookAndFeel\LookAndFeelOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\lookAndFeel\OptionsPage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\lookAndFeel\StyleOptionsPage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\network\NetworkOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\reading\IndicatorTab.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\reading\KeyBindingsTab.cpp
+/*
+// switch view
+// navigation
+// selection
+// search
+// look
+// dialogs
+// quit
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\reading\ReadingOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\fbreader\src\optionsDialog\system\SystemOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\StatisticsGenerator\detector.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\StatisticsGenerator\generator.cpp
+// Here are available to change char sequence length [second method arg]
+// Here are available to change amount of top statistics items
+// vim: ts=4
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\StatisticsGenerator\pattern.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\StatisticsGenerator\rtfInputStreamTest.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\trash\fbreader-test\ModelTest.cpp
+// TODO: dump all footnotes models
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\application\ZLApplication.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\application\ZLApplicationActions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\application\ZLApplicationBase.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\application\ZLApplicationWindow.cpp
+/*
+/*
+//application().doAction(group->UnselectAllButtonsActionId);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\application\ZLKeyBindings.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\application\ZLMenu.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\application\ZLToolbar.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\blockTreeView\ZLBlockTreeNode.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\blockTreeView\ZLBlockTreeView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\constants\ZLMimeType.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\constants\ZLXMLNamespace.cpp
+/*
+//purl.org/dc/elements";
+//purl.org/metadata/dublin_core";
+//purl.org/dc/terms/";
+//www.w3.org/1999/xlink";
+//www.idpf.org/2007/opf";
+//www.w3.org/2005/Atom";
+//a9.com/-/spec/opensearch/1.1/";
+//calibre.kovidgoyal.net/2009/metadata";
+//opds-spec.org/2010/catalog";
+//www.daisy.org/z3986/2005/ncx/";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\desktop\application\ZLDesktopApplicationWindow.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\desktop\dialogs\ZLDesktopOpenFileDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\desktop\dialogs\ZLDesktopOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLDialogContent.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLDialogContentBuilder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLOpenFileDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLOptionEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLOptionView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\dialogs\ZLProgressDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\encoding\DummyEncodingConverter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\encoding\EncodingCollectionReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\encoding\MyEncodingConverter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\encoding\ZLEncodingCollection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\encoding\ZLEncodingConverter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\encoding\ZLEncodingSet.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\ZLDir.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\ZLFile.cpp
+/*
+//myNameWithoutExtension = myNameWithoutExtension.substr(0, myNameWithoutExtension.length() - 3) + "tar";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\ZLFSManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\ZLInputStreamDecorator.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\bzip2\ZLBzip2InputStream.cpp
+/*
+//myBzStream.total_in_hi32 = myBaseAvailableSize >> 32;
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\tar\ZLTar.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\zip\ZLGzipInputStream.cpp
+/*
+//const unsigned char FTEXT = 1 << 0;
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\zip\ZLZDecompressor.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\zip\ZLZipDir.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\zip\ZLZipEntryCache.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\zip\ZLZipHeader.cpp
+/*
+//stream.seek(16, false);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\filesystem\zip\ZLZipInputStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\image\ZLBase64EncodedImage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\image\ZLFileImage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\image\ZLImage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\image\ZLImageManager.cpp
+/*
+// scanline
+//std::cerr << "scanline encoded images are not supported yet\n";
+// rle
+//std::cerr << "rle encoded images are not supported yet\n";
+//packbits
+//std::cerr << "packbits encoded images are not supported yet\n";
+// none
+//std::cerr << "images with bpp = " << (int)header.BitsPerPixel << " are not supported\n";
+// unknown
+//std::cerr << "unknown image encoding: " << (int)header.CompressionType << "\n";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\image\ZLNetworkImage.cpp
+/*
+//")) {
+//";
+//")) {
+//";
+//")) {
+//";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\image\ZLStreamImage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLCharSequence.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLLanguageDetector.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLLanguageList.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLLanguageMatcher.cpp
+/*
+//if (myStatisticsPtr == 0) {
+//std::cerr << "pattern reading failed\n";
+//}
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLStatistics.cpp
+/*
+//static int power10(unsigned int number) {
+//	int power = 1;
+//	while (number-- > 0) {
+//		power *= 10;
+//	}
+//	return power;
+//}
+//patternMult = ::power10(6);
+//patternMult = ::power10(5);
+//patternMult = ::power10(4);
+//patternMult = ::power10(2);
+//patternMult = ::power10(1);
+//patternMult = ::power10(0);
+//myVolumesAreUpToDate = false;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLStatisticsGenerator.cpp
+/*
+// vim: ts=4
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLStatisticsItem.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLStatisticsXMLReader.cpp
+/*
+//std::cerr << "XMLReader: frequencies sum & ^2: " << volume << ":" << squaresVolume << "\n";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\language\ZLStatisticsXMLWriter.cpp
+/*
+//ZLStatisticsItem *ptr = statistics.begin();
+//const ZLStatisticsItem *end = statistics.end();
+//delete ptr;
+//delete end;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\logger\ZLLogger.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\message\ZLMessage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\ZLAsynchronousInputStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\ZLGzipAsynchronousInputStream.cpp
+/*
+/*len*/) {
+// must be line with maximum case value
+//std::cout << "SIZE == " << inSize << std::endl;
+//std::cout << "OFFSET == " << inOffset << std::endl;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\ZLNetworkManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\ZLNetworkRequest.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\ZLNetworkSSLCertificate.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\ZLNetworkUtil.cpp
+/*
+//");
+//");
+//");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\ZLPlainAsynchronousInputStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\requests\ZLNetworkDownloadRequest.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\requests\ZLNetworkNoActionRequest.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\requests\ZLNetworkReadToStringRequest.cpp
+/*
+// TODO: call setPercent(...)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\network\requests\ZLNetworkXMLParserRequest.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLColorOptionBuilder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLFontFamilyOptionEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLLanguageOptionEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLSimpleKeyOptionEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLSimpleOptionEntry.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLStringEditOptionEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLStringInfoEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\optionEntries\ZLToggleBooleanOptionEntry.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\options\ZLCategoryKey.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\options\ZLConfig.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\options\ZLOptions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\resources\ZLResource.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\runnable\ZLExecutionData.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\runnable\ZLRunnable.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\time\ZLTime.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\time\ZLTimeManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\typeId\ZLTypeId.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\curl\ZLCurlNetworkManager.cpp
+/*
+// disable copying
+// TODO: url-encode content???
+// TODO: localize
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\filesystem\ZLUnixFileInputStream.cpp
+/*
+//close();
+//close();
+//fseek(myFile, 0, SEEK_SET);
+//if (myFile != 0) {
+//	fclose(myFile);
+//	myFile = 0;
+//}
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\filesystem\ZLUnixFileOutputStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\filesystem\ZLUnixFSDir.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\filesystem\ZLUnixFSManager.cpp
+/*
+//")) != -1) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\iconv\IConvEncodingConverter.cpp
+/*
+// DO_ICONV_CAST
+// DO_ICONV_CAST
+// looks like myBuffer contains incorrect character at start
+// DO_ICONV_CAST
+// DO_ICONV_CAST
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\library\ZLibrary.cpp
+/*
+/* ZLSHARED */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\time\ZLUnixTime.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\xmlconfig\AsciiEncoder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\xmlconfig\XMLConfig.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\xmlconfig\XMLConfigDelta.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\xmlconfig\XMLConfigDeltaWriter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\xmlconfig\XMLConfigIO.cpp
+/*
+// TODO: show error message if config was not saved
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\xmlconfig\XMLConfigReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\unix\xmlconfig\XMLConfigWriter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\util\ZLFileUtil.cpp
+/*
+//")) != -1) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\util\ZLKeyUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\util\ZLLanguageUtil.cpp
+/*
+// Arabic
+// Bulgarian
+// Catalan
+// Chinese
+// Czech
+// Danish
+// German
+// Greek
+// English
+// Spanish
+// Finnish
+// French
+// Hebrew
+// Hungarian
+// Icelandic
+// Italian
+// Japanese
+// Korean
+// Dutch
+// Norwegian
+// Polish
+// Portuguese
+// Romansh
+// Romanian
+// Russian
+// Serbian
+// Croatian
+// Bosnian
+// Slovak
+// Albanian
+// Swedish
+// Thai
+// Turkish
+// Urdu
+// Indonesian
+// Ukrainian
+// Belarusian
+// Slovenian
+// Estonian
+// Latvian
+// Lithuanian
+// Tajik
+// Persian (Farsi)
+// Vietnamese
+// Armenian
+// Azeri
+// Basque
+// Lower Sorbian
+// Upper Sorbian
+// Makedonian
+// Setswana/Tswana
+// Xhosa/isiXhosa
+// Zulu/isiZulu
+// Afrikaans
+// Georgian
+// Faeroese
+// Hindi
+// Maltese
+// Sami
+// Irish
+// Malay
+// Kazak
+// Kyrgyz
+// Swahili
+// Turkmen
+// Uzbek
+// Tatar
+// Bengali
+// Punjabi
+// Gujaratu
+// Oriya
+// Tamil
+// Telugi
+// Kannada
+// Malayalam
+// Assamese
+// Marathi
+// Sanskrit
+// Mongolian
+// Tibetian
+// Welsh
+// Khmer
+// Lao
+// Galician
+// Konkani
+// Manipuri
+// Sindhi
+// Syriac
+// Sinhala
+// Inuktitut
+// Amharic
+// Tamazight
+// Kashmiri
+// Nepali
+// Frisian
+// Pashto
+// Filipino
+// Divehi
+// Hausa
+// Yoruba
+// Quechua
+// Northern Sotho
+// Bashkir
+// Luxemburgish
+// Greenlandic
+// Igbo
+// Tigrinya
+// Yi
+// Mapudungun
+// Mohawk
+// Breton
+// Uighur
+// Maori
+// Occitan
+// Corsican
+// Alsatian
+// Yakut
+// K'iche
+// Kinyarwanda
+// Wolof
+// Dari
+// Malagasy
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\util\ZLSearchUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\util\ZLStringUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\util\ZLUnicodeUtil.cpp
+/*
+// symbol number is > 0xffff :(
+// symbol number is > 0xffff :(
+//(ch == 160) ||
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\util\ZLUserData.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\view\ZLMirroredPaintContext.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\view\ZLPaintContext.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\view\ZLView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\config\RegistryUtil.cpp
+/*
+// TODO: remove empty group
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\config\StringEncoder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\config\ZLWin32Config.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\config\ZLWin32ConfigIO.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\encoding\ZLWin32EncodingConverter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\filesystem\ZLWin32FileInputStream.cpp
+/*
+//close();
+//close();
+//fseek(myFile, 0, SEEK_SET);
+//if (myFile != 0) {
+//	fclose(myFile);
+//	myFile = 0;
+//}
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\filesystem\ZLWin32FileOutputStream.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\filesystem\ZLWin32FSDir.cpp
+/*
+/*includeSymlinks*/) {
+/*includeSymlinks*/) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\filesystem\ZLWin32FSManager.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\win32\filesystem\ZLWin32RootDir.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\xml\ZLXMLReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\xml\ZLXMLWriter.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\core\src\xml\expat\ZLXMLReaderInternal.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextArea.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextAreaController.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextAreaStyle.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextArea_drawTextLine.cpp
+/*
+// TODO: binary search
+// TODO: binary search
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextArea_drawTreeLines.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextArea_drawWord.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextArea_prepareTextLine.cpp
+/*
+// TODO: change metrics at font change
+//context().setColor(ZLColor(0, 255, 0));
+//context().drawLine(myHOffset + x, myVOffset + y, myHOffset + x, myVOffset + y - 20);
+//context().setColor(ZLColor(255, 0, 0));
+//context().drawLine(myHOffset + x, myVOffset + y, myHOffset + x, myVOffset + y - 20);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextArea_processTextLine.cpp
+/*
+//ZLTextWordCursor Start;
+//ZLTextWordCursor RealStart;
+//int StartIndent;
+//int VSpaceAfter;
+//shared_ptr<ZLTextStyle> StartStyle;
+//shared_ptr<ZLTextTreeNodeInfo> NodeInfo;
+// TODO: change metrics at font change
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextElement.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextParagraphBuilder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextParagraphCursor.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextSelectionModel.cpp
+/*
+/* cursor == start */ {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\area\ZLTextWord.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\hyphenation\ZLTextHyphenationReader.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\hyphenation\ZLTextHyphenator.cpp
+/*
+// TODO: get special symbols from pattern file
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\hyphenation\ZLTextTeXHyphenator.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\model\ZLTextModel.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\model\ZLTextParagraph.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\model\ZLTextRowMemoryAllocator.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\style\ZLTextDecoratedStyle.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\style\ZLTextStyle.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\style\ZLTextStyleCollection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\styleOptions\ZLTextStyleOptions.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\view\ZLTextPositionIndicator.cpp
+/*
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\view\ZLTextSelectionScroller.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\view\ZLTextView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\text\src\view\ZLTextView_paint.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\application\ZLQtApplicationWindow.cpp
+/*
+/* caption */) {
+/* grab */) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\dialogs\ZLFullScreenDialog.cpp
+/*
+/* event */) {
+// if (ZLQtKeyUtil::keyName(event) == "<Cancel>") {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\dialogs\ZLQtDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\dialogs\ZLQtDialogContent.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\dialogs\ZLQtDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\dialogs\ZLQtOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\dialogs\ZLQtSelectionDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\dialogs\ZLQtUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\optionView\ZLQtOptionView.cpp
+/*
+//myMultiLineEdit->home();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\optionView\ZLQtOptionViewHolder.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\view\ZLQtPaintContext.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\ezx\view\ZLQtViewWidget.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\application\ZLGtkApplicationWindow.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkDialogContent.cpp
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkOptionsDialog.cpp
+/*
+// I do not have to destroy myNotebook as it's a myDialog child
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkOptionView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkSelectionDialog.cpp
+/*
+// MSS: in case we do not want single click navigation, comment out the line below
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\dialogs\ZLGtkWaitMessage.cpp
+/*
+//  something nice?
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\view\ZLGtkPaintContext.cpp
+/*
+// TODO: check, if using of local variable is correct in this situation
+// TODO: use style
+// TODO: use style
+// for gtk+ v2.2
+// 		gdk_draw_pixbuf(
+// 			myPixmap, 0, imageRef, 0, 0,
+// 			x, y - gdk_pixbuf_get_height(imageRef),
+// 			-1, -1, GDK_RGB_DITHER_NONE, 0, 0
+// 		);
+//
+// COMMENTS:
+// 0			-- we have no clipping (do we need it?)
+// 0, 0			-- offset in the image
+// -1, -1		-- use the whole
+// GDK_RGB_DITHER_NONE -- no dithering, hopefully, (0, 0) after it does not harm
+// TODO: implement
+// vim:ts=2:sw=2:noet
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gpe\view\ZLGtkViewWidget.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\application-desktop\GtkEntryParameter.cpp
+/*
+//return gtk_widget_tool_item_new(myWidget);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\application-desktop\Toolbar.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\application-desktop\ZLGtkApplicationWindow.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\application-pdaxrom\ZLGtkApplicationWindow.cpp
+/*
+// toolbar with standard buttons is too wide for zaurus screen
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\dialogs\ZLGtkDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\dialogs\ZLGtkDialogContent.cpp
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\dialogs\ZLGtkDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\dialogs\ZLGtkOpenFileDialog.cpp
+/*
+//gtk_window_move(GTK_WINDOW(myDialog), x, y);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\dialogs\ZLGtkOptionsDialog.cpp
+/*
+// I do not have to destroy myNotebook as it's a myDialog child
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\dialogs\ZLGtkProgressDialog.cpp
+/*
+//  something nice?
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\dialogs\ZLGtkUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\filesystem\ZLGtkFSManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\image\ZLGtkImageManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\optionView\ZLGtkOptionView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\optionView\ZLGtkOptionViewHolder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\pixbuf\ZLGtkPixbufHack.cpp
+/*
+//
+// pixbuf rotation
+// (copied from gqview)
+//
+/* r */
+/* g */
+/* b */
+/* a */
+/*
+// vim:ts=2:sw=2:noet
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\time\ZLGtkTime.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\util\ZLGtkKeyUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\util\ZLGtkSignalUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\view\ZLGtkPaintContext.cpp
+/*
+// GTK_CHECK_VERSION(2,10,0)
+// GTK_CHECK_VERSION(2,10,0)
+// for gtk+ v2.2
+// 		gdk_draw_pixbuf(
+// 			myPixmap, 0, imageRef, 0, 0,
+// 			x, y - gdk_pixbuf_get_height(imageRef),
+// 			-1, -1, GDK_RGB_DITHER_NONE, 0, 0
+// 		);
+//
+// COMMENTS:
+// 0			-- we have no clipping (do we need it?)
+// 0, 0			-- offset in the image
+// -1, -1		-- use the whole
+// GDK_RGB_DITHER_NONE -- no dithering, hopefully, (0, 0) after it does not harm
+// vim:ts=2:sw=2:noet
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\gtk\view\ZLGtkViewWidget.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\iphone\dialogs\ZLCocoaDialogManager.cpp
+/*
+//#include "../image/ZLCocoaImageManager.h"
+//#include "ZLCocoaDialog.h"
+//#include "ZLCocoaOptionsDialog.h"
+//#include "ZLCocoaSelectionDialog.h"
+//#include "ZLCocoaProgressDialog.h"
+//#include "ZLCocoaUtil.h"
+//return new ZLCocoaDialog(resource()[key]);
+//return new ZLCocoaOptionsDialog(resource()[id], applyAction, showApplyButton);
+//internalBox(GTK_STOCK_DIALOG_INFO, title, message);
+//internalBox(GTK_STOCK_DIALOG_ERROR, dialogTitle(key), message);
+//return internalBox(GTK_STOCK_DIALOG_QUESTION, dialogTitle(key), message, button0, button1, button2);
+/*
+//return ZLCocoaSelectionDialog(dialogTitle(key), handler).runWithSize();
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\iphone\view\ZLCocoaViewWidget.cpp
+/*
+//#include <ZLibrary.h>
+//#include <ZLLanguageUtil.h>
+//#include "../util/ZLCocoaSignalUtil.h"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\application\GtkEntryParameter.cpp
+/*
+//myWindow.setFocusToMainWidget();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\application\ZLGtkApplicationWindow.cpp
+/*
+//GTK_WIDGET_UNSET_FLAGS(gtkItem, GTK_CAN_FOCUS);
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\dialogs\ZLGtkDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\dialogs\ZLGtkDialogContent.cpp
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\dialogs\ZLGtkDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\dialogs\ZLGtkOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\dialogs\ZLGtkProgressDialog.cpp
+/*
+//  something nice?
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\dialogs\ZLGtkSelectionDialog.cpp
+/*
+// MSS: in case we do not want single click navigation, comment out the line below
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\dialogs\ZLGtkUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\message\ZLMaemoMessage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\network\ZLMaemoNetworkManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\optionView\ZLGtkOptionView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\optionView\ZLGtkOptionViewHolder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\time\ZLGtkTime.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\view\ZLGtkPaintContext.cpp
+/*
+// for gtk+ v2.2
+// 		gdk_draw_pixbuf(
+// 			myPixmap, 0, imageRef, 0, 0,
+// 			x, y - gdk_pixbuf_get_height(imageRef),
+// 			-1, -1, GDK_RGB_DITHER_NONE, 0, 0
+// 		);
+//
+// COMMENTS:
+// 0			-- we have no clipping (do we need it?)
+// 0, 0			-- offset in the image
+// -1, -1		-- use the whole
+// GDK_RGB_DITHER_NONE -- no dithering, hopefully, (0, 0) after it does not harm
+// vim:ts=2:sw=2:noet
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo\view\ZLGtkViewWidget.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\application\ZLGtkApplicationWindow.cpp
+/*
+//myMenuStack.push(myWindow.myMenu);
+/*
+//myMenuStack.pop();
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\dialogs\ZLGtkDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\dialogs\ZLGtkDialogContent.cpp
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\dialogs\ZLGtkDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\dialogs\ZLGtkOpenFileDialog.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\dialogs\ZLGtkOptionsDialog.cpp
+/*
+/*
+/*
+//gtk_notebook_append_page(myNotebook, GTK_WIDGET(scrolledWindow), label);
+//GtkWidget *contents = label;
+//return myTabs[gtk_notebook_get_current_page(myNotebook)]->key();
+//gtk_notebook_set_current_page(myNotebook, it - myTabs.begin());
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\dialogs\ZLGtkProgressDialog.cpp
+/*
+//  something nice?
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\dialogs\ZLGtkUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\network\ZLMaemoNetworkManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\optionView\ZLGtkOptionView.cpp
+/*
+//TODO
+//not supported
+//std::string text = gtk_combo_box_get_active_text(myComboBox);
+//o.onValueEdited(text);
+//gtk_entry_set_editable(myLineEdit, active);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\maemo5\optionView\ZLGtkOptionViewHolder.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\application\ZLQtApplicationWindow.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLFullScreenDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtDialogContent.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtOptionView.cpp
+/*
+//myMultiLineEdit->home();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtSelectionDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\dialogs\ZLQtWaitMessage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\view\ZLQtPaintContext.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\opie\view\ZLQtViewWidget.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\application-desktop\ZLQtApplicationWindow.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\application-desktop\ZLQtPopupMenu.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\application-pdaxrom\ZLQtApplicationWindow.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtDialogContent.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtOpenFileDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtOptionView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtProgressDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\dialogs\ZLQtUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\filesystem\ZLQtFSManager.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\image\ZLQtImageManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\time\ZLQtTime.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\util\ZLQtKeyUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\view\ZLQtPaintContext.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt\view\ZLQtViewWidget.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\application\LineEditParameter.cpp
+/*
+// I don't understand why this code does work but it does.
+//QBoxLayout *layout = (QBoxLayout*)toolbar->layout();
+//layout->addStretch();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\application\ZLQtApplicationWindow.cpp
+/*
+//myFullscreenToolBar->hide();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtDialogContent.cpp
+/*
+//view = new OrderOptionView(name, tooltip, (ZLOrderOptionEntry*)option, this, myRowCounter, fromColumn, toColumn);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtDialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtOpenFileDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtOptionView.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtProgressDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\dialogs\ZLQtUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\filesystem\ZLQtFSManager.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\image\ZLQtImageManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\time\ZLQtTime.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\util\ZLQtKeyUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\view\ZLQtPaintContext.cpp
+/*
+//return fullName.left(fullName.find(" [")).ascii();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qt4\view\ZLQtViewWidget.cpp
+/*
+//setBackgroundMode(NoBackground);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\application\ZLQtApplicationWindow.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLFullScreenDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLQtDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLQtDialogContent.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLQtDialogManager.cpp
+/*
+// QT_NO_MIMECLIPBOARD
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLQtOptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLQtSelectionDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLQtUtil.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\dialogs\ZLQtWaitMessage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\library\ZLibrary.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\message\ZLQtopiaMessage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\optionView\ZLQtOptionView.cpp
+/*
+//myMultiLineEdit->home();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\optionView\ZLQtOptionViewHolder.cpp
+/*
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\view\ZLQtPaintContext.cpp
+/*
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\view\ZLQtViewWidget.cpp
+/*
+//scrollBar->hide();
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\qtopia\view\ZLZaurusFontHack.cpp
+/*
+/* USE_ZAURUS_FONTHACK */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\unix\message\ZLUnixMessage.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\application\FloatingToolbar.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\application\Toolbar.cpp
+/*
+/* is a separator */ {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\application\ZLWin32ApplicationWindow.cpp
+/*
+// TODO: Hmm, replace SW_SHOWDEFAULT by nCmdShow?
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\application\ZLWin32PopupMenu.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\dialogs\ZLWin32Dialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\dialogs\ZLWin32DialogContent.cpp
+/*
+// TODO: implement
+// TODO: implement
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\dialogs\ZLWin32DialogManager.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\dialogs\ZLWin32MessageBox.cpp
+/*
+//imageBox->setAlignment(W32VBox::CENTER);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\dialogs\ZLWin32OptionsDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\dialogs\ZLWin32OptionView.cpp
+/*
+//chooser.lCustData = 0;
+//chooser.lpfnHook = 0;
+//chooser.lpTemplateName = 0;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\dialogs\ZLWin32ProgressDialog.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\image\ZLWin32ImageManager.cpp
+/*
+//?
+//? 
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\image\ZLWin32ImageManager_bmp.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\image\ZLWin32ImageManager_gif.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\image\ZLWin32ImageManager_jpeg.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\image\ZLWin32ImageManager_png.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\image\ZLWin32ImageManager_tiff.cpp
+/*
+// never used
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\library\ZLibraryWin32.cpp
+/*
+//case LANG_MANIPURI:
+//ourLanguage = "";
+//case LANG_SINDHI:
+//ourLanguage = "";
+//case LANG_KASHMIRI:
+//ourLanguage = "";
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\message\ZLWin32Message.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\time\ZLWin32Time.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\view\ZLWin32PaintContext.cpp
+/*
+/*
+// TODO: optimize
+/*CLEARTYPE_QUALITY*/;
+// TODO: optimize (don't create new brush, if color and style are not changed)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\view\ZLWin32ViewWidget.cpp
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32Box.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32ColorComboBox.cpp
+/*
+// TODO: implement
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32Container.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32Control.cpp
+/*
+/*
+//DWORD style = (it == myButtons.begin()) ? BS_DEFPUSHBUTTON : BS_PUSHBUTTON;
+// TODO: why multiplier 2?
+// TODO: check
+// TODO: check
+// TODO: check
+//PostMessage(myWindow, EM_SETREADONLY, !editable, 0);
+// TODO: check
+//PostMessage(myWindow, EM_SETREADONLY, !editable, 0);
+// TODO: check
+// TODO: check
+// TODO: check
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32ControlCollection.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32DialogPanel.cpp
+/*
+// X
+// Y
+// FONT SIZE -- should be always 8?
+// == SB_TOP
+// == SB_BOTTOM
+// == SB_LINEUP
+// == SB_LINEDOWN
+// == SB_PAGEUP
+// == SB_PAGEDOWN
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32Event.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32PropertySheet.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32StandaloneDialogPanel.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32Table.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32TreeView.cpp
+/*
+// TODO: symbolic name?
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32VBorderBox.cpp
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\zlibrary\ui\src\win32\w32widgets\W32Widget.cpp
+/*

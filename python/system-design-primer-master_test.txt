@@ -1,0 +1,118 @@
+﻿
+***********other formats****************
+apkg
+gitattributes
+gitignore
+graffle
+ipynb
+sh
+yaml
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+system-design-primer-master/system-design-primer-master/CONTRIBUTING.md
+system-design-primer-master/system-design-primer-master/LICENSE.txt
+system-design-primer-master/system-design-primer-master/README-ja.md
+system-design-primer-master/system-design-primer-master/README-zh-Hans.md
+system-design-primer-master/system-design-primer-master/README-zh-TW.md
+system-design-primer-master/system-design-primer-master/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/README-zh-Hans.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/query_cache/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/sales_rank/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/social_graph/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/twitter/README.md
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/README.md
+
+***********img file list***************
+system-design-primer-master/system-design-primer-master/resources/study_guide.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/mint.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/mint_basic.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/pastebin.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/pastebin_basic.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/query_cache/query_cache.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/query_cache/query_cache_basic.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/sales_rank/sales_rank.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/sales_rank/sales_rank_basic.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws_1.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws_2.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws_3.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws_4.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws_5.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws_6.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws_7.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/social_graph/social_graph.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/social_graph/social_graph_basic.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/twitter/twitter.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/twitter/twitter_basic.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/web_crawler.png
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/web_crawler_basic.png
+
+***********uml file list***************
+
+***********other file list***************
+system-design-primer-master/system-design-primer-master/.gitattributes
+system-design-primer-master/system-design-primer-master/.gitignore
+system-design-primer-master/system-design-primer-master/epub-metadata.yaml
+system-design-primer-master/system-design-primer-master/generate-epub.sh
+system-design-primer-master/system-design-primer-master/resources/study_guide.graffle
+system-design-primer-master/system-design-primer-master/resources/flash_cards/OO Design.apkg
+system-design-primer-master/system-design-primer-master/resources/flash_cards/System Design Exercises.apkg
+system-design-primer-master/system-design-primer-master/resources/flash_cards/System Design.apkg
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/call_center/call_center.ipynb
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/deck_of_cards/deck_of_cards.ipynb
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/hash_table/hash_map.ipynb
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/lru_cache/lru_cache.ipynb
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/online_chat/online_chat.ipynb
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/parking_lot/parking_lot.ipynb
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/mint.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/mint_basic.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/pastebin.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/pastebin_basic.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/query_cache/query_cache.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/query_cache/query_cache_basic.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/sales_rank/sales_rank.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/sales_rank/sales_rank_basic.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/scaling_aws/scaling_aws.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/social_graph/social_graph.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/social_graph/social_graph_basic.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/template/template.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/twitter/twitter.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/twitter/twitter_basic.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/web_crawler.graffle
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/web_crawler_basic.graffle
+
+***********other code file list***************
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/call_center/call_center.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/call_center/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/deck_of_cards/deck_of_cards.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/deck_of_cards/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/hash_table/hash_map.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/hash_table/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/lru_cache/lru_cache.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/lru_cache/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/online_chat/online_chat.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/online_chat/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/parking_lot/parking_lot.py
+system-design-primer-master/system-design-primer-master/solutions/object_oriented_design/parking_lot/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/mint_mapreduce.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/mint_snippets.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/mint/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/pastebin.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/pastebin/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/query_cache/query_cache_snippets.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/query_cache/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/sales_rank/sales_rank_mapreduce.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/sales_rank/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/social_graph/social_graph_snippets.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/social_graph/__init__.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/web_crawler_mapreduce.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/web_crawler_snippets.py
+system-design-primer-master/system-design-primer-master/solutions/system_design/web_crawler/__init__.py

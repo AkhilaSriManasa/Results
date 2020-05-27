@@ -1,0 +1,514 @@
+﻿BSD License
+
+For ig-json-parser
+
+Copyright (c) 2014, Facebook, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+ * Neither the name Facebook nor the names of its contributors may be used to
+   endorse or promote products derived from this software without specific
+   prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ig-json-parser
+==============
+
+[![Build Status](https://travis-ci.org/Instagram/ig-json-parser.svg?branch=master)](https://travis-ci.org/Instagram/ig-json-parser) [![Release](https://jitpack.io/v/Instagram/ig-json-parser.svg)](https://jitpack.io/#Instagram/ig-json-parser)
+
+Fast JSON parser for java projects. 
+
+
+Getting started
+===============
+
+The easiest way to get started is to look at maven-example.  For more
+comprehensive examples, check out the unit tests or the demo.
+
+
+Gradle
+-----
+
+For Java projects, to use this library, add this to your build.gradle file:
+```groovy
+allprojects {
+  repositories {
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+...
+
+dependencies {
+  implementation 'com.github.instagram.ig-json-parser:runtime:master-SNAPSHOT' // the runtime
+  implementation 'com.github.instagram.ig-json-parser:processor:master-SNAPSHOT' // the annotation processor 
+}
+```
+
+For Android projects using Android Studio 3.0+ or Gradle 4.0+, you can enable the annotation processor as following:
+
+```
+allprojects {
+  repositories {
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+...
+
+dependencies {
+  annotationProcessor 'com.github.instagram.ig-json-parser:processor:master-SNAPSHOT'
+  implementation 'com.github.instagram.ig-json-parser:runtime:master-SNAPSHOT'
+}
+```
+
+If you are using older gradle versions, you can use old `apt` plugin to integrate the annotation processor:
+
+```
+allprojects {
+  repositories {
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+...
+
+apply plugin: 'com.neenbedankt.android-apt'
+
+dependencies {
+  apt 'com.github.instagram.ig-json-parser:processor:master-SNAPSHOT'
+  implementation 'com.github.instagram.ig-json-parser:runtime:master-SNAPSHOT'
+}
+```
+
+
+If you are using other build sytems, please find instructions [here](https://jitpack.io/#Instagram/ig-json-parser)
+
+Requirements for model classes
+------------------------------
+
+There should be a package-visible no-argument constructor for each of your
+model classes.  The fields also need to be package-visible.
+
+Each class that needs a serializer/deserializer generated should be
+annotated with `@JsonType`.  Each field that needs to be mapped to/from
+JSON should be annotated with `@JsonField`.  The `@JsonField` annotation
+has one mandatory argument, which is the fieldname for the field in the
+JSON.
+
+The following is an example of a very simple model class:
+```java
+@JsonType
+class Dessert {
+  @JsonField(fieldName="type")
+  String type;
+
+  @JsonField(fieldName="rating")
+  float rating;
+}
+```
+
+Serializer/deserializer
+-----------------------
+
+Compiling your model classes with the annotations will automatically
+generate the serializer and deserializer.  They will be in a generated
+class with the same name as your class, except with the suffix
+`__JsonHelper`.  For example, to deserialize the `Dessert` class above,
+simply run the code:
+
+```java
+Dessert parsed = Dessert__JsonHelper.parseFromJson(inputJsonString);
+```
+To serialize a class, run:
+
+```java
+String serialized = Dessert__JsonHelper.serializeToJson(dessertObject);
+```
+
+Supported data types
+--------------------
+
+The following scalar types are supported:
+* String
+* boolean/Boolean
+* int/Integer
+* long/Long
+* float/Float
+* double/Double
+
+If a json field is another dictionary, it can be represented by another
+model class.  That model class must also have the `@JsonType` annotation.
+
+Lists of objects are supported either as Java Lists or Queues.
+
+Proguard
+===============
+
+Add the following lines to your proguard-rules file:
+```
+-dontwarn sun.misc.Unsafe
+-dontwarn javax.annotation.**
+```
+
+Advanced features
+=================
+
+Postprocessing
+--------------
+
+TODO: Document this.  See the documentation in
+common/src/main/java/com/instagram/common/json/annotation/JsonType.java in
+the meanwhile.
+
+Customized parsing code
+-----------------------
+
+TODO: Document this.  See the documentation in
+common/src/main/java/com/instagram/common/json/annotation/JsonField.java
+in the meanwhile.
+
+Optional serializer generation
+------------------------------
+To save generating serializer code if you only need deserialization, serializer generation can be disabled or enabled
+globally and per-class. The default is to generate serializers for all classes. To disable generation globally, pass
+
+    -AgenerateSerializer=false
+
+to the command-line arguments of javac. To override the default generation option for a single class, see
+`JsonType.generateSerializer()`.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// we're doing this absurd thing with encoding the json file in base64 because phabricator
+// chokes on it otherwise.
+//ignored
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2013 Square, Inc.
+/** A utility class which aids in generating Java source files. */
+/** Map fully qualified type names to their short names. */
+/**
+/** Emit a package declaration and empty line. */
+/**
+/**
+/**
+/**
+/**
+/**
+/** Try to compress a fully-qualified class name to only the class name. */
+// Copy non-matching characters like "<".
+// Copy a single class name, shortening it if possible.
+// check to see if the part after the package looks like a class
+/**
+/**
+/** Ends the current initializer declaration. */
+/**
+/**
+/**
+/** Completes the current type declaration. */
+/** Emits a field declaration. */
+/** Emits a field declaration. */
+/** Emits a field declaration. */
+/**
+/**
+/** Emits some Javadoc comments with line separated by {@code \n}. */
+/**\n");
+/** Emits a single line comment. */
+// ");
+/**
+/** Emit a list of enum values followed by a semi-colon ({@code ;}). */
+/** Equivalent to {@code annotation(annotation, emptyMap())}. */
+/** Equivalent to {@code annotation(annotationType.getName(), emptyMap())}. */
+/**
+/**
+/** Equivalent to {@code annotation(annotationType.getName(), attributes)}. */
+/**
+/**
+/**
+/**
+/**
+/**
+/** Completes the current method declaration. */
+// support calling a constructor a "method" to support the legacy code
+/** Completes the current constructor declaration. */
+/** Returns the string literal representing {@code data}, including wrapping quotes. */
+/** Build a string representation of a type and optionally its generic type arguments. */
+/** Emits the modifiers to the writer. */
+// Use an EnumSet to ensure the proper ordering
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// each round of processing requires a clean state.
+// Field annotations are only needed if we're generating method bodies.
+/**
+// Process each @TypeTesting elements.
+/**
+// The annotation should be validated for an interface, but no code should be generated.
+// Verify containing class visibility is not private.
+// Superclass info is only needed if we're generating method bodies.
+// walk up the superclass hierarchy until we find another class we know about.
+/**
+// Process each @TypeTesting elements.
+/**
+// Verify common generated code restrictions.
+// inspect the inner type.
+// Use the parsable object's value extract formatter if existing one is empty
+// verify that we have value extract and serializer formatters.
+// Verify containing type.
+// Verify containing class visibility is not private.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Add any additional imports from this class's annotations.
+// Generate the set of imports from the parsable objects referenced.
+// always skip children.  if we expected an array or an object, we would have
+// consumed the START_ARRAY or START_OBJECT.  therefore, we would only skip
+// forward if we're seeing something unexpected.
+// if we reached here, we need to call the superclasses processSingleField
+// method.
+// if we have a superclass, we need to call its serialize method.
+/**
+/**
+/**
+// These are all the default formatters.
+/**
+// needed to do a typecast for erased types
+// map type
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/*package*/ static boolean isNullOrEmpty(String string) {
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// boolean exact fail.  should throw exception.
+// this is expected.
+// Boolean exact fail.  should be null.
+// int exact fail.  should throw exception.
+// this is expected.
+// Integer exact fail.  should be null.
+// long exact fail.  should throw exception.
+// this is expected.
+// Long exact fail.  should be null.
+// float exact fail.  should throw exception.
+// this is expected.
+// Float exact fail.  should be null.
+// double exact fail.  should throw exception.
+// this is expected.
+// Double exact fail.  should be null.
+// string exact fail.  should be null.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// serialize it
+/**
+// serialize it
+/**
+// serialize it
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// intentionally do not set integerField
+// intentionally do not set integerListField
+// Test that fields appear in the order specified in the class
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// call some function that writes the object data
+/**
+/**
+/////////////
+// The remaining methods are simply overriden methods of {@link JSONWriter} that return an
+// {@link ExtensibleJSONWriter}.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+// validate that we're on the right token
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Contains Messagers for which errors have been reported through this class.
+//
+// In a build system that does in-process compilation (like Buck), it is possible for multiple
+// instances of our annotation processor to be running in parallel. Because this information
+// is only needed for a (hopefully short term) workaround, rather than rework Console to be
+// an instance class per ProcessingEnvironment, we take advantage of some implementation
+// details. Each instance of our processor will be in a different ProcessingEnvironment, and
+// each ProcessingEnvironment has its own Messager, so we can just track the Messagers that
+// have been used to report errors.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// is it an enum?
+/**
+// sanity check.
+// sanity check.
+/**
+/**
+// Interfaces do not currently generate classes
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/*Console.getNullMessager()*/ env.getMessager());
+// each round of processing requires a clean state.
+// Process each @TypeTesting elements.
+// walk up the superclass hierarchy until we find another class we know about.
+// Verify containing class visibility is not private.
+// Process each @TypeTesting elements.
+// Verify common generated code restrictions.
+// inspect the inner type.
+// Verify containing type.
+// Verify containing class visibility is not private.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+//////
+// primitives and their boxed counterparts.
+//////
+// strings.
+//////
+// collection types.
+//////
+// nesting

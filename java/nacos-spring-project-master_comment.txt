@@ -1,0 +1,794 @@
+﻿/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Get beanFactory from super
+// Should not be modified in future
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Register Global Nacos Properties Bean
+// Register Nacos Annotation Beans
+// Invoke NacosPropertySourcePostProcessor immediately
+// in order to enhance the precedence of @NacosPropertySource process
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// String ENABLE_REMOTE_SYNC_CONFIG_PLACEHOLDER = "${" + CONFIG_PREFIX + ENCODE + ":"
+// + NacosProperties.ENABLE_REMOTE_SYNC_CONFIG_PLACEHOLDER + "}";
+/**
+// enableRemoteSyncConfig = ENABLE_REMOTE_SYNC_CONFIG_PLACEHOLDER
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Register Global Nacos Properties Bean
+// Register Nacos Common Beans
+// Register Nacos Config Beans
+// Invoke NacosPropertySourcePostProcessor immediately
+// in order to enhance the precedence of @NacosPropertySource process
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// Execute target method
+// Nacos Metadata
+// Bean Metadata
+// Publish event
+// Only one argument on method
+// Use default implementation
+// Use customized implementation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// In to this event receiver, the environment has been updated the
+// latest configuration information, pull directly from the environment
+// fix issue #142
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Register Global Nacos Properties Bean
+// Register Nacos Common Beans
+// Register Nacos Discovery Beans
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Register Global Nacos Properties as Spring singleton bean
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Get Environment
+// Get BeanDefinitionRegistry
+// Register Nacos Annotation Beans
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Register Dependent Beans
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Self type as Bean Class
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Retrieve ApplicationContext from ContextRefreshedEvent
+// Select those methods from all beans that annotated
+// Bean type
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// fix issue #85
+// prevent multiple event multi-casts in hierarchical contexts
+// remove if published
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// timeout error
+// re-throw NacosException
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// support read data-id and group-id from spring environment
+// Add a Listener if auto-refreshed
+//
+// Nacos Metadata
+// Bean Metadata
+// Publish event
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Get annotation metadata
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Get AnnotationMetadata
+// AttributesMetadata
+// Auto-Refreshed
+// Origin
+// Order
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Build multiple instance if possible
+// Add Orderly
+// If First
+// If relative
+// default add last
+// Disable Auto-Refreshed
+// replace NacosPropertySource
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Nacos Metadata
+// PropertySource Name
+// Config type
+// TODO support nested properties
+// Attributes Metadata
+// Origin
+// Auto-refreshed
+// PropertySource Order
+// Resource
+// Order
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Exist some cases need to create the ConfigService | NamingService |
+// NamingMaintainService
+// before loading the Context object, lazy loading
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// register nacos default ConfigParse
+// register customer ConfigParse
+// If the user does not set the data id and group processed by config
+// parse,
+// this type of config is resolved globally by default
+// Again the type lowercase, ensure the search
+/**
+// Again the type lowercase, ensure the search
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+// merge
+// If Bean is absent , source will be empty.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Maybe AbstractApplicationContext or its sub-classes
+// Register Singleton Object if possible
+// Determine in advance whether injected with beans
+/**
+// Build a BeanDefinition for NacosServiceFactory class
+// ROLE_INFRASTRUCTURE
+// Register
+/**
+/**
+/**
+/**
+/*
+/**
+// Compatible with null
+/**
+/**
+// Register NacosApplicationContextHolder Bean
+// Register AnnotationNacosInjectedBeanPostProcessor Bean
+/**
+// Register PropertySourcesPlaceholderConfigurer Bean
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// If it is a map, the data will not be fetched
+// fix issue #91
+/**
+/**
+/**
+/**
+/**
+// for example: list=1,2,3,4,5 will be into here
+/**
+// Ignore property name if @NacosIgnore present
+// If @NacosProperty present ,return its value() , or field name
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// set properties if has test
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// YAML can have numbers as keys
+// A document can be a text literal
+// Need a compound key
+// Need a compound key
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// asserts true
+// asserts true
+// asserts true
+// asserts true
+// asserts true
+// asserts true
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// 在命名空间详情处可以获取到 endpoint 和 namespace；accessKey 和 secretKey 推荐使用 RAM 账户的
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Java System Properties before Nacos Properties
+// Environment Variables after Nacos Properties
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// trigger timeout error
+// assert NacosConfigReceivedEvent
+// assert NacosConfigListenerRegisteredEvent
+// Add Listener
+// Publish Config
+// assert NacosConfigListenerRegisteredEvent
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/// *
+// * Licensed to the Apache Software Foundation (ASF) under one or more
+// * contributor license agreements. See the NOTICE file distributed with
+// * this work for additional information regarding copyright ownership.
+// * The ASF licenses this file to You under the Apache License, Version 2.0
+// * (the "License"); you may not use this file except in compliance with
+// * the License. You may obtain a copy of the License at
+// *
+// * http://www.apache.org/licenses/LICENSE-2.0
+// *
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// */
+// package com.alibaba.nacos.spring.context.properties.config;
+//
+// import com.alibaba.nacos.api.config.ConfigService;
+// import com.alibaba.nacos.api.config.annotation.NacosConfigurationProperties;
+// import com.alibaba.nacos.api.exception.NacosException;
+// import
+/// com.alibaba.nacos.spring.context.event.config.NacosConfigurationPropertiesBeanBoundEvent;
+// import com.alibaba.nacos.spring.test.Config;
+// import com.alibaba.nacos.spring.test.MockNacosServiceFactory;
+// import org.junit.Assert;
+// import org.junit.Test;
+// import org.springframework.context.ApplicationEvent;
+// import org.springframework.context.ApplicationEventPublisher;
+// import org.springframework.context.ApplicationListener;
+// import org.springframework.context.event.ApplicationEventMulticaster;
+// import org.springframework.context.event.SimpleApplicationEventMulticaster;
+//
+// import java.util.Properties;
+// import java.util.concurrent.atomic.AtomicReference;
+//
+// import static com.alibaba.nacos.spring.test.MockNacosServiceFactory.DATA_ID;
+// import static com.alibaba.nacos.spring.test.MockNacosServiceFactory.GROUP_ID;
+// import static com.alibaba.nacos.spring.test.TestConfiguration.MODIFIED_TEST_CONTEXT;
+// import static com.alibaba.nacos.spring.test.TestConfiguration.TEST_CONFIG;
+//
+/// **
+// * {@link NacosConfigurationPropertiesBinder} Test
+// *
+// * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
+// * @since 0.1.0
+// */
+// public class NacosConfigurationPropertiesBinderTest {
+//
+// private MockNacosServiceFactory nacosServiceFactory = new MockNacosServiceFactory();
+//
+// @Test
+// public void testBind() throws NacosException {
+//
+// final Config config = new Config();
+//
+// final String beanName = "configBean";
+//
+// ConfigService configService = nacosServiceFactory.createConfigService(new
+/// Properties());
+//
+// final AtomicReference<String> content = new AtomicReference<String>();
+//
+// content.set(TEST_CONFIG);
+//
+// configService.publishConfig(DATA_ID, GROUP_ID, content.get());
+//
+// final ApplicationEventMulticaster multicaster = new
+/// SimpleApplicationEventMulticaster();
+//
+// multicaster.addApplicationListener(new
+/// ApplicationListener<NacosConfigurationPropertiesBeanBoundEvent>() {
+// @Override
+// public void onApplicationEvent(NacosConfigurationPropertiesBeanBoundEvent event) {
+// Assert.assertEquals(DATA_ID, event.getDataId());
+// Assert.assertEquals(GROUP_ID, event.getGroupId());
+// Assert.assertEquals(content.get(), event.getContent());
+// Assert.assertEquals(config, event.getBean());
+// Assert.assertEquals(beanName, event.getBeanName());
+// Assert.assertEquals(config.getClass().getAnnotation(NacosConfigurationProperties.class),
+/// event.getProperties());
+// }
+// });
+//
+// ApplicationEventPublisher applicationEventPublisher = new ApplicationEventPublisher() {
+//
+// @Override
+// public void publishEvent(ApplicationEvent event) {
+// multicaster.multicastEvent(event);
+// }
+// };
+//
+// NacosConfigurationPropertiesBinder binder = new
+/// NacosConfigurationPropertiesBinder(configService, applicationEventPublisher);
+//
+// binder.bind(config, beanName);
+//
+// Assert.assertEquals(1, config.getId());
+// Assert.assertEquals("mercyblitz", config.getName());
+// Assert.assertTrue(0.95 == config.getValue());
+// Assert.assertEquals(Float.valueOf(1234.5f), config.getFloatData());
+// Assert.assertNull(config.getIntData());
+//
+// // Publishing config emits change
+// content.set(MODIFIED_TEST_CONTEXT);
+// configService.publishConfig(DATA_ID, GROUP_ID, content.get());
+//
+// Assert.assertEquals(1, config.getId());
+// Assert.assertEquals("mercyblitz@gmail.com", config.getName());
+// Assert.assertTrue(9527 == config.getValue());
+// Assert.assertEquals(Float.valueOf(1234.5f), config.getFloatData());
+// Assert.assertNull(config.getIntData());
+// }
+//
+// }
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Publishing config emits change
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// throws java.lang.AssertionError
+// throws java.lang.AssertionError
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// timeout of execution
+// normal execution
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// @see ClientWorker.checkUpdateDataIds
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// First
+// PropertySource
+// Publish for FIRST_DATA_ID
+// Publish for BEFORE_OS_ENV_DATA_ID
+// Publish for AFTER_SYS_PROP_DATA_ID
+/**
+/**
+// -> "home/my-path"
+// -> "Mercy Ma"
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// for NacosConfigReceivedEvent
+// for NacosConfigRemovedEvent
+// for NacosConfigListenerRegisteredEvent(true)
+// for NacosConfigListenerRegisteredEvent(false)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Initialize
+// Serialization
+// Publish
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Build Properties Content
+//github.com/mercyblitz");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Never executes
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// 1
+// mercyblitz
+// description
+// false
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**

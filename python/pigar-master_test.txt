@@ -1,0 +1,63 @@
+﻿
+***********other formats****************
+cfg
+db.sqlite3
+gif
+gitignore
+in
+rst
+travis.yml
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+pigar-master/pigar-master/LICENSE
+pigar-master/pigar-master/py2_requirements.txt
+pigar-master/pigar-master/py3_requirements.txt
+pigar-master/pigar-master/README-PYPI.rst
+pigar-master/pigar-master/README.rst
+pigar-master/pigar-master/pigar/tests/fake_reqs.txt
+pigar-master/pigar-master/pigar/tests/fake_simple_html.txt
+pigar-master/pigar-master/pigar/tests/fake_top_level.txt
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+pigar-master/pigar-master/.gitignore
+pigar-master/pigar-master/.travis.yml
+pigar-master/pigar-master/CHANGELOGS.rst
+pigar-master/pigar-master/makefile
+pigar-master/pigar-master/MANIFEST.in
+pigar-master/pigar-master/setup.cfg
+pigar-master/pigar-master/short-guide.gif
+pigar-master/pigar-master/pigar/.db.sqlite3
+
+***********other code file list***************
+pigar-master/pigar-master/setup.py
+pigar-master/pigar-master/pigar/cmd.py
+pigar-master/pigar-master/pigar/db.py
+pigar-master/pigar-master/pigar/log.py
+pigar-master/pigar-master/pigar/modules.py
+pigar-master/pigar-master/pigar/pypi.py
+pigar-master/pigar-master/pigar/reqs.py
+pigar-master/pigar-master/pigar/unpack.py
+pigar-master/pigar-master/pigar/utils.py
+pigar-master/pigar-master/pigar/_version.py
+pigar-master/pigar-master/pigar/__init__.py
+pigar-master/pigar-master/pigar/__main__.py
+pigar-master/pigar-master/pigar/tests/helper.py
+pigar-master/pigar-master/pigar/tests/test_cmd.py
+pigar-master/pigar-master/pigar/tests/test_db.py
+pigar-master/pigar-master/pigar/tests/test_modules.py
+pigar-master/pigar-master/pigar/tests/test_pypi.py
+pigar-master/pigar-master/pigar/tests/test_reqs.py
+pigar-master/pigar-master/pigar/tests/test_unpack.py
+pigar-master/pigar-master/pigar/tests/test_utils.py
+pigar-master/pigar-master/pigar/tests/__init__.py
+pigar-master/pigar-master/pigar/tests/imports_example/example1.py
+pigar-master/pigar-master/pigar/tests/imports_example/example2.py
+pigar-master/pigar-master/pigar/tests/imports_example/example3.py

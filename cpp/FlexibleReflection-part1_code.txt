@@ -1,0 +1,18 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FlexibleReflection-part1\FlexibleReflection-part1\Main.cpp
+// Enable reflection for this type
+// Create an object of type Node
+// Find Node's type descriptor
+// Dump a description of the Node object to the console
+// Define Node's type descriptor
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FlexibleReflection-part1\FlexibleReflection-part1\Primitives.cpp
+//--------------------------------------------------------
+// A type descriptor for int
+//--------------------------------------------------------
+/* unused */) const override {
+//--------------------------------------------------------
+// A type descriptor for std::string
+//--------------------------------------------------------
+/* unused */) const override {
+// namespace reflect

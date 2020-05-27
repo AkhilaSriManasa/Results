@@ -1,0 +1,1082 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\migrate.py
+# from http://stackoverflow.com/questions/3041986/python-command-line-yes-no-input
+# Upgrade 1.0 to 1.1
+# loop through all elements
+# format key
+# shortcut to shove stuff into the priority queue
+# loop through all new keys
+# Upgrade 1.1 to 1.2
+# loop through all elements
+# load and cache request
+# done geting all elements, drop queue if needed
+# insert cached items back in
+# shortcut to shove stuff into the priority queue
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\config\file_pusher.py
+# ensure path exists
+# push the conf file
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\custom_cookies.py
+# custom line
+# set Cookie header
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\distributed_scheduler.py
+# the redis connection
+# the dict of throttled queues
+# the spider using this scheduler
+# the list of current queues
+# the class to use for the queue
+# the redis dupefilter
+# the last time the queues were updated
+# the last time the ip was updated
+# how often to update the queues
+# the tld extractor
+# default number of hits for a queue
+# default window to calculate number of hits
+# the ip address of the scheduler (if needed)
+# the old ip for logging
+# the interval to update the ip address
+# add spider type to redis throttle queue key
+# add spider public ip to redis throttle queue key
+# the number of extra tries to get an item
+# the generated UUID for the particular scrapy process
+# Zookeeper Dynamic Config Vars
+# The list of domains and their configs
+# The id used to read the throttle config
+# Flag to reload queues if settings are wiped too
+# The base assigned configuration path to read
+# The KazooClient to manage the config
+# Zookeeper path to read actual yml config
+# the domains to ignore thanks to zookeeper config
+# set up tldextract
+# if we need better uuid's mod this line
+# vetting process to ensure correct configs
+# check valid
+# we already have a throttled queue for this domain, update it to new settings
+# if scale is applied, scale back; otherwise use updated hits
+# round to int
+# lost connection to zookeeper, reverting back to defaults
+# new config could have loaded between scrapes
+# build final queue key, depending on type and ip bools
+# add the tld from the key `type:tld:queue`
+# use default window and hits
+# this is now a tuple, all access needs to use [0] to get
+# the object, use [1] to get the time
+# use custom window and hits
+# adjust the crawl rate based on the scale if exists
+# assign local ip in case of exception
+# grab the tld of the request
+# allow only if we want all requests or we want
+# everything but blacklisted domains
+# insert if crawl never expires (0) or time < expires
+# we may already have the queue in memory
+# shoving into a new redis queue, negative b/c of sorted sets
+# this will populate ourself and other schedulers when
+# they call create_queues
+# urls should be safe (safe_string_url)
+#  callback/errback are assumed to be a bound instance of the spider
+# skip if the whole domain has been blacklisted in zookeeper
+# the throttled queue only returns an item if it is allowed
+# update timeout and return
+# update the redis queues every so often
+# update the ip address every so often
+# need absolute url
+# need better url validation here
+# defaults not in schema
+# extra check to add items to request
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\items.py
+# -*- coding: utf-8 -*-
+# Define here the models for your scraped items
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\log_retry_middleware.py
+# set up the default sc logger
+# stats setup
+# plugin is essential to functionality
+# hack to update passed in settings
+# we chose to handle 504's here as well as in the middleware
+# in case the middleware is disabled
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\meta_passthrough_middleware.py
+# set up the default sc logger
+# only operate on requests
+# pass along all known meta fields, only if
+# they were not already set in the spider's new request
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\pipelines.py
+# -*- coding: utf-8 -*-
+# Define your item pipelines here
+# make duplicate item, but remove unneeded keys
+# this is critical so we choose to exit.
+# exiting because this is a different thread from the crawlers
+# and we want to ensure we can connect to Kafka when we boot
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\redis_dupefilter.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\redis_retry_middleware.py
+# our priority setup is different from super
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\redis_stats_middleware.py
+# set up the default sc logger
+# set up redis
+# plugin is essential to functionality
+# we chose to handle 504's here as well as in the middleware
+# in case the middleware is disabled
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\settings.py
+# This file houses all default settings for the Crawler
+# to override please use a custom localsettings.py file
+# Scrapy Cluster Settings
+# ~~~~~~~~~~~~~~~~~~~~~~~
+# Specify the host and port to use when connecting to Redis.
+# Kafka server information
+# base64 encode the html body to avoid json dump errors due to malformed text
+# 25 ms before flush
+# 4MB before blocking
+# Don't cleanup redis queues, allows to pause/resume crawls.
+# seconds to wait between seeing new queues, cannot be faster than spider_idle time of 5
+# throttled queue defaults per domain, x hits in a y second window
+# we want the queue to produce a consistent pop flow
+# how long we want the duplicate timeout queues to stick around in seconds
+# how often to refresh the ip address of the scheduler
+# whether to add depth >= 1 blacklisted domain requests back to the queue
+# add Spider type to throttle mechanism
+# add ip address to throttle mechanism
+# how many times to retry getting an item from the queue before the spider is considered idle
+# how long to keep around stagnant domain queues
+# log setup scrapy cluster crawler
+# stats setup
+# from time variables in scutils.stats_collector class
+# Scrapy Settings
+# ~~~~~~~~~~~~~~~
+# Scrapy settings for distributed_crawling project
+#
+# Enables scheduling storing requests queue in redis.
+# Store scraped item in redis for post-processing.
+# disable built-in DepthMiddleware, since we do our own
+# depth management per crawl request
+# Handle timeout retries with the redis scheduler and logger
+# exceptions processed in reverse order
+# custom cookies to not persist across crawl requests
+# Disable the built in logging in production
+# Allow all return codes
+# Avoid in-memory DNS cache. See Advanced topics of docs for info
+# Local Overrides
+# ~~~~~~~~~~~~~~~
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\spiders\link_spider.py
+# capture raw response
+# populated from response.meta
+# populated from raw HTTP response
+# determine whether to continue spidering
+# we are spidering -- yield Request for each discovered link
+# link that was discovered
+# raw response has been processed, yield to item pipeline
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\spiders\lxmlhtml.py
+# hacky way to get the underlying lxml parsed document
+# pseudo lxml.html.HtmlElement.make_links_absolute(base_url)
+# skipping bogus links
+# added 'ignore' to encoding errors
+# to fix relative links after process_value
+# custom parser override
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\spiders\redis_spider.py
+# begin reconstructing headers from scratch...
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\spiders\wandering_spider.py
+# Example Wandering Spider
+# debug output for receiving the url
+# step counter for how many pages we have hit
+# Create Item to send to kafka
+# capture raw response
+# populated from response.meta
+# populated from raw HTTP response
+# we want to know how far our spider gets
+# determine what link we want to crawl
+# there are links on the page
+# increment our step counter for this crawl job
+# pass along our user agent as well
+# debug output
+# yield the Request to the scheduler
+# raw response has been processed, yield to item pipeline
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\crawling\spiders\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\online.py
+# set up redis
+# plugin is essential to functionality
+# clear out older test keys if any
+# set up kafka to consumer potential result
+# add crawl to redis
+# run the spider, give 20 seconds to see the url, crawl it,
+# and send to kafka. Then we kill the reactor
+# if for some reason the tests fail, we end up falling behind on
+# the consumer
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_distributed_scheduler.py
+# required
+# test request already seen
+# test request not expiring and queue seen
+# this should not be reached
+# test request not expiring and queue not seen
+# this should not be reached
+# test whole domain blacklisted, but we allow it
+# this should not be reached
+# test dont allow blacklist domains back into the queue
+# test allow domain back into queue since not blacklisted
+# reset
+# test request expired
+# test request blacklisted via stop or expire from redis-monitor
+# test finding an item
+# test failed to find an item
+# test skip due to blacklist
+# should also not raise exception
+# test update queues
+# this should not be reached
+# test update ip address
+# this should not be reached
+# test got item
+# test didn't get item
+# correctly loaded
+# both are not correct yaml setups
+# test without scale factor
+# test with scale factor
+# the scale factor effects the limit only
+# assert max
+# assert min
+# assert normal
+# test basic
+# test type
+# test ip
+# test type and ip
+# assert not expired
+# assert expired
+# assert remove from queue_keys also
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_link_spider.py
+# test too deep
+# test raw depth recursion
+# test allowed_domains filter
+# test allow regex filter
+# test deny regex filter
+# test deny_extensions filter
+# no pages that end in .html
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_log_retry_middleware.py
+# test nothing
+# test good/bad rolling stats
+# for totals, not DUMB
+# check that both keys are set up
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_meta_passthrough_middleware.py
+# create fake response
+# test all types of results from a spider
+# dicts, items, or requests
+# 1 debug for the method, 1 debug for the request
+# test meta unchanged if already exists
+# key1 value1 did not pass through, since it was already set
+# key2 was not set, therefor it passed through
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_pipelines.py
+# test unknown item
+# test normal send, no appid topics
+# test normal send, with appids
+# test base64 encode
+# test kafka exception
+# send should not crash the pipeline
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_redis_dupefilter.py
+# successfully added
+# unsuccessfully added
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_redis_retry_middleware.py
+# number of retries less than max
+# over max
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_redis_stats_middleware.py
+# test nothing
+# test status codes only
+# test good/bad rolling stats
+# for totals, not DUMB
+# check that both keys are set up
+# 4 calls for link, 4 calls for wandering
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\crawler\tests\test_wandering_spider.py
+# should always yield one request
+# link following tests ran via link spider
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\docker\crawler\settings.py
+# THIS FILE SHOULD STAY IN SYNC WITH /crawler/crawling/settings.py
+# This file houses all default settings for the Crawler
+# to override please use a custom localsettings.py file
+# Scrapy Cluster Settings
+# ~~~~~~~~~~~~~~~~~~~~~~~
+# Specify the host and port to use when connecting to Redis.
+# Kafka server information
+# base64 encode the html body to avoid json dump errors due to malformed text
+# 25 ms before flush
+# 4MB before blocking
+# Don't cleanup redis queues, allows to pause/resume crawls.
+# seconds to wait between seeing new queues, cannot be faster than spider_idle time of 5
+# throttled queue defaults per domain, x hits in a y second window
+# we want the queue to produce a consistent pop flow
+# how long we want the duplicate timeout queues to stick around in seconds
+# how often to refresh the ip address of the scheduler
+# whether to add depth >= 1 blacklisted domain requests back to the queue
+# add Spider type to throttle mechanism
+# add ip address to throttle mechanism
+# how many times to retry getting an item from the queue before the spider is considered idle
+# how long to keep around stagnant domain queues
+# log setup scrapy cluster crawler
+# stats setup
+# from time variables in scutils.stats_collector class
+# Scrapy Settings
+# ~~~~~~~~~~~~~~~
+#DOWNLOADER_CLIENTCONTEXTFACTORY = 'crawling.contextfactory.MyClientContextFactory'
+# Scrapy settings for distributed_crawling project
+#
+# Enables scheduling storing requests queue in redis.
+# Store scraped item in redis for post-processing.
+# disable built-in DepthMiddleware, since we do our own
+# depth management per crawl request
+# Handle timeout retries with the redis scheduler and logger
+# exceptions processed in reverse order
+# custom cookies to not persist across crawl requests
+# Disable the built in logging in production
+# Allow all return codes
+# Avoid in-memory DNS cache. See Advanced topics of docs for info
+# Local Overrides
+# ~~~~~~~~~~~~~~~
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\docker\kafka-monitor\settings.py
+# THIS FILE SHOULD STAY IN SYNC WITH /kafka-monitor/settings.py
+# Redis host information
+# Kafka server information
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# plugin setup
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# main thread sleep time
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\docker\redis-monitor\settings.py
+# THIS FILE SHOULD STAY IN SYNC WITH /redis-monitor/settings.py
+# This file houses all default settings for the Redis Monitor
+# to override please use a custom localsettings.py file
+# Redis host configuration
+# 25 ms before flush
+# 4MB before blocking
+# Zookeeper Settings
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# retry failures on actions
+# main thread sleep time
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\docker\rest\settings.py
+# THIS FILE SHOULD STAY IN SYNC WITH /rest/settings.py
+# This file houses all default settings for the Redis Monitor
+# to override please use a custom localsettings.py file
+# Flask configuration
+# Redis host information
+# Kafka server information ------------
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# logging setup
+# internal configuration
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\docs\conf.py
+# -*- coding: utf-8 -*-
+#
+# Scrapy Cluster documentation build configuration file, created by
+# sphinx-quickstart on Wed May  6 19:06:41 2015.
+#
+# This file is execfile()d with the current directory set to its
+# containing dir.
+#
+# Note that not all possible configuration values are present in this
+# autogenerated file.
+#
+# All configuration values have a default; values that are commented out
+# serve to show the default.
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#sys.path.insert(0, os.path.abspath('.'))
+# -- General configuration ------------------------------------------------
+# If your documentation needs a minimal Sphinx version, state it here.
+#needs_sphinx = '1.0'
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+# Add any paths that contain templates here, relative to this directory.
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+# source_suffix = ['.rst', '.md']
+# The encoding of source files.
+#source_encoding = 'utf-8-sig'
+# The master toctree document.
+# General information about the project.
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+# The full version, including alpha/beta/rc tags.
+# The language for content autogenerated by Sphinx. Refer to documentation
+# for a list of supported languages.
+#
+# This is also used if you do content translation via gettext catalogs.
+# Usually you set "language" from the command line for these cases.
+# There are two options for replacing |today|: either, you set today to some
+# non-false value, then it is used:
+#today = ''
+# Else, today_fmt is used as the format for a strftime call.
+#today_fmt = '%B %d, %Y'
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# The reST default role (used for this markup: `text`) to use for all
+# documents.
+#default_role = None
+# If true, '()' will be appended to :func: etc. cross-reference text.
+#add_function_parentheses = True
+# If true, the current module name will be prepended to all description
+# unit titles (such as .. function::).
+#add_module_names = True
+# If true, sectionauthor and moduleauthor directives will be shown in the
+# output. They are ignored by default.
+#show_authors = False
+# The name of the Pygments (syntax highlighting) style to use.
+# A list of ignored prefixes for module index sorting.
+#modindex_common_prefix = []
+# If true, keep warnings as "system message" paragraphs in the built documents.
+#keep_warnings = False
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+# -- Options for HTML output ----------------------------------------------
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+#html_theme_options = {}
+# Add any paths that contain custom themes here, relative to this directory.
+#html_theme_path = []
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+#html_title = None
+# A shorter title for the navigation bar.  Default is the same as html_title.
+#html_short_title = None
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+#html_logo = None
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+#html_favicon = None
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# Add any extra paths that contain custom files (such as robots.txt or
+# .htaccess) here, relative to this directory. These files are copied
+# directly to the root of the documentation.
+#html_extra_path = []
+# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
+# using the given strftime format.
+#html_last_updated_fmt = '%b %d, %Y'
+# If true, SmartyPants will be used to convert quotes and dashes to
+# typographically correct entities.
+#html_use_smartypants = True
+# Custom sidebar templates, maps document names to template names.
+#html_sidebars = {}
+# Additional templates that should be rendered to pages, maps page names to
+# template names.
+#html_additional_pages = {}
+# If false, no module index is generated.
+#html_domain_indices = True
+# If false, no index is generated.
+#html_use_index = True
+# If true, the index is split into individual pages for each letter.
+#html_split_index = False
+# If true, links to the reST sources are added to the pages.
+#html_show_sourcelink = True
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+#html_show_sphinx = True
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+#html_show_copyright = True
+# If true, an OpenSearch description file will be output, and all pages will
+# contain a <link> tag referring to it.  The value of this option must be the
+# base URL from which the finished HTML is served.
+#html_use_opensearch = ''
+# This is the file name suffix for HTML files (e.g. ".xhtml").
+#html_file_suffix = None
+# Language to be used for generating the HTML full-text search index.
+# Sphinx supports the following languages:
+#   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
+#   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
+#html_search_language = 'en'
+# A dictionary with options for the search language support, empty by default.
+# Now only 'ja' uses this config value
+#html_search_options = {'type': 'default'}
+# The name of a javascript file (relative to the configuration directory) that
+# implements a search results scorer. If empty, the default will be used.
+#html_search_scorer = 'scorer.js'
+# Output file base name for HTML help builder.
+# -- Options for LaTeX output ---------------------------------------------
+# The paper size ('letterpaper' or 'a4paper').
+#'papersize': 'letterpaper',
+# The font size ('10pt', '11pt' or '12pt').
+#'pointsize': '10pt',
+# Additional stuff for the LaTeX preamble.
+#'preamble': '',
+# Latex figure (float) alignment
+#'figure_align': 'htbp',
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+#latex_logo = None
+# For "manual" documents, if this is true, then toplevel headings are parts,
+# not chapters.
+#latex_use_parts = False
+# If true, show page references after internal links.
+#latex_show_pagerefs = False
+# If true, show URL addresses after external links.
+#latex_show_urls = False
+# Documents to append as an appendix to all manuals.
+#latex_appendices = []
+# If false, no module index is generated.
+#latex_domain_indices = True
+# -- Options for manual page output ---------------------------------------
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+# If true, show URL addresses after external links.
+#man_show_urls = False
+# -- Options for Texinfo output -------------------------------------------
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+# Documents to append as an appendix to all manuals.
+#texinfo_appendices = []
+# If false, no module index is generated.
+#texinfo_domain_indices = True
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#texinfo_show_urls = 'footnote'
+# If true, do not generate a @detailmenu in the "Top" node's menu.
+#texinfo_no_detailmenu = False
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\kafkadump.py
+# initial main parser setup
+# args to use for all commands
+# list command
+# dump command
+# Exception is thrown when group_id is None.
+# See https://github.com/dpkp/kafka-python/issues/619
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\kafka_monitor.py
+#!/usr/bin/python
+# skip loading the plugin if its value is None
+# valid plugin, import and setup
+# negate because logger wants True for std out
+# only log every X seconds
+# to prevent reference modification
+# break if nothing is returned
+# consumer has no idea where they are
+# initial parsing setup
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\settings.py
+# This file houses all default settings for the Kafka Monitor
+# to override please use a custom localsettings.py file
+# Redis host information
+# Kafka server information
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# plugin setup
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# main thread sleep time
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\plugins\action_handler.py
+# plugin is essential to functionality
+# format key
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\plugins\base_handler.py
+# override this with your own 'something.json' schema
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\plugins\scraper_handler.py
+# plugin is essential to functionality
+# format key
+# shortcut to shove stuff into the priority queue
+# if timeout crawl, add value to redis
+# log success
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\plugins\stats_handler.py
+# plugin is essential to functionality
+# format key
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\plugins\zookeeper_handler.py
+# plugin is essential to functionality
+# format key
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\plugins\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\tests\online.py
+# setup custom class to handle our requests
+# ensure the group id is present so we pick up the 1st message
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\tests\test_kafka_monitor.py
+# test loading default plugins
+# test removing a plugin from settings
+# fail if the class is not found
+# Throw error if schema could not be found
+# test no rolling stats, only total
+# test good/bad rolling stats
+# for totals, not DUMB
+# lets assume we are loading the default plugins
+# test no rolling stats
+# test good/bad rolling stats
+# for totals, not DUMB
+# handle kafka offset errors
+# handle bad json errors
+# fake class so we can use dot notation
+# set up to process messages
+#  test that handler function is called for the scraper
+# test that handler function is called for the actions
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\tests\test_plugins.py
+# check it is added to redis
+# check timeout is added
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\kafka-monitor\tests\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\redis_monitor.py
+# negate because logger wants True for std out
+# essential to functionality
+# skip loading the plugin if its value is None
+# valid plugin, import and setup
+# continue
+# only log every X seconds
+# acquire lock
+# remove lock regardless of if exception or was handled ok
+# get the current failure count
+# stats setup
+# we only care about the spider
+# got a time based stat
+# got a spider identifier
+# simple counts
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\settings.py
+# This file houses all default settings for the Redis Monitor
+# to override please use a custom localsettings.py file
+# Redis host configuration
+# 25 ms before flush
+# 4MB before blocking
+# Zookeeper Settings
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# retry failures on actions
+# main thread sleep time
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\base_monitor.py
+# override this with your own regex to look for in redis
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\expire_monitor.py
+# very similar to stop
+# break down key
+# log ack of expire
+# add crawl to blacklist so it doesnt propagate
+# add this to the blacklist set
+# everything stored in the queue is now expired
+# add result to our dict
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\info_monitor.py
+# the master dict to return
+# break down key
+# log we received the info message
+# generate the information requested
+# keys based on score
+# this doesnt return them in order, need to bin first
+# score is negated in redis
+# used for finding total count of domains
+# get all domain queues
+# now iterate through binned dict
+# add new crawlid to master dict
+# get all domain queues
+# now iterate through binned dict
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\kafka_base_monitor.py
+# dont want logger in outbound kafka message
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\stats_monitor.py
+# break down key
+# log we received the stats request
+# break down key
+# main is self, end is machine, true_tail is uuid
+# get hll value
+# get zcard value
+# we only care about the spider
+# got a time based stat
+# got a spider identifier
+# simple counts
+# break down key
+# we only care about the machine, not spider type
+# simple count
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\stop_monitor.py
+# break down key
+# log we received the stop message
+# add this to the blacklist set
+# purge crawlid from current set
+# item to send to kafka
+# delete timeout for crawl (if needed) since stopped
+# purge three times to try to make sure everything is cleaned
+# using scan for speed vs keys
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\zookeeper_monitor.py
+# break down key
+# the master dict to return
+# log we received the info message
+# get the current zk configuration
+# update the configuration
+# write the configuration back to zookeeper
+# ack the data back to kafka
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\plugins\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\tests\online.py
+# set the info flag
+# process the request
+# ensure the key is gone
+# now test the message was sent to kafka
+# if for some reason the tests fail, we end up falling behind on
+# the consumer
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\tests\test_plugins.py
+# redis key finding is different than regex finding
+# if the stop monitor passes then this is just testing whether
+# the handler acts on the key only if it has expired
+# not timed out
+# timed out
+# trying to make sure that everything is called
+# set up looping calls to redis_conn.keys()
+# tests stats on three different machines, with different spiders
+# contributing to the same or different stats
+# tests stats on three different machines, with different spiders
+# contributing to the same or different stats
+# domain update
+# domain remove
+# blacklist update
+# blacklist remove
+# test error on get
+# set error on set
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\tests\test_redis_monitor.py
+# test loading default plugins
+# test removing a plugin from settings
+# fail if the class is not found
+# test that exceptions are caught within each plugin
+# assuming now all plugins are loaded
+# BaseExceptions are never raised normally
+# lets just assume the regex worked
+# info
+# action
+# expire
+# test that an exception within a handle method is caught
+# tests for _process_plugins with locking
+# lets just assume the regex worked
+# test didnt acquire lock
+# test got lock
+# test lock released
+# test lock not held not released
+# lets assume we are loading the default plugins
+# test no rolling stats
+# test good/bad rolling stats
+# for totals, not DUMB
+# this should not raise an exception
+# this should
+# test not set
+# test set
+# test exceeded
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\redis-monitor\tests\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\rest\rest_service.py
+# Route Decorators --------------------
+# static strings
+# negate because logger wants True for std out
+# spawn heartbeat processing loop
+# disable flask logger
+# consumer has no idea where they are
+# close older connections
+# create new connections
+# close threads
+# close kafka
+# Routes --------------------
+# self.app.add_url_rule('/', 'catch', self.catch, methods=['GET'],
+#                        defaults={'path': ''})
+# proof of concept to write things to kafka
+# key still exists, means we didnt find get our
+# response in time
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\rest\settings.py
+# Flask configuration
+# Hex representation of 'SC'
+# Redis host information
+# Kafka server information ------------
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# logging setup
+# internal configuration
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\rest\tests\online.py
+# random port number for local connections
+# sleep 10 seconds for everything to boot up
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\rest\tests\test_rest_service.py
+# handle kafka offset errors
+# handle bad json errors
+# fake class so we can use dot notation
+# test got poll result
+# test got in process call result
+# test not connected
+# test connected
+# throw error
+# connection setup
+# all connected
+# disconnecting
+# disconnected
+# test not connected
+# test connected
+# throw error
+# consumer/producer != None
+# eary exit to ensure everything is closed
+# test if everything flows through
+# failure
+# success
+# data
+# error message
+# error cause
+# closed fine
+# didnt close
+# test good
+# test bad
+# Route decorators --------
+# test uncaught exception thrown
+# test normal response
+# test normal response with alternate response code
+# bad json
+# no json
+# good json
+# valid schema
+# invalid schema
+# Routes ------------------
+# test not connected
+# connected
+# test failed to send to kafka
+# test no uuid
+# test with uuid, got response
+# fake multithreaded response from kafka
+# test with uuid, no response
+# test not connected
+# test connected found poll key
+# test connected didnt find poll key
+# test connection error
+# test value error
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\setup.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_ah.py
+# use the default argparse setup, comment out the lines above
+#parser = argparse.ArgumentParser(
+#    description='example_ah.py: Prints various family members')
+# args here are applied to all sub commands using the `parents` parameter
+# subcommand 1, requires name of brother
+# subcommand 2, requires name of sister and optionally mom
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_lf.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_mt.py
+# define a hidden method to sleep and wait based on parameters
+# call the newly declared function
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_rq.py
+# change these for your Redis host
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_rtq.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_sc.py
+# set up arg parser
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_sw.py
+# set up arg parser
+# load up settings
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\examples\example_zw.py
+# You can use any or all of these, polling + handlers, some handlers, etc
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\argparse_helper.py
+# add subparsers below these lines
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\log_factory.py
+# set up logger
+# set up to std out
+# set up to file
+# try to make dir
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\method_timer.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# triger alarm in timeout_time seconds
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\redis_queue.py
+# ignore priority
+# use atomic range/remove using multi/exec
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\redis_throttled_queue.py
+# the instantiated queue class
+# the window to use to limit requests
+# number of requests in the given window
+# the redis connection
+# whether to use moderation or not
+# the last time the moderated queue was pulled
+# appended to end of window queue key
+# appended to end to time key
+# use elastic catch up
+# tolerance
+# counter to get to limit before elastic kicks in
+# default window name
+# moderation is useless when only grabbing 1 item in x secs
+# used for communicating throttle moderation across queue instances
+# Expire old keys (hits)
+# check if we are hitting too fast for moderation
+# ---- LOCK
+# from this point onward if no errors are raised we
+# successfully incremented the counter
+# passed the moderation limit, now check time window
+# If we have less keys than max, update out moderate key
+# this is a valid transaction, set the new time
+# watch was changed, another thread just incremented
+# the value
+# If we currently have more keys than max,
+# then limit the action
+# get key, otherwise default the moderate key expired and
+# we dont care
+# check moderation difference
+# ---- LOCK
+# push value into key
+# expire it if it hasnt been touched in a while
+# watch was changed, another thread just messed with the
+# queue so we can't tell if our result is ok
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\settings_wrapper.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\stats_collector.py
+# create a rolling time window that saves the last 24 hours of hits
+# that's it!
+# Easy to use time variables
+# special case to auto generate correct start time
+#hyperloglogs
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\version.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\zookeeper_watcher.py
+# The KazooClient to manage the config
+# Zookeeper path to pointed to file
+# is True when the assignment has been set to
+# None but we cannot remove the config listener
+# the function to call when the validity changes
+# the function to call when the config changes
+# the function to call when an error occurs in reading
+# the current state of the ConfigWatcher with ZK
+# used when closing via ^C
+# The current file contents, to see if a change occurred
+# the current pointed path, to see if change occurred
+# this will throw an exception if it can't start right away
+# self.zoo_client.stop()
+# This is going to throw a SUSPENDED kazoo error
+# which will cause the sessions to be wiped and re established.
+# Used b/c of massive connection pool issues
+# dummy ping to ensure we are still connected
+# grab the file
+# file is a pointer, go update and watch other file
+# file is not a pointer, return contents
+# only grab file if our pointer is still good (not None)
+# You can use any or all of these, polling + handlers, some handlers, etc
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\scutils\__init__.py
+# Set default logging handler to avoid "No handler found" warnings.
+# Python 2.7+
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\default_settings.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\online.py
+# Highest to lowest priority
+# test rolling the key we are using
+# this test ensures the thread can start and stop
+# test removing old keys
+# rough sleep to get us back on track
+# at this point the first 2 counts have expired
+# now everything has expired
+# check to ensure counter is still working
+# rough sleep to get us back on track
+# now the counter should have rolled
+# rough sleep to get us back on track
+# now the counter should have rolled
+# percent
+# rough sleep to get us back on track
+# rough sleep to get us back on track
+# we should be on to a new counter window by now
+# rough sleep to get us back on track
+# build testing suite
+# moved to the top to help get better consistency
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\override_defaults.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_argparse_helper.py
+# from http://stackoverflow.com/questions/4219717/how-to-assert-output-with-nosetest-unittest-in-python
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_log_factory.py
+# don't output an empty dict
+# Callback shouldn't fire
+# Callback shouldn't fire
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_method_timer.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_redis_queue.py
+# assert example good encoding
+# assert bad encodings
+# python pickling is different between versions
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_redis_throttled_queue.py
+# limit is 2 hits in the window
+# an unmoderated queue is really just testing the number
+# of hits in a given window
+# mock exception raised even with good hits
+# a moderated queue should pop ~ every x seconds
+# we already tested the window limit in the unmoderated test
+# mock exception raised even with good moderation
+# test elastic kick in hasnt happened yet
+# kick in overrides, even though we were moderated
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_settings_wrapper.py
+# test no prior defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_stats_collector.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\test_zookeeper_watcher.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/scrapy-cluster-master\scrapy-cluster-master\utils\tests\throttled_queue.py
+#!/opt/miniconda/bin/python

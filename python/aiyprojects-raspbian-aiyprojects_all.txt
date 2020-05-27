@@ -1,0 +1,2279 @@
+﻿# Change log
+
+This page describes the changes in each release.
+
+To update your kit, see the [system updates guide][system-updates].
+All system images can be downloaded from the [GitHub releases page][github-releases].
+
+## AIY Kits Release 2019-11-13
+
+Compatible with Voice HAT, Voice Bonnet, and Vision Bonnet.
+
+Based on the [Raspbian Buster with desktop][raspbian].
+
+**Fixes**
+
+* Fix driver compilation errors on the latest Raspbian
+* Fix HACKING.md instructions
+* Fix gpiozero integration
+
+**Improvements**
+
+* Debian packages are now hosted at https://packages.cloud.google.com/
+* Original Raspbian image is modified in the minimal way (no unnecessary packages)
+
+## AIY Kits Release 2018-11-16
+
+Compatible with Voice HAT, Voice Bonnet, and Vision Bonnet.
+
+**Fixes**
+
+* Fix tts engine click sound
+* Fix `assistant_grpc_demo.service`: add DISPLAY environment variable and proper
+systemd dependencies
+* Fix various linter findings: python3 compatibility, wrong variable names, etc.
+
+**Improvements**
+
+* New `board.py` to access button and LED on all boards
+* New audio API in `voice/audio.py`
+* Direct python support for iNaturalist models
+* Load anchors/labels directly from text files
+* Add `get_inference_state()` and `resest()` to Vision Bonnet protocol
+* Add Voice HAT schematic in `docs` folder
+* Add sparse representation for output tensors to increase data transfer rate
+* SVG-image overlay for video streaming (experimental)
+
+## AIY Kits Release 2018-08-03
+
+Compatible with Voice HAT, Voice Bonnet, and Vision Bonnet.
+
+**Fixes**
+
+* Fix PulseAudio infinite loop with Voice Bonnet
+* Fix PulseAudio volume control
+* Fix gpiozero LED on/off bug
+* Fix local USB networking on macOS, no driver required
+* Fix check_audio.py
+
+**Improvements**
+
+* Add Makefile for common shortcuts
+* Add vision unit tests for all models and examples
+* Add video streaming support (experimental)
+* Add Google Cloud IoT support (experimental)
+* Add more documentation (pinouts, drivers, troubleshooting, etc.)
+* Add new code examples and update existing ones
+* Add CHANGES.md to track release changes
+* Remove unnecessary files (e.g. ALSA configs)
+* Update vision driver to support mmap syscall
+* Update sound driver to support latest Raspbian image
+* Update HACKING.md
+
+## AIY Kits Release 2018-04-13
+
+Compatible with Voice HAT, Voice Bonnet, and Vision Bonnet.
+
+## AIY Kits Release 2018-02-21
+
+Compatible with Voice HAT, Voice Bonnet, and Vision Bonnet.
+
+## AIY Kits Release 2017-12-18
+
+Compatible with Voice HAT and Vision Bonnet.
+
+## VoiceKit Classic Image 2017-09-11
+
+Compatible with Voice HAT.
+
+[github-releases]: https://github.com/google/aiyprojects-raspbian/releases
+[system-updates]: https://github.com/google/aiyprojects-raspbian/blob/aiyprojects/HACKING.md
+[raspbian]: https://www.raspberrypi.org/downloads/raspbian/
+# Contributing
+
+We'd love to accept your patches and contributions to this project.
+There are just a few small guidelines you need to follow.
+
+## Scope of Contributions
+
+This project consists of the support libraries (audio, gRPC, etc) required for
+AIY Projects, as well as simple examples to experiment with and build upon.
+
+Please limit pull requests to bug fixes or improvements to code or documentation
+clarity. If you've added new examples and you'd like to publish your fork for
+others to use, you can post on [hackster.io] or other channels.
+
+## Contributor License Agreement
+
+Contributions to this project must be accompanied by a Contributor License
+Agreement. You (or your employer) retain the copyright to your contribution,
+this simply gives us permission to use and redistribute your contributions as
+part of the project. Head over to <https://cla.developers.google.com/> to see
+your current agreements on file or to sign a new one.
+
+You generally only need to submit a CLA once, so if you've already submitted one
+(even if it was for a different project), you probably don't need to do it
+again.
+
+## Code reviews
+
+All submissions, including submissions by project members, require review. We
+use GitHub pull requests for this purpose. Consult [GitHub Help] for more
+information on using pull requests.
+
+[hackster.io]: https://www.hackster.io/
+[GitHub Help]: https://help.github.com/articles/about-pull-requests/# Install the AIY Projects software
+
+This page describes how to install all software for an AIY Vision Bonnet or Voice Bonnet.
+
+If you're updating an existing AIY kit or starting from scratch, we recommend you [install our
+pre-built image](#install-our-pre-build-aiy-projects-image). But if you have your own Raspbian
+system that you'd like to use with an AIY kit, then you can
+[install our software on your existing Raspbian system](#install-aiy-software-on-an-existing-raspbian-system).
+
+## Install our pre-build AIY Projects image
+
+To flash our latest pre-built system image onto an SD card, follow these steps:
+
+1. Download the latest `.img.xz` file from our [releases page on GitHub][github-releases].
+   (For release details, see the [Change log][changelog].)
+1. Plug-in your MicroSD card to your computer with an adapter.
+1. Use a program such as [balenaEtcher](https://www.balena.io/etcher/) to flash the `.img.xy` file
+   onto your MicroSD card. (balenaEtcher is free and works on Windows, Mac, and Linux.)
+
+When flashing is done, put the MicroSD card back in your kit and you're good to go!
+
+
+## Install AIY software on an existing Raspbian system
+
+Follow these steps to install the AIY drivers and software onto an existing Raspbian system.
+
+**Note:** This process is compatible with Raspbian Buster (2019-06-20) or later only.
+Before you start, be sure you have the latest version of [Raspbian][raspbian].
+
+### 1. Add the AIY Debian packages repo
+
+Add AIY package repo:
+
+```bash
+echo "deb https://packages.cloud.google.com/apt aiyprojects-stable main" | sudo tee /etc/apt/sources.list.d/aiyprojects.list
+```
+
+Add Google package keys:
+
+```bash
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+```
+
+Update and install the latest system updates (including kernel):
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+Reboot after update:
+
+```bash
+sudo reboot
+```
+
+### 2. Install optional packages
+
+#### RGB Button Driver
+
+This package is needed only if you're using the light-up RGB button that's included with
+the Vision/Voice Bonnet:
+
+```bash
+sudo apt-get install -y leds-ktd202x-dkms
+```
+
+Run `sudo modprobe leds_ktd202x` to load the driver and `sudo modprobe -r leds_ktd202x` to
+unload it. Vision/Voice Bonnet does this automatically via built-in device tree overlay
+saved in the board's EEPROM.
+
+#### Piezo Buzzer Driver
+
+This package is needed only if you're using the piezo buzzer included with the Vision Bonnet:
+
+```bash
+sudo apt-get install -y pwm-soft-dkms
+```
+
+#### Pi Zero Ethernet-over-USB
+
+This package is needed only if you're using Ethernet-over-USB on Pi Zero:
+```bash
+sudo apt-get install -y aiy-usb-gadget
+```
+Default Pi IP address is `192.168.11.2`, host IP address will be assigned automatically.
+
+#### Support for AIY Projects app
+
+In order to make the Pi work with the [AIY Projects][aiy-app] app:
+
+```bash
+sudo apt-get install -y aiy-bt-prov-server
+```
+
+### 3. Install required packages
+
+Use the following commands to install packages for either the
+[Vision Bonnet](#install-vision-bonnet-packages) or the
+[Voice Bonnet/HAT](#install-voice-bonnethat-packages).
+
+#### Install Vision Bonnet packages
+
+Install the bonnet drivers:
+
+```bash
+sudo apt-get install -y aiy-vision-dkms
+```
+
+Install the [example vision models][aiy-models]:
+
+```bash
+sudo apt-get install -y aiy-models
+```
+
+Install the optimized `protobuf` library for better performance:
+
+```bash
+sudo apt-get install -y aiy-python-wheels
+```
+
+Enable camera module:
+```bash
+echo "start_x=1" | sudo tee -a /boot/config.txt
+```
+
+Set GPU memory to 128MB:
+```bash
+echo "gpu_mem=128" | sudo tee -a /boot/config.txt
+```
+
+Reboot:
+
+```bash
+sudo reboot
+```
+
+Then verify that `dmesg` output contains `Myriad ready` message:
+
+```bash
+dmesg | grep -i "Myriad ready"
+```
+
+You can also verify that camera is working fine by watching video on the
+connected monitor:
+```bash
+raspivid -t 0
+```
+
+Or use `ffplay` to get video output on the host machine:
+```bash
+ssh pi@raspberrypi.local "raspivid --nopreview --timeout 0 -o -" | ffplay -loglevel panic -
+```
+
+#### Install Voice Bonnet/HAT packages
+
+Install the bonnet/HAT drivers:
+
+```bash
+sudo apt-get install -y aiy-voicebonnet-soundcard-dkms
+```
+
+Disable built-in audio:
+
+```bash
+sudo sed -i -e "s/^dtparam=audio=on/#\0/" /boot/config.txt
+```
+
+Install PulseAudio:
+
+```bash
+sudo apt-get install -y pulseaudio
+sudo mkdir -p /etc/pulse/daemon.conf.d/
+echo "default-sample-rate = 48000" | sudo tee /etc/pulse/daemon.conf.d/aiy.conf
+```
+
+If you want to use Google Assistant, install the Raspberry-Pi-compatible
+`google-assistant-library` python library:
+
+```bash
+sudo apt-get install -y aiy-python-wheels
+```
+
+Reboot:
+
+```bash
+sudo reboot
+```
+
+Then verify that you can record audio:
+
+```bash
+arecord -f cd test.wav
+```
+
+...and play a sound:
+
+```bash
+aplay test.wav
+```
+
+Additionally, the Voice Bonnet/HAT requires access to Google Cloud APIs.
+To complete this setup, follow the [Voice Kit setup instructions][aiy-voice-setup].
+
+
+### 4. Install the AIY Projects Python library
+
+Finally, you need to install the [AIY Projects Python library](
+https://aiyprojects.readthedocs.io/en/latest/index.html).
+
+First make sure you have `git` installed:
+
+```bash
+sudo apt-get install -y git
+```
+
+Then clone this `aiyprojects-raspbian` repo from GitHub:
+
+```bash
+git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
+```
+
+And now install the Python library in editable mode:
+
+```bash
+sudo pip3 install -e AIY-projects-python
+```
+
+## Appendix: List of all AIY Debian packages
+
+The following is just a reference of all packages that are installed when you
+follow the above steps.
+
+### Vision and Voice Bonnets
+
+* `aiy-dkms` contains MCU drivers:
+
+  * `aiy-io-i2c` &mdash; firmware update support
+  * `pwm-aiy-io` &mdash; [PWM][kernel-pwm] sysfs interface
+  * `gpio-aiy-io` &mdash; [GPIO][kernel-gpio] sysfs interface
+  * `aiy-adc`  &mdash; [Industrial I/O][kernel-iio] ADC interface
+
+* `aiy-io-mcu-firmware` contains MCU firmware update service
+* `leds-ktd202x-dkms` contains `leds-ktd202x` LED driver
+* `pwm-soft-dkms` contains `pwm-soft` software PWM driver
+
+* `aiy-python-wheels` contains optimized `protobuf` python
+wheel (until [this issue][protobuf-issue] is fixed) along with [Google Assistant Library][assistant-library] for different Raspberry Pi boards.
+
+### Vision Bonnet
+
+* `aiy-vision-dkms` contains `aiy-vision` Myriad driver
+* `aiy-vision-firmware` contains Myriad firmware
+* `aiy-models` contains [models][aiy-models] for on-device inference:
+
+  * Face Detection
+  * Object Detection
+  * Image Classification
+  * Dish Detection
+  * Dish Classification
+  * iNaturalist Classification (plants, insects, birds)
+
+### Voice Bonnet
+
+* `aiy-voicebonnet-soundcard-dkms` contains sound drivers:
+
+  * `rl6231`
+  * `rt5645`
+  * `snd_aiy_voicebonnet`
+
+
+[changelog]: CHANGES.md
+[raspbian]: https://www.raspberrypi.org/downloads/raspbian/
+[image-flash]: https://www.raspberrypi.org/documentation/installation/installing-images/
+[aiy-models]: https://aiyprojects.withgoogle.com/models/
+[github-releases]: https://github.com/google/aiyprojects-raspbian/releases
+[aiy-voice-setup]: https://aiyprojects.withgoogle.com/voice#google-assistant--get-credentials
+[assistant-library]: https://pypi.org/project/google-assistant-library/
+[protobuf-issue]: https://github.com/bennuttall/piwheels/issues/97
+[kernel-pwm]: https://www.kernel.org/doc/Documentation/pwm.txt
+[kernel-gpio]: https://www.kernel.org/doc/Documentation/gpio/sysfs.txt
+[kernel-iio]: https://www.kernel.org/doc/Documentation/driver-api/iio/core.rst
+[aiy-app]: https://play.google.com/store/apps/details?id=com.google.android.apps.aiy
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+# AIY Projects
+
+This repository contains an easy-to-use Python API for the [AIY Vision Kit][aiy-vision]
+and [AIY Voice Kit][aiy-voice]. The code for all AIY kits is in the `aiyprojects` branch,
+and is included in images starting with `aiyprojects-2017-12-18.img`.
+The previous `voicekit` branch contains code just for the Voice Kit, and the
+`master` branch contains the original deprecated `Voice Recognizer` demo.
+
+## Documentation
+
+If you're just getting started with the Vision or Voice kit, see the
+assembly guide and other maker guides at [aiyprojects.withgoogle.com].
+
+If you just need the Python API reference, see [aiyprojects.readthedocs.io].
+Also have a look at the [example code][aiy-github-examples].
+
+If you want to flash the latest AIY system image or install AIY packages on an existing
+Raspbian system, read the [system updates guide][HACKING.md].
+
+## Releases
+
+* [Image downloads][downloads]
+* [Change log][changelog]
+
+## Bugs & Support
+
+If you've found a bug, please [review the known issues and report a new one][aiy-github-issues].
+
+If you've fixed a bug yourself, please send us a pull request!
+For details, read [CONTRIBUTING.md].
+
+If you're having trouble assembling your kit or running the demos, try the following links:
+
+* [AIY Help docs][help-docs]
+* [AIY Forums][aiy-forums]
+* [AIY Stack Overflow][aiy-stack-overflow]
+* [AIY GitHub Issues][aiy-github-issues]
+* support-aiyprojects@google.com
+
+If you've found a problem with the Assistant API (for example, it crashes
+or provides incorrect responses), try the following:
+
+* [Assistant Stack Overflow][assistant-stack-overflow]
+* [Assistant GitHub Issues][assistant-github-issues]
+
+##
+
+<p align="center">
+  <img width="15%" src="https://aiyprojects.withgoogle.com/static/images/icons/aiy-circular-logo.svg">
+</p>
+
+[HACKING.md]: HACKING.md
+[CONTRIBUTING.md]: CONTRIBUTING.md
+[downloads]: https://github.com/google/aiyprojects-raspbian/releases
+[changelog]: CHANGES.md
+
+[aiyprojects.withgoogle.com]: https://aiyprojects.withgoogle.com
+[aiyprojects.readthedocs.io]: https://aiyprojects.readthedocs.io
+[aiy-vision]: https://aiyprojects.withgoogle.com/vision/
+[aiy-voice]: https://aiyprojects.withgoogle.com/voice/
+
+[help-docs]: https://aiyprojects.withgoogle.com/help
+[aiy-forums]: https://www.raspberrypi.org/forums/viewforum.php?f=114
+[aiy-stack-overflow]: https://stackoverflow.com/questions/tagged/google-aiy
+[aiy-github-issues]: https://github.com/google/aiyprojects-raspbian/issues
+[aiy-github-examples]: https://github.com/google/aiyprojects-raspbian/tree/aiyprojects/src/examples
+
+[assistant-stack-overflow]: https://stackoverflow.com/questions/tagged/google-assistant-sdk
+[assistant-github-issues]: https://github.com/googlesamples/assistant-sdk-python/issues
+.. |code| raw:: html
+
+    <code>
+
+.. |endcode| raw:: html
+
+    </code># Documentation
+
+This directory holds the source files required to build the AIY Python reference with Sphinx.
+
+You can see the generated files at [aiyprojects.readthedocs.io](https://aiyprojects.readthedocs.io/).
+
+If you've downloaded the [aiyprojects-raspbian](https://github.com/google/aiyprojects-raspbian)
+repository, you can build these docs locally with the `make docs` command. Of course, this requires
+that you install Sphinx and other Python dependencies:
+
+    # We require Python3, so if that's not your default, first start a virtual environment:
+    python3 -m venv ~/.aiy_venv
+    source ~/.aiy_venv/bin/activate
+
+    # Move to the aiyprojects-raspbian repo root...
+
+    # Install the dependencies:
+    python3 -m pip install -r docs/requirements.txt
+
+    # Build the docs:
+    make docs
+
+The results are output in `docs/_build/html/`.
+
+**Note:** These output files should not be committed to this repository. We use readthedocs.org
+to generate the HTML documentation directly from GitHub—this repo holds the *source files
+only*, not the built files.
+
+For more information about the syntax in these RST files, see the [reStructuredText documentation](
+http://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html).
+# Python packages required to build the docs
+sphinx
+sphinx_rtd_theme
+recommonmark
+Pillow
+# Vision Kit overview
+
+<img src="_static/images/vision-kit.png" class="attempt-right" alt=""
+width="200"/>
+
+The AIY Vision Kit is a do-it-yourself intelligent camera built with a
+Raspberry Pi and the Vision Bonnet.
+
+After you assemble the kit and run the included demos,
+you can extend the kit with your own software and hardware.
+
+Also see the [Vision Kit assembly guide](
+https://aiyprojects.withgoogle.com/vision/).
+
+## Software
+
+To execute ML models and perform other actions with the Vision Kit, the
+system image includes the Python library with the following modules:
+
+* [`aiy.toneplayer`](aiy.toneplayer.html):
+A simple melodic music player for the piezo buzzer.
+* [`aiy.trackplayer`](aiy.trackplayer.html):
+A tracker-based music player for the piezo buzzer.
+* [`aiy.vision.annotator`](aiy.vision.annotator.html):
+An annotation library that draws overlays on the Raspberry Pi’s camera preview.
+* [`aiy.vision.inference`](aiy.vision.inference.html):
+An inference engine that communicates with the Vision Bonnet from the Raspberry
+Pi side.
+* [`aiy.vision.models`](aiy.vision.models.html):
+A collection of modules that perform ML inferences with specific types of image
+classification and object detection models.
+* [`aiy.board`](aiy.board.html):
+APIs to use the button that’s attached to the Vision Bonnet’s button connector.
+* [`aiy.leds`](aiy.leds.html):
+APIs to control certain LEDs, such as the LEDs in the button and the privacy
+LED.
+* [`aiy.pins`](aiy.pins.html):
+Pin definitions for the bonnet's extra GPIO pins, for use with gpiozero.
+
+
+## Vision Bonnet
+
+### Hardware
+
+* SOC: `Myriad 2450`
+* MCU: `ATSAMD09D14` [I&sup2;C address: `0x51`]
+* LED Driver: `KTD2027A` [I&sup2;C address: `0x30`]
+* Crypto (optional): `ATECC608A` [I&sup2;C address: `0x60`]
+* IMU: `BMI160`
+
+### Drivers
+
+* MCU driver: `modinfo aiy-io-i2c`
+* MCU PWM driver: `modinfo pwm-aiy-io`
+* MCU GPIO driver: `modinfo gpio-aiy-io`
+* MCU ADC driver: `modinfo aiy-adc`
+* LED driver: `modinfo leds-ktd202x`
+* Software PWM driver for buzzer: `modinfo pwm-soft`
+* Myriad driver: `modinfo aiy-vision`
+
+To reset MCU:
+```
+echo 1 | sudo tee /sys/bus/i2c/devices/1-0051/reset
+```
+
+To get MCU status message (including firmware version) and last error code:
+```
+cat /sys/bus/i2c/devices/1-0051/{status_message,error_code}
+```
+
+### Pinout (40-pin header)
+
+```
+                   3.3V --> 1    2 <-- 5V
+                I2C_SDA --> 3    4 <-- 5V
+                I2C_SCL --> 5    6 <-- GND
+                            7    8
+                    GND --> 9   10
+                            11  12
+                            13  14 <-- GND
+  (GPIO_22) BUZZER_GPIO --> 15  16 <-- BUTTON_GPIO (GPIO_23)
+                   3.3V --> 17  18
+               SPI_MOSI --> 19  20 <-- GND
+               SPI_MISO --> 21  22
+               SPI_SCLK --> 23  24 <-- SPI_CE_MRD
+                    GND --> 25  26
+                 ID_SDA --> 27  28 <-- ID_SCL
+                            29  30 <-- GND
+          PI_TO_MRD_IRQ --> 31  32
+          MRD_TO_PI_IRQ --> 33  34 <-- GND
+                            35  36
+             MRD_UNUSED --> 37  38
+                    GND --> 39  40
+```
+
+Also see the [Vision Bonnet on pinout.xyz](https://pinout.xyz/pinout/aiy_vision_bonnet).
+
+## Troubleshooting
+
+See the [Vision Kit help](https://aiyprojects.withgoogle.com/help#vision-kit).
+# Voice Kit overview
+
+<img src="_static/images/voice-kit.png" class="attempt-right" alt="" width="200"/>
+
+The AIY Voice Kit is a do-it-yourself intelligent speaker built with a
+Raspberry Pi and the Voice Bonnet (or Voice HAT if using the V1 Voice Kit).
+
+After you assemble the kit and run the included demos,
+you can extend the kit with your own software and hardware.
+
+Also see the [Voice Kit assembly guide](https://aiyprojects.withgoogle.com/voice/).
+
+## Software
+
+To interact with the Google Assistant, convert speech to text, and perform other
+actions with the Voice Kit, the system image includes Python library with the
+following modules:
+
+* [`aiy.assistant`](aiy.assistant.html):
+A collection of modules that simplify interaction with the Google Assistant API.
+* [`aiy.cloudspeech`](aiy.cloudspeech.html):
+APIs to simplify interaction with the Google Cloud Speech-to-Text service.
+* [`aiy.voice.audio`](aiy.voice.audio.html):
+APIs to record and play audio files.
+* [`aiy.voice.tts`](aiy.voice.tts.html):
+An API that performs text-to-speech.
+* [`aiy.board`](aiy.board.html):
+APIs to use the button that’s attached to the Voice Bonnet’s button connector.
+* [`aiy.leds`](aiy.leds.html):
+APIs to control certain LEDs, such as the LEDs in the button and the privacy
+LED.
+* [`aiy.pins`](aiy.pins.html):
+Pin definitions for the bonnet's extra GPIO pins, for use with gpiozero.
+
+## Voice Bonnet (Voice Kit V2)
+
+### Hardware
+
+* Audio Codec: `ALC5645` [I&sup2;C address: `0x1A`]
+* MCU: `ATSAMD09D14` [I&sup2;C address: `0x52`]
+* LED Driver: `KTD2027B` [I&sup2;C address: `0x31`]
+* Crypto (optional): `ATECC608A` [I&sup2;C address: `0x62`]
+* Microphone: `SPH1642HT5H-1` x 2
+
+### Drivers
+
+* MCU driver: `modinfo aiy-io-i2c`
+* MCU PWM driver: `modinfo pwm-aiy-io`
+* MCU GPIO driver: `modinfo gpio-aiy-io`
+* MCU ADC driver: `modinfo aiy-adc`
+* LED driver: `modinfo leds-ktd202x`
+* Software PWM driver for buzzer: `modinfo pwm-soft`
+* Sound drivers: `modinfo rl6231 rt5645 snd_aiy_voicebonnet`
+
+### Pinout (40-pin header)
+
+```
+       3.3V --> 1    2 <-- 5V
+                3    4 <-- 5V
+                5    6 <-- GND
+                7    8
+        GND --> 9   10
+                11  12 <-- I2S_BCLK
+                13  14 <-- GND
+                15  16 <-- BUTTON_GPIO (GPIO_23)
+       3.3V --> 17  18
+                19  20 <-- GND
+                21  22 <-- LED_GPIO (GPIO_25)
+                23  24
+        GND --> 25  26
+     ID_SDA --> 27  28 <-- ID_SCL
+                29  30 <-- GND
+                31  32
+                33  34 <-- GND
+  I2S_LRCLK --> 35  36 <-- AMP_ENABLE
+                37  38 <-- I2S_DIN
+        GND --> 39  40 <-- I2S_DOUT
+```
+
+Also see the [Voice Bonnet on pinout.xyz](https://pinout.xyz/pinout/aiy_voice_bonnet).
+
+
+## Voice HAT (Voice Kit V1)
+
+### Hardware
+
+* Audio Amplifier: `MAX98357A`
+* Microphone: `ICS-43432` x 2
+
+### Schematics
+
+* [Main Board](https://github.com/google/aiyprojects-raspbian/blob/aiyprojects/schematics/voice_hat/voice_hat.pdf)
+* [Microphone Board](https://github.com/google/aiyprojects-raspbian/blob/aiyprojects/schematics/voice_hat/voice_hat_mic.pdf)
+
+### Drivers
+
+* [googlevoicehat-codec.c](https://github.com/raspberrypi/linux/blob/rpi-4.14.y/sound/soc/bcm/googlevoicehat-codec.c)
+* [googlevoicehat-soundcard.c](https://github.com/raspberrypi/linux/blob/rpi-4.14.y/sound/soc/bcm/googlevoicehat-soundcard.c)
+* [googlevoicehat-soundcard-overlay.dts](https://github.com/raspberrypi/linux/blob/rpi-4.14.y/arch/arm/boot/dts/overlays/googlevoicehat-soundcard-overlay.dts)
+
+Manual overlay load:
+```
+sudo dtoverlay googlevoicehat-soundcard
+```
+
+Load overlay on each boot:
+```
+echo "dtoverlay=googlevoicehat-soundcard" | sudo tee -a /boot/config.txt
+```
+
+### Pinout (40-pin header)
+
+```
+       3.3V --> 1    2 <-- 5V
+    I2C_SDA --> 3    4 <-- 5V
+    I2C_SCL --> 5    6 <-- GND
+                7    8
+        GND --> 9   10
+                11  12 <-- I2S_BCLK
+                13  14 <-- GND
+                15  16 <-- BUTTON_GPIO (GPIO_23)
+       3.3V --> 17  18
+                19  20 <-- GND
+                21  22
+                23  24
+        GND --> 25  26
+     ID_SDA --> 27  28 <-- ID_SCL
+                29  30 <-- GND
+                31  32
+                33  34 <-- GND
+  I2S_LRCLK --> 35  36
+                37  38 <-- I2S_DIN
+        GND --> 39  40 <-- I2S_DOUT
+```
+
+Also see the [Voice HAT on pinout.xyz](https://pinout.xyz/pinout/voice_hat).
+
+## Troubleshooting
+
+See the [Voice Kit help](https://aiyprojects.withgoogle.com/help#voice-kit).
+Broadway
+https://github.com/mbebenita/Broadway
+
+Copyright (c) 2011, Project Authors (see AUTHORS file)
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+  *  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  *  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  *  Neither the names of the Project Authors nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--
+
+The 3-clause BSD above applies to all code except for code originating
+from the Android project (the .cpp files in Avc/). Those files are under
+the Android project's Apache 2.0 license.
+# Streaming protocol specification
+
+Server streams data to clients. There is only one server and there can be zero
+or more connected clients.
+
+## Messages from Server to Client (ClientBound)
+
+Each server streaming session must start with `ClientBound{start}` and
+stop with `ClientBound{stop}` messages. Interleaved  `ClientBound{video}`
+and `ClientBound{overlay}` are allowed in between:
+
+```
+-> ClientBound{start={width=<width>, height=<height>}}
+
+-> ClientBound{video} or ClientBound{overlay}
+
+-> ClientBound{stop}
+```
+
+Each video message contains one or more H264 encoded NAL units. Partial NAL
+units are not allowed. The first NAL unit must be SPS (Sequence Parameter Set),
+the second one is IDR. Concatenation of all video messages should produce a
+valid H264 bitstream. All subsequent SPS NAL units must contain the same
+information as the first one.
+
+Overlay messages are allowed at any time. You can think that there are two
+logical streams during the session: video stream and stream of overlays.
+Each overlay message contains SVG image which is drawn on top of the video.
+
+## Messages from Client to Server (ServerBound)
+
+Client can control the server by sending `ServerBound{stream_control}` messages.
+There are only two allowed: `ServerBound{stream_control={enabled=true}}` to
+start streaming and `ServerBound{stream_control={enabled=false}}` to stop
+streaming. Server could ignore these messages if it is already in the requested
+state.
+
+```
+<- ServerBound{stream_control={enabled=true}}
+
+
+<- ServerBound{stream_control={enabled=false}}
+
+```
+
+## Example
+
+From the Server's point of view ordered by absolute time:
+
+```
+<- ServerBound{stream_control={enabled=true}}
+-> ClientBound{start={width=720, height=480}}
+-> ClientBound{overlay={svg=<DATA>}
+-> ClientBound{video={<SPS>}}  # First NAL unit in video stream
+-> ClientBound{overlay={svg=<DATA>}
+-> ClientBound{video={<IDR>}}  # Second NAL unit in video stream
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{overlay={svg=<DATA>}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{overlay={svg=<DATA>}
+-> ClientBound{video={<SPS>}}  # The same as the first SPS NAL unit.
+-> ClientBound{video={<IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{overlay={svg=<DATA>}
+<- ServerBound{stream_control={enabled=false}}
+-> ClientBound{video={<IDR>}}
+-> ClientBound{video={<NON-IDR>}}
+-> ClientBound{stop}
+```
+
+## References
+
+[Protocol Buffers](https://developers.google.com/protocol-buffers/)
+[H264 Specification](https://www.itu.int/rec/T-REC-H.264-201704-I)
+[SVG Specification](https://www.w3.org/TR/SVG11/)
+# Image classification demo
+
+## Physical Setup
+
+-   VisionHat installed on a Raspberry Pi Zero
+-   Servo connected to vision hat (signal - PIN_A, Vcc - POWER, Ground - GND)
+    -   Servo mounted in label display
+-   (optional) Monitor connected to raspberry pi.
+catamaran
+container ship/containership/container vessel
+lifeboat
+speedboat
+paddle/boat paddle
+pirate/pirate ship
+paddlewheel/paddle wheel
+submarine/pigboat/sub/U-boat
+fireboat
+#!/usr/bin/env python3
+#
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Legacy fallback: old location of credentials.
+#makers-guide-3-custom-voice-user-interface
+#!/usr/bin/env python3
+#
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# -*- coding: utf-8 -*-
+#
+# Configuration file for the Sphinx documentation builder.
+#
+# This file does only contain a selection of the most common options. For a
+# full list see the documentation:
+# http://www.sphinx-doc.org/en/master/config
+# -- Path setup --------------------------------------------------------------
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#
+# -- Project information -----------------------------------------------------
+# The short X.Y version
+# The full version, including alpha/beta/rc tags
+# -- General configuration ---------------------------------------------------
+# If your documentation needs a minimal Sphinx version, state it here.
+#
+# needs_sphinx = '1.0'
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+# Enables linking to other libs like gpiozero
+# Converts Google-style code comments to RST
+# Enables arbitrary link shorthand like 'github'
+# Config for the extlinks extension
+#%s',
+#%s',
+# Add any paths that contain templates here, relative to this directory.
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+#
+# source_suffix = ['.rst', '.md']
+# The master toctree document.
+# The language for content autogenerated by Sphinx. Refer to documentation
+# for a list of supported languages.
+#
+# This is also used if you do content translation via gettext catalogs.
+# Usually you set "language" from the command line for these cases.
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
+# The name of the Pygments (syntax highlighting) style to use.
+# -- Options for HTML output -------------------------------------------------
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+#
+# Left nav header
+# html_logo = '_static/images/aiy-logo-white.svg'
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+#
+# html_theme_options = {}
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# Add our custom stylesheet. By default, Sphinx looks for this in _static/.
+# Custom sidebar templates, must be a dictionary that maps document names
+# to template names.
+#
+# The default sidebars (for documents that don't match any pattern) are
+# defined by theme itself.  Builtin themes are using these templates by
+# default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
+# 'searchbox.html']``.
+#
+# html_sidebars = {}
+# -- Options for HTMLHelp output ---------------------------------------------
+# Output file base name for HTML help builder.
+# -- Options for LaTeX output ------------------------------------------------
+# The paper size ('letterpaper' or 'a4paper').
+#
+# 'papersize': 'letterpaper',
+# The font size ('10pt', '11pt' or '12pt').
+#
+# 'pointsize': '10pt',
+# Additional stuff for the LaTeX preamble.
+#
+# 'preamble': '',
+# Latex figure (float) alignment
+#
+# 'figure_align': 'htbp',
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+# -- Options for manual page output ------------------------------------------
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+# -- Options for Texinfo output ----------------------------------------------
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+# -- Options for Epub output -------------------------------------------------
+# Bibliographic Dublin Core info.
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#
+# epub_identifier = ''
+# A unique identification for the text.
+#
+# epub_uid = ''
+# A list of files that should not be packed into the epub file.
+# -- Extension configuration -------------------------------------------------
+# -- Options for intersphinx extension ---------------------------------------
+# Example configuration for intersphinx: refer to the Python standard library.
+# Controls external linking to other python libraries
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Read and written atomically.
+# Read and written atomically.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#makers-guide--custom-voice-user-interface>`_.
+# https://cloud.google.com/speech-to-text/docs/reference/rpc/google.cloud.speech.v1
+# Copyright 2018 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#--------------------------------#
+# Turn the privacy LED on for 2 seconds
+# Turn on the green LED for 2 seconds
+# Copyright 2018 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Create a servo with the custom values to give the full dynamic range.
+# 497 = 512 (total gpio count) - 15 (our gpio count).
+# Ensure things start out unexported.
+# Restore the default direction (turns off LED) before closing.
+# Each time we enable, we need to first re-set the period and duty cycle (in
+# that order).
+# Debounce by making sure the last change wasn't less than d_time in the past ->
+# should be agnostic to direction.
+# Only called from the polling thread.
+# Start out with gpio enabled for compatibility.
+# Try to make the pin from each factory (in order), until one works.
+# This overrides the default factory being used by all gpiozero devices. It will
+# defer to the previous default for all non-hat pins.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 0
+# 0
+# -1
+# -2
+#, the first black key to the right of the C key.
+# quarter note in the 4th octave could be written as "c" or "c4q" or "cq".
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Legacy fallback: old locations of secrets/credentials.
+# Expected location of the Assistant credentials file:
+# Use chromium-browser by default. Raspbian Stretch uses Epiphany by
+# default but that seems to cause issues:
+# https://github.com/google/aiyprojects-raspbian/issues/269
+#creatingcred')
+#google-assistant--get-credentials>`_.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# https://developers.google.com/assistant/sdk/reference/rpc/
+#google.assistant.embedded.v1alpha2.EmbeddedAssistant>`_.
+# Mutable state.
+# Mutable state.
+##
+##
+# Process 'speech_results'.
+# Process 'audio_out'.
+# Just in case.
+# Process 'dialog_state_out'.
+# Mutable state change.
+# Mutable state change.
+# Signal end of sound stream.
+# Signal stop recording.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# TODO(namiller): Add an annotator for images.
+# MMALPort has a bug in enable.wrapper, where it always calls
+# self._pool.send_buffer(block=False) regardless of the port direction.
+# This is in contrast to setup time when it only calls
+# self._pool.send_all_buffers(block=False)
+# if self._port[0].type == mmal.MMAL_PORT_TYPE_OUTPUT.
+# Because of this bug updating an overlay once will log a MMAL_EAGAIN
+# error every update. This is safe to ignore as we the user is driving
+# the renderer input port with calls to update() that dequeue buffers
+# and sends them to the input port (so queue is empty on when
+# send_all_buffers(block=False) is called from wrapper).
+# As a workaround, monkey patch MMALPortPool.send_buffer and
+# silence the "error" if thrown by our overlay instance.
+# Only silence MMAL_EAGAIN for our target instance.
+# TODO(namiller): Add a font size parameter and load a truetype font.
+# Resolution can be arbitrary.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# name: string, a unique identifier to refer a model.
+# input_shape: (batch, height, width, depth). Only batch=1 and depth=3 are supported now.
+# input_normalizer: (mean, stddev) to convert input image  to the same range as model was
+#     trained with. For example, if the model is trained with [-1, 1] input. To analyze an RGB image
+#     (input range 0-255), one needs to specify the input normalizer as (128.0, 128.0).
+# compute_graph: bytes, serialized model protobuf.
+# major: int, major firmware version
+# minor: int, minor firmware version
+# Only JPEG is supported on the bonnet side.
+# Request is not supported by firmware, default to 1.0
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 12M
+# Essentially this process can only receive SIGKILL.
+# Setup temporary SIGINT handler
+# Execute communication transaction without SIGINT interruptions
+# Setup old SIGINT handler or call it directly if SIGINT already happened
+# Buffer size is small (< 1024 bytes), so ioctl call doesn't block other threads.
+# Default buffer
+# Temporary bigger buffer
+# Scicomm class provides the ability to send and receive data as a transaction.
+# This means that every call to transact consists of a combined
+# send and receive step that's atomic from the calling application's
+# point of view. Multiple threads and processes can access the device
+# node concurrently using one Spicomm instance per thread.
+# Transactions are serialized in the underlying kernel driver.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 4 bytes
+# 4 bytes
+# len(msg) bytes
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# sorted_scores: sorted list of (label, score) tuples.
+# bounding_box: (x, y, width, height) tuple.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# face_score: float, face confidence score from 0.0 to 1.0.
+# joy_score: float, face joy score from 0.0 to 1.0.
+# bounding_box: (x, y, width, height) tuple.
+# Face detection model has special implementation in VisionBonnet firmware.
+# input_shape, input_normalizer, and compute_graph params have no effect.
+# TODO(dkovalev): check tensor shapes
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# There are two models in our repository that can do image classification. One
+# based on MobileNet model structure, the other based on SqueezeNet model
+# structure.
+#
+# MobileNet based model has 59.9% top-1 accuracy on ImageNet.
+# SqueezeNet based model has 45.3% top-1 accuracy on ImageNet.
+# Copyright 2018 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Skip 'background' and below threshold.
+# Clamp value to [0.0, 1.0] range, otherwise, part of the bounding box may
+# fall outside of the image.
+# Suppress any nearby bounding boxes having lower score than boxes[i]
+# Suppress box
+# Exclude suppressed boxes
+# Generated by the protocol buffer compiler.  DO NOT EDIT!
+# source: protocol.proto
+# @@protoc_insertion_point(imports)
+#.spacepark.vision.Request.LoadModelH\x00\x12=\n\x0cunload_model\x18\x02 \x01(\x0b\x32%.spacepark.vision.Request.UnloadModelH\x00\x12\x43\n\x0fimage_inference\x18\x03 \x01(\x0b\x32(.spacepark.vision.Request.ImageInferenceH\x00\x12P\n\x16start_camera_inference\x18\x04 \x01(\x0b\x32..spacepark.vision.Request.StartCameraInferenceH\x00\x12\x45\n\x10\x63\x61mera_inference\x18\x05 \x01(\x0b\x32).spacepark.vision.Request.CameraInferenceH\x00\x12N\n\x15stop_camera_inference\x18\x06 \x01(\x0b\x32-.spacepark.vision.Request.StopCameraInferenceH\x00\x12\x44\n\x10get_camera_state\x18\x07 \x01(\x0b\x32(.spacepark.vision.Request.GetCameraStateH\x00\x12>\n\rimu_self_test\x18\x08 \x01(\x0b\x32%.spacepark.vision.Request.ImuSelfTestH\x00\x12\x46\n\x11get_firmware_info\x18\t \x01(\x0b\x32).spacepark.vision.Request.GetFirmwareInfoH\x00\x12\x42\n\x0fget_system_info\x18\n \x01(\x0b\x32\'.spacepark.vision.Request.GetSystemInfoH\x00\x12J\n\x13get_inference_state\x18\x0b \x01(\x0b\x32+.spacepark.vision.Request.GetInferenceStateH\x00\x12\x30\n\x05reset\x18\x0c \x01(\x0b\x32\x1f.spacepark.vision.Request.ResetH\x00\x1a\xa8\x01\n\tLoadModel\x12\x12\n\nmodel_name\x18\x01 \x01(\t\x12\x32\n\x0binput_shape\x18\x02 \x01(\x0b\x32\x1d.spacepark.vision.TensorShape\x12<\n\x10input_normalizer\x18\x03 \x01(\x0b\x32\".spacepark.vision.TensorNormalizer\x12\x15\n\rcompute_graph\x18\x04 \x01(\x0c\x1a!\n\x0bUnloadModel\x12\x12\n\nmodel_name\x18\x01 \x01(\t\x1a\xf2\x02\n\x0eImageInference\x12\x12\n\nmodel_name\x18\x01 \x01(\t\x12,\n\x06tensor\x18\x02 \x01(\x0b\x32\x1c.spacepark.vision.ByteTensor\x12\x44\n\x06params\x18\x03 \x03(\x0b\x32\x34.spacepark.vision.Request.ImageInference.ParamsEntry\x12S\n\x0esparse_configs\x18\x04 \x03(\x0b\x32;.spacepark.vision.Request.ImageInference.SparseConfigsEntry\x1a-\n\x0bParamsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1aT\n\x12SparseConfigsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12-\n\x05value\x18\x02 \x01(\x0b\x32\x1e.spacepark.vision.SparseConfig:\x02\x38\x01\x1a\x83\x03\n\x14StartCameraInference\x12\x12\n\nmodel_name\x18\x01 \x01(\t\x12+\n\x06window\x18\x02 \x01(\x0b\x32\x1b.spacepark.vision.Rectangle\x12J\n\x06params\x18\x03 \x03(\x0b\x32:.spacepark.vision.Request.StartCameraInference.ParamsEntry\x12Y\n\x0esparse_configs\x18\x04 \x03(\x0b\x32\x41.spacepark.vision.Request.StartCameraInference.SparseConfigsEntry\x1a-\n\x0bParamsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1aT\n\x12SparseConfigsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12-\n\x05value\x18\x02 \x01(\x0b\x32\x1e.spacepark.vision.SparseConfig:\x02\x38\x01\x1a\x11\n\x0f\x43\x61meraInference\x1a\x15\n\x13StopCameraInference\x1a\x10\n\x0eGetCameraState\x1a\r\n\x0bImuSelfTest\x1a\x11\n\x0fGetFirmwareInfo\x1a\x0f\n\rGetSystemInfo\x1a\x13\n\x11GetInferenceState\x1a\x07\n\x05ResetB\t\n\x07request\"\xa9\x03\n\x0fInferenceResult\x12\x12\n\nmodel_name\x18\x01 \x01(\t\x12\r\n\x05width\x18\x02 \x01(\x05\x12\x0e\n\x06height\x18\x03 \x01(\x05\x12+\n\x06window\x18\x04 \x01(\x0b\x32\x1b.spacepark.vision.Rectangle\x12\x13\n\x0b\x64uration_ms\x18\x05 \x01(\x05\x12?\n\x07tensors\x18\x06 \x03(\x0b\x32..spacepark.vision.InferenceResult.TensorsEntry\x12\x36\n\x05\x66rame\x18\x07 \x01(\x0b\x32\'.spacepark.vision.InferenceResult.Frame\x1aM\n\x0cTensorsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12,\n\x05value\x18\x02 \x01(\x0b\x32\x1d.spacepark.vision.FloatTensor:\x02\x38\x01\x1aY\n\x05\x46rame\x12\r\n\x05index\x18\x01 \x01(\x05\x12\x14\n\x0ctimestamp_us\x18\x02 \x01(\x03\x12+\n\x05image\x18\x03 \x01(\x0b\x32\x1c.spacepark.vision.ByteTensor\"B\n\x0eInferenceState\x12\x15\n\rloaded_models\x18\x01 \x03(\t\x12\x19\n\x11processing_models\x18\x02 \x03(\t\"=\n\x0b\x43\x61meraState\x12\x0f\n\x07running\x18\x01 \x01(\x08\x12\r\n\x05width\x18\x02 \x01(\x05\x12\x0e\n\x06height\x18\x03 \x01(\x05\"<\n\x0c\x46irmwareInfo\x12\x15\n\rmajor_version\x18\x01 \x01(\x05\x12\x15\n\rminor_version\x18\x02 \x01(\x05\"A\n\nSystemInfo\x12\x16\n\x0euptime_seconds\x18\x01 \x01(\x05\x12\x1b\n\x13temperature_celsius\x18\x02 \x01(\x02\"\xd6\x03\n\x08Response\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.spacepark.vision.Response.Status\x12=\n\x10inference_result\x18\x02 \x01(\x0b\x32!.spacepark.vision.InferenceResultH\x00\x12\x35\n\x0c\x63\x61mera_state\x18\x03 \x01(\x0b\x32\x1d.spacepark.vision.CameraStateH\x00\x12\x37\n\rfirmware_info\x18\x04 \x01(\x0b\x32\x1e.spacepark.vision.FirmwareInfoH\x00\x12\x33\n\x0bsystem_info\x18\x05 \x01(\x0b\x32\x1c.spacepark.vision.SystemInfoH\x00\x12;\n\x0finference_state\x18\x06 \x01(\x0b\x32 .spacepark.vision.InferenceStateH\x00\x1aj\n\x06Status\x12\x34\n\x04\x63ode\x18\x01 \x01(\x0e\x32&.spacepark.vision.Response.Status.Code\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x19\n\x04\x43ode\x12\x06\n\x02OK\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x42\n\n\x08responseb\x06proto3')
+# @@protoc_insertion_point(class_scope:spacepark.vision.Rectangle)
+# @@protoc_insertion_point(class_scope:spacepark.vision.TensorShape)
+# @@protoc_insertion_point(class_scope:spacepark.vision.ByteTensor)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Tuple)
+# @@protoc_insertion_point(class_scope:spacepark.vision.FloatTensor)
+# @@protoc_insertion_point(class_scope:spacepark.vision.SparseConfig.Thresholding.ToIgnore)
+# @@protoc_insertion_point(class_scope:spacepark.vision.SparseConfig.Thresholding)
+# @@protoc_insertion_point(class_scope:spacepark.vision.SparseConfig.FromSparseTensor)
+# @@protoc_insertion_point(class_scope:spacepark.vision.SparseConfig)
+# @@protoc_insertion_point(class_scope:spacepark.vision.TensorNormalizer)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.LoadModel)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.UnloadModel)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.ImageInference.ParamsEntry)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.ImageInference.SparseConfigsEntry)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.ImageInference)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.StartCameraInference.ParamsEntry)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.StartCameraInference.SparseConfigsEntry)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.StartCameraInference)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.CameraInference)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.StopCameraInference)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.GetCameraState)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.ImuSelfTest)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.GetFirmwareInfo)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.GetSystemInfo)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.GetInferenceState)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request.Reset)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Request)
+# @@protoc_insertion_point(class_scope:spacepark.vision.InferenceResult.TensorsEntry)
+# @@protoc_insertion_point(class_scope:spacepark.vision.InferenceResult.Frame)
+# @@protoc_insertion_point(class_scope:spacepark.vision.InferenceResult)
+# @@protoc_insertion_point(class_scope:spacepark.vision.InferenceState)
+# @@protoc_insertion_point(class_scope:spacepark.vision.CameraState)
+# @@protoc_insertion_point(class_scope:spacepark.vision.FirmwareInfo)
+# @@protoc_insertion_point(class_scope:spacepark.vision.SystemInfo)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Response.Status)
+# @@protoc_insertion_point(class_scope:spacepark.vision.Response)
+# @@protoc_insertion_point(module_scope)
+# Coded slice of a non-IDR picture
+# Coded slice of an IDR picture
+# Supplemental enhancement information (SEI)
+# Sequence parameter set
+# Picture parameter set
+# Not dropped.
+# Not dropped.
+# Dropped.
+# Process available client commands.
+# Done processing commands.
+# Process recently connected clients.
+# 200ms
+# Protects _state.
+# Tx thread stops the client in any situation.
+# Rx thread stops the client only if error happened.
+# Continuation
+# Text, not supported.
+# Binary.
+# Close.
+# Ping, send pong.
+# Pong. Igore as we don't send pings.
+# Ignore overlays.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Generated by the protocol buffer compiler.  DO NOT EDIT!
+# source: messages.proto
+# @@protoc_insertion_point(imports)
+# @@protoc_insertion_point(class_scope:ServerBound)
+# @@protoc_insertion_point(class_scope:StreamControl)
+# @@protoc_insertion_point(class_scope:ClientBound)
+# @@protoc_insertion_point(class_scope:Start)
+# @@protoc_insertion_point(class_scope:Stop)
+# @@protoc_insertion_point(class_scope:Video)
+# @@protoc_insertion_point(class_scope:Overlay)
+# @@protoc_insertion_point(module_scope)
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2018 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Red channel
+# Green channel
+# Blue channel
+# Privacy channel
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Set up a gpiozero LED using the first onboard LED on the vision hat.
+# Set up a gpiozero Button using the 4th pin on the vision hat expansion.
+# When the button is pressed, call the led.on() function (turn the led on)
+# When the button is released, call the led.off() function (turn the led off)
+# Wait for the user to kill the example.
+#!/usr/bin/env python3
+# Set up a gpiozero LED using the first onboard LED on the vision hat.
+# Set up a gpiozero Button using the button included with the vision hat.
+# When the button is pressed, call the led.on() function (turn the led on)
+# When the button is released, call the led.off() function (turn the led off)
+# Wait for the user to kill the example.
+#!/usr/bin/env python3
+#!/usr/bin/env python3
+# Alternate turning the LED off and on until the user terminates the example.
+#!/usr/bin/env python3
+# Create a default servo that will not be able to use quite the full range.
+# Create a servo with the custom values to give the full dynamic range.
+# Move the Servos back and forth until the user terminates the example.
+#!/usr/bin/env python3
+# Set up a gpiozero LED using the first onboard LED on the vision hat.
+# Set up a gpiozero Button using the button included with the vision hat.
+#!/usr/bin/env python3
+#
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#%05d (%5.2f fps): %s' %
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#%d: %s' % (i, dish))
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Configure camera
+# Full Frame, 16:9 (Camera v2)
+# Do inference on VisionBonnet
+# Stop preview
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#%d: %s' % (i, face))
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Forced sensor mode, 1640x1232, full FoV. See:
+# https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes
+# This is the resolution inference run on.
+# Annotator renders in software so use a smaller size and scale results
+# for increased performace.
+# Incoming boxes are of the form (x, y, width, height). Scale and
+# transform to the form (x1, y1, x2, y2).
+#%05d (%5.2f fps): num_faces=%d, avg_joy_score=%.2f' %
+#!/usr/bin/env python3
+#
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#%05d (%5.2f fps): num_faces=%d, avg_joy_score=%.2f' %
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# There are two models available for image classification task:
+# 1) MobileNet based (image_classification.MOBILENET), which has 59.9% top-1
+# accuracy on ImageNet;
+# 2) SqueezeNet based (image_classification.SQUEEZENET), which has 45.3% top-1
+# accuracy on ImageNet;
+#!/usr/bin/env python3
+#
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+#
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# MobileNet based classification model returns one result vector.
+# PiCamera text annotation only supports ascii.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#%d: %s' % (i, obj))
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Forced sensor mode, 1640x1232, full FoV. See:
+# https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes
+# This is the resolution inference run on.
+# Use half of that for video streaming (820x616).
+# Initialize.
+# Initialize.
+# 10 Hz
+#!/usr/bin/env python3
+# Copyright 2018 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Button is currently pressed
+# Unused
+#!/usr/bin/env python3
+# Copyright 2018 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2018 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Every so often, we get an image with a decimated green channel
+# Skip these.
+# Crop box in fraction of the image width. By default full camera image is processed.
+# There are two models available for image classification task:
+# 1) MobileNet based (image_classification.MOBILENET), which has 59.9% top-1
+# accuracy on ImageNet;
+# 2) SqueezeNet based (image_classification.SQUEEZENET), which has 45.3% top-1
+# accuracy on ImageNet;
+# Read the class list from a text file
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Ready.
+# Listening.
+# Thinking.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Ready.
+# Start the voicehat button trigger.
+# Listening.
+# Thinking.
+# Ready.
+# Check if we can start a conversation. 'self._can_start_conversation'
+# is False when either:
+# 1. The assistant library is not yet ready; OR
+# 2. The assistant library is already in a conversation.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Ready.
+# Listening.
+# Thinking.
+# Ready.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/usr/bin/env python3
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Latency depends on number of faces in the scene, which is
+# unpredictable when the test runs. Setting a larger variation value
+# here to accommodate this.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Right before with overlap
+# Right before
+# Right after
+# Copyright 2017 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.

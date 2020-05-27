@@ -1,0 +1,1048 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerCrossOver.cpp
+//===- FuzzerCrossOver.cpp - Cross over two test inputs -------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Cross over test inputs.
+//===----------------------------------------------------------------------===//
+// Cross Data1 and Data2, store the result (up to MaxOutSize bytes) in Out.
+// Merge a part of Data into Out.
+// Use the other input data on the next iteration.
+// namespace fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerDriver.cpp
+//===- FuzzerDriver.cpp - FuzzerDriver function and flags -----------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// FuzzerDriver and flag parsing.
+//===----------------------------------------------------------------------===//
+// This function should be present in the libFuzzer so that the client
+// binary can test for its existence.
+// Program arguments.
+// Avoid calling stol as it triggers a bug in clang/glibc build.
+// Deprecated flag.
+// We don't use any library to minimize dependencies.
+// BaseCmd += " >  /dev/null 2>&1 ";
+// Scores and usage count for each dictionary unit.
+// Get coverage for the testcase without modifications.
+// Skip dictionary unit, if the testcase does not contain it.
+// Replace all occurrences of dictionary unit in the testcase.
+// Get coverage for testcase with masked occurrences of dictionary unit.
+// Dictionary units with positive score are treated as useful ones.
+// Initialize Seed.
+/*ExitOnError=*/false);
+// Valid ASCII input.
+// Don't need this memory any more.
+// Don't let F destroy itself.
+// Storage for global ExternalFunctions object.
+// namespace fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerExtFunctionsDlsym.cpp
+//===- FuzzerExtFunctionsDlsym.cpp - Interface to external functions ------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Implementation for operating systems that support dlsym(). We only use it on
+// Apple platforms for now. We don't use this approach on Linux because it
+// requires that clients of LibFuzzer pass ``--export-dynamic`` to the linker.
+// That is a complication we don't wish to expose to clients right now.
+//===----------------------------------------------------------------------===//
+// Clear any previous errors.
+// namespace fuzzer
+// LIBFUZZER_APPLE
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerExtFunctionsDlsymWin.cpp
+//===- FuzzerExtFunctionsDlsymWin.cpp - Interface to external functions ---===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Implementation using dynamic loading for Windows.
+//===----------------------------------------------------------------------===//
+// namespace fuzzer
+// LIBFUZZER_WINDOWS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerExtFunctionsWeak.cpp
+//===- FuzzerExtFunctionsWeak.cpp - Interface to external functions -------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Implementation for Linux. This relies on the linker's support for weak
+// symbols. We don't use this approach on Apple platforms because it requires
+// clients of LibFuzzer to pass ``-U _<symbol_name>`` to the linker to allow
+// weak symbols to be undefined. That is a complication we don't want to expose
+// to clients right now.
+//===----------------------------------------------------------------------===//
+// Declare these symbols as weak to allow them to be optionally defined.
+// namespace fuzzer
+// LIBFUZZER_LINUX
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerExtFunctionsWeakAlias.cpp
+//===- FuzzerExtFunctionsWeakAlias.cpp - Interface to external functions --===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Implementation using weak aliases. Works for Windows.
+//===----------------------------------------------------------------------===//
+// Declare these symbols as weak to allow them to be optionally defined.
+// namespace fuzzer
+// LIBFUZZER_WINDOWS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerIO.cpp
+//===- FuzzerIO.cpp - IO utils. -------------------------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// IO functions.
+//===----------------------------------------------------------------------===//
+// Can't stat, be conservative.
+// Use raw C interface because this function may be called from a sig handler.
+/*TopDir*/true);
+// namespace fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerIOPosix.cpp
+//===- FuzzerIOPosix.cpp - IO utils for Posix. ----------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// IO functions implementation using Posix API.
+//===----------------------------------------------------------------------===//
+// sanitizer internal.
+// namespace fuzzer
+// LIBFUZZER_POSIX
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerIOWindows.cpp
+//===- FuzzerIOWindows.cpp - IO utils for Windows. ------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// IO functions implementation for Windows.
+//===----------------------------------------------------------------------===//
+// Get the first directory entry.
+// Parse disk designators, like "C:\". If Relative == true, also accepts: "C:".
+// Returns number of characters considered if successful.
+// Accept relative path?
+// Parse a file name, like: SomeFile.txt
+// Returns number of characters considered if successful.
+// Parse a directory ending in separator, like: SomeDir\
+// Returns number of characters considered if successful.
+// Include separator.
+// Parse a servername and share, like: SomeServer\SomeShare\
+// Returns number of characters considered if successful.
+// Parse the given Ref string from the position Offset, to exactly match the given
+// string Patt.
+// Returns number of characters considered if successful.
+// Parse a location, like:
+// \\?\UNC\Server\Share\  \\?\C:\  \\Server\Share\  \  C:\  C:
+// Returns number of characters considered if successful.
+// Remove trailing separator.
+// Path ended in separator.
+// Remove file name from Dir.
+// Remove trailing separator.
+// Relative path.
+// sanitizer internal.
+// Not tested, may or may not work. Fix if needed.
+// namespace fuzzer
+// LIBFUZZER_WINDOWS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerLoop.cpp
+//===- FuzzerLoop.cpp - Fuzzer's main loop --------------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Fuzzer's main loop.
+//===----------------------------------------------------------------------===//
+// Only one Fuzzer per process.
+// Leak detection is expensive, so we first check if there were more mallocs
+// than frees (using the sanitizer malloc hooks) and only then try to call lsan.
+// Returns true if there were more mallocs than frees.
+// Crash on a single malloc that exceeds the rss limit.
+// Stop right now.
+// Happens when running individual inputs.
+// Stop right now, don't perform any at-exit actions.
+// In Windows Alarm callback is executed by a different thread.
+// We have not started running units yet.
+// Stop right now.
+// Stop right now.
+// Can only reset MaxInputLen from 0 to non-0.
+/*ExitOnError*/ false);
+// Test the callback with empty input and never try it again.
+/*DuringInitialCorpusExecution*/ true);
+// We copy the contents of Unit into a separate heap buffer
+// so that we reliably find buffer overflows in it.
+// Overrides ArtifactPrefix.
+// Tries detecting a memory leak on the particular input that we have just
+// executed before calling this function.
+// mallocs==frees, a leak is unlikely.
+// No lsan.
+// Run the target once again, but with lsan disabled so that if there is
+// a real leak we do not report it twice.
+// a leak is unlikely.
+// Now perform the actual lsan pass. This is expensive and we must ensure
+// we don't call it too often.
+// Leak is found, report it.
+// not exit() to disable lsan further on.
+/*MayDeleteFile=*/true);
+/*DuringInitialCorpusExecution*/ false);
+// Perform several mutations and runs.
+/*DuringInitialCorpusExecution*/ false);
+// namespace fuzzer
+// Experimental
+// extern "C"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerMain.cpp
+//===- FuzzerMain.cpp - main() function and flags -------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// main() and flags.
+//===----------------------------------------------------------------------===//
+// This function should be defined by the user.
+// extern "C"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerMerge.cpp
+//===- FuzzerMerge.cpp - merging corpora ----------------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Merging corpora.
+//===----------------------------------------------------------------------===//
+// The control file example:
+//
+// 3 # The number of inputs
+// 1 # The number of inputs in the first corpus, <= the previous number
+// file0
+// file1
+// file2  # One file name per line.
+// STARTED 0 123  # FileID, file size
+// DONE 0 1 4 6 8  # FileID COV1 COV2 ...
+// STARTED 1 456  # If DONE is missing, the input crashed while processing.
+// STARTED 2 567
+// DONE 2 8 9
+// Parse NumFiles.
+// Parse NumFilesInFirstCorpus.
+// Parse file names.
+// Parse STARTED and DONE lines.
+// STARTED FILE_ID FILE_SIZE
+// DONE FILE_ID COV1 COV2 COV3 ...
+// use a vector from outer scope to avoid resizes.
+// Decides which files need to be merged (add thost to NewFiles).
+// Returns the number of new features added.
+// What features are in the initial corpus?
+// Remove all features that we already know from all other inputs.
+// Sort. Give preference to
+//   * smaller files
+//   * files with more features.
+// One greedy pass: add the file's features to AllFeatures.
+// If new features were added, add this file to NewFiles.
+// Printf("%s -> sz %zd ft %zd\n", Files[i].Name.c_str(),
+//       Files[i].Size, Cur.size());
+// Inner process. May crash if the target crashes.
+// Write the pre-run marker.
+// Flush is important since ExecuteCommand may crash.
+// Run.
+// Collect coverage.
+// Show stats.
+// Write the post-run marker and the coverage.
+// Outer process. Does not call the target code and thus sohuld not fail.
+/*TopDir*/true);
+/*TopDir*/true);
+// Write the control file.
+// Execute the inner process untill it passes.
+// Every inner process should execute at least one input.
+// Read the control file and do the merge.
+// We are done, delete the control file.
+// namespace fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerMutate.cpp
+//===- FuzzerMutate.cpp - Mutate a test input -----------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Mutate a test input.
+//===----------------------------------------------------------------------===//
+// [1,8] and <= Size.
+// Erase Data[Idx:Idx+N].
+// Printf("Erase: %zd %zd => %zd; Idx %zd\n", N, Size, Size - N, Idx);
+// Insert new value at Data[Idx].
+// Insert new values at Data[Idx].
+// Give preference to 0x00 and 0xff.
+// Insert W.
+// Overwrite some bytes with W.
+// Somewhere in the past we have observed a comparison instructions
+// with arguments Arg1 Arg2. This function tries to guess a dictionary
+// entry that will satisfy that comparison.
+// It first tries to find one of the arguments (possibly swapped) in the
+// input and if it succeeds it creates a DE with a position hint.
+// Otherwise it creates a DE with one of the arguments w/o a position hint.
+// Overwrites part of To[0,ToSize) with a part of From[0,FromSize).
+// Returns ToSize.
+// Copy From[FromBeg, FromBeg + CopySize) into To[ToBeg, ToBeg + CopySize).
+// Inserts part of From[0,ToSize) into To.
+// Returns new size of To on success or 0 on failure.
+// now we have digits in [B, E).
+// strtol and friends don't accept non-zero-teminated data, parse it manually.
+// Mutate the integer value.
+// Just replace the bytes with the new ones, don't bother moving bytes.
+// Add assuming different endiannes.
+// Add assuming current endiannes.
+// Maybe negate.
+// Copy successful dictionary entries to PersistentAutoDictionary.
+// PersistentAutoDictionary.AddWithSuccessCountOne(DE);
+// Linear search is fine here as this happens seldom.
+// Mutates Data in place, returns new size.
+// Some mutations may fail (e.g. can't insert more bytes if Size == MaxSize),
+// in which case they will return 0.
+// Try several times before returning un-mutated data.
+// Fallback, should not happen frequently.
+// namespace fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerSHA1.cpp
+//===- FuzzerSHA1.h - Private copy of the SHA1 implementation ---*- C++ -* ===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// This code is taken from public domain
+// (http://oauth.googlecode.com/svn/code/c/liboauth/src/sha1.c)
+// and modified by adding anonymous namespace, adding an interface
+// function fuzzer::ComputeSHA1() and removing unnecessary code.
+//
+// lib/Fuzzer can not use SHA1 implementation from openssl because
+// openssl may not be available and because we may be fuzzing openssl itself.
+// For the same reason we do not want to depend on SHA1 from LLVM tree.
+//===----------------------------------------------------------------------===//
+/* This code is public-domain - it is based on libcrypt
+// Added for LibFuzzer
+/* override */
+// ! defined __LITTLE_ENDIAN__
+// machine/endian.h
+/* header */
+/* public API - prototypes - TODO: doxygen*/
+/**
+/**
+/**
+/**
+/* code */
+// Implement SHA-1 padding (fips180-2 §5.1.1)
+// Pad with 0x80 followed by 0x00 until the end of the block
+// Append length in the last 8 bytes
+// We're only using 32 bit lengths
+// But SHA-1 supports 64 bit lengths
+// So zero pad the top bits
+// Shifting to multiply by 8
+// as SHA-1 supports bitstreams as well as
+// byte.
+// Pad to complete the last block
+// Swap byte order back
+// Return pointer to hash (20 characters)
+// namespace; Added for LibFuzzer
+// The rest is added for LibFuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerShmemPosix.cpp
+//===- FuzzerShmemPosix.cpp - Posix shared memory ---------------*- C++ -* ===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// SharedMemoryRegion
+//===----------------------------------------------------------------------===//
+// sem_wait may fail if interrupted by a signal.
+// namespace fuzzer
+// LIBFUZZER_POSIX
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerShmemWindows.cpp
+//===- FuzzerShmemWindows.cpp - Posix shared memory -------------*- C++ -* ===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// SharedMemoryRegion
+//===----------------------------------------------------------------------===//
+// namespace fuzzer
+// LIBFUZZER_WINDOWS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerTracePC.cpp
+//===- FuzzerTracePC.cpp - PC tracing--------------------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Trace PCs.
+// This module implements __sanitizer_cov_trace_pc_guard[_init],
+// the callback required for -fsanitize-coverage=trace-pc-guard instrumentation.
+//
+//===----------------------------------------------------------------------===//
+// The coverage counters and PCs.
+// These are declared as global variables named "__sancov_*" to simplify
+// experiments with inlined instrumentation.
+// What's PATH_MAX in portable C++?
+// Func+File => lines
+// sancov does not yet fully support DSOs.
+// std::string Cmd = "sancov -print-coverage-pcs " + ModuleName;
+// TODO: this implementation is x86 only.
+// see sanitizer_common GetPreviousInstructionPc for full implementation.
+// Value profile.
+// We keep track of various values that affect control flow.
+// These values are inserted into a bit-set-based hash map.
+// Every new bit in the map is treated as a new coverage.
+//
+// For memcmp/strcmp/etc the interesting value is the length of the common
+// prefix of the parameters.
+// For cmp instructions the interesting value is a XOR of the parameters.
+// The interesting value is mixed up with the PC and is then added to the map.
+// Copy the data into locals in this non-msan-instrumented function
+// to avoid msan complaining further.
+// Compute some simple hash of both strings.
+// [1,65]
+// namespace fuzzer
+// Skip the most common and the most boring case.
+// extern "C"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerTraceState.cpp
+//===- FuzzerTraceState.cpp - Trace-based fuzzer mutator ------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Data tracing.
+//===----------------------------------------------------------------------===//
+// Declared as static globals for faster checks inside the hooks.
+// TODO: std::set is too inefficient, need to have a custom DS here.
+// namespace fuzzer
+// We may need to avoid defining weak hooks to stay compatible with older clang.
+// No reason to mutate.
+// Not interesting.
+/*StopAtZero*/false);
+// No reason to mutate.
+// Not interesting.
+/*StopAtZero*/true);
+// No reason to mutate.
+// Not interesting.
+/*StopAtZero*/true);
+// LLVM_FUZZER_DEFINES_SANITIZER_WEAK_HOOOKS
+// extern "C"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerUtil.cpp
+//===- FuzzerUtil.cpp - Misc utils ----------------------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Misc utils.
+//===----------------------------------------------------------------------===//
+// We are parsing the range [L,R].
+// Skip spaces from both sides.
+// Check the closing "
+// Find the opening "
+// Handle '\\'
+// Handle '\xAB'
+// Invalid escape.
+// Any other character.
+// Skip spaces.
+// Empty line.
+// Comment line.
+// Just in case.
+// namespace fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerUtilDarwin.cpp
+//===- FuzzerUtilDarwin.cpp - Misc utils ----------------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Misc utils for Darwin.
+//===----------------------------------------------------------------------===//
+// There is no header for this on macOS so declare here
+// Global variables used to keep track of how signal handling should be
+// restored. They should **not** be accessed without holding `SignalMutex`.
+// This is a reimplementation of Libc's `system()`. On Darwin the Libc
+// implementation contains a mutex which prevents it from being used
+// concurrently. This implementation **can** be used concurrently. It sets the
+// signal handlers when the first thread enters and restores them when the last
+// thread finishes execution of the function and ensures this is not racey by
+// using a mutex.
+// Block and ignore signals of the current process when the first thread
+// enters.
+// Try our best to restore the signal handlers.
+// Try our best to restore the signal handlers.
+// NOTE: Do not introduce any new `return` statements past this
+// point. It is important that `ActiveThreadCount` always be decremented
+// when leaving this function.
+// Make sure the child process uses the default handlers for the
+// following signals rather than inheriting what the parent has.
+// Make sure the child process doesn't block SIGCHLD
+// Read from global
+// FIXME: We probably shouldn't hardcode the shell path.
+// Repeat until call completes uninterrupted.
+/*options=*/0);
+// Fail for some other reason.
+// Fork failure.
+// Shell execution failure.
+// Restore the signal handlers of the current process when the last thread
+// using this function finishes.
+// namespace fuzzer
+// LIBFUZZER_APPLE
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerUtilLinux.cpp
+//===- FuzzerUtilLinux.cpp - Misc utils for Linux. ------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Misc utils for Linux.
+//===----------------------------------------------------------------------===//
+// namespace fuzzer
+// LIBFUZZER_LINUX
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerUtilPosix.cpp
+//===- FuzzerUtilPosix.cpp - Misc utils for Posix. ------------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Misc utils implementation using Posix API.
+//===----------------------------------------------------------------------===//
+// Use C API to avoid coverage from instrumented libc++.
+// ru_maxrss is in KiB
+// ru_maxrss is in bytes
+// namespace fuzzer
+// LIBFUZZER_POSIX
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\FuzzerUtilWindows.cpp
+//===- FuzzerUtilWindows.cpp - Misc utils for Windows. --------------------===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// Misc utils implementation for Windows.
+//===----------------------------------------------------------------------===//
+// TODO: handle (Options.HandleXfsz)
+// TODO: make this implementation more efficient.
+// namespace fuzzer
+// LIBFUZZER_WINDOWS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\afl\afl_driver.cpp
+//===- afl_driver.cpp - a glue between AFL and libFuzzer --------*- C++ -* ===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//===----------------------------------------------------------------------===//
+/* This file allows to fuzz libFuzzer-style target functions
+// Platform detection. Copied from FuzzerInternal.h
+// Used to avoid repeating error checking boilerplate. If cond is false, a
+// fatal error has occured in the program. In this event print error_message
+// to stderr and abort(). Otherwise do nothing. Note that setting
+// AFL_DRIVER_STDERR_DUPLICATE_FILENAME may cause error_message to be appended
+// to the file as well, if the error occurs after the duplication is performed.
+// libFuzzer interface is thin, so we don't include any libFuzzer headers.
+// Notify AFL about persistent mode.
+// Notify AFL about deferred forkserver.
+// Input buffer.
+// Variables we need for writing to the extra stats file.
+// Copied from FuzzerUtil.cpp.
+// ru_maxrss is in KiB
+// ru_maxrss is in bytes
+// Based on SetSigaction in FuzzerUtil.cpp
+// Write extra stats to the file specified by the user. If none is specified
+// this function will never be called.
+// Call write_extra_stats before we exit.
+// Make sure we don't try calling write_extra_stats again if we crashed while
+// trying to call it.
+// If the user has specified an extra_stats_file through the environment
+// variable AFL_DRIVER_EXTRA_STATS_FILENAME, then perform necessary set up
+// to write stats to it on exit. If no file is specified, do nothing. Otherwise
+// install signal and exit handlers to write to the file when the process exits.
+// Then if the file doesn't exist create it and set extra stats to 0. But if it
+// does exist then read the initial values of the extra stats from the file
+// and check that the file is writable.
+// If AFL_DRIVER_EXTRA_STATS_FILENAME isn't set then we have nothing to do.
+// Open the file and find the previous peak_rss_mb value.
+// This is necessary because the fuzzing process is restarted after N
+// iterations are completed. So we may need to get this value from a previous
+// process to be accurate.
+// If extra_stats_file already exists: read old stats from it.
+// Make sure we have read a real extra stats file and that we have used it
+// to set slowest_unit_time_secs and previous_peak_rss.
+// Now open the file for writing.
+// Looks like this is the first time in a fuzzing job this is being called.
+// Make sure that crash_handler gets called on any kind of fatal error.
+// Make sure it gets called on other kinds of exits.
+// If the user asks us to duplicate stderr, then do it.
+// Define LLVMFuzzerMutate to avoid link failures for targets that use it
+// with libFuzzer's LLVMFuzzerCustomMutator.
+// Do any other expensive one-time initialization here.
+// Copy AflInputBuf into a separate buffer to let asan find buffer
+// overflows. Don't use unique_ptr/etc to avoid extra dependencies.
+// Update slowest_unit_time_secs if we see a new max.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\AbsNegAndConstant64Test.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// abs(x) < 0 and y == Const puzzle, 64-bit variant.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\AbsNegAndConstantTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// abs(x) < 0 and y == Const puzzle.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\AccumulateAllocationsTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test with a more mallocs than frees, but no leak.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\AFLDriverTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Contains dummy functions used to avoid dependency on AFL.
+// This declaration exists to prevent the Darwin linker
+// from complaining about this being a missing weak symbol.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\BogusInitializeTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Make sure LLVMFuzzerInitialize does not change argv[0].
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\BufferOverflowOnInput.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the string "Hi!".
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\CallerCalleeTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer.
+// Try to find the target using the indirect caller-callee pairs.
+// Spoof the counters.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\CounterTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test for a fuzzer: must find the case where a particular basic block is
+// executed many times.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\CustomCrossOverAndMutateTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test that libFuzzer does not crash when LLVMFuzzerMutate called from
+// LLVMFuzzerCustomCrossOver.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\CustomCrossOverTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a cutom mutator.
+// Ensure that two different elements exist in the corpus.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\CustomMutatorTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a cutom mutator.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\CxxStringEqTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. Must find a specific string
+// used in std::string operator ==.
+// Try to confuse the fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\DivTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer: find the interesting argument for div.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\DSO1.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Source code for a simple DSO.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\DSO2.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Source code for a simple DSO.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\DSOTestExtra.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Source code for a simple DSO.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\DSOTestMain.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Source code for a simple DSO.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\EmptyTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+// A fuzzer with empty target function.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\EquivalenceATest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test for libFuzzer's "equivalence" fuzzing, part A.
+// fprintf(stderr, "A %zd\n", Size);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\EquivalenceBTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test for libFuzzer's "equivalence" fuzzing, part B.
+// fprintf(stderr, "B %zd\n", Size);
+// Be a bit different from EquivalenceATest
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\FourIndependentBranchesTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the string "FUZZ".
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\FullCoverageSetTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the string "FUZZER".
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\FuzzerFnAdapterUnittest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// namespace impl
+// namespace fuzzer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\FuzzerUnittest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Avoid ODR violations (LibFuzzer is built without ASan and this test is built
+// with ASan) involving C++ standard library types when using libcxx.
+// For now, have LLVMFuzzerTestOneInput just to make it link.
+// Later we may want to make unittests that actually call LLVMFuzzerTestOneInput.
+/**/ if (NewSize == 8 && !memcmp(CH0, T, 8)) FoundMask |= 1 << 0;
+// Size
+// Sw(Size)
+/**/ if (NewSize == 8 && !memcmp(CH0, T, 8)) FoundMask |= 1 << 0;
+// A weak sanity check that every unit gets invoked.
+// fprintf(stderr, "TESTING:\n%s\n", S);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\InitializeTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Make sure LLVMFuzzerInitialize is called.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\LargeTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// A fuzz target with lots of edges.
+// for (int i = 0, n = Data[(__LINE__ - 1) % Size] % 16; i < n; i++)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\LeakTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test with a leak.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\LeakTimeoutTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test with a leak.
+// Infinite loop.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\LoadTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer: find interesting value of array index.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\Memcmp64BytesTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find a particular string.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\MemcmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find a particular string.
+// TODO: check other sizes.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\NotinstrumentedTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// This test should not be instrumented.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\NthRunCrashTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Crash on the N-th execution.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\NullDerefOnEmptyTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the empty string.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\NullDerefTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the string "Hi!".
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\OneHugeAllocTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Tests OOM handling when there is a single large allocation.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\OutOfMemorySingleLargeMallocTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Tests OOM handling.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\OutOfMemoryTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Tests OOM handling.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\RepeatedBytesTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find repeated bytes.
+// Looking for AAAAAAAAAAAAAAAAAAAAAA or some such.
+// Make sure there are no conditionals in the loop so that
+// coverage can't help the fuzzer.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\RepeatedMemcmp.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\ShrinkControlFlowTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test that we can find the minimal item in the corpus (3 bytes: "FUZ").
+//fprintf(stderr, "IDS: %d %d %d\n", F, U, Z);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\ShrinkValueProfileTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test that we can find the minimal item in the corpus (3 bytes: "FUZ").
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SignedIntOverflowTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test for signed-integer-overflow.
+// int overflow.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SimpleCmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find several narrow ranges.
+// 8
+// 16
+// 20
+// 22
+// Must be the last line.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SimpleDictionaryTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer.
+// The fuzzer must find a string based on dictionary words:
+//   "Elvis"
+//   "Presley"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SimpleFnAdapterTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer Fn adapter. The fuzzer has to find two non-empty
+// vectors with the same content.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SimpleHashTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// This test computes a checksum of the data (all but the last 4 bytes),
+// and then compares the last 4 bytes with the computed value.
+// A fuzzer with cmp traces is expected to defeat this check.
+// A modified jenkins_one_at_a_time_hash initialized by non-zero,
+// so that simple_hash(0) != 0. See also
+// https://en.wikipedia.org/wiki/Jenkins_hash_function
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SimpleTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the string "Hi!".
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SimpleThreadedTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Threaded test for a fuzzer. The fuzzer should find "H"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SingleByteInputTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer, need just one byte to crash.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SingleMemcmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find a particular string.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SingleStrcmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find a particular string.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SingleStrncmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find a particular string.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SpamyTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// The test spams to stderr and stdout.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\StrcmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Break through a series of strcmp.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\StrncmpOOBTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test that libFuzzer itself does not read out of bounds.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\StrncmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find a particular string.
+// TODO: check other sizes.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\StrstrTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Test strstr and strcasestr hooks.
+// Windows does not have strcasestr and memmem, so we are not testing them.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SwapCmpTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// The fuzzer must find several constants with swapped bytes.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\Switch2Test.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the interesting switch value.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\SwitchTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the interesting switch value.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\ThreadedLeakTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// The fuzzer should find a leak in a non-main thread.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\ThreadedTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Threaded test for a fuzzer. The fuzzer should not crash.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\TimeoutEmptyTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the empty string.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\TimeoutTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. The fuzzer must find the string "Hi!".
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\TraceMallocTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Tests -trace_malloc
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\TwoDifferentBugsTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// Simple test for a fuzzer. This test may trigger two different bugs.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\test\UninstrumentedTest.cpp
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+// This test should not be instrumented.

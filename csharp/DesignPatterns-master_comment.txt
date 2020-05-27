@@ -1,0 +1,8 @@
+﻿// This class can also be called the Director
+//inches
+//inches
+//create handlers
+//create chain
+//Execution
+// Divide is not in the chain!!!
+// ReSharper disable once InconsistentNaming

@@ -1,0 +1,46 @@
+﻿
+***********other formats****************
+cfg
+gitignore
+pyx
+yml
+
+***********source code file list***************
+glove-python-master/glove-python-master/glove/corpus_cython.cpp
+
+***********h file list***************
+
+***********md file list***************
+glove-python-master/glove-python-master/changelog.md
+glove-python-master/glove-python-master/LICENSE
+glove-python-master/glove-python-master/readme.md
+glove-python-master/glove-python-master/tests/stanford_test.txt
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+glove-python-master/glove-python-master/.gitignore
+glove-python-master/glove-python-master/circle.yml
+glove-python-master/glove-python-master/Makefile
+glove-python-master/glove-python-master/setup.cfg
+glove-python-master/glove-python-master/glove/corpus_cython.pyx
+glove-python-master/glove-python-master/glove/glove_cython.pyx
+glove-python-master/glove-python-master/glove/metrics/accuracy_cython.pyx
+
+***********other code file list***************
+glove-python-master/glove-python-master/setup.py
+glove-python-master/glove-python-master/bench/bench_corpus.py
+glove-python-master/glove-python-master/examples/analogy_tasks_evaluation.py
+glove-python-master/glove-python-master/examples/example.py
+glove-python-master/glove-python-master/glove/corpus.py
+glove-python-master/glove-python-master/glove/glove.py
+glove-python-master/glove-python-master/glove/glove_cython.c
+glove-python-master/glove-python-master/glove/__init__.py
+glove-python-master/glove-python-master/glove/metrics/accuracy.py
+glove-python-master/glove-python-master/glove/metrics/accuracy_cython.c
+glove-python-master/glove-python-master/glove/metrics/__init__.py
+glove-python-master/glove-python-master/tests/test_corpus.py
+glove-python-master/glove-python-master/tests/test_glove.py
+glove-python-master/glove-python-master/tests/utils.py

@@ -1,0 +1,4 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/CppAndroidIosExample-master\CppAndroidIosExample-master\Android\app\src\main\java\ademar\androidioscppexample\CoreWrapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/CppAndroidIosExample-master\CppAndroidIosExample-master\Android\app\src\main\java\ademar\androidioscppexample\MainActivity.java

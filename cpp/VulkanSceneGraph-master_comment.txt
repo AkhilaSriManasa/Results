@@ -1,0 +1,1047 @@
+﻿/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+//std::cout<<"Auxiliary::unref_nodelete() "<<this<<" "<<_referenceCount.load()<<std::endl;
+// return false, the object should not be deleted
+// disconnect this Auxiliary object from the ConnectedObject
+// return true, the object should be deleted
+/* <editor-fold desc="MIT License">
+////////////////////////////////////////////////////////////////////////////////
+//
+// Values
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Arrays
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Array2Ds
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Array3Ds
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Nodes
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Vulkan Object
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// UI Events
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// General classes
+//
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// collect the ids from the files
+// pass the object id's onto the output's objectIDMap
+// write out files.
+// if we should write out object then need to invoke ReaderWriter for it.
+/* <editor-fold desc="MIT License">
+// what should happen when _delete is called on an Object with ref() of zero?  Need to decide whether this buggy application usage should be tested for.
+// if there is an auxiliary attached signal to it we wish to delete, and give it an opportunity to decide whether a delete is appropriate.
+// if no auxiliary is attached then go straight ahead and delete.
+//std::cout<<"Object::_delete() "<<this<<" choosing not to delete"<<std::endl;
+// need to think about alignment...
+// check the sizeof(Object) is consistent with Object::sizeOfObject()
+// we have a unique auxiliary, need to write out it's ObjectMap entries
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+////////////////////////////////////////////////////////////////////////////////
+//
+// Values
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Arrays
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Array2Ds
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Array3Ds
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Nodes
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// Vulkan Object
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// UI Events
+//
+////////////////////////////////////////////////////////////////////////////////
+//
+// General classes
+//
+/* <editor-fold desc="MIT License">
+// namespace vsg
+/*object*/, const char* /*methodName*/)
+/*object*/)
+/*object*/, unsigned int /*index*/)
+/* <editor-fold desc="MIT License">
+//std::cout<<"   matched result="<<id<<std::endl;
+//std::cout<<"Returning existing object "<<itr->second.get()<<std::endl;
+//std::cout<<"Loading new object "<<className<<std::endl;
+//std::cout<<"Loaded object, assigning to objectIDMap."<<object.get()<<std::endl;
+/* <editor-fold desc="MIT License">
+// write out the objectID
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// write out the objectID
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////
+//
+// DatabasePager
+//
+// std::cout<<"DatabaseQueue::add("<<plod<<") status = "<<plod->requestStatus.load()<<std::endl;
+//std::cout<<"DatabaseQueue::take_when_avilable() A _identifier = "<<_identifier<<" size = "<<_queue.size()<<std::endl;
+// wait to the conditional variable signals that an operation has been added
+//std::cout<<"   Waiting on condition variable B _identifier = "<<_identifier<<" size = "<<_queue.size()<<std::endl;
+// if the threads we are associated with should no longer running go for a quick exit and return nothing.
+//std::cout<<"DatabaseQueue::take_when_avilable() C _identifier = "<<_identifier<<" empty"<<std::endl;
+//std::cout<<"DatabaseQueue::take_when_avilable() D _identifier = "<<_identifier<<" "<<_queue.size()<<std::endl;
+// find the OagedLOD with the highest priority;
+//std::cout<<"Returning "<<plod.get()<<std::dec<<" variable _identifier = "<<_identifier<<" size = "<<_queue.size()<<std::endl;
+// remove and return the head of the queue
+// wait to the conditional variable signals that an operation has been added
+//std::cout<<"take_all_when_available() _identifier = "<<_identifier<<" Waiting on condition variable"<<_queue.size()<<std::endl;
+// if the threads we are associated with should no longer running go for a quick exit and return nothing.
+//std::cout<<"DatabaseQueue::take_all_when_avilable() "<<_queue.size()<<std::endl;
+// remove and return the head of the queue
+/////////////////////////////////////////////////////////////////////////
+//
+// DatabasePager
+//
+//d::cout<<"DatabasePager::~DatabasePager()"<<std::endl;
+//
+// set up read thread(s)
+//
+//std::cout<<"Started DatabaseThread read thread"<<std::endl;
+// std::cout<<"Expire read request"<<std::endl;
+//std::cout<<"    reading "<<plod->filename<<", "<<plod->requestCount.load()<<std::endl;
+// std::cout<<"    finished reading "<<plod->filename<<", "<<plod->requestCount.load()<<std::endl;
+//std::cout<<"   assigned subgraph to plod"<<std::endl;
+// move to the merge queue;
+//std::cout<<"Finished DatabaseThread read thread"<<std::endl;
+//
+// set up compile thread(s)
+//
+//std::cout<<"Started DatabaseThread compile thread"<<std::endl;
+// assign semaphores
+//plod->requestStatus.exchange(PagedLOD::NoRequest);
+// advance the compile iterator to the next CompileTraversal in the list, wrap around if we get to the end
+// std::cout<<"Wrapping around"<<std::endl;
+// std::cout<<"Using next CompileTraversal"<<std::endl;
+//std::cout<<"Compile Semaphore before wait Semaphore "<<*(ct->context.semaphore->data())<<" , count "<<ct->context.semaphore->numDependentSubmissions().load()<<std::endl;
+//std::cout<<"Compile Semaphore after wait Semaphore "<<*(ct->context.semaphore->data())<<" , count "<<ct->context.semaphore->numDependentSubmissions().load()<<std::endl;
+// std::cout<<"    compiling "<<plod->filename<<", "<<plod->requestCount.load()<<" Semaphore "<<*(ct->context.semaphore->data())<<", count "<<ct->context.semaphore->numDependentSubmissions().load()<<std::endl;
+// compiling subgraph
+// need to reset the PLOD so that it's no longer part of the DatabasePager's queues and is ready to be compile when next requested.
+// need to reset the PLOD so that it's no longer part of the DatabasePager's queues and is ready to be compile when next requested.
+//std::cout<<"Finished DatabaseThread compile thread"<<std::endl;
+//std::cout<<"DatabasePager::request("<<plod.get()<<") "<<plod->filename<<", "<<plod->priority<<std::endl;
+// std::cout<<"DatabasePager::request("<<plod.get()<<") has pending subgraphs to transfer to compile "<<plod->filename<<", "<<plod->priority<<" plod="<<plod.get()<<std::endl;
+//std::cout<<"Attempted DatabasePager::request("<<plod.get()<<") with pending comile but but plod.requestState() = "<<plod->requestStatus.load()<<" is not NoRequest"<<std::endl;
+// std::cout<<"DatabasePager::request("<<plod.get()<<") adding to requeQueue "<<plod->filename<<", "<<plod->priority<<" plod="<<plod.get()<<std::endl;
+//std::cout<<"Attempted DatabasePager::request("<<plod.get()<<") but plod.requestState() = "<<plod->requestStatus.load()<<" is not NoRequest"<<std::endl;
+//std::scoped_lock<std::mutex> lock(pendingPagedLODMutex);
+//plod->pending = nullptr;
+//if (plod.requestStatus.load() != PagedLOD::NoRequest) std::cout<<"RegisterInActivePaged::apply() requestStatus = "<<plod.requestStatus.load()<<std::endl;
+//std::cout<<"    nested new inactive "<<&plod<<std::endl;
+// run the registry visitor through the children of the PagedLOD
+//std::cout<<"   active to inactive "<<index<<std::endl;
+//std::cout<<"  newly active nodes:"<<std::endl;
+//std::cout<<"previous_activeList_count = "<<previous_activeList_count<<", after_activeList_count = "<<after_activeList_count<<", culledPagedLODs->newHighresRequired = "<<culledPagedLODs->newHighresRequired.size()<<std::endl;
+// set the number of PagedLOD to expire
+// std::cout<<"Need to remove, inactive count = "<<pagedLODContainer->inactiveList.count <<", target = "<< targetNumInactive<<std::endl;
+// std::cout<<"    trimming "<<plod<<std::endl;
+// std::cout<<"plod with reference count 1 also has index = "<<element.plod->index<<" "<<element.list->name<<std::endl;
+// if (numOrhphanedPagedLOD!=0)  std::cout<<"Found PagdLOD in pagedLODContainer without external references "<<numOrhphanedPagedLOD<<std::endl;
+//std::cout<<"DatabasePager::updateSceneGraph() nodes to merge : nodes.size() = "<<nodes.size()<<", "<<numActiveRequests.load()<<std::endl;
+// std::cout<<"   Merged "<<plod->filename<<" after "<<plod->requestCount.load()<<" priority "<<plod->priority.load()<<" "<<frameCount - plod->frameHighResLastUsed.load()<<" plod = "<<plod.get()<<" "<<*(plod->semaphore->data())<<std::endl;
+// insert any semaphore into a set that will be used by the GraphicsStage
+//std::cout<<"DatabasePager::updateSceneGraph() nothing to merge"<<std::endl;
+/* <editor-fold desc="MIT License">
+// lastChar != a delimiter
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// remove all objects from cache
+/* <editor-fold desc="MIT License">
+// declare the ObjectFactory singleton as static to be initialized at start up.
+// values
+// arrays
+// array2Ds
+// array3Ds
+// nodes
+// vulkan objects
+//std::cout << "Using _createMap for " << className << std::endl;
+//std::cout << "Warning: ObjectFactory::create(" << className << ") failed to find means to create object" << std::endl;
+/* <editor-fold desc="MIT License">
+//    fileCache(options.fileCache),
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// set up the entries container for operations to write to.
+// use latch to synchronize this thread with the file reading threads
+// add operations
+// use this thread to read the files as well
+// wait till all the read operations have completed
+// run reads single threaded
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// use a static handle that is initialized once at start up to avoid multi-threaded issues associated with calling std::locale::classic().
+// write header
+//std::cout << "First line [" << read_line << "]" << std::endl;
+// return null as no means for loading file has been found
+/* <editor-fold desc="MIT License">
+// don't write the file if it's already contained in the ObjectCache
+// fallback to using native ReaderWriter_vsg if extension is compatible
+/* <editor-fold desc="MIT License">
+// could use signaling_NaN()
+// column 0
+// column 1
+// column 2
+// column 3
+// could use signaling_NaN()
+// 00
+// 01
+// 02
+// 03
+// 10
+// 11
+// 12
+// 13
+// 20
+// 21
+// 22
+// 23
+// 30
+// 31
+// 32
+// 33
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Geometry node
+//       vertex arrays
+//       index arrays
+//       draw + draw DrawIndexed
+//
+//std::cout<<"Failed to create required arrays/indices buffers on GPU."<<std::endl;
+// add the commands in the _renderImplementation.
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PagedLOD
+//
+//    ++s_numPagedLODS;
+//    --s_numPagedLODS;
+//    std::cout<<"s_numPagedLODS = "<<s_numPagedLODS<<std::endl;
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PagedLODContainer
+//
+// note first entry in elements is the null entry, so have to add/take away 1 when accounting for it.
+// set up tail
+// resize if there are no available empty elements.
+// take the first element from availableList and move head to next item.
+// place element at the end of the active list.
+// assign index to PagedLOD
+// remove from inactiveList
+// if this element is tail on inactive list then shift it back
+// add to end of activeList tail
+// reset element and plod
+// we have an empty list
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  VertexIndexDraw node
+//       vertex arrays
+//       index arrays
+//       draw + draw DrawIndexed
+//
+// vkCmdDrawIndexed settings
+// vkCmdDrawIndexed settings
+// VertexIndexDraw does not contain required arrays and/or indices
+// check to see if we've already been compiled
+// TODO need to check Index type
+//std::cout << "Failed to create required arrays/indices buffers on GPU." << std::endl;
+/* <editor-fold desc="MIT License">
+// Provide the Window::create(...) implementation that automatically maps to an Android_Window
+// check the extensions are avaliable first
+// namespace vsg
+// namespace vsgAndroid
+// + isnt an unmodded key, why does windows map is as a virtual??
+/* back space, back char */
+//    KEY_Linefeed = 0xFF0A, /* Linefeed, LF */
+/* Linefeed, LF */
+/* Return, enter */
+/* Pause, hold */
+//    KEY_Sys_Req = 0xFF15,
+/* Delete, rubout */
+/* Cursor control & motion */
+/* Move left, left arrow */
+/* Move up, up arrow */
+/* Move right, right arrow */
+/* Move down, down arrow */
+/* Prior, previous */
+/* Next */
+/* EOL */
+//{ KEY_Begin = 0xFF58, /* BOL */
+/* BOL */
+/* Misc Functions */
+//{ VK_SELECT, KEY_Select }, /* Select, mark */
+/* Select, mark */
+//{ VK_PRINT, KEY_Print },
+//{ VK_EXECUTE, KEY_Execute }, /* Execute, run, do */
+/* Execute, run, do */
+/* Insert, insert here */
+//{ KEY_Undo = 0xFF65,    /* Undo, oops */
+/* Undo, oops */
+//KEY_Redo = 0xFF66,    /* redo, again */
+/* redo, again */
+/* On Windows, this is VK_APPS, the context-menu key */
+// KEY_Find = 0xFF68,    /* Find, search */
+/* Find, search */
+//{ VK_CANCEL, KEY_Cancel },  /* Cancel, stop, abort, exit */
+/* Cancel, stop, abort, exit */
+/* Help */
+//{ KEY_Break = 0xFF6B,
+//KEY_Mode_switch = 0xFF7E,   /* Character set switch */
+/* Character set switch */
+//KEY_Script_switch = 0xFF7E, /* Alias for mode_switch */
+/* Alias for mode_switch */
+/* Keypad Functions, keypad numbers cleverly chosen to map to ascii */
+//KEY_KP_Space = 0xFF80, /* space */
+/* space */
+//KEY_KP_Tab = 0xFF89,
+/* enter */
+//KEY_KP_F1 = 0xFF91,    /* PF1, KP_A, ... */
+/* PF1, KP_A, ... */
+//KEY_KP_F2 = 0xFF92,
+//KEY_KP_F3 = 0xFF93,
+//KEY_KP_F4 = 0xFF94,
+//KEY_KP_Home = 0xFF95,
+//KEY_KP_Left = 0xFF96,
+//KEY_KP_Up = 0xFF97,
+//KEY_KP_Right = 0xFF98,
+//KEY_KP_Down = 0xFF99,
+//KEY_KP_Prior = 0xFF9A,
+//KEY_KP_Page_Up = 0xFF9A,
+//KEY_KP_Next = 0xFF9B,
+//KEY_KP_Page_Down = 0xFF9B,
+//KEY_KP_End = 0xFF9C,
+//KEY_KP_Begin = 0xFF9D,
+//KEY_KP_Insert = 0xFF9E,
+//KEY_KP_Delete = 0xFF9F,
+/* equals */
+/* separator, often comma */
+/*
+//{ VK_F13, KEY_F13 },
+//{ VK_F14, KEY_F14 },
+//{ VK_F15, KEY_F15 },
+//{ VK_F16, KEY_F16 },
+//{ VK_F17, KEY_F17 },
+//{ VK_F18, KEY_F18 },
+//{ VK_F19, KEY_F19 },
+//{ VK_F20, KEY_F20 },
+//{ VK_F21, KEY_F21 },
+//{ VK_F22, KEY_F22 },
+//{ VK_F23, KEY_F23 },
+//{ VK_F24, KEY_F24 },
+//KEY_F25 = 0xFFD6,
+//KEY_F26 = 0xFFD7,
+//KEY_F27 = 0xFFD8,
+//KEY_F28 = 0xFFD9,
+//KEY_F29 = 0xFFDA,
+//KEY_F30 = 0xFFDB,
+//KEY_F31 = 0xFFDC,
+//KEY_F32 = 0xFFDD,
+//KEY_F33 = 0xFFDE,
+//KEY_F34 = 0xFFDF,
+//KEY_F35 = 0xFFE0,
+/* Modifiers */
+/* Left shift */
+/* Right shift */
+/* Left control */
+/* Right control */
+/* Caps lock */
+//KEY_Shift_Lock = 0xFFE6, /* Shift lock */
+/* Shift lock */
+/* Left meta */
+/* Right meta */
+/* Left alt */
+/* Right alt */
+//{ VK_LWIN, KEY_Super_L }, /* Left super */
+/* Left super */
+//{ VK_RWIN, KEY_Super_R } /* Right super */
+/* Right super */
+//KEY_Hyper_L = 0xFFED, /* Left hyper */
+/* Left hyper */
+//KEY_Hyper_R = 0xFFEE  /* Right hyper */
+/* Right hyper */
+/*if(!traits->nativeHandle.has_value())
+//ANativeWindow* nativeWindow = *std::any_cast<ANativeWindow*>(&traits->nativeHandle);
+// we could get the width height from the window?
+// create Android surface for the ANativeWindow
+// share the _instance, _physicalDevice and _device;
+// temporary hack to force vkGetPhysicalDeviceSurfaceSupportKHR to be called as the Vulkan
+// debug layer is complaining about vkGetPhysicalDeviceSurfaceSupportKHR not being called
+// for this _surface prior to swap chain creation
+// create surface using passed ANativeWindow
+// set up device
+// just hack resize for now
+// first process the historical events (mutiple touch events may have occured since the last frame)
+// for now just treat cancel as up
+// now process the latest event
+// for now just treat cancel as up
+//case AKEY_EVENT_ACTION_MULTIPLE:
+//   _bufferedEvents.emplace_back(new vsg::KeyPressEvent(this, event_time, keySymbol, modifiedKeySymbol, keyModifier);
+//   break;
+/* <editor-fold desc="MIT License">
+// Provide the Window::create(...) implementation that automatically maps to a Xcb_Window
+// check the extensions are avaliable first
+// namespace vsg
+// window decoation
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// KeyboardMap
+//
+// numeric keypad values
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// Xcb_Surface
+//
+/*VkResult result =*/vkCreateXcbSurfaceKHR(*instance, &surfaceCreateInfo, nullptr, &_surface);
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// Xcb_Window
+//
+// open connection
+// close connection
+//return Result("Failed to created Window, unable able to establish xcb connection.", VK_ERROR_INVALID_EXTERNAL_HANDLE);  TODO need to throw?
+// TODO, should record Traits within Window? Should pass back selected screeenNum?
+// get the screeen
+// select the appropriate screen for the window
+// generate the widnow id
+// ceate window
+// set class of window to enable window manager configuration with rules for positioning
+// set title of window
+// make requests for the atoms
+// get the atoms request replies
+// set whethert the window should have a border or not, and if so what resize/move/close functions to enable
+// work out the X server timestamp by checking for the property notify events that result for the above xcb_change_property calls.
+// reconfigure the window position and size.
+//xcb_flush(_connection);
+// use Xcb to create surface
+// set up device
+// sleep to give the window manage time to do any repositing and resizing
+// build the swap chain, reuse the reize() for this
+// detach Vulkan obects
+//std::cout<<"xcb_unmap_notify_event_t"<<std::endl;
+//std::cout<<"xcb_map_notify_event_t"<<std::endl;
+//std::cout<<"xcb_mapping_notify_event_t"<<std::endl;
+//std::cout<<"xcb_list_properties_request_t"<<std::endl;
+//std::cout<<"xcb_property_notify_event_t"<<std::endl;
+//std::cout<<"xcb_focus_in_event_t"<<std::endl;
+//std::cout<<"xcb_focus_out_event_t"<<std::endl;
+//std::cout<<"xcb_enter_notify_event_t"<<std::endl;
+//std::cout<<"xcb_leave_notify_event_t"<<std::endl;
+// Xcb configure events can come with x,y == (0,0) or with values relative to the root, so explictly get the new geometry and substitude if required to avoid inconsistencis
+/* <editor-fold desc="MIT License">
+// Provide the Window::create(...) implementation that automatically maps to a Win32_Window
+// check the extensions are available first
+// namespace vsg
+// our windows events callback
+// namespace vsgWin32
+/* Cursor control & motion */
+/* Move left, left arrow */
+/* Move up, up arrow */
+/* Move right, right arrow */
+/* Move down, down arrow */
+/* Prior, previous */
+//{ VK_, KEY_Page_Up = 0xFF55,
+/* Next */
+//KEY_Page_Down = 0xFF56,
+/* EOL */
+//{ KEY_Begin = 0xFF58, /* BOL */
+/* BOL */
+// + isn't an unmodded key, why does windows map is as a virtual??
+/* back space, back char */
+//    KEY_Linefeed = 0xFF0A, /* Linefeed, LF */
+/* Linefeed, LF */
+/* Return, enter */
+/* Pause, hold */
+//    KEY_Sys_Req = 0xFF15,
+/* Delete, rubout */
+/* Misc Functions */
+/* Select, mark */
+/* Execute, run, do */
+/* Insert, insert here */
+//{ KEY_Undo = 0xFF65,    /* Undo, oops */
+/* Undo, oops */
+//KEY_Redo = 0xFF66,    /* redo, again */
+/* redo, again */
+/* On Windows, this is VK_APPS, the context-menu key */
+// KEY_Find = 0xFF68,    /* Find, search */
+/* Find, search */
+/* Cancel, stop, abort, exit */
+/* Help */
+//{ KEY_Break = 0xFF6B,
+//KEY_Mode_switch = 0xFF7E,   /* Character set switch */
+/* Character set switch */
+//KEY_Script_switch = 0xFF7E, /* Alias for mode_switch */
+/* Alias for mode_switch */
+/* Keypad Functions, keypad numbers cleverly chosen to map to ascii */
+//KEY_KP_Space = 0xFF80, /* space */
+/* space */
+//KEY_KP_Tab = 0xFF89,
+//KEY_KP_Enter = 0xFF8D, /* enter */
+/* enter */
+//KEY_KP_F1 = 0xFF91,    /* PF1, KP_A, ... */
+/* PF1, KP_A, ... */
+//KEY_KP_F2 = 0xFF92,
+//KEY_KP_F3 = 0xFF93,
+//KEY_KP_F4 = 0xFF94,
+//KEY_KP_Home = 0xFF95,
+//KEY_KP_Left = 0xFF96,
+//KEY_KP_Up = 0xFF97,
+//KEY_KP_Right = 0xFF98,
+//KEY_KP_Down = 0xFF99,
+//KEY_KP_Prior = 0xFF9A,
+//KEY_KP_Page_Up = 0xFF9A,
+//KEY_KP_Next = 0xFF9B,
+//KEY_KP_Page_Down = 0xFF9B,
+//KEY_KP_End = 0xFF9C,
+//KEY_KP_Begin = 0xFF9D,
+//KEY_KP_Insert = 0xFF9E,
+//KEY_KP_Delete = 0xFF9F,
+//KEY_KP_Equal = 0xFFBD, /* equals */
+/* equals */
+//KEY_KP_Multiply = 0xFFAA,
+//KEY_KP_Add = 0xFFAB,
+//KEY_KP_Separator = 0xFFAC, /* separator, often comma */
+/* separator, often comma */
+//KEY_KP_Subtract = 0xFFAD,
+//KEY_KP_Decimal = 0xFFAE,
+//KEY_KP_Divide = 0xFFAF,
+/*
+//KEY_F25 = 0xFFD6,
+//KEY_F26 = 0xFFD7,
+//KEY_F27 = 0xFFD8,
+//KEY_F28 = 0xFFD9,
+//KEY_F29 = 0xFFDA,
+//KEY_F30 = 0xFFDB,
+//KEY_F31 = 0xFFDC,
+//KEY_F32 = 0xFFDD,
+//KEY_F33 = 0xFFDE,
+//KEY_F34 = 0xFFDF,
+//KEY_F35 = 0xFFE0,
+/* Modifiers */
+/* Left shift */
+/* Right shift */
+/* Left control */
+/* Right control */
+/* Caps lock */
+//KEY_Shift_Lock = 0xFFE6, /* Shift lock */
+/* Shift lock */
+//KEY_Meta_L = 0xFFE7,  /* Left meta */
+/* Left meta */
+//KEY_Meta_R = 0xFFE8,  /* Right meta */
+/* Right meta */
+/* Left alt */
+/* Right alt */
+/* Left super */
+/* Right super */
+//KEY_Hyper_L = 0xFFED, /* Left hyper */
+/* Left hyper */
+//KEY_Hyper_R = 0xFFEE  /* Right hyper */
+/* Right hyper */
+// register window class
+// fetch screen display information
+// setup window rect and style
+// if decorated call adjust to account for borders etc
+// create the window
+// set window handle user data pointer to hold ref to this so we can retrieve in WindowsProc
+// reposition once the window has been created to account for borders etc
+// get client rect to find final width height of the view
+// share the _instance, _physicalDevice and _device;
+// create surface
+// temporary hack to force vkGetPhysicalDeviceSurfaceSupportKHR to be called as the Vulkan
+// debug layer is complaining about vkGetPhysicalDeviceSurfaceSupportKHR not being called
+// for this _surface prior to swap chain creation
+// create win32 surface
+// set up device
+// when should we unregister??
+// somehow close all windows
+// at the moment the close event is occurring then the check for resize is happening, which means the window is rect returns 0. So for now ignore potential resize if should close
+// get the current window rect
+//::SetCapture(_window);
+// need to determine x1, x2
+//::ReleaseCapture(); // should only release once all mouse buttons are released ??
+//::SetCapture(_window);
+/* <editor-fold desc="MIT License">
+// wait to the conditional variable signals that an operation has been added
+//std::cout<<"Waiting on condition variable"<<std::endl;
+// if the threads we are associated with should no longer running go for a quick exit and return nothing.
+// remove and return the head of the queue
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////
+//
+// CollectDescriptorStats
+//
+/////////////////////////////////////////////////////////////////////
+//
+// CompielTraversal
+//
+/* <editor-fold desc="MIT License">
+//std::cout<<"ComputeBounds::apply(const vsg::VertexIndexDraw& bvb) "<<vid._arrays.size()<<std::endl;
+//std::cout<<"ComputeBounds::apply(const vsg::BindVertexBuffers& bvb) "<<bvb.getArrays().size()<<std::endl;
+/* <editor-fold desc="MIT License">
+//    std::cout<<"Visiting object"<<std::endl;
+//    std::cout<<"Visiting Node "<<std::endl;
+//    std::cout<<"Visiting Group "<<std::endl;
+//    std::cout<<"Visiting QuadGroup "<<std::endl;
+//    std::cout<<"Visiting LOD "<<std::endl;
+//    std::cout<<"Visiting StateGroup "<<std::endl;
+// Vulkan nodes
+//    std::cout<<"Visiting Command "<<std::endl;
+//    std::cout<<"Visiting CommandBuffer "<<std::endl;
+//    std::cout<<"Visiting RenderPass "<<std::endl;
+/* <editor-fold desc="MIT License">
+//    std::cout<<"Visiting object"<<std::endl;
+//    std::cout<<"Visiting Group "<<std::endl;
+//    std::cout<<"Visiting QuadGroup "<<std::endl;
+// check if lod bounding sphere is in view frustum.
+// check if lod bounding sphere is in view frustum.
+// check the high res child to see if it's visible
+// high res visible and availably so traverse it
+// we are first request so tell the databasePager about it
+//std::cout<<"repeat request "<<&plod<<", "<<plod.requestCount.load()<<std::endl;;
+// check the low res child to see if it's visible
+// no culling
+//std::cout<<"Passed node"<<std::endl;
+//std::cout<<"Culling node"<<std::endl;
+// no culling
+//std::cout<<"Passed node"<<std::endl;
+//std::cout<<"Culling node"<<std::endl;
+//    std::cout<<"Visiting StateGroup "<<std::endl;
+// Vulkan nodes
+//    std::cout<<"Visiting Command "<<std::endl;
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// namespace vsg
+// handle any changes in window size
+// if required get projection and view matrices from the Camera
+// set up the dispatching of the commands into the command buffer
+// if we are nested within a CommandBuffer already then use VkCommandBufferInheritanceInfo
+// traverse the command buffer to place the commands into the command buffer.
+/* <editor-fold desc="MIT License">
+// TODO: need to work out how to map the original ViewMatrix to a LookAt and back, for now just fallback to assigning our own LookAt
+/// compute non dimensional window coordinate (-1,1) from event coords
+//std::cout<<"ndc = "<<v<<std::endl;
+/// compute trackball coordinate from event coords
+// std::cout<<"Trackball::apply(ConfigureWindowEvent& "<<configureWindow.x<<", "<<configureWindow.y<<", "<<window_width<<", "<<window_height<<")"<<std::endl;
+/*frame*/)
+//    std::cout<<"Frame "<<frame.frameStamp->frameCount<<std::endl;
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// don't kill window while devices are still active
+// set up per device settings
+// add per window details to pdo
+// to be filled in by submitFrame()
+// to be filled in by submitFrame()
+// don't exit mainloop while the any devices are still active
+// to be filled in by submitFrame()
+// to be filled in by submitFrame()
+// poll all the windows for events.
+// create FrameStamp for frame
+// create an event for the new frame.
+// poll all the windows for events.
+// create FrameStamp for frame
+// create an event for the new frame.
+// wait till queue are empty before we resize.
+//std::cout<<"window->acquireNextImage(), result==VK_ERROR_OUT_OF_DATE_KHR  rebuild swap chain : resized="<<window->resized()<<" numTries="<<numTries<<std::endl;
+// resize to rebuild all the internal Vulkan objects associated with the window.
+// reassign frame cache
+// copy semaphore's assigned to database pagers
+//std::cout<<"Viewer::submitNextFrame()"<<std::endl;
+// std::cout<<"    Viewer::submitNextFrame() waitSemaphore "<<*(semaphore->data())<<" "<<semaphore->numDependentSubmissions().load()<<std::endl;
+// if (!hasDBSemaphore) std::cout<<"Viewer::submitNextFrame() no DB wait semaphores required."<<std::endl;
+// fill in the imageIndices and commandBuffers associated with each window
+//auto startTime = std::chrono::steady_clock::now();
+//std::cout << "Viewer::submitFrame() vkQueueWaitIdle() completed in " << std::chrono::duration<double, std::chrono::milliseconds::period>(std::chrono::steady_clock::now() - startTime).count() << "ms" << std::endl;
+// advance each window to the next frame
+// compile the Vulkan objects
+// create high level Vulkan objects associated the main window
+// std::cout << "Compiling GraphicsStage " << compile.context.viewport << std::endl;
+/* <editor-fold desc="MIT License">
+// create the vkInstance
+// do we need to call clear()?
+// set up device
+// set up renderpass with the imageFormat that the swap chain will use
+//VK_FORMAT_D32_SFLOAT; // VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_SFLOAT_S8_UINT
+// make sure all operations on the device have stopped before we go deleting associated resources
+// clean up previous swap chain before we begin creating a new one.
+// is width and height even required here as the surface appear to control it.
+// pass back the extents used by the swap chain.
+// create depth buffer
+//VkFormat depthFormat = VK_FORMAT_D32_SFLOAT; // VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT
+// set up framebuffer and associated resources
+//exit(1);
+//throw "Window::populateCommandBuffers(uint32_t index, ref_ptr<vsg::FrameStamp> frameStamp) timeout";
+//std::cout<<"Window::populateCommandBuffers(..) "<<*(semaphore->data())<<" "<<semaphore->numDependentSubmissions().load()<<std::endl;
+// just kept for backwards compatibility for now
+// just kept for backwards compatibility for now
+/* <editor-fold desc="MIT License">
+// TODO, we don't locally have a size allocated
+// reset the Vulkan related objects
+// read the key indices data
+// write indices data
+// check if already compiled
+/* <editor-fold desc="MIT License">
+// TODO
+// clear Vulkan objects
+// read vertex arrays
+// nothing to compile
+// already compiled
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// vsg::createBufferAndTransferData
+//
+//std::cout<<"\nvsg::createBufferAndTransferData()"<<std::endl;
+//return BufferDataList();
+//std::cout<<"New vsg::createBufferAndTransferData()"<<std::endl;
+// compute memory requirements
+// create staging buffer
+// create staging memory
+// bind staging buffer
+// map staging memory
+//    copy data to staging memory
+// unmap staging memory
+//
+// create device buffer
+// create device memory
+// submit command to copy from staging buffer to device buffer
+//
+// assign device buffer to BufferDataList
+//std::cout<<"deviceBufferData._buffer "<<deviceBufferData._buffer.get()<<", "<<deviceBufferData._offset<<", "<<deviceBufferData._range<<")"<<std::endl;
+// assign the buffer to the bufferData entries
+//std::cout<<"stagingBufferData._buffer "<<stagingBufferData._buffer.get()<<", "<<stagingBufferData._offset<<", "<<stagingBufferData._range<<")"<<std::endl;
+//std::cout<<"    buffer_data " <<buffer_data<<", stagingBufferData._offset="<<stagingBufferData._offset<<", "<<totalSize<< std::endl;
+// merging of ByfferDataCommands caused problems with later release of individual parts of the buffers copied, so removing this optimization
+//std::cout<<"Source matched = "<<sourceMatched<<" destinationMatched = "<<destinationMatched<<std::endl;
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// vsg::createHostVisibleBuffer
+//
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+//poolInfo.flags = 0;
+//poolInfo.flags = VK_COMMAND_POOL_CREATE_TRANSIENT_BIT;
+/* <editor-fold desc="MIT License">
+////////////////////////////////////////////////////////////////////////
+//
+// ComputePipeline
+//
+////////////////////////////////////////////////////////////////////////
+//
+// ComputePipeline::Implementation
+//
+// assign a VkSpecializationInfo for this shaderStageCreateInfo
+// assign the values from the ShaderStage into the specializationInfo
+////////////////////////////////////////////////////////////////////////
+//
+// BindComputePipeline
+//
+// slot 0
+/* <editor-fold desc="MIT License">
+// std::cout<<name<<" : Created new Buffer "<<bufferData._buffer.get()<<" totalSize "<<totalSize<<" deviceSize = "<<deviceSize<<std::endl;
+// std::cout<<name<<"  inserting new Buffer into Context.bufferPools"<<std::endl;
+// std::cout<<name<<" : bufferData._offset = "<<bufferData._offset<<std::endl;
+// clamp to an aligned size
+// VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT
+// std::cout<<name<<" : Completely Failed to space for MemoryBufferPools::reserveBufferData("<<totalSize<<", "<<alignment<<", "<<bufferUsageFlags<<") "<<std::endl;
+// std::cout<<name<<" : Allocated new buffer, MemoryBufferPools::reserveBufferData("<<totalSize<<", "<<alignment<<", "<<bufferUsageFlags<<") "<<std::endl;
+// clamp to an aligned size
+//std::cout<<"Creating new local DeviceMemory"<<std::endl;
+//std::cout<<"  inserting DeviceMemory into memoryPool "<<deviceMemory.get()<<std::endl;
+//std::cout<<"DeviceMemory is full "<<deviceMemory.get()<<std::endl;
+//std::cout << "MemoryBufferPools::reserveMemory() allocated memory at " << reservedSlot.second << std::endl;
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// vsg::CopyAndReleaseBufferDataCommand
+//
+//std::cout<<"CopyAndReleaseBufferDataCommand::dispatch(CommandBuffer& commandBuffer) source._offset = "<<source._offset<<", "<<destination._offset<<std::endl;
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// vsg::CopyAndReleaseImageDataCommand
+//
+// transfer the data.
+// std::cout<<"   level = "<<mipLevel<<", mipWidth = "<<mipWidth<<", mipHeight = "<<mipHeight<<std::endl;
+// generate mipmaps using Vulkan
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// vsg::Context
+//
+//semaphore = vsg::Semaphore::create(device);
+//auto before_compile = std::chrono::steady_clock::now();
+// issue commands of interest
+//std::cout << "Context::dispatchCommands()  time " << std::chrono::duration<double, std::chrono::milliseconds::period>(std::chrono::steady_clock::now() - before_compile).count() << "ms" << std::endl;
+// we must wait for the queue to empty before we can safely clean up the commandBuffer
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// DescriptorBuffer
+//
+// check if already compiled
+// convert from VSG to Vk
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// DescriptorImages
+//
+// check if we have already compiled the imageData.
+//no way to set this from an image view at the moment
+// convert from VSG to Vk
+/* <editor-fold desc="MIT License">
+// will we need VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT_EXT later?
+/* <editor-fold desc="MIT License">
+// make sure all the contributing objects are compiled
+// should we doing anything about previous _descriptor that may have been assigned?
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// BindDescriptorSets
+//
+// slot 1
+// no need to compile if already compiled
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// BindDescriptorSet
+//
+// no need to compile if already compiled
+// check if pipeline and descriptor set are assigned.
+/* <editor-fold desc="MIT License">
+//////////////////////////////////////
+//
+// DescriptorSetLayout
+//
+//////////////////////////////////////
+//
+// DescriptorSetLayout::Implementation
+//
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+///////////////////////////////////////////////////////////////////////////////
+//
+// MemorySlots
+//
+// remove slot
+// check if there the front of the slot isn't used completely, if so generate an available space for it.
+// insert new slot with previous slots start and new end.
+// check if there is space at the end slot that isn't used completely, if so generate an available space for it.
+// insert new slot with new end and new size
+// std::cout << "    Slot slotStart = " << slotStart << ", slotSize = " << slotSize << " not big enough once for request size = " << size << std::endl;
+//std::cout<<"MemorySlots::reserve("<<std::dec<<size<<") with alingment "<<alignment<<" No slots available for this size, biggest available slot is : "<<_availableMemory.rbegin()->first<<std::endl;
+//report();
+// first empty space
+// need to find adjacent blocks before and after to see if we can join them together options are:
+//    abutes to neither before or after
+//    abutes to before, so replace before with new combined length
+//    abutes to after, so remove after entry and insert new entry with combined length
+//    abutes to both before and after, so replace before with newly combined length of all three, remove after entry
+//report();
+///////////////////////////////////////////////////////////////////////////////
+//
+// DeviceMemory
+//
+// find the memory type to use
+// should we have checks against buffer having enough memory for copied data?
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+////////////////////////////////////////////////////////////////////////
+//
+// GraphicsPipeline
+//
+////////////////////////////////////////////////////////////////////////
+//
+// GraphicsPipeline::Implementation
+//
+// assign a VkSpecializationInfo for this shaderStageCreateInfo
+// assign the values from the ShaderStage into the specializationInfo
+////////////////////////////////////////////////////////////////////////
+//
+// BindGraphicsPipeline
+//
+// slot 0
+////////////////////////////////////////////////////////////////////////
+//
+// VertexInputState
+//
+////////////////////////////////////////////////////////////////////////
+//
+// InputAssemblyState
+//
+////////////////////////////////////////////////////////////////////////
+//
+// ViewportState
+//
+////////////////////////////////////////////////////////////////////////
+//
+// RasterizationState
+//
+//    frontFace = VK_FRONT_FACE_CLOCKWISE;
+////////////////////////////////////////////////////////////////////////
+//
+// MultisampleState
+//
+////////////////////////////////////////////////////////////////////////
+//
+// DepthStencilState
+//
+////////////////////////////////////////////////////////////////////////
+//
+// ColorBlendState
+//
+/* <editor-fold desc="MIT License">
+// TODO, we don't locally have a size allocated
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// vsg::transferImageData
+//
+// std::cout<<"\nvsg::transferImageData()"<<std::endl;
+//std::cout<<"stagingBufferData._buffer "<<stagingBufferData._buffer.get()<<", "<<stagingBufferData._offset<<", "<<stagingBufferData._range<<")"<<std::endl;
+// copy image data to staging memory
+// clamp the mipLevels so that its no larger than what the data dimensions support
+//mipLevels = 1;  // disable mipmapping
+// take the block dimensions into account for image size to allow for any block compressed image formats where the data dimensions is based in number of blocks so needs to be multiple to get final pixel count
+/* <editor-fold desc="MIT License">
+// read from image?
+// read from image?
+/* <editor-fold desc="MIT License">
+//std::cout<<"Calling vkDestroyInstance"<<std::endl;
+// application info
+//std::cout << "Created VkInstance" << std::endl;
+/* <editor-fold desc="MIT License">
+// Useful links:
+//    AMD's Vulkan Device Memory discussion : https://gpuopen.com/vulkan-device-memory/
+//    NVIDIA's Vulkan Memory Management  : https://developer.nvidia.com/vulkan-memory-management
+//
+// General comments
+//
+// Device local resources - use VkMemoryPropertyFlags of VK_DEVICE_LOCAL and not HOST_VISIBLE
+//
+// If Device local allocations fail fallback to HOST_VISIBLE with HOST_COHERENT but without HOST_CACHED
+//
+// Allocate high priority resources first i.e. Render Targets, then lower priority objects
+//
+// On Window resizes be prepared to free all resources, then reallocated high priority ones
+//
+// CPU->GPU data flow Use DEVICE_LOCAL with HOST_VISIBLE for cases where you want to update Device local memory, ie. uploading constant data, keep allocation sizes below 256MB)
+//
+// GPU->CPU data flow use HOST_VISIBLE with HOST_COHERENT and HOST_CACHED, only memory type that supports cached reads by the CPU.  Screen captures, compute results etc.
+//
+// Pool resources as OS Window allocations can be expensive, place buffers and textures in single pools, 256MB is reasonable base
+//
+/* <editor-fold desc="MIT License">
+// Checked the DeviceQueueFamilyProperties for support for graphics
+/* <editor-fold desc="MIT License">
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// ScratchBuffer
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// MemoryBarrier
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// BufferMemoryBarrier
+//
+// Queue::queueFamilyIndex() or VK_QUEUE_FAMILY_IGNORED
+// Queue::queueFamilyIndex() or VK_QUEUE_FAMILY_IGNORED
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// ImageMemoryBarrier
+//
+// Queue::queueFamilyIndex() or VK_QUEUE_FAMILY_IGNORED
+// Queue::queueFamilyIndex() or VK_QUEUE_FAMILY_IGNORED
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// SampleLocations
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PipelineBarrier
+//
+/* <editor-fold desc="MIT License">
+//////////////////////////////////////
+//
+// PipelineLayout
+//
+//////////////////////////////////////
+//
+// PipelineLayout::Implementation
+//
+/* <editor-fold desc="MIT License">
+// slot 0
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// set default sampler info
+// requires Logical device to have deviceFeatures.samplerAnisotropy = VK_TRUE; set when creating the vsg::Device
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Shader
+//
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+/* <editor-fold desc="MIT License">
+// check if requested format is available
+// fallback to checking for {VK_FORMAT_B8G8R8A8_UNORM, VK_COLOR_SPACE_SRGB_NONLINEAR_KHR}
+// fallback to using the first on the list of available formats
+// select requested presentMode if it's available.
+// requested presetnMode not available so fallback for checking of VK_PRESENT_MODE_MAILBOX_KHR available
+// fallback to VK_PRESENT_MODE_FIFO_KHR
+/**
+//std::cout << "Calling vkDestroySwapchainKHR(..)" << std::endl;
+// Vulkan spec requires minImageCount to be 1 or greater
+// Vulkan spec specifies 0 as being unlimited number of images
+// apply the selected settings back to preferences to calling code can determine the active settings.
+// create the ImageViews

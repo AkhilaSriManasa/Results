@@ -1,0 +1,33 @@
+﻿
+***********other formats****************
+gitignore
+proto
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+googleplay-api-master/googleplay-api-master/README.md
+googleplay-api-master/googleplay-api-master/TODO.txt
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+googleplay-api-master/googleplay-api-master/.gitignore
+googleplay-api-master/googleplay-api-master/googleplay.proto
+
+***********other code file list***************
+googleplay-api-master/googleplay-api-master/apishell.py
+googleplay-api-master/googleplay-api-master/categories.py
+googleplay-api-master/googleplay-api-master/config.py
+googleplay-api-master/googleplay-api-master/download.py
+googleplay-api-master/googleplay-api-master/googleplay.py
+googleplay-api-master/googleplay-api-master/googleplay_pb2.py
+googleplay-api-master/googleplay-api-master/helpers.py
+googleplay-api-master/googleplay-api-master/list.py
+googleplay-api-master/googleplay-api-master/permissions.py
+googleplay-api-master/googleplay-api-master/search.py
+googleplay-api-master/googleplay-api-master/androguard/androproto.py

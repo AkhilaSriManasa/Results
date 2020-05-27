@@ -1,0 +1,1918 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\IO.cpp
+// comment all lines and only uncomment demo code that you are interested with
+// number of test cases
+// shortcut to repeat until 0
+// compute on the fly
+// freopen("IO_in2.txt", "r", stdin);
+// int a, b;
+// // stop when both integers are 0
+// while (scanf("%d %d", &a, &b), (a || b))
+//   printf("%d\n", a+b);
+// freopen("IO_in3.txt", "r", stdin);
+// int a, b;
+// // scanf returns the number of items read
+// while (scanf("%d %d", &a, &b) == 2)
+// // or you can check for EOF, i.e.
+// // while (scanf("%d %d", &a, &b) != EOF)
+//   printf("%d\n", a+b);
+// freopen("IO_in3.txt", "r", stdin); // same input file as before
+// int a, b, c = 0;
+// while (scanf("%d %d", &a, &b) != EOF)
+//   // notice the two '\n'
+//   printf("Case %d: %d\n\n", ++c, a+b);
+// freopen("IO_in3.txt", "r", stdin); // same input file as before
+// int a, b, c = 0;
+// while (scanf("%d %d", &a, &b) != EOF) {
+//   if (c > 0) printf("\n"); // 2nd/more cases
+//   printf("Case %d: %d\n", ++c, a+b);
+// }
+// freopen("IO_in4.txt", "r", stdin);
+// int k;
+// while (scanf("%d", &k) != EOF) {
+//   int ans = 0, v;
+//   while (k--) { scanf("%d", &v); ans += v; }
+//   printf("%d\n", ans);
+// }
+// freopen("IO_in5.txt", "r", stdin);
+// while (1) { // keep looping
+//   int ans = 0, v;
+//   char dummy;
+//   while (scanf("%d%c", &v, &dummy) != EOF) {
+//     ans += v;
+//     if (dummy == '\n') break; // test EOLN
+//   }
+//   if (feof(stdin)) break; // test EOF
+//   printf("%d\n", ans);
+// }
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\scanf.cpp
+// include all
+// loop from N,N-1,...,0
+// set size a bit larger
+// `&' is optional here
+// note: if you are surprised with the technique above,
+// please check scanf details in www.cppreference.com
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\UVa10911.cpp
+/*          Forming Quiz Teams, the solution for UVa 10911 above         */
+// not C++ standard, but OK in programming contest
+// important speedup
+// max N = 8
+// 1<<16 = 2^16
+// DP state = mask
+// reference/alias
+// this has been computed
+// all have been matched
+// init with a large value
+// speedup
+// p1 is first on bit
+// turn off bit p1
+// then, try to match p1
+// with another on bit p2
+// turn off bit p2
+// memo[mask] == ans
+// yes, we can do this :)
+// `%*s' skips names
+// build distance table
+// use `hypot' function
+// DP to solve min weighted perfect matching on small general graph
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task02.cpp
+// C++ code for task 2
+// adjust field width
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task04.cpp
+// C++ code for task 4
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task05.cpp
+// C++ code for task 5
+// use natural order
+// reorder DD/MM/YYYY
+// to MM, DD, and then
+// use NEGATIVE YYYY
+// that's all :)
+// C++17 style
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task06.cpp
+// C++ code for task 6
+// should be index 1
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task07.cpp
+// C++ code for task 7
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task08.cpp
+// C++ code for task 8
+// notice the brackets
+// this idx is part of set
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\array_algorithms.cpp
+// can use this primary field to decide sorted order
+// ICPC rule: sort by number of problem solved
+// a.solved == b.solved, but we can use
+// secondary field to decide sorted order
+// ICPC rule: sort by descending penalty
+// a.solved == b.solved AND a.penalty == b.penalty
+// sort based on increasing team ID
+// alternative constructor
+// sort descending with vector
+// reverse iterator
+// access the values
+// sort descending with integer array
+// ascending
+// then reverse
+// shuffle the content
+// partial_sort demo
+// sort ascending
+// arr is sorted now
+// 2, 4, 7, 10, 15
+// sort a vector
+// 2, 4, 7, 10, 15 too
+// multi-field sorting example, suppose we have 4 ICPC teams
+// without sorting, they will be ranked like this:
+// sort using a comparison function
+// after sorting using ICPC rule, they will be ranked like this:
+// there is a technique for multi-field sorting if the sort order is "standard"
+// use pair (for 2 fields) or tuple (for >= 3 fields) in C++ and put the highest priority in front
+// old way
+// C++17 way
+// use built-in comparator
+// sorted ascending based on value, then based on name1,
+// then based on name2, in that order!
+// binary search using lower bound
+// found
+// not found
+// arr is of size 5 -> 
+//    arr[0], arr[1], arr[2], arr[3], arr[4]
+// if lower_bound cannot find the required value,
+//   it will set return arr index +1 of arr size, i.e.
+//   the 'non existent' arr[5]
+// thus, testing whether pos - arr == 5 blocks 
+//   can detect this "not found" issue
+// with vector, lower_bound will do the same:
+//   return vector index +1 of vector size
+// but this is exactly the position of vector.end()
+//   so we can test "not found" this way
+// useful if you want to generate permutations of set
+// 2, 4, 7, 10, 15 -> 2, 4, 7, 15, 10
+// 2, 4, 7, 15, 10 -> 2, 4, 10, 7, 15
+// sometimes these two useful simple macros are used
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\bit_manipulation.cpp
+// note: for example usage of bitset, see ch5/primes.cpp
+// returns S % N, where N is a power of 2
+// in binary representation
+// to reverse the print order
+// special case for i == 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\list.cpp
+// currently s is empty, true (1)
+// stack is LIFO, thus the content of s is currently like this:
+// c <- top
+// b
+// a
+// output 'c'
+// pop topmost
+// output 'b'
+// output false (0)
+// output true (1)
+// s has 2 more items
+// enqueue 'b' and 'a'
+// add one more item
+// prints 'b'
+// prints 'z'
+// output 'b', 'a', then 'z' (until queue is empty), according to the insertion order above
+// take the front first
+// before popping it
+// prints 'a - c'
+// only in C++, 'dabc'
+// prints 'd - c'
+// prints 'd - b'
+// prints 'a - b'
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\resizeable_array.cpp
+// initial size (5) and initial value {7,7,7,0,0}
+// initial size (5) and initial value {5,5,5,5,5}
+// 7 and 5
+// arr = {0,1,2,3,4}
+// v = {7,8,9,10,11}
+// 2 and 9
+// arr[5] = 5;                                 // undefined behavior
+// printf("arr[5] = %d\n", arr[5]);            // RTE
+// uncomment the line above to see the error (perhaps use -Wall compilation flag)
+// vector resizes itself
+// 77
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\nonlineards\map_set.cpp
+// note: there are many clever usages of this set/map
+// that you can learn by looking at top coder's codes
+// note, we don't have to use .clear() if we have just initialized the set/map
+// used_values.clear();
+// mapper.clear();
+// suppose we enter these 7 name-score pairs below
+/*
+// then the internal content of mapper MAY be something like this:
+// re-read balanced BST concept if you do not understand this diagram
+// the keys are names (string)!
+//                        (grace,75) 
+//           (billy,69)               (martin,81)   
+//     (andy,80)   (felix,82)    (john,78)  (steven,77)
+// iterating through the content of mapper will give a sorted output
+// based on keys (names)
+// C++17 style
+// map can also be used like this
+// interesting usage of lower_bound and upper_bound
+// display data between ["f".."m") ('felix' is included, 'martin' is excluded)
+// the internal content of used_values MAY be something like this
+// the keys are values (integers)!
+//                 (78) 
+//         (75)            (81)   
+//     (69)    (77)    (80)    (82)
+// O(log n) search, found
+// returns [69, 75] (these two are before 77 in the inorder traversal of this BST)
+// returns [77, 78, 80, 81, 82] (these five are equal or after 77 in the inorder traversal of this BST)
+// O(log n) search, not found
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\nonlineards\priority_queue.cpp
+// suppose we enter these 7 money-name pairs below
+/*
+// insertion in O(log n)
+// alternative way with {}
+// priority queue will arrange items in 'heap' based
+// on the first key in pair, which is money (integer), largest first
+// if first keys tie, use second key, which is name, largest first
+// the internal content of pq heap MAY be something like this:
+// re-read (max) heap concept if you do not understand this diagram
+// the primary keys are money (integer), secondary keys are names (string)!
+//                        (2000,grace)
+//           (100,steven)               (70,martin)   
+//     (100,john)   (10,billy)     (20,andy)  (70,felix)
+// let's print out the top 3 person with most money
+// O(1) to access the top / max element
+// C++17 style
+// O(log n) to delete the top and repair the structure
+// [score, name] still binded to pq.top() as we use `&' above
+// be careful not to overuse & to avoid accidental by reference bug
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\nonlineards\unordered_map_unordered_set.cpp
+// note, we don't have to use .clear() if we have just initialized the set/map
+// used_values.clear();
+// mapper.clear();
+// suppose we enter these 7 name-score pairs below
+/*
+// then the internal content of mapper/used_values are not really known
+// (implementation dependent)
+// iterating through the content of mapper will give a jumbled output
+// as the keys are hashed into various slots
+// C++17 style
+// map can also be used like this
+// there is no lower_bound and upper_bound in an unordered_map
+// O(1) search, found
+// O(1) search, not found
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\fenwicktree_ds.cpp
+// the key operation
+// for extra flexibility
+// index 0 is not used
+// internal FT is an array
+// create an empty FT
+// note f[0] is always 0
+// O(n)
+// add this value
+// i has parent
+// add to that parent
+// create FT based on f
+// create FT based on s
+// do the conversion first
+// returns RSQ(1, j)
+// inc/exclusion
+// updates value of the i-th element by v (v can be +ve/inc or -ve/dec)
+// O(log^2 n)
+// 2^30 > 10^9; usually ok
+// BSTA
+// See Section 3.3.1
+// RUPQ variant
+// internally use PURQ FT
+// [ui, ui+1, .., n] +v
+// [uj+1, uj+2, .., n] -v
+// [ui, ui+1, .., uj] +v
+// rsq(i) is sufficient
+// RURQ variant
+// needs two helper FTs
+// one RUPQ and
+// one PURQ
+// initialization
+// [ui, ui+1, .., uj] +v
+// -(ui-1)*v before ui
+// +(uj-ui+1)*v after uj
+// optimistic calculation
+// cancelation factor
+// standard
+// index 0 is always 0
+// 7 => ft[6]+ft[4] = 5+2 = 7
+// index 6, rsq(1, 6) == 7, which is >= 7
+// update demo
+// now 12
+// indices in [2, 3, .., 9] updated by +7
+// indices 6&7 are further updated by +3 (10)
+// 62
+// 20
+/*
+// idx   0 1 2 3 4 5 6 7  8 9 10, no index 0!
+// ft = {-,0,0,0,0,0,0,0, 0,0,0}
+// ft = {-,0,1,0,1,0,0,0, 1,0,0}, idx 2,4,8 => +1
+// ft = {-,0,1,0,2,0,0,0, 2,0,0}, idx 4,8 => +1
+// ft = {-,0,1,0,2,2,2,0, 4,0,0}, idx 5,6,8 => +2
+// ft = {-,0,1,0,2,2,5,0, 7,0,0}, idx 6,8 => +3
+// ft = {-,0,1,0,2,2,5,2, 9,0,0}, idx 7,8 => +2
+// ft = {-,0,1,0,2,2,5,2,10,0,0}, idx 8 => +1
+// ft = {-,0,1,0,2,2,5,2,10,1,1}, idx 9,10 => +1
+// 0 => ft[1] = 0
+// 1 => ft[2] = 1
+// 7 => ft[6]+ft[4] = 5+2 = 7
+// 11 => ft[10]+ft[8] = 1+10 = 11
+// 6 => rsq(1, 6) - rsq(1, 2) = 7-1 = 6
+// index 6, rsq(1, 6) == 7, which is >= 7
+// index 7, rsq(1, 7) == 9, which is >= 8
+// update demo
+// now 13
+// identical as ft1
+// 0 => ft[1] = 0
+// 1 => ft[2] = 1
+// 7 => ft[6]+ft[4] = 5+2 = 7
+// 11 => ft[10]+ft[8] = 1+10 = 11
+// 6 => rsq(1, 6) - rsq(1, 2) = 7-1 = 6
+// index 6, rsq(1, 6) == 7, which is >= 7
+// index 7, rsq(1, 7) == 9, which is >= 8
+// update demo
+// now 13
+// index 0 is always 0 (unused)
+// 0 => ft[1] = 0
+// 1 => ft[2] = 1
+// 7 => ft[6]+ft[4] = 5+2 = 7
+// 11 => ft[10]+ft[8] = 1+10 = 11
+// 6 => rsq(1, 6) - rsq(1, 2) = 7-1 = 6
+// index 6, rsq(1, 6) == 7, which is >= 7
+// index 7, rsq(1, 7) == 9, which is >= 8
+// update demo
+// now 13
+// indices in [2, 3, .., 9] updated by +7
+// indices 6&7 are further updated by +3 (10)
+// 62
+// 20
+// RUPQ rupq(10) ;                        // empty Fenwick Tree with 10 keys
+// rupq.range_update(2, 9, 7);     // indices in [2, 3, .., 9] updated by +7
+// rupq.range_update(6, 7, 3); // indices 6&7 are further updated by +3 (10)
+// for (int i = 1; i <= 10; i++)
+//   printf("%d -> %lld\n", i, rupq.point_query(i));
+// printf("=====\n");
+// RURQ rurq(10);
+// rurq.range_update(2, 2, 1);
+// rurq.range_update(4, 9, 1);
+// rurq.range_update(5, 7, 1);
+// rurq.range_update(6, 6, 1);
+// for (int i = 1; i <= 10; i++)
+//   printf("%d -> %lld\n", i, rurq.rsq(i));
+// printf("RSQ(6, 10) = %lld\n", rurq.rsq(6, 10)); // 3+2+1+1+0 = 7
+// printf("RSQ(1, 10) = %lld\n", rurq.rsq(1, 10)); // m = 11
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\graph_ds.cpp
+// it is better to declare large (2D) array as global
+// Try this input for Adjacency Matrix/Adjacency List/Edge List
+// Adjacency Matrix AM
+//   for each line: |V| entries, 0 or the weight
+// Adjacency List AL
+//   for each line: num neighbors, list of neighbors + weight pairs
+// Edge List EL
+//   for each line: a-b of edge(a,b) and weight
+/*
+// need to know V first
+// if V is > 2000,
+// try NOT to use AM
+// O(V)
+// initialize AL
+// to 0-based indexing
+// k = |neighbors|
+// O(k)
+// one way to store EL
+// edges sorted by weight (smallest->largest)
+// C++17 style
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\segmenttree_ds.cpp
+// OOP style
+// the underlying array
+// n = (int)A.size()
+// segment tree array
+// lazy propagation array
+// go to left child
+// go to right child
+// corner case
+// RMQ
+// O(n)
+// base case
+// has a lazy flag
+// [L..R] has same value
+// not a leaf
+// propagate downwards
+// L == R, a single index
+// time to update this
+// erase lazy flag
+// O(log n)
+// lazy propagation
+// found the segment
+// update this
+// lazy propagation
+// O(log n)
+// lazy propagation
+// infeasible
+// found the segment
+// make n a power of 2
+// index 2
+// index 5
+// index 4
+// update A[5] to 77
+// remains index 2
+// now index 4
+// remains index 4
+// update A[0..3] to 30
+// [0,1,2,3] all correct
+// remains index 4
+// remains index 4
+// update A[3] to 7
+// now index 3
+// remains index 4
+// now index 3
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\unionfind_ds.cpp
+// Union-Find Disjoint Sets Library written in OOP manner, using both path compression and union by rank heuristics
+// OOP style
+// vi p is the key part
+// optional speedup
+// optional feature
+// optional feature
+// optional
+// optional
+// i and j are in same set
+// find both rep items
+// keep x 'shorter' than y
+// set x under y
+// optional speedup
+// combine set sizes at y
+// a union reduces numSets
+// create 5 disjoint sets
+// 5
+// 4
+// 3
+// 2
+// will return 0 (false)
+// will return 1 (true)
+// findSet will return 1 for {0, 1} and 3 for {2, 3, 4}
+// 1
+// findSet will return 3 for {0, 1, 2, 3, 4}
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa00441.cpp
+// Lotto
+// input: k sorted ints
+// six nested loops!
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa00725.cpp
+// Division
+// this way, abcde and fghij are at most 5 digits
+// if digit f=0, then we have to flag it
+// if all digits are used, print it
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa00750.cpp
+// global variables
+// check previous Queens
+// infeasible
+// a candidate sol
+// optional statement
+// try all possible row
+// early pruning
+// can place a Queen here?
+// put here and recurse
+// to 0-based indexing
+// sub 8! operations
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa11565.cpp
+// Simple Equations
+// 0.150s
+// bool sol = false; int x, y, z;
+// for (x = -100; x <= 100; ++x)                    // ~201^3 ~= 8M operations
+//   for (y = -100; y <= 100; ++y)
+//     for (z = -100; z <= 100; ++z)
+//       if ((y != x) && (z != x) && (z != y) &&    // all 3 must be different
+//           (x+y+z == A) && (x*y*z == B) && (x*x + y*y + z*z == C)) {
+//         if (!sol) printf("%d %d %d\n", x, y, z);
+//         sol = true;
+//       }
+// 0.000s, when x is reduced to -22 to 22 due to x*y*z = B and x <= y <= z so x^3 <= B or x <= B^(1/3)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa11742.cpp
+// Social Constraints 
+// try all possible O(n!) permutations, the largest nput 8! = 40320
+// check the given social constraints based on 'p' in O(m)
+// check all constraints, max 20, each check 8 = 160
+// positive, at most  c[j]
+// negative, at least c[j]
+// all constraints are satisfied by this permutation
+// the overall time complexity is thus O(m * n!)
+// overall complexity = 160 * 40320 = 6M, doable
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa12455.cpp
+// Bars
+// for each subset, O(2^n)
+// for (int j = 0; j < n; j++)             // check membership, O(n)
+//   if (i & (1<<j))                       // see if bit 'j' is on?
+//     sum += l[j];                        // if yes, process 'j'
+// this is now O(k)
+// k is the # of on bits
+// least significant bit
+// 2^j = two_pow_j, get j
+// the answer is found
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dnc\UVa11935.cpp
+// Through the Desert
+// for all events, consume this amount of fuel (0 amount if delta time is 0)
+// consumption
+// leak
+// quick check
+// change a parameter, if needed
+// Fuel consumption n
+// Leak
+// Gas station
+// Mechanic
+// Goal
+// update time
+// if still have enough fuel by goal, this simulation is a success, otherwise, it is a failure
+// first event
+// the first four characters are "Fuel"
+// Binary Search the Answer (BSTA), then simulate
+// // while loop version
+// double lo = 0.0, hi = 10000.0;
+// while (fabs(hi-lo) > EPS) {                  // answer is not found yet
+//   double mid = (lo+hi) / 2.0;                // try the middle value
+//   can(mid) ? hi = mid : lo = mid;            // then continue
+// }
+// for loop version
+// log_2(10000/1e-9) ~= 43
+// looping 50x is enough
+// this is the answer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\beepers_UVa10496.cpp
+// Collecting Beepers
+// Karel + max 10 beepers
+// mask = free coordinates
+// close the loop
+// computed before
+// up to O(n)
+// but this is fast
+// offset v by +1
+// keep the min
+// these two values are not used
+// include Karel
+// Karel is at index 0
+// build distance table
+// Manhattan distance
+// DP-TSP
+// printf("The shortest path has length %d\n", dp(0, (1<<(n-1))-1)); // DP-TSP
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\LIS.cpp
+// predecessor array
+// backtracking routine
+// base case
+// backtrack
+// MAX_N up to 10^4
+// O(n^2) overall
+// was computed before
+// O(n) here
+// increasing condition
+// pick the max
+// early 2000 problems usually accept O(n^2) solution
+// with O(n^2) DP
+// 2020s problems will likely only accept O(n log k) solution
+// O(n)
+// greedily overwrite this
+// remember the index too
+// predecessor info
+// can extend LIS?
+// k = longer LIS by +1
+// keep best ending i
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\Max1DRangeSum.cpp
+// a sample array A
+// linear scan, O(n)
+// greedily extend this
+// keep the cur max RSQ
+// reset the running sum
+// if it ever dips below 0
+// rationale: starting from 0 is better for future
+// iterations than starting from -ve running sum
+// should be 9
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa00108.cpp
+// Maximum Sum
+// O(n^3) 1D DP + greedy (Kadane's) solution, 0.000s in UVa
+// square matrix size
+// pre-processing
+// lowest possible val
+// Max 1D Range Sum on columns of this row
+// Kadane's algorithm on rows
+// restart if negative
+/*
+// square matrix size
+// add from top
+// add from left
+// avoid double count
+// inclusion-exclusion
+// the lowest possible val
+// start coordinate
+// end coord
+// from (0, 0) to (k, l)
+// O(1)
+// O(1)
+// O(1)
+// the answer is here
+/*
+// square matrix size
+// the lowest possible val
+// start coordinate
+// end coord
+// sum this sub-rectangle
+// the answer is here
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa00674.cpp
+// Coin Change
+// N and coinValue are fixed for this problem, max V is 7489
+// one way, use nothing
+// invalid or done
+// was computed before
+// ignore this type
+// one more of this type
+// we only need to initialize this once
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa10003.cpp
+// Cutting Sticks
+// Top-Down DP
+// start with left = 0 and right = n + 1
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa10130.cpp
+// SuperSale 
+// 0-1 Knapsack DP (Top-Down, faster)
+// two base cases
+// computed before
+// no choice, skip
+// has choice, skip
+// or take
+/*
+// 0-1 Knapsack DP (Bottom-Up)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa10943.cpp
+/* How do you add? */
+// top-down
+/*
+// only can use 1 number to add up to N
+// the answer is definitely 1, that number itself
+// if K > 1, we can choose one number from [0..N] to be one of the number and recursively compute the rest
+// we just need the modulo 1M
+// memoize them
+// some recursion formula + top down DP
+// bottom-up
+// these are the base cases
+// these three nested loops form the correct topological order
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa11450_bu.cpp
+// UVa 11450 - Wedding Shopping - Bottom Up (faster than Top Down)
+// up to 20 garments at most and 20 models/garment
+// maximum budget is 200
+// price[g (<= 20)][k (<= 20)]
+// bool reachable[MAX_gm][MAX_M]; // reachable table[g (<= 20)][money (<= 200)]
+// if using space saving technique
+// reachable table[ONLY TWO ROWS][money (<= 200)]
+// store k in price[g][0]
+// clear everything
+// initial values (base cases), using first garment g = 0
+// for (int g = 1; g < C; ++g)               // for each garment
+//   for (money = 0; money < M; money++) if (reachable[g-1][money])
+//     for (int k = 1; k <= price[g][0]; ++k) if (money-price[g][k] >= 0)
+//       reachable[g][money-price[g][k]] = true; // also reachable now
+// for (money = 0; money <= M && !reachable[C-1][money]; ++money);
+// then we modify the main loop in int main a bit
+// we start with this row
+// for each garment
+// reset row
+// flip the two rows
+// last row has no on bit
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa11450_td.cpp
+// UVa 11450 - Wedding Shopping - Top Down
+// this code is similar to recursive backtracking code
+// parts of the code specific to top-down DP are commented with: `TOP-DOWN'
+// if these lines are commented, this top-down DP will become backtracking!
+// up to 20 garments at most and 20 models/garment
+// maximum budget is 200
+// price[g (<= 20)][k (<= 20)]
+// TOP-DOWN: dp table [g (< 20)][money (<= 200)]
+// fail, return -ve number
+// we are done
+// if the line below is commented, top-down DP will become backtracking!!
+// TOP-DOWN: memoization
+// start with a -ve number
+// try each model k
+// TOP-DOWN: memoize ans
+/*
+// must check this first
+// money can't be < 0
+// remember memory address
+// try each model k
+// ans == memo[g][money]
+// void function
+// similar base cases
+// which model k is opt?
+// this one
+// recurse to this only
+// easy to code
+// store k in price[g][0]
+// TOP-DOWN: init memo
+// start the top-down DP
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\greedy\ballotboxes_UVa12390.cpp
+// Distributing Ballot Boxes
+// (ratio r, num, den)
+// max pq
+// initially, 1 box/city
+// remaining boxes
+// extra box->largest city
+// current largest city
+// reduce its workload
+// the final answer
+// all other cities in the max pq will have equal or lesser ratio
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\greedy\grass_UVa10382.cpp
+// Kattis - grass / UVa 10382 - Watering Grass
+// sort based on smaller x_l and then larger x_r
+// to make this unselected...
+// sort the sprinklers
+// done
+// inside prev interval
+// can cover
+// go to right to find
+// interval with
+// the largest coverage
+// jump here
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\greedy\loowater_UVa11292.cpp
+// The Dragon of Loowater
+// both arrays are sorted
+// while not done yet
+// find required knight k
+// loowater is doomed :S
+// pay this amount of gold
+// next dragon & knight
+// all dragons are chopped
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\floyd_warshall.cpp
+// INF = 1B, not 2^31-1 to avoid overflow
+// if |V| > 450, you cannot use Floyd Washall's
+// it is better to store a big array in the heap
+/*
+// directed graph
+// loop order is k->u->v
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\maxflow.cpp
+// This code uses new C++17 structured binding
+// use this compiler setting "g++ -O2 -std=gnu++17 {cpp17file}"
+// Disclaimer: This code is a hybrid between old CP1-2-3 implementation of
+// Edmonds Karp's algorithm -- re-written in OOP fashion and the fast
+// Dinic's algorithm implementation by
+// https://github.com/jaehyunp/stanfordacm/blob/master/code/Dinic.cc
+// This code is written in modern C++17 standard
+// INF = 1e18, not 2^63-1 to avoid overflow
+// BFS to find augmenting path in residual graph
+// record BFS sp tree
+// stop as sink t reached
+// explore neighbors of u
+// stored in EL[idx]
+// positive residual edge
+// 3 lines in one!
+// has an augmenting path
+// send one flow from s->t
+// bottleneck edge f found
+// back edge
+// back flow
+// traverse from s->t
+// remember last edge
+// in current layer graph
+// back edge
+// if you are adding a bidirectional edge u<->v with weight w into your
+// flow graph, set directed = false (default value is directed = true)
+// safeguard: no self loop
+// u->v, cap w, flow 0
+// remember this index
+// back edge
+// remember this index
+// mf stands for max_flow
+// an O(VE^2) EK algorithm
+// find and send 1 flow f
+// if f == 0, stop
+// if f > 0, add to mf
+// mf stands for max_flow
+// an O(VE^2) EK algorithm
+// important speedup
+// exhaust blocking flow
+/*
+// default: directed edge
+// printf("%lld\n", mf.edmonds_karp(s, t));
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mcbm.cpp
+// global variables
+// return 1 if there exists an augmenting path from L
+// return 0 otherwise
+// found 1 matching
+// no matching
+// inside int main()
+// build bipartite graph with directed edge from left to right set
+/*
+// we know there are 6 vertices in this bipartite graph, left side are numbered 0,1,2, right side 3,4,5
+// Graph in Figure 4.41 can be built on the fly
+// we know there are 5 vertices in this bipartite graph, left side are numbered 0,1, right side 3,4,5
+//int V = 5, Vleft = 2, set1[2] = {1,7}, set2[3] = {4,10,12};
+// build the bipartite graph, only directed edge from left to right is needed
+// For bipartite graph in Figure 4.44, V = 5, Vleft = 3 (vertex 0 unused)
+// AL[0] = {} // dummy vertex, but you can choose to use this vertex
+// AL[1] = {3, 4}
+// AL[2] = {3}
+// AL[3] = {}   // we use directed edges from left to right set only
+// AL[4] = {}
+// we ignore vertex 0
+// build unweighted bipartite graph with directed edge left->right set
+// assume all vertices on left set are free initially
+// V is the number of vertices in bipartite graph
+// Greedy pre-processing for trivial Augmenting Paths
+// try commenting versus un-commenting this for-loop
+// O(V+E)
+// L is matched, no longer a free vertex
+// randomize this greedy matching
+// for each of the k remaining free vertices
+// reset before each recursion
+// once f is matched, f remains matched till end
+// the answer is 2 for Figure 4.42
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mst\kruskal.cpp
+// UFDS code from ch2/ownlibrary/ufds.cpp
+// Union-Find Disjoint Sets Library written in OOP manner, using both path compression and union by rank heuristics
+// OOP style
+// vi p is the key part
+// optional speedup
+// optional feature
+// optional feature
+// i and j are in same set
+// find both rep items
+// keep x 'shorter' than y
+// set x under y
+// optional speedup
+// combine set sizes at y
+// a union reduces numSets
+/*
+// This example shows another form of reading graph input
+// Kruskal's algorithm
+// read as (u, v, w)
+// reorder as (w, u, v)
+// sort by w, O(E log E)
+// note: std::tuple has built-in comparison function
+// no edge has been taken
+// all V are disjoint sets
+// note: the runtime cost of UFDS is very light
+// up to O(E)
+// C++17 style
+// already in the same CC
+// add w of this edge
+// link them
+// 1 more edge is taken
+// optimization
+// note: the number of disjoint sets must eventually be 1 for a valid MST
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mst\prim.cpp
+// the graph stored in AL
+// to avoid cycle
+// to select shorter edges
+// C++ STL priority_queue is a max heap, we use -ve sign to reverse order
+// set u as taken and enqueue neighbors of u
+// sort by non-dec weight
+// then by inc id
+/*
+// This example shows another form of reading graph input
+// inside int main() --- assume the graph is stored in AL, pq is empty
+// read as (u, v, w)
+// no vertex is taken
+// take+process vertex 0
+// no edge has been taken
+// up to O(E)
+// C++17 style
+// negate to reverse order
+// already taken, skipped
+// add w of this edge
+// take+process vertex u
+// 1 more edge is taken
+// optimization
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\bellman_ford.cpp
+// INF = 1B, not 2^31-1 to avoid overflow
+/*
+// Graph in Figure 4.19, negative cycle exists, Bellman Ford's can detect this
+// Bellman Ford's routine, basically = relax all E edges V-1 times
+// INF = 1e9 here
+// total O(V*E)
+// optimization
+// these two loops = O(E)
+// important check
+// C++17 style
+// not improving, skip
+// relax operation
+// optimization
+// optimization
+// one more pass to check
+// C++17 style
+// should be false
+// if true => -ve cycle
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\bfs.cpp
+// In this chapter, we will frequently use these
+// three data type shortcuts. They may look cryptic
+// but shortcuts are useful in competitive programming
+// INF = 1B, not 2^31-1 to avoid overflow
+// addition:parent vector
+// extract info from vi p
+// output format: s -> ... -> t
+/*
+// This example shows another form of reading graph input
+// as an example, we start from this source, see Figure 4.3
+// BFS routine inside int main() -- we do not use recursion
+// INF = 1e9 here
+// p is global
+// for output printing
+// additional feature
+// C++17 style, w ignored
+// dist[v] != INF now
+// parent of v is u
+// for next iteration
+// same parity
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\dijkstra.cpp
+// INF = 1B, not 2^31-1 to avoid overflow
+/*
+// directed graph
+// INF = 1e9 here
+// Original Dijkstra's algorithm
+/*
+// dist[u] = INF
+// but dist[s] = 0
+// sort the pairs by non-decreasing distance from s
+// main loop
+// shortest unvisited u
+// all edges from u
+// not improving, skip
+// erase old pair
+// relax operation
+// enqueue better pair
+// (Modified) Dijkstra's algorithm
+// sort the pairs by non-decreasing distance from s
+// main loop
+// shortest unvisited u
+// a very important check
+// all edges from u
+// not improving, skip
+// relax operation
+// enqueue better pair
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\spfa.cpp
+// INF = 1B, not 2^31-1 to avoid overflow
+/*
+// Graph in Figure 4.19, negative cycle exists, SPFA will be trapped in an infinite loop/produces WA (stop only when overflow happens)
+// SPFA from source S
+// INF = 1e9 here
+// like BFS queue
+// unique to SPFA
+// pop from queue
+// C++17 style
+// not improving, skip
+// relax operation
+// add to the queue
+// only if v is not
+// already in the queue
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\articulation.cpp
+// basic flag
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// dfs_low[u]<=dfs_num[u]
+// a tree edge
+// special case, root
+// for articulation point
+// store this info first
+// for bridge
+// subtree, always update
+// if a non-trivial cycle
+// then can update
+/*
+// Right graph in Figure 4.6/4.7/4.8
+// special case
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\cyclecheck.cpp
+// three flags
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// back vs bidirectional
+// check edge properties
+// color u as EXPLORED
+// C++17 style, w ignored
+// EXPLORED->UNVISITED
+// a tree edge u->v
+// EXPLORED->EXPLORED
+// differentiate them
+// the most frequent application: check if the graph is cyclic
+// EXPLORED->VISITED
+// color u as VISITED/DONE
+/*
+// freopen("dfs_cc_in.txt", "r", stdin);
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\dfs_cc.cpp
+// basic flags
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// normal usage
+// this vertex is visited
+// mark u as visited
+// C++17 style, w ignored
+// to avoid cycle
+// recursively visits v
+/*
+// for each u in [0..V-1]
+// if that u is unvisited
+// 3 lines here!
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\toposort.cpp
+// basic flags
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// this is the only change
+/*
+// make sure that the given graph is DAG
+// global variable
+// global variable
+// same as finding CCs
+// reverse ts or
+// simply read the content
+// of ts backwards
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa00469.cpp
+// Wetlands of Florida
+// classic DFS flood fill
+// the order is:
+// S/SE/E/NE/N/NW/W/SW
+// returns the size of CC
+// outside grid
+// does not have color c1
+// (r, c) has color c1
+// to avoid cycling
+// the code is neat as
+// we use dr[] and dc[]
+// inside int main()
+// read the grid as a global 2D array + read (row, col) query coordinates
+// remove dummy line
+// start of query
+// index starts from 0!
+// count size of wet area
+// restore for next query
+// next test case or last test case
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa10004.cpp
+// Bicoloring
+// notice: vi, not vii
+// bidirectional
+// add a Boolean flag
+// as with original BFS
+// don't record distances
+// just record two colors
+// u & v have same color
+// a coloring conflict :(
+// optional speedup
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa11060.cpp
+// Beverages
+// give index i to B1
+// directed edge
+// enqueue vertices with zero incoming degree into a (priority) queue pq
+// min priority queue
+// next to be processed
+// smaller index first
+// Kahn's algorithm
+// process u here
+// virtually remove u->v
+// not a candidate, skip
+// enqueue v in pq
+// dummy
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa11838.cpp
+// Come and Go
+// check if the graph is strongly connected, i.e. the SCC of the graph is the graph itself (only 1 SCC)
+// global variables
+// dfs_low[u] <= dfs_num[u]
+// remember the order
+// condition for update
+// a root/start of an SCC
+// when recursion unwinds
+// pass = 1 (original), 2 (transpose)
+// by ref to avoid copying
+// C++17 style, w ignored
+// as in finding topological order in Section 4.2.5
+// the transposed graph
+// to 0-based indexing
+// always
+// if this is two way, add the reverse direction
+// run Tarjan's SCC code here
+// // run Kosaraju's SCC code here
+// S.clear(); // first pass: record the post-order of original graph
+// dfs_num.assign(N, UNVISITED);
+// for (int u = 0; u < N; ++u)
+//   if (dfs_num[u] == UNVISITED)
+//     Kosaraju(u, 1);
+// int numSCC = 0; // second pass: explore SCCs using first pass order
+// dfs_num.assign(N, UNVISITED);
+// for (int i = N-1; i >= 0; --i)
+//   if (dfs_num[S[i]] == UNVISITED)
+//     numSCC++, Kosaraju(S[i], 2);             // on transposed graph
+// if SCC is only 1, print 1, otherwise, print 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\primes.cpp
+// 10^7 should be enough for most cases
+// compact list of primes in form of vector<long long>
+// first part
+// create list of primes in [0..upperbound]
+// add 1 to include upperbound
+// set all bits to 1
+// except index 0 and 1
+// cross out multiples of i <= _sieve_size starting from i*i
+// also add this vector containing list of primes
+// call this method in main method
+// a good enough deterministic prime tester
+// now O(1) for small primes
+// it takes longer time if N is a large prime!
+// note: only work for N <= (last prime in vi "primes")^2
+// second part
+// remember: vi is vector of integers, ll is long long
+// vi `primes' (generated by sieve) is optional
+// using PF = 2, 3, 4, ..., is also ok
+// stop at sqrt(N), but N can get smaller
+// remove this PF
+// only consider primes!
+// special case if N is actually a prime
+// if pf exceeds 32-bit integer, you have to change vi
+// third part
+// count this pf only once
+// start from ans = 1
+// count the power
+// according to the formula
+// (last factor has pow = 1, we add 1 to it)
+// start from ans = 1
+// formula
+// last one
+// start from ans = N
+// only count unique factor
+// last factor
+// first part: the Sieve of Eratosthenes
+// can go up to 10^7 (need few seconds)
+// last prime generated is 9999991
+// 2^31-1 = 2147483647, 10-digits prime
+// not a prime, 104729*1299709
+// second part: prime factors
+// slowest, 2^31-1 = 2147483647 is a prime
+// slow, 2 large factors 104729 * 1299709
+// faster, 2^10 * 3^4 * 5 * 7^4 * 11 * 13
+// this is the limit: 9999991^2
+// r = primeFactors(100000380000361LL);                 // error, beyond 9999991^2
+// for (auto &pf : r) printf("> %d\n", pf);
+// printf("\n");
+// third part: prime factors variants
+// 2^1 * 5^2 => 3
+// 2^1 * 5^2 => 2
+// 2^1 * 5^2 => 2 + 5 + 5 = 12
+// 1, 2, 5, 10, 25, 50, 6 divisors
+// 1 + 2 + 5 + 10 + 25 + 50 = 93
+// 20 integers < 50 are relatively prime with 50
+// special cases when N is a prime number
+// 7^1 => 1
+// 7^1 = 1
+// 7^1 => 7
+// 1 and 7, 2 divisors
+// 1 + 7 = 8
+// 6 integers < 7 are relatively prime with prime number 7
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa00350.cpp
+// Pseudo-Random Numbers
+// function int f(int x) is defined earlier
+// 1st part: finding k*mu, hare's speed is 2x tortoise's
+// f(x0) is the node next to x0
+// 2nd part: finding mu, hare and tortoise move at the same speed
+// 3rd part: finding lambda, hare moves, tortoise stays
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10229.cpp
+// Modular Fibonacci
+// increase this if needed
+// to let us return a 2D array
+// O(n^3), but O(1) as n = 2
+// modulo arithmetic is used here
+// O(n^3 log p), but O(log p) as n = 2
+// prepare identity matrix
+// iterative version of Divide & Conquer exponentiation
+// check if p is odd (the last bit is on)
+// update ans
+// square the base
+// divide p by 2
+// special matrix for Fibonaccci
+// set MOD = 2^m
+// O(log n) 
+// this if fib(n)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\basic_string.cpp
+// make sure ch is in lowercase
+// technique to differentiate first line with the other lines
+// to differentiate whether the previous line contains a dash or not
+// delete dummy char
+// if the last character is '-', delete it by moving the NULL (0) one character forward
+// only append " " if this line is the second one onwards
+// we can use str[i] as terminating condition as string in C++ is also terminated with NULL (0)
+// make each character lower case
+// already returns 1 or 0
+// casting from C string to C++ string is automatic
+// to cast C++ string to C string, we need to use c_str()
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\kmp.cpp
+// T = text, P = pattern
+// b = back table, n = length of T, m = length of P
+// try all potential starting indices
+// use boolean flag `found'
+// if mismatch found
+// abort this, shift starting index i by +1
+// if P[0..m-1] == T[i..i+m-1]
+// call this before calling kmpSearch()
+// starting values
+// pre-process the pattern string P
+// if different, reset j using b
+// if same, advance both pointers
+// observe i = 8, 9, 10, 11, 12 with j = 0, 1, 2, 3, 4
+// in the example of P = "SEVENTY SEVEN" above
+// this is similar as kmpPreprocess(), but on string T
+// starting values
+// search through string T
+// if different, reset j using b
+// if same, advance both pointers
+// a match found when j == m
+// prepare j for the next possible match
+//if the end of line character is read too, uncomment the line below
+//T[n-1] = 0; n--; P[m-1] = 0; m--;
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\sa.cpp
+// up to 100K characters
+// the input string
+// the length of T
+// rank array
+// suffix array
+// for counting/radix sort
+// the pattern string
+// the length of P
+// for computing LCP
+// LCP[i] = the LCP between previous suffix T+SA[i-1] and suffix T+SA[i]
+// compare
+// max ~1000 characters
+// this is the initial SA
+// sort: O(n log n) * compare: O(n) = O(n^2 log n)
+// O(n)
+// up to 255 ASCII chars
+// clear frequency table
+// count the frequency
+// of each integer rank
+// shuffle SA
+// update SA
+// can go up to 100K chars
+// initial rankings
+// initial SA
+// repeat log n times
+// this is actually radix sort: sort based on the second item
+// and then (stable) sort based on the first item
+// re-ranking process
+// compare adj suffixes
+// if same pair => same rank r; otherwise, increase r
+// update RA
+// nice optimization
+// default value
+// compute LCP by def
+// always reset L to 0
+// same L-th char, ++L
+// default value
+// compute Phi in O(n)
+// remember prev suffix
+// compute PLCP in O(n)
+// special case
+// L incr max n times
+// L dec max n times
+// compute LCP in O(n)
+// restore PLCP
+// in O(m log n)
+// range = [0..n-1]
+// find lower bound
+// this is round down
+// find P in suffix 'mid'
+// notice the >= sign
+// if not found
+// now find upper bound
+// notice the > sign
+// special case
+// return lower/upperbound as first/second item of the pair, respectively
+// returns a pair (the LRS length and its index)
+// O(n), start from i = 1
+// returns a pair (the LCS length and its index)
+// O(n), start from i = 1
+//printf("Enter a string T below, we will compute its Suffix Array:\n");
+// T[n++] = '$';
+// if '\n' is read, uncomment the next line
+//T[n-1] = '$'; T[n] = 0;
+/*
+// O(n log n)
+// O(n)
+// LRS demo
+// find the LRS of the first input string
+/*
+//printf("\nNow, enter a string P below, we will try to find P in T:\n");
+// if '\n' is read, uncomment the next line
+//P[m-1] = 0; m--;
+// LCS demo
+//printf("\nRemember, T = '%s'\nNow, enter another string P:\n", T);
+// T already has '$' at the back
+// if '\n' is read, uncomment the next line
+//P[m-1] = 0; m--;
+// append P
+// add '$' at the back
+// update n
+// reconstruct SA of the combined strings
+// O(n log n)
+// O(n)
+// find the longest common substring between T and P
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\str_align.cpp
+// Needleman Wunsnch's algorithm
+// insert/delete = -1 point
+// match = 2 points, mismatch = -1 point
+// cost for match or mismatches
+// insert/delete = -1 point
+// delete
+// insert
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\circles.cpp
+// whenever possible, work with point_i
+// default constructor
+// constructor
+// only used if more precision is needed
+// default constructor
+// constructor
+// all integer version
+// all integer
+//inside/border/outside
+// to get the other center, reverse p1 and p2
+// circle equation, inside, border, outside
+// 0-inside
+// 1-at border
+// 2-outside
+// we simply reverse p1 with p2
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\points_lines.cpp
+// important constant; alternative #define PI (2.0 * acos(0.0))
+// struct point_i { int x, y; };    // basic raw form, minimalist mode
+// whenever possible, work with point_i
+// default constructor
+// user-defined
+// only used if more precision is needed
+// default constructor
+// user-defined
+// override less than operator
+// useful for sorting
+// first criteria , by x-coordinate
+// second criteria, by y-coordinate
+// use EPS (1e-9) when testing equality of two floating points
+// Euclidean distance
+// hypot(dx, dy) returns sqrt(dx * dx + dy * dy)
+// return double
+// rotate p by theta degrees CCW w.r.t origin (0, 0)
+// multiply theta with PI / 180.0
+// a way to represent a line
+// the answer is stored in the third parameter (pass by reference)
+// vertical line is fine
+// default values
+// IMPORTANT: we fix the value of b to 1.0
+// not needed since we will use the more robust form: ax + by + c = 0
+// another way to represent a line
+// special case: vertical line
+// l contains m = INF and c = x_value
+// to denote vertical line x = x_value
+// we need this return variable to differentiate result
+// l contains m and c of the line equation y = mx + c
+// check coefficients a & b
+// also check coefficient c
+// returns true (+ intersection point) if two lines are intersect
+// no intersection
+// solve system of 2 linear algebraic equations with 2 unknowns
+// special case: test for vertical line to avoid division by zero
+// name: `vec' is different from STL vector
+// convert 2 points to vector a->b
+// nonnegative s = [<1 .. 1 .. >1]
+// shorter.same.longer
+// translate p according to v
+// convert point and gradient/slope to line
+// always -m
+// always 1
+// compute this
+// perpendicular to l and pass through p
+// special case 1: vertical line
+// special case 2: horizontal line
+// normal line
+// intersect line l with this perpendicular line
+// the intersection point is the closest point
+// returns the reflection of point on a line
+// similar to distToLine
+// create a vector
+// translate p twice
+// returns the dot product of two vectors a and b
+// returns the squared value of the normalized vector
+// returns the distance from p to the line defined by
+// two points a and b (a and b must be different)
+// the closest point is stored in the 4th parameter (byref)
+// formula: c = a + u*ab
+// translate a to c
+// Euclidean distance between p and c
+// returns the distance from p to the line segment ab defined by
+// two points a and b (still OK if a == b)
+// the closest point is stored in the 4th parameter (byref)
+// closer to a
+// Euclidean distance between p and a
+// closer to b
+// Euclidean distance between p and b
+// run distToLine as above
+// returns angle aob in rad
+// returns the cross product of two vectors a and b
+//// another variant
+// returns 'twice' the area of this triangle A-B-c
+// int area2(point p, point q, point r) {
+//   return p.x * q.y - p.y * q.x +
+//          q.x * r.y - q.y * r.x +
+//          r.x * p.y - r.y * p.x;
+// }
+// note: to accept collinear points, we have to change the `> 0'
+// returns true if point r is on the left side of line pq
+// returns true if point r is on the same line as the line pq
+// note that both P1 and P2 are (0.00, 0.00)
+// true
+// false
+// sorting points demo
+// rearrange the points as shown in the diagram below
+/*
+// should be 5.000
+// line equations
+// should be -0.50 * x + 1.00 * y - 1.00 = 0.00
+// a vertical line, not a problem in "ax + by + c = 0" representation
+// should be 1.00 * x + 0.00 * y - 2.00 = 0.00
+// parallel, same, and line intersection tests
+// no
+// yes, l1 (P[0]-P[1]) and l3 (P[2]-P[3]) are parallel
+// no
+// yes, l2 (P[0]-P[2]) and l4 (P[2]-P[4]) are the same line (note, they are two different line segments, but same line)
+// yes, l1 (P[0]-P[1]) and l2 (P[0]-P[2]) are intersect at (2.0, 2.0)
+// other distances
+// closer to A (or P[2]) = (2.00, 4.00)
+// closer to midway between AB = (3.20, 4.60)
+// closer to B (or P[3]) = (6.00, 6.00)
+// should be (0.00, 3.00)
+// 90 degrees
+// 63.43 degrees
+// 180 degrees
+// no
+// yes
+// no
+// yes
+// collinear if r(35, 31)
+// right
+/*
+// translation
+// imagine there is an arrow from A to B (see the diagram above)
+// D will be located in coordinate (3.0 + 2.0, 2.0 + 1.0) = (5.0, 3.0)
+// E will be located in coordinate (3.0 + 1/2 * 2.0, 2.0 + 1/2 * 1.0) = (4.0, 2.5)
+// rotation
+// B = (4.0, 3.0)
+// rotate B by 90 degrees COUNTER clockwise, F = (-3.0, 4.0)
+// rotate B by 180 degrees COUNTER clockwise, G = (-4.0, -3.0)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\polygon.cpp
+// only used if more precision is needed
+// default constructor
+// user-defined
+// name: `vec' is different from STL vector
+// convert 2 points to vector a->b
+// Euclidean distance
+// return double
+// returns the perimeter, which is the sum of Euclidian distances
+// of consecutive line segments (polygon edges)
+// remember that P[0] = P[n-1]
+// returns the area
+// Shoelace formula
+// if all points are int
+// result can be int(eger) until last step
+// returns angle aob in rad
+// note: to accept collinear points, we have to change the `> 0'
+// returns true if point r is on the left side of line pq
+// returns true if point r is on the same line as the line pq
+// returns true if we always make the same turn while examining
+// all the edges of the polygon one by one
+// a point/sz=2 or a line/sz=3 is not convex
+// remember one result
+// then compare with the others
+// different sign -> this polygon is concave
+// this polygon is convex
+// returns true if point p is in either convex/concave polygon P
+// avoid point or line
+// assume the first vertex is equal to the last vertex
+// left turn/ccw
+// right turn/cw
+// 360d -> in, 0d -> out, we have large margin
+// line segment p-q intersect with line A-B.
+// cuts polygon Q along the line formed by point a -> point b
+// (note: the last point must be the same as the first point)
+// Q[i] is on the left of ab
+// edge (Q[i], Q[i+1]) crosses line ab
+// make P's first point = P's last point
+// sort the points lexicographically
+// build lower hull
+// build upper hull
+// copy all points so that Pts is not affected
+// corner cases: n=1=point, n=2=line, n=3=triangle
+// safeguard from corner case
+// the CH is P itself
+// first, find P0 = point with lowest Y and if tie: rightmost X
+// O(n)
+// swap P[P0] with P[0]
+// second, sort points by angle w.r.t. pivot P0, O(n log n) for this sort
+// use this global variable as reference
+// we do not sort P[0]
+// special case
+// check which one is closer
+// compare 2 angles
+// third, the ccw tests, although complex, it is just O(n)
+// initial S
+// then, we check the rest
+// note: n must be >= 3 for this method to work, O(n)
+// left turn, accept
+// or pop the top of S until we have a left turn
+// return the result, overall O(n log n) due to angle sorting
+// 6 points, entered in counter clockwise order, 0-based indexing
+// loop back
+// 31.64
+// 49.00
+// 49.00
+// false (P1 is the culprit)
+//// the positions of P6 and P7 w.r.t the polygon
+//7 P5--------------P4
+//6 |                  \
+//5 |                    \
+//4 |   P7                P3
+//3 |   P1___            /
+//2 | / P6    \ ___    /
+//1 P0              P2
+//0 1 2 3 4 5 6 7 8 9 101112
+// outside this (concave) polygon
+// false
+// inside this (concave) polygon
+// true
+// cutting the original polygon based on line P[2] -> P[4] (get the left side)
+//7 P5--------------P4
+//6 |               |  \
+//5 |               |    \
+//4 |               |     P3
+//3 |   P1___       |    /
+//2 | /       \ ___ |  /
+//1 P0              P2
+//0 1 2 3 4 5 6 7 8 9 101112
+// new polygon (notice the index are different now):
+//7 P4--------------P3
+//6 |               |
+//5 |               |
+//4 |               |
+//3 |   P1___       |
+//2 | /       \ ___ |
+//1 P0              P2
+//0 1 2 3 4 5 6 7 8 9
+// smaller now 29.15
+// 40.00
+// running convex hull of the resulting polygon (index changes again)
+//7 P3--------------P2
+//6 |               |
+//5 |               |
+//4 |   P7          |
+//3 |               |
+//2 |               |
+//1 P0--------------P1
+//0 1 2 3 4 5 6 7 8 9
+// now this is a rectangle
+// precisely 28.00
+// precisely 48.00
+// true
+// true
+// true
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\triangles.cpp
+// whenever possible, work with point_i
+// default constructor
+// constructor
+// only used if more precision is needed
+// default constructor
+// constructor
+// Heron's formula, split sqrt(a * b) into sqrt(a) * sqrt(b); in implementation
+//====================================================================
+// from ch7_01_points_lines
+// a way to represent a line
+// the answer is stored in the third parameter (pass by reference)
+// vertical line is fine
+// default values
+// IMPORTANT: we fix the value of b to 1.0
+// check coefficient a + b
+// returns true (+ intersection point) if two lines are intersect
+// no intersection
+// solve system of 2 linear algebraic equations with 2 unknowns
+// special case: test for vertical line to avoid division by zero
+// name: `vec' is different from STL vector
+// convert 2 points to vector a->b
+// nonnegative s = [<1 .. 1 .. >1]
+// shorter.same.longer
+// translate p according to v
+//====================================================================
+// assumption: the required points/lines functions have been written
+// returns 1 if there is an inCircle center, returns 0 otherwise
+// if this function returns 1, ctr will be the inCircle center
+// and r is the same as rInCircle
+// no inCircle center
+// compute these two angle bisectors
+// get their intersection point
+// assumption: the required points/lines functions have been written
+// returns 1 if there is a circumCenter center, returns 0 otherwise
+// if this function returns 1, ctr will be the circumCircle center
+// and r is the same as rCircumCircle
+// r = distance from center to 1 of the 3 points
+// returns true if point d is inside the circumCircle defined by a,b,c
+// a right triangle
+// must be the same as above
+// 1.00
+// same, 1.00
+// (3.00, 1.00)
+// 2.50
+// same, 2.50
+// (2.00, 1.50)
+// inside triangle and circumCircle
+// outside the triangle but inside circumCircle
+// slightly outside
+// Law of Cosines
+// Law of Sines
+// Phytagorean Theorem
+// Triangle Inequality
+// yes
+// no, actually straight line
+// no
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa01079.cpp
+// World Finals Stockholm 2009, A - A Careful Approach, UVa 1079, LA 4445
+// with certain landing order, and certain L, try
+// landing those planes and see what is the gap to b[order[n - 1]]
+// greedy, 1st aircraft lands ASAP
+// for the other aircrafts
+// can land: greedily choose max of a[order[i]] or targetLandingTime
+// return +ve value to force binary search to reduce L
+// return -ve value to force binary search to increase L
+// 2 <= n <= 8
+// plane i land safely at interval [ai, bi]
+// originally in minutes, convert to seconds
+// variable to be searched for
+// permute plane landing order, up to 8!
+// min 0s, max 1 day = 86400s
+// start with an infeasible solution
+// binary search L, EPS = 1e-3
+// we want the answer rounded to nearest int
+// round down first
+// must increase L
+// infeasible, must decrease L
+// get the max over all permutations
+// try all permutations
+// other way for rounding is to use printf format string: %.0lf:%0.2lf
+// round to nearest second
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa01099.cpp
+// Sharing Chocolate
+// if this bit is on
+// if (memo[h][S] != -1) return memo[w][S] = memo[h][S];
+// if only one item
+// Set one always belong to set #1, can reduce search space by half
+// horizontal cut
+// vertical cut
+// O(32,768*16 = 524,288)
+// special case: cannot
+// try subproblems
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa01231.cpp
+// ACORN, UVa 1231, LA 4106
+// there is an acorn here
+// initialization
+// from this tree, +1 above
+// best from tree at height + f
+// update this too
+// solution will be here
+// ignore the last number 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa01238.cpp
+// Free Parentheses
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa10911.cpp
+// Forming Quiz Teams
+// if you have problems with this C++ code,
+// consult your programming text books first...
+/* Forming Quiz Teams, the solution for UVa 10911 above */
+// using global variables is a bad software engineering practice,
+// but it is OK for competitive programming
+// 1 << 16 = 2^16, note that max N = 8
+// DP state = bitmask
+// we initialize `memo' with -1 in the main function
+// this state has been computed before
+// simply lookup the memo table
+// all students are already matched
+// the cost is 0
+// initialize with a large value
+// find the first bit that is off
+// then, try to match p1
+// with another bit p2 that is also off
+// pick the minimum
+// store result in a memo table and return
+// freopen("10911.txt", "r", stdin);      // redirect input file to stdin
+// yes, we can do this :)
+// '%*s' skips names
+// build pairwise distance table
+// have you used `hypot' before?
+// use DP to solve min weighted perfect matching on small general graph
+// set -1 to all cells
+// return 0;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa11065.cpp
+// Gentlemen Agreement
+// all intersections are visited
+// one more possible set
+// size of the set
+// if intersection i is not yet used
+// use i and its neighbors
+// a more powerful, bit-wise adjacency list (for faster set operations)
+// i to itself
+// speed up
+// just a backtracking with bitmask/subset
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa11195.cpp
+// Another n-Queen Problem
+// done, 1 way found
+// bit = all possible column positions
+// list of forbidden column
+// after negation, list of allowed columns, but it turns on more bits than necessary
+// (1<<n) - 1, turn on n bits only, we want to concentrate on these n bits only
+// now recursively count the ways
+// try each bit that is turned on
+// the first bit that is on
+// for future iterations, forbid column t and left_diagonal/right diagonal that has t
+// remove that bit t from 'bit'
+// mark out the bad squares
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa11212.cpp
+// Editing a Book
+// turn array into a number for efficiency
+// BFS from s until nL depth, store the state distance in "dis",
+// "ref" is a state distance from another BFS source.
+// If a node exists in "ref" then return the "meet in the middle distance"
+//    from source s and from another source (ref's source)
+// limit to depth nL only
+// we do not use while (!q.empty()) to ensure we only touch nL layers only
+// unpack the digits again
+// try all possible substring
+// cut index [i..j]
+// try all possible paste point
+// paste at location k (using array a)
+// touching the other side, this is the answer: L + 1 (this move) + from v to sorted state
+// if revisited, ignore
+// relax and push to queue again
+// maximum distance (upperbound)
+// precalculate bfs from 1, 12, 123, ..., 123456789
+// the source
+// only need to go 2 level deep, d[0] is blank at this stage
+// up to n = 9, 1 digit, can be encoded as integer
+// search from s = 123456789, if found, we have an answer
+// otherwise, search from target v (2 level deep), if still not found, answer = 5
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa11212_alt.cpp
+// maximum size of queue
+// n is at most 9. Thus, it can be represented as a single integer.
+// Fast shifter for the sequence of numbers.
+// initial unmoved elements
+// initial unmoved elements 
+// move from  l ... r to begin at index k
+// move from r ... k to begin at index l
+// special case
+// the distance and id are compressed as a single integer for speed up
+// initially a pair of integer {distance, id}
+// id represents whether it comes from src or tgt
+// it is set to 1 and 3 for speedup when checking whether a key exists in the map or not
+// binary representation :
+// - bit-0 : always 1, indicating that a key is present in the map
+// - bit-1 : 0 if it comes from src; 1 if it comes from tgt
+// - the other bits : represents the distance
+// it is faster to use fixed size of queue
+// C(N, 3) loop for the edges
+// key is present
+// if key is not present, the default return value is 0
+// it is guaranteed that the answer always exists
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\GaussianElimination.cpp
+// adjust this value as needed
+// input: N, Augmented Matrix Aug, output: Column vector X, the answer
+// the forward elimination phase
+// which row has largest column value
+// remember this row l
+// swap this pivot row, reason: minimize floating point error
+// t is a temporary double variable
+// the actual forward elimination phase
+// the back substitution phase
+// start from back
+// the answer is here
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\LCA.cpp
+// backtrack to current node
+// we assume that the root is at index 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\SparseTable.cpp
+// adjust this value as needed
+// 2^14 = 16384 > 10000, adjust this value as needed
+// Range Minimum Query
+// constructor as well as pre-processing routine
+// speed up powers of 2 and logarithmic computations
+// initialization
+// RMQ of sub array [j..j]
+// the two nested loops below have overall time complexity = O(n log n)
+// for each i s.t. 2^i <= n, O(log n)
+// for each valid j, O(n)
+// covers [j..j+2^i-1]
+// covers [j+(1<<(i-1))..j+(1<<i)]
+// 2^k <= (j-i+1)
+// covers [i..i+2^k-1]
+// covers [j-2^k+1..j]
+// printf("%k = %d, i = %d, modj = %d, x = %d, y = %d\n", k, i, j-P2[k]+1, x, y);
+// same example as in chapter 2: segment tree
+// for (int i = 0; i < n; i++)
+//   for (int j = i; j < n; j++)
+//     printf("RMQ(%d, %d) = %d\n", i, j, rmq.query(i, j));
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\UVa10181.cpp
+// 15-Puzzle Problem with IDA*
+// ROW_SIZE is a matrix of 4 x 4
+// E,N,W,S
+// R,U,L,D
+// heuristic: sum of Manhattan distances (compute all)
+// Manhattan distance
+// heuristic: sum of manhattan distances (compute delta)
+// transform 16 numbers into 64 bits, exactly into ULL
+// move left 4 bits
+// add this digit (max 15 or 1111)
+// not pure backtracking... this is to prevent cycling
+// not good
+// mark this as visited
+// swap first
+// if ok, no need to restore, just go ahead
+// restore
+// next limit
+// nlim > lim
+// pruning condition in the problem
+// change to X (15)
+// remember the index
+// use 0-based indexing
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\UVa11616.cpp
+// Roman Numerals
+// from large to small
+// check next char first
+// by definition
+// skip this char
+// UVa 11616 will be trivial with AtoR and RtoA methods above
+// char str[1000];
+// while (gets(str) != NULL) {
+//   if (isdigit(str[0])) AtoR(atoi(str));       // Arabic to Roman Numerals
+//   else                 RtoA(str);             // Roman to Arabic Numerals
+// }
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\UVa11817.cpp
+// Tunnelling the Earth
+// in meters
+// 3D version

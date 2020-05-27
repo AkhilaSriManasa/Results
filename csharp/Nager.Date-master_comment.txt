@@ -1,0 +1,3291 @@
+﻿/// <summary>
+/// Supported Country Codes (ISO 3166-1 ALPHA-2)
+/// </summary>
+/// <summary>
+/// Andorra
+/// </summary>
+/// <summary>
+/// United Arab Emirates
+/// </summary>
+/// <summary>
+/// Afghanistan
+/// </summary>
+/// <summary>
+/// Antigua and Barbuda
+/// </summary>
+/// <summary>
+/// Anguilla
+/// </summary>
+/// <summary>
+/// Albania
+/// </summary>
+/// <summary>
+/// Armenia
+/// </summary>
+/// <summary>
+/// Angola
+/// </summary>
+/// <summary>
+/// Antarctica
+/// </summary>
+/// <summary>
+/// Argentina
+/// </summary>
+/// <summary>
+/// American Samoa
+/// </summary>
+/// <summary>
+/// Austria
+/// </summary>
+/// <summary>
+/// Australia
+/// </summary>
+/// <summary>
+/// Aruba
+/// </summary>
+/// <summary>
+/// Åland Islands
+/// </summary>
+/// <summary>
+/// Azerbaijan
+/// </summary>
+/// <summary>
+/// Bosnia and Herzegovina
+/// </summary>
+/// <summary>
+/// Barbados
+/// </summary>
+/// <summary>
+/// Bangladesh
+/// </summary>
+/// <summary>
+/// Belgium
+/// </summary>
+/// <summary>
+/// Burkina Faso
+/// </summary>
+/// <summary>
+/// Bulgaria
+/// </summary>
+/// <summary>
+/// Bahrain
+/// </summary>
+/// <summary>
+/// Burundi
+/// </summary>
+/// <summary>
+/// Benin
+/// </summary>
+/// <summary>
+/// Saint Barthélemy
+/// </summary>
+/// <summary>
+/// Bermuda
+/// </summary>
+/// <summary>
+/// Brunei Darussalam
+/// </summary>
+/// <summary>
+/// Bolivia (Plurinational State of)
+/// </summary>
+/// <summary>
+/// Bonaire, Sint Eustatius and Saba
+/// </summary>
+/// <summary>
+/// Brazil
+/// </summary>
+/// <summary>
+/// Bahamas
+/// </summary>
+/// <summary>
+/// Bhutan
+/// </summary>
+/// <summary>
+/// Bouvet Island
+/// </summary>
+/// <summary>
+/// Botswana
+/// </summary>
+/// <summary>
+/// Belarus
+/// </summary>
+/// <summary>
+/// Belize
+/// </summary>
+/// <summary>
+/// Canada
+/// </summary>
+/// <summary>
+/// Cocos (Keeling) Islands
+/// </summary>
+/// <summary>
+/// Congo (Democratic Republic of the)
+/// </summary>
+/// <summary>
+/// Central African Republic
+/// </summary>
+/// <summary>
+/// Congo
+/// </summary>
+/// <summary>
+/// Switzerland
+/// </summary>
+/// <summary>
+/// Côte d'Ivoire
+/// </summary>
+/// <summary>
+/// Cook Islands
+/// </summary>
+/// <summary>
+/// Chile
+/// </summary>
+/// <summary>
+/// Cameroon
+/// </summary>
+/// <summary>
+/// China
+/// </summary>
+/// <summary>
+/// Colombia
+/// </summary>
+/// <summary>
+/// Costa Rica
+/// </summary>
+/// <summary>
+/// Cuba
+/// </summary>
+/// <summary>
+/// Cabo Verde
+/// </summary>
+/// <summary>
+/// Curaçao
+/// </summary>
+/// <summary>
+/// Christmas Island
+/// </summary>
+/// <summary>
+/// Cyprus
+/// </summary>
+/// <summary>
+/// Czech Republic
+/// </summary>
+/// <summary>
+/// Germany
+/// </summary>
+/// <summary>
+/// Djibouti
+/// </summary>
+/// <summary>
+/// Denmark
+/// </summary>
+/// <summary>
+/// Dominica
+/// </summary>
+/// <summary>
+/// Dominican Republic
+/// </summary>
+/// <summary>
+/// Algeria
+/// </summary>
+/// <summary>
+/// Ecuador
+/// </summary>
+/// <summary>
+/// Estonia
+/// </summary>
+/// <summary>
+/// Egypt
+/// </summary>
+/// <summary>
+/// Western Sahara
+/// </summary>
+/// <summary>
+/// Eritrea
+/// </summary>
+/// <summary>
+/// Spain
+/// </summary>
+/// <summary>
+/// Ethiopia
+/// </summary>
+/// <summary>
+/// Finland
+/// </summary>
+/// <summary>
+/// Fiji
+/// </summary>
+/// <summary>
+/// Falkland Islands (Malvinas)
+/// </summary>
+/// <summary>
+/// Micronesia (Federated States of)
+/// </summary>
+/// <summary>
+/// Faroe Islands
+/// </summary>
+/// <summary>
+/// France
+/// </summary>
+/// <summary>
+/// Gabon
+/// </summary>
+/// <summary>
+/// United Kingdom of Great Britain and Northern Ireland
+/// </summary>
+/// <summary>
+/// Grenada
+/// </summary>
+/// <summary>
+/// Georgia
+/// </summary>
+/// <summary>
+/// French Guiana
+/// </summary>
+/// <summary>
+/// Guernsey
+/// </summary>
+/// <summary>
+/// Ghana
+/// </summary>
+/// <summary>
+/// Gibraltar
+/// </summary>
+/// <summary>
+/// Greenland
+/// </summary>
+/// <summary>
+/// Gambia
+/// </summary>
+/// <summary>
+/// Guinea
+/// </summary>
+/// <summary>
+/// Guadeloupe
+/// </summary>
+/// <summary>
+/// Equatorial Guinea
+/// </summary>
+/// <summary>
+/// Greece
+/// </summary>
+/// <summary>
+/// South Georgia and the South Sandwich Islands
+/// </summary>
+/// <summary>
+/// Guatemala
+/// </summary>
+/// <summary>
+/// Guam
+/// </summary>
+/// <summary>
+/// Guinea-Bissau
+/// </summary>
+/// <summary>
+/// Guyana
+/// </summary>
+/// <summary>
+/// Hong Kong
+/// </summary>
+/// <summary>
+/// Heard Island and McDonald Islands
+/// </summary>
+/// <summary>
+/// Honduras
+/// </summary>
+/// <summary>
+/// Croatia
+/// </summary>
+/// <summary>
+/// Haiti
+/// </summary>
+/// <summary>
+/// Hungary
+/// </summary>
+/// <summary>
+/// Indonesia
+/// </summary>
+/// <summary>
+/// Ireland
+/// </summary>
+/// <summary>
+/// Israel
+/// </summary>
+/// <summary>
+/// Isle of Man
+/// </summary>
+/// <summary>
+/// India
+/// </summary>
+/// <summary>
+/// British Indian Ocean Territory
+/// </summary>
+/// <summary>
+/// Iraq
+/// </summary>
+/// <summary>
+/// Iran (Islamic Republic of)
+/// </summary>
+/// <summary>
+/// Iceland
+/// </summary>
+/// <summary>
+/// Italy
+/// </summary>
+/// <summary>
+/// Jersey
+/// </summary>
+/// <summary>
+/// Jamaica
+/// </summary>
+/// <summary>
+/// Jordan
+/// </summary>
+/// <summary>
+/// Japan
+/// </summary>
+/// <summary>
+/// Kenya
+/// </summary>
+/// <summary>
+/// Kyrgyzstan
+/// </summary>
+/// <summary>
+/// Cambodia
+/// </summary>
+/// <summary>
+/// Kiribati
+/// </summary>
+/// <summary>
+/// Comoros
+/// </summary>
+/// <summary>
+/// Saint Kitts and Nevis
+/// </summary>
+/// <summary>
+/// North Korea
+/// </summary>
+/// <summary>
+/// South Korea
+/// </summary>
+/// <summary>
+/// Kuwait
+/// </summary>
+/// <summary>
+/// Cayman Islands
+/// </summary>
+/// <summary>
+/// Kazakhstan
+/// </summary>
+/// <summary>
+/// Laos
+/// </summary>
+/// <summary>
+/// Lebanon
+/// </summary>
+/// <summary>
+/// Saint Lucia
+/// </summary>
+/// <summary>
+/// Liechtenstein
+/// </summary>
+/// <summary>
+/// Sri Lanka
+/// </summary>
+/// <summary>
+/// Liberia
+/// </summary>
+/// <summary>
+/// Lesotho
+/// </summary>
+/// <summary>
+/// Lithuania
+/// </summary>
+/// <summary>
+/// Luxembourg
+/// </summary>
+/// <summary>
+/// Latvia
+/// </summary>
+/// <summary>
+/// Libya
+/// </summary>
+/// <summary>
+/// Morocco
+/// </summary>
+/// <summary>
+/// Monaco
+/// </summary>
+/// <summary>
+/// Moldova (Republic of)
+/// </summary>
+/// <summary>
+/// Montenegro
+/// </summary>
+/// <summary>
+/// Saint Martin (French part)
+/// </summary>
+/// <summary>
+/// Madagascar
+/// </summary>
+/// <summary>
+/// Marshall Islands
+/// </summary>
+/// <summary>
+/// Macedonia (the former Yugoslav Republic of)
+/// </summary>
+/// <summary>
+/// Mali
+/// </summary>
+/// <summary>
+/// Myanmar
+/// </summary>
+/// <summary>
+/// Mongolia
+/// </summary>
+/// <summary>
+/// Macao
+/// </summary>
+/// <summary>
+/// Northern Mariana Islands
+/// </summary>
+/// <summary>
+/// Martinique
+/// </summary>
+/// <summary>
+/// Mauritania
+/// </summary>
+/// <summary>
+/// Montserrat
+/// </summary>
+/// <summary>
+/// Malta
+/// </summary>
+/// <summary>
+/// Mauritius
+/// </summary>
+/// <summary>
+/// Maldives
+/// </summary>
+/// <summary>
+/// Malawi
+/// </summary>
+/// <summary>
+/// Mexico
+/// </summary>
+/// <summary>
+/// Malaysia
+/// </summary>
+/// <summary>
+/// Mozambique
+/// </summary>
+/// <summary>
+/// Namibia
+/// </summary>
+/// <summary>
+/// New Caledonia
+/// </summary>
+/// <summary>
+/// Niger
+/// </summary>
+/// <summary>
+/// Norfolk Island
+/// </summary>
+/// <summary>
+/// Nigeria
+/// </summary>
+/// <summary>
+/// Nicaragua
+/// </summary>
+/// <summary>
+/// Netherlands
+/// </summary>
+/// <summary>
+/// Norway
+/// </summary>
+/// <summary>
+/// Nepal
+/// </summary>
+/// <summary>
+/// Nauru
+/// </summary>
+/// <summary>
+/// Niue
+/// </summary>
+/// <summary>
+/// New Zealand
+/// </summary>
+/// <summary>
+/// Oman
+/// </summary>
+/// <summary>
+/// Panama
+/// </summary>
+/// <summary>
+/// Peru
+/// </summary>
+/// <summary>
+/// French Polynesia
+/// </summary>
+/// <summary>
+/// Papua New Guinea
+/// </summary>
+/// <summary>
+/// Philippines
+/// </summary>
+/// <summary>
+/// Pakistan
+/// </summary>
+/// <summary>
+/// Poland
+/// </summary>
+/// <summary>
+/// Saint Pierre and Miquelon
+/// </summary>
+/// <summary>
+/// Pitcairn
+/// </summary>
+/// <summary>
+/// Puerto Rico
+/// </summary>
+/// <summary>
+/// Palestine, State of
+/// </summary>
+/// <summary>
+/// Portugal
+/// </summary>
+/// <summary>
+/// Palau
+/// </summary>
+/// <summary>
+/// Paraguay
+/// </summary>
+/// <summary>
+/// Qatar
+/// </summary>
+/// <summary>
+/// Réunion
+/// </summary>
+/// <summary>
+/// Romania
+/// </summary>
+/// <summary>
+/// Serbia
+/// </summary>
+/// <summary>
+/// Russian Federation
+/// </summary>
+/// <summary>
+/// Rwanda
+/// </summary>
+/// <summary>
+/// Saudi Arabia
+/// </summary>
+/// <summary>
+/// Solomon Islands
+/// </summary>
+/// <summary>
+/// Seychelles
+/// </summary>
+/// <summary>
+/// Sudan
+/// </summary>
+/// <summary>
+/// Sweden
+/// </summary>
+/// <summary>
+/// Singapore
+/// </summary>
+/// <summary>
+/// Saint Helena, Ascension and Tristan da Cunha
+/// </summary>
+/// <summary>
+/// Slovenia
+/// </summary>
+/// <summary>
+/// Svalbard and Jan Mayen
+/// </summary>
+/// <summary>
+/// Slovakia
+/// </summary>
+/// <summary>
+/// Sierra Leone
+/// </summary>
+/// <summary>
+/// San Marino
+/// </summary>
+/// <summary>
+/// Senegal
+/// </summary>
+/// <summary>
+/// Somalia
+/// </summary>
+/// <summary>
+/// Suriname
+/// </summary>
+/// <summary>
+/// South Sudan
+/// </summary>
+/// <summary>
+/// Sao Tome and Principe
+/// </summary>
+/// <summary>
+/// El Salvador
+/// </summary>
+/// <summary>
+/// Sint Maarten (Dutch part)
+/// </summary>
+/// <summary>
+/// Syrian Arab Republic
+/// </summary>
+/// <summary>
+/// Swaziland
+/// </summary>
+/// <summary>
+/// Turks and Caicos Islands
+/// </summary>
+/// <summary>
+/// Chad
+/// </summary>
+/// <summary>
+/// French Southern Territories
+/// </summary>
+/// <summary>
+/// Togo
+/// </summary>
+/// <summary>
+/// Thailand
+/// </summary>
+/// <summary>
+/// Tajikistan
+/// </summary>
+/// <summary>
+/// Tokelau
+/// </summary>
+/// <summary>
+/// East Timor
+/// </summary>
+/// <summary>
+/// Turkmenistan
+/// </summary>
+/// <summary>
+/// Tunisia
+/// </summary>
+/// <summary>
+/// Tonga
+/// </summary>
+/// <summary>
+/// Turkey
+/// </summary>
+/// <summary>
+/// Trinidad and Tobago
+/// </summary>
+/// <summary>
+/// Tuvalu
+/// </summary>
+/// <summary>
+/// Taiwan, Province of China[a]
+/// </summary>
+/// <summary>
+/// Tanzania, United Republic of
+/// </summary>
+/// <summary>
+/// Ukraine
+/// </summary>
+/// <summary>
+/// Uganda
+/// </summary>
+/// <summary>
+/// United States Minor Outlying Islands
+/// </summary>
+/// <summary>
+/// United States of America
+/// </summary>
+/// <summary>
+/// Uruguay
+/// </summary>
+/// <summary>
+/// Uzbekistan
+/// </summary>
+/// <summary>
+/// Vatican City Holy See
+/// </summary>
+/// <summary>
+/// Saint Vincent and the Grenadines
+/// </summary>
+/// <summary>
+/// Venezuela (Bolivarian Republic of)
+/// </summary>
+/// <summary>
+/// Virgin Islands (British)
+/// </summary>
+/// <summary>
+/// Virgin Islands (U.S.)
+/// </summary>
+/// <summary>
+/// Viet Nam
+/// </summary>
+/// <summary>
+/// Vanuatu
+/// </summary>
+/// <summary>
+/// Wallis and Futuna
+/// </summary>
+/// <summary>
+/// Samoa
+/// </summary>
+/// <summary>
+/// Kosovo
+/// </summary>
+/// <summary>
+/// Yemen
+/// </summary>
+/// <summary>
+/// Mayotte
+/// </summary>
+/// <summary>
+/// South Africa
+/// </summary>
+/// <summary>
+/// Zambia
+/// </summary>
+/// <summary>
+/// Zimbabwe
+/// </summary>
+/// <summary>
+/// DateSystem
+/// </summary>
+//Not officially assigned https://www.iso.org/obp/ui/#iso:pub:PUB500001:en
+//{ CountryCode.XK, new KosovoProvider(_orthodoxProvider, _catholicProvider) },
+// https://en.wikipedia.org/wiki/Workweek_and_weekend
+// since 2006 // TODO handle launch dates in weekends
+// { CountryCode.CO, WeekendProvider.SundayOnly }, // No information on in which case it occurs
+// { CountryCode.IN, WeekendProvider.SundayOnly }, // Except for Government offices and IT industry
+// { CountryCode.MY, WeekendProvider.SemiUniversal }, // except in some counties // TODO Add county in weekend handling
+// { CountryCode.PK, WeekendProvider.SemiUniversal }, // only partially, often universal
+/// <summary>
+/// Get Provider
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// GetPublicHolidayProvider
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// GetWeekendProvider
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given year
+/// </summary>
+/// <param name="year">The year</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given year
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given year
+/// </summary>
+/// <param name="year">The year</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given year
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given date range
+/// </summary>
+/// <param name="startDate">The start date</param>
+/// <param name="endDate">The end date</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given date range
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <param name="startDate">The start date</param>
+/// <param name="endDate">The end date</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given date range
+/// </summary>
+/// <param name="startDate">The start date</param>
+/// <param name="endDate">The end date</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holidays of a given date range
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <param name="startDate">The start date</param>
+/// <param name="endDate">The end date</param>
+/// <returns></returns>
+/// <summary>
+/// Get Worldwide Public Holidays of a given date range
+/// </summary>
+/// <param name="startDate">The start date</param>
+/// <param name="endDate">The end date</param>
+/// <returns></returns>
+/// <summary>
+/// Check is a given date a Public Holiday
+/// </summary>
+/// <param name="date">The date</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Check is a given date a Public Holiday
+/// </summary>
+/// <param name="date">The date</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <param name="publicHolidays">if available the public holidays on this date</param>
+/// <returns></returns>
+/// <summary>
+/// Check is a given date an Official Public Holiday
+/// </summary>
+/// <param name="date">The date to check</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <param name="countyCode">Federal state</param>
+/// <returns></returns>
+/// <summary>
+/// Check is a give date in the Weekend
+/// </summary>
+/// <param name="date">The date to check</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Find the latest weekday for example monday in a month
+/// </summary>
+/// <param name="year">The year</param>
+/// <param name="month">The month</param>
+/// <param name="day">The name of the day</param>
+/// <returns></returns>
+/// <summary>
+/// Find the next weekday for example monday from a specific date
+/// </summary>
+/// <param name="year">The year</param>
+/// <param name="month">The month</param>
+/// <param name="day">The day</param>
+/// <param name="dayOfWeek">The name of the day</param>
+/// <returns></returns>
+/// <summary>
+/// Find the next weekday for example monday from a specific date
+/// </summary>
+/// <param name="date">The search date</param>
+/// <param name="dayOfWeek">The name of the day</param>
+/// <returns></returns>
+/// <summary>
+/// Find a day between two dates
+/// </summary>
+/// <param name="yearStart">The start year</param>
+/// <param name="monthStart">The start month</param>
+/// <param name="dayStart">The start day</param>
+/// <param name="yearEnd">The end year</param>
+/// <param name="monthEnd">The end month</param>
+/// <param name="dayEnd">The end day</param>
+/// <param name="dayOfWeek">The name of the day</param>
+/// <returns></returns>
+/// <summary>
+/// Find a day between two dates
+/// </summary>
+/// <param name="startDate">The start date</param>
+/// <param name="endDate">The end date</param>
+/// <param name="dayOfWeek">The name of the day</param>
+/// <returns></returns>
+/// <summary>
+/// Find the next weekday for example monday before a specific date
+/// </summary>
+/// <param name="year">The year</param>
+/// <param name="month">The month</param>
+/// <param name="day">The day</param>
+/// <param name="dayOfWeek">The name of the day</param>
+/// <returns></returns>
+/// <summary>
+/// Find the next weekday for example monday before a specific date
+/// </summary>
+/// <param name="date">The date where the search starts</param>
+/// <param name="dayOfWeek">The name of the day</param>
+/// <returns></returns>
+/// <summary>
+/// Find for example the 3th monday in a month
+/// </summary>
+/// <param name="year">The year</param>
+/// <param name="month">The month</param>
+/// <param name="day">The day</param>
+/// <param name="occurrence"></param>
+/// <returns></returns>
+//Substract first day of the month with the required day of the week
+//if it is less than zero we need to get the next week day (add 7 days)
+//DayOfWeek is zero index based; multiply by the Occurance to get the day
+/// <summary>
+/// Get the age of a person from a given date
+/// </summary>
+/// <param name="birthdate">The birthdate</param>
+/// <returns></returns>
+/// <summary>
+/// Get long weekends of a country and a given year
+/// </summary>
+/// <param name="year">The year</param>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <returns></returns>
+/// <summary>
+/// Get long weekends of a country and a given year
+/// </summary>
+/// <param name="countryCode">Country Code (ISO 3166-1 ALPHA-2)</param>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Catholic
+/// </summary>
+/// <summary>
+/// Get Catholic easter for requested year
+/// </summary>
+/// <param name="year"></param>
+/// <returns></returns>
+//http://stackoverflow.com/questions/2510383/how-can-i-calculate-what-date-good-friday-falls-on-given-a-year
+/// <summary>
+/// Get advent sunday for requested year
+/// </summary>
+/// <param name="year"></param>
+/// <returns></returns>
+/// <summary>
+/// Catholic
+/// </summary>
+/// <summary>
+/// ILongWeekendCalculator
+/// </summary>
+/// <summary>
+/// Calculate Long weekends
+/// </summary>
+/// <param name="publicHolidays"></param>
+/// <returns></returns>
+/// <summary>
+/// Orthodox
+/// </summary>
+/// <summary>
+/// Public Holiday Provider Interface
+/// </summary>
+/// <summary>
+/// Get Holidays of the given year
+/// </summary>
+/// <param name="year"></param>
+/// <returns></returns>
+/// <summary>
+///Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// IWeekendProvider
+/// </summary>
+/// <summary>
+/// Get weekend days
+/// </summary>
+/// <summary>
+/// Is given date in the weekend
+/// </summary>
+/// <param name="date"></param>
+/// <returns></returns>
+/// <summary>
+/// Is given public holiday in the weekend
+/// </summary>
+/// <param name="publicHoliday"></param>
+/// <returns></returns>
+/// <summary>
+/// Is given day in the weekend
+/// </summary>
+/// <param name="dayOfWeek"></param>
+/// <returns></returns>
+/// <summary>
+/// Get first weekend day
+/// </summary>
+/// <summary>
+/// get last weekend day
+/// </summary>
+/// <summary>
+/// LongWeekendCalculator
+/// </summary>
+/// <summary>
+/// LongWeekendCalculator
+/// </summary>
+/// <param name="weekendProvider"></param>
+/// <summary>
+/// Calculate long weekends
+/// </summary>
+/// <param name="publicHolidays"></param>
+/// <returns></returns>
+//Maximum one bridge day
+//Bridge day loop
+//First loop, activate bridge day jump
+/// <summary>
+/// Orthodox
+/// </summary>
+/// <summary>
+/// Get Orthodox easter for requested year
+/// </summary>
+/// <param name="year"></param>
+/// <returns></returns>
+/// <summary>
+/// LongWeekend
+/// The best long weekends  
+/// </summary>
+/// <summary>
+/// Start date
+/// </summary>
+/// <summary>
+/// End date
+/// </summary>
+/// <summary>
+/// Count of days
+/// </summary>
+/// <summary>
+/// If a additional holiday needed
+/// </summary>
+/// <summary>
+/// ToString
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Public Holiday
+/// </summary>
+/// <summary>
+/// The date
+/// </summary>
+/// <summary>
+/// Local name
+/// </summary>
+/// <summary>
+/// English name
+/// </summary>
+/// <summary>
+/// ISO 3166-1 alpha-2
+/// </summary>
+/// <summary>
+/// Is this public holiday every year on the same date
+/// </summary>
+/// <summary>
+/// Is this public holiday in every county (federal state)
+/// </summary>
+/// <summary>
+/// ISO-3166-2 - Federal states
+/// </summary>
+/// <summary>
+/// A list of types the public holiday it is valid
+/// </summary>
+/// <summary>
+/// The launch year of the public holiday
+/// </summary>
+/// <summary>
+/// Add Public Holiday (fixed is true)
+/// </summary>
+/// <param name="year"></param>
+/// <param name="month"></param>
+/// <param name="day"></param>
+/// <param name="localName"></param>
+/// <param name="englishName"></param>
+/// <param name="countryCode">ISO 3166-1 ALPHA-2</param>
+/// <param name="launchYear"></param>
+/// <param name="counties">ISO-3166-2</param>
+/// <param name="type">The type of the public holiday</param>
+/// <summary>
+/// Add Public Holiday (fixed is false)
+/// </summary>
+/// <param name="date"></param>
+/// <param name="localName"></param>
+/// <param name="englishName"></param>
+/// <param name="countryCode">ISO 3166-1 ALPHA-2</param>
+/// <param name="launchYear"></param>
+/// <param name="counties">ISO-3166-2</param>
+/// /// <param name="type">The type of the public holiday</param>
+/// <summary>
+/// The type of a public holiday
+/// </summary>
+/// <summary>
+/// Public holiday
+/// </summary>
+/// <summary>
+/// Bank holiday, banks and offices are closed
+/// </summary>
+/// <summary>
+/// School holiday, schools are closed
+/// </summary>
+/// <summary>
+/// Authorities are closed
+/// </summary>
+/// <summary>
+/// Majority of people take a day off
+/// </summary>
+/// <summary>
+/// Optional festivity, no paid day off
+/// </summary>
+/// <summary>
+/// //Åland
+/// </summary>
+/// <summary>
+/// AlandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//de.wikipedia.org/wiki/%C3%85land"
+/// <summary>
+/// Albania
+/// </summary>
+/// <summary>
+/// AlbaniaProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//Catholic Easter is not implemented
+//Orthodox easter and monday
+//Eid ul-Fitr is not implemented
+//Eid ul-Adha is not implemented
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Albania"
+/// <summary>
+/// Andorra
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Andorra"
+/// <summary>
+/// Argentina
+/// </summary>
+/// <summary>
+/// ArgentinaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Argentina"
+/// <summary>
+/// Australia
+/// </summary>
+/// <summary>
+/// AustraliaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// GetCounties
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Australia"
+/// <summary>
+/// Austria
+/// </summary>
+/// <summary>
+/// AustriaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// GetCounties
+/// </summary>
+/// <returns></returns>
+//Burgenland
+//Carinthia
+//Lower Austria
+//Upper Austria
+//Salzburg
+//Styria
+//Tyrol
+//Vorarlberg
+//Vienna
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//items.Add(new PublicHoliday(year, 3, 19, "St. Josef", "Saint Joseph's Day", countryCode, type: PublicHolidayType.Authorities | PublicHolidayType.School, counties: new string[] { "AT-2", "AT-6", "AT-7", "AT-8" }));
+//items.Add(new PublicHoliday(year, 5, 1, "St. Florian", "Saint Florian", countryCode, type: PublicHolidayType.School, counties: new string[] { "AT-4" }));
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Austria"
+/// <summary>
+/// Bahamas
+/// </summary>
+/// <summary>
+/// BahamasProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Bahamas"
+/// <summary>
+/// Barbados
+/// </summary>
+/// <summary>
+/// BarbadosProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Barbados"
+/// <summary>
+/// Belarus
+/// </summary>
+/// <summary>
+/// BelarusProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Belarus"
+/// <summary>
+/// Belgium
+/// </summary>
+/// <summary>
+/// BelgiumProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Belgium"
+/// <summary>
+/// Belize
+/// </summary>
+/// <summary>
+/// BelizeProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Belize"
+/// <summary>
+/// Benin
+/// </summary>
+/// <summary>
+/// BeninProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add islamic public holidays
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Benin"
+/// <summary>
+/// Bolivia
+/// </summary>
+/// <summary>
+/// BoliviaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Bolivia"
+/// <summary>
+/// Botswana
+/// </summary>
+/// <summary>
+/// BotswanaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Botswana"
+/// <summary>
+/// Brazil
+/// </summary>
+/// <summary>
+/// BrazilProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+// official holidays (fixed dates)
+// non fixed days (Easter, Carnival, Passion of Jesus and Corpus Christi)
+// TODO non-official holidays
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Brazil",
+//pt.wikipedia.org/wiki/Feriados_no_Brasil"
+/// <summary>
+/// Bulgaria
+/// </summary>
+/// <summary>
+/// BulgariaProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Bulgaria",
+/// <summary>
+/// Canada
+/// </summary>
+/// <summary>
+/// CanadaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// GetCounties
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//Canada Day is on July 1 every year except when it falls on a Sunday, then it’s on July 2.
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Canada",
+/// <summary>
+/// Chile
+/// </summary>
+/// <summary>
+/// ChileProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// GetCounties
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//Census
+//Presidential and Congress Primary Elections
+//items.Add(new PublicHoliday(year, 8, 20, "Nacimiento del Prócer de la Independencia", "Nativity of Liberator Bernardo O'Higgins", countryCode)); //Only Valid in a communes
+//Presidential election, runoff
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Chile",
+/// <summary>
+/// China
+/// </summary>
+/// <summary>
+/// ChinaProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Provider incomplete
+//Tomb-Sweeping-Day is invalid (5th solar term)
+//LunisolarCalendar .net implementation only valid are between 1901 and 2100, inclusive.
+//https://github.com/dotnet/coreclr/blob/master/src/mscorlib/shared/System/Globalization/ChineseLunisolarCalendar.cs
+//TODO: Date is not fixed, calculate from 5th solar term
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_China",
+/// <summary>
+/// Colombia
+/// </summary>
+/// <summary>
+/// ColombiaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Check, movable holiday: when they do not fall on a Monday, these holidays are observed the following Monday.
+//TODO: Check weekends in Colombia as they can be Universal or only sundays (in which case? how to handle that?)
+//https://en.wikipedia.org/wiki/Workweek_and_weekend#Colombia
+//TODO: Valid only for the city of Barranquilla
+//TODO: Valid only for the city of Barranquilla
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Colombia",
+/// <summary>
+/// Costa Rica
+/// </summary>
+/// <summary>
+/// CostaRicaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Costa_Rica",
+/// <summary>
+/// Croatia
+/// </summary>
+/// <summary>
+/// CroatiaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Croatia",
+/// <summary>
+/// Cuba
+/// </summary>
+/// <summary>
+/// CubaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Cuba",
+/// <summary>
+/// Cyprus
+/// </summary>
+/// <summary>
+/// CyprusProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//Holy Saturday??            
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Cyprus",
+/// <summary>
+/// Czech Republic
+/// </summary>
+/// <summary>
+/// CzechRepublicProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Czech_Republic",
+/// <summary>
+/// Denmark
+/// </summary>
+/// <summary>
+/// DenmarkProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Denmark",
+/// <summary>
+/// Dominican Republic
+/// </summary>
+/// <summary>
+/// DominicanRepublicProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Dominican_Republic",
+/// <summary>
+/// Ecuador
+/// </summary>
+/// <summary>
+/// EcuadorProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Ecuador",
+/// <summary>
+/// Egypt
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add Islamic calender logic
+//Sham El Nessim (Spring Festival)
+//Islamic New Year
+//Birthday of the Prophet Muhammad (Sunni)
+//Eid al-Fitr
+//Eid al-Adha
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Egypt",
+/// <summary>
+/// El Salvador
+/// </summary>
+/// <summary>
+/// ElSalvadorProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add Holy Week / Easter bad documentation on wikipedia
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/El_Salvador#Public_holidays",
+/// <summary>
+/// Estonia
+/// </summary>
+/// <summary>
+/// EstoniaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Estonia",
+/// <summary>
+/// Faroe Islands, adaptation of DenmarkProvider
+/// </summary>
+/// <summary>
+/// FaroeIslandsProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Faroe_Islands",
+/// <summary>
+/// Finland
+/// </summary>
+/// <summary>
+/// FinlandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Finland",
+/// <summary>
+/// France
+/// </summary>
+/// <summary>
+/// FranceProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_France",
+//en.wikipedia.org/wiki/ISO_3166-2:FR",
+/// <summary>
+/// Gabon
+/// </summary>
+/// <summary>
+/// GabonProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//items.Add(new PublicHoliday(year, 8, 8, "Eid al-Fitr", "End of Ramadan", countryCode));
+//items.Add(new PublicHoliday(year, 10, 15, "Eid al-Adha", "Feast of the Sacrifice", countryCode));
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Gabon",
+/// <summary>
+/// Gambia
+/// </summary>
+/// <summary>
+/// GambiaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add islamic public holidays
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Gambia",
+/// <summary>
+/// Germany
+/// </summary>
+/// <summary>
+/// GermanyProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// GetCounties
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//In commemoration of the 500th anniversary of the beginning of the Reformation, it was unique as a whole German holiday
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//de.wikipedia.org/wiki/Gesetzliche_Feiertage_in_Deutschland",
+/// <summary>
+/// Greece
+/// </summary>
+/// <summary>
+/// GreeceProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Greece",
+/// <summary>
+/// Greenland
+/// </summary>
+/// <summary>
+/// GreenlandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Greenland",
+/// <summary>
+/// Grenada
+/// </summary>
+/// <summary>
+/// GrenadaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Grenada",
+/// <summary>
+/// Guatemala
+/// </summary>
+/// <summary>
+/// GuatemalaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Guatemala",
+/// <summary>
+/// Guyana
+/// </summary>
+/// <summary>
+/// GuyanaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO:Phagwah ??? (Hindu calendar)
+//TODO:Deepavali ??? (Hindu calendar)
+//TODO:Youman-Nabi ??? (Muslim holidays)
+//TODO:Eid-ul-Adha ??? (Muslim holidays)
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Guyana",
+/// <summary>
+/// Haiti
+/// </summary>
+/// <summary>
+/// HaitiProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Haiti",
+/// <summary>
+/// Honduras
+/// </summary>
+/// <summary>
+/// HondurasProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Honduras",
+/// <summary>
+/// Hungary
+/// </summary>
+/// <summary>
+/// HungaryProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Hungary",
+/// <summary>
+/// Iceland
+/// </summary>
+/// <summary>
+/// IcelandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Iceland",
+/// <summary>
+/// Indonesia
+/// </summary>
+/// <summary>
+/// IndonesiaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add chinise calendar
+//TODO: Add Balinese Saka calendar support
+//TODO: Add islamic calendar support
+//TODO: Add Buddhist calendar
+//Add Chinese New Year (Tahun Baru Imlek)
+//Add Day of Silence (Hari Raya Nyepi-Tahun Baru Saka)
+//Add Ascension of the Prophet (Isra Mi'raj Nabi Muhammad)
+//Add Eid al-Fitr (Hari Raya Idul Fitri)
+//Add Feast of the Sacrifice (Hari Raya Idul Adha)
+//Add Islamic New Year (Tahun Baru Islam 1440 Hijriah)
+//Add Birth of the Prophet (Maulid Nabi Muhammad)
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Indonesia",
+/// <summary>
+/// Ireland
+/// </summary>
+/// <summary>
+/// IrelandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Republic_of_Ireland",
+/// <summary>
+/// Isle of Man
+/// </summary>
+/// <summary>
+/// IsleOfManProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Isle_of_Man",
+/// <summary>
+/// Italy
+/// </summary>
+/// <summary>
+/// ItalyProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Italy",
+/// <summary>
+/// Jamaica
+/// </summary>
+/// <summary>
+/// JamaicaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Jamaica",
+//using AASharp;
+/// <summary>
+/// Japan
+/// </summary>
+//private TimeZoneInfo _timeZone;
+/// <summary>
+/// JapanProvider
+/// </summary>
+//TODO: TimeZoneInfo is not available on Android projects
+//https://github.com/tinohager/Nager.Date/issues/123
+//this._timeZone = TimeZoneInfo.FindSystemTimeZoneById("Tokyo Standard Time");
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//items.Add(new PublicHoliday(this.GetVernalEquinox(year), "春分の日", "Vernal Equinox Day", countryCode));
+//items.Add(new PublicHoliday(this.GetAutumnalEquinox(year), "秋分の日", "Autumnal Equinox Day", countryCode));
+//Will change to the date of the new emperor on the death of the current one
+/// <summary>
+/// https://en.wikipedia.org/wiki/Golden_Week_(Japan)
+/// Get the Golden Week for a given year
+/// </summary>
+/// <param name="year"></param>
+//private DateTime GetVernalEquinox(int year)
+//{
+//    long curYear = 0, month = 0, day = 0, hour = 0, minutes = 0;
+//    double seconds = 0;
+//    var date = new AASDate();
+//    var spring = AASEquinoxesAndSolstices.NorthwardEquinox(year, true);
+//    date.Set(spring, true);
+//    date.Get(ref curYear, ref month, ref day, ref hour, ref minutes, ref seconds);
+//    var dt = new DateTime((int)curYear, (int)month, (int)day, (int)hour, (int)minutes, (int)seconds);
+//    var converDt = TimeZoneInfo.ConvertTimeFromUtc(dt, timeZone);
+//    return converDt;
+//}
+//private DateTime GetAutumnalEquinox(int year)
+//{
+//    long curYear = 0, month = 0, day = 0, hour = 0, minutes = 0;
+//    double seconds = 0;
+//    var date = new AASDate();
+//    var spring = AASEquinoxesAndSolstices.SouthwardEquinox(year, true);
+//    date.Set(spring, true);
+//    date.Get(ref curYear, ref month, ref day, ref hour, ref minutes, ref seconds);
+//    var dt = new DateTime((int)curYear, (int)month, (int)day, (int)hour, (int)minutes, (int)seconds);
+//    var converDt = TimeZoneInfo.ConvertTimeFromUtc(dt, timeZone);
+//    return converDt;
+//}
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Japan",
+//en.wikipedia.org/wiki/Golden_Week_(Japan)",
+//www.boj.or.jp/en/about/outline/holi.htm/"
+/// <summary>
+/// Jersey
+/// </summary>
+/// <summary>
+/// JerseyProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Jersey"
+//using Nager.Date.Contract;
+//using Nager.Date.Model;
+//using System.Collections.Generic;
+//using System.Linq;
+//namespace Nager.Date.PublicHolidays
+//{
+//    /// <summary>
+//    /// Kosovo
+//    /// https://en.wikipedia.org/wiki/Public_holidays_in_Kosovo
+//    /// </summary>
+//    public class KosovoProvider : IPublicHolidayProvider
+//    {
+//        private readonly IOrthodoxProvider _orthodoxProvider;
+//        private readonly ICatholicProvider _catholicProvider;
+//        /// <summary>
+//        /// KosovoProvider
+//        /// </summary>
+//        /// <param name="orthodoxProvider"></param>
+//        /// <param name="catholicProvider"></param>
+//        public KosovoProvider(IOrthodoxProvider orthodoxProvider, ICatholicProvider catholicProvider)
+//        {
+//            this._orthodoxProvider = orthodoxProvider;
+//            this._catholicProvider = catholicProvider;
+//        }
+//        /// <summary>
+//        /// Get
+//        /// </summary>
+//        /// <param name="year">The year</param>
+//        /// <returns></returns>
+//        public IEnumerable<PublicHoliday> Get(int year)
+//        {
+//            var countryCode = CountryCode.XK;
+//            var orthodoxEasterSunday = this._orthodoxProvider.EasterSunday(year);
+//            var catholicEasterSunday = this._catholicProvider.EasterSunday(year);
+//            var items = new List<PublicHoliday>();
+//            items.Add(new PublicHoliday(year, 1, 1, "Viti i Ri", "New Year's Day", countryCode));
+//            items.Add(new PublicHoliday(year, 1, 7, "Krishtlindjet Ortodokse", "Orthodox Christmas", countryCode));
+//            items.Add(new PublicHoliday(year, 2, 17, "Dita e Pavarësisë", "Independence Day", countryCode));
+//            items.Add(new PublicHoliday(year, 4, 9, "Dita e Kushtetutës", "Constitution Day", countryCode));
+//            items.Add(new PublicHoliday(catholicEasterSunday, "Pashkët Katolike", "Catholic Easter", countryCode));
+//            items.Add(new PublicHoliday(orthodoxEasterSunday, "Pashkët Ortodokse", "Orthodox Easter", countryCode));
+//            items.Add(new PublicHoliday(year, 5, 1, "Dita Ndërkombëtare e Punës", "International Workers' Day", countryCode));
+//            items.Add(new PublicHoliday(year, 5, 9, "Dita e Evropës", "Europe Day", countryCode));
+//            //TODO:Eid ul-Fitr is not implemented
+//            //TODO:Eid ul-Adha is not implemented
+//            items.Add(new PublicHoliday(year, 12, 25, "Krishtlindjet Katolike", "Catholic Christmas", countryCode));
+//            return items.OrderBy(o => o.Date);
+//        }
+//    }
+//}
+/// <summary>
+/// Latvia
+/// </summary>
+/// <summary>
+/// LatviaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Latvia"
+/// <summary>
+/// Lesotho
+/// </summary>
+/// <summary>
+/// LesothoProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Lesotho"
+/// <summary>
+/// Liechtenstein
+/// </summary>
+/// <summary>
+/// LiechtensteinProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Liechtenstein"
+/// <summary>
+/// Lithuania
+/// </summary>
+/// <summary>
+/// LithuaniaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Lithuania"
+/// <summary>
+/// Luxembourg
+/// </summary>
+/// <summary>
+/// LuxembourgProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Luxembourg"
+/// <summary>
+/// Macedonia
+/// </summary>
+/// <summary>
+/// MacedoniaProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//items.Add(new PublicHoliday(year, ??, ??, "Рамазан Бајрам, Ramazan Bajram", "Eid al-Fitr", countryCode)); //Islamic
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Macedonia"
+/// <summary>
+/// Madagascar
+/// </summary>
+/// <summary>
+/// MadagascarProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Madagascar"
+/// <summary>
+/// Malta
+/// </summary>
+/// <summary>
+/// MaltaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Malta"
+/// <summary>
+/// Mexico 
+/// </summary>
+/// <summary>
+/// MexicoProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//Only Statutory holidays
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Mexico"
+/// <summary>
+/// Moldova
+/// </summary>
+/// <summary>
+/// MoldovaProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//Not a public holiday
+//items.Add(new PublicHoliday(year, 3, 1, "Martisor (first day of spring)", "Martisor (first day of spring)", countryCode, null, null, false));
+//items.Add(new PublicHoliday(year, 6, 1, "Children's Day", "Children's Day", countryCode, null, null, false));
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Moldova"
+/// <summary>
+/// Monaco
+/// </summary>
+/// <summary>
+/// MonacoProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Monaco"
+/// <summary>
+/// Mongoli
+/// </summary>
+/// <summary>
+/// MongoliaProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO:Add lunar calendar support
+//TODO:Add Mongolian calendar support
+//Add Lunar New Year or Tsagaan Sar (Цагаан сар (Tsagaan sar))
+//Add Genghis Khan's birthday (Чингис хааны төрсөн өдөр (Chingis Khaany törsön ödör))
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Mongolia"
+/// <summary>
+/// Morocco
+/// </summary>
+/// <summary>
+/// MoroccoProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO:Islamic calendar
+//Muslim New Year (Fatih Muharram)
+//Birth of the Prophet Muhammad (Eid Al Mawled)
+//Eid ul-Fitr (Eid Sghir)
+//Eid ul-Adha (Eid Kbir)
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Morocco"
+/// <summary>
+/// Mozambique
+/// </summary>
+/// <summary>
+/// MozambiqueProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//List of Provinces
+//https://en.wikipedia.org/wiki/Provinces_of_Mozambique
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Mozambique"
+/// <summary>
+/// Namibia
+/// </summary>
+/// <summary>
+/// NamibiaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Namibia"
+/// <summary>
+/// Netherlands
+/// </summary>
+/// <summary>
+/// NetherlandsProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//in 1990, the day was declared to be a national holiday
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_Netherlands"
+/// <summary>
+/// New Zealand
+/// </summary>
+/// <summary>
+/// NewZealandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_New_Zealand"
+/// <summary>
+/// Nicaragua
+/// </summary>
+/// <summary>
+/// NicaraguaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//Fiesta de Santiago
+//Fiesta de Santa Ana
+//Fiesta de Santo Domingo
+//Crab Soup Day
+//items.Add(new PublicHoliday(year, 12, 7, "Immaculate Conception", "Immaculate Conception", countryCode)); //León
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Nicaragua"
+/// <summary>
+/// Niger
+/// </summary>
+/// <summary>
+/// NigerProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add islamic public holidays
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Niger"
+/// <summary>
+/// NoHolidaysProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Norway
+/// </summary>
+/// <summary>
+/// NorwayProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Norway"
+/// <summary>
+/// Panama
+/// </summary>
+/// <summary>
+/// PanamaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//presidential inauguration (not enough informations)
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Panama"
+/// <summary>
+/// Paraguay
+/// </summary>
+/// <summary>
+/// ParaguayProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Paraguay"
+/// <summary>
+/// Peru
+/// </summary>
+/// <summary>
+/// PeruProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Peru"
+/// <summary>
+/// Poland
+/// </summary>
+/// <summary>
+/// PolandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//100th anniversary
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Poland"
+/// <summary>
+/// Portugal
+/// </summary>
+/// <summary>
+/// PortugalProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// GetCounties
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Portugal",
+//de.wikipedia.org/wiki/ISO_3166-2:PT"
+/// <summary>
+/// Puerto Rico
+/// </summary>
+/// <summary>
+/// PuertoRicoProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Puerto_Rico",
+//www.timeanddate.com/holidays/puerto-rico/2017#!hol=9",
+//www.puertorico.com/official-holidays/",
+//www.topuertorico.org/reference/holi.shtml"
+/// <summary>
+/// Romania
+/// </summary>
+/// <summary>
+/// RomaniaProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Romania"
+/// <summary>
+/// Russia
+/// </summary>
+/// <summary>
+/// RussiaProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Russia"
+/// <summary>
+/// San Marino 
+/// </summary>
+/// <summary>
+/// SanMarinoProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/San_Marino#Public_holidays_and_festivals"
+/// <summary>
+/// Serbia
+/// </summary>
+/// <summary>
+/// SerbiaProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Serbia"
+/// <summary>
+/// Slovakia
+/// </summary>
+/// <summary>
+/// SlovakiaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Slovakia"
+/// <summary>
+/// Slovenia
+/// </summary>
+/// <summary>
+/// SloveniaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//items.Add(new PublicHoliday(year, 6, 8, "dan Primoža Trubarja", "Primož Trubar Day", countryCode)); not work-free
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Slovenia"
+/// <summary>
+/// South Africa
+/// </summary>
+/// <summary>
+/// SouthAfricaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_South_Africa"
+/// <summary>
+/// Spain
+/// </summary>
+/// <summary>
+/// SpainProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// GetCounties
+/// </summary>
+/// <returns></returns>
+//Provinces
+//TODO: Optimize code add provinces behind counties
+//https://en.wikipedia.org/wiki/ISO_3166-2:ES
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Spain"
+/// <summary>
+/// Suriname
+/// </summary>
+/// <summary>
+/// SurinameProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO:Holi
+//TODO:Largest festival of Hindus
+//LunisolarCalendar .net implementation only valid are between 1901 and 2100, inclusive.
+//https://github.com/dotnet/coreclr/blob/master/src/mscorlib/shared/System/Globalization/ChineseLunisolarCalendar.cs
+//https://stackoverflow.com/questions/30719176/algorithm-to-find-the-gregorian-date-of-the-chinese-new-year-of-a-certain-gregor
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Suriname#National_holidays"
+/// <summary>
+/// Svalbard and Jan Mayen
+/// </summary>
+/// <summary>
+/// SvalbardAndJanMayenProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Svalbard"
+/// <summary>
+/// Sweden
+/// </summary>
+/// <summary>
+/// SwedenProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Sweden"
+/// <summary>
+/// Switzerland
+/// </summary>
+/// <summary>
+/// SwitzerlandProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//In canton of Neuchâtel the following dates are considered official county holidays
+//only if Christmas day and new year's day fall on a Sunday : 26.12 and 02.01
+//Get Jeune fédéral holiday date for the given year (3rd monday of September)
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//de.wikipedia.org/wiki/Feiertage_in_der_Schweiz"
+/// <summary>
+/// Tunisia
+/// </summary>
+/// <summary>
+/// TunisiaProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO:Add moon calendar logic
+//items.Add(new PublicHoliday(year, 2, 4, "Mouled (Prophet's Anniversary)", "Mouled (Prophet's Anniversary)", countryCode)); // depending on the moon calender      
+//items.Add(new PublicHoliday(year, 7, 18, "Eid al-Fitr", "Eid al-Fitr", countryCode)); //depending on the moon calender
+//items.Add(new PublicHoliday(year, 9, 24, "Eid al-Idha", "Eid al-Idha", countryCode)); //depending on the moon calender
+//items.Add(new PublicHoliday(year, 10, 15, "Hegire (Islamic New Year)", "Hegire (Islamic New Year) (2015)", countryCode)); //depending on the moon calender
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Tunisia"
+/// <summary>
+/// Turkey
+/// </summary>
+/// <summary>
+/// TurkeyProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Turkey"
+/// <summary>
+/// Ukraine
+/// </summary>
+/// <summary>
+/// UkraineProvider
+/// </summary>
+/// <param name="orthodoxProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Ukraine"
+/// <summary>
+/// United Kingdom
+/// </summary>
+/// <summary>
+/// UnitedKingdomProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//https://www.bbc.co.uk/news/uk-48565417
+/// <summary>
+/// Get counties
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom",
+//de.wikipedia.org/wiki/Feiertage_im_Vereinigten_K%C3%B6nigreich"
+/// <summary>
+/// United States of America
+/// </summary>
+/// <summary>
+/// UnitedStatesProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Federal_holidays_in_the_United_States"
+/// <summary>
+/// Uruguay
+/// </summary>
+/// <summary>
+/// UruguayProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Uruguay"
+/// <summary>
+/// Vatican City
+/// </summary>
+/// <summary>
+/// VaticanCityProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Vatican_City"
+/// <summary>
+/// Venezuela
+/// </summary>
+/// <summary>
+/// VenezuelaProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add countie support, Feria de la Chinita is only in Zulia...
+//TODO:Semana Santa
+//items.Add(new PublicHoliday(year, 3, 28, "Día Nacional del Patrimonio Cultural", "National Cultural Patrimonies Day", countryCode)); //not a public holiday
+//items.Add(new PublicHoliday(year, 5, 25, "Día del Himno Nacional", "National Anthem Day", countryCode));//not a public holiday
+//items.Add(new PublicHoliday(year, 8, 4, "Día de la Guardia Nacional", "National Guard Day", countryCode));//not a public holiday
+//items.Add(new PublicHoliday(year, 12, 10, "Día de la Aviacion Militar", "Venezuelan Air Force Day", countryCode));//not a public holiday
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Venezuela"
+/// <summary>
+/// Vietnam
+/// </summary>
+/// <summary>
+/// VietnamProvider
+/// </summary>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+//TODO: Add Lunar Calendar support
+//Add Tết (Tết Nguyên Đán)
+//Add Hung Kings Commemorations (Giỗ tổ Hùng Vương)
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.wikipedia.org/wiki/Public_holidays_in_Vietnam"
+/// <summary>
+/// Zimbabwe
+/// </summary>
+/// <summary>
+/// ZimbabweProvider
+/// </summary>
+/// <param name="catholicProvider"></param>
+/// <summary>
+/// Get
+/// </summary>
+/// <param name="year">The year</param>
+/// <returns></returns>
+/// <summary>
+/// Get the Holiday Sources
+/// </summary>
+/// <returns></returns>
+//en.m.wikipedia.org/wiki/Public_holidays_in_Zimbabwe"
+/// <summary>
+/// WeekendProvider
+/// </summary>
+/// <summary>
+/// WeekendProvider
+/// </summary>
+/// <param name="weekendDays"></param>
+//performane test
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+//Trace.WriteLineIf(corruptPublicHolidaysAvailable, $"Check country {countryCode} {calculationYear}");
+//New Year's Day
+//Epiphany
+//Easter Monday
+//National Holiday
+//Ascension Day
+//Whit Monday
+//Corpus Christi
+//Assumption Day
+//National Holiday
+//All Saints' Day
+//Immaculate Conception
+//Christmas Day
+//St. Stephen's Day
+// Arrange
+// Act
+// Assert
+//New Year's Day
+// Arrange
+// Act
+// Assert
+//Set to warning till china provider is fixed
+//Assert.IsTrue(test1);
+//Assert.IsTrue(test2);
+//Set to warning till china provider is fixed
+//Assert.IsTrue(test1);
+//Assert.IsTrue(test2);
+//Set to warning till china provider is fixed
+//Assert.IsTrue(test1);
+//Assert.IsTrue(test2);
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+//New Year's Day
+//1848 Revolution Memorial Day
+//Good Friday
+//Easter Sunday
+//Easter Monday
+//Labour day
+//Pentecost
+//Whit Monday
+//State Foundation Day
+//1956 Revolution Memorial Day
+//All Saints Day
+//Christmas Day
+//St. Stephen's Day
+// Arrange
+// Act
+// Assert
+//New Year's Day
+//Orthodox Christmas
+//Independence Day
+//Constitution Day
+//Catholic Easter
+//Orthodox Easter
+//International Workers' Day
+//Europe Day
+//Eid ul-Fitr is not implemented
+//Eid ul-Adha is not implemented
+//Catholic Christmas
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+//New Year's Day
+//National Independence & Children's Day
+//Labour Day
+//Atatürk Commemoration & Youth Day
+//Democracy Day
+//Victory Day
+//Republic Day
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+// Arrange
+// Act
+// Assert
+// This method gets called by the runtime. Use this method to add services to the container.
+//.AddRazorRuntimeCompilation();
+// Set the comments path for the Swagger JSON and UI.
+// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+//Initialize Mapster
+// Format RFC1123
+//config.NewConfig<PublicHoliday, PublicHolidayDto>()
+//    .Map(dest => dest.Date.ToString("yyyy-MM-dd"), src => src.Date);
+/// <summary>
+/// Api
+/// </summary>
+/// <summary>
+/// Get Public Holiday
+/// </summary>
+/// <param name="countrycode"></param>
+/// <param name="year"></param>
+/// <returns></returns>
+/// <summary>
+/// Get Public Holiday
+/// </summary>
+/// <param name="countrycode"></param>
+/// <param name="year"></param>
+/// <returns></returns>
+/// <summary>
+/// Get next public holidays for a given country
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get next public holidays worldwide
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Get long weekends for a given country
+/// </summary>
+/// <param name="countrycode"></param>
+/// <param name="year"></param>
+/// <returns></returns>
+/// <summary>
+/// Get country info from request header `accept-language` or from query parameter
+/// </summary>
+/// <param name="countryCode"></param>
+/// <returns></returns>
+//Fallback
+/// <summary>
+/// Get all available countries
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Home
+/// </summary>
+/// <summary>
+/// Public Holiday
+/// </summary>
+//if (item.PublicHolidays.Count > 0)
+//{
+//    
+//}
+//return LocalRedirect("/");
+/// <summary>
+/// Sitemap
+/// </summary>
+//ISO 3166-1 alpha-2
+//ISO_3166-2
+/// <summary>
+/// The date
+/// </summary>
+/// <summary>
+/// Local name
+/// </summary>
+/// <summary>
+/// English name
+/// </summary>
+/// <summary>
+/// ISO 3166-1 alpha-2
+/// </summary>
+/// <summary>
+/// Is this public holiday every year on the same date
+/// </summary>
+/// <summary>
+/// Is this public holiday in every county (federal state)
+/// </summary>
+/// <summary>
+/// ISO-3166-2 - Federal states
+/// </summary>
+/// <summary>
+/// The launch year of the public holiday
+/// </summary>
+/// <summary>
+/// A list of types the public holiday it is valid
+/// </summary>

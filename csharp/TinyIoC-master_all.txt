@@ -1,0 +1,2459 @@
+﻿The MIT License
+
+Copyright (c) 2016 Steven Robbins
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.## Welcome to TinyIoC
+
+### Overview ###
+
+Welcome to TinyIoC - an easy to use, hassle free, Inversion of Control Container. TinyIoC has been designed to fulfil a single key requirement - to lower the "level of entry" for using an IoC container; both for small projects, and developers who are new to IoC who might be "scared" of the "big boys"!
+
+To that end, TinyIoC attempts to stick to the following core principals:
+
+* **Simplfied Inclusion** - No assembly to reference, no binary to worry about, just a single cs file you can include in your project and you're good to go. It even works with both Mono and MonoTouch for iPhone development!
+* **Simplified Setup** - With auto-resolving of concrete types and an "auto registration" option for interfaces setup is a piece of cake. It can be reduced to 0 lines for concrete types, or 1 line if you have any interface dependencies!
+* **Simple, "Fluent" API** - Just because it's "Tiny", doesn't mean it has no features. A simple "fluent" API gives you access to the more advanced features, like specifying singleton/multi-instance, strong or weak references or forcing a particular constructor.
+
+In addition to this, TinyIoC's "simplified inclusion" makes it useful for providing DI for internal library classes, or providing your library the ability to use DI without the consuming developer having to specify a container (although it's useful to provide the option to do so).
+
+**Note** For ASP.Net per-request lifetime support you will need to also include TinyIoCAspNetExtensions.cs, and the TinyIoC namespace. This provides an extension method for supporting per-request registrations. It's an extra file, but it's preferable to taking a dependency on Asp.Net in the main file, which then requires users to setup #DEFINEs for non-asp.net platforms.
+
+### Key Features ###
+
+* Simple inclusion - just add the CS file (or VB file coming soon!) and off you go.
+* Wide platform support - actively tested on Windows, Mono, MonoTouch, PocketPC and Windows Phone 7. Also works just fine on MonoDroid.
+* Simple API for Register, Resolve, CanResolve and TryResolve.
+* Supports constructor injection and property injection. Constructors are selected automatically but can be overridden using a "fluent" API.
+* Lifetime management - including singletons, multi-instance and ASP.Net per-request singletons.
+* Automatic lazy factories - a Func<T> dependency will automatically create a factory.
+* RegisterMultiple/ResolveAll/IEnumerable<T> support - multiple implementations of an interface can be registered and resolved to an IEnumerable using ResolveAll, or taking a dependency on IEnumerable<T>.
+* Child containers - lifetime can be managed using child containers, with automatic "bubbling" of resolving to parent containers where required.
+The Common directory contains classes and XAML styles that simplify application development.
+
+These are not merely convenient, but are required by most Visual Studio project and item templates.
+If you need a variation on one of the styles in StandardStyles it is recommended that you make a
+copy in your own resource dictionary.  When right-clicking on a styled control in the design
+surface the context menu includes an option to Edit a Copy to simplify this process.
+
+Classes in the Common directory form part of your project and may be further enhanced to meet your
+needs.  Care should be taken when altering existing methods and properties as incompatible changes
+will require corresponding changes to code included in a variety of Visual Studio templates.  For
+example, additional pages added to your project are written assuming that the original methods and
+properties in Common classes are still present and that the names of the types have not changed./// <summary>
+/// Initializes a new instance of the RequestDependencyClass class.
+/// </summary>
+// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+// visit http://go.microsoft.com/?LinkId=9394801
+// Route name
+// URL with parameters
+// Parameter defaults
+/// <summary>
+/// Initializes a new instance of the RequestDependencyClass class.
+/// </summary>
+// **************************************
+// URL: /Account/LogOn
+// **************************************
+// If we got this far, something failed, redisplay form
+// **************************************
+// URL: /Account/LogOff
+// **************************************
+// **************************************
+// URL: /Account/Register
+// **************************************
+// Attempt to register the user
+/* createPersistentCookie */);
+// If we got this far, something failed, redisplay form
+// **************************************
+// URL: /Account/ChangePassword
+// **************************************
+// If we got this far, something failed, redisplay form
+// **************************************
+// URL: /Account/ChangePasswordSuccess
+// **************************************
+// Service location just to prove it works :-)
+// Just to the time increments :-)
+// The FormsAuthentication type is sealed and contains static members, so it is difficult to
+// unit test code that calls its members. The interface and helper class below demonstrate
+// how to create an abstract wrapper around such a type in order to make the AccountController
+// code unit testable.
+// The underlying ChangePassword() will throw an exception rather
+// than return false in certain failure scenarios.
+/* userIsOnline */);
+// See http://go.microsoft.com/fwlink/?LinkID=177550 for
+// a full list of status codes.
+/* ignoreCase */).GetValue(value);
+/* ignoreCase */).GetValue(value);
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+// The Grid App template is documented at http://go.microsoft.com/fwlink/?LinkId=234226
+/// <summary>
+/// Provides application-specific behavior to supplement the default Application class.
+/// </summary>
+/// <summary>
+/// Initializes the singleton Application object.  This is the first line of authored code
+/// executed, and as such is the logical equivalent of main() or WinMain().
+/// </summary>
+/// <summary>
+/// Invoked when the application is launched normally by the end user.  Other entry points
+/// will be used when the application is launched to open a specific file, to display
+/// search results, and so forth.
+/// </summary>
+/// <param name="args">Details about the launch request and process.</param>
+// Do not repeat app initialization when already running, just ensure that
+// the window is active
+// Create a Frame to act as the navigation context and associate it with
+// a SuspensionManager key
+// Restore the saved session state only when appropriate
+// When the navigation stack isn't restored navigate to the first page,
+// configuring the new page by passing required information as a navigation
+// parameter
+// Place the frame in the current Window and ensure that it is active
+/// <summary>
+/// Invoked when application execution is being suspended.  Application state is saved
+/// without knowing whether the application will be terminated or resumed with the contents
+/// of memory still intact.
+/// </summary>
+/// <param name="sender">The source of the suspend request.</param>
+/// <param name="e">Details about the suspend request.</param>
+// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+/// <summary>
+/// A basic page that provides characteristics common to most applications.
+/// </summary>
+/// <summary>
+/// Populates the page with content passed during navigation.  Any saved state is also
+/// provided when recreating a page from a prior session.
+/// </summary>
+/// <param name="navigationParameter">The parameter value passed to
+/// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested.
+/// </param>
+/// <param name="pageState">A dictionary of state preserved by this page during an earlier
+/// session.  This will be null the first time a page is visited.</param>
+/// <summary>
+/// Preserves state associated with this page in case the application is suspended or the
+/// page is discarded from the navigation cache.  Values must conform to the serialization
+/// requirements of <see cref="SuspensionManager.SessionState"/>.
+/// </summary>
+/// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
+/// <summary>
+/// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.
+/// </summary>
+/// <summary>
+/// Multicast event for property change notifications.
+/// </summary>
+/// <summary>
+/// Checks if a property already matches a desired value.  Sets the property and
+/// notifies listeners only when necessary.
+/// </summary>
+/// <typeparam name="T">Type of the property.</typeparam>
+/// <param name="storage">Reference to a property with both getter and setter.</param>
+/// <param name="value">Desired value for the property.</param>
+/// <param name="propertyName">Name of the property used to notify listeners.  This
+/// value is optional and can be provided automatically when invoked from compilers that
+/// support CallerMemberName.</param>
+/// <returns>True if the value was changed, false if the existing value matched the
+/// desired value.</returns>
+/// <summary>
+/// Notifies listeners that a property value has changed.
+/// </summary>
+/// <param name="propertyName">Name of the property used to notify listeners.  This
+/// value is optional and can be provided automatically when invoked from compilers
+/// that support <see cref="CallerMemberNameAttribute"/>.</param>
+/// <summary>
+/// Value converter that translates true to false and vice versa.
+/// </summary>
+/// <summary>
+/// Value converter that translates true to <see cref="Visibility.Visible"/> and false to
+/// <see cref="Visibility.Collapsed"/>.
+/// </summary>
+/// <summary>
+/// Typical implementation of Page that provides several important conveniences:
+/// <list type="bullet">
+/// <item>
+/// <description>Application view state to visual state mapping</description>
+/// </item>
+/// <item>
+/// <description>GoBack, GoForward, and GoHome event handlers</description>
+/// </item>
+/// <item>
+/// <description>Mouse and keyboard shortcuts for navigation</description>
+/// </item>
+/// <item>
+/// <description>State management for navigation and process lifetime management</description>
+/// </item>
+/// <item>
+/// <description>A default view model</description>
+/// </item>
+/// </list>
+/// </summary>
+/// <summary>
+/// Identifies the <see cref="DefaultViewModel"/> dependency property.
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the <see cref="LayoutAwarePage"/> class.
+/// </summary>
+// Create an empty default view model
+// When this page is part of the visual tree make two changes:
+// 1) Map application view state to visual state for the page
+// 2) Handle keyboard and mouse navigation requests
+// Keyboard and mouse navigation only apply when occupying the entire window
+// Listen to the window directly so focus isn't required
+// Undo the same changes when the page is no longer visible
+/// <summary>
+/// An implementation of <see cref="IObservableMap&lt;String, Object&gt;"/> designed to be
+/// used as a trivial view model.
+/// </summary>
+/// <summary>
+/// Invoked as an event handler to navigate backward in the page's associated
+/// <see cref="Frame"/> until it reaches the top of the navigation stack.
+/// </summary>
+/// <param name="sender">Instance that triggered the event.</param>
+/// <param name="e">Event data describing the conditions that led to the event.</param>
+// Use the navigation frame to return to the topmost page
+/// <summary>
+/// Invoked as an event handler to navigate backward in the navigation stack
+/// associated with this page's <see cref="Frame"/>.
+/// </summary>
+/// <param name="sender">Instance that triggered the event.</param>
+/// <param name="e">Event data describing the conditions that led to the
+/// event.</param>
+// Use the navigation frame to return to the previous page
+/// <summary>
+/// Invoked as an event handler to navigate forward in the navigation stack
+/// associated with this page's <see cref="Frame"/>.
+/// </summary>
+/// <param name="sender">Instance that triggered the event.</param>
+/// <param name="e">Event data describing the conditions that led to the
+/// event.</param>
+// Use the navigation frame to move to the next page
+/// <summary>
+/// Invoked on every keystroke, including system keys such as Alt key combinations, when
+/// this page is active and occupies the entire window.  Used to detect keyboard navigation
+/// between pages even when the page itself doesn't have focus.
+/// </summary>
+/// <param name="sender">Instance that triggered the event.</param>
+/// <param name="args">Event data describing the conditions that led to the event.</param>
+// Only investigate further when Left, Right, or the dedicated Previous or Next keys
+// are pressed
+// When the previous key or Alt+Left are pressed navigate back
+// When the next key or Alt+Right are pressed navigate forward
+/// <summary>
+/// Invoked on every mouse click, touch screen tap, or equivalent interaction when this
+/// page is active and occupies the entire window.  Used to detect browser-style next and
+/// previous mouse button clicks to navigate between pages.
+/// </summary>
+/// <param name="sender">Instance that triggered the event.</param>
+/// <param name="args">Event data describing the conditions that led to the event.</param>
+// Ignore button chords with the left, right, and middle buttons
+// If back or foward are pressed (but not both) navigate appropriately
+/// <summary>
+/// Invoked as an event handler, typically on the <see cref="FrameworkElement.Loaded"/>
+/// event of a <see cref="Control"/> within the page, to indicate that the sender should
+/// start receiving visual state management changes that correspond to application view
+/// state changes.
+/// </summary>
+/// <param name="sender">Instance of <see cref="Control"/> that supports visual state
+/// management corresponding to view states.</param>
+/// <param name="e">Event data that describes how the request was made.</param>
+/// <remarks>The current view state will immediately be used to set the corresponding
+/// visual state when layout updates are requested.  A corresponding
+/// <see cref="FrameworkElement.Unloaded"/> event handler connected to
+/// <see cref="StopLayoutUpdates"/> is strongly encouraged.  Instances of
+/// <see cref="LayoutAwarePage"/> automatically invoke these handlers in their Loaded and
+/// Unloaded events.</remarks>
+/// <seealso cref="DetermineVisualState"/>
+/// <seealso cref="InvalidateVisualState"/>
+// Start listening to view state changes when there are controls interested in updates
+// Set the initial visual state of the control
+/// <summary>
+/// Invoked as an event handler, typically on the <see cref="FrameworkElement.Unloaded"/>
+/// event of a <see cref="Control"/>, to indicate that the sender should start receiving
+/// visual state management changes that correspond to application view state changes.
+/// </summary>
+/// <param name="sender">Instance of <see cref="Control"/> that supports visual state
+/// management corresponding to view states.</param>
+/// <param name="e">Event data that describes how the request was made.</param>
+/// <remarks>The current view state will immediately be used to set the corresponding
+/// visual state when layout updates are requested.</remarks>
+/// <seealso cref="StartLayoutUpdates"/>
+// Stop listening to view state changes when no controls are interested in updates
+/// <summary>
+/// Translates <see cref="ApplicationViewState"/> values into strings for visual state
+/// management within the page.  The default implementation uses the names of enum values.
+/// Subclasses may override this method to control the mapping scheme used.
+/// </summary>
+/// <param name="viewState">View state for which a visual state is desired.</param>
+/// <returns>Visual state name used to drive the
+/// <see cref="VisualStateManager"/></returns>
+/// <seealso cref="InvalidateVisualState"/>
+/// <summary>
+/// Updates all controls that are listening for visual state changes with the correct
+/// visual state.
+/// </summary>
+/// <remarks>
+/// Typically used in conjunction with overriding <see cref="DetermineVisualState"/> to
+/// signal that a different value may be returned even though the view state has not
+/// changed.
+/// </remarks>
+/// <summary>
+/// Invoked when this page is about to be displayed in a Frame.
+/// </summary>
+/// <param name="e">Event data that describes how this page was reached.  The Parameter
+/// property provides the group to be displayed.</param>
+// Returning to a cached page through navigation shouldn't trigger state loading
+// Clear existing state for forward navigation when adding a new page to the
+// navigation stack
+// Pass the navigation parameter to the new page
+// Pass the navigation parameter and preserved page state to the page, using
+// the same strategy for loading suspended state and recreating pages discarded
+// from cache
+/// <summary>
+/// Invoked when this page will no longer be displayed in a Frame.
+/// </summary>
+/// <param name="e">Event data that describes how this page was reached.  The Parameter
+/// property provides the group to be displayed.</param>
+/// <summary>
+/// Populates the page with content passed during navigation.  Any saved state is also
+/// provided when recreating a page from a prior session.
+/// </summary>
+/// <param name="navigationParameter">The parameter value passed to
+/// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested.
+/// </param>
+/// <param name="pageState">A dictionary of state preserved by this page during an earlier
+/// session.  This will be null the first time a page is visited.</param>
+/// <summary>
+/// Preserves state associated with this page in case the application is suspended or the
+/// page is discarded from the navigation cache.  Values must conform to the serialization
+/// requirements of <see cref="SuspensionManager.SessionState"/>.
+/// </summary>
+/// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
+/// <summary>
+/// Implementation of IObservableMap that supports reentrancy for use as a default view
+/// model.
+/// </summary>
+/// <summary>
+/// Wrapper for <see cref="RichTextBlock"/> that creates as many additional overflow
+/// columns as needed to fit the available content.
+/// </summary>
+/// <example>
+/// The following creates a collection of 400-pixel wide columns spaced 50 pixels apart
+/// to contain arbitrary data-bound content:
+/// <code>
+/// <RichTextColumns>
+///     <RichTextColumns.ColumnTemplate>
+///         <DataTemplate>
+///             <RichTextBlockOverflow Width="400" Margin="50,0,0,0"/>
+///         </DataTemplate>
+///     </RichTextColumns.ColumnTemplate>
+///     
+///     <RichTextBlock Width="400">
+///         <Paragraph>
+///             <Run Text="{Binding Content}"/>
+///         </Paragraph>
+///     </RichTextBlock>
+/// </RichTextColumns>
+/// </code>
+/// </example>
+/// <remarks>Typically used in a horizontally scrolling region where an unbounded amount of
+/// space allows for all needed columns to be created.  When used in a vertically scrolling
+/// space there will never be any additional columns.</remarks>
+/// <summary>
+/// Identifies the <see cref="RichTextContent"/> dependency property.
+/// </summary>
+/// <summary>
+/// Identifies the <see cref="ColumnTemplate"/> dependency property.
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the <see cref="RichTextColumns"/> class.
+/// </summary>
+/// <summary>
+/// Gets or sets the initial rich text content to be used as the first column.
+/// </summary>
+/// <summary>
+/// Gets or sets the template used to create additional
+/// <see cref="RichTextBlockOverflow"/> instances.
+/// </summary>
+/// <summary>
+/// Invoked when the content or overflow template is changed to recreate the column layout.
+/// </summary>
+/// <param name="d">Instance of <see cref="RichTextColumns"/> where the change
+/// occurred.</param>
+/// <param name="e">Event data describing the specific change.</param>
+// When dramatic changes occur, rebuild the column layout from scratch
+/// <summary>
+/// Lists overflow columns already created.  Must maintain a 1:1 relationship with
+/// instances in the <see cref="Panel.Children"/> collection following the initial
+/// RichTextBlock child.
+/// </summary>
+/// <summary>
+/// Determines whether additional overflow columns are needed and if existing columns can
+/// be removed.
+/// </summary>
+/// <param name="availableSize">The size of the space available, used to constrain the
+/// number of additional columns that can be created.</param>
+/// <returns>The resulting size of the original content plus any extra columns.</returns>
+// Make sure the RichTextBlock is a child, using the lack of
+// a list of additional columns as a sign that this hasn't been
+// done yet
+// Start by measuring the original RichTextBlock content
+// Make sure there are enough overflow columns
+// Use existing overflow columns until we run out, then create
+// more from the supplied template
+// Measure the new column and prepare to repeat as necessary
+// Disconnect extra columns from the overflow chain, remove them from our private list
+// of columns, and remove them as children
+// Report final determined size
+/// <summary>
+/// Arranges the original content and all extra columns.
+/// </summary>
+/// <param name="finalSize">Defines the size of the area the children must be arranged
+/// within.</param>
+/// <returns>The size of the area the children actually required.</returns>
+/// <summary>
+/// SuspensionManager captures global session state to simplify process lifetime management
+/// for an application.  Note that session state will be automatically cleared under a variety
+/// of conditions and should only be used to store information that would be convenient to
+/// carry across sessions, but that should be disacarded when an application crashes or is
+/// upgraded.
+/// </summary>
+/// <summary>
+/// Provides access to global session state for the current session.  This state is
+/// serialized by <see cref="SaveAsync"/> and restored by
+/// <see cref="RestoreAsync"/>, so values must be serializable by
+/// <see cref="DataContractSerializer"/> and should be as compact as possible.  Strings
+/// and other self-contained data types are strongly recommended.
+/// </summary>
+/// <summary>
+/// List of custom types provided to the <see cref="DataContractSerializer"/> when
+/// reading and writing session state.  Initially empty, additional types may be
+/// added to customize the serialization process.
+/// </summary>
+/// <summary>
+/// Save the current <see cref="SessionState"/>.  Any <see cref="Frame"/> instances
+/// registered with <see cref="RegisterFrame"/> will also preserve their current
+/// navigation stack, which in turn gives their active <see cref="Page"/> an opportunity
+/// to save its state.
+/// </summary>
+/// <returns>An asynchronous task that reflects when session state has been saved.</returns>
+// Save the navigation state for all registered frames
+// Serialize the session state synchronously to avoid asynchronous access to shared
+// state
+// Get an output stream for the SessionState file and write the state asynchronously
+/// <summary>
+/// Restores previously saved <see cref="SessionState"/>.  Any <see cref="Frame"/> instances
+/// registered with <see cref="RegisterFrame"/> will also restore their prior navigation
+/// state, which in turn gives their active <see cref="Page"/> an opportunity restore its
+/// state.
+/// </summary>
+/// <returns>An asynchronous task that reflects when session state has been read.  The
+/// content of <see cref="SessionState"/> should not be relied upon until this task
+/// completes.</returns>
+// Get the input stream for the SessionState file
+// Deserialize the Session State
+// Restore any registered frames to their saved state
+/// <summary>
+/// Registers a <see cref="Frame"/> instance to allow its navigation history to be saved to
+/// and restored from <see cref="SessionState"/>.  Frames should be registered once
+/// immediately after creation if they will participate in session state management.  Upon
+/// registration if state has already been restored for the specified key
+/// the navigation history will immediately be restored.  Subsequent invocations of
+/// <see cref="RestoreAsync"/> will also restore navigation history.
+/// </summary>
+/// <param name="frame">An instance whose navigation history should be managed by
+/// <see cref="SuspensionManager"/></param>
+/// <param name="sessionStateKey">A unique key into <see cref="SessionState"/> used to
+/// store navigation-related information.</param>
+// Use a dependency property to associate the session key with a frame, and keep a list of frames whose
+// navigation state should be managed
+// Check to see if navigation state can be restored
+/// <summary>
+/// Disassociates a <see cref="Frame"/> previously registered by <see cref="RegisterFrame"/>
+/// from <see cref="SessionState"/>.  Any navigation state previously captured will be
+/// removed.
+/// </summary>
+/// <param name="frame">An instance whose navigation history should no longer be
+/// managed.</param>
+// Remove session state and remove the frame from the list of frames whose navigation
+// state will be saved (along with any weak references that are no longer reachable)
+/// <summary>
+/// Provides storage for session state associated with the specified <see cref="Frame"/>.
+/// Frames that have been previously registered with <see cref="RegisterFrame"/> have
+/// their session state saved and restored automatically as a part of the global
+/// <see cref="SessionState"/>.  Frames that are not registered have transient state
+/// that can still be useful when restoring pages that have been discarded from the
+/// navigation cache.
+/// </summary>
+/// <remarks>Apps may choose to rely on <see cref="LayoutAwarePage"/> to manage
+/// page-specific state instead of working with frame session state directly.</remarks>
+/// <param name="frame">The instance for which session state is desired.</param>
+/// <returns>A collection of state subject to the same serialization mechanism as
+/// <see cref="SessionState"/>.</returns>
+// Registered frames reflect the corresponding session state
+// Frames that aren't registered have transient state
+// The data model defined by this file serves as a representative example of a strongly-typed
+// model that supports notification when members are added, removed, or modified.  The property
+// names chosen coincide with data bindings in the standard item templates.
+//
+// Applications may use this model as a starting point and build on it, or discard it entirely and
+// replace it with something appropriate to their needs.
+/// <summary>
+/// Base class for <see cref="SampleDataItem"/> and <see cref="SampleDataGroup"/> that
+/// defines properties common to both.
+/// </summary>
+///");
+/// <summary>
+/// Generic item data model.
+/// </summary>
+/// <summary>
+/// Generic group data model.
+/// </summary>
+// Provides a subset of the full items collection to bind to from a GroupedItemsPage
+// for two reasons: GridView will not virtualize large items collections, and it
+// improves the user experience when browsing through groups with large numbers of
+// items.
+//
+// A maximum of 12 items are displayed because it results in filled grid columns
+// whether there are 1, 2, 3, 4, or 6 rows displayed
+/// <summary>
+/// Creates a collection of groups and items with hard-coded content.
+/// </summary>
+// Simple linear search is acceptable for small data sets
+// Simple linear search is acceptable for small data sets
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+// The name AppDelegate is referenced in the MainWindow.xib file.
+// This method is invoked when the application has loaded its UI and its ready to run
+// If you have defined a view, add it here:
+// window.AddSubview (navigationController.View);
+// This method is required in iPhoneOS 3.0
+// ------------------------------------------------------------------------------
+//  <autogenerated>
+//      This code was generated by a tool.
+//      Mono Runtime Version: 2.0.50727.1433
+// 
+//      Changes to this file may cause incorrect behavior and will be lost if 
+//      the code is regenerated.
+//  </autogenerated>
+// ------------------------------------------------------------------------------
+// Base type probably should be MonoTouch.Foundation.NSObject or subclass
+// If the app is running outside of the debugger then report the exception using
+// the browser's exception mechanism. On IE this will display it a yellow alert 
+// icon in the status bar and Firefox will display a script error.
+// NOTE: This will allow the application to continue running after an exception has been thrown
+// but not handled. 
+// For production applications this error handling should be replaced with something that will 
+// report the error to the website and stop the application.
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+/// <summary>
+/// Required designer variable.
+/// </summary>
+/// <summary>
+/// Clean up any resources being used.
+/// </summary>
+/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+/// <summary>
+/// Required method for Designer support - do not modify
+/// the contents of this method with the code editor.
+/// </summary>
+// 
+// pushMeButton
+// 
+// 
+// listBox1
+// 
+// 
+// Form1
+// 
+/// <summary>
+/// The main entry point for the application.
+/// </summary>
+// General Information about an assembly is controlled through the following
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible
+// to COM components.  If you need to access a type in this assembly from
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version
+//      Build Number
+//      Revision
+//
+// Below attribute is to suppress FxCop warning "CA2232 : Microsoft.Usage : Add STAThreadAttribute to assembly"
+// as Device app does not support STA thread.
+//------------------------------------------------------------------------------
+// <autogenerated>
+//     This code was generated by a tool.
+//     Runtime Version:2.0.50727.4927
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </autogenerated>
+//------------------------------------------------------------------------------
+/// <summary>
+///    A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the Strongly Typed Resource Builder
+// class via a tool like ResGen or Visual Studio.NET.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/*FamANDAssem*/
+/// <summary>
+///    Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///    Overrides the current thread's CurrentUICulture property for all
+///    resource lookups using this strongly typed resource class.
+/// </summary>
+/// <summary>
+/// Provides easy access to the root frame of the Phone Application.
+/// </summary>
+/// <returns>The root frame of the Phone Application.</returns>
+/// <summary>
+/// Constructor for the Application object.
+/// </summary>
+// Global handler for uncaught exceptions. 
+// Show graphics profiling information while debugging.
+// Display the current frame rate counters.
+// Show the areas of the app that are being redrawn in each frame.
+//Application.Current.Host.Settings.EnableRedrawRegions = true;
+// Enable non-production analysis visualization mode, 
+// which shows areas of a page that are being GPU accelerated with a colored overlay.
+//Application.Current.Host.Settings.EnableCacheVisualization = true;
+// Standard Silverlight initialization
+// Phone-specific initialization
+// Code to execute when the application is launching (eg, from Start)
+// This code will not execute when the application is reactivated
+// Code to execute when the application is activated (brought to foreground)
+// This code will not execute when the application is first launched
+// Code to execute when the application is deactivated (sent to background)
+// This code will not execute when the application is closing
+// Code to execute when the application is closing (eg, user hit Back)
+// This code will not execute when the application is deactivated
+// Code to execute if a navigation fails
+// A navigation has failed; break into the debugger
+// Code to execute on Unhandled Exceptions
+// An unhandled exception has occurred; break into the debugger
+// Avoid double-initialization
+// Do not add any additional code to this method
+// Create the frame but don't set it as RootVisual yet; this allows the splash
+// screen to remain active until the application is ready to render.
+// Handle navigation failures
+// Ensure we don't initialize again
+// Do not add any additional code to this method
+// Set the root visual to allow the application to render
+// Remove this handler since it is no longer needed
+// Constructor
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+//===============================================================================
+// TinyIoC
+//
+// An easy to use, hassle free, Inversion of Control Container for small projects
+// and beginners alike.
+//
+// https://github.com/grumpydev/TinyIoC
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+// Uncomment this line if you want the container to automatically
+// register the TinyMessenger messenger/event aggregator
+//#define TINYMESSENGER
+// Uncomment this line if you want to internalize this library
+//#define TINYIOC_INTERNAL
+// Uncomment this line if you want to target PCL.
+//#define PORTABLE
+// Preprocessor directives for enabling/disabling functionality
+// depending on platform features. If the platform has an appropriate
+// #DEFINE then these should be set automatically below.
+// Platform supports System.Linq.Expressions
+// Platform supports compiling expressions
+// Platform supports getting all assemblies from the AppDomain object
+// Platform supports GetConstructors on unbound generic types
+// Platform supports GetParameters on open generics
+// Platform supports resolving open generics
+// Platform supports ReaderWriterLockSlim
+// Platform supports SerializableAttribute/SerializationInfo/StreamingContext
+// CompactFramework / Windows Phone 7
+// By default does not support System.Linq.Expressions.
+// AppDomain object does not support enumerating all assemblies in the app domain.
+// PocketPC has a bizarre limitation on enumerating parameters on unbound generic methods.
+// We need to use a slower workaround in that case.
+/// <summary>
+/// Gets a generic method from a type given the method name, binding flags, generic types and parameter types
+/// </summary>
+/// <param name="sourceType">Source type</param>
+/// <param name="bindingFlags">Binding flags</param>
+/// <param name="methodName">Name of the method</param>
+/// <param name="genericTypes">Generic types to use to make the method generic</param>
+/// <param name="parameterTypes">Method parameters</param>
+/// <returns>MethodInfo or null if no matches found</returns>
+/// <exception cref="System.Reflection.AmbiguousMatchException"/>
+/// <exception cref="System.ArgumentException"/>
+// Shouldn't need any additional locking
+// we don't care if we do the method info generation
+// more than once before it gets cached.
+//#endif
+// @mbrit - 2012-05-22 - shim for ForEach call on List<T>...
+/// <summary>
+/// Name/Value pairs for specifying "user" parameters when resolving
+/// </summary>
+/// <summary>
+/// Attempt to resolve type, even if the type isn't registered.
+/// 
+/// Registered types/options will always take precedence.
+/// </summary>
+/// <summary>
+/// Fail resolution if type not explicitly registered
+/// </summary>
+/// <summary>
+/// Attempt to resolve unregistered type if requested type is generic
+/// and no registration exists for the specific generic parameters used.
+/// 
+/// Registered types/options will always take precedence.
+/// </summary>
+/// <summary>
+/// Resolution settings
+/// </summary>
+/// <summary>
+/// Gets the default options (attempt resolution of unregistered types, fail on named resolution if name not found)
+/// </summary>
+/// <summary>
+/// Preconfigured option for attempting resolution of unregistered types and failing on named resolution if name not found
+/// </summary>
+/// <summary>
+/// Preconfigured option for failing on resolving unregistered types and on named resolution if name not found
+/// </summary>
+/// <summary>
+/// Preconfigured option for failing on resolving unregistered types, but attempting unnamed resolution if name not found
+/// </summary>
+// @mbrit - 2012-05-30 - in WinRT, this should be done async...
+// ignore exceptions here...
+/// <summary>
+/// Registration options for "fluent" API
+/// </summary>
+/// <summary>
+/// Make registration a singleton (single instance) if possible
+/// </summary>
+/// <returns>RegisterOptions</returns>
+/// <exception cref="TinyIoCRegistrationException"></exception>
+/// <summary>
+/// Make registration multi-instance if possible
+/// </summary>
+/// <returns>RegisterOptions</returns>
+/// <exception cref="TinyIoCRegistrationException"></exception>
+/// <summary>
+/// Make registration hold a weak reference if possible
+/// </summary>
+/// <returns>RegisterOptions</returns>
+/// <exception cref="TinyIoCRegistrationException"></exception>
+/// <summary>
+/// Make registration hold a strong reference if possible
+/// </summary>
+/// <returns>RegisterOptions</returns>
+/// <exception cref="TinyIoCRegistrationException"></exception>
+/// <summary>
+/// Switches to a custom lifetime manager factory if possible.
+/// 
+/// Usually used for RegisterOptions "To*" extension methods such as the ASP.Net per-request one.
+/// </summary>
+/// <param name="instance">RegisterOptions instance</param>
+/// <param name="lifetimeProvider">Custom lifetime manager</param>
+/// <param name="errorString">Error string to display if switch fails</param>
+/// <returns>RegisterOptions</returns>
+/// <summary>
+/// Registration options for "fluent" API when registering multiple implementations
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the MultiRegisterOptions class.
+/// </summary>
+/// <param name="registerOptions">Registration options</param>
+/// <summary>
+/// Make registration a singleton (single instance) if possible
+/// </summary>
+/// <returns>RegisterOptions</returns>
+/// <exception cref="TinyIoCRegistrationException"></exception>
+/// <summary>
+/// Make registration multi-instance if possible
+/// </summary>
+/// <returns>MultiRegisterOptions</returns>
+/// <exception cref="TinyIoCRegistrationException"></exception>
+/// <summary>
+/// Switches to a custom lifetime manager factory if possible.
+/// 
+/// Usually used for RegisterOptions "To*" extension methods such as the ASP.Net per-request one.
+/// </summary>
+/// <param name="instance">MultiRegisterOptions instance</param>
+/// <param name="lifetimeProvider">Custom lifetime manager</param>
+/// <param name="errorString">Error string to display if switch fails</param>
+/// <returns>MultiRegisterOptions</returns>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the current app domain.
+/// 
+/// If more than one class implements an interface then only one implementation will be registered
+/// although no error will be thrown.
+/// </summary>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the current app domain.
+/// Types will only be registered if they pass the supplied registration predicate.
+/// 
+/// If more than one class implements an interface then only one implementation will be registered
+/// although no error will be thrown.
+/// </summary>
+/// <param name="registrationPredicate">Predicate to determine if a particular type should be registered</param>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the current app domain.
+/// </summary>
+/// <param name="duplicateAction">What action to take when encountering duplicate implementations of an interface/base class.</param>
+/// <exception cref="TinyIoCAutoRegistrationException"/>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the current app domain.
+/// Types will only be registered if they pass the supplied registration predicate.
+/// </summary>
+/// <param name="duplicateAction">What action to take when encountering duplicate implementations of an interface/base class.</param>
+/// <param name="registrationPredicate">Predicate to determine if a particular type should be registered</param>
+/// <exception cref="TinyIoCAutoRegistrationException"/>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the specified assemblies
+/// 
+/// If more than one class implements an interface then only one implementation will be registered
+/// although no error will be thrown.
+/// </summary>
+/// <param name="assemblies">Assemblies to process</param>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the specified assemblies
+/// Types will only be registered if they pass the supplied registration predicate.
+/// 
+/// If more than one class implements an interface then only one implementation will be registered
+/// although no error will be thrown.
+/// </summary>
+/// <param name="assemblies">Assemblies to process</param>
+/// <param name="registrationPredicate">Predicate to determine if a particular type should be registered</param>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the specified assemblies
+/// </summary>
+/// <param name="assemblies">Assemblies to process</param>
+/// <param name="duplicateAction">What action to take when encountering duplicate implementations of an interface/base class.</param>
+/// <exception cref="TinyIoCAutoRegistrationException"/>
+/// <summary>
+/// Attempt to automatically register all non-generic classes and interfaces in the specified assemblies
+/// Types will only be registered if they pass the supplied registration predicate.
+/// </summary>
+/// <param name="assemblies">Assemblies to process</param>
+/// <param name="duplicateAction">What action to take when encountering duplicate implementations of an interface/base class.</param>
+/// <param name="registrationPredicate">Predicate to determine if a particular type should be registered</param>
+/// <exception cref="TinyIoCAutoRegistrationException"/>
+/// <summary>
+/// Creates/replaces a container class registration with default options.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with default options.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a given implementation and default options.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="registerImplementation">Type to instantiate that implements RegisterType</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with a given implementation and default options.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="registerImplementation">Type to instantiate that implements RegisterType</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="instance">Instance of RegisterType to register</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="instance">Instance of RegisterType to register</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="registerImplementation">Type of instance to register that implements RegisterType</param>
+/// <param name="instance">Instance of RegisterImplementation to register</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="registerImplementation">Type of instance to register that implements RegisterType</param>
+/// <param name="instance">Instance of RegisterImplementation to register</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a user specified factory
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="factory">Factory/lambda that returns an instance of RegisterType</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a user specified factory
+/// </summary>
+/// <param name="registerType">Type to register</param>
+/// <param name="factory">Factory/lambda that returns an instance of RegisterType</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with default options.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with default options.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a given implementation and default options.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <typeparam name="RegisterImplementation">Type to instantiate that implements RegisterType</typeparam>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with a given implementation and default options.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <typeparam name="RegisterImplementation">Type to instantiate that implements RegisterType</typeparam>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <param name="instance">Instance of RegisterType to register</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <param name="instance">Instance of RegisterType to register</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <typeparam name="RegisterImplementation">Type of instance to register that implements RegisterType</typeparam>
+/// <param name="instance">Instance of RegisterImplementation to register</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with a specific, strong referenced, instance.
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <typeparam name="RegisterImplementation">Type of instance to register that implements RegisterType</typeparam>
+/// <param name="instance">Instance of RegisterImplementation to register</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a container class registration with a user specified factory
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <param name="factory">Factory/lambda that returns an instance of RegisterType</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Creates/replaces a named container class registration with a user specified factory
+/// </summary>
+/// <typeparam name="RegisterType">Type to register</typeparam>
+/// <param name="factory">Factory/lambda that returns an instance of RegisterType</param>
+/// <param name="name">Name of registration</param>
+/// <returns>RegisterOptions for fluent API</returns>
+/// <summary>
+/// Register multiple implementations of a type.
+/// 
+/// Internally this registers each implementation using the full name of the class as its registration name.
+/// </summary>
+/// <typeparam name="RegisterType">Type that each implementation implements</typeparam>
+/// <param name="implementationTypes">Types that implement RegisterType</param>
+/// <returns>MultiRegisterOptions for the fluent API</returns>
+/// <summary>
+/// Register multiple implementations of a type.
+/// 
+/// Internally this registers each implementation using the full name of the class as its registration name.
+/// </summary>
+/// <param name="registrationType">Type that each implementation implements</param>
+/// <param name="implementationTypes">Types that implement RegisterType</param>
+/// <returns>MultiRegisterOptions for the fluent API</returns>
+//#if NETFX_CORE
+//				if (!registrationType.GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
+//#else
+//#endif
+/// <summary>
+/// Remove a container class registration.
+/// </summary>
+/// <typeparam name="RegisterType">Type to unregister</typeparam>
+/// <returns>true if the registration is successfully found and removed; otherwise, false.</returns>
+/// <summary>
+/// Remove a named container class registration.
+/// </summary>
+/// <typeparam name="RegisterType">Type to unregister</typeparam>
+/// <param name="name">Name of registration</param>
+/// <returns>true if the registration is successfully found and removed; otherwise, false.</returns>
+/// <summary>
+/// Remove a container class registration.
+/// </summary>
+/// <param name="registerType">Type to unregister</param>
+/// <returns>true if the registration is successfully found and removed; otherwise, false.</returns>
+/// <summary>
+/// Remove a named container class registration.
+/// </summary>
+/// <param name="registerType">Type to unregister</param>
+/// <param name="name">Name of registration</param>
+/// <returns>true if the registration is successfully found and removed; otherwise, false.</returns>
+/// <summary>
+/// Attempts to resolve a type using default options.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using specified options.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using default options and the supplied name.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using supplied options and  name.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using default options and the supplied constructor parameters.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using specified options and the supplied constructor parameters.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using default options and the supplied constructor parameters and name.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="name">Name of registration</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a named type using specified options and the supplied constructor parameters.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using default options.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using specified options.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using default options and the supplied name.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using supplied options and  name.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using default options and the supplied constructor parameters.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using specified options and the supplied constructor parameters.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a type using default options and the supplied constructor parameters and name.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="name">Name of registration</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to resolve a named type using specified options and the supplied constructor parameters.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Instance of type</returns>
+/// <exception cref="TinyIoCResolutionException">Unable to resolve the type.</exception>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with default options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with default options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with the specified options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with the specified options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with the supplied constructor parameters and default options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with the supplied constructor parameters and default options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with the supplied constructor parameters options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with the supplied constructor parameters options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with default options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with default options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with the specified options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with the specified options.
+///
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with the supplied constructor parameters and default options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with the supplied constructor parameters and default options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given type can be resolved with the supplied constructor parameters options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to predict whether a given named type can be resolved with the supplied constructor parameters options.
+///
+/// Parameters are used in conjunction with normal container resolution to find the most suitable constructor (if one exists).
+/// All user supplied parameters must exist in at least one resolvable constructor of RegisterType or resolution will fail.
+/// 
+/// Note: Resolution may still fail if user defined factory registrations fail to construct objects when called.
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User supplied named parameter overloads</param>
+/// <param name="options">Resolution options</param>
+/// <returns>Bool indicating whether the type can be resolved</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the given options
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options and given name
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the given options and name
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options and supplied constructor parameters
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options and supplied name and constructor parameters
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the supplied options and constructor parameters
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the supplied name, options and constructor parameters
+/// </summary>
+/// <param name="resolveType">Type to resolve</param>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the given options
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options and given name
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the given options and name
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options and supplied constructor parameters
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the default options and supplied name and constructor parameters
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the supplied options and constructor parameters
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Attempts to resolve a type using the supplied name, options and constructor parameters
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolve</typeparam>
+/// <param name="name">Name of registration</param>
+/// <param name="parameters">User specified constructor parameters</param>
+/// <param name="options">Resolution options</param>
+/// <param name="resolvedType">Resolved type or default if resolve fails</param>
+/// <returns>True if resolved successfully, false otherwise</returns>
+/// <summary>
+/// Returns all registrations of a type
+/// </summary>
+/// <param name="resolveType">Type to resolveAll</param>
+/// <param name="includeUnnamed">Whether to include un-named (default) registrations</param>
+/// <returns>IEnumerable</returns>
+/// <summary>
+/// Returns all registrations of a type, both named and unnamed
+/// </summary>
+/// <param name="resolveType">Type to resolveAll</param>
+/// <returns>IEnumerable</returns>
+/// <summary>
+/// Returns all registrations of a type
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolveAll</typeparam>
+/// <param name="includeUnnamed">Whether to include un-named (default) registrations</param>
+/// <returns>IEnumerable</returns>
+/// <summary>
+/// Returns all registrations of a type, both named and unnamed
+/// </summary>
+/// <typeparam name="ResolveType">Type to resolveAll</typeparam>
+/// <returns>IEnumerable</returns>
+/// <summary>
+/// Attempts to resolve all public property dependencies on the given object.
+/// </summary>
+/// <param name="input">Object to "build up"</param>
+/// <summary>
+/// Attempts to resolve all public property dependencies on the given object using the given resolve options.
+/// </summary>
+/// <param name="input">Object to "build up"</param>
+/// <param name="resolveOptions">Resolve options to use</param>
+/// <summary>
+/// Provides custom lifetime management for ASP.Net per-request lifetimes etc.
+/// </summary>
+/// <summary>
+/// Gets the stored object if it exists, or null if not
+/// </summary>
+/// <returns>Object instance or null</returns>
+/// <summary>
+/// Store the object
+/// </summary>
+/// <param name="value">Object to store</param>
+/// <summary>
+/// Release the object
+/// </summary>
+/// <summary>
+/// Whether to assume this factory successfully constructs its objects
+/// 
+/// Generally set to true for delegate style factories as CanResolve cannot delve
+/// into the delegates they contain.
+/// </summary>
+/// <summary>
+/// The type the factory instantiates
+/// </summary>
+/// <summary>
+/// Constructor to use, if specified
+/// </summary>
+/// <summary>
+/// Create the type
+/// </summary>
+/// <param name="requestedType">Type user requested to be resolved</param>
+/// <param name="container">Container that requested the creation</param>
+/// <param name="parameters">Any user parameters passed</param>
+/// <param name="options"></param>
+/// <returns></returns>
+/// <summary>
+/// IObjectFactory that creates new instances of types for each resolution
+/// </summary>
+//#if NETFX_CORE
+//				if (registerImplementation.GetTypeInfo().IsAbstract() || registerImplementation.GetTypeInfo().IsInterface())
+//					throw new TinyIoCRegistrationTypeException(registerImplementation, "MultiInstanceFactory");
+//#else
+//#endif
+/// <summary>
+/// IObjectFactory that invokes a specified delegate to construct the object
+/// </summary>
+/// <summary>
+/// IObjectFactory that invokes a specified delegate to construct the object
+/// Holds the delegate using a weak reference
+/// </summary>
+/// <summary>
+/// Stores an particular instance to return for a type
+/// </summary>
+/// <summary>
+/// Stores an particular instance to return for a type
+/// 
+/// Stores the instance with a weak reference
+/// </summary>
+/// <summary>
+/// A factory that lazy instantiates a type and always returns the same instance
+/// </summary>
+//#if NETFX_CORE
+//				if (registerImplementation.GetTypeInfo().IsAbstract() || registerImplementation.GetTypeInfo().IsInterface())
+//#else
+//#endif
+// We make sure that the singleton is constructed before the child container takes the factory.
+// Otherwise the results would vary depending on whether or not the parent container had resolved
+// the type before the child container does.
+/// <summary>
+/// A factory that offloads lifetime to an external lifetime provider
+/// </summary>
+//#if NETFX_CORE
+//				if (registerImplementation.GetTypeInfo().IsAbstract() || registerImplementation.GetTypeInfo().IsInterface())
+//#else
+//#endif
+// We make sure that the singleton is constructed before the child container takes the factory.
+// Otherwise the results would vary depending on whether or not the parent container had resolved
+// the type before the child container does.
+/// <summary>
+/// Lazy created Singleton instance of the container for simple scenarios
+/// </summary>
+// Ignore methods we can't access - added for Silverlight
+// Ignore methods we can't access - added for Silverlight
+// TODO - find a better way to remove "system" assemblies from the auto registration
+// TODO - find a better way to remove "system" types from the auto registration
+// Only register the TinyMessenger singleton if we are the root container
+//#if NETFX_CORE
+//			if (registerType.GetTypeInfo().IsInterface() || registerType.GetTypeInfo().IsAbstract())
+//#else
+//#endif
+// if the type is registered as an open generic, then see if the open generic is registered
+// Fail if requesting named resolution and settings set to fail if unresolved
+// Or bubble up if we have a parent
+// Attempted unnamed fallback container resolution if relevant and requested
+// Check if type is an automatic lazy factory request
+// Check if type is an IEnumerable<ResolveType>
+// Attempt unregistered construction if possible and requested
+// If we cant', bubble if we have a parent
+// Bubble resolution up the container tree if we have a parent
+// Just a func
+// 2 parameter func with string as first parameter (name)
+//#if NETFX_CORE
+//			if ((genericType == typeof(Func<,>) && type.GetTypeInfo().GenericTypeArguments[0] == typeof(string)))
+//#else
+//#endif
+// 3 parameter func with string as first parameter (name) and IDictionary<string, object> as second (parameters)
+//#if NETFX_CORE
+//			if ((genericType == typeof(Func<,,>) && type.GetTypeInfo().GenericTypeArguments[0] == typeof(string) && type.GetTypeInfo().GenericTypeArguments[1] == typeof(IDictionary<String, object>)))
+//#else
+//#endif
+// Attempt container resolution
+// Attempt container resolution of open generic
+// Attempt to get a factory from parent if we can
+// Fail if requesting named resolution and settings set to fail if unresolved
+// Attempted unnamed fallback container resolution if relevant and requested
+// Attempt to construct an automatic lazy factory if possible
+// Attempt unregistered construction if possible and requested
+// Unable to resolve - throw
+//#if NETFX_CORE
+//			Type[] genericArguments = type.GetTypeInfo().GenericTypeArguments.ToArray();
+//#else
+//#endif
+// Just a func
+//#if NETFX_CORE
+//				MethodInfo resolveMethod = typeof(TinyIoCContainer).GetTypeInfo().GetDeclaredMethods("Resolve").First(mi => !mi.GetParameters().Any());
+//#else
+//#endif
+// 2 parameter func with string as first parameter (name)
+//#if NETFX_CORE
+//				MethodInfo resolveMethod = typeof(TinyIoCContainer).GetTypeInfo().GetDeclaredMethods("Resolve").First(mi => mi.GetParameters().Length == 1 && mi.GetParameters()[0].GetType() == typeof(String));
+//#else
+//#endif
+// 3 parameter func with string as first parameter (name) and IDictionary<string, object> as second (parameters)
+//#if NETFX_CORE
+//			if ((genericType == typeof(Func<,,>) && type.GenericTypeArguments[0] == typeof(string) && type.GenericTypeArguments[1] == typeof(IDictionary<string, object>)))
+//#else
+//#endif
+//#if NETFX_CORE
+//				MethodInfo resolveMethod = typeof(TinyIoCContainer).GetTypeInfo().GetDeclaredMethods("Resolve").First(mi => mi.GetParameters().Length == 2 && mi.GetParameters()[0].GetType() == typeof(String) && mi.GetParameters()[1].GetType() == typeof(NamedParameterOverloads));
+//#else
+//#endif
+//#if NETFX_CORE
+//			var genericResolveAllMethod = this.GetType().GetGenericMethod("ResolveAll", type.GenericTypeArguments, new[] { typeof(bool) });
+//#else
+//#endif
+//#if NETFX_CORE                
+//				if (parameter.ParameterType.GetTypeInfo().IsPrimitive && !isParameterOverload)
+//#else
+//#endif
+//#if NETFX_CORE
+//			if (type.GetTypeInfo().IsValueType)
+//#else
+//#endif
+// Get constructors in reverse order based on the number of parameters
+// i.e. be as "greedy" as possible so we satify the most amount of dependencies possible
+//#if NETFX_CORE
+//			return type.GetTypeInfo().DeclaredConstructors.OrderByDescending(ctor => ctor.GetParameters().Count());
+//#else
+// Includes internal constructors but not private constructors
+//#endif
+// Try and get the best constructor that we can construct
+// if we can't construct any then get the constructor
+// with the least number of parameters so we can throw a meaningful
+// resolve exception
+// If a constructor parameter can't be resolved
+// it will throw, so wrap it and throw that this can't
+// be resolved.
+// We could lock the cache here, but there's no real side
+// effect to two threads creating the same ObjectConstructor
+// at the same time, compared to the cost of a lock for 
+// every creation.
+//#if NETFX_CORE
+//			var properties = from property in input.GetType().GetTypeInfo().DeclaredProperties
+//							 where (property.GetMethod != null) && (property.SetMethod != null) && !property.PropertyType.GetTypeInfo().IsValueType
+//							 select property;
+//#else
+//#endif
+// Catch any resolution errors and ignore them
+//#endif
+// reverse shim for WinRT SR changes...
+//===============================================================================
+// TinyIoC - TinyMessenger
+//
+// A simple messenger/event aggregator.
+//
+// http://hg.grumpydev.com/tinyioc
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+/// <summary>
+/// A TinyMessage to be published/delivered by TinyMessenger
+/// </summary>
+/// <summary>
+/// The sender of the message, or null if not supported by the message implementation.
+/// </summary>
+/// <summary>
+/// Base class for messages that provides weak refrence storage of the sender
+/// </summary>
+/// <summary>
+/// Store a WeakReference to the sender just in case anyone is daft enough to
+/// keep the message around and prevent the sender from being collected.
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the MessageBase class.
+/// </summary>
+/// <param name="sender">Message sender (usually "this")</param>
+/// <summary>
+/// Generic message with user specified content
+/// </summary>
+/// <typeparam name="TContent">Content type to store</typeparam>
+/// <summary>
+/// Contents of the message
+/// </summary>
+/// <summary>
+/// Create a new instance of the GenericTinyMessage class.
+/// </summary>
+/// <param name="sender">Message sender (usually "this")</param>
+/// <param name="content">Contents of the message</param>
+/// <summary>
+/// Basic "cancellable" generic message
+/// </summary>
+/// <typeparam name="TContent">Content type to store</typeparam>
+/// <summary>
+/// Cancel action
+/// </summary>
+/// <summary>
+/// Contents of the message
+/// </summary>
+/// <summary>
+/// Create a new instance of the CancellableGenericTinyMessage class.
+/// </summary>
+/// <param name="sender">Message sender (usually "this")</param>
+/// <param name="content">Contents of the message</param>
+/// <param name="cancelAction">Action to call for cancellation</param>
+/// <summary>
+/// Represents an active subscription to a message
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the TinyMessageSubscriptionToken class.
+/// </summary>
+/// <summary>
+/// Represents a message subscription
+/// </summary>
+/// <summary>
+/// Token returned to the subscribed to reference this subscription
+/// </summary>
+/// <summary>
+/// Whether delivery should be attempted.
+/// </summary>
+/// <param name="message">Message that may potentially be delivered.</param>
+/// <returns>True - ok to send, False - should not attempt to send</returns>
+/// <summary>
+/// Deliver the message
+/// </summary>
+/// <param name="message">Message to deliver</param>
+/// <summary>
+/// Message proxy definition.
+/// 
+/// A message proxy can be used to intercept/alter messages and/or
+/// marshall delivery actions onto a particular thread.
+/// </summary>
+/// <summary>
+/// Default "pass through" proxy.
+/// 
+/// Does nothing other than deliver the message.
+/// </summary>
+/// <summary>
+/// Singleton instance of the proxy.
+/// </summary>
+/// <summary>
+/// Thrown when an exceptions occurs while subscribing to a message type
+/// </summary>
+/// <summary>
+/// Messenger hub responsible for taking subscriptions/publications and delivering of messages.
+/// </summary>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// All references are held with WeakReferences
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// Messages will be delivered via the specified proxy.
+/// All references (apart from the proxy) are held with WeakReferences
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// Messages will be delivered via the specified proxy.
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// All references are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// Messages will be delivered via the specified proxy.
+/// All references (apart from the proxy) are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// All references are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// Messages will be delivered via the specified proxy.
+/// All references are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Unsubscribe from a particular message type.
+/// 
+/// Does not throw an exception if the subscription is not found.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="subscriptionToken">Subscription token received from Subscribe</param>
+/// <summary>
+/// Publish a message to any subscribers
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="message">Message to deliver</param>
+/// <summary>
+/// Publish a message to any subscribers asynchronously
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="message">Message to deliver</param>
+/// <summary>
+/// Publish a message to any subscribers asynchronously
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="message">Message to deliver</param>
+/// <param name="callback">AsyncCallback called on completion</param>
+/// <summary>
+/// Messenger hub responsible for taking subscriptions/publications and delivering of messages.
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the WeakTinyMessageSubscription class.
+/// </summary>
+/// <param name="destination">Destination object</param>
+/// <param name="deliveryAction">Delivery action</param>
+/// <param name="messageFilter">Filter function</param>
+/// <summary>
+/// Initializes a new instance of the TinyMessageSubscription class.
+/// </summary>
+/// <param name="destination">Destination object</param>
+/// <param name="deliveryAction">Delivery action</param>
+/// <param name="messageFilter">Filter function</param>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// All references are held with strong references
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// Messages will be delivered via the specified proxy.
+/// All references (apart from the proxy) are held with strong references
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action.
+/// Messages will be delivered via the specified proxy.
+/// 
+/// All messages of this type will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// All references are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// Messages will be delivered via the specified proxy.
+/// All references (apart from the proxy) are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// All references are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Subscribe to a message type with the given destination and delivery action with the given filter.
+/// Messages will be delivered via the specified proxy.
+/// All references are held with WeakReferences
+/// 
+/// Only messages that "pass" the filter will be delivered.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="deliveryAction">Action to invoke when message is delivered</param>
+/// <param name="useStrongReferences">Use strong references to destination and deliveryAction </param>
+/// <param name="proxy">Proxy to use when delivering the messages</param>
+/// <returns>TinyMessageSubscription used to unsubscribing</returns>
+/// <summary>
+/// Unsubscribe from a particular message type.
+/// 
+/// Does not throw an exception if the subscription is not found.
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="subscriptionToken">Subscription token received from Subscribe</param>
+/// <summary>
+/// Publish a message to any subscribers
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="message">Message to deliver</param>
+/// <summary>
+/// Publish a message to any subscribers asynchronously
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="message">Message to deliver</param>
+/// <summary>
+/// Publish a message to any subscribers asynchronously
+/// </summary>
+/// <typeparam name="TMessage">Type of message</typeparam>
+/// <param name="message">Message to deliver</param>
+/// <param name="callback">AsyncCallback called on completion</param>
+// Ignore any errors and carry on
+// TODO - add to a list of erroring subs and remove them?
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+//
+// WinRT Reflector Shim - a library to assist in porting frameworks from .NET to WinRT.
+// https://github.com/mbrit/WinRTReflectionShim
+//
+// *** USE THIS FILE IN YOUR METRO-STYLE PROJECT ***
+//
+// Copyright (c) 2012 Matthew Baxter-Reynolds 2012 (@mbrit)
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+//
+// @mbrit - 2012-05-30 - this needs more science... UnderlyingSystemType isn't supported
+// in WinRT, but unclear why this was used...
+// constructors never walk the hierarchy...
+// up...
+// can't have static constructors...
+// walk...
+// ok...
+// nope...
+// walk...
+// walk up the hierarchy...
+// this matches just the name...
+// up...
+// @mbrit - 2012-06-01 - no idea what to do with this...
+// @mbrit - 2012-05-30 - non-public not supported in winrt...
+// @mbrit - 2012-05-30 - non-public not supported in winrt...
+// this isn't right...
+// this isn't right...
+// if we're static and we're in parent, and we haven't specified flatten hierarchy, we can't match...
+// @mbrit - 2012-06-01 - no idea what to do with this...
+// this isn't right...
+// get...
+// find...
+// up...
+// return the last one...
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+//===============================================================================
+// TinyIoC
+//
+// An easy to use, hassle free, Inversion of Control Container for small projects
+// and beginners alike.
+//
+// http://hg.grumpydev.com/tinyioc
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(result, typeof(NestedInterfaceDependencies.RootClass));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(result, typeof(NestedClassDependencies.RootClass));
+//===============================================================================
+// TinyIoC
+//
+// An easy to use, hassle free, Inversion of Control Container for small projects
+// and beginners alike.
+//
+// http://hg.grumpydev.com/tinyioc
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassDefaultCtor)));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassWithInterfaceDependency)));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassWithInterfaceDependency)));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassWithInterfaceDependency)));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(result, typeof(TestClassWithDependencyAndParameters));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(ArgumentNullException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassDefaultCtor));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassDefaultCtor));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassWithParameters));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(result, typeof(TestClassPrivateCtor));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(ITestInterface));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TestClassDefaultCtor));
+//[ExpectedException(typeof(TinyIoCRegistrationException))]
+//[ExpectedException(typeof(TinyIoCRegistrationException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCRegistrationException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCRegistrationException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCRegistrationException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCRegistrationException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCRegistrationException))]
+// @mbrit - 2012-05-22 - forced GC not supported in WinRT...
+// @mbrit - 2012-05-22 - forced GC not supported in WinRT...
+// @mbrit - 2012-05-22 - forced GC not supported in WinRT...
+// @mbrit - 2012-05-22 - forced GC not supported in WinRT...
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(testing, typeof(GenericClassWithInterface<int, string>));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//assert.IsInstanceOfType(result, typeof(TestClassDefaultCtor));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(testing, typeof(GenericClassWithParametersAndDependencies<int, string>));
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+//Assert.IsInstanceOfType(output, typeof(TinyIoCContainer.TypeRegistration));
+//Assert.IsTrue(false);
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCConstructorResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCConstructorResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCConstructorResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+// The non-attribute constructor
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCResolutionException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCRegistrationTypeException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+//[ExpectedException(typeof(TinyIoCRegistrationTypeException))]
+// Should have thrown by now
+//Assert.IsTrue(false);
+// Values should be set by the ctor of TestclassWithNameAndParamsLazyFactory
+//Assert.IsInstanceOfType(result, typeof(TinyIoCResolutionException));
+// can't do GC.WaitForFullGCComplete in WinRT...
+//[ExpectedException(typeof(ArgumentNullException))]
+//[ExpectedException(typeof(ArgumentOutOfRangeException))]
+//[ExpectedException(typeof(ArgumentNullException))]
+//[ExpectedException(typeof(ArgumentNullException))]
+//[ExpectedException(typeof(ArgumentNullException))]
+//[ExpectedException(typeof(ArgumentNullException))]
+//[ExpectedException(typeof(ArgumentNullException))]
+// can't Thread.Sleep in WinRT...
+// Horrible wait loop!
+// can't Thread.Sleep in WinRT...
+// Horrible wait loop!
+// can't Thread.Sleep in WinRT...
+// Horrible wait loop!
+//[ExpectedException(typeof(ArgumentNullException))]
+// Uncomment this line if you want the container to automatically
+// register the TinyMessenger messenger/event aggregator
+//#define TINYMESSENGER
+// Uncomment this line if you want to internalize this library
+//#define TINYIOC_INTERNAL
+// Uncomment this line if you want to target PCL.
+//#define PORTABLE
+// Preprocessor directives for enabling/disabling functionality
+// depending on platform features. If the platform has an appropriate
+// #DEFINE then these should be set automatically below.
+// Platform supports System.Linq.Expressions
+// Platform supports compiling expressions
+// Platform supports getting all assemblies from the AppDomain object
+// Platform supports GetConstructors on unbound generic types
+// Platform supports GetParameters on open generics
+// Platform supports resolving open generics
+// Platform supports ReaderWriterLockSlim
+// CompactFramework / Windows Phone 7
+// By default does not support System.Linq.Expressions.
+// AppDomain object does not support enumerating all assemblies in the app domain.
+// PocketPC has a bizarre limitation on enumerating parameters on unbound generic methods.
+// We need to use a slower workaround in that case.
+/// <summary>
+/// Initializes a new instance of the TestClassWithLazyFactory class.
+/// </summary>
+/// <param name="factory"></param>
+/// <summary>
+/// Initializes a new instance of the TestClassWithLazyFactory class.
+/// </summary>
+/// <param name="factory"></param>
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM componenets.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.1
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+//===============================================================================
+// TinyIoC
+//
+// An easy to use, hassle free, Inversion of Control Container for small projects
+// and beginners alike.
+//
+// http://hg.grumpydev.com/tinyioc
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+/// <summary>
+/// Initializes a new instance of the TestClassWithLazyFactory class.
+/// </summary>
+/// <param name="factory"></param>
+/// <summary>
+/// Initializes a new instance of the TestClassWithLazyFactory class.
+/// </summary>
+/// <param name="factory"></param>
+/// <summary>
+/// Initializes a new instance of the TestclassWithNameAndParamsLazyFactory class.
+/// </summary>
+/// <param name="factory"></param>
+/// <summary>
+/// Initializes a new instance of the TestClassConstructorFailure class.
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the TestClassPropertyDependencies class.
+/// </summary>
+//===============================================================================
+// TinyIoC
+//
+// An easy to use, hassle free, Inversion of Control Container for small projects
+// and beginners alike.
+//
+// http://hg.grumpydev.com/tinyioc
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+//===============================================================================
+// TinyIoC
+//
+// An easy to use, hassle free, Inversion of Control Container for small projects
+// and beginners alike.
+//
+// http://hg.grumpydev.com/tinyioc
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+// Nested deps with func
+/// <summary>
+/// Initializes a new instance of the StateManager class.
+/// </summary>
+/// <param name="viewManager"></param>
+/// <param name="viewFactory"></param>
+//===============================================================================
+// TinyIoC
+//
+// An easy to use, hassle free, Inversion of Control Container for small projects
+// and beginners alike.
+//
+// http://hg.grumpydev.com/tinyioc
+//===============================================================================
+// Copyright © Steven Robbins.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]

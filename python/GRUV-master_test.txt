@@ -1,0 +1,34 @@
+﻿
+***********other formats****************
+gitignore
+mp3
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+GRUV-master/GRUV-master/README.md
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+GRUV-master/GRUV-master/.gitignore
+GRUV-master/GRUV-master/datasets/.gitignore
+GRUV-master/GRUV-master/datasets/YourMusicLibrary/Test.mp3
+
+***********other code file list***************
+GRUV-master/GRUV-master/convert_directory.py
+GRUV-master/GRUV-master/generate.py
+GRUV-master/GRUV-master/train.py
+GRUV-master/GRUV-master/config/nn_config.py
+GRUV-master/GRUV-master/config/__init__.py
+GRUV-master/GRUV-master/data_utils/parse_files.py
+GRUV-master/GRUV-master/data_utils/__init__.py
+GRUV-master/GRUV-master/gen_utils/seed_generator.py
+GRUV-master/GRUV-master/gen_utils/sequence_generator.py
+GRUV-master/GRUV-master/gen_utils/__init__.py
+GRUV-master/GRUV-master/nn_utils/network_utils.py
+GRUV-master/GRUV-master/nn_utils/__init__.py

@@ -1,0 +1,1633 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\common\Constants.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\common\CookieNames.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\common\DatabaseMigrationDoneEvent.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\common\Json.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\common\LavagnaEnvironment.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\common\Read.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\common\Version.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\DataSourceConfig.java
+/**
+//www.gnu.org/licenses/>.
+//
+// tomcat 8 is picky when we include the drivers in the war
+//
+/**
+//[username]:[password]@[host]:[port]/[database name]
+//%s:%s%s", scheme(dbUri), dbUri.getHost(), dbUri.getPort(),
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\DispatcherServletInitializer.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+//
+// initialize cookie
+//
+//definition order = execution order, the first executed filter is CSFRFilter
+/*");
+/*");
+/*");
+/*");
+//
+//
+/*", "/admin/*", "/me/",//
+//
+//
+/*", "/admin/*", "/me/",//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\EnableWebSocketMessageBrocker.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\Launcher.java
+/**
+//www.gnu.org/licenses/>.
+//has form jar:file:/path/to/war/lavagna-jetty-console.war!/WEB-INF/classes!/
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\PersistenceAndServiceConfig.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// because mysql don't support check constraints :(
+// mysql does not support check constraints
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\SchedulingServiceConfig.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\WebConfig.java
+/**
+//www.gnu.org/licenses/>.
+// scan only the web controller, the rest is done statically
+// enable serving static files through default servlet
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\config\WebSecurityConfig.java
+/**
+//www.gnu.org/licenses/>.
+/**").permitAll()
+/**").permitAll()
+/**").denyAll()
+/**").permitAll()
+/**").requireAuthenticated()
+/**", "/logout");
+/**").permitAll()
+/**").permitAll()
+/**").permitAll()
+/**").permitAll()
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\model\apihook\From.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\model\util\CalendarTokenNotFoundException.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\model\util\DataOutputStreamUtils.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\model\util\ShortNameGenerator.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\ApiHookQuery.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\BoardColumnQuery.java
+/**
+//www.gnu.org/licenses/>.
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\BoardQuery.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\CardDataQuery.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\CardLabelQuery.java
+/**
+//www.gnu.org/licenses/>.
+// pgsql need to have a typecast...
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\CardQuery.java
+/**
+//www.gnu.org/licenses/>.
+//----------------------
+//----------------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\ConfigurationQuery.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\DB.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\EventQuery.java
+/**
+//www.gnu.org/licenses/>.
+// Profile
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\ListValueMetadataQuery.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\MailTicketQuery.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\MySqlFullTextSupportQuery.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\NotificationQuery.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\PermissionQuery.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\ProjectQuery.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\SearchQuery.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\StatisticsQuery.java
+/**
+//www.gnu.org/licenses/>.
+// Average users per card
+// Average cards per user
+// Cards by label
+// Created cards by date
+// Closed cards by date
+// Most active card
+// Milestones
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\query\UserQuery.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\ApiHooksService.java
+/**
+//www.gnu.org/licenses/>.
+//remove all disabled scripts
+// check project access if necessary
+// check access
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\BoardColumnRepository.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+// keep only the columns that are inside the boardId and have location=board
+//
+// copy the column definition id of the default one
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\BoardRepository.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// Add the ARCHIVE and BACKLOG columns
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\BulkOperationService.java
+/**
+//www.gnu.org/licenses/>.
+// we remove the cards that have _already_ the user assigned
+//
+// remove all assigned labels
+//
+//
+// to update only if the label value has changed
+// to add
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\CalendarService.java
+/**
+//www.gnu.org/licenses/>.
+// <- this use secure random
+// Milestones
+// Cards
+// Milestones
+// Cards
+//Lavagna//iCal4j 1.0//EN"));
+// Milestones
+// Cards
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\CardDataRepository.java
+/**
+//www.gnu.org/licenses/>.
+// prepare a {:order, :id, :cardId} list
+/**
+// we filter out wrong ids
+//
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\CardDataService.java
+/**
+//www.gnu.org/licenses/>.
+// look for duplicates, the event model will keep the entire history of
+// the description
+// never null because the object's fields are always initialized
+/**
+// checks
+//
+// save old comment as history and update the reference id of the event
+// insert new data
+// if no data is returned, then create the description
+// there can (should) be only one
+// save old description as history and update the reference id of the
+// event
+// insert new data
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\CardLabelRepository.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// type cannot be changed!
+// Label list values
+/**
+// ---
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\CardRepository.java
+/**
+//www.gnu.org/licenses/>.
+// prepare a {:cardOrder, :cardId, :columnId} list
+//
+//
+/**
+/**
+/**
+/**
+/**
+//
+//
+/**
+// skip
+//TODO: not happy about the interface of this one...
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\CardService.java
+/**
+//www.gnu.org/licenses/>.
+//
+// Copy the description
+// Copy comments
+// Copy action lists
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\ConfigurationRepository.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\DatabaseMigrator.java
+/**
+//www.gnu.org/licenses/>.
+// FIXME remove the validation = false when the schemas will be stable
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\EventEmitter.java
+/**
+//www.gnu.org/licenses/>.
+// ------------ project
+// ------------ board
+// ------------ column
+// updated position will not be exposed to the api hooks
+// ------------ card
+// updated position will not be exposed to the api hooks
+// apihook: this will be handled by emitCardHasMoved
+// apihook: this will be handled by emitCardHasMoved
+// ------------ permission
+// ------------ card description
+// ------------ comment
+// ------------ action list handling
+// ------------
+// ------------
+// user profile update
+//
+//
+//
+//
+//
+//
+//
+// role and permission
+//
+//
+//
+//
+//
+//
+//
+// ------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\EventRepository.java
+/**
+//www.gnu.org/licenses/>.
+// profile
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\EventsContext.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// aggregate the events by card id
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\EventService.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\ExcelExportService.java
+/**
+//www.gnu.org/licenses/>.
+// Board
+// ID
+// Name
+// Column
+// ColumnDefinition - status
+// Description
+// Creation date
+// Created by
+// Labels
+// Auto size the columns except for the description
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\ExportImportService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\FirstRunCheckService.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\ImportEvent.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\ImportService.java
+/**
+//www.gnu.org/licenses/>.
+// Cache the user mappings
+// Cache the checklists
+// Cache the board members
+// Fetch the columns with every card in it
+// Checklists
+// Comments
+// Assigned users
+// Labels
+// Labels
+// Import the boards
+//case "blue":
+// Due date
+// Checklists
+// Comments
+// Archive if closed
+// Assigned users
+// Labels
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\LabelService.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\LavagnaExporter.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+// TODO not optimal
+//
+//
+// TODO CLEANUP
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\LavagnaImporter.java
+/**
+//www.gnu.org/licenses/>.
+//
+// add missing base permissions
+// add users to roles
+//
+//we can have null permission enum value if the enum is no more present
+/**
+// add users to roles
+// import label list value
+// save the old column to new column id mapping.
+// Update default column order for side locations
+// TODO: not optimal in term of performance, use a bulk insert
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\Ldap.java
+/**
+//www.gnu.org/licenses/>.
+// imported from
+// https://www.owasp.org/index.php/Preventing_LDAP_Injection_in_Java .
+// Checked against spring implementation too...
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\LdapConnection.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\MailTicketRepository.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\MailTicketService.java
+/**
+//www.gnu.org/licenses/>.
+//imported from https://stackoverflow.com/a/28626302 and modified
+//will return null if no date is present
+//finding the first date mentioned in received header
+//
+/*")) {
+//"
+//"
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\MySqlFullTextSupportService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\NotificationService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+// select users that have pending notifications that were not present in this check round
+//
+//
+//
+//
+/**
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\PermissionService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+/**
+// step 1: remove all permissions
+// step 2: add the enabled permission
+// step 1: remove all permissions
+// step 2: add the enabled permission
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\ProjectService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// Add default labels to the Project
+// create default column definitions
+//
+//
+/**
+/**
+// ---------
+// FIXME: fetch directly the project short name?
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\Scheduler.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\SearchFilter.java
+/**
+//www.gnu.org/licenses/>.
+// string
+// int
+// timestamp from/to
+// user
+// card
+// list value
+// for card sequence number
+// for card name
+// for card data
+//
+// TODO: refactor/cleanup
+// TODO: internazionalization...
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\SearchService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// if a user don't have access to the specified project id we skip the
+// whole search
+//
+//
+// fetch all possible user->id, card->id in the value types with string
+// (thus unknown use)
+//
+//
+// add filter conditions
+//
+/* AS CARD_IDS -> table alias for mysql */
+// limit
+// offset
+//
+//
+// super ugly :(
+// reorder:
+//
+// used by HSQLDB, obviously not optimized at all (as it's only for dev
+// purpose)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\SetupService.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\StatisticsService.java
+/**
+//www.gnu.org/licenses/>.
+// Average users per card
+// Average cards per user
+// Cards by label
+// Created / closed cards
+// Most active card
+// Milestones
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\SupportedEventType.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\UserRepository.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//
+// <- this use secure random
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\UserService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\Utils.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\calendarutils\CalendarEventHandler.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\calendarutils\CalendarVEventHandler.java
+/**
+//www.gnu.org/licenses/>.
+// Reminder on milestone's date
+// Url
+// Organizer
+// Reminder on label's date
+// Organizer
+// Url
+// Description
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\calendarutils\StandardCalendarEventHandler.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\AbstractProcessEvent.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\AbstractProcessLabelEvent.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\ActionItemCheckUncheck.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\ActionItemCreate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\ActionItemDelete.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\ActionItemMove.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\ActionListCreate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\ActionListDelete.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\CardArchiveBacklogTrash.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\CardCreate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\CardMove.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\CardUpdate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\CommentCreate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\CommentDelete.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\CommentUpdate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\DescriptionCreateUpdate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\FileDelete.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\FileUpload.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\ImportEventProcessor.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\LabelCreate.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\importexport\LabelDelete.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\mailreceiver\AbstractMailReceiver.java
+// imported from the spring-integration-mail project and modified (the accept method)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copy messages to cause an eager fetch
+/**
+/**
+/**
+/**
+/**
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\mailreceiver\ImapMailReceiver.java
+// imported from the spring-integration-mail project and modified (the accept method)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// INT-3859
+// resets idle state
+/**
+// this will return the flow to the idle call
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\mailreceiver\MailReceiver.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\service\mailreceiver\Pop3MailReceiver.java
+// imported from the spring-integration-mail project and modified (the accept method)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// -1 indicates default port
+/**
+// expunge deleted mails, and make sure we've retrieved them before closing the folder
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\ApiHooksController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\ApplicationConfigurationController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\BoardColumnController.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\BoardController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\BulkOperationLabelController.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\CalendarController.java
+/**
+//www.gnu.org/licenses/>.
+// <- no validation on the output
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\CardController.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// TODO: check that columnId is effectively inside the board named shortName
+//
+//
+//
+//
+//
+// Validate.isTrue(col.getLocation() == BoardColumnLocation.BOARD);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\CardDataController.java
+/**
+//www.gnu.org/licenses/>.
+// look for duplicates, the event model will keep the entire history of
+// the comment
+// never null because the object's fields are always initialized
+//
+// images
+//
+//
+// TODO: fix exception handling
+// -- activity extension
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\CardLabelController.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+// metadata
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\ConfigurationController.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\EndpointInfoController.java
+/**
+//www.gnu.org/licenses/>.
+// match stuff like "/project/{projectShortName}" or /{projectShortName}/value
+/** can be null */
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\ExportImportController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\LoginInfoController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\MilestoneController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\PermissionController.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\ProjectController.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\ProjectPermissionController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\SearchController.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+/**
+// TODO: ugly code
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\SetupController.java
+/**
+//www.gnu.org/licenses/>.
+// TODO: move to a helper, as it has the same code as the one in the ExportImportController
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\UserController.java
+/**
+//www.gnu.org/licenses/>.
+// user is resolved through UserArgumentResolver
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\UsersAdministrationController.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\api\Utils.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\AbstractPermissionUrlPath.java
+/**
+//www.gnu.org/licenses/>.
+// we have an internal regex
+/**
+// nope
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\CardCommentOwnershipChecker.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\ExpectPermission.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\GeneralHandlerExceptionResolver.java
+/**
+//www.gnu.org/licenses/>.
+// add the exceptions from the less generic to the more one
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\GsonHttpMessageConverter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//stackoverflow.com/a/5099622
+//stackoverflow.com/a/8728500
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\NoOpOwnershipChecker.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\OwnershipChecker.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\PermissionMethodInterceptor.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// check the base permission
+// check if the resource has a custom ownership checker (the user must
+// have a read permission)
+//
+// TODO: in some cases the user pass a list of ids as a _body_. This
+// kind of bulk operation will need to ensure the correctness with the
+// right filter.
+// project level check
+// project level ownership check
+/***
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\UserArgumentResolver.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\helper\UserSession.java
+/**
+//www.gnu.org/licenses/>.
+// delete cookie because it's invalid
+//
+// 1 year
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\AbstractBaseFilter.java
+/**
+//www.gnu.org/licenses/>.
+// if it's not in the context path of the application, the security
+// filter will not be triggered
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\AnonymousUserFilter.java
+/**
+//www.gnu.org/licenses/>.
+// handle the case when the user is logged as a anonymous user but it's
+// no more enabled
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\CSFRFilter.java
+/**
+//www.gnu.org/licenses/>.
+//continue...
+/**
+// ignore the websocket fallback...
+// ------------------------------------------------------------------------
+// this function has been imported from KeyCzar.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\CSRFToken.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\LoginHandler.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\Redirector.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\RememberMeFilter.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\SecurityConfiguration.java
+/**
+//www.gnu.org/licenses/>.
+//
+// fallback to default logout handler
+// handle the static page for the login, we expect that it's a GET
+// request _and_ it match the configured path (/login)
+// -------------------------------
+// given /login/demo/ -> return demo
+// subPath will be demo/ldap/oauth
+// given /login/demo/ -> return demo
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\SecurityFilter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// the action has been handled by the url matcher, no
+// further processing is required
+/**
+// TODO check if the no caching directives could be removed/or at least
+// changed... (?)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\DemoLogin.java
+/**
+//www.gnu.org/licenses/>.
+// yes, it's stupid...
+// FIXME refactor out
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\LdapLogin.java
+/**
+//www.gnu.org/licenses/>.
+// FIXME refactor out
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\OAuthLogin.java
+/**
+//www.gnu.org/licenses/>.
+//TODO: move the strings directly in the factory.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\PasswordLogin.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\AbstractOAuth1Handler.java
+/**
+//www.gnu.org/licenses/>.
+// ignore state parameter as it's not present
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\Bitbucket20Api.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//confluence.atlassian.com/display/BITBUCKET/OAuth+on+Bitbucket
+//bitbucket.org/site/oauth2/access_token";
+//bitbucket.org/site/oauth2/authorize?client_id=" + encode(config.getApiKey()) + "&redirect_uri="
+//basic auth, as described at https://developer.atlassian.com/static/bitbucket/concepts/oauth2.html
+//basic auth
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\BitbucketHandler.java
+/**
+//www.gnu.org/licenses/>.
+//
+//api.bitbucket.org/2.0/user",//
+//
+//
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\Github20Api.java
+/**
+//www.gnu.org/licenses/>.
+//github.com/login/oauth/access_token";
+//github.com/login/oauth/authorize?client_id=" + encode(config.getApiKey()) + "&redirect_uri="
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\GithubHandler.java
+/**
+//www.gnu.org/licenses/>.
+//
+//api.github.com/user",//
+//
+//
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\Gitlab20Api.java
+/**
+//www.gnu.org/licenses/>.
+// based from doc: http://doc.gitlab.com/ce/api/oauth2.html
+// https://gitlab.com/oauth/token
+// https://gitlab.com/oauth/authorize
+// well, the doc is not correct, see https://github.com/gitlabhq/gitlabhq/issues/9141
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\GitlabHandler.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+//
+//
+//
+//
+//
+//gitlab.com")),
+//
+//
+// https://gitlab.com/api/v3/user
+//gitlab.com"), "/") + "/api/v3/user");
+// http://doc.gitlab.com/ce/api/users.html#current-user
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\Google20Api.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//svn.codehaus.org/tynamo/tags/tynamo-federatedaccounts-parent-0.3.0/tynamo-federatedaccounts-scribebasedoauth/src/main/java/org/tynamo/security/federatedaccounts/scribe/google/Google20Api.java
+//accounts.google.com/o/oauth2/auth?client_id=%s&redirect_uri=%s&response_type=code&scope=%s";
+//accounts.google.com/o/oauth2/token";
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\GoogleHandler.java
+/**
+//www.gnu.org/licenses/>.
+//
+//www.googleapis.com/oauth2/v3/userinfo/",//
+//
+//
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\JsonTokenExtractor.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\OAuthProvider.java
+/**
+//www.gnu.org/licenses/>.
+// google, github, bitbucket, twitter
+//support for self hosted oauth2 provider (e.g. gitlab)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\OAuthResultHandler.java
+/**
+//www.gnu.org/licenses/>.
+//
+// scribe does not support out of the box the state parameter, must
+// be overridden to be removed
+// only for services that support the state parameter, must be
+// overridden to be ignored
+// verify token
+// fetch user profile
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\OAuthResultHandlerFactory.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\OAuthServiceBuilder.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\TwitterHandler.java
+/**
+//www.gnu.org/licenses/>.
+//api.twitter.com/1.1/account/verify_credentials.json", UserInfo.class,
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\security\login\oauth\Utils.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\main\java\io\lavagna\web\support\ResourceController.java
+/**
+//www.gnu.org/licenses/>.
+// we don't care if the values are set more than one time
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/**
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//concatenateResourcesWithExtension(context, "/app/app.js", ".js", allJs, ba);
+//
+//
+//
+//make sure we add the css in the right order
+/* begin " + file + " */ \n\n").getBytes(StandardCharsets.UTF_8));
+/* end " + file + " */ \n\n").getBytes(StandardCharsets.UTF_8));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\loader\Loader.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//
+// create user labels
+// update milestone label
+/**
+/**
+//
+//
+// build 200 cards for archive, backlog, trash
+/**
+/**
+// description
+// milestone
+// assigned user
+// watched by user
+// label 1, 2
+// action list
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\model\CardLabelTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\model\CardLabelValueTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\model\RoleTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\model\util\ShortNameGeneratorTest.java
+/**
+//www.gnu.org/licenses/>.
+//
+// token has length <= 4
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\BoardColumnRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\BoardRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\BulkOperationServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO complete cover
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\CalendarServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+//localhost");
+//localhost/TEST/TEST-BRD-1", event1.getUrl().getUri().toASCIIString());
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\CardDataRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\CardDataServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO, FIXME: wall of copy paste, what will your oshi say about that?
+// when updating a card that has no description, a fresh one is created
+// add action item
+// add action item
+// add action item
+// add action item
+// add action item
+// add action item
+// move middle item of list 2 to the beginning of list 1
+// create destination list IDs
+// add action item
+// InputStream input = new
+// ByteArrayInputStream(testData.getBytes("UTF-8"));
+// without reference
+// with reference
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\CardEventRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\CardLabelRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//TODO: check use and correctness for this case
+//
+//creation
+//update
+//delete
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\CardRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+// nothing should happen
+// invert the order
+// move the first card in the second column
+// find by card "title"
+// find by card sequenceNr
+// find by board short name
+// find by board short name + seq nr
+// find by card "title"
+// find by card sequenceNr
+// find by board short name
+// find by board short name + seq nr
+//
+//card creation activity
+//card update activity
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\CardServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\ConfigurationRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\EventEmitterTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\EventRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+// private BoardColumn col2;
+// simulate CardDataService here
+// right now, user alt is the last updater
+// simulate CardDataService here, user1 deletes user2 comment
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\ExcelExportServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+// Init new card
+// Init milestone
+// Add labels
+// 0 based -> 1 means 2 rows (header + 1 card)
+// 0 based -> 1 means 2 rows (header + 1 card)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\ExportImportServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+// TODO additional checks
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\Helper.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\ImportServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+// Cards
+// Run the import
+// Asserts
+// Labels
+// Card
+// Run the import
+// Asserts
+// Run the import
+// Asserts
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\LabelServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+// mismatch between card label type and value (string, value is null)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\LdapTest.java
+/**
+//www.gnu.org/licenses/>.
+//localhost:10389";
+// first call
+// we check the escape too..
+// first call
+// second call with the user dn
+// first call
+// second call with the user dn
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\ListValueMetadataRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\MailTicketServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\NotificationServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+//base.application.lavagna.io/");
+// assign card
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\PermissionServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\ProjectServiceFindRelatedTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\ProjectServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+// Throw DuplicateKeyException on double create
+// empty because the user don't have the correct role READ
+// empty, because the role is system wide and not attached to the
+// specific project
+//
+//4 system labels
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\SearchServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\StatisticsServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+// Average cards per user
+// Cards by label
+// Created / closed cards
+// Most active card
+// Milestones
+// Double check that everything is in the right place
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\UserRepositoryTest.java
+/**
+//www.gnu.org/licenses/>.
+//user does not have role READ
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\UserServiceTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\service\config\TestServiceConfig.java
+/**
+//www.gnu.org/licenses/>.
+//localhost:3306/lavagna?useUnicode=true&characterEncoding=utf-8", "root", ""));
+//localhost:5432/lavagna", "postgres", "password"));
+//localhost:5432/lavagna", "postgres", ""));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\ApplicationConfigurationControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\BoardColumnControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\BoardControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\CalendarControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+//Lavagna//iCal4j 1.0//EN"));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\CardControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO complete with verify
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\CardDataControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO complete with verify
+// comment 1
+// comment 2
+// comment 3
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\CardLabelControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO complete with verify
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\ExportImportControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\MilestoneControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\PermissionControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\ProjectControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\ProjectPermissionControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\SearchControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\SetupControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\UserControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+//
+//
+// check that we are going in the correct branch
+//
+//
+// check that we are going in the correct branch
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\UsersAdministrationControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\WebEndpointInfoTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\api\WebUserControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\config\ServiceConf.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\config\TestWebConf.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\helper\UserSessionTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\AnonymousUserFilterTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\CSRFFilterTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\RememberMeFilterTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\SecurityConfigurationTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO COMPLETE
+/**").denyAll()
+/**", "/login/", new LoginPageGenerator() {
+/**", "/logout");
+/**");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\SecurityFilterTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO COMPLETE the various path....: auth/not auth user. CSRF check
+//
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\login\DemoLoginTest.java
+/**
+//www.gnu.org/licenses/>.
+// POST, username and password not equal
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\login\LdapLoginTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\login\OauthLoginTest.java
+/**
+//www.gnu.org/licenses/>.
+//baseUrl", Arrays.asList(
+//TODO: fixme
+//verify(authResultHandler).handleAuthorizationUrl(req, resp);
+//TODO: fixme
+//verify(authResultHandler).handleCallback(req, resp);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\security\login\oauth\HandlersTest.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/lavagna-master\lavagna-master\src\test\java\io\lavagna\web\support\ResourceControllerTest.java
+/**
+//www.gnu.org/licenses/>.
+//TODO add check

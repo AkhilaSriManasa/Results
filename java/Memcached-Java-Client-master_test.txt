@@ -1,0 +1,44 @@
+﻿
+***********other formats****************
+gitignore
+jar
+xml
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/CHANGELOG.txt
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/HOWTO.txt
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/LICENSE.txt
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/PORTABILITY.txt
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/README.txt
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/TODO.txt
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+Memcached-Java-Client-master/Memcached-Java-Client-master/.gitignore
+Memcached-Java-Client-master/Memcached-Java-Client-master/build.xml
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/CVS/Entries
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/CVS/Repository
+Memcached-Java-Client-master/Memcached-Java-Client-master/doc/CVS/Root
+Memcached-Java-Client-master/Memcached-Java-Client-master/lib/log4j.jar
+
+***********other code file list***************
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/ByteBufArrayInputStream.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/ContextObjectInputStream.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/ErrorHandler.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/LineInputStream.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/Logger.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/MemcachedClient.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/NativeHandler.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/NestedIOException.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/SockIOPool.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/test/MemcachedBench.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/test/MemcachedTest.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/test/TestMemcached.java
+Memcached-Java-Client-master/Memcached-Java-Client-master/src/com/meetup/memcached/test/UnitTests.java

@@ -1,0 +1,469 @@
+﻿
+***********other formats****************
+11.1.xaml
+11.xaml
+Android.csproj
+Android.csproj.bak
+CopyData.dll
+Designer.vb
+HxC
+HxK
+HxT
+IO.JunctionPoint.dll
+Portable.csproj
+Restore.targets
+Shared.projitems
+Shared.shproj
+ZipAssociation.js
+apk
+asp
+aspx
+bat
+bmp
+bz2
+cmd
+config
+csproj
+dependencies
+docx
+dwf
+exe
+file
+flymake.xml
+gitattributes
+gitignore
+htm
+iOS.csproj
+ico
+js
+json
+lock
+lock.json
+myapp
+pdb
+php
+pl
+ps.bz2
+ps1
+rb
+references
+res
+resx
+rtf
+ruleset
+semver
+settings
+shfbproj
+sln
+snk
+testrunconfig
+tfs-ignore
+tif
+vb
+vbproj
+vbs
+vdproj
+vsmdi
+vssscc
+wixproj
+wxl
+wxs
+xaml
+xlsx
+xml
+yml
+zip
+
+***********source code file list***************
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C++/CreateWithProgress.cpp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C++/CreateZipfile.cpp
+
+***********h file list***************
+
+***********md file list***************
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/LICENSE
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/README.md
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/AppNote.iz.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/AppNote.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/License.BZip2.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/License.Combined.rtf
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/License.rtf
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/License.zlib.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/NOTICE.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/ReadMe.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/TestStrings.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Android/Resources/AboutResources.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib/LICENSE.jzlib.txt
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib/License.zlib.txt
+
+***********img file list***************
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Tools and Utilities/ZipTool1.png
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Tools and Utilities/ZipTool2.png
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Tools and Utilities/ZipTool3.png
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Zip Tools/ZipTool1.png
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Zip Tools/ZipTool2.png
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Zip Tools/ZipTool3.png
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Resources/zippedFile.png
+
+***********uml file list***************
+
+***********other file list***************
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/.gitattributes
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/.gitignore
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/.semver
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/appveyor.yml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/Gemfile
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/Gemfile.lock
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/NOTICE
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/paket.dependencies
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/paket.lock
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/Rakefile
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/.paket/Paket.Restore.targets
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/buildscripts/environment.rb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/buildscripts/paths.rb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/buildscripts/project_details.rb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/buildscripts/utils.rb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/.tfs-ignore
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BuildHelp.bat
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/clean.ps1
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/DotNetZip-All.sln
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/DotNetZip.sln
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/DotNetZip.vsmdi
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/DotNetZip.vssscc
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/DotNetZip1.vsmdi
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/EditCsproj.exe
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Ionic.snk
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/LocalTestRun.testrunconfig
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/MakeReleaseZips.bat
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/SetVersion.ps1
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/ZipSrc.ps1
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BuildProcessTemplates/DefaultTemplate.11.1.xaml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BuildProcessTemplates/DefaultTemplate.xaml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BuildProcessTemplates/LabDefaultTemplate.11.xaml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BuildProcessTemplates/UpgradeTemplate.xaml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/BZip2 DLL.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2 Tests/Bzip2 Tests.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2 Tests/Resources/dancing-color.ps.bz2
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2 Tests/Resources/sample1.bz2
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2 Tests/Resources/sample2.bz2
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/ASP/AspClassic-ReadZip.asp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/ASPNET/GenerateZip-Csharp-FileStream.aspx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/ASPNET/GenerateZip-Csharp-MemoryStream.aspx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/ASPNET/GenerateZip-Csharp.aspx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/ASPNET/GenerateZip-VB-FileStream.aspx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/ASPNET/GenerateZip-VB.aspx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/CreateZip/CreateZip.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ReadZip/ReadZip.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/WinForms-QuickZip/QuickZip.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipDir/ZipDir.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Form1.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/ZipTreeView.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Properties/Resources.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Properties/Settings.settings
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/makefile
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C++/build.cmd
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C++/clean.cmd
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/PHP/CreateZip-DotNetZip.php
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/Quick-Unzip/AssemblyInfo.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/Quick-Unzip/QuickUnzip.vbproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/Quick-Unzip/Qunzip.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-DotNetZip-VB.sln
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/Unzip-Form1.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/Unzip-Form1.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/Unzip-Form1.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/WinForms-Unzip.vbproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/My Project/Application.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/My Project/Application.myapp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/My Project/AssemblyInfo.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/My Project/Resources.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/My Project/Resources.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/My Project/Settings.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-Unzip/My Project/Settings.settings
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/WinForms-ZipUp.vbproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/ZipUp-Form1.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/ZipUp-Form1.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/ZipUp-Form1.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/My Project/Application.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/My Project/Application.myapp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/My Project/AssemblyInfo.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/My Project/Resources.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/My Project/Resources.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/My Project/Settings.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-DotNetZip/WinForms-ZipUp/My Project/Settings.settings
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip.sln
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/Form1.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/Form1.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/Form1.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/WinForms-TreeViewZip.vbproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/My Project/Application.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/My Project/Application.myapp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/My Project/AssemblyInfo.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/My Project/Resources.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/My Project/Resources.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/My Project/Settings.Designer.vb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/VB/WinForms-TreeViewZip/WinForms-TreeViewZip/My Project/Settings.settings
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/HelpViewer.shfbproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/HtmlHelp1.shfbproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/MSHelp2.shfbproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/ASPNET-Csharp.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/ASPNET-VB.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/Code Examples.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/COM.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/Cpp.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/Csharp.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/Powershell.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Code Examples/VB.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Introduction/About.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Introduction/GettingStarted.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Introduction/Introduction.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Tools and Utilities/BZip2GZip.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Tools and Utilities/CmdLine.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Tools and Utilities/GUI.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Tools and Utilities/Tools and Utilities.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Zip Tools/BZip2GZip.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Zip Tools/CmdLine.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Zip Tools/GUI.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help/Zip Tools/Zip Tools.htm
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegration.sln
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegration/HelpIntegration.vdproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/HelpIntegrationMergeModule.vdproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/FixRegTables.exe
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/IntegrationWizard.xml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/_AIndex_ac27e462fa6f457eb8ee19031a4b91e1.HxK
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/_Collection_ac27e462fa6f457eb8ee19031a4b91e1.HxC
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/_FIndex_ac27e462fa6f457eb8ee19031a4b91e1.HxK
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/_KIndex_ac27e462fa6f457eb8ee19031a4b91e1.HxK
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/_NUrlIndex_ac27e462fa6f457eb8ee19031a4b91e1.HxK
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Help-VS-Integrated/HelpIntegrationMergeModule/CollectionFiles/_TOC_ac27e462fa6f457eb8ee19031a4b91e1.HxT
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/ListContents/ListContents.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/ComRegistration.wxs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/CustomText.wxl
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/DotNetZip Runtime.wixproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/PostProcessMsi.js
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/Product.wxs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/SideBanner.bmp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/TopBanner.bmp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Runtime/UI.wxs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/CA.ZipAssociation.js
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/CustomActions.wxs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/CustomText.wxl
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/DotNetZipUtils.wixproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/PostProcessMsi.js
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/Product.wxs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/SideBanner.bmp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/TopBanner.bmp
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Setup Utils/UI.wxs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/BZip2/BZip2.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/ConvertZipToSfx/ConvertZipToSfx.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/GZip/GZip.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/UnZip/UnZip.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/About.rtf
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/GetIcon.cmd
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Icon2.res
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/ListViewEx.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Win Forms App.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/ZipForm.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Properties/Resources.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Properties/Settings.settings
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/ZipIt/ZipIt.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Migrated rules for Zip DLL.ruleset
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/msbuild.flymake.xml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/PackResources.vbs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Zip DLL.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/PasswordDialog.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/WinFormsSelfExtractorStub.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/ZipContentsDialog.resx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/zippedFile.ico
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/zippedResources.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Full DLL/Zip Full DLL.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip NetStandard/paket.references
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip NetStandard/Zip NetStandard.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Reduced/Zip Reduced.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/packages.config
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Zip Tests.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/AspNetHost.exe
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/AspNetHost.pdb
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/CreateZip.pl
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/GenerateZip-Cs.aspx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/Ionic.CopyData.dll
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/Ionic.IO.JunctionPoint.dll
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/TestCheckZip.js
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/TestCheckZipPassword.js
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/UnitTestProgressMonitor.exe
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/VbsCreateZip-DotNetZip.vbs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/VbsCreateZip-ShellApp.vbs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/VbsUnZip-DotNetZip.vbs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/VbsUnzip-ShellApp.vbs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Resources/wi8647.tif
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/appnote-iz-latest.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/Book1.xlsx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/Calendar.apk
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/fireone.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/plot.dwf
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/relative-paths-in-subdir-outside.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/relative-paths-in-subdir.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/relative-paths-outside.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/Vanishing Oatmeal Cookies.docx
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/wi10330-badzip.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/wi11056.dwf
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/wi13668-bad-pwd-472713.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/wi13892.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/winzip-sfx.exe
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/zips/wizzquiz.zip
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Android/Zip.Android.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Android/Zip.Android.csproj.bak
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Android/Resources/Values/Strings.xml
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.iOS/Zip.iOS.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/project.json
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/project.lock.json
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/Zip.Shared.projitems
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/Zip.Shared.shproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib/LocalTestRun.testrunconfig
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib/Zlib DLL.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib/zlib-10.vsmdi
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib Tests/Zlib Tests.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib Tests/Resources/zlibbed.file
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Portable/Zlib.Portable.csproj
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/Zlib.Shared.projitems
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/Zlib.Shared.shproj
+
+***********other code file list***************
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/SolutionInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/BitWriter.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/BZip2Compressor.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/BZip2InputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/BZip2OutputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/ParallelBZip2OutputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/Rand.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2 Tests/BZip2UnitTest1.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/BZip2 Tests/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/CommonSrc/CRC32.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/SolutionInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/CreateZip/CreateZip.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/CreateZip/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ReadZip/ReadZip.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ReadZip/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/WinForms-QuickZip/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/WinForms-QuickZip/QuickZip.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipDir/ZipDir.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipDir/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Form1.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Form1.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Program.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Properties/Resources.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZipTreeView/Properties/Settings.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/ParallelGZipOutputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/QuickCompress.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/test_dict_deflate_inflate.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/test_flush_sync.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/test_large_deflate_inflate.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/ZlibDeflateInflate.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Examples/C#/ZLIB/ZlibStreamExample.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/ListContents/Program.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/BZip2/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/BZip2/BZip2.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/ConvertZipToSfx/ConvertZipToSfx.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/ConvertZipToSfx/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/GZip/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/GZip/GZip.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/UnZip/UnZip.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/UnZip/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Extensions.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Form.DragDrop.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Form.State.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/ListViewEx.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Program.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/ZipForm.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/ZipForm.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Properties/Resources.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/WinFormsApp/Properties/Settings.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/ZipIt/ZipIt.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Tools/ZipIt/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/ZipFile.SaveSelfExtractor.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/CommandLineSelfExtractorStub.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/FolderBrowserDialogEx.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/PasswordDialog.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/PasswordDialog.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/WinFormsSelfExtractorStub.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/WinFormsSelfExtractorStub.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/ZipContentsDialog.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip/Resources/ZipContentsDialog.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip NetStandard/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Reduced/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/BasicTests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Compatibility.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/ErrorTests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/ExtendedTests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/IonicTestClass.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/LongRunning.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/NonSeekableOutputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/PasswordTests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Progress.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/RandomBytesInputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/RandomTextGenerator.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Selector.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/SelfExtractor.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/SplitArchives.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Streams.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/TestUtilities.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/UnicodeTests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/UpdateTests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/WinZipAesTests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Zip64Tests.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip Tests/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Android/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Android/Resources/Resource.Designer.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.iOS/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ComHelper.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/EncryptionAlgorithm.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/Events.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/Exceptions.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ExtractExistingFileAction.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/FileSelector.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/OffsetStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/Shared.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/WinZipAes.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipConstants.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipCrypto.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipDirEntry.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipEntry.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipEntry.Extract.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipEntry.Read.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipEntry.Write.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipEntrySource.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipErrorAction.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.AddUpdate.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.Check.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.Events.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.Extract.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.Read.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.Save.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.Selector.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.Static.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipFile.x-IEnumerable.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipInputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipOutputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zip.Shared/ZipSegmentedStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib/properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib Tests/ZlibUnitTest1.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib Tests/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Portable/Class1.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Portable/Properties/AssemblyInfo.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/CRC32.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/Deflate.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/DeflateStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/GZipStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/Inflate.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/InfTree.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/ParallelDeflateOutputStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/Tree.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/Zlib.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/ZlibBaseStream.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/ZlibCodec.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/ZlibConstants.cs
+DotNetZip.Semverd-master/DotNetZip.Semverd-master/src/Zlib.Shared/ZlibStream.cs

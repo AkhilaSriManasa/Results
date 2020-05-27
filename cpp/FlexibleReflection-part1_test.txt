@@ -1,0 +1,24 @@
+﻿
+***********other formats****************
+gitignore
+
+***********source code file list***************
+FlexibleReflection-part1/FlexibleReflection-part1/Main.cpp
+FlexibleReflection-part1/FlexibleReflection-part1/Primitives.cpp
+
+***********h file list***************
+FlexibleReflection-part1/FlexibleReflection-part1/Reflect.h
+
+***********md file list***************
+FlexibleReflection-part1/FlexibleReflection-part1/CMakeLists.txt
+FlexibleReflection-part1/FlexibleReflection-part1/LICENSE
+FlexibleReflection-part1/FlexibleReflection-part1/README.md
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+FlexibleReflection-part1/FlexibleReflection-part1/.gitignore
+
+***********other code file list***************

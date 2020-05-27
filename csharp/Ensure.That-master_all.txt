@@ -1,0 +1,507 @@
+﻿The MIT License (MIT)
+
+Copyright (c) 2015 Daniel Wertheim
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.# Ensure.That
+Ensure.That is a simple guard clause argument validation lib, that helps you with validation of your arguments.
+
+It's developed for .NET 4.5.1 as well as .NET Standard 1.1 and .NET Standard 2.0 and available via [NuGet](https://www.nuget.org/packages/ensure.that/).
+
+[![Build Status](https://dev.azure.com/danielwertheim/ensure.that/_apis/build/status/danielwertheim.Ensure.That-CI?branchName=master)](https://dev.azure.com/danielwertheim/ensure.that/_build/latest?definitionId=22&branchName=master)
+[![NuGet](https://img.shields.io/nuget/v/ensure.that.svg)](http://nuget.org/packages/ensure.that)
+
+## Using extension methods
+This was supposed to be removed but after some wishes from the community it has been kept it with some slight changes.
+
+If you are worried that the constructed `public struct Param<T> {}` created for the argument being validated will hurt your performance you can use any of the other constructs e.g. contextual `Ensure.String` or `EnsureArg`.
+
+```csharp
+Ensure.That(myString).IsNotNullOrWhiteSpace();
+Ensure.That(myString, nameof(myArg)).IsNotNullOrWhiteSpace();
+Ensure.That(myString, nameof(myArg), opts => opts.WithMessage("Foo")).IsNotNullOrWhiteSpace();
+```
+
+## Using contextual validation
+This flavour was introduced in the `v7.0.0` release.
+
+```csharp
+Ensure.String.IsNotNullOrWhiteSpace(myString);
+Ensure.String.IsNotNullOrWhiteSpace(myString, nameof(myArg));
+Ensure.String.IsNotNullOrWhiteSpace(myString, nameof(myArg), opts => opts.WithMessage("Foo"));
+```
+### Using static simple methods
+The `EnsureArg` flavour was added in the `v5.0.0` release.
+
+```csharp
+EnsureArg.IsNotNullOrWhiteSpace(myString);
+EnsureArg.IsNotNullOrWhiteSpace(myString, nameof(myArg));
+EnsureArg.IsNotNullOrWhiteSpace(myString, nameof(myArg), opts => opts.WithMessage("Foo"));
+```
+
+## Samples
+The Samples above just uses `string` validation, but there are more. E.g.:
+
+* Strings
+* Numerics
+* Collections (arrays, lists, collections, dictionaries)
+* Booleans
+* Guids
+
+## Get up and running with the source code #
+The main solution is maintained using Visual Studio 2017.
+
+Unit-tests are written using `xUnit` and there are no integration tests, hence you should just be able to:
+
+- `Pull`
+- `Compile`
+- `Run the tests`
+
+Easiest done using:
+
+```
+git clone ...
+```
+
+and
+
+```
+dotnet test src/Ensure.That.sln
+```
+Semantic versioning is used. See http://semver.org for more info. Basically this means that version format is:
+_v[Major].[Minor].[Patch]_ and as long as Major hasn't been bumped, you should be able to update without any breaking API changes.
+
+## Release notes moved from v8.1.2 and forward
+Release notes can now be found under: [**"Releases"**](https://github.com/danielwertheim/ensure.that/releases/latest).
+
+## v8.1.1 - 2019-01-07
+
+**(Fix)**: Fixes passing partial white-space string to `IsNotEmptyOrWhiteSpace`.
+
+## v8.1.0 - 2018-11-10
+
+**(New)**: Adds `IsEmptyOrWhiteSpace`
+
+**(New)**: Now makes use of `ContractAnnotationAttribute`
+
+## v8.0.0 - 2018-04-29
+**(Changed):** The assembly is now signed with a SNK, not for security purposes but for identification purposes and the key is in the repo.
+
+**(Changed):** The "fluent" `Ensure.That` syntax that previously was marked as `Obsolete` has been kept with some slight changes. E.g. `Param<T>` is now a struct. The overload of `Ensure.That(...)` accepting a `Func` has been removed. Options to customize messages and expceptions now uses the same construct as the other APIs.
+
+**(Changed):** `EnsureArg.Any()` and `Ensure.That(...).Any()` is now called `EnsureArg.HasAny` and `Ensure.That(...).HasAny()` to match `Ensure.Collection.HasAny`
+
+**(New):** `Ensure.That(string).StartsWith(...)`, `Ensure.String.StartsWith(...)`, `EnsureArg.StartsWith`
+
+**(Dropped):** `Ensure.On/Off` support has been removed in order to get better performance.
+
+## v7.2.1 - 2017-12-29
+
+**(Fix):** `EnsureArg.IsTrue` and `EnsureArg.IsFalse` did not pass `optsFn` down.
+
+## v7.2.0 - 2017-12-14
+
+**(New):** Added overload to `EnsureArg` and contextual e.g. `Ensure.StringArg` that allows you to define either a custom exception message or custom exception.
+
+**(New):** Added `Ensure.Enumerable` which provides the members found in `Ensure.Collection` but it operates on `IEnumerable<T>` instead. **Please note that enumeration will occur**.
+
+## v7.1.0 - 2017-11-19
+Thanks to [@ndrwrbgs](https://github.com/ndrwrbgs) who has made this release happen. Lots of improvements when it comes to using Ensure.That with ReSharper etc.
+
+**(Fix):** `SizeIs` did not compare against `Array.LongLength` when passed a `long`.
+
+**(New):** Added more attributes to the API to get ReSharper to "understand" Ensure.That better.
+
+**(New):** Methods that are comparing values now accepts an optional `IComparer<T>`
+
+
+## v7.0.0 - 2017-11-09
+
+**(Obsolete warning):** The "fluent" `Ensure.That` syntax has been marked as `Obsolete` in favour for either the contextual validations: `Ensure.String.IsNotNull(..., ...);` or `EnsureArg.IsNotNull(..., ...);` The obsolete versions will be removed in next major version.
+
+**(New):** Multiple target frameworks: `net4.5.1` and `netstandard1.1` and `netstandard2.0`
+
+**(New):** Contextual validation, e.g. `Ensure.String.IsNotNull(myString, nameof(myString));`
+
+**(New):** When using `EnsureArg`, the param being evaluated is now decorated with JetBrains `NotNullAttribute` and custom `ValidatedNotNull` (to get rid of `CA1062`).
+
+**(New):** `Any` for dictionaries.
+
+**(New):** `HasItems` for `IReadOnlyCollection` and `IReadOnlyList`.
+
+**(New):** `EnsureArg.Abcdefg(...)` methods now returns the value so that it can be assigned to e.g. fields: `_field = EnsureArg.IsNotNull(myArg, nameof(myArg))`.
+
+**(Changed):** Where applicable, validation methods now ensures that the param `IsNotNull`. If it is, an `ArgumentNullException` is thrown. So there is no need to do both. How-ever, some calls are not applicable to this, like `EnsureArg.IsNotEmpty(myString)`.
+
+## v6.0.1 - 2017-10-04
+
+**(Fix):** Corrected assembly name to be same as previous: `Ensure.That.dll` instead of `EnsureThat.dll`
+
+## v6.0.0 - 2017-09-19
+
+**(Changed):** Now developed as only a .NET Standard 1.1 project.
+
+**(Changed):** When using comparing validation checks, e.g.`Lt`, `Gt`, `Between` etc.; An `ArgumentOutOfRangeException` is thrown instead of an `ArgumentException`.
+
+**(Changed):** Comparable validations e.g. `Lt`, `Gt` etc.; are not tied to `struct` anymore. Only against `IComparable<T>`.
+
+**(Changed):** When using the `Ensure.That(arg)` construct, it allows you to use e.g `WithException(_ => new Exception("Foo"))`. This could be appended after an validation method e.g. `IsNotNull`. How-ever, doing so would not kick the custom exception factory as the call tree would get terminated before, in the `IsNotNull` method. From now on, you can not chain anything on the actual validation method.
+
+**(New):** Added JetBrain's attribute `[NoEnumeration]` on `IsNotNull` to get rid of warning. Thanks @megafinz
+
+
+## v5.0.0 - 2016-10-08
+**(New):** Now using DotNetCore and targetting .NetStandard1.1 as well as "normal" .Net4.5-.Net4.6.1
+
+**(New):** New flavour of API added, with less overhead. See README.md for mor info. But basically:
+
+```csharp
+EnsureArg.IsNotNullOrEmpty(myString)
+```
+
+The old flavour is still in.
+
+**(Removed):** Source package. If you want it. It's in the repo.
+
+**(Removed):** Removed support for extracting the name for params using a compiled lambda. Only reason people want it is for refactoring friendlyness. Use `nameof(myparam)` instead.
+
+**(New):** `WithExtraMessageOf` now has an overload that takes the `Param<T>` as an arg so:
+
+```csharp
+Ensure
+    .That(myString, nameof(myString))
+    .WithExtraMessageOf(p => "Some more details")
+    .IsNotNullOrEmpty();
+```
+
+**(Replaced):** Construct where you could pass an extra `Throws argument`. This is now replaced with `WithException`.
+
+```csharp
+Ensure.That(myString, nameof(myString)).IsNotNullOrEmpty(throws => throws.Custom(...));
+```
+
+Becomes
+
+```csharp
+Ensure
+    .That(myString, nameof(myString))
+    .WithException(param => new Exception())
+    .IsNotNullOrEmpty();
+```
+
+## v4.0.0 - 2015-11-24
+**No API change**. The `dll` for pre-vNext has been renamed from `EnsureThat.vDinasour.dll` to `EnsureThat.dll`
+
+## v3.3.0 - 2015-11-10
+**(New):** `Ensure.Off();` - Lets you turn off the validation.
+
+## v3.2.0 - 2015-09-28
+**(New):** `Ensure.That(dictionary).ContainsKey("foo");`
+
+**(New):** `Ensure.That(array|list|collection).Any(i => i == x);`
+
+## v3.1.1 - 2015-09-19
+**(Fix):** Issue #18 - now resolves correctly in `.net4.5|4.5.1|4.5.2`
+
+**(Fix):** Source package now marked as development dependency.
+
+## v3.1.0 - 2015-08-30
+
+**(New):** Support for lambdas, [read more](https://github.com/danielwertheim/Ensure.That/wiki#using-lambdas)
+```c#
+Ensure.That(() => person.Name).IsNotNullOrEmpty();
+```
+
+**(Fix):** Resolve now works correctly for .Net4.6 projects.
+
+## v3.0.0 - 2015-08-22
+API is fully backwards compatible. The reason for major bump of version is that the NuGet now caries two different assemblies that target different frameworks. Both are portable class libraries.
+
+- `EnsureThat.vDinasour.dll` is the `v2.0.0` one, that targets .Net4.0+, WinRT, WinPhone, Silverlight and other old stuff.
+- `EnsureThat.vNext.dll` is the new one, that targets .Net4.6+, Win10, AspNetCore5.
+
+New features:
+Determine custom exceptions to be thrown, instead of default `ArgumentException`, by using overload:
+
+```
+Ensure.That(value, ParamName)
+      .IsNotNull(throws => throws.InvalidOperationException));
+```
+
+or
+
+```
+Ensure.That(value, ParamName)
+      .IsNotNull(throws => throws.Custom(p => new Exception("Ooops"))));
+```
+
+## v2.0.0 - 2014-07-02
+- (Fix): Now using JetBrains annotation for `NoEnumeration` to get rid of warning about possible multiple enumeration of enumerable.
+- (Change/New): Now supporting e.g. `uint`by changing to having most compares are now against `IComparable<T> where T:struct` as mentioned here: https://github.com/danielwertheim/Ensure.That/issues/8
+- (New): New targets `.Net4+, Silverlight, Windows Phone, WinRT`
+- (New): `Ensure.That(array|collection|string).SizeIs(2)`
+- (New): `Ensure.That(int|decimal|...|).Is(1)`
+- (New): `Ensure.That(int|decimal|...|).IsNot(1)`
+- (New): `Ensure.That(string).IsEqualTo("foo")`
+- (New): `Ensure.That(string).IsNotEqualTo("foo")`
+- (New): You have always been able to chain validation, but for those who want it more readable you can add an `And()`: `Ensure.That(string).IsNotNull().SizeIs(2)` can now also be `Ensure.That(string).IsNotNull().And().SizeIs(2)`
+``` ini
+
+BenchmarkDotNet=v0.10.12, OS=Windows 10 Redstone 3 [1709, Fall Creators Update] (10.0.16299.334)
+Intel Core i7-4790K CPU 4.00GHz (Haswell), 1 CPU, 8 logical cores and 4 physical cores
+Frequency=3906247 Hz, Resolution=256.0002 ns, Timer=TSC
+.NET Core SDK=2.1.104
+  [Host]     : .NET Core 2.0.6 (Framework 4.6.26212.01), 64bit RyuJIT
+  DefaultJob : .NET Core 2.0.6 (Framework 4.6.26212.01), 64bit RyuJIT
+
+
+```
+|                                 Method |                   Categories |       Mean |     Error |    StdDev | Scaled | ScaledSD | Rank |  Gen 0 | Allocated |
+|--------------------------------------- |----------------------------- |-----------:|----------:|----------:|-------:|---------:|-----:|-------:|----------:|
+|                         ThingIsNotNull |                Any.IsNotNull |  2.9958 ns | 0.0094 ns | 0.0079 ns |   1.00 |     0.00 |    1 | 0.0076 |      32 B |
+|              ThingIsNotNullViaEnforcer |                Any.IsNotNull |  4.5552 ns | 0.0280 ns | 0.0219 ns |   1.52 |     0.01 |    2 | 0.0076 |      32 B |
+|                  ThingIsNotNullViaThat |                Any.IsNotNull | 12.3884 ns | 0.0588 ns | 0.0550 ns |   4.14 |     0.02 |    3 | 0.0076 |      32 B |
+|                                        |                              |            |           |           |        |          |      |        |           |
+|                                  IntIs |                       Int.Is |  0.7862 ns | 0.0113 ns | 0.0105 ns |   1.00 |     0.00 |    1 |      - |       0 B |
+|                           IntIsViaThat |                       Int.Is |  2.7818 ns | 0.0085 ns | 0.0075 ns |   3.54 |     0.05 |    2 |      - |       0 B |
+|                       IntIsViaEnforcer |                       Int.Is |  2.8434 ns | 0.0184 ns | 0.0172 ns |   3.62 |     0.05 |    3 |      - |       0 B |
+|                                        |                              |            |           |           |        |          |      |        |           |
+|                                IntIsGt |                     Int.IsGt |  0.7856 ns | 0.0076 ns | 0.0059 ns |   1.00 |     0.00 |    1 |      - |       0 B |
+|                     IntIsGtViaEnforcer |                     Int.IsGt |  2.3644 ns | 0.0108 ns | 0.0101 ns |   3.01 |     0.03 |    2 |      - |       0 B |
+|                         IntIsGtViaThat |                     Int.IsGt |  2.5139 ns | 0.0189 ns | 0.0177 ns |   3.20 |     0.03 |    3 |      - |       0 B |
+|                                        |                              |            |           |           |        |          |      |        |           |
+|                           IntsHasItems |                Ints.HasItems |  0.7687 ns | 0.0106 ns | 0.0099 ns |   1.00 |     0.00 |    1 |      - |       0 B |
+|                IntsHasItemsViaEnforcer |                Ints.HasItems |  3.7391 ns | 0.0201 ns | 0.0178 ns |   4.86 |     0.06 |    2 |      - |       0 B |
+|                    IntsHasItemsViaThat |                Ints.HasItems | 14.0298 ns | 0.0684 ns | 0.0571 ns |  18.25 |     0.24 |    3 |      - |       0 B |
+|                                        |                              |            |           |           |        |          |      |        |           |
+|                        StringIsEqualTo |             String.IsEqualTo |  1.7682 ns | 0.0098 ns | 0.0092 ns |   1.00 |     0.00 |    1 |      - |       0 B |
+|             StringIsEqualToViaEnforcer |             String.IsEqualTo |  1.7824 ns | 0.0115 ns | 0.0107 ns |   1.01 |     0.01 |    2 |      - |       0 B |
+|                 StringIsEqualToViaThat |             String.IsEqualTo |  2.0212 ns | 0.0082 ns | 0.0077 ns |   1.14 |     0.01 |    3 |      - |       0 B |
+|                                        |                              |            |           |           |        |          |      |        |           |
+|            StringIsNotNullOrWhiteSpace | String.IsNotNullOrWhiteSpace |  3.4817 ns | 0.0258 ns | 0.0241 ns |   1.00 |     0.00 |    1 |      - |       0 B |
+|     StringIsNotNullOrWhiteSpaceViaThat | String.IsNotNullOrWhiteSpace |  7.3463 ns | 0.0250 ns | 0.0221 ns |   2.11 |     0.02 |    2 |      - |       0 B |
+| StringIsNotNullOrWhiteSpaceViaEnforcer | String.IsNotNullOrWhiteSpace |  7.4140 ns | 0.0368 ns | 0.0326 ns |   2.13 |     0.02 |    3 |      - |       0 B |
+|                                        |                              |            |           |           |        |          |      |        |           |
+|                        StringsHasItems |             Strings.HasItems |  0.7664 ns | 0.0078 ns | 0.0073 ns |   1.00 |     0.00 |    1 |      - |       0 B |
+|             StringsHasItemsViaEnforcer |             Strings.HasItems |  4.6097 ns | 0.0214 ns | 0.0178 ns |   6.02 |     0.06 |    2 |      - |       0 B |
+|                 StringsHasItemsViaThat |             Strings.HasItems | 12.8419 ns | 0.0618 ns | 0.0578 ns |  16.76 |     0.17 |    3 |      - |       0 B |
+|                                        |                              |            |           |           |        |          |      |        |           |
+|                         ThingsHasItems |              Things.HasItems |  0.7818 ns | 0.0071 ns | 0.0063 ns |   1.00 |     0.00 |    1 |      - |       0 B |
+|              ThingsHasItemsViaEnforcer |              Things.HasItems |  4.4065 ns | 0.0164 ns | 0.0137 ns |   5.64 |     0.05 |    2 |      - |       0 B |
+|                  ThingsHasItemsViaThat |              Things.HasItems | 12.8201 ns | 0.0942 ns | 0.0835 ns |  16.40 |     0.16 |    3 |      - |       0 B |
+/// <summary>
+/// Ensures for objects.
+/// </summary>
+/// <summary>
+/// Ensures for booleans.
+/// </summary>
+/// <summary>
+/// Ensures for enumerables.
+/// </summary>
+/// <remarks>MULTIPLE ENUMERATION OF PASSED ENUMERABLE IS POSSIBLE.</remarks>
+/// <summary>
+/// Ensures for collections.
+/// </summary>
+/// <summary>
+/// Ensures for comparables.
+/// </summary>
+/// <summary>
+/// Ensures for guids.
+/// </summary>
+/// <summary>
+/// Ensures for strings.
+/// </summary>
+/// <summary>
+/// Ensures for types.
+/// </summary>
+/// <summary>
+/// Ensures via discoverable API. Please note that an extra wrapping object
+/// <see cref="Param{T}"/> will be created. This can have performance impacts.
+/// Use <see cref="EnsureArg"/> or contextual e.g. <see cref="Ensure.String"/>
+/// if worried about performance.
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="value"></param>
+/// <param name="name"></param>
+/// <param name="optsFn"></param>
+/// <returns></returns>
+/// <summary>
+/// Ensures via discoverable API. Please note that an extra wrapping object
+/// <see cref="Param{T}"/> will be created. This can have performance impacts.
+/// Use <see cref="EnsureArg"/> or contextual e.g. <see cref="Ensure.String"/>
+/// if worried about performance.
+/// </summary>
+/// <param name="value"></param>
+/// <param name="name"></param>
+/// <param name="optsFn"></param>
+/// <returns></returns>
+/// <summary>
+/// Ensures via discoverable API. Please note that an extra wrapping object
+/// <see cref="Param{T}"/> will be created. This can have performance impacts.
+/// Use <see cref="EnsureArg"/> or contextual e.g. <see cref="Ensure.Type"/>
+/// if worried about performance.
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="value"></param>
+/// <param name="name"></param>
+/// <param name="optsFn"></param>
+/// <returns></returns>
+/// <summary>
+/// Ensures via discoverable API. Please note that an extra wrapping object
+/// <see cref="Param{T}"/> will be created. This can have performance impacts.
+/// Use <see cref="EnsureArg"/> or contextual e.g. <see cref="Ensure.Type"/>
+/// if worried about performance.
+/// </summary>
+/// <param name="value"></param>
+/// <param name="name"></param>
+/// <param name="optsFn"></param>
+/// <returns></returns>
+/// <summary>
+/// If defined, this exception will be thrown instead of the
+/// standard exceptions for the particular ensure method.
+/// Assign using <see cref="WithException"/>.
+/// </summary>
+/// <summary>
+/// If defined, and no <see cref="CustomException"/> has been defined,
+/// this message will be used instead of the standard message for the
+/// particular ensure method.
+/// Assign using <see cref="WithMessage"/>.
+/// </summary>
+/* MIT License
+//www.jetbrains.com
+// ReSharper disable UnusedMember.Global
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+// ReSharper disable IntroduceOptionalParameters.Global
+// ReSharper disable MemberCanBeProtected.Global
+// ReSharper disable InconsistentNaming
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// Indicates that parameter is regular expression pattern.
+/// </summary>
+/// <summary>
+/// Indicates that IEnumerable, passed as parameter, is not enumerated.
+/// </summary>
+/// <summary>
+/// Indicates that the value of the marked element could never be <c>null</c>.
+/// </summary>
+/// <example><code>
+/// [NotNull] object Foo() {
+///   return null; // Warning: Possible 'null' assignment
+/// }
+/// </code></example>
+/// <summary>
+/// Indicates that a method does not make any observable state changes.
+/// The same as <c>System.Diagnostics.Contracts.PureAttribute</c>.
+/// </summary>
+/// <example><code>
+/// [Pure] int Multiply(int x, int y) => x * y;
+/// 
+/// void M() {
+///   Multiply(123, 42); // Waring: Return value of pure method is not used
+/// }
+/// </code></example>
+/// <remarks>
+/// <c>System.Diagnostics.Contracts.PureAttribute</c> is not available for NETSTANDARD1_1.
+/// For consistency, using this version of the attribute for all profiles rather than 
+/// just NETSTANDARD1_1.
+/// </remarks>
+/// <summary>
+/// Indicates that the function argument should be string literal and match one
+/// of the parameters of the caller function. For example, ReSharper annotates
+/// the parameter of <see cref="System.ArgumentNullException"/>.
+/// </summary>
+/// <example><code>
+/// void Foo(string param) {
+///   if (param == null)
+///     throw new ArgumentNullException("par"); // Warning: Cannot resolve symbol
+/// }
+/// </code></example>
+/// <summary>
+/// Describes dependency between method input and output.
+/// </summary>
+/// <syntax>
+/// <p>Function Definition Table syntax:</p>
+/// <list>
+/// <item>FDT      ::= FDTRow [;FDTRow]*</item>
+/// <item>FDTRow   ::= Input =&gt; Output | Output &lt;= Input</item>
+/// <item>Input    ::= ParameterName: Value [, Input]*</item>
+/// <item>Output   ::= [ParameterName: Value]* {halt|stop|void|nothing|Value}</item>
+/// <item>Value    ::= true | false | null | notnull | canbenull</item>
+/// </list>
+/// If method has single input parameter, it's name could be omitted.<br/>
+/// Using <c>halt</c> (or <c>void</c>/<c>nothing</c>, which is the same) for method output
+/// means that the methos doesn't return normally (throws or terminates the process).<br/>
+/// Value <c>canbenull</c> is only applicable for output parameters.<br/>
+/// You can use multiple <c>[ContractAnnotation]</c> for each FDT row, or use single attribute
+/// with rows separated by semicolon. There is no notion of order rows, all rows are checked
+/// for applicability and applied per each program state tracked by R# analysis.<br/>
+/// </syntax>
+/// <examples><list>
+/// <item><code>
+/// [ContractAnnotation("=&gt; halt")]
+/// public void TerminationMethod()
+/// </code></item>
+/// <item><code>
+/// [ContractAnnotation("halt &lt;= condition: false")]
+/// public void Assert(bool condition, string text) // regular assertion method
+/// </code></item>
+/// <item><code>
+/// [ContractAnnotation("s:null =&gt; true")]
+/// public bool IsNullOrEmpty(string s) // string.IsNullOrEmpty()
+/// </code></item>
+/// <item><code>
+/// // A method that returns null if the parameter is null,
+/// // and not null if the parameter is not null
+/// [ContractAnnotation("null =&gt; null; notnull =&gt; notnull")]
+/// public object Transform(object data) 
+/// </code></item>
+/// <item><code>
+/// [ContractAnnotation("=&gt; true, result: notnull; =&gt; false, result: null")]
+/// public bool TryParse(string s, out Person result)
+/// </code></item>
+/// </list></examples>
+/// <summary>
+/// Tells code analysis engine if the parameter is completely handled when the invoked method is on stack.
+/// If the parameter is a delegate, indicates that delegate is executed while the method is executed.
+/// If the parameter is an enumerable, indicates that it is enumerated while the method is executed.
+/// </summary>
+// ReSharper disable ConditionIsAlwaysTrueOrFalse
+/// <summary>
+/// Ensures for <see cref="IEnumerable{T}"/>.
+/// </summary>
+/// <remarks>MULTIPLE ENUMERATION OF PASSED ENUMERABLE IS POSSIBLE.</remarks>
+//succeed and return as soon as we see a non-whitespace character
+//[CategoryFilter("Things.HasItems")]
+// Sp < sa when case sensitive (S < s), but Sp > sa case insensitive (p > a)
+// Validate with comparer (order is reversed)
+// sa > Sp when case sensitive (s > S), but sa < Sp case insensitive (a < p)
+// Validate with comparer (order is reversed)
+// sa > Sa when case sensitive, but sa == Sp when case insensitive
+// Validate with comparer (order is reversed)
+// Sa < sa when case sensitive, but Sa == sa when case insensitive
+// Validate with comparer (order is reversed)
+// sa < Sb < sc when case sensitive, but not when case insensitive
+// Validate with comparer (order is reversed)
+// sa < Sb < sc when case sensitive, but not when case insensitive
+// Validate with comparer (order is reversed)
+// sa < Sb < sc when case sensitive, but not when case insensitive
+// Validate with comparer (order is reversed)
+//google.com:8080";
+//google.com:8080";
+// ReSharper disable ExpressionIsAlwaysNull

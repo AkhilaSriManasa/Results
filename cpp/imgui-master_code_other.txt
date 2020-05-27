@@ -1,0 +1,156 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/imgui-master\imgui-master\examples\libs\gl3w\GL\gl3w.c
+// warning C4055: 'type cast' : from data pointer 'void *' to function pointer
+// warning C4152: nonstandard extension, function/data pointer conversion in expression
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/imgui-master\imgui-master\examples\libs\usynergy\uSynergy.c
+/*
+//---------------------------------------------------------------------------------------------------------------------
+//	Internal helpers
+//---------------------------------------------------------------------------------------------------------------------
+/**
+/**
+/**
+// Don't trace if we don't have a trace function
+/**
+/**
+/**
+/**
+/**
+// Set header size
+/* Total size of reply */
+/* Size of body */
+// Send reply
+// Reset reply buffer write pointer
+/**
+// Skip if no callback is installed
+// Send callback
+/**
+// Skip if no callback is installed
+// Send callback
+/**
+// Skip if no callback is installed
+// Send callback
+/**
+// We have a packet!
+// Welcome message
+//		kMsgHello			= "Synergy%2i%2i"
+//		kMsgHelloBack		= "Synergy%2i%2i%s"
+// Send reply failed, let's try to reconnect
+// Let's assume we're connected
+// Screen info. Reply with DINF
+//		kMsgQInfo			= "QINF"
+//		kMsgDInfo			= "DINF%2i%2i%2i%2i%2i%2i%2i"
+// mx?
+// my?
+// Do nothing?
+//		kMsgCInfoAck		= "CIAK"
+// Do nothing?
+//		kMsgCResetOptions	= "CROP"
+// Screen enter. Reply with CNOP
+//		kMsgCEnter 			= "CINN%2i%2i%4i%2i"
+// Obtain the Synergy sequence number
+// Call callback
+// Screen leave
+//		kMsgCLeave 			= "COUT"
+// Call callback
+// Mouse down
+//		kMsgDMouseDown		= "DMDN%1i"
+// Mouse up
+//		kMsgDMouseUp		= "DMUP%1i"
+// Mouse move. Reply with CNOP
+//		kMsgDMouseMove		= "DMMV%2i%2i"
+// Mouse wheel
+//		kMsgDMouseWheel		= "DMWM%2i%2i"
+//		kMsgDMouseWheel1_0	= "DMWM%2i"
+// Key down
+//		kMsgDKeyDown		= "DKDN%2i%2i%2i"
+//		kMsgDKeyDown1_0		= "DKDN%2i%2i"
+//uint16_t id = sNetToNative16(message+8);
+// Key repeat
+//		kMsgDKeyRepeat		= "DKRP%2i%2i%2i%2i"
+//		kMsgDKeyRepeat1_0	= "DKRP%2i%2i%2i"
+//		uint16_t count = sNetToNative16(message+12);
+// Key up
+//		kMsgDKeyUp			= "DKUP%2i%2i%2i"
+//		kMsgDKeyUp1_0		= "DKUP%2i%2i"
+//uint16 id=Endian::sNetToNative(sbuf[4]);
+// Joystick buttons
+//		kMsgDGameButtons	= "DGBT%1i%2i";
+// Copy button state, then send callback
+// Joystick sticks
+//		kMsgDGameSticks		= "DGST%1i%1i%1i%1i%1i";
+// Copy stick state, then send callback
+// Set options
+//		kMsgDSetOptions		= "DSOP%4I"
+// Keepalive, reply with CALV and then CNOP
+//		kMsgCKeepAlive		= "CALV"
+// now reply with CNOP
+// Clipboard message
+//		kMsgDClipboard		= "DCLP%1i%4i%s"
+//
+// The clipboard message contains:
+//		1 uint32:	The size of the message
+//		4 chars: 	The identifier ("DCLP")
+//		1 uint8: 	The clipboard index
+//		1 uint32:	The sequence number. It's zero, because this message is always coming from the server?
+//		1 uint32:	The total size of the remaining 'string' (as per the Synergy %s string format (which is 1 uint32 for size followed by a char buffer (not necessarily null terminated)).
+//		1 uint32:	The number of formats present in the message
+// And then 'number of formats' times the following:
+//		1 uint32:	The format of the clipboard data
+//		1 uint32:	The size n of the clipboard data
+//		n uint8:	The clipboard data
+// Parse clipboard format header
+// Call callback
+// Unknown packet, could be any of these
+//		kMsgCNoop 			= "CNOP"
+//		kMsgCClose 			= "CBYE"
+//		kMsgCClipboard 		= "CCLP%1i%4i"
+//		kMsgCScreenSaver 	= "CSEC%1i"
+//		kMsgDKeyRepeat		= "DKRP%2i%2i%2i%2i"
+//		kMsgDKeyRepeat1_0	= "DKRP%2i%2i%2i"
+//		kMsgDMouseRelMove	= "DMRM%2i%2i"
+//		kMsgEIncompatible	= "EICV%2i%2i"
+//		kMsgEBusy 			= "EBSY"
+//		kMsgEUnknown		= "EUNK"
+//		kMsgEBad			= "EBAD"
+// Reply with CNOP maybe?
+/**
+/**
+/* Receive data (blocking) */
+/* Receive failed, let's try to reconnect */
+/*	If we didn't receive any data then we're probably still polling to get connected and
+/* Check for timeouts */
+/* Timeout after 2 secs of inactivity (we received no CALV) */
+/* Eat packets */
+/* Grab packet length and bail out if the packet goes beyond the end of the buffer */
+/* Process message */
+/* Move packet to front of buffer */
+/* Throw away over-sized packets */
+/* Oversized packet, ditch tail end */
+// 4 bytes for the size field
+/* Receive failed, let's try to reconnect */
+//---------------------------------------------------------------------------------------------------------------------
+//	Public interface
+//---------------------------------------------------------------------------------------------------------------------
+/**
+/* Zero memory */
+/* Initialize to default state */
+/**
+/* Update context, receive data, call callbacks */
+/* Try to connect */
+/**
+// Calculate maximum size that will fit in a reply packet
+/* Message size */
+/* Message ID */
+/* Clipboard index */
+/* Sequence number */
+/* Rest of message size (because it's a Synergy string from here on) */
+/* Number of clipboard formats */
+/* Clipboard format */
+/* Clipboard data length */
+// Clip text to max length
+// Assemble packet
+/* Clipboard index */
+/* Rest of message size: numFormats, format, length, data */
+/* Number of formats (only text for now) */

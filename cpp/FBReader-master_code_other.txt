@@ -1,0 +1,19 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\extract_i18n.py
+#! /usr/bin/python
+# from pprint import pprint
+# pprint(self._resources)
+# coll.process(sys.argv[1])
+# vim:ts=4:sw=4:et
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\restore-i18n.py
+#! /usr/bin/python
+# vim:ts=4:sw=4:et
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\unicodeDataConverter.py
+#!/usr/bin/python
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/FBReader-master\FBReader-master\tools\update-i18n.py
+#! /usr/bin/python2.4
+#parser.add_option('-d', '--dir', dest='dirname', default='.', help='specify directory where files reside')
+# vim:ts=4:sw=4:et

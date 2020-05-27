@@ -1,0 +1,684 @@
+﻿                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright {yyyy} {name of copyright owner}
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+PinyinSearchLibrary
+===================
+	The library of PinyinSearch,a Java Library which provide data parsing methods, 
+	data matching method and so on for T9 search and Qwerty search.
+	
+	PinyinSearch = T9Search + QwertySearch
+	
+**If you're looking for other versions search project, you can find all of them at the following links:**
+
+Java(Android):
+[PinyinSearch](https://github.com/handsomezhou/PinyinSearchLibrary)
+[T9Search](https://github.com/handsomezhou/T9SearchLibrary)
+[QwertySearch](https://github.com/handsomezhou/QwertySearchLibrary)
+
+C++(Qt):
+[PinyinSearch](https://github.com/handsomezhou/pinyinsearch4cpp)
+
+Who uses it
+---------------
+PinyinSearchLibrary is currently used in some awesome Android apps. Here's a list of some of them: 
+* [锤子桌面](http://www.wandoujia.com/apps/com.smartisanos.home)
+* [X股票助手](http://www.wandoujia.com/apps/com.handsomezhou.oscillationwave)
+* [X桌面助手](http://www.wandoujia.com/apps/com.handsomezhou.xdesktophelper) [[source code](https://github.com/handsomezhou/XDesktopHelper)]
+
+If you are using PinyinSearchLibrary in your app and would like to be listed here, please let me know via <p><a href="mailto:quanjunzhou@gmail.com">quanjunzhou@gmail.com</a></p>
+
+Features
+---------------
+ * Support T9 search
+ * Support Qwerty search
+ * Support Chinese character search
+ * Support Pinyin search
+ * Support English search
+ * Support polyphone search
+ * Support highlight
+
+Depend
+---------------
+### The library of pinyin4j: 
+	Pinyin4j is a popular Java library supporting convertion between Chinese characters 
+	and most popular Pinyin systems. The output format of pinyin could be customized.
+[original pinyin4j](http://pinyin4j.sourceforge.net/) or [light pinyin4j](https://github.com/handsomezhou/Pinyin4j/)
+
+Renderings
+---------------
+<img src="https://github.com/handsomezhou/PinyinSearchLibrary/blob/master/external_res/image/ContactsSearch.gif"/>
+<img src="https://github.com/handsomezhou/PinyinSearchLibrary/blob/master/external_res/image/AppSearch.gif"/>
+
+API
+---------------
+### Data structure:PinyinUnit
+	PinyinUnit as a base data structure to save the string that Chinese characters  
+	converted to Pinyin characters.
+	
+### Function:
+	public static void parse(PinyinSearchUnit pinyinSearchUnit);
+	public static boolean match(PinyinSearchUnit pinyinSearchUnit,String search);
+	public static String getSortKey(PinyinSearchUnit pinyinSearchUnit);
+	public static String getFirstLetter(PinyinSearchUnit pinyinSearchUnit);
+	public static String getFirstCharacter(PinyinSearchUnit pinyinSearchUnit);
+	public static boolean isKanji(char chr);
+
+### Function call:
+	PinyinUtil.parse(...);
+	T9Util.match(...);
+	QwertyUtil.match(...);
+	PinyinUtil.getSortKey(...);
+	PinyinUtil.getFirstLetter(...);
+	PinyinUtil.getFirstCharacter(...);
+	PinyinUtil.isKanji(...);
+	
+Usage
+---------------	
+### Function call in detail:
+	Import packages when use PinyinSearch Library(Dependent on pinyin4j-x.x.x.jar):
+	import com.pinyinsearch.util.*;
+	import com.pinyinsearch.model.*;
+	
+	The first step:  Data parsing  (ps:Must init baseData of PinyinSearchUnit before parse)
+	    * (PinyinUtil.parse(...))
+    The second step: Data matching 
+	    * (T9Util.match(...) or QwertyUtil.match(...))
+	
+	For details, please see project ContactsSearch and AppSearch.
+
+### JAR download
+[pinyinsearch.jar](https://github.com/handsomezhou/PinyinSearchLibrary/blob/master/external_res/jar/pinyinsearch.jar?raw=true)
+
+original [pinyin4j-2.5.0.jar](https://github.com/handsomezhou/PinyinSearchLibrary/blob/master/external_res/jar/pinyin4j-2.5.0.jar?raw=true) Or light [pinyin4j.jar](https://github.com/handsomezhou/PinyinSearchLibrary/blob/master/external_res/jar/pinyin4j.jar?raw=true)(recommend)
+	 
+### Demo Apk
+[ContactsSearch](https://github.com/handsomezhou/PinyinSearchLibrary/blob/master/external_res/bin/ContactsSearch.apk?raw=true)
+
+[AppSearch](https://github.com/handsomezhou/PinyinSearchLibrary/blob/master/external_res/bin/AppSearch.apk?raw=true)
+
+Algorithm introduction
+---------------
+1.[Pinyin search contacts analysis and implementation](http://blog.csdn.net/zjqyjg/article/details/41360769)
+
+2.[T9 search contacts analysis and implementation](http://blog.csdn.net/zjqyjg/article/details/41182911)
+
+3.[Qwerty search contacts analysis and implementation](http://blog.csdn.net/zjqyjg/article/details/41318907)
+
+License 
+---------------
+	Copyright 2014 handsomezhou
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+		
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+// Context of the app under test.
+// load fragment
+// TODO Auto-generated method stub
+/**
+// ms
+//Toast.makeText(context, "AppChangedReceiver["+intent.getAction()+"]", Toast.LENGTH_LONG).show();
+//Toast.makeText(context, "AppChangedReceiver ACTION_PACKAGE_ADDED", Toast.LENGTH_LONG).show();
+//Toast.makeText(context, "AppChangedReceiver ACTION_PACKAGE_CHANGED", Toast.LENGTH_LONG).show();
+//AppInfoHelper.getInstance().setAppInfoChanged(true);
+//Toast.makeText(context, "AppChangedReceiver ACTION_PACKAGE_REMOVED", Toast.LENGTH_LONG).show();
+//AppInfoHelper.getInstance().setAppInfoChanged(true);
+/* Start: OnNavigationBarLayout */
+/* End: OnNavigationBarLayout */
+/**
+/**
+/**
+/* start: T9 search view */
+/* end: T9 search view */
+/* start: Qwerty search view */
+/* end: Qwerty search view */
+/* start: T9 search tab */
+/* end: T9 search tab */
+/* start: Qwerty search tab */
+/* end: Qwerty search tab */
+// Toast.makeText(getContext(),addressBookView.getTag().toString()+"+++"
+// , Toast.LENGTH_LONG).show();
+/* start: OnAppInfoLoad */
+/* end: OnAppInfoLoad */
+/* start: OnTabChange */
+// ((T9SearchFragment) fragment).updateView(tabChangeState);
+/* end: OnTabChange */
+/*start: OnSearchBox*/
+/*end: OnSearchBox*/
+/* start: OnT9TelephoneDialpadView */
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/* end: OnT9TelephoneDialpadView */
+// TODO Auto-generated method stub
+//setAppInfoChanged(false);
+//Toast.makeText(mContext, "endLoadTime-startLoadTime["+(endLoadTime-startLoadTime)+"]", Toast.LENGTH_LONG).show();
+//appInfos.addAll(nonKanjiStartAppInfos);
+/*Start: merge nonKanjiStartAppInfos and kanjiStartAppInfos*/
+//Log.i(TAG, "nonKanfirstLetter=["+nonKanfirstLetter+"]["+nonKanjiStartAppInfos.get(i).getLabel()+"]["+Integer.valueOf(nonKanjiStartAppInfos.get(i).getLabel().charAt(0))+"]");
+//Log.i(TAG, "lastIndex="+lastIndex);
+/*End: merge nonKanjiStartAppInfos and kanjiStartAppInfos*/
+/*		for(int i=0; i<appInfos.size(); i++){
+//Toast.makeText(context,"["+ appInfos.get(0).getLabel()+"]["+appInfos.get(0).getPackageName()+"]", Toast.LENGTH_LONG).show();
+// search by LabelPinyinUnits;
+// search by LabelPinyinUnits;
+/*QuickAlphabeticBar.DEFAULT_INDEX_CHARACTER*/'#')
+//case ALL_APP:
+/**
+// as the sort key word
+// save the mLabel converted to Pinyin characters.
+// Used to save the type of search
+// Used to save the type of Match Keywords.(label)
+//the match start  position of mMatchKeywords in original string(label).
+//the match length of mMatchKeywords in original string(name or phoneNumber).
+/*SYSTEM_APP,
+// TODO Auto-generated constructor stub
+// TODO Auto-generated method stub
+/**
+// tag
+// selected_unfocused Icon
+// selected_focused Icon
+// unselected Icon
+// text
+// TODO Auto-generated method stub
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//without underline
+/**
+// Set up touch listener for non-text box views to hide keyboard.
+// If a layout container, iterate over children and seed recursion.
+/**
+// mTitleTv.setTextSize(mContext.getResources().getDimension(R.dimen.tab_index_text_size));
+/*
+/* start: search box */
+/* end: search box */
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/**
+/**
+/**
+// this Custom View As the T9TelephoneDialpadView
+// of children
+/**
+/**
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+// Toast.makeText(mContext,
+// "onDialInputTextChanged[" + s.toString() + "]",
+// Toast.LENGTH_SHORT).show();
+// In order to prevent the soft keyboard pops up,but also can
+// not make EditText get focus.
+// the listener has consumed the event
+// Toast.makeText(mContext, "addSingleDialCharacter[" + addCharacter +
+// "]",
+// Toast.LENGTH_SHORT).show();
+//data
+/*Start: OnClickListener*/
+/*End: OnClickListener*/
+//this.setPadding(PADDING_LEFT_DEFAULT, PADDING_TOP_DEFAULT, PADDING_RIGHT_DEFAULT, PADDING_BOTTOM_DEFAULT);
+//lp.setMargins(MARGIN_LEFT_DEFAULT, MARGIN_TOP_DEFAULT, MARGIN_RIGHT_DEFAULT, MARGIN_BOTTOM_DEFAULT);
+//change tab
+//click tab
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+// Context of the app under test.
+// load fragment
+// TODO Auto-generated method stub
+/**
+//public static final String PINYIN_FIRST_LETTER_DEFAULT_VALUE="#";
+//void onContactsSelectedChanged(List<Contacts> contacts);
+//clear data
+//other phoneNumber
+//refresh view
+//show the first alphabet of name
+//show name and phone number
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/*Toast.makeText(mContext,PinyinUtil.getFirstCharacter(contacts.getNamePinyinUnits()),
+/**
+/**
+/**
+//private EditText mSearchEt;
+/*Start: OnContactsLoad*/
+/*End: OnContactsLoad*/
+/*start: OnSearchBox*/
+/*end: OnSearchBox*/
+/*Start: OnContactsOperationView*/
+//Toast.makeText(mContext, "onContactsCall"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+//Toast.makeText(mContext, "onContactsSms"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+/*Start: OnContactsOperationView*/
+/*start:OnT9TelephoneDialpadView*/
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/*end:OnT9TelephoneDialpadView*/
+/*start:OnContactsLoad*/
+//just background printing contacts information
+//ContactsHelper.getInstance().showContactsInfo();
+//ContactsIndexHelper.getInstance().showContactsInfo();
+/*end:OnContactsLoad*/
+/*start:OnContactsOperationView*/
+//Toast.makeText(mContext, "onContactsCall"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+//Toast.makeText(mContext, "onContactsSms"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+/*end:OnContactsOperationView*/
+// The basic data used for the search
+// The search results from the basic data
+/*
+/*
+//(id+phoneNumber)as key
+/* private Handler mContactsHandler=new Handler(); */
+// registerContentObserver();
+// unregisterContentObserver();
+// the system will free other memory.
+// public void setBaseContacts(List<Contacts> baseContacts) {
+// mBaseContacts = baseContacts;
+// }
+// public void setSearchContacts(List<Contacts> searchContacts) {
+// mSearchContacts = searchContacts;
+// }
+/**
+/**
+// add all base data to search
+//mSearchContacts.addAll(mBaseContacts);
+/**
+// search by name;
+// search by phone number
+/**
+// add all base data to search
+//mSearchContacts.addAll(mBaseContacts);
+/**
+// search by name;
+// search by phone number
+// just for debug
+//List<PinyinUnit> pinyinUnit = currentCoutacts.getPinyinSearchUnit().getPinyinUnits();//.getNamePinyinUnits();
+//.getNamePinyinUnits();
+//	Log.i(TAG, "id=["+id+"]name=["+displayName+"]"+"number=["+phoneNumber+"]");
+//contacts.addAll(nonKanjiStartContacts);
+//merge nonKanjiStartContacts and kanjiStartContacts
+//Log.i(TAG, "nonKanfirstLetter=["+nonKanfirstLetter+"]");
+//Log.i(TAG, "lastIndex="+lastIndex);
+/*for (int i = 0; i < contacts.size(); i++) {
+/**
+/**
+/*public void setContactsIndexs(List<ContactsIndex> contactsIndexs) {
+/*public void showContactsInfo2(){
+//Log.i("ContactsContacts", "indexKey=["+mContactsIndexs.get(i).getIndexKey()+"]");
+// as the sort key word
+// save the mName converted to Pinyin characters.
+// Used to save the type of search
+// Used to save the type of Match Keywords.(name or phoneNumber)
+//the match start  position of mMatchKeywords in original string(name or phoneNumber).
+//the match length of mMatchKeywords in original string(name or phoneNumber).
+//whether select contact
+//whether the first multiple Contacts
+//whether hide multiple contacts
+//whether belong multiple contacts phone, the value of the variable will not change once you set.
+//whether hide operation view
+//point the contacts information who has multiple numbers. 
+/*public static Comparator<List<Contacts>> mAscComparator = new Comparator<List<Contacts>>() {
+// not deep copy
+/*	public void showContacts(){
+/**
+//'#','A'~'Z'
+/*public void setContacts(List<Contacts> contacts) {
+/**
+/**
+/**
+/**
+//without underline
+/**
+// Set up touch listener for non-text box views to hide keyboard.
+// If a layout container, iterate over children and seed recursion.
+/**
+// listview
+// data
+// adapter
+// mContactsIndexView.setBackgroundColor(getResources().getColor(R.color.cyan3));
+// setCurrentSelectChar('#');
+/*mIndexValueLv.setOnItemClickListener(new OnItemClickListener() {
+//set current index key
+//set current index value
+//				if(contacts.get(j-1).getName().charAt(0)!=contacts.get(j).getName().charAt(0)){
+/*	for (int j = 0; j < mContactsIndex.getContacts().size(); j++) {
+/*Toast.makeText(mContext,PinyinUtil.getFirstCharacter(contacts.getNamePinyinUnits()),
+// ms
+// mQuickAlphabeticLv.setSelection(position);
+//Log.i(TAG, "onQuickAlphabeticBarDown");
+// hideView(mContactsIndexView);
+/*start:OnContactsAdapter*/
+// TODO Auto-generated method stub
+/*end:OnContactsAdapter*/
+// TODO Auto-generated method stub
+// Log.i(TAG,
+// "firstVisibleItem=["+firstVisibleItem+"]visibleItemCount=["+visibleItemCount+"totalItemCount=["+totalItemCount+"]");
+/*public static void setSelectCharacters(char[] mSelectCharacters) {
+//Log.i(TAG,"index="+index);
+//show select char
+//reference: http://blog.csdn.net/jack_l1/article/details/14165291
+//Log.i(TAG,"position="+position);
+//hide select char
+//xPos=getMeasuredWidth()/2- mOtherIndexPaint.measureText(String.valueOf(mSelectCharacters[i])); 
+/* start: search box */
+/* end: search box */
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/**
+/**
+// this Custom View As the T9TelephoneDialpadView
+// of children
+/**
+/**
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+// Toast.makeText(mContext,
+// "onDialInputTextChanged[" + s.toString() + "]",
+// Toast.LENGTH_SHORT).show();
+// In order to prevent the soft keyboard pops up,but also can
+// not make EditText get focus.
+// the listener has consumed the event
+// Toast.makeText(mContext, "addSingleDialCharacter[" + addCharacter +
+// "]",
+// Toast.LENGTH_SHORT).show();
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+// Context of the app under test.
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//the original string
+//the sub string of base data which search by key word
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.cnblogs.com/bomo/archive/2012/12/25/2833081.html
+//Whether Pinyin
+//save starting index position that the variables in the original string. 
+/*
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// init Pinyin Output Format
+/**
+// add continuous non-kanji characters to PinyinUnit
+// add single Chinese characters Pinyin(include Multiple Pinyin)
+// to PinyinUnit
+// add continuous non-kanji characters to PinyinUnit
+/**
+/**
+/**
+/**
+// no more than one pinyin
+// more than one pinyin.//we must delete the same pinyin
+// string,because pinyin without tone.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// private static final String TAG="QwertyMatchPinyinUnits";
+/**
+//search by  original string
+//search by pinyin characters
+/**
+// match success
+// match pinyin first character
+// delete the match character
+// The string of "search" is the string of pinyinBaseUnit.getPinyin() of a subset. means match success.
+// match quanpin success
+// The string of pinyinBaseUnit.getPinyin() is the string of "search" of a subset.
+// mismatch
+// non-pure Pinyin
+// The string of "search" is the string of pinyinBaseUnit.getPinyin() of a subset.
+// match all non-pure pinyin
+// The string of pinyinBaseUnit.getPinyin() is the string of "search" of a subset.
+// match case:[Non-Chinese characters]+[Chinese characters]
+// for example:baseData="Tony测试"; match this case:"onycs"
+// start [Non-Chinese characters]+[Chinese characters]
+// end [Non-Chinese characters]+[Chinese characters]
+// in fact,if pyUnit.isPinyin()==false, pyUnit.getQwertyPinyinUnitIndex().size()==1. The function of findPinyinUnits() will return false.
+// mismatch
+// in fact,if pyUnit.isPinyin()==false, pyUnit.getQwertyPinyinUnitIndex().size()==1. The function of findPinyinUnits() will return false.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//private static final String TAG="T9MatchPinyinUnits";
+/**
+/**
+//pyUnit=pinyinUnits.get(i);
+//for(int j=0; j<pyUnit.getPinyinBaseUnitIndex().size(); j++){
+// }
+/**
+//match success
+// match pinyin first character
+//delete the match character
+//The string of "search" is the string of t9PinyinUnit.getNumber() of a subset. means match success.
+//match quanpin  success
+//The string of t9PinyinUnit.getNumber() is the string of "search" of a subset.
+//mismatch
+//non-pure Pinyin
+//The string of "search" is the string of t9PinyinUnit.getNumber() of a subset.
+//match all non-pure pinyin 
+//The string of t9PinyinUnit.getNumber() is the string of "search" of a subset.
+// match case:[Non-Chinese characters]+[Chinese characters]
+//for example:baseData="Tony测试"; match this case:"onycs"<===>"66927" 
+//start [Non-Chinese characters]+[Chinese characters]
+//end [Non-Chinese characters]+[Chinese characters]
+//in fact,if pyUnit.isPinyin()==false, pyUnit.getPinyinBaseUnitIndex().size()==1. The function of findPinyinUnits() will return false.
+//mismatch
+//in fact,if pyUnit.isPinyin()==false, pyUnit.getPinyinBaseUnitIndex().size()==1.  The function of findPinyinUnits() will return false.

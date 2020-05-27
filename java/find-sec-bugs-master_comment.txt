@@ -1,0 +1,3282 @@
+﻿/**
+/**
+/**
+/**
+/**
+/**
+/**
+// set through SystemProperties
+// Environment variables containing dots are difficult to setup in
+// bash. Thus also accept underscores instead of dots.
+/**
+/*** Getters and setters only **/
+/**
+/**
+/**
+// Get the value of the Access-Control-Allow-Origin parameter (Second argument from setHeader(2nd,1rst))
+//Ignore unknown/dynamic header name
+//If the value is tainted
+//If the value is a wildcard
+/**
+//Static method call to next method can be differentiate from instance calls
+// by the presence of a dollar sign at the end of the class name
+//    PredictableRandomDetector: [0038]  pop2
+//    PredictableRandomDetector: [0039]  getstatic
+//    PredictableRandomDetector: [0042]  invokevirtual   scala/util/Random$.nextBoolean ()
+//    [...]
+//    PredictableRandomDetector: [0092]  getstatic
+//    PredictableRandomDetector: [0095]  invokevirtual   scala/util/Random$.nextDouble ()D
+//    PredictableRandomDetector: [0098]  pop2
+//    PredictableRandomDetector: [0099]  getstatic
+//    PredictableRandomDetector: [0102]  invokevirtual   scala/util/Random$.nextFloat ()F
+//
+//
+//
+//
+//
+//
+//
+//
+// printOpCode(seen);
+// JVMRandom has specific static version of nextLong()
+// RandomUtils has only static methods
+// RandomStringUtils has only static methods
+/**
+/**
+//code.google.com/p/saferegex/">Safe Regex</a>
+//printOpCode(seen);
+//        print(level, "level = " + level);
+//
+//        print(level, "Analysing " + regex.substring(0, startPosition + 1));
+//            print(level, "[" + i + "] = '" + regex.charAt(i) + "'");
+//                print(level, "<<<<");
+//                print(level, ">>>>");
+//                print(level, "Restarting at " + i);
+//        print(level, "END!");
+/**
+//Debug method
+//    private void print(int level,Object obj) {
+//        System.out.println(lvl(level) + "> "+ obj);
+//    }
+//
+//    private String lvl(int level) {
+//        StringBuilder str = new StringBuilder();
+//        for(int i=0;i<level;i++) {
+//            str.append("-\t");
+//        }
+//        return str.toString();
+//    }
+/**
+//Not form implementation
+//ValidatorForm without a validate method is just like a regular ActionForm
+//
+/**
+/**
+//
+/**
+//printOpCode(seen);
+// The LocalBroadcastManager object is safe. The broadcast doesn't leave the application scope.
+// We check if the class extends android.support.v4.content.LocalBroadcastManager
+// We will also check if the class is named "LocalBroadcastManager" in case the version in the namespace changes.
+//
+/**
+//printOpCode(seen);
+// getClassConstantOperand().equals("java/net/Socket")
+//List of method mark as external file access
+//
+//
+/**
+//The class extends WebChromeClient
+//Not the target of this detector
+//The presence of onGeolocationPermissionsShowPrompt is not enforce for the moment
+//Since the logic implemented need to be analyze by a human, all implementation will be flagged.
+//
+/**
+//printOpCode(seen);
+//First item on the stack is the last
+//
+/**
+//
+/**
+//printOpCode(seen);
+//First item on the stack is the last
+//
+/**
+//    public static void printOpCode(InstructionHandle insHandle, ConstantPoolGen cpg) {
+//        System.out.print("[" + String.format("%02d", insHandle.getPosition()) + "] ");
+//        printOpCode(insHandle.getInstruction(),cpg);
+//    }
+/**
+/**
+/**
+//This additionnal call allow the support of hardcoded value passed to String constructor
+//new String("HARDCODE")
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//Heuristic to find static
+// Weblogic 12
+//     [0076]  ldc_w   "true"
+//     [0079]  invokestatic   weblogic/utils/StringUtils.valueOf (Ljava/lang/Object;)Ljava/lang/String;
+//     [0082]  invokestatic   java/lang/Boolean.valueOf (Ljava/lang/String;)Ljava/lang/Boolean;
+//     [0085]  invokevirtual   java/lang/Boolean.booleanValue ()Z
+//     [0088]  invokevirtual   org/apache/taglibs/standard/tag/rt/core/OutTag.setEscapeXml (Z)V
+/**
+//     [0076]  ldc_w   "false"
+//     [0079]  ldc   java/lang/String
+//     [0081]  ldc_w   "escapeXml"
+//     [0084]  invokestatic   weblogic/jsp/internal/jsp/utils/JspRuntimeUtils.convertType (Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+//     [0087]  checkcast
+//     [0090]  invokevirtual   org/apache/taglibs/standard/tag/el/core/OutTag.setEscapeXml (Ljava/lang/String;)V
+//property name
+//type
+//value
+/**
+/**
+/**
+/**
+/**
+/**
+//System.out.println("==="+m.getName()+"===");
+//ByteCode.printOpCode(loc.getHandle().getInstruction(), cpg);
+// The following call should push the cookie onto the stack
+// We will use the position of the object on the stack to track the cookie
+//
+//
+/**
+// Loop until we find the setSecure call for this cookie
+// We check if the index of the cookie used for this invoke is the same as the one provided
+/**
+//
+/**
+//Max age equal or greater than one year
+//
+/**
+//
+/**
+//To suspect that an invalid String representation is being build,
+//we identify the construction of a MessageDigest and
+//the use of a function that trim leading 0.
+//No instruction .. nothing to do
+//                    ByteCode.printOpCode(inst, cpg);
+//MessageDigest.digest is called
+//The conversion must occurs after the digest was created
+//
+/**
+/**
+//en.wikipedia.org/wiki/Authenticated_encryption">Wikipedia: Authenticated encryption</a>
+//docs.oracle.com/javase/7/docs/technotes/guides/security/StandardNames.html#impl
+/*
+//Some cipher will not have mode specified (ie: "RSA" .. issue GitHub #24)
+//Avoid non-block-cipher algo
+/**
+/**
+//
+/**
+/**
+//cwe.mitre.org/data/deffinitions/209.html).
+//        printOpCode(seen);
+// If has parameters
+// No parameter (only printStackTrace)
+// By following the parent classes of vulnerable class to print
+// By following the recommendation from the CERT Oracle Secure Coding Standard for Java
+/**
+/**
+//printOpCode(seen);
+//
+/**
+/**
+//printOpCode( seen );
+//
+/**
+//
+//
+//
+//Both conditions - setSSLOnConnect and setSSLCheckServerIdentity
+//haven't been found in the same instance (verifing instance by class name + host name)
+/**
+//Conditions that needs to fill to identify the vulnerability
+//            ByteCode.printOpCode(inst, cpg);
+//MessageDigest.digest is called
+//init() with one parameter
+//init() with a second parameter an instance of SecureRandom
+//Both condition have been found in the same method
+//
+/**
+/**
+//Conditions that needs to fill to identify the vulnerability
+//KeyPairGenerator.getInstance is called
+// getInstance(String) or getInstance(String, Provider)
+// getInstance(String, String)
+//KeyPairGenerator.initialize
+//init() with one parameter
+//init() with a second parameter an instance of SecureRandom
+// new RSAKeyGenParameterSpec() is called
+//init() with one parameter
+//
+/**
+//printOpCode( seen );
+//
+/**
+/**
+//Detect if the method is doing decryption/unwrapping only. If it is the case, IV should not be generated from this point
+//therefore it is a false positive
+//First pass : it look for encryption and decryption mode to detect if the method does decryption only
+//ByteCode.printOpCode(inst,cpg);
+//INVOKEVIRTUAL javax/crypto/Cipher.init ((ILjava/security/Key;)V)
+// Wrapping and unwrapping are equivalent to encryption and decryption.
+//INVOKEVIRTUAL javax/crypto/Cipher.getIV (()[B)
+//Second pass : It look for encryption method and a potential preceding SecureRandom usage
+//IV was generate with the KeyGenerator
+//The cipher is in decrypt mode (no iv generation)
+//
+/**
+//printOpCode(seen);
+//
+/**
+//printOpCode(seen);
+//Bonus information for the message
+//Extract the value from the constant string
+//
+//
+/**
+/**
+//Extract the value being pushed..
+//Null if the value passed isn't constant
+//Extract the value being pushed..
+//Null if the value passed isn't constant
+//
+//
+//Lower priority for SHA-1
+//
+//
+/**
+//DefaultHttpClient constructor with no parameter
+//System.out.println("SSLContext.getInstance(" + this.getSigConstantOperand() + ")");
+//Null if the value passed isn't constant
+/**
+/**
+//stackoverflow.com/a/1201102/89769">Sample of code being used</a>
+//The class extends X509TrustManager
+//Not the target of this detector
+//
+//
+/**
+/**
+/**
+//ByteCode.printOpCode(invoke,cpg);
+/**
+/**
+//docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html">Partial list of ciphers</a>
+/**
+//cipherValue = cipherValue.toLowerCase();
+/**
+/**
+//docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html">Partial list of ciphers</a>
+/**
+/**
+//
+//
+//
+/**
+/**
+//
+// If the method is not annotated with `@RequestMapping`, there is no vulnerability.
+// If the `@RequestMapping` annotation is used without the `method` annotation attribute,
+// there is a vulnerability.
+// If the `@RequestMapping` annotation is used with the `method` annotation attribute equal to `{}`,
+// there is a vulnerability.
+// If the `@RequestMapping` annotation is used with the `method` annotation attribute but contains a mix of
+// unprotected and protected HTTP request methods, there is a vulnerability.
+// There cannot be a mix if there is no more than one element.
+// Return `true` as soon as we find at least one unprotected and at least one protected HTTP request method.
+/**
+/**
+//Every method mark with @javax.ws.rs.Path is mark as an Endpoint
+//
+/**
+/**
+//Every method mark with @javax.jws.WebMethod is mark as an Endpoint
+//
+/**
+/**
+//All call to ServletRequest
+//ServletRequest
+//
+//Passing the method name
+//
+//
+//HttpServletRequest
+//
+//
+//Extract the value being push..
+//Safe see if condition
+//
+//
+//
+//
+/**
+/**
+//
+//
+//
+//
+//
+//
+/**
+//
+/**
+//
+/**
+/**
+//tapestry.apache.org/">Official Website</a>
+//The package contains ".pages" and has some references to tapestry
+// then it must be an endpoint.
+//The constants pool contains all references that are reused in the bytecode
+// including full class name and interface name.
+//
+/**
+/**
+//wicket.apache.org/">Official website</a>
+//
+/**
+/**
+//
+/**
+//            ByteCode.printOpCode(inst,cpg);
+//                System.out.println("Field:"+fieldName);
+//invokestatic   java/nio/file/Files.setPosixFilePermissions (Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;
+//
+//invokestatic    java/nio/file/attribute/PosixFilePermissions.fromString(Ljava/lang/String;)Ljava/util/Set;
+//
+//
+//
+//
+//
+//
+//
+/**
+// We are not using a Scala-specific message because it doesn't have an embed code example
+/**
+//chmod 777 ..
+/**
+/**
+/**
+// collect sinks and report each once
+// add sink to multi map
+// sink cannot be influenced by other methods calls, so report it immediately
+/**
+/**
+// confirm sink to be tainted or called only with safe values
+// not a real class
+/**
+/**
+/**
+/**
+/**
+//1. Verify if the class used has a known sink
+//This will skip the most common lookup
+//2. Verify if the super classes match a known sink
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//            if(isExclude(source.getTaintSource())) { continue; }
+//            addMessage(bug, "Unknown source", source.getTaintSource());
+// higher priority is represented by lower integer
+// keep only one annotation per line
+// include only attributes that cannot change after object construction
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//        String classAndMethodName = fullMethodName.substring(0, fullMethodName.indexOf('('));
+//        int slashIndex = classAndMethodName.lastIndexOf('/');
+//        String shortName = classAndMethodName.substring(slashIndex + 1);
+//        if (shortName.endsWith(Const.CONSTRUCTOR_NAME)) {
+//            shortName = shortName.substring(0, shortName.indexOf('.'));
+//        }
+//        injectionPoint.setInjectableMethod(shortName.concat("(...)"));
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//(Condition extracted for clarity)
+//Either specifically safe for new line or URL encoded which encoded few other characters
+/**
+//Unlikely if the file exists
+/**
+/**
+/**
+/**
+/**
+//ip.setInjectableMethod(className.concat(".sendRedirect(...)"));
+//ip.setInjectableMethod(className + "." + methodName + "(\"Location\", ...)");
+/**
+/**
+/**
+/**
+/**
+/**
+//gosecure.net/2018/05/15/beware-of-the-magic-spell-part-1-cve-2018-1273/
+//gosecure.net/2018/05/17/beware-of-the-magic-spell-part-2-cve-2018-1260/
+//printOpCode(seen);
+//Constructor named SpelView()
+//
+/**
+//New line are the important characters
+/**
+/**
+//TODO : Add org.springframework.jdbc.core.simple.SimpleJdbcTemplate (Spring < 3.2.1)
+/**
+/**
+/**
+/**
+/**
+/**
+/**=
+//**Low risk**
+/**Low risk**
+//By it self it pose little risk. The thinking is the injection or the critical operation
+//will be catch.
+//After all storing value in the session is not so different to storing value in local variables or any indirection.
+//**False positive**
+/**False positive**
+//This way this FP producer will not polute day to day review by developers.
+/**
+//printOpCode(seen);
+//Important sample from \plugin\src\test\webapp\includes\jsp_include_1.jsp
+//org.apache.jasper.runtime.JspRuntimeLibrary
+//JspRuntimeLibrary.include(request, response, (String)PageContextImpl.evaluateExpression("${param.secret_param}", String.class, _jspx_page_context, null), out, false);
+//  JspIncludeDetector: [0119]  invokestatic   org/apache/jasper/runtime/JspRuntimeLibrary.include (Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljava/lang/String;Ljavax/servlet/jsp/JspWriter;Z)V
+//Important sample from \plugin\src\test\webapp\includes\jsp_include_3.jsp
+//ImportTag _jspx_th_c_import_0 = (ImportTag)this._jspx_tagPool_c_import_url_nobody.get(ImportTag.class);
+//_jspx_th_c_import_0.setUrl((String)PageContextImpl.evaluateExpression("${param.secret_param}", String.class, _jspx_page_context, null));
+//  JspIncludeDetector: [0051]  invokevirtual   org/apache/taglibs/standard/tag/rt/core/ImportTag.setUrl (Ljava/lang/String;)V
+//
+//
+/**
+//printOpCode(seen);
+//        JspSpringEvalDetector: [0039]  ldc   "${expression}"
+//        JspSpringEvalDetector: [0041]  ldc   java/lang/String
+//        JspSpringEvalDetector: [0043]  aload_2
+//        JspSpringEvalDetector: [0044]  aconst_null
+//        JspSpringEvalDetector: [0045]  invokestatic   org/apache/jasper/runtime/PageContextImpl.evaluateExpression (Ljava/lang/String;Ljava/lang/Class;Ljavax/servlet/jsp/PageContext;Lorg/apache/jasper/runtime/ProtectedFunctionMapper;)Ljava/lang/Object;
+//        JspSpringEvalDetector: [0048]  checkcast
+//        JspSpringEvalDetector: [0051]  invokevirtual   org/springframework/web/servlet/tags/EvalTag.setExpression (Ljava/lang/String;)V
+//
+/**
+//Conditions that needs to fill to identify the vulnerability
+//ByteCode.printOpCode(inst, cpg);
+//     JspSpringEvalDetector: [0047]  aload   4
+//     JspSpringEvalDetector: [0049]  iconst_1
+//     JspSpringEvalDetector: [0050]  invokevirtual   org/apache/taglibs/standard/tag/rt/core/OutTag.setEscapeXml (Z)V
+//Some JSP compiler convert boolean value at runtime (WebLogic)
+//Both condition have been found in the same method
+//
+//
+/**
+//
+//
+//Bytecode representation of the TransformTag instantiation
+//        XslTransformJspDetector: [0035]  ldc   "${param.xml}"
+//        XslTransformJspDetector: [0037]  ldc   java/lang/Object
+//        XslTransformJspDetector: [0039]  aload_1
+//        XslTransformJspDetector: [0040]  aconst_null
+//        XslTransformJspDetector: [0041]  invokestatic   org/apache/jasper/runtime/PageContextImpl.evaluateExpression (Ljava/lang/String;Ljava/lang/Class;Ljavax/servlet/jsp/PageContext;Lorg/apache/jasper/runtime/ProtectedFunctionMapper;)Ljava/lang/Object;
+//        XslTransformJspDetector: [0044]  invokevirtual   org/apache/taglibs/standard/tag/rt/xml/TransformTag.setXml (Ljava/lang/Object;)V
+//        XslTransformJspDetector: [0047]  aload   4
+//        XslTransformJspDetector: [0049]  ldc   "${param.xslt}"
+//        XslTransformJspDetector: [0051]  ldc   java/lang/Object
+//        XslTransformJspDetector: [0053]  aload_1
+//        XslTransformJspDetector: [0054]  aconst_null
+//        XslTransformJspDetector: [0055]  invokestatic   org/apache/jasper/runtime/PageContextImpl.evaluateExpression (Ljava/lang/String;Ljava/lang/Class;Ljavax/servlet/jsp/PageContext;Lorg/apache/jasper/runtime/ProtectedFunctionMapper;)Ljava/lang/Object;
+//        XslTransformJspDetector: [0058]  invokevirtual   org/apache/taglibs/standard/tag/rt/xml/TransformTag.setXslt (Ljava/lang/Object;)V
+//        XslTransformJspDetector: [0061]  aload   4
+//        XslTransformJspDetector: [0063]  invokevirtual   org/apache/taglibs/standard/tag/rt/xml/TransformTag.doStartTag ()I
+//        XslTransformJspDetector: [0066]  istore
+//        XslTransformJspDetector: [0068]  aload   4
+//        XslTransformJspDetector: [0070]  invokevirtual   org/apache/taglibs/standard/tag/rt/xml/TransformTag.doEndTag ()I
+//Conditions that needs to fill to identify the vulnerability
+//ByteCode.printOpCode(inst,cpg);
+//
+/**
+/**
+//
+/**
+/**
+/**
+//
+/**
+//
+//
+//
+//
+//
+/**
+//If a constant value is compare with the variable
+//Empty constant are ignored.. it is most likely a validation to make sure it is not empty
+//Is a constant value that was tag because the value was place in a variable name "password" at some point.
+//Extract the name of the variable
+//Mark local variable
+//Mark the stack value
+/**
+/**
+//Passwords in various language
+//http://www.indifferentlanguages.com/words/password
+//Others
+//Is a constant value
+/**
+/**
+// configuration file with password methods
+// full method names
+// suspicious variable names with password or keys
+// check field initialization before visiting methods
+// TODO global analysis
+// do not search pattern in class name (signature not important)
+// then array not hard coded
+/**
+/**
+//gmaps-samples.googlecode.com/svn/trunk/urlsigning/UrlSigner.java
+//The expected field name
+//No key field identify
+//Class name left unchanged
+//
+//Event if the class name was refactor, the method "signRequest" would probably be left.
+//
+/**
+/**
+//
+/**
+/**
+/**
+/**
+//
+//
+//Is a constant value that was tag because the value was place in a variable name "password" at some point.
+//Extract the name of the variable
+//Mark local variable
+//Mark the stack value
+/**
+/**
+//Passwords in various language
+//http://www.indifferentlanguages.com/words/password
+//Others
+//Is a constant value
+// Targeting : x.setPassword("abc123")
+// Targeting : DSL().user("").password(String x)
+/**
+/**
+//duo.com/blog/duo-finds-saml-vulnerabilities-affecting-multiple-implementations
+//github.com/spring-projects/spring-security-saml/issues/228
+/* item has signature of Integer, check "instanceof" added to prevent cast from throwing exceptions */
+//
+/**
+//
+//
+/**
+// If this call doesn't contain any sensitive data - There is no reason to report it.
+/**
+//        printOpCode(seen);
+//        SslDisablerDetector: [0000]  getstatic
+//        SslDisablerDetector: [0003]  invokevirtual   SecurityBypasser$.destroyAllSSLSecurityForTheEntireVMForever ()V
+//
+//It is expected that developers either build the project or copy-paste the code in a random package..
+//Scala code:
+//1. HttpsURLConnection.setDefaultHostnameVerifier(SecurityBypasser.AllHosts);
+//
+//Scala code:
+//2. val trustAllCerts = Array[TrustManager](SecurityBypasser.AllTM)
+//
+/**
+// This variable is compared with a .toLowerCase() variable. Please keep this const lowercase.
+// The MVC Result object was tainted - This could still be safe if the content-type is a safe one
+// Get the value of the content-type parameter
+/**
+/**
+//
+//
+//
+//
+//
+//
+//Nothing to see, move on.
+//System.out.println(constantValue);
+//
+//
+/**
+//ByteCode.printOpCode(inst,cpg);
+/**
+/**
+//
+//No instruction .. nothing to do
+//
+//This class has a readObject method
+//
+/**
+/**
+//No instruction .. nothing to do
+/**
+//printOpCode(seen);
+//First item on the stack is the last
+//            System.out.println(stringIdx);
+//            System.out.println(Arrays.toString(s.toCharArray()));
+/**
+/**
+//System.out.println(e.getMessage());
+//System.out.println(e.getMessage());
+/**
+/**
+//We only need to analyse method with the annotation @RequestMapping
+//Look for potential mass assignment
+//Look for potential leak
+/**
+//
+//
+//
+//
+//
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// can be null
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// exceptions thrown from Enum.valueOf
+/**
+/**
+//&& this.tags.equals(other.tags)
+//&& Objects.equals(this.constantValue, other.constantValue)
+/**
+/**
+/**
+/**
+/**
+/**
+// this would add line number for the first instruction in the method
+//value.addLocation(new TaintLocation(methodDescriptor, 0,""), true);
+/**
+/**
+// creates modifiable copy
+// do not trust values that are safe just when an exception occurs
+/**
+/**
+// static methods does not have reference to this
+// double and long types takes two slots
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// not a real class
+/**
+/**
+/**
+// for comments or removing summary temporarily
+/**
+/**
+/**
+/**
+/**
+// note: writer is not closed until the end
+/**
+// Override the sensitive data taints
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// double and long types takes two slots
+//Print the bytecode instruction if it is globally configured
+//System.out.println(getFrame().toString());
+// double and long type takes two slots in BCEL
+// assume each pushed byte is a char
+// assume each pushed short is a char (for non-ASCII characters)
+// Scala uses some classes to represent null instances of objects
+// If we find one of them, we will handle it as a Java Null
+//int numConsumed = getNumWordsConsumed(obj);
+//                Taint value = getFrame().popValue();
+//assert value.hasValidVariableIndex() :
+//            getFrame().pushValue(new Taint(value));
+//Value
+//Array index
+//Array ref
+// varargs use duplicated values
+// array index
+// just transfer the taint from array to value at any index
+// cast to a safe object type
+//  non-static methods have the class instance as the first index
+// double and long occupy two slots
+// back-propagate array taints
+// back-propagate mutable class taints
+// back-propage immutable taints only when they transfer tags
+/**
+//TODO: Deprecated debug info
+// adds variable index to taint too
+//            Taint taintCopy = new Taint(taint);
+// return type is not always the instance type
+/*
+// we don't know the exact value
+// clean up regex value so other instructions after the current one can't use it.
+// taint consisting of merged parameters only
+// if the method body has own inner state then merge with parameters
+// merge removes tags so we made a taint copy before
+// don't add tags to safe values
+// set back the index removed during merging
+// set back the index removed during merging
+// ignore if assertions disabled or if in constructor
+// do not set instance to return values, can be different type
+// stack depth is checked
+// ignore if assertions disabled
+/**
+/**
+/**
+// storing it in method summary is useless
+// prefer configured summaries to derived
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// these are loaded automatically, do not need to store them
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// javax/servlet/http/HttpServletRequest.getAttribute("applicationConstant"):SAFE@org/apache/jsp/edit_jsp
+// javax/servlet/http/HttpServletRequest.getAttribute(UNKNOWN):SAFE@org/apache/jsp/constants_jsp
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/** Auto-generate getter and setter with the template Builder **/
+//Field
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//tomcat.apache.org/tomcat-5.5-doc/jasper/docs/api/org/apache/jasper/runtime/PageContextImpl.html#proprietaryEvaluate(java.lang.String,%20java.lang.Class,%20javax.servlet.jsp.PageContext,%20org.apache.jasper.runtime.ProtectedFunctionMapper,%20boolean)">Ref</a>
+//The expression is the fourth parameter starting from the right. (Top of the stack last arguments)
+/**
+/**
+//Top of the stack last arguments
+//ByteCode.printOpCode(invoke,cpg);
+/**
+/**
+//printOpCode(seen);
+//  FreemarkerDetector: [0113]  invokevirtual   freemarker/template/Template.process (Ljava/lang/Object;Ljava/io/Writer;)V
+//
+/**
+/**
+/**
+//        printOpCode(seen);
+//
+/**
+/**
+/**
+//Conditions that needs to fill to identify the vulnerability
+//ByteCode.printOpCode(location.getHandle(),classContext.getConstantPoolGen());
+//Both condition have been found in the same method
+//
+//
+/**
+/* item has signature of Integer, check "instanceof" added to prevent cast from throwing exceptions */
+//
+/**
+/**
+/**
+/**
+//javax.xml.XMLConstants/property/accessExternalDTD";
+//javax.xml.XMLConstants/property/accessExternalStylesheet";
+//javax.xml.XMLConstants/feature/secure-processing";
+//The method call is doing XML parsing (see class javadoc)
+//The combination of the 2 following is consider safe
+//DTD and Stylesheet disallow
+//factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+//factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, "");
+// All values other than "all", "http" and "jar" will disable external DTD processing.
+// Since other vulnerable values could be added, we do not want to use a blacklist mechanism.
+// All values other than "all", "http" and "jar" will disable external DTD processing.
+// Since other vulnerable values could be added, we do not want to use a blacklist mechanism.
+// If SecureProcessing is set to true (loadConst == 1), the call is not vulnerable
+// Secure Processing includes all the suggested settings
+//Raise a bug
+//
+//
+/**
+//
+/**
+/**
+//The method call is doing XML parsing (see class javadoc)
+//DTD disallow
+//XMLInputFactory.setProperty
+//Case where the boolean is wrapped like : Boolean.valueOf(true) : 2 instructions
+//Value is false
+//Safe feature is disable
+//Case where the boolean is declared as : Boolean.FALSE
+//Raise a bug
+//
+/**
+/**
+//www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=61702260</li>
+//www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing</li>
+//apache.org/xml/features/disallow-doctype-decl";
+//javax.xml.XMLConstants/feature/secure-processing";
+//xml.org/sax/features/external-general-entities";
+//xml.org/sax/features/external-parameter-entities";
+//The method call is doing XML parsing (see class javadoc)
+//(1rst solution for secure parsing proposed by the CERT) Sandbox in an action with limited privileges
+//Assuming the proper right are apply to the sandbox
+//The combination of the 4 following is consider safe (expand option is only available with DocumentBuilderFactory)
+//ByteCode.printOpCode(inst, cpg);
+//(2nd solution for secure parsing proposed by the CERT) Look for entity custom resolver
+//XMLReader.setEntityResolver is called
+//DTD disallow
+//SAXParser.setFeature and DocumentBuilder.setFeature => INVOKEVIRTUAL
+//XMLReader.setFeature => INVOKEINTERFACE
+//Manual configuration include all the suggested settings
+//Raise a bug
+//
+//
+//
+//
+/**
+/**
+/**
+// TODO add net.sf.saxon.xpath.XPathEvaluator
+// TODO add org.apache.commons.jxpath
+// TODO add org.jdom.xpath.XPath
+// TODO add org.jaxen.XPath
+// TODO add edu.UCL.utils.XPathAPI
+// TODO add org.xmldb.api.modules
+/**
+/**
+/**
+//java.dzone.com/articles/stronger-anti-cross-site
+//www.javacodegeeks.com/2012/07/anti-cross-site-scripting-xss-filter.html
+//ricardozuasti.com/2012/stronger-anti-cross-site-scripting-xss-filter-for-java-web-apps/
+//The class extends HttpServletRequestWrapper
+//Not the target of this detector
+//
+/**
+/**
+/**
+/**
+/**
+/**
+//BugPattern node checks
+//                    System.out.println(type);
+//                System.out.println(content);
+//                System.out.println(content);
+//                System.out.println(content);
+//BugCode
+//                    System.out.println(abbrev);
+//Minimum check to test that the XML was actually read.
+//Iterate on all XML nodes
+/**
+//Locate test code
+//Run the analysis
+//1rst variation resp.addHeader("Access-Control-Allow-Origin", "*")
+//2nd - lower case: resp.addHeader("access-control-allow-origin", "*")
+//3rd - wildcards: resp.addHeader("Access-Control-Allow-Origin", "*.example.com")
+//4th - null Origin: resp.addHeader("Access-Control-Allow-Origin", "null")
+//5th - set instead of add: resp.setHeader("Access-Control-Allow-Origin", "*");
+//6th - set instead of add: resp.setHeader("Access-Control-Allow-Origin", req.getParameter("tainted"));
+//7th - set instead of add: resp.setHeader("Access-Control-Allow-Origin", unknown);
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+/*31,*/ 32)) {
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Total bugs found (detect false positive)
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//1st variation new JVMRandom()
+//2nd variation new RandomUtils()
+//3rd variation new RandomStringUtils()
+//4th variation new Random()
+//5th variation Math.random()
+//6th variation ThreadLocalRandom.current()
+//Scala random number generator (mirror of java.util.Random)
+//7 java api
+//2 scala variations
+/**
+//Reusable matcher for REDOS bug
+/**
+//Locate test code
+//Run the analysis
+//Field with a Pattern initialize on instantiation
+//Pattern build in methods
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//
+//
+//First line
+//
+//
+//
+//
+//
+//The count make sure no other bug are detect
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//First line
+//
+//
+//
+//
+//
+//The count make sure no other bug are detect
+//
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//
+//The count make sure no other bug are detect
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//
+//
+//The count make sure no other bug are detect
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//
+//
+//The count make sure no other bug are detect
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//
+//
+//The count make sure no other bug are detect
+/**
+//Static class that have empty constructor
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//
+/**
+/**
+//Print invocation
+/**
+//Print all instructions
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+// Advanced checks when multiple cookies are set
+//Locate test code
+//Run the analysis
+// Advanced checks when multiple cookies are set
+//Locate test code
+//Run the analysis
+// Advanced checks when multiple cookies are set
+//Locate test code
+//Run the analysis
+// Advanced checks when multiple cookies are set
+// This method should not contain more than unsafe calls
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Total bugs found
+/**
+//Locate test code
+//Run the analysis
+//1rst variation encodeURL(req.getRequestURI())
+//2nd variation, deprecated encodeUrl(req.getRequestURI())
+//3rd variation encodeRedirectURL(req.getRequestURI())
+//4th variation, deprecated encodeRedirectUrl(req.getRequestURI())
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+/**
+//github.com/h3xstream/find-sec-bugs/issues/24
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Nothing more than the previous 10
+//Locate test code
+//Run the analysis
+//Assertions
+//Nothing more than the previous
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//The count make sure no other bug are detect
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//The count make sure no other bug are detect
+/**
+//Locate test code
+//Run the analysis
+//Identify the constructor
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//More than 4 means a false positive was triggered
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//More than two means a false positive was trigger
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//Only one report of this bug pattern
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//Only one report of this bug pattern
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//Not bug should be report
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//Not bug should be report
+//
+//Locate test code
+//Run the analysis
+//Assertions
+// Bug should not be detected
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//Only one report of this bug pattern
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//Not bug should be report
+//
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Message Digest
+//SHA1
+//Locate test code
+//Run the analysis
+//Message Digest
+//Locate test code
+//Run the analysis
+//MD5 Assertions
+//SHA-1 Assertions
+/**
+//Locate test code
+//Run the analysis
+//DefaultHttpClient
+//SSLContext.getInstance("SSL")
+/**
+//Locate test code
+//The following should not trigger any bug
+//Run the analysis
+//Assertions
+//Anonymous class
+//Inner class
+//The KeyStoresTrustManager impl. should not trigger any report
+//The FakeImpl should not trigger any report (doesn't implements the analysed Interface)
+//Locate test code
+//Run the analysis
+//Assertions
+//Anonymous class
+//Locate test code
+//Run the analysis
+//Assertions
+//Anonymous class
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Headers
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//
+/**
+//Locate test code
+//Run the analysis
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Only 3 instances
+/**
+//Locate test code
+//Run the analysis
+//Only 3 instances
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+/**
+//Test the validity of the class name
+/**
+//Locate test code
+//Run the analysis
+//Out of the 4 calls, 3 are suspicious
+/**
+//Locate test code
+//Run the analysis
+/**
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//List<Integer> linesLow = Arrays.asList(57, 81, 121, 126, 136, 142);
+//Assertions
+/*for (Integer line : linesLow) {
+/**
+/**
+//Logger.setLevel(Level.DEBUG.levelInt);
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Out of 6 Struts ActionForward calls, 5 are suspicious
+//Out of 5 Spring ModelAndView calls, 4 are suspicious
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Out of 9 calls, 8 are suspicious
+/**
+//Locate test code
+//Run the analysis
+//Out of 5 calls, 3 are suspicious
+/**
+//Locate test code
+//Run the analysis
+/**/ 44, 45, 46, 47, /**/ 49, 50, 51, 52, /**/ 54, 55, 56, 57)) {
+//Locate test code
+//Run the analysis
+/**/ 88, 89, 90, 91)) {
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Only 2 instance in the sample class
+/**
+//    @BeforeClass
+//    public void setUp() {
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//    }
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Only 1 bug expected
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Out of the 6 calls, 3 are suspicious
+/**
+//Locate test code
+//Run the analysis
+//Out of the 6 calls, 3 are suspicious
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Bonus : Path traversal specific to SMTP API
+//Test for tainted source
+//Out of the 5 unknown sources and 1 tainted
+/**
+//    @BeforeClass
+//    public void setUp() {
+////        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//    }
+//Locate test code
+//Run the analysis
+//Only the previous 5 cases should be marked as vulnerable
+//Locate test code
+//getClassFilePath("android/content/ContentProvider")
+//Run the analysis
+//Locate test code
+//getClassFilePath("android/content/ContentProvider")
+//Run the analysis
+//NullContentProvider should not rise any issue
+//LocalProvider should rise two bugs at line 97 and 104
+/**
+//Locate test code
+//Run the analysis
+//Only the previous 5 cases should be marked as vulnerable
+/**
+//Locate test code
+//Run the analysis
+//Assertion on the 4 basic test
+//Locate test code
+//Run the analysis
+//Assertion
+//Locate test code
+//Run the analysis
+//Assertion
+//Locate test code
+//Run the analysis
+//Assertion
+//Locate test code
+//Run the analysis
+//Assertion
+//Locate test code
+//Run the analysis
+//Assertion
+//Locate test code
+//Run the analysis
+//Assertion
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Only the previous 2 cases should be marked as vulnerable
+/**
+//Locate test code
+//Run the analysis
+//Only the previous 5 cases should be marked as vulnerable
+/**
+//Locate test code
+//Run the analysis
+//Only the previous 5 cases should be marked as vulnerable
+//2 createQuery + 3 createNativeQuery detect
+//Locate test code
+//Run the analysis
+//All 3 method signatures are detected
+//Check for false positive
+/**
+//Locate test code
+//Run the analysis
+//Assertion on the 4 basic test
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+//Locate test code
+//Run the analysis
+//Exact match of the number of vulnerability rise
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Only 3 bugs are expected
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+/**
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Only 6 bugs are expected
+//Only 6 bugs are expected
+//Only 6 bugs are expected
+/**
+//Locate test code
+//Run the analysis
+//Only 6 bugs are expected
+//Only 6 bugs are expected
+//Only 6 bugs are expected
+//Only 6 bugs are expected
+//Only 6 bugs are expected
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//=== With tainted parameters
+//=== From unknown sources
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+//Locate test code
+//Run the analysis
+//No vulnerability should be rise
+/**
+//Locate test code
+//Run the analysis
+//Only one
+//Locate test code
+//Run the analysis
+//Only one
+/**
+//Locate test code
+//Run the analysis
+//Only one
+//Locate test code
+//Run the analysis
+//Only one
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+/**
+/**
+//Locate test code
+//Run the analysis
+//Only one
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Only one
+//Empty = no bug instance
+//Empty = no bug instance
+/**
+//Locate test code
+//Run the analysis
+// tained input executed after always true filter
+// tained input executed after always false not filter
+// tained input executed after identity function with run
+// tained input executed after identity function with let
+// tained input executed after identity function with apply
+// tained input executed after drop while always false
+// tained input executed after drop last while always false
+// tained input executed after take while always true
+// tained input executed after take last while always true then reversed
+// tained input executed after trim always false
+// tained input executed after trim end always false
+// tained input executed after trim start always false
+// tained input executed after also does nothing
+/**
+/**
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//tained input executed after applying suffix with plus
+//tained input executed after (de)capitalisation
+//tained input executed after first characters removed
+//tained input executed after last characters removed
+//tained input executed after front padding
+//tained input executed after end padding
+//tained input executed after indentation
+//tained input executed after remove prefix
+//tained input executed after remove range
+//tained input executed after remove suffix
+//tained input executed after remove surrounding
+//tained input executed after replacement
+//tained input executed after replace first
+//tained input executed after replace after
+//tained input executed after replace after last
+//tained input executed after replace before
+//tained input executed after replace before last
+//tained input executed after reversal
+//tained input executed after trimming
+//tained input executed after trimming indent
+//tained input executed after trimming start
+//tained input executed after trimming end
+//tained input executed after front truncation
+//tained input executed after end truncation
+/**
+//Locate test code
+//Run the analysis
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+/**
+// +1 for OAuth and +1 for hard coded public key field
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//                getClassFilePath("testcode/crypto/BlockCipherList"),
+//                getClassFilePath("testcode/template/FreemarkerUsage"),
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);//setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+//More than two occurrence == false positive
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);//setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+//More than two occurrence == false positive
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(false);
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(false);
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(false);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+//Assertions
+/**/ 53, 54, 55, /**/ 58, 60, 61, /**/ 64, 66, 67,
+/**/ 70, 71, 72, /**/ 75, /**/ 79, 80);
+//PATH injection is typically consider a command injection because it could lead to unwanted command execution
+//Currently it is catch as Path traversal
+//
+// Process(Seq("ls"),new File(value),("extra","1234")).run()
+/**
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(false);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+//Assertions for bugs
+// Assertions for false positives
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(false);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+//Assertions for bugs
+/**/ 22, 23, 24, 25, 26});
+/**/ 39, 40, 41, 42, 43});
+// Lets check every line specified above
+//Assertions for safe calls and false positives
+// Lets check every method specified above
+/**
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(false);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+//Assertions for single bug methods
+// Assertions for multiple bugs methods
+//Assertions for safe calls and false positives
+/**
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(false);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+//Assertions for bugs
+//Assertions for safe calls and false positives
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+// Test the MVC API checks
+// Test the Twirl template engine checks
+//XSS in xssString.scala.html
+//.atLine(31)
+//Assertions for safe calls and false positives
+// TODO: Verify the .scala.html files
+//verify(reporter).doReportBug(
+//        bugDefinition()
+//                .bugType("SCALA_XSS_TWIRL")
+//                .inClass("xssString").atLine(4)
+//                .build()
+//);
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(false);
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//Locate test code
+//Run the analysis
+//Assertions for bugs
+// Lets check every line specified above
+//Assertions for safe calls and false positives
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//
+//
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//
+//Assertions
+//
+//
+//
+/**
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+// Run the analysis
+// Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//
+//Locate test code
+//Run the analysis
+//
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Make sure exactly 3 instances are found
+//Locate test code
+//Run the analysis
+//Assertions
+//Make sure exactly 2 instances are found
+/**
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+/**
+//Skipping Scala class
+//Temporary skip Play
+//Skipping Scala anorm library classes
+//Skipping Scala slick library classes
+//FIXME: It seems to be a error in the LDAP configuration file
+//System.err.println(classNotFound);
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//High because of taint parameter
+/**
+//Locate test code
+//Run the analysis
+//High because of taint parameter
+/**
+//Locate test code
+//Run the analysis
+// tainted value
+// tainted value
+/**
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+////////////
+// Validate annotation (list of annotation with parameters)
+////////////
+// Validate method summaries
+/**
+//Test the validity of the class name
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Avoid potential conflicts with other tests.
+//        URL configUrl = this.getClass().getResource("/com/h3xstream/findsecbugs/taintanalysis/CustomConfig.txt");
+//        File configFile = new File(configUrl.toURI());
+//
+//        FindSecBugsGlobalConfig.getInstance().setCustomConfigFile(configFile.getCanonicalPath());
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Avoid potential conflicts with other tests.
+//There will still remain a custom sink load if the test suite does not reload all classes. (Minor artifact)
+/**
+//Missing +"|LDAP_INJECTION"
+//Locate test code
+//Run the analysis
+//Assertions
+//Avoid potential conflicts with other tests.
+/**
+//Locate test code
+//Run the analysis
+/**
+//Make sure their are not side effect when print the stack frames
+//Not all slot are set
+/**
+////////
+//The order of the tags is subject to change
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//High because of taint parameter
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//High because of taint parameter
+//
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//High because of taint parameter
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//High because of taint parameter
+//
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//High because of taint parameter
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+//
+//High because of taint parameter
+//
+//Locate test code
+//Run the analysis
+//Assertions
+//
+/**
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Should not trigger the other XXE patterns
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Should not trigger the other XXE patterns
+//Locate test code
+//Run the analysis
+//Assertions
+//Assertions
+//Only one bug should be trigger
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugTaintState(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInstructionVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+// We do not want to spam users with multiple report of the "same" vulnerability
+//Locate test code
+//Run the analysis
+//Assertions
+// We do not want to spam users with multiple report of the "same" vulnerability
+//Locate test code
+//Run the analysis
+//Assertions
+// We do not want to spam users with multiple report of the "same" vulnerability
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+/**
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Other types of XXE should not be raise..
+//Locate test code
+//Run the analysis
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//More than three means a false positive was trigger
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//More than three means a false positive was trigger
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//More than two means a false positive was trigger
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Generated classes lines doesn't match original JSP
+//Locate test code
+//Run the analysis
+//Assertions
+//Generated classes lines doesn't match original JSP
+//Locate test code
+//Run the analysis
+//No alert should be trigger
+//Locate test code
+//Run the analysis
+//No alert should be trigger
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+//No alert should be trigger
+//Locate test code
+//Run the analysis
+//Locate test code
+//Run the analysis
+/**
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//Locate test code
+//Run the analysis
+//Assertions
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+// Locate test code
+// Run the analysis
+// Locate test code
+// Run the analysis
+// Locate test code
+// Run the analysis
+// Locate test code
+// Run the analysis
+// Locate test code
+// Run the analysis
+// Locate test code
+// Run the analysis
+// This test make sure that the default configuration will hide value that are
+// escaped.
+// Locate test code
+// Run the analysis
+// Locate test code
+// Run the analysis
+/**
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+//        FindSecBugsGlobalConfig.getInstance().setDebugPrintInvocationVisited(true);
+//Locate test code
+//Run the analysis
+//Assertions
+/**
+//import android.content.pm.PathPermission;
+//import android.content.pm.ProviderInfo;
+//import android.content.res.AssetFileDescriptor;
+//    protected final void setPathPermissions(PathPermission[] permissions)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final PathPermission[] getPathPermissions()
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public AssetFileDescriptor openAssetFile(Uri uri, String mode)
+//            throws FileNotFoundException
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public AssetFileDescriptor openAssetFile(Uri uri, String mode, CancellationSignal signal)
+//            throws FileNotFoundException
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public AssetFileDescriptor openTypedAssetFile(Uri uri, String mimeTypeFilter, Bundle opts)
+//            throws FileNotFoundException
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public AssetFileDescriptor openTypedAssetFile(Uri uri, String mimeTypeFilter, Bundle opts, CancellationSignal signal)
+//            throws FileNotFoundException
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public void attachInfo(Context context, ProviderInfo info)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public ContentProviderResult[] applyBatch(ArrayList<ContentProviderOperation> operations)
+//            throws OperationApplicationException
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+/**
+//import android.os.LocaleList;
+//import android.os.Parcelable.Creator;
+//    public LocaleList getLocales()
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public void setLocales(LocaleList locales)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public abstract void registerContentObserver(ContentObserver paramContentObserver);
+//
+//    public abstract void unregisterContentObserver(ContentObserver paramContentObserver);
+//
+//    public abstract void registerDataSetObserver(DataSetObserver paramDataSetObserver);
+//
+//    public abstract void unregisterDataSetObserver(DataSetObserver paramDataSetObserver);
+//import android.os.ParcelFileDescriptor;
+//    public ParcelFileDescriptor simpleQueryForBlobFileDescriptor()
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//import android.util.Size;
+//import android.util.SizeF;
+//import android.util.SparseArray;
+//import android.util.SparseBooleanArray;
+//    public final void writeStrongBinder(IBinder val)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final void writeStrongInterface(IInterface val)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public final void writePersistableBundle(PersistableBundle val)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public final void writeSize(Size val)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final void writeSizeF(SizeF val)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public final void writeSparseArray(SparseArray<Object> val)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final void writeSparseBooleanArray(SparseBooleanArray val)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public final PersistableBundle readPersistableBundle()
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final PersistableBundle readPersistableBundle(ClassLoader loader)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final Size readSize()
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final SizeF readSizeF()
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//    public final SparseArray readSparseArray(ClassLoader loader)
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//
+//    public final SparseBooleanArray readSparseBooleanArray()
+//    {
+//        throw new RuntimeException("Stub!");
+//    }
+//public void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {};
+/**
+//developer.android.com/reference/android/webkit/WebView.html
+/**
+/**
+/**
+/**
+//STUB note: indirectly referenced in JSPC-generated code
+//STUB note: indirectly referenced in JSPC-generated code
+/**
+//http://docs.oracle.com/javaee/6/api/javax/persistence/TypedQuery.html
+//STUB note: directly referenced in JSPC-generated code
+/**
+//STUB note: indirectly referenced in JSPC-generated code
+//STUB note: directly referenced in JSPC-generated code
+//STUB note: indirectly referenced in JSPC-generated code
+//STUB note: directly referenced in JSPC-generated code
+//STUB note: indirectly referenced in JSPC-generated code
+/** @deprecated */
+//TODO: Test tainted input from MultivaluedMap in java-ee.txt
+/**
+/**
+/**
+/**
+// delegate to super class loader which can resolve primitives
+/**
+//StringEscapeUtils version 3.1 API
+/**
+/**
+/**
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+//STUB note: directly referenced in JSPC-generated code
+//STUB note: directly referenced in JSPC-generated code
+//STUB note: directly referenced in JSPC-generated code
+//STUB note: directly referenced in JSPC-generated code
+//STUB note: directly referenced in JSPC-generated code
+// directly referenced by JSPC-generated code
+//STUB note: directly referenced in JSPC-generated code
+//@Override
+/*, ResourceNotFoundException, MethodInvocationException, ParseErrorException */ {
+//STUB note: directly referenced in JSPC-generated code
+/**
+/**
+//TODO: Test tainted input from jetty.txt
+/**
+//    static String encode(Encoder encoder, String str) {
+//        
+//    }
+//    
+//    static void encode(Encoder encoder, Writer out, String str)
+//            throws IOException
+//    {
+//    }
+// preserve insertion order
+//TODO: Cover this method signature
+//-------------------------------------------------------------------------
+// Methods dealing with static SQL (java.sql.Statement)
+//-------------------------------------------------------------------------
+/**
+/**
+//-------------------------------------------------------------------------
+// Methods dealing with prepared statements
+//-------------------------------------------------------------------------
+//    int update(PreparedStatementCreator psc) throws DataAccessException;
+//
+//    int update(PreparedStatementCreator psc, KeyHolder generatedKeyHolder) throws DataAccessException;
+//-------------------------------------------------------------------------
+// Methods dealing with callable statements
+//-------------------------------------------------------------------------
+//Spring 3.2.1
+//http://docs.spring.io/spring-framework/docs/2.0.x/api/org/springframework/jdbc/core/JdbcTemplate.html
+/**
+//    T mapFromContext(Object ctx) throws NamingException;
+//    <T> T executeReadWrite(ContextExecutor<T> ce) throws NamingException;
+//    void modifyAttributes(String dn, ModificationItem[] mods) throws NamingException;
+//
+//    void bind(Name dn, Object obj, Attributes attributes) throws NamingException;
+//
+//    void bind(String dn, Object obj, Attributes attributes) throws NamingException;
+//
+//    void unbind(Name dn) throws NamingException;
+//
+//    void unbind(String dn) throws NamingException;
+//
+//    void unbind(String dn, boolean recursive) throws NamingException;
+//
+//    void rebind(String dn, Object obj, Attributes attributes) throws NamingException;
+//
+//    void rename(final String oldDn, final String newDn) throws NamingException;
+//
+//    DirContextOperations lookupContext(String dn) throws NamingException, ClassCastException;
+//    boolean authenticate(String base, String filter, String password);
+//
+//    boolean authenticate(String base, String filter, String password, AuthenticatedLdapEntryContextCallback callback);
+//
+//
+//    boolean authenticate(String base, String filter, String password,
+//                         AuthenticatedLdapEntryContextCallback callback,
+//                         AuthenticationErrorCallback errorCallback);
+//
+//    boolean authenticate(String base, String filter, String password,
+//                         AuthenticationErrorCallback errorCallback);
+/**
+// tag attribute mutators
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//www.scala-lang.org/api/current/#scala.util.Random
+// BAD
+// BAD
+// BAD
+// BAD
+// GOOD
+// GOOD
+// GOOD
+// GOOD
+// BAD
+// BAD
+//BAD
+//BAD
+//BAD
+//OK
+//BAD
+//BAD
+// ok
+// ok
+// create a new formatter
+//test cases
+//BAD
+//BAD
+//false positive test
+//OK
+//BAD
+//BAD
+//BAD
+//BAD
+//BAD
+//BAD
+//URLEncoder.encode is deprecated but use to specially test this API.
+//in HttpClient 4.x, there is no GetMethod anymore. Instead there is HttpGet
+//host.com?param=" + URLEncoder.encode(item)); //OK
+//host.com?param=" + item); //BAD
+//host.com?param=" + urlPathSegmentEscaper().escape(item)); //OK
+//host.com?param=" + item); //BAD
+//BAD
+//get.execute();
+//True positive
+//True positive
+//All methods are static, hence do not constructing object
+//True positive
+//All methods are static, hence do not constructing object
+//True positive
+//True positive
+//Indirectly using Random class
+//True positive if appropriate version
+//Example call to ThreadLocalRandom - random generator since Java 7
+//No warnings
+//Other Math functions unrelated..
+//This should not raise any warning
+//True positive PREDICTABLE_RANDOM_SCALA
+//True positive special static nextLong
+// still insecure (LF not replaced)
+// still insecure (CR not replaced)
+// these should not be reported
+// bundle name can be tainted
+// false positives
+///The following cases are safe for sure
+/**
+//safe.com").openConnection(new Proxy(Proxy.Type.HTTP, new InetSocketAddress(url, 8080))).connect();
+//TODO: Not detected for now
+//Pattern var
+//TODO: Not detected for now
+//TODO: Not detected for now
+//Safe regex
+//More signatures
+/* These calls are safe.
+//developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html
+// This class extends the Android LocalBroadcastManager and is used to test the InterfaceUtils.isSubtype condition.
+/**
+//Various external directory reference that could be use to read/write on SDCard.
+//out.write();
+//..
+/**
+//Should not rise an alert
+/** Instantiate the interface and set the context */
+//More signature
+//OK (False positive to avoid)
+//BOOM!
+//Could be override at any time. (tainted)
+//Runtime exec()
+//ProcessBuilder
+// whole array is tainted, index is not important
+// taints the list
+// makes the list safe again
+// can taint the list
+// not able to transfer this, set as UNKNOWN even if str is SAFE
+// object taint transfer
+// just to confuse the analysis a bit
+// should not be reported
+/**
+//Unrelated
+//Unrelated
+// If you add unsafe calls in this method, you must change the CookieFlagsDetectorTest - It is validated with the
+// times(X) annotation
+// The line bellow should stay line 74 - It is used with the .atLine() annotation in the test
+// The line bellow should stay line 78 - It is used with the .atLine() annotation in the test
+// The line bellow should stay line 82 - It is used with the .atLine() annotation in the test
+// The line bellow should stay line 86 - It is used with the .atLine() annotation in the test
+//Unrelated
+//Unrelated
+// If you add unsafe calls in this method, you must change the CookieFlagsDetectorTest - It is validated with the
+// times(X) annotation
+// The line bellow should stay line 72 - It is used with the .atLine() annotation in the test
+// The line bellow should stay line 76 - It is used with the .atLine() annotation in the test
+// The line bellow should stay line 76 - It is used with the .atLine() annotation in the test
+// The line bellow should stay line 84 - It is used with the .atLine() annotation in the test
+//OK
+//BAD
+//BAD
+//3600 seconds == 1 hour
+//Reasonable duration. No warning will be trigger
+//Example of unit confusion (sec. not ms.)
+//Expect 24 hour, in fact 1000 day
+//More than one year will be mark as potentially dangerous/unwanted
+//Deprecated
+//Deprecated
+// False positive test
+//example.com");
+// Overly permissive Cross-domain requests accepted
+/**")
+/**")
+//For the hash ABC the 5th byte become weaker because of the trailing 0 being trim (06 -> 6)
+//Actual      : ..0679.. => ..679..
+//Collision 1 : ..6709.. => ..679..
+//Actual      : ..7D06.. => ..7D6..
+//Collision 2 : ..07D6.. => ..7D6..
+/**
+//Note : Not a realistic code sample (no encryption occurs)
+//Just to test a cipher with a different format in the input
+/**
+// ok
+// ECB and no integrity
+// no integrity
+// ECB and no integrity
+// oracle and no integrity
+// ok
+// ok
+// ok
+// ok this is elliptic curve
+/**
+//OK!
+//OK!
+//prod.company.com/production");
+// Normal Priority
+// Normal Priority
+// Low Priority
+//public static void main(String[] args) {
+//
+//}
+//ESAPI 2.0.1 and lower
+//ESAPI 2.0.1 and lower
+//Specific map time to live
+//Package config
+//Symmetric Encryption
+//Weak Network config..
+//OK
+//BAD
+//email2.setSmtpPort(465);
+//email2.setAuthenticator(new DefaultAuthenticator("username", "password"));
+//email2.setFrom("user@gmail.com");
+//email2.setSubject("TestMail");
+//email2.setMsg("This is a test mail ... :-)");
+//email2.addTo("foo@bar.com");
+//email2.send();
+//BAD
+//BAD
+//OK
+//OK - reversed order
+//BAD
+/**
+/**
+//en.wikipedia.org/wiki/Key_size#Asymmetric_algorithm_key_lengths
+//BAD
+//BAD //Different signature
+//BAD
+//BAD
+//BAD with lower priority
+//Different signature
+//BAD with lower priority
+//BAD with lower priority
+//BAD with lower priority
+// OK: n >= 2048
+//Key generation
+//Setting the key
+/**
+//OK!
+//This parameter is unknown
+//OK!
+//Unknown
+//OK!
+//OK!
+//OK
+//OK
+// BAD
+// OK
+// BAD
+// OK
+// TODO Auto-generated catch block
+//Oups. Static
+//IV
+//Key
+//Encrypt
+//IV
+//Oups. Static
+//Key
+//Encrypt
+//IV
+//Oups. All 0s
+//Key
+//Encrypt
+/**
+//IV
+//Key
+//Encrypt
+//IV
+//Encrypt
+// This is a synthetic test case - we use an unsafe IV for decryption (safe) and for key
+// wrapping (unsafe). This is hand-crafted to make sure that key wrapping is handled
+// as encryption (and not ignored).
+// Safe
+// Unsafe
+//Static IV ? potential reuse over time ?
+//IV
+//Key
+//Encrypt
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//Should have a higher priority
+//company.ca")) {
+//            req.getHeader("X-Forwarded-For");
+//            req.getHeader("X-ATT-DeviceId");
+//            req.getHeader("X-Wap-Profile");
+//Avoid used variable
+/******Struts ActionForward vulnerable code tests******/
+//BAD
+//BAD
+//BAD
+//BAD
+//BAD
+//false positive test - returnURL moved from path to name (safe argument)
+//OK
+/******Spring ModelAndView vulnerable code tests******/
+//BAD
+//BAD
+//BAD
+//BAD
+//false positive test - returnURL moved from viewName to modelName (safe argument)
+//OK
+// Risky
+// Risky
+// Risky
+//        SuperMap map = new SuperMap();
+//        map.put("1234",new FileCacheData("C:/Code/secret.txt"));
+//        System.out.println(map.get("1234").getValue());
+/**
+/**
+/**
+// Note: Generally, you should store your private key someplace safe
+// and read them into your code
+// The URL shown in these examples is a static URL which should already
+// be URL-encoded. In practice, you will likely have code
+// which assembles your URL from user or web service input
+// and plugs those values into its parameters.
+//maps.googleapis.com/maps/api/geocode/json?address=New+York&sensor=false&client=";
+// This variable stores the binary key, which is computed from the string (Base64) key
+// For testing purposes, allow user input for the URL.
+// If no input is entered, use the static URL defined above.
+// Convert the string to a URL so we can parse it
+// For testing purposes, allow user input for the private key.
+// If no input is entered, use the static key defined above.
+//" + url.getHost() + request);
+// Convert the key from 'web safe' base 64 to binary
+// Retrieve the proper URL components to sign
+// Get an HMAC-SHA1 signing key from the raw key bytes
+// Get an HMAC-SHA1 Mac instance and initialize it with the HMAC-SHA1 key
+// compute the binary signature for the request
+// base 64 encode the binary signature
+// convert the signature to 'web safe' base 64
+// Note: Generally, you should store your private key someplace safe
+// and read them into your code
+// The URL shown in these examples is a static URL which should already
+// be URL-encoded. In practice, you will likely have code
+// which assembles your URL from user or web service input
+// and plugs those values into its parameters.
+//maps.googleapis.com/maps/api/geocode/json?address=New+York&sensor=false&client=";
+// This variable stores the binary key, which is computed from the string (Base64) key
+// For testing purposes, allow user input for the URL.
+// If no input is entered, use the static URL defined above.
+// Convert the string to a URL so we can parse it
+// For testing purposes, allow user input for the private key.
+// If no input is entered, use the static key defined above.
+//" + url.getHost() + request);
+// Convert the key from 'web safe' base 64 to binary
+// Retrieve the proper URL components to sign
+// Get an HMAC-SHA1 signing key from the raw key bytes
+// Get an HMAC-SHA1 Mac instance and initialize it with the HMAC-SHA1 key
+// compute the binary signature for the request
+// base 64 encode the binary signature
+// convert the signature to 'web safe' base 64
+// ...
+/* Initialize data */
+/* read string from file into data */
+/* POTENTIAL FLAW: Read data from a file */
+/* This will be reading the first "line" of the file, which
+/* Close stream reading objects */
+/* FIX: Use a hardcoded string */
+/* POTENTIAL FLAW: Input not verified before inclusion in the cookie */
+/* FIX: use URLEncoder.encode to hex-encode non-alphanumerics */
+//localhost:389");
+/* POTENTIAL FLAW: data concatenated into LDAP search, which could result in LDAP Injection */
+/* goodG2B() - use goodsource and badsink */
+//localhost:389");
+/* POTENTIAL FLAW: data concatenated into LDAP search, which could result in LDAP Injection */
+//ldap.server.com/dc=ldap,dc=server,dc=com";
+//false positive
+/**
+//ldap.example.com");
+//ldap.example.com");
+//Stub instances
+//ldap.example.com");
+//Various context instance store in various type (class or interface)
+//False positive
+//Stub instances
+//ldap.example.com");
+//Two context instances mostly usable with sun specific API
+//LdapCtx is the only known class to implements to this interface
+//Taken from BenchmarkTest00012.java (https://github.com/OWASP/Benchmark/blob/master/src/main/java/org/owasp/benchmark/testcode/BenchmarkTest00012.java)
+//!! It will flag line 14 ... the beginning of the call
+//!!
+//OK
+//OK
+/**
+//Unsafe
+// safe
+/**
+// should not be reported
+// report once
+// should not be reported
+// non-trivial condition
+// should be reported
+// non-trivial condition
+// different constant but still hard coded
+// not considered hard coded
+// no longer hard coded
+// should not report
+// different parameter hard coded
+// not considered hard coded
+// some operations to simulate non-constant password
+//This code block is only there to make sure the stack is properly tracked..
+//!!
+//!!
+//!! (Not supported at the moment)
+//prod.company.com/production", "root", "lamepassword");
+//prod.company.com/production", "dba", MYSQL_PASSWORD);
+//prod.company.com/production", username, password);
+//ldapserver.hex.org:389");
+//not sensitive information
+// false positive test
+/**
+//Typical bytes to hex #1 https://stackoverflow.com/a/41787842/89769
+//Typical bytes to hex #2
+// OK
+// OK
+// OK
+// TAINTED
+// TAINTED
+// TAINTED
+//BAD
+//GOOD
+//All the following are BAD
+//JDK8//v.setPassword(m.getOrDefault("password", "3333333")); //Uncomment when the project will be Java8+
+// DO NOT set ignoreComments = false opens up exploit
+// DO NOT set ignoreComments = false opens up exploit
+/**
+// DO NOT set ignoreComments = false opens up exploit
+// DO NOT set ignoreComments = false opens up exploit
+/**
+//The potential injection will require manual review of the code flow but some false positive can be avoid.
+/**
+//Static value not that useful .. but safe
+//Unsafe if the input is control by the user..
+//Static value not that useful .. but safe
+//Unsafe if the input is control by the user..
+//Static value not that useful .. but safe
+//Unsafe if the input is control by the user..
+//Expected use case..
+//Malicious use case..
+//start the calc virus :)
+/**
+/**
+/**
+//
+//
+//Example of payload that would prove the injection
+//Replace by test account
+//Replace by app password
+//Injectable API
+//Injectable API (value parameter)
+//Injectable API (key parameter)
+//Injectable API
+//Injectable API
+//BOOM!
+/**
+//return new ModelAndView("error", att);
+//FP (No request mapping annotation)
+//The following would need to be audited
+//More sqlRestriction signatures
+//OK nothing risky here..
+//More sqlRestriction signatures (with safe binding)
+//Normal query
+//Update query
+//Prepare Call
+//Prepare Statement
+//Native
+//Test for false positive
+//Injection?
+//Injection?
+//Injection?
+//Risky..
+//OK!
+//OK!
+//Risky..
+//OK!
+//The following query are subject to injection
+//The following should be safe
+//Native query (https://github.com/h3xstream/find-sec-bugs/issues/15)
+/**
+//Execute (4 signatures)
+//The injection is flag later (line 107)
+//Batch Update (8 signatures)
+//Same signature as the previous
+//
+//
+//Query for Object (8 signatures)
+//Query (12 signatures)
+//Query for List (6 signatures)
+//Query for Map (3 signatures)
+//Query for Row Set (3 signatures)
+//Query for int (3 signatures)
+//Query for long (3 signatures)
+//Bunch of Mock classes
+//JDBC API
+/**
+//Execute (4 signatures)
+//The injection is flag later (line 107)
+//Batch Update (8 signatures)
+//Same signature as the previous
+//
+//
+//Query for Object (8 signatures)
+//Query (12 signatures)
+//Query for List (6 signatures)
+//Query for Map (3 signatures)
+//Query for Row Set (3 signatures)
+//Query for int (3 signatures)
+//Query for long (3 signatures)
+//Bunch of Mock classes
+//JDBC API
+//
+//query
+//queryWithFactory
+//rawQueryWithFactory
+//delete
+//update
+//updateWithOnConflict
+//execSQL
+//buildQueryString
+//query no limit
+//query with limit
+//query with limit with cancellation system
+//buildQuery
+//buildQuery with selectionArgs
+//buildUnionQuery
+//buildUnionSubQuery
+//buildUnionSubQuery with selectionArgs
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/** Simple test provider that runs in the local process. */
+// insert alarms
+// Generate the body of the query
+//            ret.setNotificationUri(getContext().getContentResolver(), url);
+//        getContext().getContentResolver().notifyChange(url, null);
+/**
+// findsecbugs KO
+// findsecbugs OK
+// findsecbugs KO
+// findsecbugs KO
+//Unknown
+//Unknown
+// I think this should be reported with low priority only, everything visible is constant
+//Unknown
+/**
+//
+/**
+/**
+/**
+//No tainted annotation therefore, the level of confidence should not be rise
+//Medium
+//Medium
+//Some tainted annotation are present but they are not place to sink location
+//Medium
+//Medium
+//Medium
+//Medium
+//Makes sure that primitive types that takes two slots are properly consider
+//Medium
+//Medium
+//Medium
+//Medium
+/**
+/**
+//Single tainted annotation
+//High
+//High
+//Multiple tainted annotations
+//High
+//High
+//High
+//High
+//Makes sure that primitive types that takes two slots are properly consider
+//High
+//High
+//High
+//High
+//High
+//High
+//High
+//High
+//Freemarker configuration object
+//Load template from source folder
+// Build the data-model
+//List parsing
+// Console output
+//Vuln here
+//TP
+//TP
+//TP
+//Evaluate
+//Taint input
+//Unknown source
+//Reported as low
+//Legacy api
+//Reported as low
+//Safe
+//Taint input
+//Unknown source
+//Legacy api
+//Safe
+//Build accepted issuers list
+/**
+/**
+/**
+//Deserialization happen here
+//groups/group[@id='" + input + "']/writeAccess/text()";
+//groups/group[@id='" + input + "']/writeAccess/text()";
+//selectNodeIterator
+//selectNodeList
+//selectSingleNode
+//Static string (safe)
+//groups/group[@id='guess']/writeAccess/text()".toLowerCase());
+//groups/group[@id='" + input + "']/writeAccess/text()";
+//Safe (The next sample should not be mark)
+//groups/group[@id='admin']/writeAccess/text()");
+//groups/group[@id='" + XPathSuperSecureUtil.encodeForXPath(input) + "']/writeAccess/text()";
+//groups/group[@id='" + input + "']/writeAccess/text()";
+//Custom sink that should be identify as vulnerable
+//groups/group[@id='" + ESAPI.encoder().encodeForXPath(input) + "']/writeAccess/text()";
+//new StdXmlTransform().xslt2UnsafeResource("xsl_evil.xsl");
+/**
+// Script fragments
+// src='...'
+// lonely script tags
+// eval(...)
+// expression(...)
+// javascript:...
+// vbscript:...
+// onload(...)=...
+/**
+/**
+//java.dzone.com/articles/stronger-anti-cross-site"></a>
+// Script fragments
+// src='...'
+// lonely script tags
+// eval(...)
+// expression(...)
+// javascript:...
+// vbscript:...
+// onload(...)=...
+// NOTE: It's highly recommended to use the ESAPI library and uncomment the following line to
+// avoid encoded attacks.
+// value = ESAPI.encoder().canonicalize(value);
+// Avoid null characters
+// Remove all sections that match a pattern
+/**
+//www.javacodegeeks.com/2012/07/anti-cross-site-scripting-xss-filter.html">XSSRequestWrapper</a>
+// NOTE: It's highly recommended to use the ESAPI library and uncomment the following line to
+// avoid encoded attacks.
+// value = ESAPI.encoder().canonicalize(value);
+// Avoid null characters
+// Avoid anything between script tags
+// Avoid anything in a src='...' type of expression
+// Remove any lonesome </script> tag
+// Remove any lonesome <script ...> tag
+// Avoid eval(...) expressions
+// Avoid expression(...) expressions
+// Avoid javascript:... expressions
+// Avoid vbscript:... expressions
+// Avoid onload= expressions
+// some code
+// just grab first element
+// URL Decode the header value since req.getHeaders() doesn't. Unlike req.getParameters().
+//To avoid placebo test
+//To avoid placebo test
+//To avoid placebo test
+//        pw.write(ESAPI.encoder().encodeForHTML(input1));
+//        pw.write(StringEscapeUtils.escapeHtml(input1));
+//Boolean is consider unexploitable (safe for the other primitive type)
+//pw.print("SAFE".toCharArray()); //FIXME: char array not supported yet
+//Boolean is consider unexploitable (safe for the other primitive type)
+//pw.println("SAFE".toCharArray()); //FIXME: char array not supported yet
+///tmp/user/upload_123.xml
+/**
+/**
+//apache.org/xml/features/disallow-doctype-decl", true);
+/**
+//xml.org/sax/features/external-general-entities",true);
+//xml.org/sax/features/external-parameter-entities",true);
+/// The following four test cases are incomplete version of the previous configuration
+/// (Where all settings are cherry picked)
+//dbf.setFeature("http://xml.org/sax/features/external-general-entities",true);
+//xml.org/sax/features/external-parameter-entities",true);
+//xml.org/sax/features/external-general-entities",true);
+//dbf.setFeature("http://xml.org/sax/features/external-parameter-entities",true);
+//xml.org/sax/features/external-general-entities",true);
+//xml.org/sax/features/external-parameter-entities",true);
+//dbf.setXIncludeAware(false);
+//xml.org/sax/features/external-general-entities",true);
+//xml.org/sax/features/external-parameter-entities",true);
+//dbf.setExpandEntityReferences(false);
+//unsafeNoSpecialSettings();
+//safeSecureProcessing();
+// Tainted input
+// Do not allow unknown entities, by returning blank path
+// ...
+//Custom resolver
+// Tainted input
+// no permissions
+// ...
+// From nested class
+// Tainted input
+///tmp/user/upload_123.xml
+//apache.org/xml/features/disallow-doctype-decl", true);
+//xml.org/sax/features/external-general-entities", true);
+//xml.org/sax/features/external-parameter-entities", true);
+//unsafeNoSpecialSettings();
+//Throw SAXParseException: DOCTYPE is disallowed when the feature [...]
+//safeSecureProcessing();
+//safeManualConfiguration();
+// ...
+// Tainted input
+// Secure processing enabled
+// Secure processing enabled
+//apache.org/xml/features/disallow-doctype-decl",true);
+// ...
+// Tainted input
+//parseXMLSafe1(source);
+//parseXMLSafe2(source);
+//parseXSLTSafe1(source, xslt);
+//parseXSLTSafe2(source, xslt);
+// https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet#TransformerFactory
+// https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet#TransformerFactory
+//parseXMLDoS(source_dos);
+//parseXMLOneLiner(source);
+//parseXMLWithXslt(source, xslt);
+//parseXMLWithMissingAttributeStylesheet(source, xslt);
+//parseXMLWithMissingAttributeDtd(source, xslt);
+//parseXMLWithWrongFlag1(source);
+//parseXMLWithWrongFlag2(source);
+//Ref: https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet#XMLInputFactory_.28a_StAX_parser.29
+// This disables DTDs entirely for that factory
+// disable external entities
+/**
+//Ref: https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet#XMLInputFactory_.28a_StAX_parser.29
+// This disables DTDs entirely for that factory
+// disable external entities
+/**
+//parseXMLSafe1(in);
+//parseXMLSafe2(in);
+//parseXMLSafe3(in);
+//parseXMLSafe4(in);
+// Testing for entity embedding (lol bomb)
+//parseXMLSafe1(dos_in);
+//parseXMLSafe2(dos_in);
+//parseXMLSafe3(dos_in);
+//parseXMLSafe4(dos_in);
+//parseXMLdefaultValue(in);
+//        factory.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false);
+//        factory.setProperty(XMLInputFactory.SUPPORT_DTD, false);
+//apache.org/xml/features/disallow-doctype-decl", true);
+//        df.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+//        df.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+//        df.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+//        df.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+//df.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+//df.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+//df.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+//df.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+//df.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+//df.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+/**
+/**
+//Convert dot class name to path
+/**
+//In the IDE, the compiled directory are used.
+//With Maven, the jar will be reference.
+//This part of the suffix need to be kept
+//FindBugs will open file handle (java.io.File). The protocol file: need to be removed.
+/// Various utility for Hamcrest matcher
+//        for(Object mock : mocksToReset) {
+//            reset(mock);
+//        }
+//        mocksToReset.clear();
+/**
+/**
+//bugCollection.add(bugInstance);
+//        log.warn("Missing class " + className);
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//BufferedReader is use to support multiple types of line return
+//SMAP
+//*****.java
+/*****.java
+//*S JSP
+/*S JSP
+//Parse the file info section (*F)
+//Parse the line number mapping section (*L)
+/**
+/**
+//Reverse the reverse mapping .. o_O
+//FIXME : Reimplement the method above
+/**
+/**
+//Scala function enclose in
+//
+//String simpleName = fullName.substring(fullName.lastIndexOf("/") + 1);
+//if(!found) {
+//log.info("The bug was between lines "+srcAnn.getStartLine()+" and "+srcAnn.getEndLine());
+//}
+//The key "Unknown source" can not be reference directly
+/**
+/**
+/**
+/**
+/**
+//JSP line to Java source conversion
+//Map JSP lines to Java base on the smap file if available
+//
+//Convert
+/**
+/**
+//This is subject to change base on the JSP compiler implementation
+/**
+/**
+/**
+// Add classpath list to project's auxclasspath
+//Initialize the plugin base on the findbugs.xml
+//FindBugs engine
+//User preferences set to miss no bugs report
+/**
+//Add files to the jar stream
+/**
+/**

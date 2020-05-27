@@ -1,0 +1,1590 @@
+﻿/**
+/**
+/**
+/**
+/**
+/**
+// 5 minutes
+/**
+//@formatter:off
+//@formatter:on
+// your camera have to support HD720p to run this code
+/**
+/**
+// one check per 200 ms
+// keep "motion" state for 2 seconds
+// must be smaller than interval
+// keep program open
+/**
+// one check per 500 ms
+// keep program open
+/**
+// one check per 500 ms
+// keep program open
+/**
+// one check per 500 ms
+// save files directly to disk
+// creates test1.bmp
+// creates test1.gif
+// creates test1.jpg
+// creates test1.png
+// creates test1.wbmp
+// this is equivalent of this code
+// creates test2.bmp
+// creates test2.gif
+// creates test2.jpg
+// creates test2.png
+// creates test2.wbmp
+// NOTE !!!
+// you can use any format you want until there is a ImageIO plugin
+// installed which supports it
+// get image as bytes array / bytes buffer
+// save image in JPG format and return as array of bytes
+// save image in JPG format and return as byte buffer
+// webcam.setViewSize(WebcamResolution.VGA.getSize());
+/**
+/**
+//www.jhlabs.com/ip/filters/index.html">JH Labs Filters<a>
+//github.com/axet/jhlabs">here</a>).
+// use VGA resolution
+// get default webcam and set image transformer to this (transformer will modify image after
+// it's received from webcam, in this case it will rotate it)
+// create window
+// and webcam panel
+// add panel to window
+// this will do rotation on image
+/**
+//github.com/tm1990)
+// ms
+// Sets the max amount of motion points to 300 and the minimum range between them to 40
+/**
+// Gets the motion points from the motion detector and adds it to the HashMap
+/**
+/**
+/**
+// Gets all the points and updates the amount of time they have been rendered for
+// And removes the ones that exceed the renderTime variable
+// Gets all the remaining points after removing the exceeded ones and then renders the
+// current ones as a red square
+// this should be set only in development phase, it shall NOT be used in
+// production due to unknown side effects
+/**
+/**
+/**
+/**
+// do nothing, frame is dropped
+// get buffer from webcam (this is direct byte buffer located in off-heap memory)
+// notify all exchangers
+/**
+/**
+/**
+// all operations on buffer need to be synchronized
+/**
+// all operations on buffer need to be synchronized
+// this thread will get underlying ByteBuffer and perform synchronized op to
+// get rewrite it into bytes[] array
+// make sure to close exchanger because you will end up with memory leak
+// make sure to synchronize or you will end up
+// do processing on bytes[] array
+// this thread will await for underlying ByteBuffer to be ready and perform
+// synchronized op to get rewrite it into new bytes[] array
+// do processing on bytes[] array
+// this thread will await for underlying ByteBuffer to be ready and perform
+// synchronized op to get rewrite it into pre-created bytes[] array
+// do processing on bytes[] array
+/**
+// byte[]
+// finally at the end, don't forget to dispose
+/**
+/**
+// get default webcam and open it
+// get image
+// save image to PNG file
+/**
+/**
+// NOTE!
+/*
+// USB BANDWIDTH!
+/*
+// open all at once (this is the most time-consuming operation, all
+// others are executed instantly)
+// capture picture from all of them
+// close all
+// remember to start panel asynchronously - otherwise GUI will be
+// blocked while OS is opening webcam HW (will have to wait for
+// webcam to be ready) and this causes GUI to hang, stop responding
+// and repainting
+// start application with disable snapshot button - we enable it when
+// webcam is started
+/**
+// you may wonder what is this below - why new operator is invoked on panel instance, so let
+// me clarify this - since DefaultPainter class is an inner non-static class it has to be
+// invoked from the panel context - this is because an instance of a non-static inner class
+// holds a reference to it's owner object (the instance of the outer class that created it)
+/**
+/**
+// do nothing
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// notify webcam listeners of new image available, do that only if there
+// are any webcam listeners available because there is no sense to start
+// additional threads for no purpose
+/**
+/**
+/**
+// lock webcam for other Java (only) processes
+// open webcam device
+// install shutdown hook
+// setup non-blocking configuration
+// notify listeners
+/**
+// close webcam
+// stop updater
+// remove shutdown hook (it's not more necessary)
+// unlock webcam so other Java processes can start using it
+// notify listeners
+/**
+/**
+// hook can be null because there is a possibility that webcam has never
+// been open and therefore hook was not created
+/**
+/**
+/**
+/**
+/**
+/**
+// check if new resolution is the same as current one
+// check if new resolution is valid
+/**
+// get image
+// get FPS
+// +1 to avoid division by zero
+// notify webcam listeners about new image available
+/**
+// some devices can support direct image buffers, and for those call
+// processor task, and for those which does not support direct image
+// buffers, just convert image to RGB byte array
+/**
+// some devices can support direct image buffers, and for those call
+// processor task, and for those which does not support direct image
+// buffers, just convert image to RGB byte array
+/**
+/**
+/**
+// timeout exception below will never be caught since user would have to
+// wait around three hundreds billion years for it to occur
+/**
+/**
+/**
+// this should never happen since user would have to wait 300000000
+// years for it to occur
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// stop discovery service
+// stop processor
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// convert to linked list due to O(1) on remove operation on
+// iterator versus O(n) for the same operation in array list
+// old device
+// new device
+// reduce lists
+// remove both elements, if device name is the same, which
+// actually means that device is exactly the same
+// if any left in old ones it means that devices has been removed
+// if any left in new ones it means that devices has been added
+// do not run if driver does not support discovery
+// wait initial time interval since devices has been initially
+// discovered
+/**
+// return if not running
+/**
+// if configured to not start, then simply return
+// capture driver does not support discovery - nothing to do
+// return if already running
+// start discovery service runner
+/**
+/**
+/**
+// dispose all webcams
+// clear webcams list
+// unassign webcams from deallocator
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// singleton
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// atomic rename operation can fail (mostly on Windows), so we
+// simply jump out the method if it succeed, or try to rewrite
+// content using streams if it fail
+// create lock file if not exist
+// rewrite temporary file content to lock, try max 5 times
+// remove temporary file
+/**
+/**
+/**
+// do nothing when lock disabled
+/**
+// always return false when lock is disabled
+// check if locked by current process
+// check if locked by other process
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// detectorAlgorithm hasn't been called so far - get image center
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// ignore point if it's in one of do-not-engage zones, simply skip motion
+// detection for corresponding pixel
+/**
+/**
+/**
+/**
+// first ARGB
+// second ARGB
+// in case if alpha is enabled (translucent image)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// resized image position and size
+// source rectangle coordinates
+// destination rectangle coordinates
+/**
+/**
+/**
+/**
+// 1 frame per minute
+/**
+// 50 frames per second
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// do nothing when not running
+// loop when starting, to wait for images
+// schedule update when webcam is open, otherwise schedule
+// second scheduler execution
+// FPS limit means that panel rendering frequency is
+// limited to the specific value and panel will not be
+// rendered more often then specific value
+// TODO: rename FPS value in panel to rendering
+// frequency
+// executor has been shut down, which means that someone
+// stopped panel / webcam device before it was actually
+// completely started (it was in "starting" timeframe)
+/**
+/**
+/**
+/**
+/**
+// do nothing when updater not running, when webcam is closed, or
+// panel repainting is paused
+// get new image from webcam
+// ignore repaint if image is the same as before
+/**
+/**
+/**
+// FPS
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// if default size has not been provided, then use the one from webcam
+// device (this will be current webcam resolution)
+// do nothing
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// VGA (Video Graphics Array)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// XGA (Extended Graphics Array)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// QXGA (Quad Extended Graphics Array)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// HXGA (Hyper Extended Graphics Array)
+/**
+/**
+/**
+/**
+/**
+/**
+// HD (High-Definition)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// other
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// do nothing on "signal default" or "signal ignore"
+/**
+// consume whole input
+// stream
+/**
+/**
+/**
+/**
+/**
+// Calculate delay required to achieve target FPS.
+// In some cases it can be less than 0
+// because camera is not able to serve images as fast as
+// we would like to. In such case just run with no delay,
+// so maximum FPS will be the one supported
+// by camera device in the moment.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Calculate time required to fetch 1 picture.
+// +1 to avoid division by zero
+// reschedule task
+// notify webcam listeners about the new image available
+/**
+// Just in case if another thread starts calling this method before
+// updater has been properly started. This will loop while image is
+// not available.
+// Return null if more than 10 seconds passed (timeout).
+/**
+/**
+/**
+/**
+// do nothing
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// if image is not fresh, update it
+// get image buffer
+// if image is not fresh, update it
+// get image buffer
+// NOTE!
+// Following the note from OpenIMAJ code - it seams like there is some
+// issue on 32-bit systems which prevents grabber to find devices.
+// According to the mentioned note this for loop shall fix the problem.
+// set timeout, this MUST be done after grabber is open and before it's closed, otherwise it
+// will result as crash
+// clear device memory buffer
+// set device to open
+// start underlying frames refresher
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//jnaerator.googlecode.com/">JNAerator</a>,<br>
+//ochafik.free.fr/">Olivier Chafik</a> that
+//code.google.com/p/jnaerator/wiki/CreditsAndLicense">uses a
+//nativelibs4java.googlecode.com/">NativeLibs4Java</a> or <a
+//bridj.googlecode.com/">BridJ</a> .
+// / C type : const char*
+// / C type : const char*
+// / C type : const char*
+// / C type : const char*
+/*
+/*
+/**
+/**
+//jnaerator.googlecode.com/">JNAerator</a>,<br>
+//ochafik.free.fr/">Olivier Chafik</a> that
+//code.google.com/p/jnaerator/wiki/CreditsAndLicense">uses a
+//nativelibs4java.googlecode.com/">NativeLibs4Java</a> or <a
+//bridj.googlecode.com/">BridJ</a> .
+// / C type : Device**
+// / C type : Device**
+/**
+/**
+//jnaerator.googlecode.com/">JNAerator</a>,<br>
+//ochafik.free.fr/">Olivier Chafik</a> that
+//code.google.com/p/jnaerator/wiki/CreditsAndLicense">uses a
+//nativelibs4java.googlecode.com/">NativeLibs4Java</a> or <a
+//bridj.googlecode.com/">BridJ</a> .
+// / C type : void*
+// / C type : void*
+/**
+/**
+// ...
+// ...
+/**
+/**
+/**
+/**
+/**
+/**
+// 1f = 100% quality, at the beginning
+// loop and try to compress until compressed image bytes array is not longer than a given
+// maximum value, reduce quality by 25% in every step
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// NTSC luma
+/*
+/*
+/*
+// Make sure the component has a size and has been layed out.
+// (necessary check for components not added to a realized frame)
+// Paint a background for non-opaque components,
+// otherwise the background will be black
+/**
+/*
+/**
+/**
+/**
+//Webcam.setDriver(new RaspividDriver());
+/**
+// do nothing
+/**
+/**
+/**
+//webcam-capture.sarxos.pl/upload-demo/upload.php";
+// do nothing
+/**
+/**
+// 1 frame per minute
+/**
+// 50 frames per second
+/**
+/**
+/**
+/**
+// this is valid because we are using a 3-byte data model without
+// transparent pixels
+/**
+/**
+/**
+// FPS
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// /**
+/**
+// *
+// * @see #setPainter(Painter)
+// * @see #getPainter()
+// */
+// private Painter painter = new DefaultPainter();
+/**
+// start image updater (i.e. start panel repainting)
+// copy size from webcam only if default size has not been provided
+// do nothing
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// IMPORTANT! Replace default driver by FFmpegCliDriver.
+/**
+// IMPORTANT! Replace default driver by FFmpegCliDriver.
+// so we can ignore the error stream
+// If buffer is not full yet
+/**
+// suppress ffmpeg headers
+// camera format
+// frame dimension
+// input file
+// raw output
+// raw output
+// flip image horizontally
+// avoid frame duplication
+// output format as bgr24
+// output to stdout
+// Remove final double quotes
+// Platform not supported
+/**
+// set capture driver for fswebcam tool
+// get default webcam and open it
+// get image from webcam device
+// save image to PNG file
+// close webcam
+// search for SOI
+// SOI found
+// read until EOI
+// EOI found
+// w/a for bug in java 1.6 - waitFor requires Thread.interrupted()
+// call in finally block to reset thread flags
+//@formatter:off
+// number of skipped images
+// number of images merged to the single output (default 1)
+// format jpeg | png						 
+// only image - no texts, banners, etc
+// resolution
+// log file 
+// input video file
+// output file (pipe)
+//@formatter:on
+// print process output
+/**
+/**
+/**
+/**
+// ms
+/**
+// "image/jpeg",
+// "YUY2",
+// "YV12",
+// "I420",
+// "BGR",
+// if (Platform.isWindows()) {
+// source = ElementFactory.make("dshowvideosrc", "source");
+// source.set("device-name", name);
+// } else if (Platform.isLinux()) {
+// source.set("device", name);
+// } else {
+// throw new IllegalStateException("Only Linux and Windows is supported");
+// }
+// TODO add support for mjpeg
+// not initialized = do nothing, no need to close
+/**
+/**
+// uncomment if you would like debug prints to be visible, and don't
+// forget to add logback JAR and XML file as well
+// WebcamLogConfigurator.configure("src/example/resources/logback.xml");
+/**
+/**
+/**
+// ms
+/**
+/**
+/**
+/**
+/* gstreamer stuff */
+/* logic */
+/* used to calculate fps */
+/**
+/**
+/**
+// wait max 20s for image to appear
+/**
+//@formatter:off
+// "--gst-plugin-path", new File(".").getAbsolutePath(),
+// "--gst-debug-level=3",
+//@formatter:on
+/**
+// 0.5 FPS = 1 frame per 2 seconds
+// one motion check per 2 seconds
+// open in asynchronous mode
+// change to your own username
+// change to your own password
+//{ip-address-or-domain-name}"; // camera's IP address or domain
+//192.168.29.65:4747/mjpegfeed?640x480", IpCamMode.PUSH);
+/**
+/**
+// register custom composite driver
+// register IP camera device
+//88.37.116.138/mjpg/video.mjpg", IpCamMode.PUSH));
+//ce3014.myfoscam.org:20054/snapshot.cgi";
+//ce3014.myfoscam.org:20054/videostream.cgi";
+// replace with your own username and password
+/**
+/**
+// 0.2 FPS = 1 frame per 5 seconds
+// IMPORTANT! For IP camera you have to use IpCamDriver
+// IMPORTANT! IP cameras are not automatically discovered like USB, you have
+// to register them manually
+//195.31.81.138/mjpg/video.mjpg", IpCamMode.PUSH);
+/**
+/**
+// remember to start panel asynchronously - otherwise GUI will be
+// blocked while OS is opening webcam HW (will have to wait for
+// webcam to be ready) and this causes GUI to hang, stop responding
+// and repainting
+/**
+// start application with disable snapshot button - we enable it when
+// webcam is started
+/**
+/**
+//88.37.116.138/mjpg/video.mjpg", IpCamMode.PUSH);
+/**
+/**
+// EOF, ignore error and recreate stream
+// do nothing, no need to stop this reader
+// do nothing, no need to start this one
+//")) {
+//" + url;
+// normal jpeg return image/jpeg as opposite to mjpeg
+/**
+// ignore
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// URL.euals() method is broken and thus we shall not depend on
+// it, the best w/a is to use URI instead
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// in case when scanning is disabled (by default) this method will
+// return all registered devices
+// if scanning is enabled, this method will first perform HTTP lookup
+// for every IP camera device and only online devices will be returned
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//192.168.0.12'
+/**
+//@formatter:off
+//@formatter:on
+/**
+//@formatter:off
+//@formatter:on
+/**
+//@formatter:off
+//@formatter:on
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+// remove "test 05"
+// remove "test 04"
+// remove "test 03"
+// remove "test 02"
+// remove "test 01"
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+// remove "test 05"
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.de/c=1", IpCamMode.PULL);
+//p.be/c=1", IpCamMode.PULL);
+//p.pl/c=1", IpCamMode.PULL);
+//p.co/c=1", IpCamMode.PULL);
+//p.lt/c=1", IpCamMode.PULL);
+//p.pl/c=1")));
+//p.de/c=1", IpCamMode.PULL);
+//p.be/c=1", IpCamMode.PULL);
+//p.pl/c=1", IpCamMode.PULL);
+//p.co/c=1", IpCamMode.PULL);
+//p.lt/c=1", IpCamMode.PULL);
+//p.pl/c=1")));
+/**
+/**
+/**
+/**
+// wait for start
+// try to grab single image (wait 10 seconds)
+/**
+/**
+/**
+/**
+/**
+/**
+// find the largest picture format
+/**
+// load civil DLL
+// ignore - it is already loaded
+// wait max 10 seconds for driver to be ready
+/**
+// singleton
+/**
+/**
+//127.0.0.1:5000") // this is your local host
+//192.168.1.12:5000")); // this is some remote host
+// run this from your terminal (as a single line, and remove dollar sign):
+// $ gst-launch-1.0 -v v4l2src device=/dev/video0 ! capsfilter caps="video/x-raw, width=320,
+// height=240" ! decodebin name=dec ! videoconvert ! jpegenc ! multipartmux ! tcpserversink
+// host=0.0.0.0 port=5000
+/**
+// ignore resolution change
+// do nothing, no need to dispose anything here
+/**
+/**
+//accu.org/index.php/journals/1434
+/**
+/**
+/**
+/**
+/**
+/**
+// XXX: any clues how to get webcam name on mac?
+// this trick is to get resolutions supported by a webcam identified by this device,
+// more details on how it works can be found in this stackoverflow question:
+// https://stackoverflow.com/questions/18458422/query-maximum-webcam-resolution-in-opencv
+/**
+// set OpenIMAJ driver
+// get default camera
+// set VGA resolution and open
+// get image
+// close camera
+// save image to file
+/**
+/**
+// TODO scale to dimension if not equal
+// what the hell is that something below? that's ugly w/a for black
+// images at the very capture beginning, if you have some other idea of
+// how to remove them, please share or fix
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// *******************raspistill options constants**************
+/** AWBGAINS --awbgains, raspistill, raspivid, raspividyuv, raspiyuv */
+/** FLICKER --flicker, raspistill, raspivid, raspividyuv, raspiyuv */
+/** KEYPRESS --keypress, raspistill, raspivid, raspividyuv, raspiyuv */
+/** GLWIN --glwin, raspistill */
+/** ANNOTATE --annotate, raspistill, raspivid, raspividyuv, raspiyuv */
+/** BITRATE --bitrate, raspivid */
+/** VSTAB --vstab, raspistill, raspivid, raspividyuv, raspiyuv */
+/** LISTEN --listen, raspivid, raspividyuv */
+/** OUTPUT --output, raspistill, raspivid, raspividyuv, raspiyuv */
+/** MODE --mode, raspistill, raspivid, raspividyuv */
+/** SATURATION --saturation, raspistill, raspivid, raspividyuv, raspiyuv */
+/** DATETIME --datetime, raspistill */
+/** SPLIT --split, raspivid */
+/** DRC --drc, raspistill, raspivid, raspividyuv, raspiyuv */
+/** STATS --stats, raspistill, raspivid, raspividyuv, raspiyuv */
+/** SEGMENT --segment, raspivid */
+/** DECIMATE --decimate, raspistill, raspivid, raspividyuv, raspiyuv */
+/** 3DSWAP --3dswap, raspistill, raspivid, raspividyuv, raspiyuv */
+/** RAW_FORMAT --raw-format, raspivid */
+/** SHARPNESS --sharpness, raspistill, raspivid, raspividyuv, raspiyuv */
+/** ANALOGGAIN --analoggain, raspistill, raspivid, raspividyuv, raspiyuv */
+/** SIGNAL --signal, raspistill, raspivid, raspividyuv, raspiyuv */
+/** HEIGHT --height, raspistill, raspivid, raspividyuv, raspiyuv */
+/** QP --qp, raspivid */
+/** SETTINGS --settings, raspistill, raspivid, raspividyuv, raspiyuv */
+/** TIMED --timed, raspivid, raspividyuv */
+/** INTRA --intra, raspivid */
+/** LEVEL --level, raspivid */
+/** PROFILE --profile, raspivid */
+/** RAW --raw, raspistill, raspivid */
+/** CIRCULAR --circular, raspivid */
+/** ENCODING --encoding, raspistill */
+/** QUALITY --quality, raspistill */
+/** ANNOTATEEX --annotateex, raspistill, raspivid, raspividyuv, raspiyuv */
+/** EV --ev, raspistill, raspivid, raspividyuv, raspiyuv */
+/** CODEC --codec, raspivid */
+/** VECTORS --vectors, raspivid */
+/** FULLSCREEN --fullscreen, raspistill, raspivid, raspividyuv, raspiyuv */
+/** EXPOSURE --exposure, raspistill, raspivid, raspividyuv, raspiyuv */
+/** GLCAPTURE --glcapture, raspistill */
+/** CONTRAST --contrast, raspistill, raspivid, raspividyuv, raspiyuv */
+/** STEREO --stereo, raspistill, raspivid, raspividyuv, raspiyuv */
+/** GLSCENE --glscene, raspistill */
+/** BURST --burst, raspistill, raspiyuv */
+/** HFLIP --hflip, raspistill, raspivid, raspividyuv, raspiyuv */
+/** EXIF --exif, raspistill */
+/** PREVIEW --preview, raspistill, raspivid, raspividyuv, raspiyuv */
+/** DIGITALGAIN --digitalgain, raspistill, raspivid, raspividyuv, raspiyuv */
+/** CAMSELECT --camselect, raspistill, raspivid, raspividyuv, raspiyuv */
+/** THUMB --thumb, raspistill */
+/** FRAMERATE --framerate, raspivid, raspividyuv */
+/** RGB --rgb, raspividyuv, raspiyuv */
+/** DEMO --demo, raspistill, raspivid, raspividyuv */
+/** VFLIP --vflip, raspistill, raspivid, raspividyuv, raspiyuv */
+/** ROI --roi, raspistill, raspivid, raspividyuv, raspiyuv */
+/** TIMEOUT --timeout, raspistill, raspivid, raspividyuv, raspiyuv */
+/** FULLPREVIEW --fullpreview, raspistill, raspiyuv */
+/** FLUSH --flush, raspivid */
+/** METERING --metering, raspistill, raspivid, raspividyuv, raspiyuv */
+/** IMXFX --imxfx, raspistill, raspivid, raspividyuv, raspiyuv */
+/** TIMELAPSE --timelapse, raspistill, raspiyuv */
+/** PENC --penc, raspivid */
+/** LATEST --latest, raspistill, raspiyuv */
+/** TIMESTAMP --timestamp, raspistill */
+/** IREFRESH --irefresh, raspivid */
+/** ISO --ISO, raspistill, raspivid, raspividyuv, raspiyuv */
+/** GL --gl, raspistill */
+/** RESTART --restart, raspistill */
+/** INITIAL --initial, raspivid, raspividyuv */
+/** SHUTTER --shutter, raspistill, raspivid, raspividyuv, raspiyuv */
+/** ROTATION --rotation, raspistill, raspivid, raspividyuv, raspiyuv */
+/** START --start, raspivid */
+/** FRAMESTART --framestart, raspistill */
+/** AWB --awb, raspistill, raspivid, raspividyuv, raspiyuv */
+/** VERBOSE --verbose, raspistill, raspivid, raspividyuv, raspiyuv */
+/** LUMA --luma, raspividyuv, raspiyuv */
+/** HELP --help, raspistill, raspivid, raspividyuv, raspiyuv */
+/** BRIGHTNESS --brightness, raspistill, raspivid, raspividyuv, raspiyuv */
+/** NOPREVIEW --nopreview, raspistill, raspivid, raspividyuv, raspiyuv */
+/** INLINE --inline, raspivid */
+/** COLFX --colfx, raspistill, raspivid, raspividyuv, raspiyuv */
+/** WIDTH --width, raspistill, raspivid, raspividyuv, raspiyuv */
+/** SAVE_PTS --save-pts, raspivid, raspividyuv */
+/** OPACITY --opacity, raspistill, raspivid, raspividyuv, raspiyuv */
+/** WRAP --wrap, raspivid */
+// *******************message templates**************
+/**
+//www.raspberrypi.org/documentation/raspbian/applications/camera.md
+/**
+/**
+/**
+/**
+// error must be consumed, if not, too much data blocking will crash process or
+// blocking IO
+// no preview window,
+/*
+// high priority to acquire CPU
+/*
+// must new each time!
+/**
+/**
+/**
+/**
+//www.petervis.com/Raspberry_PI/Raspberry_Pi_CSI/raspberry-pi-csi-interface-connector-pinout.html">Raspberrypi
+/**
+// raspi??? to options
+/**
+// private static final int IEND = 0x49454E44;
+// ************************default decode image settings********************
+// ************************************************************************
+// private final CRC32 crc;
+/**
+// this.crc = new CRC32();
+// just skip sign
+// no check
+// throw new IOException("Not a valid PNG file");
+/**
+// must new each time!
+/**
+// none
+// just ignore it
+// just skip the rest and the CRC
+// read crc
+/* int expectedCrc = */readInt(buffer, 0);
+/*
+// crc.reset();
+// crc.update(buffer, 4, 4); // only chunkType
+// crc.update(buffer, offset, length);
+/**
+/**
+/**
+// override some arguments
+// must be this, then image will be in console!
+/**
+/**
+/**
+/**
+//www.raspberrypi.org/forums/viewtopic.php?t=189830
+//github.com/raspberrypi/userland/blob/master/host_applications/linux/apps/raspicam/RaspiVid.c#L860)
+/**
+/**
+// override some arguments
+// must be this, then image will be in console!
+// only support rgb
+// must new each time!
+/**
+/**
+/**
+//www.raspberrypi.org/forums/viewtopic.php?t=189830
+//github.com/raspberrypi/userland/blob/master/host_applications/linux/apps/raspicam/RaspiVid.c#L860)
+/**
+/**
+// override some arguments
+// only support rgb
+// must new each time!
+/**
+/**
+/**
+/**
+// override some arguments
+// must be this, then image will be in console!
+// must new each time!
+/**
+/**
+/**
+/*
+/*
+/**
+/** " + upper + " --" + opt + ", " + longOpt.get(opt) + " */");
+/**
+/**
+//java is not RTOS, offset is allowed
+/**
+// No need for adaptation
+// do nothing, no need to dispose anything here
+/**
+/**
+// MJPEG and JPEG are the best match because there is no need to
+// recalculate too much, hardware will deliver what we need
+// next are YUV formats where every 2 pixels can be written in 4 bytes
+// 24-bit formats where every pixel can be stored in 3 bytes
+// 32-bit formats where every pixel can be stored in 4 bytes
+// private final DeviceInfo videoDeviceInfo;
+// private final List<ImageFormat> formats;
+/* used to calculate fps */
+/**
+// skip unsupported resolution type
+/**
+// ignore
+/**
+//code.google.com/p/v4l4j">http://code.google.com/p/v4l4j</a>
+/**
+/**
+/**
+/**
+//" + device;
+/* NOTE!
+//", EMPTY);
+//", EMPTY);
+//", EMPTY);
+//184.72.239.149/vod/mp4:BigBuckBunny_175k.mov";
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// sanity, check if buffers is not empty
+// sanity check if buffer is not null
+// transfer bytes into array
+// create image
+// flush reconstructable resources to free memory
+// return image
+/**
+/**
+/**
+//fivedots.coe.psu.ac.th/~ad/jg/nui025/snapsWithoutJMF.pdf
+// do not display title
+// no stats
+// no subtitles
+// no snapshot previews
+// reduce capture lag/latency
+// turn off warnings
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//</code> for Windows</li>
+//</code> for Mac</li>
+//</code> for linux</li>
+//";
+//";
+//";
+// wait for image
+// no audio device
+// no audio device
+// no audio device
+// wait for the first image
+// ms
+// convert memory to image
+// calculate fps
+/**
+//www.capricasoftware.co.uk/projects/vlcj/index.html
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Native.loadLibrary(RuntimeUtil.getLibVlcLibraryName(), LibVlc.class);
+/**
+/**
+/**
+//
+// ignore
+// ignore
+// ignore
+/**
+/**
+/**
+/**
+/**
+// note this is in init as it **must not** be called on the FX Application Thread:
+// make the cam behave like a mirror:
+// unreachable...
+/**
+/**
+/**
+//setup the videoWindow
+//setup the connection
+//	logger.info("stream connected to server at :{}",channel);
+//	logger.info("stream disconnected to server at :{}",channel);
+//	logger.debug("exception at :{},exception :{}",channel,t);
+/**
+//I just move the stream encoder out of the channel pipeline for the performance
+//this.h264StreamEncoder = new H264StreamEncoder(dimension,false);
+//here we just start to stream when the first client connected in
+//
+//do some thing
+//cancel the task
+//cancel the task
+/**
+//channelGroup.write(bufferedImage);
+/**
+// TODO Auto-generated catch block
+//here,cause we know the smale image's size,so i just write it down here
+//
+//
+//here start to swap the image
+//owner.getGraphics().drawImage(image, 0, 0, image.getWidth(), image.getHeight(), null);
+//g2.clearRect(0, 0, image.getWidth(), image.getHeight());
+//setBounds(getBounds().x	, getBounds().y, image.getWidth(), image.getHeight());
+//going to draw the smale picture
+//	bigImage = null;
+//draw the smale image
+//draw at the right down
+//setBounds(getBounds().x	, getBounds().y, image.getWidth(), image.getHeight());
+//going to draw the smale picture
+//smallImage = null;
+/**
+/**
+/**
+// w = metrics.stringWidth(str);
+// h = metrics.getHeight();
+// g2.drawString(str, (getWidth() - w) / 2, cy - 2 * h);
+// owner.getGraphics().drawImage(image, 0, 0, image.getWidth(),
+// image.getHeight(), null);
+// g2.clearRect(0, 0, image.getWidth(), image.getHeight());
+// setBounds(getBounds().x , getBounds().y, image.getWidth(),
+// image.getHeight());
+// image = scaleUPMaker.make(update);
+/**
+/**
+//add an simple indicator handler
+//add the frame codec
+//add the video stream handler
+//change the below falst --> ture ,if using the netty's frame codec
+//comment the netty's frame encoder ,if want to use the build in h264 encoder
+//add the stream h264 encoder
+//for that we may need to server so many client,so we need to move this out of the pipe line
+//so that we only need to encode only once
+//pipeline.addLast("stream h264 encoder", new H264StreamEncoder(dimension,false));
+/**
+/**
+// iStreamCoder.setNumPicturesInGroupOfPictures(20);
+// iStreamCoder.setBitRate(250000);
+// iStreamCoder.setBitRateTolerance(9000);
+// iStreamCoder.setPixelType(IPixelFormat.Type.YUV420P);
+// iStreamCoder.setHeight(dimension.height);
+// iStreamCoder.setWidth(dimension.width);
+// iStreamCoder.setFlag(IStreamCoder.Flags.FLAG_QSCALE, true);
+// iStreamCoder.setGlobalQuality(0);
+// rate
+// IRational rate = IRational.make(25, 1);
+// iStreamCoder.setFrameRate(rate);
+// time base
+// iStreamCoder.setAutomaticallyStampPacketsForStream(true);
+// iStreamCoder.setTimeBase(IRational.make(rate.getDenominator(),rate.getNumerator()));
+// start to decode
+// decode the packet
+// decode the packet into the video picture
+// if this is a complete picture, dispatch the picture
+// BufferedImage convertedImage = ImageUtils.convertToType(image,
+// BufferedImage.TYPE_3BYTE_BGR);
+// here ,put out the image
+// clean the picture and reuse it
+// ByteBufferUtil.destroy(data);
+// start to decode
+// decode the packet
+// decode the packet into the video picture
+// if this is a complete picture, dispatch the picture
+// BufferedImage convertedImage = ImageUtils.convertToType(image,
+// BufferedImage.TYPE_3BYTE_BGR);
+// here ,put out the image
+// clean the picture and reuse it
+// ByteBufferUtil.destroy(data);
+//setup
+//rate
+//time base
+//iStreamCoder.setAutomaticallyStampPacketsForStream(true);
+// equals -tune zerolatency in ffmpeg
+//open it
+//here is the encode
+//convert the image
+//to frame
+//pFrame.setQuality(0);
+//free the MEM
+//write to the container
+//iPacket.delete();
+//here we send the package to the remote peer
+/**
+// TODO Auto-generated method stub
+/**
+// if the source image is already the target type, return the source image
+// otherwise create a new image of the target type and draw the new
+// image
+/**
+/**
+//super.exceptionCaught(ctx, e);
+/**
+//super.exceptionCaught(ctx, e);
+//protected final ChannelBuffer dataSink = ChannelBuffers.dynamicBuffer(65536);
+//  System.out.println("frame length :"+frameLengthInt);
+//System.out.println("message length :"+length);
+//System.out.println(channelBuffer.order());
+/**
+/**
+/**
+// ms
+// how long motion is valid
+/**
+//@formatter:off
+//@formatter:on
+// setPreferredSize(new Dimension(370, 497));
+// fall thru, it means there is no QR code in image
+// fall thru, it means there is no QR code in image
+/**
+/**
+// disable the check that prevents subclassing of SWT components
+/**
+/**
+/**
+// 10 FPS
+/**
+/**
+/**
+/**
+// do nothing
+// do nothing
+// do nothing
+/**

@@ -1,0 +1,26 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cmake-init-master\cmake-init-master\source\baselib\source\baselib.cpp
+// Library name
+// Library version
+// Library type (static or dynamic)
+// Data directory
+// Read file
+// namespace baselib
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cmake-init-master\cmake-init-master\source\examples\fibcmd\main.cpp
+/*argc*/, char* /*argv*/[])
+// Print library info
+// Calculate and print fibonacci number
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cmake-init-master\cmake-init-master\source\examples\fibgui\main.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cmake-init-master\cmake-init-master\source\examples\fibgui\MainWindow.cpp
+// Setup UI
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cmake-init-master\cmake-init-master\source\fiblib\source\Fibonacci.cpp
+// namespace fiblib
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cmake-init-master\cmake-init-master\source\tests\fiblib-test\fibonacci_test.cpp
+// ...
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cmake-init-master\cmake-init-master\source\tests\fiblib-test\main.cpp

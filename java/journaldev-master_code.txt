@@ -1,0 +1,5 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/journaldev-master\journaldev-master\Android\AndroidJNIBasics\app\src\main\cpp\native-lib.cpp
+/* this */) {
+// copy string one into the result.
+// append string two to the result.

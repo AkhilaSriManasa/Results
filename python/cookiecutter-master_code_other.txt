@@ -1,0 +1,629 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\setup.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\__main__.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\cli.py
+# -*- coding: utf-8 -*-
+# Convert tuple -- e.g.: (u'program_name=foobar', u'startsecs=66')
+# to dict -- e.g.: {'program_name': 'foobar', 'startsecs': '66'}
+# If you _need_ to support a local template in a directory
+# called 'help', use a qualified path to the directory.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\config.py
+# -*- coding: utf-8 -*-
+# Make sure to preserve existing items in
+# nested dicts, for example `abbreviations`
+# Do NOT load a config. Return defaults instead.
+# Load the given config file
+# Does the user set up a config environment variable?
+# Load an optional user config if it exists
+# otherwise return the defaults
+# There is a config environment variable. Try to load it.
+# Do not check for existence, so invalid file paths raise an error.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\environment.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\exceptions.py
+# -*- coding: utf-8 -*-
+# unused locally
+# unused locally
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\extensions.py
+# -*- coding: utf-8 -*-
+# Python 3.6 and above
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\find.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\generate.py
+# -*- coding: utf-8 -*-
+# Do not include variables which are not used in the template
+# We are dealing with a choice variable
+# This overwrite is actually valid for the given context
+# Let's set it as default (by definition first item in list)
+# see ``cookiecutter.prompt.prompt_choice_for_config``
+# Simply overwrite the value for this variable
+# JSON decoding error.  Let's throw a new exception that is more
+# friendly for the developer or user.
+# Add the Python object to the context dictionary
+# Overwrite context variable defaults with the default context from the
+# user's global config, if available
+# Render the path to the output file (not including the root project dir)
+# Just copy over binary files. Don't render.
+# Force fwd slashes on Windows for get_template
+# This is a by-design Jinja issue
+# Render the file
+# Disable translated so that printed exception contains verbose
+# information about syntax error location
+# Apply file permissions to output file
+# We want the Jinja path and the OS paths to match. Consequently, we'll:
+#   + CD to the template folder
+#   + Set Jinja's path to '.'
+#
+#  In order to build our files to the correct folder(s), we'll use an
+# absolute path for the target folder (project_dir)
+# if we created the output directory, then it's ok to remove it
+# if rendering fails
+# We must separate the two types of dirs into different lists.
+# The reason is that we don't want ``os.walk`` to go through the
+# unrendered directories, since they will just be copied.
+# We check the full path, because that's how it can be
+# specified in the ``_copy_without_render`` setting, but
+# we store just the dir name
+# We mutate ``dirs``, because we only want to go through these dirs
+# recursively
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\hooks.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\log.py
+# -*- coding: utf-8 -*-
+# Set up 'cookiecutter' logger
+# Remove all attached handlers, in case there was
+# a logger with using the name 'cookiecutter'
+# Create a file handler if a log file is provided
+# Get settings based on the given stream_level
+# Create a stream handler
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\main.py
+# -*- coding: utf-8 -*-
+# prompt the user to manually configure at the command line.
+# except when 'no-input' flag is set
+# include template dir or url in the context dict
+# Create project from local context and project template.
+# Cleanup (if required)
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\prompt.py
+# -*- coding: utf-8 -*-
+# Please see http://click.pocoo.org/4/api/#click.prompt
+# Please see http://click.pocoo.org/4/api/#click.prompt
+# Please see http://click.pocoo.org/4/api/#click.prompt
+# Please see http://click.pocoo.org/4/api/#click.prompt
+# Leave it up to click to ask the user again
+# Leave it up to click to ask the user again
+# Please see http://click.pocoo.org/4/api/#click.prompt
+# Return the given default w/o any processing
+# First pass: Handle simple and raw variables, plus choices.
+# These must be done first because the dictionaries keys and
+# values might refer to them.
+# We are dealing with a choice variable
+# We are dealing with a regular variable
+# Second pass; handle the dictionaries.
+# We are dealing with a dict variable
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\replay.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\repository.py
+# -*- coding: utf-8 -*-
+# something like git:// ssh:// file:// etc.
+# or
+# something like user@...
+# Split on colon. If there is no colon, rest will be empty
+# and prefix will be the whole template
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\utils.py
+# -*- coding: utf-8 -*-
+# Suppress prompt if called via API
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\vcs.py
+# -*- coding: utf-8 -*-
+# Ensure that clone_to_dir exists
+# identify the repo_type
+# check that the appropriate VCS for the repo_type is installed
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\zipfile.py
+# BadZipfile was renamed to BadZipFile in Python 3.2.
+# Ensure that clone_to_dir exists
+# Build the name of the cached zipfile,
+# and prompt to delete if it already exists.
+# (Re) download the zipfile
+# filter out keep-alive new chunks
+# Just use the local zipfile as-is.
+# Now unpack the repository. The zipfile will be unpacked
+# into a temporary directory
+# The first record in the zipfile should be the directory entry for
+# the archive. If it isn't a directory, there's a problem.
+# Construct the final target directory
+# Extract the zip file into the temporary directory
+# File is password protected; try to get a password from the
+# environment; if that doesn't work, ask the user.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\__init__.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\cookiecutter\__main__.py
+# -*- coding: utf-8 -*-
+# pragma: no cover
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\docs\ccext.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\docs\conf.py
+# -*- coding: utf-8 -*-
+#
+# cookiecutter documentation build configuration file, created by
+# sphinx-quickstart on Thu Jul 11 11:31:49 2013.
+#
+# This file is execfile()d with the current directory set to its containing
+# dir.
+#
+# Note that not all possible configuration values are present in this
+# autogenerated file.
+#
+# All configuration values have a default; values that are commented out
+# serve to show the default.
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+# sys.path.insert(0, os.path.abspath('.'))
+# For building docs in foreign environments where we don't have all our
+# dependencies (like readthedocs), mock out imports that cause sphinx to fail.
+# see: https://docs.readthedocs.io/en/latest/faq.html#i-get-import-errors-on-libraries-that-depend-on-c-modules  # noqa
+# Add parent dir to path
+# noqa 402
+# -- General configuration ----------------------------------------------------
+# If your documentation needs a minimal Sphinx version, state it here.
+# needs_sphinx = '1.0'
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or
+# your custom ones.
+# Add any paths that contain templates here, relative to this directory.
+# The suffix of source filenames.
+# The encoding of source files.
+# source_encoding = 'utf-8-sig'
+# The master toctree document.
+# General information about the project.
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+# The full version, including alpha/beta/rc tags.
+# The language for content autogenerated by Sphinx. Refer to documentation
+# for a list of supported languages.
+# language = None
+# There are two options for replacing |today|: either, you set today to some
+# non-false value, then it is used:
+# today = ''
+# Else, today_fmt is used as the format for a strftime call.
+# today_fmt = '%B %d, %Y'
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# The reST default role (used for this markup: `text`) to use for all documents
+# default_role = None
+# If true, '()' will be appended to :func: etc. cross-reference text.
+# add_function_parentheses = True
+# If true, the current module name will be prepended to all description
+# unit titles (such as .. function::).
+# add_module_names = True
+# If true, sectionauthor and moduleauthor directives will be shown in the
+# output. They are ignored by default.
+# show_authors = False
+# The name of the Pygments (syntax highlighting) style to use.
+# A list of ignored prefixes for module index sorting.
+# modindex_common_prefix = []
+# If true, keep warnings as "system message" paragraphs in the built documents.
+# keep_warnings = False
+# Suppress nonlocal image warnings
+# -- Options for HTML output --------------------------------------------------
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+# html_theme_options = {}
+# Add any paths that contain custom themes here, relative to this directory.
+# html_theme_path = []
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+# html_title = None
+# A shorter title for the navigation bar.  Default is the same as html_title.
+# html_short_title = None
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+# html_logo = None
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+# html_favicon = None
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
+# using the given strftime format.
+# html_last_updated_fmt = '%b %d, %Y'
+# If true, SmartyPants will be used to convert quotes and dashes to
+# typographically correct entities.
+# html_use_smartypants = True
+# Custom sidebar templates, maps document names to template names.
+# html_sidebars = {}
+# Additional templates that should be rendered to pages, maps page names to
+# template names.
+# html_additional_pages = {}
+# If false, no module index is generated.
+# html_domain_indices = True
+# If false, no index is generated.
+# html_use_index = True
+# If true, the index is split into individual pages for each letter.
+# html_split_index = False
+# If true, links to the reST sources are added to the pages.
+# html_show_sourcelink = True
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+# html_show_sphinx = True
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+# html_show_copyright = True
+# If true, an OpenSearch description file will be output, and all pages will
+# contain a <link> tag referring to it.  The value of this option must be the
+# base URL from which the finished HTML is served.
+# html_use_opensearch = ''
+# This is the file name suffix for HTML files (e.g. ".xhtml").
+# html_file_suffix = None
+# Output file base name for HTML help builder.
+# -- Options for LaTeX output -------------------------------------------------
+# The paper size ('letterpaper' or 'a4paper').
+# 'papersize': 'letterpaper',
+# The font size ('10pt', '11pt' or '12pt').
+# 'pointsize': '10pt',
+# Additional stuff for the LaTeX preamble.
+# 'preamble': '',
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title, author, documentclass [howto/manual])
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+# latex_logo = None
+# For "manual" documents, if this is true, then toplevel headings are parts,
+# not chapters.
+# latex_use_parts = False
+# If true, show page references after internal links.
+# latex_show_pagerefs = False
+# If true, show URL addresses after external links.
+# latex_show_urls = False
+# Documents to append as an appendix to all manuals.
+# latex_appendices = []
+# If false, no module index is generated.
+# latex_domain_indices = True
+# -- Options for manual page output -------------------------------------------
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+# If true, show URL addresses after external links.
+# man_show_urls = False
+# -- Options for Texinfo output -----------------------------------------------
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+# Documents to append as an appendix to all manuals.
+# texinfo_appendices = []
+# If false, no module index is generated.
+# texinfo_domain_indices = True
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+# texinfo_show_urls = 'footnote'
+# If true, do not generate a @detailmenu in the "Top" node's menu.
+# texinfo_no_detailmenu = False
+# -- Options for Epub output --------------------------------------------------
+# Bibliographic Dublin Core info.
+# The language of the text. It defaults to the language option
+# or en if the language is not set.
+# epub_language = ''
+# The scheme of the identifier. Typical schemes are ISBN or URL.
+# epub_scheme = ''
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+# epub_identifier = ''
+# A unique identification for the text.
+# epub_uid = ''
+# A tuple containing the cover image and cover page html template filenames.
+# epub_cover = ()
+# A sequence of (type, uri, title) tuples for the guide element of content.opf.
+# epub_guide = ()
+# HTML files that should be inserted before the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+# epub_pre_files = []
+# HTML files shat should be inserted after the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+# epub_post_files = []
+# A list of files that should not be packed into the epub file.
+# epub_exclude_files = []
+# The depth of the table of contents in toc.ncx.
+# epub_tocdepth = 3
+# Allow duplicate toc entries.
+# epub_tocdup = True
+# Fix unsupported image types using the PIL.
+# epub_fix_images = False
+# Scale large images.
+# epub_max_image_width = 0
+# If 'no', URL addresses will not be shown.
+# epub_show_urls = 'inline'
+# If false, no index is generated.
+# epub_use_index = True
+# Example configuration for intersphinx: refer to the Python standard library.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\docs\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\conftest.py
+# -*- coding: utf-8 -*-
+# If the default original_dir is pre-existing, move it to a temp location
+# Remove existing backups before backing up. If they exist, they're stale.
+# Carefully delete the created original_dir only in certain
+# conditions.
+# Delete the created original_dir as long as a backup
+# exists
+# Delete the created original_dir.
+# There's no backup because it never existed
+# Restore the user's default original_dir contents
+# If ~/.cookiecutterrc is pre-existing, move it to a temp location
+# If the default cookiecutters_dir is pre-existing, move it to a
+# temp location
+# If the default cookiecutter_replay_dir is pre-existing, move it to a
+# temp location
+# If it existed, restore ~/.cookiecutterrc
+# We never write to ~/.cookiecutterrc, so this logic is simpler.
+# Carefully delete the created ~/.cookiecutters dir only in certain
+# conditions.
+# Carefully delete the created ~/.cookiecutter_replay dir only in
+# certain conditions.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_abort_generate_on_hook_error.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_cli.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_cookiecutter_invocation.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_cookiecutter_local_no_input.py
+# -*- coding: utf-8 -*-
+# README
+# The tmp directory will still exist, but the
+# extracted template directory *in* the temp directory will not.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_cookiecutter_local_with_input.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_custom_extensions_in_hooks.py
+# -*- coding: utf-8 -*-
+# Make sure that the custom extension can be loaded
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_default_extensions.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_environment.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_exceptions.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_find.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_generate_context.py
+# -*- coding: utf-8 -*-
+# original message from json module should be included
+# File name should be included too...for testing purposes, just test the
+# last part of the file. If we wanted to test the absolute path, we'd have
+# to do some additional work in the test which doesn't seem that needed at
+# this point.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_generate_copy_without_render.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_generate_file.py
+# -*- coding: utf-8 -*-
+# this comment is not closed}'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_generate_files.py
+# -*- coding: utf-8 -*-
+# simple.txt should still be 0o644
+# script.sh should still be 0o755
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_generate_hooks.py
+# -*- coding: utf-8 -*-
+# OSError.errno=8 is not thrown on Windows when the script is empty
+# because it always runs through shell instead of needing a shebang.
+#!/usr/bin/env python\n")
+#!/usr/bin/env python\n")
+#!/bin/bash\n")
+# Set the execute bit
+#!/bin/bash\n")
+# Set the execute bit
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_get_config.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_get_user_config.py
+# -*- coding: utf-8 -*-
+# According to the py.test source code finalizers are popped from an
+# internal list that we populated via 'addfinalizer'. As a result the
+# last-added finalizer function is executed first.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_hooks.py
+# -*- coding: utf-8 -*-
+#!/usr/bin/env python\n")
+# -*- coding: utf-8 -*-\n")
+#!/bin/bash\n")
+# Set the execute bit
+#!/bin/bash\n")
+#!/usr/bin/env python\n")
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Make sure to yield the parent directory as `find_hooks()`
+# looks into `hooks/` in the current working directory
+# Change the current working directory that contains `hooks/`
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_log.py
+# -*- coding: utf-8 -*-
+# Last line in the log file is an empty line
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_main.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_output_folder.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_preferred_encoding.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_prompt.py
+# -*- coding: utf-8 -*-
+# Make sure that non None non str variables are converted beforehand
+# Suppress user input
+# Ask the user for input
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_read_repo_password.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_read_user_choice.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_read_user_dict.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_read_user_variable.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_read_user_yes_no.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_repo_not_found.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_specify_output_dir.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test_utils.py
+# -*- coding: utf-8 -*-
+# Make sure we return to the correct folder
+# Make sure that exceptions are still bubbled up
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\hooks-abort-render\hooks\post_gen_project.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# flake8: noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\hooks-abort-render\hooks\pre_gen_project.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# flake8: noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\replay\conftest.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\replay\test_dump.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\replay\test_load.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\replay\test_replay.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\repository\test_abbreviation_expansion.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\repository\test_determine_repository_should_use_local_repo.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\repository\test_determine_repo_dir_clones_repo.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\repository\test_determine_repo_dir_finds_existing_cookiecutter.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\repository\test_determine_repo_dir_finds_subdirectories.py
+# -*- coding: utf-8 -*-
+# might exist from other tests.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\repository\test_is_repo_url.py
+# -*- coding: utf-8 -*-
+# This is not a valid repo url just yet!
+# First `repository.expand_abbreviations` needs to translate it
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\repository\test_repository_has_cookiecutter_json.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-extensions\custom-extension-post\hooks\post_gen_project.py
+# -*- coding: utf-8 -*-
+# flake8: noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-extensions\custom-extension-pre\hooks\pre_gen_project.py
+# -*- coding: utf-8 -*-
+# flake8: noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-extensions\hello_extension\hello_extension.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-extensions\hello_extension\__init__.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-output-folder\{{cookiecutter.test_name}}\{{cookiecutter.folder_name}}\{{cookiecutter.filename}}.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-pyhooks\hooks\post_gen_project.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-pyhooks\hooks\pre_gen_project.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-pyshellhooks\hooks\post_gen_project.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\test-pyshellhooks\hooks\pre_gen_project.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\undefined-variable\dir-name\{{cookiecutter.project_slug}}\{{cookiecutter.foobar}}\helloworld.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\vcs\test_clone.py
+# -*- coding: utf-8 -*-
+# Create repo_dir to trigger prompt_and_delete
+# side_effect is set to an iterable here (and below),
+# because of a Python 3.4 unittest.mock regression
+# http://bugs.python.org/issue23661
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\vcs\test_identify_repo.py
+# -*- coding: utf-8 -*-
+# uses explicit identifier with 'git' in the wrong place
+# uses explicit identifier with 'hg' in the wrong place
+# uses explicit identifier with neither 'git' nor 'hg'
+# no identifier but neither 'git' nor 'bitbucket' in url
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\vcs\test_is_vcs_installed.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/cookiecutter-master\cookiecutter-master\tests\zipfile\test_unzip.py
+# -*- coding: utf-8 -*-
+# Create an existing cache of the zipfile
+# Create an existing cache of the zipfile
+# Create an existing cache of the zipfile

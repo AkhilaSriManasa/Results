@@ -1,0 +1,1488 @@
+﻿/*
+// test years
+// test month, any year
+// test days, year > 0, month > 0
+// test days, year = 0, month > 0
+// test days, year > 0, month = 0
+// test days, year = 0, month = 0
+// test hours, any date
+// test minutes, hours > 0, any date
+// test minutes, hours = 0, any date
+// test seconds, minutes > 0, hours > 0, any date
+// test seconds, minutes > 0, hours = 0, any date
+// test seconds, minutes = 0, hours > 0, any date
+// test seconds, minutes = 0, hours = 0, any date
+// test sfraction, any seconds, minutes > 0, hours > 0, any date
+// test sfraction, any seconds, minutes > 0, hours = 0, any date
+// test sfraction, any seconds, minutes = 0, hours > 0, any date
+// test sfraction, any seconds, minutes = 0, hours = 0, any date
+/*
+/*
+// test years
+// test month, any year
+// test hours, any date
+// test minutes, hours > 0, any date
+// test seconds, minutes > 0, hours > 0, any date
+// test sfraction, any seconds, minutes > 0, hours > 0, any date
+// test sfraction, any seconds, minutes > 0, hours = 0, any date
+// test sfraction, any seconds, minutes = 0, hours > 0, any date
+// test sfraction, any seconds, minutes = 0, hours = 0, any date
+/*
+// mch == '*'
+/*
+/*
+// auxiliary makes font size and hSkip to be 70% of their normal sizes
+/*
+/*
+/*
+/* book_id */) {
+/* parent_id */
+/* book_id */
+/* file_id */
+/* paragraph */
+/* word      */
+/* char      */) {
+/* paragraph */
+/* word      */
+/* char      */) {
+/*
+/*
+// TODO: check file ???
+/*, true OR false ? */); // TODO: check file ???
+// TODO: replace with BooksDB call???
+/*
+/*
+/*
+// make copy of vector
+// Tag `tag` must be removed from BookTag table.
+// This tag is already in DataBase => need not to be inserted.
+/*
+/*
+/*
+/* file_id  */ ) {
+/*
+/*
+/*
+/* name */) {
+/*
+/* file_id */) {
+/*
+// save link to vector
+/*
+/*
+/*
+// copy vector
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/* column = */ 0);
+/* zero-terminated string */, SQLITE_TRANSIENT);
+/*
+// TODO: error & message handling
+// TODO: error & message handling
+/*
+//----------- Transaction subclass -----------------
+//((DBTextValue &) *myDataBase.myMakeSavePoint->parameter("@name").value()).setValue(name());
+//myStarted = myDataBase.myMakeSavePoint->execute();
+//((DBTextValue &) *myDataBase.myCommitSavePoint->parameter("@name").value()).setValue(name());
+//myDataBase.myCommitSavePoint->execute();
+//((DBTextValue &) *myDataBase.myRollbackSavePoint->parameter("@name").value()).setValue(name());
+//myDataBase.myRollbackSavePoint->execute();
+//----------- End Transaction subclass -----------------
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//ZLStringOption seriesOption(FBCategoryKey::SEARCH, "network", "series", "");
+//searchDialog->addOption(ZLResourceKey("series"), seriesOption);
+//std::string seriesPattern = seriesOption.value();
+//ZLStringUtil::stripWhiteSpaces(seriesPattern);
+//!seriesPattern.empty() ||
+/*
+/*
+/*
+/*
+//#include "docbook/DocBookPlugin.h"
+//#include "pdf/PdfPlugin.h"
+//ourInstance->myPlugins.push_back(new DocBookPlugin());
+//ourInstance->myPlugins.push_back(new PdfPlugin());
+/*
+/*
+// TODO: implement
+// TODO: ???
+// header start
+// DWORD total length
+// DWORD unknown
+// DWORD timestamp
+// DWORD language id
+// 0x10 bytes 1st GUID
+// 0x10 bytes 2nd GUID
+// QWORD section 0 offset
+// QWORD section 0 length
+// header end
+// additional header data start
+// additional header data end
+// header section 1 start
+// directory header start
+// DWORD version
+// DWORD length
+// DWORD 0x000A
+// DWORD chunk size
+// DWORD density
+// DWORD depth
+// DWORD root chunk number
+// DWORD first chunk number
+// DWORD last chunk number
+// DWORD -1
+// ...
+// header section 1 end
+// chunk number
+// file size is greater than 60 Mb
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//bookReader().endParagraph();
+//bookReader().beginParagraph();
+/*
+/*
+// no break; it's not a mistake
+/*
+/*");
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//return readDocument(stream);
+/*
+/*
+/*
+/*
+//const char *vOffset = attributeValue(xmlattributes, "voffset");
+//char offset = (vOffset != 0) ? atoi(vOffset) : 0;
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//return new HtmlBreakTagAction(*this, HtmlBreakTagAction::BREAK_AT_END);
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// TODO: replace "dc" by real DC scheme name
+/*
+/*
+/*
+//TODO maybe anything else opens stream
+// Title; Author; Rights; Publisher; isbn;
+/*
+// Inflate compression
+// PalmDoc compression
+// Use it with offset presetting to zero record offset value
+// myBase offset: ^ + 2
+// myBase offset: ^ + 12
+// myBase offset: ^ + 14
+// myBase offset: ^ + 16
+// myBase offset: ^ + 28
+// myBase offset: ^ + 30
+// myBase offset: ^ + 32
+// myBase offset: ^ + 34
+// myBase offset: ^ + 36
+// myBase offset: ^ + 38
+// myBase offset: ^ + 40
+// myBase offset: ^ + 42
+// myBase offset: ^ + 44
+// myBase offset: ^ + 46
+// myBase offset: ^ + 48
+// myBase offset: ^ + 50
+// myBase offset: ^ + 52
+// myBase offset: ^ + 54
+// Maximum size of addressable space in PalmOS 
+// not more than 8192 bytes happens in the tested examples
+//TODO take in account returned bool value
+//false if wrong footnotes amount anounced in zero record
+//or corrupted or wrong footnote ids record
+//TODO take in account returned bool value
+//false if one of image record is corrupted
+/*
+//TODO may be it's needed here more bytes
+//TODO treat situation when there isn't PNG in first 128 bytes
+/*bool EReaderStream::hasExtraSections() const {
+//return myMaxRecordIndex < header().Offsets.size() - 1;
+/*
+/*
+//LE
+//LE
+//if ((codelen == 0) || (codelen > 32)) {
+//	return false;
+//} 
+//if (codelen == 0) {
+//	return false;
+//} 
+//TODO need index check 
+//TODO need index check 
+//TODO need index check 
+/*
+/*
+// author
+// subject
+// coveroffset
+// thumboffset
+/*
+/*
+//myBufferOffset = 0;
+/*
+/*
+//'DH'	// HuffCDic compression
+//if (myHuffDecompressorPtr->error()) {
+//	myErrorCode = ERROR_UNKNOWN;
+//} 
+// PalmDoc compression
+// No compression
+// Uses with offset presetting to zero record offset value
+// myBase offset: ^ + 2
+// myBase offset: ^ + 4
+// myBase offset: ^ + 8	
+// myBase offset: ^ + 10
+//TODO Insert in this point error message about uncompatible records and numRecords from Header
+// myBase offset: ^ + 12
+/*
+// myBase offset: ^ + 14
+//Always = 2, if encrypted 
+// myBase offset: ^ 
+// myBase offset: ^ + 20
+// myBase offset: ^ + 24
+// myBase offset: ^ + 102 (0x70)
+// myBase offset: ^ + 106 (0x74)
+// myBase offset: ^ + 110 (0x78)
+// myBase offset: ^ + 242 (0xF2) 
+// myBase offset: ^ + 244 (0xF4)
+/*
+// point to first Huff section
+// point behind last Huff section 
+// myBase offset: ^ + 14
+/*
+//int index = fileName.find(':');
+//ZLFile baseFile = (index == -1) ? file : ZLFile(fileName.substr(0, index));
+//ZLStringOption palmTypeOption(FBCategoryKey::BOOKS, file.path(), "PalmType", "");
+//palmTypeOption.setValue(palmType);
+/*
+// stream offset: +32
+// stream offset: +34
+// stream offset: +60
+// stream offset: +68
+// stream offset: +76
+// stream offset: +78
+// stream offset: +78 + 8 * records number  
+/*bool PdbRecord0::read(shared_ptr<ZLInputStream> stream) {
+/*
+// myBase offset: startOffset + 78 + 8 * records number ( myHeader.Offsets.size() )
+// myBase offset: Offset[0] - zero record
+// TODO: implement
+/*
+/*
+// just break line instead of horizontal rule (TODO: draw horizontal rule?)
+// color setting is ignored
+// underlined text is ignored
+// underlined text is ignored
+// strike-through text is ignored
+// strike-through text is ignored
+// custom font operations are ignored
+// TODO: add table processing
+// TODO: process table
+// TODO: process table
+// this should be impossible
+//std::cerr << "Oops... function #" << (int)(unsigned char)*ptr << "\n";
+// text (TODO: found sample file and test this code)
+// compressed text
+// image
+// compressed image
+// category record is ignored
+//std::cerr << "type = " << (int)type << "; ";
+//std::cerr << "typeCode = " << typeCode << "\n";
+// style sheet record is ignored
+// font page record is ignored
+// TODO: process tables
+// TODO: process tables
+// multiimage
+//std::cerr << "type = " << (int)type << "\n";
+/*
+/*
+/*
+// this record is not text record
+/*
+//don't have to be mixed with other style tags
+//Should not be mixed with other style tags
+//newLine();
+//case EXTERNAL_HYPERLINK:
+//case BOOK_HYPERLINK:
+/*
+/* 
+//www.m.ereader.com/ereader/help/dropbook/pml.htm
+//ccit205.wikispaces.com/Palm+Markup+Language+(PML)
+// tag action description			| close	| support	|
+// new page							|	-	|	+		|	
+// new chapter and new page			|	+	|	+		|
+// center alignment block			|	+	|	+		|
+// right alignment block			|	+	|	+		|
+// italize block					|	+	|	+		|
+// underlined block					|	+	|	+		|
+// overstrike block					|	+	|	-		|
+// invisible text block				|	+	|	+		|
+// indent block						|	+	|	+		|
+// indent with value				|	-	|	+		|
+// embed text width rule			|	-	|	-		|	
+// switch to normal font			|	-	|	+		|	
+// switch to std font				|+ or \n|	+		|	
+// switch to bold font (deprecated)	|+ or \n|	-		|	
+// switch to large font				|+ or \n|	+		|	
+// mark text as bold				|	+	|	+		|	
+// smaller font size and uppercase	|	+	|	+		|	
+// insert named image				|	-	|	+		|	
+// reference to another spot		| 	+	|	+		|
+// link anchor for \q reference		|	-	|	+		|
+// soft hyphen						|	-	|	-		|
+// reference index item				|	-	|	-		|
+// XN - new chapter, n indent level	|	+	|	-		|
+// Sp - mark text as superscript	|	+	|	+		|
+// Sb - mark text as subscript		|	+	|	+		|
+// Sd -	link to a sidebar			|	+	|	-		| 
+// CN - chapter title + indent level|	-	|	-		|
+// Fn - link to a footnote			|	+	|	+		|
+//TODO add close tag processing
+//processSidebarLink();
+//addHorizontalRule(parameter);
+//std::cerr << "PmlReader: unsupported tag: name: " << tagName << "	parameter: " << parameter << "\n"; 
+// '#' character has to stand before link label , so we should omit '#' for getting label
+// In case trailing or corrupted tag we use parameter entirely
+/*
+/*
+/*
+// Hmm, this works on examples from manybooks.net,
+// but I don't understand what this code means :((
+/*
+/*
+/*
+/*
+// TODO: process escaped characters
+/*
+// TODO: process filters array
+// end of dictionary
+// end of array
+// TODO: implement
+/*
+/*
+/*
+//DPRINT("change style not in text.\n");
+//DPRINT("add style emphasis.\n");
+//DPRINT("add style emphasis and strong.\n");
+//DPRINT("remove style emphasis.\n");
+//DPRINT("remove style strong n emphasis, add strong.\n");
+/*
+/*
+/*
+/*
+//std::cerr << "Add style index: " << val << "\n";
+//sprintf(style_attributes[0], "%i", val);
+/*if (myState.Destination == rdsContent)*/ {
+//std::cerr << "Set style index: " << val << "\n";
+//sprintf(style_attributes[0], "%i", val);
+// &bullet;
+// &ndash;
+// &mdash;
+// &nbsp;
+// &emsp;
+// &ensp;
+// &lsquo;
+// &rsquo;
+// &ldquo;
+// &rdquo;
+// TODO: optimize
+// cr and lf are noise characters...
+/*
+/*
+// "PPL\r\n"
+/*
+/*
+// TODO: implement
+/*
+/*
+//myLineFeedCounter = 0;
+/* Fixed by Hatred: zero value was break LINE INDENT formater -
+// TODO: implement single option in PlainTextFormat
+//		if (!myInsideContentsParagraph && (myLineFeedCounter == myFormat.emptyLinesBeforeNewSection() + 1)) {
+/* Fixed by Hatred: remove '+ 1' for emptyLinesBeforeNewSection, it looks like very strange
+/*
+/*
+/*
+/*
+// works for nonnegative offsets only
+// coudn't be implemented
+/*
+//") ||
+//") ||
+//");
+//feedbooks.com/book/stanza/";
+//www.feedbooks.com/book/stanza/";
+/*
+/*
+/*if ((len == 0) || !myReader->readFromBuffer(myStreamBuffer.data(), len)) {
+// works for nonnegative offsets only
+// couldn't be implemented
+/*
+//reader.myStyleSheetTable.dump();
+// TODO: increase left indent
+// TODO: replace bullet sign by number inside OL tag
+//addAction("html",	new XHTMLTagAction());
+//addAction("title",	new XHTMLTagAction());
+//addAction("meta",	new XHTMLTagAction());
+//addAction("script",	new XHTMLTagAction());
+//addAction("font",	new XHTMLTagAction());
+//addAction("ol",	new XHTMLTagAction());
+//addAction("ul",	new XHTMLTagAction());
+//addAction("dl",	new XHTMLTagAction());
+//addAction("area",	new XHTMLTagAction());
+//addAction("map",	new XHTMLTagAction());
+//addAction("base",	new XHTMLTagAction());
+//addAction("blockquote",	new XHTMLTagAction());
+//addAction("center",	new XHTMLTagAction());
+//addAction("head",	new XHTMLTagAction());
+//addAction("hr",	new XHTMLTagAction());
+//addAction("param",	new XHTMLTagAction());
+//addAction("q",	new XHTMLTagAction());
+//addAction("s",	new XHTMLTagAction());
+//addAction("big",	new XHTMLTagAction());
+//addAction("small",	new XHTMLTagAction());
+//addAction("u",	new XHTMLTagAction());
+//addAction("table",	new XHTMLTagAction());
+//addAction("tr",	new XHTMLTagAction());
+//addAction("caption",	new XHTMLTagAction());
+//addAction("span",	new XHTMLTagAction());
+/*
+/*
+/*
+/*
+// TODO: zip -> any archive
+// collect books from book path
+// other books from our database
+/*
+/*
+/*
+// TODO: select current node (?) again
+/*
+// TODO: select current node (?) again
+/*
+// yes, we go through this label
+// TODO: select current node (?) again
+/*
+/*
+/*
+/*
+/* if (node.isInstanceOf(SeriesNode::TYPE_ID)) */ {
+/*
+/*
+// TODO: replace with == for shared_ptr<Book>
+//if (((BookNode*)*it)->book() == book) {
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//return ext == "fb2";
+//return true;
+//r.run();
+/*std::map<std::string, unsigned long> ext2time;
+/* TODO: check correctness of migration order: 
+// clean books.xml
+//ZLTime start;
+/*ZLTime end;
+// clean books.xml
+// clean books.xml
+// clean books.xml
+// clean books.xml
+/*std::cerr << "     ext" << "   time,ms" << "   time/total,%" << "   number of books" <<  "    time for 1 book,ms" << std::endl;
+//shared_ptr<Book> fileBook = infoBook;
+//shared_ptr<Book> fileBook;
+// clean state.xml
+// clean state.xml
+// clean state.xml
+//shared_ptr<Book> book = BooksDBUtil::getBook(name, false);
+// clean state.xml
+// clean state.xml
+// clean state.xml
+// clean state.xml
+// clear books.xml & state.xml
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// TODO: remove a book from the library
+// TODO: remove a record from the database
+/*
+/*
+/*if (book0.Index != book1.Index) {
+/*
+/*
+/*
+/*
+//feedbooks.com/";
+//www.feedbooks.com/";
+//feedbooks.com/book/stanza/";
+//") + 3);
+/*
+/*
+/*
+/*
+/* NOP */;
+//case 8:
+/*
+/*
+/*
+/*
+/*
+// TODO: is it so necessary to clean up cookies???
+/*
+/*
+// nop
+/*LitResDownloadErrorDataParser::LitResDownloadErrorDataParser() {
+// NOP
+/*
+// TODO: add correct error message
+//loadPurchasedBooksOnError(purchasedBooksIds, purchasedBooksList);
+/*
+/*
+// This code duplicates code in FBReader::openInBrowser and is not required
+//robot.litres.ru/pages/catalit_download_book/?art=" + myBookId,
+/*else if (TAG_SEQUENCE == tag) {
+/*
+/*
+/*
+//robot.litres.ru/" + path;
+/*
+//entry.dcPublisher();
+//entry.updated();
+//entry.published();
+/*for (size_t i = 0; i < entry.contributors().size(); ++i) {
+//entry.rights();
+/*
+/*
+/*
+// myState = myState
+// myState = myState
+/*
+//opds-spec.org/bookshelf";
+//opds-spec.org/subscriptions";
+//data.fbreader.org/catalog/author";
+//opds-spec.org/acquisition";
+//opds-spec.org/acquisition/buy";
+//opds-spec.org/acquisition/borrow";
+//opds-spec.org/acquisition/subscribe";
+//opds-spec.org/acquisition/sample";
+//data.fbreader.org/acquisition/conditional";
+//data.fbreader.org/acquisition/sampleOrFull";
+//opds-spec.org/cover";
+//opds-spec.org/thumbnail";
+/*
+//myTitle = new ATOMTitle(); // TODO:implement ATOMTextConstruct & ATOMTitle
+//myTitle->readAttributes(attributeMap);
+//mySummary = new ATOMSummary(); // TODO:implement ATOMTextConstruct & ATOMSummary
+//mySummary->readAttributes(attributeMap);
+// ???
+// ???
+//myTitle = new ATOMTitle(); // TODO:implement ATOMTextConstruct & ATOMTitle
+//myTitle->readAttributes(attributeMap);
+// TODO: remove this temporary code
+// DON'T clear myBuffer
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:title can be lost:buffer will be truncated, if there are extension tags inside the <title> tag
+// TODO:implement ATOMTextConstruct & ATOMTitle
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:summary can be lost:buffer will be truncated, if there are extension tags inside the <summary> tag
+// TODO:implement ATOMTextConstruct & ATOMSummary
+// TODO:check this accurately
+// TODO:check this accurately
+// FIXME:title can be lost:buffer will be truncated, if there are extension tags inside the <title> tag
+// TODO:implement ATOMTextConstruct & ATOMTitle
+// TODO: remove this temporary code
+// DON'T clear myBuffer
+// FIXME:uri can be lost:buffer will be truncated, if there are extension tags inside the <id> tag
+// FIXME:language can be lost:buffer will be truncated, if there are extension tags inside the <dc:language> tag
+// FIXME:issued can be lost:buffer will be truncated, if there are extension tags inside the <dc:issued> tag
+// FIXME:publisher can be lost:buffer will be truncated, if there are extension tags inside the <dc:publisher> tag
+/*
+/*
+/*
+/*
+//const ZLResource &resource = ZLResource::resource("dialog")["PasswordRecoveryDialog"];
+/*
+/*
+/*
+/*
+/*
+/*
+//");
+//");
+/*
+/*
+/*
+/*
+// at nodeCount ??? or not???
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//myCurrentAuthor = myCurrentAuthor;
+// else pool is over
+/*myValues.clear();
+/*
+/*
+/*
+//new ZLSimpleSpinOptionEntry("First Line Indent", baseStyle.firstLineIndentDeltaOption(), -300, 300, 1),
+/*
+/*
+/*
+/*
+/*
+/*
+// switch view
+// navigation
+// selection
+// search
+// look
+// dialogs
+// quit
+/*
+/*
+// Here are available to change char sequence length [second method arg]
+// Here are available to change amount of top statistics items
+// vim: ts=4
+// TODO: dump all footnotes models
+/*
+/*
+/*
+/*
+/*
+//application().doAction(group->UnselectAllButtonsActionId);
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//purl.org/dc/elements";
+//purl.org/metadata/dublin_core";
+//purl.org/dc/terms/";
+//www.w3.org/1999/xlink";
+//www.idpf.org/2007/opf";
+//www.w3.org/2005/Atom";
+//a9.com/-/spec/opensearch/1.1/";
+//calibre.kovidgoyal.net/2009/metadata";
+//opds-spec.org/2010/catalog";
+//www.daisy.org/z3986/2005/ncx/";
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//myNameWithoutExtension = myNameWithoutExtension.substr(0, myNameWithoutExtension.length() - 3) + "tar";
+/*
+/*
+/*
+//myBzStream.total_in_hi32 = myBaseAvailableSize >> 32;
+// TODO: implement
+/*
+/*
+//const unsigned char FTEXT = 1 << 0;
+// TODO: implement
+/*
+/*
+/*
+/*
+//stream.seek(16, false);
+/*
+/*
+/*
+/*
+/*
+// scanline
+//std::cerr << "scanline encoded images are not supported yet\n";
+// rle
+//std::cerr << "rle encoded images are not supported yet\n";
+//packbits
+//std::cerr << "packbits encoded images are not supported yet\n";
+// none
+//std::cerr << "images with bpp = " << (int)header.BitsPerPixel << " are not supported\n";
+// unknown
+//std::cerr << "unknown image encoding: " << (int)header.CompressionType << "\n";
+/*
+//")) {
+//";
+//")) {
+//";
+//")) {
+//";
+/*
+/*
+/*
+/*
+/*
+//if (myStatisticsPtr == 0) {
+//std::cerr << "pattern reading failed\n";
+//}
+/*
+//static int power10(unsigned int number) {
+//	int power = 1;
+//	while (number-- > 0) {
+//		power *= 10;
+//	}
+//	return power;
+//}
+//patternMult = ::power10(6);
+//patternMult = ::power10(5);
+//patternMult = ::power10(4);
+//patternMult = ::power10(2);
+//patternMult = ::power10(1);
+//patternMult = ::power10(0);
+//myVolumesAreUpToDate = false;
+/*
+// vim: ts=4
+/*
+/*
+//std::cerr << "XMLReader: frequencies sum & ^2: " << volume << ":" << squaresVolume << "\n";
+/*
+//ZLStatisticsItem *ptr = statistics.begin();
+//const ZLStatisticsItem *end = statistics.end();
+//delete ptr;
+//delete end;
+/*
+/*
+/*
+/*
+/*
+/*len*/) {
+// must be line with maximum case value
+//std::cout << "SIZE == " << inSize << std::endl;
+//std::cout << "OFFSET == " << inOffset << std::endl;
+/*
+/*
+/*
+/*
+//");
+//");
+//");
+/*
+/*
+/*
+/*
+// TODO: call setPercent(...)
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// disable copying
+// TODO: url-encode content???
+// TODO: localize
+/*
+//close();
+//close();
+//fseek(myFile, 0, SEEK_SET);
+//if (myFile != 0) {
+//	fclose(myFile);
+//	myFile = 0;
+//}
+/*
+/*
+/*
+//")) != -1) {
+/*
+// DO_ICONV_CAST
+// DO_ICONV_CAST
+// looks like myBuffer contains incorrect character at start
+// DO_ICONV_CAST
+// DO_ICONV_CAST
+/*
+/* ZLSHARED */
+/*
+/*
+/*
+/*
+/*
+/*
+// TODO: show error message if config was not saved
+/*
+/*
+/*
+//")) != -1) {
+/*
+/*
+// Arabic
+// Bulgarian
+// Catalan
+// Chinese
+// Czech
+// Danish
+// German
+// Greek
+// English
+// Spanish
+// Finnish
+// French
+// Hebrew
+// Hungarian
+// Icelandic
+// Italian
+// Japanese
+// Korean
+// Dutch
+// Norwegian
+// Polish
+// Portuguese
+// Romansh
+// Romanian
+// Russian
+// Serbian
+// Croatian
+// Bosnian
+// Slovak
+// Albanian
+// Swedish
+// Thai
+// Turkish
+// Urdu
+// Indonesian
+// Ukrainian
+// Belarusian
+// Slovenian
+// Estonian
+// Latvian
+// Lithuanian
+// Tajik
+// Persian (Farsi)
+// Vietnamese
+// Armenian
+// Azeri
+// Basque
+// Lower Sorbian
+// Upper Sorbian
+// Makedonian
+// Setswana/Tswana
+// Xhosa/isiXhosa
+// Zulu/isiZulu
+// Afrikaans
+// Georgian
+// Faeroese
+// Hindi
+// Maltese
+// Sami
+// Irish
+// Malay
+// Kazak
+// Kyrgyz
+// Swahili
+// Turkmen
+// Uzbek
+// Tatar
+// Bengali
+// Punjabi
+// Gujaratu
+// Oriya
+// Tamil
+// Telugi
+// Kannada
+// Malayalam
+// Assamese
+// Marathi
+// Sanskrit
+// Mongolian
+// Tibetian
+// Welsh
+// Khmer
+// Lao
+// Galician
+// Konkani
+// Manipuri
+// Sindhi
+// Syriac
+// Sinhala
+// Inuktitut
+// Amharic
+// Tamazight
+// Kashmiri
+// Nepali
+// Frisian
+// Pashto
+// Filipino
+// Divehi
+// Hausa
+// Yoruba
+// Quechua
+// Northern Sotho
+// Bashkir
+// Luxemburgish
+// Greenlandic
+// Igbo
+// Tigrinya
+// Yi
+// Mapudungun
+// Mohawk
+// Breton
+// Uighur
+// Maori
+// Occitan
+// Corsican
+// Alsatian
+// Yakut
+// K'iche
+// Kinyarwanda
+// Wolof
+// Dari
+// Malagasy
+/*
+/*
+/*
+// symbol number is > 0xffff :(
+// symbol number is > 0xffff :(
+//(ch == 160) ||
+/*
+/*
+/*
+/*
+/*
+// TODO: remove empty group
+/*
+/*
+/*
+/*
+/*
+//close();
+//close();
+//fseek(myFile, 0, SEEK_SET);
+//if (myFile != 0) {
+//	fclose(myFile);
+//	myFile = 0;
+//}
+/*
+/*
+/*includeSymlinks*/) {
+/*includeSymlinks*/) {
+/*
+// TODO: implement
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// TODO: binary search
+// TODO: binary search
+/*
+/*
+/*
+// TODO: change metrics at font change
+//context().setColor(ZLColor(0, 255, 0));
+//context().drawLine(myHOffset + x, myVOffset + y, myHOffset + x, myVOffset + y - 20);
+//context().setColor(ZLColor(255, 0, 0));
+//context().drawLine(myHOffset + x, myVOffset + y, myHOffset + x, myVOffset + y - 20);
+/*
+//ZLTextWordCursor Start;
+//ZLTextWordCursor RealStart;
+//int StartIndent;
+//int VSpaceAfter;
+//shared_ptr<ZLTextStyle> StartStyle;
+//shared_ptr<ZLTextTreeNodeInfo> NodeInfo;
+// TODO: change metrics at font change
+/*
+/*
+/*
+/*
+/* cursor == start */ {
+/*
+/*
+/*
+// TODO: get special symbols from pattern file
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/* caption */) {
+/* grab */) {
+/*
+/* event */) {
+// if (ZLQtKeyUtil::keyName(event) == "<Cancel>") {
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//myMultiLineEdit->home();
+/*
+// TODO: implement
+/*
+/*
+/*
+/*
+/*
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+/*
+/*
+// I do not have to destroy myNotebook as it's a myDialog child
+/*
+/*
+// MSS: in case we do not want single click navigation, comment out the line below
+/*
+/*
+//  something nice?
+/*
+/*
+// TODO: check, if using of local variable is correct in this situation
+// TODO: use style
+// TODO: use style
+// for gtk+ v2.2
+// 		gdk_draw_pixbuf(
+// 			myPixmap, 0, imageRef, 0, 0,
+// 			x, y - gdk_pixbuf_get_height(imageRef),
+// 			-1, -1, GDK_RGB_DITHER_NONE, 0, 0
+// 		);
+//
+// COMMENTS:
+// 0			-- we have no clipping (do we need it?)
+// 0, 0			-- offset in the image
+// -1, -1		-- use the whole
+// GDK_RGB_DITHER_NONE -- no dithering, hopefully, (0, 0) after it does not harm
+// TODO: implement
+// vim:ts=2:sw=2:noet
+/*
+// TODO: implement
+/*
+//return gtk_widget_tool_item_new(myWidget);
+/*
+/*
+/*
+/*
+// toolbar with standard buttons is too wide for zaurus screen
+/*
+/*
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+/*
+/*
+//gtk_window_move(GTK_WINDOW(myDialog), x, y);
+/*
+// I do not have to destroy myNotebook as it's a myDialog child
+/*
+//  something nice?
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//
+// pixbuf rotation
+// (copied from gqview)
+//
+/* r */
+/* g */
+/* b */
+/* a */
+/*
+// vim:ts=2:sw=2:noet
+/*
+/*
+/*
+/*
+// GTK_CHECK_VERSION(2,10,0)
+// GTK_CHECK_VERSION(2,10,0)
+// for gtk+ v2.2
+// 		gdk_draw_pixbuf(
+// 			myPixmap, 0, imageRef, 0, 0,
+// 			x, y - gdk_pixbuf_get_height(imageRef),
+// 			-1, -1, GDK_RGB_DITHER_NONE, 0, 0
+// 		);
+//
+// COMMENTS:
+// 0			-- we have no clipping (do we need it?)
+// 0, 0			-- offset in the image
+// -1, -1		-- use the whole
+// GDK_RGB_DITHER_NONE -- no dithering, hopefully, (0, 0) after it does not harm
+// vim:ts=2:sw=2:noet
+/*
+// TODO: implement
+/*
+//#include "../image/ZLCocoaImageManager.h"
+//#include "ZLCocoaDialog.h"
+//#include "ZLCocoaOptionsDialog.h"
+//#include "ZLCocoaSelectionDialog.h"
+//#include "ZLCocoaProgressDialog.h"
+//#include "ZLCocoaUtil.h"
+//return new ZLCocoaDialog(resource()[key]);
+//return new ZLCocoaOptionsDialog(resource()[id], applyAction, showApplyButton);
+//internalBox(GTK_STOCK_DIALOG_INFO, title, message);
+//internalBox(GTK_STOCK_DIALOG_ERROR, dialogTitle(key), message);
+//return internalBox(GTK_STOCK_DIALOG_QUESTION, dialogTitle(key), message, button0, button1, button2);
+/*
+//return ZLCocoaSelectionDialog(dialogTitle(key), handler).runWithSize();
+/*
+/*
+//#include <ZLibrary.h>
+//#include <ZLLanguageUtil.h>
+//#include "../util/ZLCocoaSignalUtil.h"
+/*
+//myWindow.setFocusToMainWidget();
+/*
+//GTK_WIDGET_UNSET_FLAGS(gtkItem, GTK_CAN_FOCUS);
+/*
+/*
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+/*
+/*
+/*
+//  something nice?
+/*
+// MSS: in case we do not want single click navigation, comment out the line below
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// for gtk+ v2.2
+// 		gdk_draw_pixbuf(
+// 			myPixmap, 0, imageRef, 0, 0,
+// 			x, y - gdk_pixbuf_get_height(imageRef),
+// 			-1, -1, GDK_RGB_DITHER_NONE, 0, 0
+// 		);
+//
+// COMMENTS:
+// 0			-- we have no clipping (do we need it?)
+// 0, 0			-- offset in the image
+// -1, -1		-- use the whole
+// GDK_RGB_DITHER_NONE -- no dithering, hopefully, (0, 0) after it does not harm
+// vim:ts=2:sw=2:noet
+/*
+// TODO: implement
+/*
+//myMenuStack.push(myWindow.myMenu);
+/*
+//myMenuStack.pop();
+/*
+/*
+/*
+// We must not delete the widget, it's destroyed when the parent widget is destroyed
+/*
+/*
+/*
+/*
+/*
+/*
+//gtk_notebook_append_page(myNotebook, GTK_WIDGET(scrolledWindow), label);
+//GtkWidget *contents = label;
+//return myTabs[gtk_notebook_get_current_page(myNotebook)]->key();
+//gtk_notebook_set_current_page(myNotebook, it - myTabs.begin());
+/*
+//  something nice?
+/*
+/*
+/*
+/*
+//TODO
+//not supported
+//std::string text = gtk_combo_box_get_active_text(myComboBox);
+//o.onValueEdited(text);
+//gtk_entry_set_editable(myLineEdit, active);
+/*
+/*
+/*
+/*
+/*
+// TODO: implement
+/*
+/*
+/*
+//myMultiLineEdit->home();
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// TODO: implement
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// I don't understand why this code does work but it does.
+//QBoxLayout *layout = (QBoxLayout*)toolbar->layout();
+//layout->addStretch();
+/*
+//myFullscreenToolBar->hide();
+/*
+/*
+//view = new OrderOptionView(name, tooltip, (ZLOrderOptionEntry*)option, this, myRowCounter, fromColumn, toColumn);
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+// TODO: implement
+/*
+/*
+/*
+/*
+/*
+//return fullName.left(fullName.find(" [")).ascii();
+/*
+//setBackgroundMode(NoBackground);
+/*
+/*
+/*
+/*
+/*
+/*
+// QT_NO_MIMECLIPBOARD
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+//myMultiLineEdit->home();
+/*
+// TODO: implement
+/*
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+/* USE_ZAURUS_FONTHACK */
+/*
+//scrollBar->hide();
+/*
+/*
+/* USE_ZAURUS_FONTHACK */
+/*
+/*
+/*
+/* is a separator */ {
+/*
+// TODO: Hmm, replace SW_SHOWDEFAULT by nCmdShow?
+// TODO: implement
+/*
+/*
+/*
+/*
+// TODO: implement
+// TODO: implement
+/*
+/*
+//imageBox->setAlignment(W32VBox::CENTER);
+/*
+/*
+//chooser.lCustData = 0;
+//chooser.lpfnHook = 0;
+//chooser.lpTemplateName = 0;
+/*
+/*
+//?
+//? 
+/*
+/*
+/*
+/*
+/*
+// never used
+/*
+//case LANG_MANIPURI:
+//ourLanguage = "";
+//case LANG_SINDHI:
+//ourLanguage = "";
+//case LANG_KASHMIRI:
+//ourLanguage = "";
+/*
+/*
+/*
+/*
+// TODO: optimize
+/*CLEARTYPE_QUALITY*/;
+// TODO: optimize (don't create new brush, if color and style are not changed)
+/*
+/*
+/*
+/*
+// TODO: implement
+/*
+/*
+/*
+/*
+//DWORD style = (it == myButtons.begin()) ? BS_DEFPUSHBUTTON : BS_PUSHBUTTON;
+// TODO: why multiplier 2?
+// TODO: check
+// TODO: check
+// TODO: check
+//PostMessage(myWindow, EM_SETREADONLY, !editable, 0);
+// TODO: check
+//PostMessage(myWindow, EM_SETREADONLY, !editable, 0);
+// TODO: check
+// TODO: check
+// TODO: check
+/*
+/*
+// X
+// Y
+// FONT SIZE -- should be always 8?
+// == SB_TOP
+// == SB_BOTTOM
+// == SB_LINEUP
+// == SB_LINEDOWN
+// == SB_PAGEUP
+// == SB_PAGEDOWN
+/*
+/*
+/*
+/*
+/*
+// TODO: symbolic name?
+/*
+/*
+#! /usr/bin/python
+# from pprint import pprint
+# pprint(self._resources)
+# coll.process(sys.argv[1])
+# vim:ts=4:sw=4:et
+#! /usr/bin/python
+# vim:ts=4:sw=4:et
+#!/usr/bin/python
+#! /usr/bin/python2.4
+#parser.add_option('-d', '--dir', dest='dirname', default='.', help='specify directory where files reside')
+# vim:ts=4:sw=4:et

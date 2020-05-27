@@ -1,0 +1,896 @@
+﻿28 Dec 2008 (gwhalin,pinkerton)
+	-- released as 2.0
+	-- much reduced lock contention
+	-- NIO getMulti support
+	-- NIO get support
+	-- consistant hashing algorithm support
+	-- much improved support for serialization of primitives
+	-- extensive unit tests added
+	-- many bugs fixed
+
+08 Jul 2007 (gwhalin)
+	-- add support for ErrorHandler hook (submitted by Dan Zivkovic @ Apple)
+	-- ability to disable URLEncoding keys
+
+08 Apr 2007 (gwhalin)
+	-- added addOrIncr/addOrDecr methods
+	-- internal map changed to avoid possible key collision in internal data
+	   structures
+
+28 Feb 2007 (gwhalin)
+	-- released as 1.5.1
+	-- fix rehashing bug when all servers are dead
+	-- fix javadoc generation problem
+
+16 Dec 2006 (whalin)
+	-- released as 1.5
+	-- urlencode keys
+
+21 Nov 2006 (whalin)
+	-- some more fixes for the failover code
+	-- add support for optional healthcheck on checkout (disabled by default)
+
+10 Sep 2006 (whalin)
+	-- some changes to lessen lock contention
+	-- fixed a long lasting bug w/ rehashing for server failover
+	-- add a failback flag to allow failover but no failback
+
+08 Feb 2006 (whalin)
+	-- switched to using java 5 syntax (generics,stringbuilder)
+
+25 Nov 2005 (whalin, chawla, watts)
+	-- released as 1.3.2
+	-- allow passing of classloader for use in deserialization (chawla)
+	-- additional param checking (bug reported by young)
+	-- additional stats methods (watts)
+
+09 Sep 2005 (whalin)
+	-- fix keyExists for counters
+	-- stop using jikes
+	-- add code to pool to try to recover from a hung connection
+	   (should never happen)
+
+07 Apr 2005 (whalin)
+	-- fixed getCounter
+	-- added method to check for existance of key
+	-- update to unit tests
+	-- support multiple pools in SockIOPool
+	-- fix failover rehashing to match perl algorithm
+
+20 Mar 2005 (whalin)
+	-- released as version 1.2.1
+	-- make non-blocking connect optional
+	-- better ant scripts for dev work and packaging
+	-- moved into dedicated subversion repo
+
+19 Jan 2005
+    -- bugfix to remove tmp array copy in String deoding (Popescu)
+
+10 Jan 2005
+	-- released as version 1.2
+    -- spawn thread for initial socket connection so we can enforce a shorter
+       timeout on connections (whalin)
+
+03 Jan 2005
+    -- add custom serialization for Date objects
+       for greater space savings (whalin)
+
+13 Dec 2004
+	-- custom serialize primitive objects for greater
+       space savings (burton)
+	
+12 Dec 2004
+	-- set maint thread as a daemon thread (k. burton)
+
+29 Nov 2004
+	-- released as version 1.1
+	-- switched to LGPL from GPL (whalin)
+
+18 Sept 2004
+	--- released as version 1.0
+	-- built generic logging class so can remove dependancy on other loggers
+       (still easy for client to use their own logger) (whalin)
+	-- fixed bad case for maxcreate when poolmultiplier was greater than
+       minConn (defaults to minConn now) (thanks to Daryn @ Spam Arrest)
+	-- fixed bad loop logic when creating new connections when conns <
+       minConn. (thanks to Daryn @ Spam Arrest)
+	-- retagged as a release 1.0
+
+27 July 2004
+	-- released as version 0.9.8a
+	-- change default hashing to native as it is faster (whalin)
+
+26 July 2004
+	-- released as version 0.9.8
+	-- added flushAll method, which allows invalidating the entire cache on
+		all servers (or subset). (whalin)
+	-- added stats methods to pull back statistics from the caching servers
+		(or subset).  Data is pulled back in data structure for end user to
+		format. (whalin)
+	-- fixup to counter code (whalin)
+	-- add in new hashing code based on CRC32 (whalin)
+
+01 Jun 2004
+	-- released as version 0.9.7
+	-- clear pool for a given host when we detect it is dead. (whalin)
+	-- changed failver code to rehash in a better manner (more efficient when
+		a server dies) (russo)
+	-- add optional custom hashing method, which should be compatable with
+		other memcached clients (perl/php/python, etc), but will be slower
+		Java's built in hashCode for String (due to String pooling). (whalin,
+		russo)
+	-- fixed Java to actually return modulus (instead of remainder) when
+		selecting a bucket (russo)
+	-- fixed a typo in the getNagle method (whalin)
+
+26 May 2004
+	-- released as version 0.9.6
+	-- Fixed bug where reading from socket when server dies will cause tight
+		loop.  Also cleaned up error handling to throw exceptions in more
+		failed situations. (whalin)
+
+25 May 2004
+	-- released as version 0.9.5
+	-- Heavy cleanup of client code to better deal with error conditions, use
+		java naming conventions, and remove some of the overloaded convenience
+		methods.  Also changed how client deals with pulling objects from
+		cache when not serialized to be more type safe.
+	-- Created connection pool to manage connections to various caching servers
+		maintaining persistent connections.
+	-- Changed SockIO to be internal static class to the pool.
+	-- Added support for more socket options (nagle, timeout).
+	-- Removed deprecated stream operations.
+	-- Heavyily javadoc'd
+	-- Added in useage of log4j (could use J2SE logger as well)
+	-- NOTE: Not backwards compatible with earlier versions!!!
+
+12 Oct 2003
+	-- released as version 0.9.1
+	-- Altered the SockIO helper class, so it no longer allows accessing
+		the streams it contains directly, instead it has methods
+		with identical signatures to the methods that were called
+		on the streams... This makes the client code prettier.
+	-- Changed looped non blocking read to blocking read, for getting
+		items from the server. This probably reduces CPU usage in
+		cases where the retrieval would block, and cleans up the
+		code a bit.  We're blocking on retrieval anyhow.
+	-- Made get() not call get_multi(), and added single socket
+		optimization. This parallels recent changes to the perl
+		client
+	-- Changed a few for loops to use iterators instead, since it's
+		probably marginally more efficient, and it's probably
+		better coding practice.
+	-- Actually spell checked. :)
+
+29 Sep 2003
+	-- released as version 0.9.0
+	-- Renumbered to reflect that it's not been realworld tested
+	-- changed package to danga.com.MemCached (thanks)
+	-- added dates to changelog
+	-- added .txt to text files
+	-- added to official memcached site :)
+
+28 Sep 2003
+	-- released as version 1.0
+	-- Adjusted namespacing for SockIO, it shouldn't have been public; is now package level.
+		As a bonus, this means I don't have to Javadoc it. :)
+	-- Finished adding complete Javadoc to MemCachedClient.
+	-- spellchecked
+	-- added a couple versions of function variations that I missed. for example, some that
+		didn't take an int directly as a hash value, and i missed a get_multi w/out hashes.
+	-- removed java.net.Socket reference from MemCachedClient, SockIO has a new constructor which
+		takes hostname and port number
+	-- switched to three part version number
+
+27 Sep 2003
+	-- released as version 0.3
+	-- Compression, for strings/stringified numbers, this is compatible w/ perl
+		Serialized objects are incompatible w/ perl for obvious reasons. :)
+	-- Added PORTABILITY file, to include information about using the client
+		with various JVM's
+	-- Updated string parsing to StreamTokenizer rather than regexp's in an 
+		effort to get sablevm to like the client
+
+24 Sep 2003
+	-- released as version 0.2
+	-- Serialization works
+	-- Possible BUG: Only the lower byte of the characters of keys are sent
+		This is only a problem if the memcache server can handle
+		unicode keys. (I haven't checked)
+	-- Server Failures handled gracefully
+	-- Partial Javadoc
+
+23 Sep 2003
+	-- Initial Release 0.1
+	-- Storing and Retrieving numbers and strings works
+Howto
+=====
+
+Basic Example:
+==============
+
+Lets say you have 3 servers.  Server 1 and server 2 have 3GB of space
+and server 3 has 2GB of space for cache.  Here is how I would set up
+my client.
+
+import com.danga.MemCached.*;
+public class MyClass {
+
+	// create a static client as most installs only need
+	// a single instance
+	protected static MemCachedClient mcc = new MemCachedClient();
+
+	// set up connection pool once at class load
+	static {
+
+		// server list and weights
+		String[] servers =
+			{
+			  "server1.mydomain.com:1624",
+			  "server2.mydomain.com:1624",
+			  "server3.mydomain.com:1624"
+			};
+
+		Integer[] weights = { 3, 3, 2 };
+
+		// grab an instance of our connection pool
+		SockIOPool pool = SockIOPool.getInstance();
+
+		// set the servers and the weights
+		pool.setServers( servers );
+		pool.setWeights( weights );
+
+		// set some basic pool settings
+		// 5 initial, 5 min, and 250 max conns
+		// and set the max idle time for a conn
+		// to 6 hours
+		pool.setInitConn( 5 );
+		pool.setMinConn( 5 );
+		pool.setMaxConn( 250 );
+		pool.setMaxIdle( 1000 * 60 * 60 * 6 );
+
+		// set the sleep for the maint thread
+		// it will wake up every x seconds and
+		// maintain the pool size
+		pool.setMaintSleep( 30 );
+
+		// set some TCP settings
+		// disable nagle
+		// set the read timeout to 3 secs
+		// and don't set a connect timeout
+		pool.setNagle( false );
+		pool.setSocketTO( 3000 );
+		pool.setSocketConnectTO( 0 );
+
+		// initialize the connection pool
+		pool.initialize();
+
+
+		// lets set some compression on for the client
+		// compress anything larger than 64k
+		mcc.setCompressEnable( true );
+		mcc.setCompressThreshold( 64 * 1024 );
+	}
+
+	// from here on down, you can call any of the client calls
+	public static void examples() {
+        mcc.set( "foo", "This is a test String" );
+		String bar = mcc.get( "foo" );
+	}
+}
+
+Multi-client Example:
+=====================
+
+If you need to support multiple clients (i.e. Java, PHP, Perl, etc.)
+you need to make a few changes when you are setting things up:
+
+	// use a compatible hashing algorithm
+	pool.setHashingAlg( SockIOPool.NEW_COMPAT_HASH );
+
+	// store primitives as strings
+	// the java client serializes primitives
+	//
+	// note: this will not help you when it comes to
+	// storing non primitives
+	mcc.setPrimitiveAsString( true );
+
+	// don't url encode keys
+	// by default the java client url encodes keys
+	// to sanitize them so they will always work on the server
+	// however, other clients do not do this
+	mcc.setSanitizeKeys( false );
+
+
+Failover/Failback Notes:
+========================
+
+By default the java client will failover to a new server when a server
+dies.  It will also failback to the original if it detects that the
+server comes back (it checks the server in a falling off pattern).
+
+If you want to disable this (useful if you have flapping servers),
+there are two settings to handle this.
+
+	pool.setFailover( false );
+	pool.setFailback( false );
+
+
+Serialization:
+==============
+
+For java "native types", which include:
+
+Boolean
+Byte
+String
+Character
+StringBuffer
+StringBuilder
+Short
+Long
+Double
+Float
+Date
+Integer
+
+The client will by default *NOT* use java serialization, and instead
+will serialize using the primitive values to save space.  You can
+override this by using the mcc.setPrimitiveAsString( true ), which
+will use the toString representation of the object.
+
+For other java objects, you need to make sure the class implements
+Serializable in order to be able to be stored in the cache.
+
+I would also reccomend that if possible, classes should instead
+implement Externalizable as opposed to Serializable.  This allows the
+author of the class to define how objects of that class should
+serialize.  In practice at Meetup.com, we saw a 60% reduction in the size
+of our serialized objects by doing this.  This means less data to eat up
+cache space and less data to transfer over the network.
+
+Other:
+======
+See the java docs.
+* Copyright (c) 2007, Greg Whain
+* All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions are met:
+*     * Redistributions of source code must retain the above copyright
+*       notice, this list of conditions and the following disclaimer.
+*     * Redistributions in binary form must reproduce the above copyright
+*       notice, this list of conditions and the following disclaimer in the
+*       documentation and/or other materials provided with the distribution.
+*     * Neither the name of the <organization> nor the
+*       names of its contributors may be used to endorse or promote products
+*       derived from this software without specific prior written permission.
+*
+* THIS SOFTWARE IS PROVIDED BY Greg Whalin ``AS IS'' AND ANY
+* EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+* DISCLAIMED. IN NO EVENT SHALL Greg Whalin BE LIABLE FOR ANY
+* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+* THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+This file lists the portability status of this client.  Please send me any
+additional information (greg@meetup.com).
+
+The newest release has only been tested on:
+
+Sun's JRE 5 and up on Linux/x86/amd64
+WARNING!
+
+This version is not compatible with versions prior to version 0.9.2
+Please see javadocs for examples on how to use.
+
+This release required Java 5 in order to work.  If you would like to downport to 1.4
+please feel free.
+To Do:
+
+- NIO support for write operations
+- removeMulti support
+- binary protocol support
+- support for new add methods (cas,append,prepend)
+- clean up Logging code (auto-detect log4j/logging/etc)
+- clean up and add more unit/performance tests
+/**
+// cast byte into char array
+// else return the string
+// only stop when we see
+// \r (13) followed by \n (10)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// interface
+/**
+/**
+/**
+/**
+/**
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/**
+//www.danga.com/memcached/</a>.
+// compression is enabled by default	
+// set compression threshhold to 4 KB (default: 15 KB)	
+// turn on storing primitive types as a string representation
+// Should not do this in most cases.	
+// logger
+// return codes
+// start of value line from server
+// start of stats line from server
+// start of item line from server
+// successful deletion
+// record not found for delete or incr/decr
+// successful store of data
+// data not stored
+// success
+// end of data from server
+// invalid command name from client
+// client error in input line - invalid protocol
+// server error
+// default compression threshold
+// values for cache flags 
+// flags
+// pool instance
+// which pool to use
+// optional passed in classloader
+// optional error handler
+/**
+/** 
+/** 
+/** 
+/** 
+/** 
+// get a pool instance to work with for the life of this instance
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/**
+/** 
+/**
+/** 
+/**
+// if we have an errorHandler, use its hook
+// get SockIO obj from hash or from key
+// return false if unable to get SockIO obj
+// build command
+// if we get appropriate response back, then we return true
+// return sock to pool and bail here
+// if we have an errorHandler, use its hook
+// exception thrown
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/** 
+// if we have an errorHandler, use its hook
+// get SockIO obj
+// store flags
+// byte array to hold data
+// useful for sharing data between java and non-java
+// and also for storing ints for the increment method
+// if we have an errorHandler, use its hook
+// if we have an errorHandler, use its hook
+// always serialize for non-primitive types
+// if we have an errorHandler, use its hook
+// if we fail to serialize, then
+// we bail
+// return socket to pool and bail
+// now try to compress if we want to
+// and if the length is over the threshold 
+// store it and set compression flag
+// if we have an errorHandler, use its hook
+// now write the data to the cache server
+// get result code
+// if we have an errorHandler, use its hook
+// exception thrown
+/** 
+/** 
+/** 
+/** 
+/** 
+// if we have an errorHandler, use its hook
+// not found or error getting out
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/** 
+/**
+/**
+/**
+/**
+/** 
+// if we have an errorHandler, use its hook
+// get SockIO obj for given cache key
+// get result back
+// return sock to pool and return result
+// if we have an errorHandler, use its hook
+// if we have an errorHandler, use its hook
+// exception thrown
+/**
+/** 
+/**
+// if we have an errorHandler, use its hook
+// get SockIO obj using cache key
+// ready object
+// read obj into buffer
+// read the input stream, and write to a byte array output stream since
+// we have to read into a byte array, but we don't know how large it
+// will need to be, and we don't want to resize it a bunch
+// store uncompressed back to buffer
+// if we have an errorHandler, use its hook
+// we can only take out serialized objects
+// pulling out string value
+// decoding object
+// if we have an errorHandler, use its hook
+// deserialize if the data is serialized
+// if we have an errorHandler, use its hook
+// exception thrown
+/** 
+/** 
+/** 
+/**
+/**
+/**
+// if we have an errorHandler, use its hook
+// get SockIO obj from cache key
+// store in map and list if not already
+// return to pool
+// now query memcache
+// now use new NIO implementation
+// fix the return array in case we had to rewrite any of the keys
+// if we have an errorHandler, use its hook
+// backfill missing keys w/ null value
+/** 
+// read obj into buffer
+// ready object
+// check for compression
+// read the input stream, and write to a byte array output stream since
+// we have to read into a byte array, but we don't know how large it
+// will need to be, and we don't want to resize it a bunch
+// store uncompressed back to buffer
+// if we have an errorHandler, use its hook
+// we can only take out serialized objects
+// pulling out string value
+// decoding object
+// if we have an errorHandler, use its hook
+// deserialize if the data is serialized
+/* Errors de-serializing are to be expected in the case of a 
+// if we have an errorHandler, use its hook
+// if we have an errorHandler, use its hook
+// store the object into the cache
+/** 
+/** 
+// get SockIOPool instance
+// return false if unable to get SockIO obj
+// get all servers and iterate over them
+// if no servers, then return early
+// build command
+// if we get appropriate response back, then we return true
+// if we have an errorHandler, use its hook
+// exception thrown
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+// get all servers and iterate over them
+// if no servers, then return early
+// array of stats Maps
+// build command
+// map to hold key value pairs
+// loop over results
+// finish when we get end from server
+// if we have an errorHandler, use its hook
+// exception thrown
+// turn off non-blocking IO and return to pool
+// if we know we're done, just say so
+// else find out the hard way
+// get the sockets, flip them to non-blocking, and set up data
+// structures
+// get SockIO obj from hostname
+// the main select loop; ends when
+// 1) we've received data from all the servers, or
+// 2) we time out
+// we've got some activity; handle it
+// timeout likely... better check
+// TODO:  This seems like a problem area that we need to figure out how to handle.
+// errors can happen just about anywhere above, from
+// connection setup to any of the mechanics
+// run through our conns and either return them to the pool
+// or forcibly close them
+// Done!  Build the list of results and return them.  If we get
+// here by a timeout, then some of the connections are probably
+// not done.  But we'll return what we've got...
+// shouldn't happen; we have all the data already
+// if we have an errorHandler, use its hook
+// exception thrown
+/**
+/**
+//java.sun.com/docs/books/tutorial/native1.1/integrating/types.html
+// logger
+/** 
+/** 
+/** 
+/** 
+// decode methods
+/** 
+/**
+/**
+/**
+/**
+// java.util
+/** 
+// 30 minutes
+// 5 minutes
+// 5 seconds
+// 3 seconds to block on reads
+// 3 seconds to block on initial connections.  If 0, then will use blocking connect (default)
+// turn off auto-failover in event of server down	
+// turn off Nagle's algorithm on all sockets in pool	
+// disable health check of socket on checkout
+// logger
+// store instances of pools
+// avoid recurring construction
+// Constants
+// native String.hashCode();
+// original compatibility hashing algorithm (works with other clients)
+// new CRC32 based compatibility hashing algorithm (works with other clients)
+// MD5 Based -- Stops thrashing when a server added or removed
+// max of 10 minute delay for fall off
+// Pool data
+// this will be initialized by pool when the pool is initialized
+// initial, min and max pool sizes
+// max idle time for avail sockets
+// max idle time for avail sockets
+// maintenance thread sleep time
+// default timeout of socket reads
+// default timeout of socket connections
+// default to not check each connection for being alive
+// default to failover in event of cache server dead
+// only used if failover is also set ... controls putting a dead server back into rotation
+// enable/disable Nagle's algorithm
+// default to using the native hash as it is the fastest
+// locks
+// list of all servers
+// dead server map
+// map to hold all available sockets
+// map to hold busy sockets
+// set to hold sockets to close
+// empty constructor
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/**
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+// use the native hash as a default
+/**
+// this works in java 6, but still want to release support for java5
+//Long k = this.consistentBuckets.ceilingKey( hv );
+//return ( k == null ) ? this.consistentBuckets.firstKey() : k;
+/** 
+// check to see if already initialized
+// pools
+// only create up to maxCreate connections at once
+// if servers is not set, or it empty, then
+// throw a runtime exception
+// initalize our internal hashing structures
+// mark pool as initialized
+// start maint thread
+// store buckets in tree map
+// create initial connections
+// store buckets in tree map
+// create initial connections
+/** 
+/** 
+// if host is dead, then we don't need to try again
+// until the dead status has expired
+// we do not try to put back in if failback is off
+// if we failed to get socket, then mark
+// host dead for a duration which falls off
+// also clear all entries for this host from availPool
+/** 
+/** 
+/** 
+/** 
+// if no servers return null
+// if only one server, return it
+// from here on, we are working w/ multiple servers
+// keep trying different servers until we find one
+// making sure we only try each server one time
+// get initial bucket
+// try to get socket from bucket
+// if we do not want to failover, then bail here
+// log that we tried
+// if we failed to get a socket from this server
+// then we try again by adding an incrementer to the
+// current key and then rehashing 
+/** 
+// if we have items in the pool
+// then we can return it
+// take first connected socket
+// remove from avail pool
+// add to busy pool
+// return socket
+// add to deadpool for later reaping
+// remove from avail pool
+// create one socket -- let the maint thread take care of creating more
+/** 
+/** 
+/** 
+/** 
+// remove from the busy pool
+// add to avail pool
+/** 
+/** 
+/** 
+// stop the main thread
+// wait for the thread to finish
+/** 
+/** 
+/** 
+// go through avail sockets and create sockets
+// as needed to maintain pool settings
+// find out how many to create
+// if pool is too small (n < minSpare)
+// need to create new sockets
+// now create
+// synchronize to add and remove to/from avail pool
+// as well as clean up the busy pool (no point in releasing
+// lock here as should be quick to pool adjust and no
+// blocking ops here)
+// need to close down some sockets
+// remove stale entries
+// if past idle time
+// then close socket
+// and remove from pool
+// remove from the availPool
+// go through busy sockets and destroy sockets
+// as needed to maintain pool settings
+// loop through all connections and check to see if we have any hung connections
+// remove stale entries
+// if past max busy time
+// then close socket
+// and remove from pool
+// remove from the busy pool
+// finally clean out the deadPool
+/** 
+// logger
+// every 3 seconds
+/** 
+/** 
+// if pool is initialized, then
+// run the maintenance method on itself
+/** 
+// logger
+// pool
+// data
+/** 
+// get a socket channel
+// testing only
+// wrap streams
+/** 
+// get socket: default is to use non-blocking connect
+// testing only
+// wrap streams
+/** 
+/** 
+/** 
+/** 
+/** 
+// check in to pool
+/** 
+// check in to pool
+/** 
+/*
+// try to talk to the server w/ a dumb query to ask its version
+/** 
+// cast byte into char array
+// else return the string
+/** 
+// only stop when we see
+// \r (13) followed by \n (10)
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+// logger
+// initialize the pool for memcache servers
+// get client instance
+/**
+// store results from threads
+/**
+// initialize the pool for memcache servers
+// how many kilobytes
+// get object to store
+/** 
+// get client instance
+// time deletes
+// time stores
+/**
+// memcached should be running on port 11211 but NOT on 11212
+// turn off most memcached client logging:
+/**
+// logger
+// foo now == 1
+// foo now == 6
+// foo now == 4
+// foo now == 0
+// foo now == 1
+// foo now == 6
+// foo now 7
+// foo now == 4
+/**
+// initialize the pool for memcache servers
+/** 

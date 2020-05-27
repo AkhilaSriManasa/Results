@@ -1,0 +1,497 @@
+﻿/**
+// cast byte into char array
+// else return the string
+// only stop when we see
+// \r (13) followed by \n (10)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// interface
+/**
+/**
+/**
+/**
+/**
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/**
+//www.danga.com/memcached/</a>.
+// compression is enabled by default	
+// set compression threshhold to 4 KB (default: 15 KB)	
+// turn on storing primitive types as a string representation
+// Should not do this in most cases.	
+// logger
+// return codes
+// start of value line from server
+// start of stats line from server
+// start of item line from server
+// successful deletion
+// record not found for delete or incr/decr
+// successful store of data
+// data not stored
+// success
+// end of data from server
+// invalid command name from client
+// client error in input line - invalid protocol
+// server error
+// default compression threshold
+// values for cache flags 
+// flags
+// pool instance
+// which pool to use
+// optional passed in classloader
+// optional error handler
+/**
+/** 
+/** 
+/** 
+/** 
+/** 
+// get a pool instance to work with for the life of this instance
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/**
+/** 
+/**
+/** 
+/**
+// if we have an errorHandler, use its hook
+// get SockIO obj from hash or from key
+// return false if unable to get SockIO obj
+// build command
+// if we get appropriate response back, then we return true
+// return sock to pool and bail here
+// if we have an errorHandler, use its hook
+// exception thrown
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/** 
+// if we have an errorHandler, use its hook
+// get SockIO obj
+// store flags
+// byte array to hold data
+// useful for sharing data between java and non-java
+// and also for storing ints for the increment method
+// if we have an errorHandler, use its hook
+// if we have an errorHandler, use its hook
+// always serialize for non-primitive types
+// if we have an errorHandler, use its hook
+// if we fail to serialize, then
+// we bail
+// return socket to pool and bail
+// now try to compress if we want to
+// and if the length is over the threshold 
+// store it and set compression flag
+// if we have an errorHandler, use its hook
+// now write the data to the cache server
+// get result code
+// if we have an errorHandler, use its hook
+// exception thrown
+/** 
+/** 
+/** 
+/** 
+/** 
+// if we have an errorHandler, use its hook
+// not found or error getting out
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/** 
+/**
+/**
+/**
+/**
+/** 
+// if we have an errorHandler, use its hook
+// get SockIO obj for given cache key
+// get result back
+// return sock to pool and return result
+// if we have an errorHandler, use its hook
+// if we have an errorHandler, use its hook
+// exception thrown
+/**
+/** 
+/**
+// if we have an errorHandler, use its hook
+// get SockIO obj using cache key
+// ready object
+// read obj into buffer
+// read the input stream, and write to a byte array output stream since
+// we have to read into a byte array, but we don't know how large it
+// will need to be, and we don't want to resize it a bunch
+// store uncompressed back to buffer
+// if we have an errorHandler, use its hook
+// we can only take out serialized objects
+// pulling out string value
+// decoding object
+// if we have an errorHandler, use its hook
+// deserialize if the data is serialized
+// if we have an errorHandler, use its hook
+// exception thrown
+/** 
+/** 
+/** 
+/**
+/**
+/**
+// if we have an errorHandler, use its hook
+// get SockIO obj from cache key
+// store in map and list if not already
+// return to pool
+// now query memcache
+// now use new NIO implementation
+// fix the return array in case we had to rewrite any of the keys
+// if we have an errorHandler, use its hook
+// backfill missing keys w/ null value
+/** 
+// read obj into buffer
+// ready object
+// check for compression
+// read the input stream, and write to a byte array output stream since
+// we have to read into a byte array, but we don't know how large it
+// will need to be, and we don't want to resize it a bunch
+// store uncompressed back to buffer
+// if we have an errorHandler, use its hook
+// we can only take out serialized objects
+// pulling out string value
+// decoding object
+// if we have an errorHandler, use its hook
+// deserialize if the data is serialized
+/* Errors de-serializing are to be expected in the case of a 
+// if we have an errorHandler, use its hook
+// if we have an errorHandler, use its hook
+// store the object into the cache
+/** 
+/** 
+// get SockIOPool instance
+// return false if unable to get SockIO obj
+// get all servers and iterate over them
+// if no servers, then return early
+// build command
+// if we get appropriate response back, then we return true
+// if we have an errorHandler, use its hook
+// exception thrown
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+// get all servers and iterate over them
+// if no servers, then return early
+// array of stats Maps
+// build command
+// map to hold key value pairs
+// loop over results
+// finish when we get end from server
+// if we have an errorHandler, use its hook
+// exception thrown
+// turn off non-blocking IO and return to pool
+// if we know we're done, just say so
+// else find out the hard way
+// get the sockets, flip them to non-blocking, and set up data
+// structures
+// get SockIO obj from hostname
+// the main select loop; ends when
+// 1) we've received data from all the servers, or
+// 2) we time out
+// we've got some activity; handle it
+// timeout likely... better check
+// TODO:  This seems like a problem area that we need to figure out how to handle.
+// errors can happen just about anywhere above, from
+// connection setup to any of the mechanics
+// run through our conns and either return them to the pool
+// or forcibly close them
+// Done!  Build the list of results and return them.  If we get
+// here by a timeout, then some of the connections are probably
+// not done.  But we'll return what we've got...
+// shouldn't happen; we have all the data already
+// if we have an errorHandler, use its hook
+// exception thrown
+/**
+/**
+//java.sun.com/docs/books/tutorial/native1.1/integrating/types.html
+// logger
+/** 
+/** 
+/** 
+/** 
+// decode methods
+/** 
+/**
+/**
+/**
+/**
+// java.util
+/** 
+// 30 minutes
+// 5 minutes
+// 5 seconds
+// 3 seconds to block on reads
+// 3 seconds to block on initial connections.  If 0, then will use blocking connect (default)
+// turn off auto-failover in event of server down	
+// turn off Nagle's algorithm on all sockets in pool	
+// disable health check of socket on checkout
+// logger
+// store instances of pools
+// avoid recurring construction
+// Constants
+// native String.hashCode();
+// original compatibility hashing algorithm (works with other clients)
+// new CRC32 based compatibility hashing algorithm (works with other clients)
+// MD5 Based -- Stops thrashing when a server added or removed
+// max of 10 minute delay for fall off
+// Pool data
+// this will be initialized by pool when the pool is initialized
+// initial, min and max pool sizes
+// max idle time for avail sockets
+// max idle time for avail sockets
+// maintenance thread sleep time
+// default timeout of socket reads
+// default timeout of socket connections
+// default to not check each connection for being alive
+// default to failover in event of cache server dead
+// only used if failover is also set ... controls putting a dead server back into rotation
+// enable/disable Nagle's algorithm
+// default to using the native hash as it is the fastest
+// locks
+// list of all servers
+// dead server map
+// map to hold all available sockets
+// map to hold busy sockets
+// set to hold sockets to close
+// empty constructor
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+/**
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+// use the native hash as a default
+/**
+// this works in java 6, but still want to release support for java5
+//Long k = this.consistentBuckets.ceilingKey( hv );
+//return ( k == null ) ? this.consistentBuckets.firstKey() : k;
+/** 
+// check to see if already initialized
+// pools
+// only create up to maxCreate connections at once
+// if servers is not set, or it empty, then
+// throw a runtime exception
+// initalize our internal hashing structures
+// mark pool as initialized
+// start maint thread
+// store buckets in tree map
+// create initial connections
+// store buckets in tree map
+// create initial connections
+/** 
+/** 
+// if host is dead, then we don't need to try again
+// until the dead status has expired
+// we do not try to put back in if failback is off
+// if we failed to get socket, then mark
+// host dead for a duration which falls off
+// also clear all entries for this host from availPool
+/** 
+/** 
+/** 
+/** 
+// if no servers return null
+// if only one server, return it
+// from here on, we are working w/ multiple servers
+// keep trying different servers until we find one
+// making sure we only try each server one time
+// get initial bucket
+// try to get socket from bucket
+// if we do not want to failover, then bail here
+// log that we tried
+// if we failed to get a socket from this server
+// then we try again by adding an incrementer to the
+// current key and then rehashing 
+/** 
+// if we have items in the pool
+// then we can return it
+// take first connected socket
+// remove from avail pool
+// add to busy pool
+// return socket
+// add to deadpool for later reaping
+// remove from avail pool
+// create one socket -- let the maint thread take care of creating more
+/** 
+/** 
+/** 
+/** 
+// remove from the busy pool
+// add to avail pool
+/** 
+/** 
+/** 
+// stop the main thread
+// wait for the thread to finish
+/** 
+/** 
+/** 
+// go through avail sockets and create sockets
+// as needed to maintain pool settings
+// find out how many to create
+// if pool is too small (n < minSpare)
+// need to create new sockets
+// now create
+// synchronize to add and remove to/from avail pool
+// as well as clean up the busy pool (no point in releasing
+// lock here as should be quick to pool adjust and no
+// blocking ops here)
+// need to close down some sockets
+// remove stale entries
+// if past idle time
+// then close socket
+// and remove from pool
+// remove from the availPool
+// go through busy sockets and destroy sockets
+// as needed to maintain pool settings
+// loop through all connections and check to see if we have any hung connections
+// remove stale entries
+// if past max busy time
+// then close socket
+// and remove from pool
+// remove from the busy pool
+// finally clean out the deadPool
+/** 
+// logger
+// every 3 seconds
+/** 
+/** 
+// if pool is initialized, then
+// run the maintenance method on itself
+/** 
+// logger
+// pool
+// data
+/** 
+// get a socket channel
+// testing only
+// wrap streams
+/** 
+// get socket: default is to use non-blocking connect
+// testing only
+// wrap streams
+/** 
+/** 
+/** 
+/** 
+/** 
+// check in to pool
+/** 
+// check in to pool
+/** 
+/*
+// try to talk to the server w/ a dumb query to ask its version
+/** 
+// cast byte into char array
+// else return the string
+/** 
+// only stop when we see
+// \r (13) followed by \n (10)
+/** 
+/** 
+/** 
+/** 
+/** 
+/** 
+/**
+// logger
+// initialize the pool for memcache servers
+// get client instance
+/**
+// store results from threads
+/**
+// initialize the pool for memcache servers
+// how many kilobytes
+// get object to store
+/** 
+// get client instance
+// time deletes
+// time stores
+/**
+// memcached should be running on port 11211 but NOT on 11212
+// turn off most memcached client logging:
+/**
+// logger
+// foo now == 1
+// foo now == 6
+// foo now == 4
+// foo now == 0
+// foo now == 1
+// foo now == 6
+// foo now 7
+// foo now == 4
+/**
+// initialize the pool for memcache servers
+/** 

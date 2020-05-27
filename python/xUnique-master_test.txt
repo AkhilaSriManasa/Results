@@ -1,0 +1,22 @@
+﻿
+***********other formats****************
+gitignore
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+xUnique-master/xUnique-master/LICENSE
+xUnique-master/xUnique-master/README.rst
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+xUnique-master/xUnique-master/.gitignore
+
+***********other code file list***************
+xUnique-master/xUnique-master/setup.py
+xUnique-master/xUnique-master/xUnique.py

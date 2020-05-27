@@ -1,0 +1,1415 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\cheaptrick.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Spectral envelope estimation on the basis of the idea of CheapTrick.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// SmoothingWithRecovery() carries out the spectral smoothing and spectral
+// recovery on the Cepstrum domain.
+//-----------------------------------------------------------------------------
+// We can control q1 as the parameter. 2015/9/22 by M. Morise
+// const double q1 = -0.09;  // Please see the reference in CheapTrick.
+//-----------------------------------------------------------------------------
+// GetPowerSpectrum() calculates the power_spectrum with DC correction.
+// DC stands for Direct Current. In this case, the component from 0 to F0 Hz
+// is corrected.
+//-----------------------------------------------------------------------------
+// FFT
+// Calculation of the power spectrum.
+// DC correction
+//-----------------------------------------------------------------------------
+// SetParametersForGetWindowedWaveform()
+//-----------------------------------------------------------------------------
+// Designing of the window function
+//-----------------------------------------------------------------------------
+// GetWindowedWaveform() windows the waveform by F0-adaptive window
+//-----------------------------------------------------------------------------
+// F0-adaptive windowing
+//-----------------------------------------------------------------------------
+// CheapTrickGeneralBody() calculates a spectral envelope at a temporal
+// position. This function is only used in CheapTrick().
+// Caution:
+//   forward_fft is allocated in advance to speed up the processing.
+//-----------------------------------------------------------------------------
+// F0-adaptive windowing
+// Calculate power spectrum with DC correction
+// Note: The calculated power spectrum is stored in an array for waveform.
+// In this imprementation, power spectrum is transformed by FFT (NOT IFFT).
+// However, the same result is obtained.
+// This is tricky but important for simple implementation.
+// Smoothing of the power (linear axis)
+// forward_real_fft.waveform is the power spectrum.
+// Smoothing (log axis) and spectral recovery on the cepstrum domain.
+// namespace
+// q1 is the parameter used for the spectral recovery.
+// Since The parameter is optimized, you don't need to change the parameter.
+// f0_floor and fs is used to determine fft_size;
+// We strongly recommend not to change this value unless you have enough
+// knowledge of the signal processing in CheapTrick.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\common.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// common.cpp includes functions used in at least two files.
+// (1) Common functions
+// (2) FFT, IFFT and minimum phase analysis.
+//
+// In FFT analysis and minimum phase analysis,
+// Functions "Initialize*()" allocate the mamory.
+// Functions "Destroy*()" free the accolated memory.
+// FFT size is used for initialization, and structs are used to keep the memory.
+// Functions "GetMinimumPhaseSpectrum()" calculate minimum phase spectrum.
+// Forward and inverse FFT do not have the function "Get*()",
+// because forward FFT and inverse FFT can run in one step.
+//
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// SetParametersForLinearSmoothing() is used in LinearSmoothing()
+//-----------------------------------------------------------------------------
+// namespace
+//-----------------------------------------------------------------------------
+// Fundamental functions
+//-----------------------------------------------------------------------------
+// DCCorrection() corrects the input spectrum from 0 to f0 Hz because the
+// general signal does not contain the DC (Direct Current) component.
+// It is used in CheapTrick() and D4C().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// LinearSmoothing() carries out the spectral smoothing by rectangular window
+// whose length is width Hz and is used in CheapTrick() and D4C().
+//-----------------------------------------------------------------------------
+// These parameters are set by the other function.
+//-----------------------------------------------------------------------------
+// NuttallWindow() calculates the coefficients of Nuttall window whose length
+// is y_length and is used in Dio() and D4C().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FFT, IFFT and minimum phase analysis
+// Mirroring
+// This fft_plan carries out "forward" FFT.
+// To carriy out the Inverse FFT, the sign of imaginary part
+// is inverted after FFT.
+// Since x is complex number, calculation of exp(x) is as following.
+// Note: This FFT library does not keep the aliasing.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\d4c.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Band-aperiodicity estimation on the basis of the idea of D4C.
+//-----------------------------------------------------------------------------
+// for std::sort()
+//-----------------------------------------------------------------------------
+// SetParametersForGetWindowedWaveform()
+//-----------------------------------------------------------------------------
+// Designing of the window function
+// Hanning window
+// Blackman window
+//-----------------------------------------------------------------------------
+// GetWindowedWaveform() windows the waveform by F0-adaptive window
+// In the variable window_type, 1: hanning, 2: blackman
+//-----------------------------------------------------------------------------
+// F0-adaptive windowing
+//-----------------------------------------------------------------------------
+// GetCentroid() calculates the energy centroid (see the book, time-frequency
+// analysis written by L. Cohen).
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetStaticCentroid() calculates the temporally static energy centroid.
+// Basic idea was proposed by H. Kawahara.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetSmoothedPowerSpectrum() calculates the smoothed power spectrum.
+// The parameters used for smoothing are optimized in davance.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetStaticGroupDelay() calculates the temporally static group delay.
+// This is the fundamental parameter in D4C.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetCoarseAperiodicity() calculates the aperiodicity in multiples of 3 kHz.
+// The upper limit is given based on the sampling frequency.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// D4CGeneralBody() calculates a spectral envelope at a temporal
+// position. This function is only used in D4C().
+// Caution:
+//   forward_fft is allocated in advance to speed up the processing.
+//-----------------------------------------------------------------------------
+// Revision of the result based on the F0
+// namespace
+// Since the window function is common in D4CGeneralBody(),
+// it is designed here to speed up.
+// Linear interpolation to convert the coarse aperiodicity into its
+// spectral representation.
+//  printf("Number of bands for aperiodicity: %d\n", number_of_aperiodicities);
+// Since the window function is common in D4CGeneralBody(),
+// it is designed here to speed up.
+// osw
+// osw: store coarse aper directly, don't store constant end values 
+//        printf("     band number %d\n", j); 
+//        printf("     band number %f\n", coarse_aperiodicity[j+1]); 
+//         
+//     // Linear interpolation to convert the coarse aperiodicity into its
+//     // spectral representation.
+//     interp1(coarse_frequency_axis, coarse_aperiodicity,
+//         number_of_aperiodicities + 2, frequency_axis, fft_size / 2 + 1,
+//         aperiodicity[i]);
+//     for (int j = 0; j <= fft_size / 2; ++j)
+//       aperiodicity[i][j] = pow(10.0, aperiodicity[i][j] / 20.0);
+// This struct is dummy.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\dio.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// F0 estimation based on DIO (Distributed Inline-filter Operation).
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// struct for RawEventByDio()
+// "negative" means "zero-crossing point going from positive to negative"
+// "positive" means "zero-crossing point going from negative to positive"
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// DesignLowCutFilter() calculates the coefficients the filter.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetDownsampledSignal() calculates the spectrum for estimation.
+// This function carries out downsampling to speed up the estimation process
+// and calculates the spectrum of the downsampled signal.
+//-----------------------------------------------------------------------------
+// Initialization
+// Downsampling
+// Removal of the DC component (y = y - mean value of y)
+// Low cut filtering (from 0.1.4)
+// Cutoff is 50.0 Hz
+//-----------------------------------------------------------------------------
+// GetBestF0Contour() calculates the best f0 contour based on stabilities of
+// all candidates. The F0 whose stability is minimum is selected.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixStep1() is the 1st step of the postprocessing.
+// This function eliminates the unnatural change of f0 based on allowed_range.
+//-----------------------------------------------------------------------------
+// Initialization
+// Processing to prevent the jumping of f0
+//-----------------------------------------------------------------------------
+// FixStep2() is the 2nd step of the postprocessing.
+// This function eliminates the suspected f0 in the anlaut and auslaut.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// CountNumberOfVoicedSections() counts the number of voiced sections.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// SelectOneF0() corrects the f0[current_index] based on
+// f0[current_index + sign].
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixStep3() is the 3rd step of the postprocessing.
+// This function corrects the f0 candidates from backward to forward.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// BackwardCorrection() is the 4th step of the postprocessing.
+// This function corrects the f0 candidates from forward to backward.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixF0Contour() calculates the definitive f0 contour based on all f0
+// candidates. There are four steps.
+//-----------------------------------------------------------------------------
+// memo:
+// These are the tentative values. Optimization should be required.
+//-----------------------------------------------------------------------------
+// GetFilteredSignal() calculates the signal that is the convolution of the
+// input signal and low-pass filter.
+// This function is only used in RawEventByDio()
+//-----------------------------------------------------------------------------
+// Nuttall window is used as a low-pass filter.
+// Cutoff frequency depends on the window length.
+// Convolution
+// Compensation of the delay.
+//-----------------------------------------------------------------------------
+// CheckEvent() returns 1, provided that the input value is over 1.
+// This function is for RawEventByDio().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// ZeroCrossingEngine() calculates the zero crossing points from positive to
+// negative. Thanks to Custom.Maid http://custom-made.seesaa.net/ (2012/8/19)
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetFourZeroCrossingIntervals() calculates four zero-crossing intervals.
+// (1) Zero-crossing going from negative to positive.
+// (2) Zero-crossing going from positive to negative.
+// (3) Peak, and (4) dip. (3) and (4) are calculated from the zero-crossings of
+// the differential of waveform.
+//-----------------------------------------------------------------------------
+// x_length / 4 (old version) is fixed at 2013/07/14
+//-----------------------------------------------------------------------------
+// GetF0CandidatesSub() calculates the f0 candidates and deviations.
+// This is the sub-function of GetF0Candidates() and assumes the calculation.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetF0Candidates() calculates the F0 candidates based on the zero-crossings.
+// Calculation of F0 candidates is carried out in GetF0CandidatesSub().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// DestroyZeroCrossings() frees the memory of array in the struct
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// RawEventByDio() calculates the zero-crossings.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetF0CandidateAndStabilityMap() calculates all f0 candidates and
+// their stabilities.
+//-----------------------------------------------------------------------------
+// Calculation of the acoustics events (zero-crossing)
+// A way to avoid zero division
+//-----------------------------------------------------------------------------
+// DioGeneralBody() estimates the F0 based on Distributed Inline-filter
+// Operation.
+//-----------------------------------------------------------------------------
+// normalization
+// Calculation of the spectrum used for the f0 estimation
+// f0map represents all F0 candidates. We can modify them.
+// Selection of the best value based on fundamental-ness.
+// Postprocessing to find the best f0-contour.
+// namespace
+// You can change default parameters.
+// You can use the value from 1 to 12.
+// Default value 11 is for the fs of 44.1 kHz.
+// The lower value you use, the better performance you can obtain.
+// You can give a positive real number as the threshold.
+// The most strict value is 0, and there is no upper limit.
+// On the other hand, I think that the value from 0.02 to 0.2 is reasonable.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\fft.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// This file represents the functions about FFT (Fast Fourier Transform)
+// implemented by Mr. Ooura, and wrapper functions implemented by M. Morise.
+// We can use these wrapper functions as well as the FFTW functions.
+// Please see the FFTW web-page to show the usage of the wrapper functions.
+// Ooura FFT:
+//   (Japanese) http://www.kurims.kyoto-u.ac.jp/~ooura/index-j.html
+//   (English) http://www.kurims.kyoto-u.ac.jp/~ooura/index.html
+// FFTW:
+//   (English) http://www.fftw.org/
+// 2012/08/24 by M. Morise
+//-----------------------------------------------------------------------------
+// c2r
+// c2c
+// r2c
+// c2c
+// namespace
+// ifft
+//-----------------------------------------------------------------------
+// The following functions are reffered by
+// http://www.kurims.kyoto-u.ac.jp/~ooura/index.html
+// -------- child routines --------
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\matlabfunctions.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Matlab functions implemented for WORLD
+// Since these functions are implemented as the same function of Matlab,
+// the source code does not follow the style guide (Names of variables
+// and functions).
+// Please see the reference of Matlab to show the usage of functions.
+// Caution:
+//   The functions wavread() and wavwrite() were removed to the /src.
+//   they were moved to the test/audioio.cpp. (2016/01/28)
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FilterForDecimate() calculates the coefficients of low-pass filter and
+// carries out the filtering. This function is only used for decimate().
+//-----------------------------------------------------------------------------
+// filter Coefficients
+// fs : 44100 (default)
+// fs : 48000
+// fs : 32000
+// fs : 24000 and 22050
+// fs : 16000
+// fs : 8000
+// Filtering on time domain.
+// namespace
+// Bug was fixed at 2013/07/14 by M. Morise
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\stonemask.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// F0 estimation based on instantaneous frequency.
+// This method is carried out by using the output of Dio().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetIndexRaw() calculates the temporal positions for windowing.
+// Since the result includes negative value and the value that exceeds the
+// length of the input signal, it must be modified appropriately.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetMainWindow() generates the window function.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetDiffWindow() generates the differentiated window.
+// Diff means differential.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetSpectra() calculates two spectra of the waveform windowed by windows
+// (main window and diff window).
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixF0() fixed the F0 by instantaneous frequency.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetTentativeF0() calculates the F0 based on the instantaneous frequency.
+// Calculated value is tentative because it is fixed as needed.
+// Note: The sixth argument in FixF0() is not optimized.
+//-----------------------------------------------------------------------------
+// If the fixed value is too large, the result will be rejected.
+//-----------------------------------------------------------------------------
+// GetMeanF0() calculates the instantaneous frequency.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetRefinedF0() fixes the F0 estimated by Dio(). This function uses
+// instantaneous frequency.
+//-----------------------------------------------------------------------------
+// A safeguard was added (2015/12/02).
+// bug fix 2015/11/29
+// If amount of correction is overlarge (20 %), initial F0 is employed.
+// namespace
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\src\synthesis.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Voice synthesis based on f0, spectrogram and aperiodicity.
+// forward_real_fft, inverse_real_fft and minimum_phase are used to speed up.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetAperiodicResponse() calculates an aperiodic response.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetPeriodicResponse() calculates an aperiodic response.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetOneFrameSegment() calculates a periodic and aperiodic response at a time.
+//-----------------------------------------------------------------------------
+// Synthesis of the periodic response
+// Synthesis of the aperiodic response
+// namespace
+//  printf("%d\n", number_of_pulses);
+//    printf("%d %d\n", i, number_of_pulses);
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\test\analysis.cpp
+//-----------------------------------------------------------------------------
+// 
+// Author: Zhizheng Wu (wuzhizheng@gmail.com)
+// Date: 11-03-2016
+//
+// To extract F0, spectrum and band aperiodicities with WORLD vocoder
+//
+// This is modified based on Msanori Morise's test.cpp. Low-dimensional band aperiodicities are used as suggested by Oliver.
+//
+// analysis input_waveform F0_file spectrogram_file aperiodicity_file
+//
+//-----------------------------------------------------------------------------
+// For .wav input/output functions.
+// WORLD core functions.
+// Note: win.sln uses an option in Additional Include Directories.
+// To compile the program, the option "-I $(SolutionDir)..\src" was set.
+// Linux porting section: implement timeGetTime() by gettimeofday(),
+//-----------------------------------------------------------------------------
+// struct for WORLD
+// This struct is an option.
+// Users are NOT forced to use this struct.
+//-----------------------------------------------------------------------------
+// Modification of the option
+// When you You must set the same value.
+// If a different value is used, you may suffer a fatal error because of a
+// illegal memory access.
+// Valuable option.speed represents the ratio for downsampling.
+// The signal is downsampled to fs / speed Hz.
+// If you want to obtain the accurate result, speed should be set to 1.
+// You should not set option.f0_floor to under world::kFloorF0.
+// If you want to analyze such low F0 speech, please change world::kFloorF0.
+// Processing speed may sacrify, provided that the FFT length changes.
+// You can give a positive real number as the threshold.
+// Most strict value is 0, but almost all results are counted as unvoiced.
+// The value from 0.02 to 0.2 would be reasonable.
+// Parameters setting and memory allocation.
+// StoneMask is carried out to improve the estimation performance.
+// This value may be better one for HMM speech synthesis.
+// Default value is -0.09.
+// Important notice (2016/02/02)
+// You can control a parameter used for the lowest F0 in speech.
+// You must not set the f0_floor to 0.
+// It will cause a fatal error because fft_size indicates the infinity.
+// You must not change the f0_floor after memory allocation.
+// You should check the fft_size before excucing the analysis/synthesis.
+// The default value (71.0) is strongly recommended.
+// On the other hand, setting the lowest F0 of speech is a good choice
+// to reduce the fft_size.
+// Parameters setting and memory allocation.
+// Parameters setting and memory allocation.
+//    world_parameters->aperiodicity[i] =
+//      new double[world_parameters->fft_size / 2 + 1];
+// option is not implemented in this version. This is for future update.
+// We can use "NULL" as the argument.
+// F0 scaling
+// Spectral stretching
+// Synthesis by the aperiodicity
+// namespace
+//-----------------------------------------------------------------------------
+// Test program.
+// test.exe input.wav outout.wav f0 spec flag
+// input.wav  : argv[1] Input file
+// output.wav : argv[2] sp file
+// f0         : argv[3] ap file
+// spec       : argv[4] f0 file
+//-----------------------------------------------------------------------------
+// 2016/01/28: Important modification.
+// Memory allocation is carried out in advanse.
+// This is for compatibility with C language.
+// wavread() must be called after GetAudioLength().
+//---------------------------------------------------------------------------
+// Analysis part
+//---------------------------------------------------------------------------
+// 2016/02/02
+// A new struct is introduced to implement safe program.
+// You must set fs and frame_period before analysis/synthesis.
+// 5.0 ms is the default value.
+// Generally, the inverse of the lowest F0 of speech is the best.
+// However, the more elapsed time is required.
+// F0 estimation
+// Spectral envelope estimation
+// Aperiodicity estimation by D4C
+//    for (int i=0; i<world_parameters.f0_length; i++) {
+//        printf("%d %F\n", i, world_parameters.f0[i]);
+//    }
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\test\audioio.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// .wav input/output functions were modified for compatibility with C language.
+// Since these functions (wavread() and wavwrite()) are roughly implemented,
+// we recommend more suitable functions provided by other organizations.
+// This file is independent of WORLD project and for the test.cpp.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// CheckHeader() checks the .wav header. This function can only support the
+// monaural wave file. This function is only used in waveread().
+//-----------------------------------------------------------------------------
+// "RIFF"
+// "WAVE"
+// "fmt "
+// 1 0 0 0
+// 1 0
+// 1 0
+//-----------------------------------------------------------------------------
+// GetParameters() extracts fp, nbit, wav_length from the .wav file
+// This function is only used in wavread().
+//-----------------------------------------------------------------------------
+// Quantization
+// Skip until "data" is found. 2011/03/28
+// "data"
+// namespace
+// Quantization
+// "data"
+// "data"
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\test\synth.cpp
+//-----------------------------------------------------------------------------
+// 
+// Author: Zhizheng Wu (wuzhizheng@gmail.com)
+// Date: 11-03-2016
+//
+// To generate waveform given F0, band aperiodicities and spectrum with WORLD vocoder
+//
+// This is modified based on Msanori Morise's test.cpp. Low-dimensional band aperiodicities are used as suggested by Oliver.
+//
+// synth FFT_length sampling_rate F0_file spectrogram_file aperiodicity_file output_waveform
+//
+//-----------------------------------------------------------------------------
+// For .wav input/output functions.
+// WORLD core functions.
+// Note: win.sln uses an option in Additional Include Directories.
+// To compile the program, the option "-I $(SolutionDir)..\src" was set.
+// Frame shift [msec]
+// Linux porting section: implement timeGetTime() by gettimeofday(),
+//-----------------------------------------------------------------------------
+// struct for WORLD
+// This struct is an option.
+// Users are NOT forced to use this struct.
+//-----------------------------------------------------------------------------
+// Modification of the option
+// When you You must set the same value.
+// If a different value is used, you may suffer a fatal error because of a
+// illegal memory access.
+// Valuable option.speed represents the ratio for downsampling.
+// The signal is downsampled to fs / speed Hz.
+// If you want to obtain the accurate result, speed should be set to 1.
+// You should not set option.f0_floor to under world::kFloorF0.
+// If you want to analyze such low F0 speech, please change world::kFloorF0.
+// Processing speed may sacrify, provided that the FFT length changes.
+// You can give a positive real number as the threshold.
+// Most strict value is 0, but almost all results are counted as unvoiced.
+// The value from 0.02 to 0.2 would be reasonable.
+// Parameters setting and memory allocation.
+// StoneMask is carried out to improve the estimation performance.
+// This value may be better one for HMM speech synthesis.
+// Default value is -0.09.
+// Important notice (2016/02/02)
+// You can control a parameter used for the lowest F0 in speech.
+// You must not set the f0_floor to 0.
+// It will cause a fatal error because fft_size indicates the infinity.
+// You must not change the f0_floor after memory allocation.
+// You should check the fft_size before excucing the analysis/synthesis.
+// The default value (71.0) is strongly recommended.
+// On the other hand, setting the lowest F0 of speech is a good choice
+// to reduce the fft_size.
+// Parameters setting and memory allocation.
+// Parameters setting and memory allocation.
+// option is not implemented in this version. This is for future update.
+// We can use "NULL" as the argument.
+// F0 scaling
+// Spectral stretching
+// Synthesis by the aperiodicity
+//  printf("\nSynthesis\n");
+//  printf("WORLD: %d [msec]\n", timeGetTime() - elapsed_time);
+// namespace
+//-----------------------------------------------------------------------------
+// Test program.
+// test.exe input.wav outout.wav f0 spec flag
+// input.wav  : argv[1] Input file
+// output.wav : argv[2] Output file
+// f0         : argv[3] F0 scaling (a positive number)
+// spec       : argv[4] Formant shift (a positive number)
+//-----------------------------------------------------------------------------
+// compute n bands from fs as in d4c.cpp:325   
+// You must set fs and frame_period before analysis/synthesis.
+// 5.0 ms is the default value.
+// Generally, the inverse of the lowest F0 of speech is the best.
+// However, the more elapsed time is required.
+// find number of frames (doubles) in f0 file:  
+//  printf("%d\n", f0_length);
+// aper
+// convert bandaps to full aperiodic spectrum by interpolation (originally in d4c extraction):
+// Linear interpolation to convert the coarse aperiodicity into its
+// spectral representation.
+// -- for interpolating --
+// ----
+// load band ap values for this frame into  coarse_aperiodicity
+//printf("%d %d\n", world_parameters.f0_length, fs);
+//---------------------------------------------------------------------------
+// Synthesis part
+//---------------------------------------------------------------------------
+// The length of the output waveform
+// Synthesis
+// Output
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD\test\test.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Test program for WORLD 0.1.2 (2012/08/19)
+// Test program for WORLD 0.1.3 (2013/07/26)
+// Test program for WORLD 0.1.4 (2014/04/29)
+// Test program for WORLD 0.1.4_3 (2015/03/07)
+// Test program for WORLD 0.2.0 (2015/05/29)
+// Test program for WORLD 0.2.0_1 (2015/05/31)
+// Test program for WORLD 0.2.0_2 (2015/06/06)
+// Test program for WORLD 0.2.0_3 (2015/07/28)
+// Test program for WORLD 0.2.0_4 (2015/11/15)
+// Test program for WORLD in GitHub (2015/11/16-)
+// Latest update: 2016/03/04
+// test.exe input.wav outout.wav f0 spec
+// input.wav  : Input file
+// output.wav : Output file
+// f0         : F0 scaling (a positive number)
+// spec       : Formant scaling (a positive number)
+//-----------------------------------------------------------------------------
+// For .wav input/output functions.
+// WORLD core functions.
+// Note: win.sln uses an option in Additional Include Directories.
+// To compile the program, the option "-I $(SolutionDir)..\src" was set.
+// Linux porting section: implement timeGetTime() by gettimeofday(),
+//-----------------------------------------------------------------------------
+// struct for WORLD
+// This struct is an option.
+// Users are NOT forced to use this struct.
+//-----------------------------------------------------------------------------
+// Modification of the option
+// When you You must set the same value.
+// If a different value is used, you may suffer a fatal error because of a
+// illegal memory access.
+// Valuable option.speed represents the ratio for downsampling.
+// The signal is downsampled to fs / speed Hz.
+// If you want to obtain the accurate result, speed should be set to 1.
+// You should not set option.f0_floor to under world::kFloorF0.
+// If you want to analyze such low F0 speech, please change world::kFloorF0.
+// Processing speed may sacrify, provided that the FFT length changes.
+// You can give a positive real number as the threshold.
+// Most strict value is 0, but almost all results are counted as unvoiced.
+// The value from 0.02 to 0.2 would be reasonable.
+// Parameters setting and memory allocation.
+// StoneMask is carried out to improve the estimation performance.
+// This value may be better one for HMM speech synthesis.
+// Default value is -0.09.
+// Important notice (2016/02/02)
+// You can control a parameter used for the lowest F0 in speech.
+// You must not set the f0_floor to 0.
+// It will cause a fatal error because fft_size indicates the infinity.
+// You must not change the f0_floor after memory allocation.
+// You should check the fft_size before excucing the analysis/synthesis.
+// The default value (71.0) is strongly recommended.
+// On the other hand, setting the lowest F0 of speech is a good choice
+// to reduce the fft_size.
+// Parameters setting and memory allocation.
+// Parameters setting and memory allocation.
+// option is not implemented in this version. This is for future update.
+// We can use "NULL" as the argument.
+// F0 scaling
+// Spectral stretching
+// Synthesis by the aperiodicity
+// namespace
+//-----------------------------------------------------------------------------
+// Test program.
+// test.exe input.wav outout.wav f0 spec flag
+// input.wav  : argv[1] Input file
+// output.wav : argv[2] Output file
+// f0         : argv[3] F0 scaling (a positive number)
+// spec       : argv[4] Formant shift (a positive number)
+//-----------------------------------------------------------------------------
+// 2016/01/28: Important modification.
+// Memory allocation is carried out in advanse.
+// This is for compatibility with C language.
+// wavread() must be called after GetAudioLength().
+//---------------------------------------------------------------------------
+// Analysis part
+//---------------------------------------------------------------------------
+// 2016/02/02
+// A new struct is introduced to implement safe program.
+// You must set fs and frame_period before analysis/synthesis.
+// 5.0 ms is the default value.
+// Generally, the inverse of the lowest F0 of speech is the best.
+// However, the more elapsed time is required.
+// F0 estimation
+// Spectral envelope estimation
+// Aperiodicity estimation by D4C
+// Note that F0 must not be changed until all parameters are estimated.
+//---------------------------------------------------------------------------
+// Synthesis part
+//---------------------------------------------------------------------------
+// The length of the output waveform
+// Synthesis
+// Output
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\cheaptrick.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Spectral envelope estimation on the basis of the idea of CheapTrick.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// SmoothingWithRecovery() carries out the spectral smoothing and spectral
+// recovery on the Cepstrum domain.
+//-----------------------------------------------------------------------------
+// We can control q1 as the parameter. 2015/9/22 by M. Morise
+// const double q1 = -0.09;  // Please see the reference in CheapTrick.
+//-----------------------------------------------------------------------------
+// GetPowerSpectrum() calculates the power_spectrum with DC correction.
+// DC stands for Direct Current. In this case, the component from 0 to F0 Hz
+// is corrected.
+//-----------------------------------------------------------------------------
+// FFT
+// Calculation of the power spectrum.
+// DC correction
+//-----------------------------------------------------------------------------
+// SetParametersForGetWindowedWaveform()
+//-----------------------------------------------------------------------------
+// Designing of the window function
+//-----------------------------------------------------------------------------
+// GetWindowedWaveform() windows the waveform by F0-adaptive window
+//-----------------------------------------------------------------------------
+// F0-adaptive windowing
+//-----------------------------------------------------------------------------
+// CheapTrickGeneralBody() calculates a spectral envelope at a temporal
+// position. This function is only used in CheapTrick().
+// Caution:
+//   forward_fft is allocated in advance to speed up the processing.
+//-----------------------------------------------------------------------------
+// F0-adaptive windowing
+// Calculate power spectrum with DC correction
+// Note: The calculated power spectrum is stored in an array for waveform.
+// In this imprementation, power spectrum is transformed by FFT (NOT IFFT).
+// However, the same result is obtained.
+// This is tricky but important for simple implementation.
+// Smoothing of the power (linear axis)
+// forward_real_fft.waveform is the power spectrum.
+// Smoothing (log axis) and spectral recovery on the cepstrum domain.
+// namespace
+// q1 is the parameter used for the spectral recovery.
+// Since The parameter is optimized, you don't need to change the parameter.
+// f0_floor and fs is used to determine fft_size;
+// We strongly recommend not to change this value unless you have enough
+// knowledge of the signal processing in CheapTrick.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\common.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// common.cpp includes functions used in at least two files.
+// (1) Common functions
+// (2) FFT, IFFT and minimum phase analysis.
+//
+// In FFT analysis and minimum phase analysis,
+// Functions "Initialize*()" allocate the mamory.
+// Functions "Destroy*()" free the accolated memory.
+// FFT size is used for initialization, and structs are used to keep the memory.
+// Functions "GetMinimumPhaseSpectrum()" calculate minimum phase spectrum.
+// Forward and inverse FFT do not have the function "Get*()",
+// because forward FFT and inverse FFT can run in one step.
+//
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// SetParametersForLinearSmoothing() is used in LinearSmoothing()
+//-----------------------------------------------------------------------------
+// namespace
+//-----------------------------------------------------------------------------
+// Fundamental functions
+//-----------------------------------------------------------------------------
+// DCCorrection() corrects the input spectrum from 0 to f0 Hz because the
+// general signal does not contain the DC (Direct Current) component.
+// It is used in CheapTrick() and D4C().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// LinearSmoothing() carries out the spectral smoothing by rectangular window
+// whose length is width Hz and is used in CheapTrick() and D4C().
+//-----------------------------------------------------------------------------
+// These parameters are set by the other function.
+//-----------------------------------------------------------------------------
+// NuttallWindow() calculates the coefficients of Nuttall window whose length
+// is y_length and is used in Dio() and D4C().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FFT, IFFT and minimum phase analysis
+// Mirroring
+// This fft_plan carries out "forward" FFT.
+// To carriy out the Inverse FFT, the sign of imaginary part
+// is inverted after FFT.
+// Since x is complex number, calculation of exp(x) is as following.
+// Note: This FFT library does not keep the aliasing.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\d4c.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Band-aperiodicity estimation on the basis of the idea of D4C.
+//-----------------------------------------------------------------------------
+// for std::sort()
+//-----------------------------------------------------------------------------
+// SetParametersForGetWindowedWaveform()
+//-----------------------------------------------------------------------------
+// Designing of the window function
+// Hanning window
+// Blackman window
+//-----------------------------------------------------------------------------
+// GetWindowedWaveform() windows the waveform by F0-adaptive window
+// In the variable window_type, 1: hanning, 2: blackman
+//-----------------------------------------------------------------------------
+// F0-adaptive windowing
+//-----------------------------------------------------------------------------
+// GetCentroid() calculates the energy centroid (see the book, time-frequency
+// analysis written by L. Cohen).
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetStaticCentroid() calculates the temporally static energy centroid.
+// Basic idea was proposed by H. Kawahara.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetSmoothedPowerSpectrum() calculates the smoothed power spectrum.
+// The parameters used for smoothing are optimized in davance.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetStaticGroupDelay() calculates the temporally static group delay.
+// This is the fundamental parameter in D4C.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetCoarseAperiodicity() calculates the aperiodicity in multiples of 3 kHz.
+// The upper limit is given based on the sampling frequency.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// D4CGeneralBody() calculates a spectral envelope at a temporal
+// position. This function is only used in D4C().
+// Caution:
+//   forward_fft is allocated in advance to speed up the processing.
+//-----------------------------------------------------------------------------
+// Revision of the result based on the F0
+// namespace
+// Since the window function is common in D4CGeneralBody(),
+// it is designed here to speed up.
+// Linear interpolation to convert the coarse aperiodicity into its
+// spectral representation.
+//  printf("Number of bands for aperiodicity: %d\n", number_of_aperiodicities);
+// Since the window function is common in D4CGeneralBody(),
+// it is designed here to speed up.
+// osw
+// osw: store coarse aper directly, don't store constant end values 
+//        printf("     band number %d\n", j); 
+//        printf("     band number %f\n", coarse_aperiodicity[j+1]); 
+//         
+//     // Linear interpolation to convert the coarse aperiodicity into its
+//     // spectral representation.
+//     interp1(coarse_frequency_axis, coarse_aperiodicity,
+//         number_of_aperiodicities + 2, frequency_axis, fft_size / 2 + 1,
+//         aperiodicity[i]);
+//     for (int j = 0; j <= fft_size / 2; ++j)
+//       aperiodicity[i][j] = pow(10.0, aperiodicity[i][j] / 20.0);
+// This struct is dummy.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\dio.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// F0 estimation based on DIO (Distributed Inline-filter Operation).
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// struct for RawEventByDio()
+// "negative" means "zero-crossing point going from positive to negative"
+// "positive" means "zero-crossing point going from negative to positive"
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// DesignLowCutFilter() calculates the coefficients the filter.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetDownsampledSignal() calculates the spectrum for estimation.
+// This function carries out downsampling to speed up the estimation process
+// and calculates the spectrum of the downsampled signal.
+//-----------------------------------------------------------------------------
+// Initialization
+// Downsampling
+// Removal of the DC component (y = y - mean value of y)
+// Low cut filtering (from 0.1.4)
+// Cutoff is 50.0 Hz
+//-----------------------------------------------------------------------------
+// GetBestF0Contour() calculates the best f0 contour based on stabilities of
+// all candidates. The F0 whose stability is minimum is selected.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixStep1() is the 1st step of the postprocessing.
+// This function eliminates the unnatural change of f0 based on allowed_range.
+//-----------------------------------------------------------------------------
+// Initialization
+// Processing to prevent the jumping of f0
+//-----------------------------------------------------------------------------
+// FixStep2() is the 2nd step of the postprocessing.
+// This function eliminates the suspected f0 in the anlaut and auslaut.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// CountNumberOfVoicedSections() counts the number of voiced sections.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// SelectOneF0() corrects the f0[current_index] based on
+// f0[current_index + sign].
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixStep3() is the 3rd step of the postprocessing.
+// This function corrects the f0 candidates from backward to forward.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// BackwardCorrection() is the 4th step of the postprocessing.
+// This function corrects the f0 candidates from forward to backward.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixF0Contour() calculates the definitive f0 contour based on all f0
+// candidates. There are four steps.
+//-----------------------------------------------------------------------------
+// memo:
+// These are the tentative values. Optimization should be required.
+//-----------------------------------------------------------------------------
+// GetFilteredSignal() calculates the signal that is the convolution of the
+// input signal and low-pass filter.
+// This function is only used in RawEventByDio()
+//-----------------------------------------------------------------------------
+// Nuttall window is used as a low-pass filter.
+// Cutoff frequency depends on the window length.
+// Convolution
+// Compensation of the delay.
+//-----------------------------------------------------------------------------
+// CheckEvent() returns 1, provided that the input value is over 1.
+// This function is for RawEventByDio().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// ZeroCrossingEngine() calculates the zero crossing points from positive to
+// negative. Thanks to Custom.Maid http://custom-made.seesaa.net/ (2012/8/19)
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetFourZeroCrossingIntervals() calculates four zero-crossing intervals.
+// (1) Zero-crossing going from negative to positive.
+// (2) Zero-crossing going from positive to negative.
+// (3) Peak, and (4) dip. (3) and (4) are calculated from the zero-crossings of
+// the differential of waveform.
+//-----------------------------------------------------------------------------
+// x_length / 4 (old version) is fixed at 2013/07/14
+//-----------------------------------------------------------------------------
+// GetF0CandidatesSub() calculates the f0 candidates and deviations.
+// This is the sub-function of GetF0Candidates() and assumes the calculation.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetF0Candidates() calculates the F0 candidates based on the zero-crossings.
+// Calculation of F0 candidates is carried out in GetF0CandidatesSub().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// DestroyZeroCrossings() frees the memory of array in the struct
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// RawEventByDio() calculates the zero-crossings.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetF0CandidateAndStabilityMap() calculates all f0 candidates and
+// their stabilities.
+//-----------------------------------------------------------------------------
+// Calculation of the acoustics events (zero-crossing)
+// A way to avoid zero division
+//-----------------------------------------------------------------------------
+// DioGeneralBody() estimates the F0 based on Distributed Inline-filter
+// Operation.
+//-----------------------------------------------------------------------------
+// normalization
+// Calculation of the spectrum used for the f0 estimation
+// f0map represents all F0 candidates. We can modify them.
+// Selection of the best value based on fundamental-ness.
+// Postprocessing to find the best f0-contour.
+// namespace
+// You can change default parameters.
+// You can use the value from 1 to 12.
+// Default value 11 is for the fs of 44.1 kHz.
+// The lower value you use, the better performance you can obtain.
+// You can give a positive real number as the threshold.
+// The most strict value is 0, and there is no upper limit.
+// On the other hand, I think that the value from 0.02 to 0.2 is reasonable.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\fft.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// This file represents the functions about FFT (Fast Fourier Transform)
+// implemented by Mr. Ooura, and wrapper functions implemented by M. Morise.
+// We can use these wrapper functions as well as the FFTW functions.
+// Please see the FFTW web-page to show the usage of the wrapper functions.
+// Ooura FFT:
+//   (Japanese) http://www.kurims.kyoto-u.ac.jp/~ooura/index-j.html
+//   (English) http://www.kurims.kyoto-u.ac.jp/~ooura/index.html
+// FFTW:
+//   (English) http://www.fftw.org/
+// 2012/08/24 by M. Morise
+//-----------------------------------------------------------------------------
+// c2r
+// c2c
+// r2c
+// c2c
+// namespace
+// ifft
+//-----------------------------------------------------------------------
+// The following functions are reffered by
+// http://www.kurims.kyoto-u.ac.jp/~ooura/index.html
+// -------- child routines --------
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\matlabfunctions.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Matlab functions implemented for WORLD
+// Since these functions are implemented as the same function of Matlab,
+// the source code does not follow the style guide (Names of variables
+// and functions).
+// Please see the reference of Matlab to show the usage of functions.
+// Caution:
+//   The functions wavread() and wavwrite() were removed to the /src.
+//   they were moved to the test/audioio.cpp. (2016/01/28)
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FilterForDecimate() calculates the coefficients of low-pass filter and
+// carries out the filtering. This function is only used for decimate().
+//-----------------------------------------------------------------------------
+// filter Coefficients
+// fs : 44100 (default)
+// fs : 48000
+// fs : 32000
+// fs : 24000 and 22050
+// fs : 16000
+// fs : 8000
+// Filtering on time domain.
+// namespace
+// Bug was fixed at 2013/07/14 by M. Morise
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\stonemask.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// F0 estimation based on instantaneous frequency.
+// This method is carried out by using the output of Dio().
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetIndexRaw() calculates the temporal positions for windowing.
+// Since the result includes negative value and the value that exceeds the
+// length of the input signal, it must be modified appropriately.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetMainWindow() generates the window function.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetDiffWindow() generates the differentiated window.
+// Diff means differential.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetSpectra() calculates two spectra of the waveform windowed by windows
+// (main window and diff window).
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// FixF0() fixed the F0 by instantaneous frequency.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetTentativeF0() calculates the F0 based on the instantaneous frequency.
+// Calculated value is tentative because it is fixed as needed.
+// Note: The sixth argument in FixF0() is not optimized.
+//-----------------------------------------------------------------------------
+// If the fixed value is too large, the result will be rejected.
+//-----------------------------------------------------------------------------
+// GetMeanF0() calculates the instantaneous frequency.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetRefinedF0() fixes the F0 estimated by Dio(). This function uses
+// instantaneous frequency.
+//-----------------------------------------------------------------------------
+// A safeguard was added (2015/12/02).
+// bug fix 2015/11/29
+// If amount of correction is overlarge (20 %), initial F0 is employed.
+// namespace
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\src\synthesis.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Voice synthesis based on f0, spectrogram and aperiodicity.
+// forward_real_fft, inverse_real_fft and minimum_phase are used to speed up.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetAperiodicResponse() calculates an aperiodic response.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetPeriodicResponse() calculates an aperiodic response.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// GetOneFrameSegment() calculates a periodic and aperiodic response at a time.
+//-----------------------------------------------------------------------------
+// Synthesis of the periodic response
+// Synthesis of the aperiodic response
+// namespace
+//  printf("%d\n", number_of_pulses);
+//    printf("%d %d\n", i, number_of_pulses);
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\test\analysis.cpp
+//-----------------------------------------------------------------------------
+// 
+// Author: Zhizheng Wu (wuzhizheng@gmail.com)
+// Date: 11-03-2016
+//
+// To extract F0, spectrum and band aperiodicities with WORLD vocoder
+//
+// This is modified based on Msanori Morise's test.cpp. Low-dimensional band aperiodicities are used as suggested by Oliver.
+//
+// analysis input_waveform F0_file spectrogram_file aperiodicity_file
+//
+//-----------------------------------------------------------------------------
+// For .wav input/output functions.
+// WORLD core functions.
+// Note: win.sln uses an option in Additional Include Directories.
+// To compile the program, the option "-I $(SolutionDir)..\src" was set.
+// Linux porting section: implement timeGetTime() by gettimeofday(),
+//-----------------------------------------------------------------------------
+// struct for WORLD
+// This struct is an option.
+// Users are NOT forced to use this struct.
+//-----------------------------------------------------------------------------
+//int number_of_aperiodicities;
+// Modification of the option
+// When you You must set the same value.
+// If a different value is used, you may suffer a fatal error because of a
+// illegal memory access.
+// Valuable option.speed represents the ratio for downsampling.
+// The signal is downsampled to fs / speed Hz.
+// If you want to obtain the accurate result, speed should be set to 1.
+// You should not set option.f0_floor to under world::kFloorF0.
+// If you want to analyze such low F0 speech, please change world::kFloorF0.
+// Processing speed may sacrify, provided that the FFT length changes.
+// You can give a positive real number as the threshold.
+// Most strict value is 0, but almost all results are counted as unvoiced.
+// The value from 0.02 to 0.2 would be reasonable.
+// Parameters setting and memory allocation.
+// StoneMask is carried out to improve the estimation performance.
+// This value may be better one for HMM speech synthesis.
+// Default value is -0.09.
+// Important notice (2016/02/02)
+// You can control a parameter used for the lowest F0 in speech.
+// You must not set the f0_floor to 0.
+// It will cause a fatal error because fft_size indicates the infinity.
+// You must not change the f0_floor after memory allocation.
+// You should check the fft_size before excucing the analysis/synthesis.
+// The default value (71.0) is strongly recommended.
+// On the other hand, setting the lowest F0 of speech is a good choice
+// to reduce the fft_size.
+// Parameters setting and memory allocation.
+//int number_of_aperiodicities =
+//  static_cast<int>(MyMinDouble(world::kUpperLimit, world_parameters->fs / 2.0 -
+//    world::kFrequencyInterval) / world::kFrequencyInterval);
+// Parameters setting and memory allocation.
+//world_parameters->aperiodicity[i] = new double[number_of_aperiodicities];
+//world_parameters->number_of_aperiodicities = number_of_aperiodicities;
+// option is not implemented in this version. This is for future update.
+// We can use "NULL" as the argument.
+// F0 scaling
+// Spectral stretching
+// Synthesis by the aperiodicity
+// namespace
+//-----------------------------------------------------------------------------
+// Test program.
+// test.exe input.wav outout.wav f0 spec flag
+// input.wav  : argv[1] Input file
+// output.wav : argv[2] sp file
+// f0         : argv[3] ap file
+// spec       : argv[4] f0 file
+//-----------------------------------------------------------------------------
+// 2016/01/28: Important modification.
+// Memory allocation is carried out in advanse.
+// This is for compatibility with C language.
+// wavread() must be called after GetAudioLength().
+//---------------------------------------------------------------------------
+// Analysis part
+//---------------------------------------------------------------------------
+// 2016/02/02
+// A new struct is introduced to implement safe program.
+// You must set fs and frame_period before analysis/synthesis.
+// 5.0 ms is the default value.
+// Generally, the inverse of the lowest F0 of speech is the best.
+// However, the more elapsed time is required.
+// F0 estimation
+// Spectral envelope estimation
+// Aperiodicity estimation by D4C
+//fwrite(world_parameters.aperiodicity[i], sizeof(double), world_parameters.number_of_aperiodicities, fap);
+//    for (int i=0; i<world_parameters.f0_length; i++) {
+//        printf("%d %F\n", i, world_parameters.f0[i]);
+//    }
+//printf("%d %d %d\n", world_parameters.f0_length, world_parameters.fft_size, world_parameters.number_of_aperiodicities);
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\test\audioio.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// .wav input/output functions were modified for compatibility with C language.
+// Since these functions (wavread() and wavwrite()) are roughly implemented,
+// we recommend more suitable functions provided by other organizations.
+// This file is independent of WORLD project and for the test.cpp.
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// CheckHeader() checks the .wav header. This function can only support the
+// monaural wave file. This function is only used in waveread().
+//-----------------------------------------------------------------------------
+// "RIFF"
+// "WAVE"
+// "fmt "
+// 1 0 0 0
+// 1 0
+// 1 0
+//-----------------------------------------------------------------------------
+// GetParameters() extracts fp, nbit, wav_length from the .wav file
+// This function is only used in wavread().
+//-----------------------------------------------------------------------------
+// Quantization
+// Skip until "data" is found. 2011/03/28
+// "data"
+// namespace
+// Quantization
+// "data"
+// "data"
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\test\synth.cpp
+//-----------------------------------------------------------------------------
+// 
+// Author: Zhizheng Wu (wuzhizheng@gmail.com)
+// Date: 11-03-2016
+//
+// To generate waveform given F0, band aperiodicities and spectrum with WORLD vocoder
+//
+// This is modified based on Msanori Morise's test.cpp. Low-dimensional band aperiodicities are used as suggested by Oliver.
+//
+// synth FFT_length sampling_rate F0_file spectrogram_file aperiodicity_file output_waveform
+//
+//-----------------------------------------------------------------------------
+// For .wav input/output functions.
+// WORLD core functions.
+// Note: win.sln uses an option in Additional Include Directories.
+// To compile the program, the option "-I $(SolutionDir)..\src" was set.
+// Frame shift [msec]
+// Linux porting section: implement timeGetTime() by gettimeofday(),
+//-----------------------------------------------------------------------------
+// struct for WORLD
+// This struct is an option.
+// Users are NOT forced to use this struct.
+//-----------------------------------------------------------------------------
+// Synthesis by the aperiodicity
+//  printf("\nSynthesis\n");
+//  elapsed_time = timeGetTime();
+//  printf("WORLD: %d [msec]\n", timeGetTime() - elapsed_time);
+// namespace
+//-----------------------------------------------------------------------------
+// Test program.
+// test.exe input.wav outout.wav f0 spec flag
+// input.wav  : argv[1] Input file
+// output.wav : argv[2] Output file
+// f0         : argv[3] F0 scaling (a positive number)
+// spec       : argv[4] Formant shift (a positive number)
+//-----------------------------------------------------------------------------
+// compute n bands from fs as in d4c.cpp:325   
+// You must set fs and frame_period before analysis/synthesis.
+// 5.0 ms is the default value.
+// Generally, the inverse of the lowest F0 of speech is the best.
+// However, the more elapsed time is required.
+// find number of frames (doubles) in f0 file:  
+//  printf("%d\n", f0_length);
+// aper
+// convert bandaps to full aperiodic spectrum by interpolation (originally in d4c extraction):
+// Linear interpolation to convert the coarse aperiodicity into its
+// spectral representation.
+// -- for interpolating --
+// ----
+// load band ap values for this frame into  coarse_aperiodicity
+//printf("%d %d\n", world_parameters.f0_length, fs);
+//---------------------------------------------------------------------------
+// Synthesis part
+//---------------------------------------------------------------------------
+// The length of the output waveform
+// Synthesis
+// Output
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/merlin-master\merlin-master\tools\WORLD_v2\test\test.cpp
+//-----------------------------------------------------------------------------
+// Copyright 2012-2016 Masanori Morise. All Rights Reserved.
+// Author: mmorise [at] yamanashi.ac.jp (Masanori Morise)
+//
+// Test program for WORLD 0.1.2 (2012/08/19)
+// Test program for WORLD 0.1.3 (2013/07/26)
+// Test program for WORLD 0.1.4 (2014/04/29)
+// Test program for WORLD 0.1.4_3 (2015/03/07)
+// Test program for WORLD 0.2.0 (2015/05/29)
+// Test program for WORLD 0.2.0_1 (2015/05/31)
+// Test program for WORLD 0.2.0_2 (2015/06/06)
+// Test program for WORLD 0.2.0_3 (2015/07/28)
+// Test program for WORLD 0.2.0_4 (2015/11/15)
+// Test program for WORLD in GitHub (2015/11/16-)
+// Latest update: 2016/03/04
+// test.exe input.wav outout.wav f0 spec
+// input.wav  : Input file
+// output.wav : Output file
+// f0         : F0 scaling (a positive number)
+// spec       : Formant scaling (a positive number)
+//-----------------------------------------------------------------------------
+// For .wav input/output functions.
+// WORLD core functions.
+// Note: win.sln uses an option in Additional Include Directories.
+// To compile the program, the option "-I $(SolutionDir)..\src" was set.
+// Linux porting section: implement timeGetTime() by gettimeofday(),
+//-----------------------------------------------------------------------------
+// struct for WORLD
+// This struct is an option.
+// Users are NOT forced to use this struct.
+//-----------------------------------------------------------------------------
+// Modification of the option
+// When you You must set the same value.
+// If a different value is used, you may suffer a fatal error because of a
+// illegal memory access.
+// Valuable option.speed represents the ratio for downsampling.
+// The signal is downsampled to fs / speed Hz.
+// If you want to obtain the accurate result, speed should be set to 1.
+// You should not set option.f0_floor to under world::kFloorF0.
+// If you want to analyze such low F0 speech, please change world::kFloorF0.
+// Processing speed may sacrify, provided that the FFT length changes.
+// You can give a positive real number as the threshold.
+// Most strict value is 0, but almost all results are counted as unvoiced.
+// The value from 0.02 to 0.2 would be reasonable.
+// Parameters setting and memory allocation.
+// StoneMask is carried out to improve the estimation performance.
+// This value may be better one for HMM speech synthesis.
+// Default value is -0.09.
+// Important notice (2016/02/02)
+// You can control a parameter used for the lowest F0 in speech.
+// You must not set the f0_floor to 0.
+// It will cause a fatal error because fft_size indicates the infinity.
+// You must not change the f0_floor after memory allocation.
+// You should check the fft_size before excucing the analysis/synthesis.
+// The default value (71.0) is strongly recommended.
+// On the other hand, setting the lowest F0 of speech is a good choice
+// to reduce the fft_size.
+// Parameters setting and memory allocation.
+// Parameters setting and memory allocation.
+// option is not implemented in this version. This is for future update.
+// We can use "NULL" as the argument.
+// F0 scaling
+// Spectral stretching
+// Synthesis by the aperiodicity
+// namespace
+//-----------------------------------------------------------------------------
+// Test program.
+// test.exe input.wav outout.wav f0 spec flag
+// input.wav  : argv[1] Input file
+// output.wav : argv[2] Output file
+// f0         : argv[3] F0 scaling (a positive number)
+// spec       : argv[4] Formant shift (a positive number)
+//-----------------------------------------------------------------------------
+// 2016/01/28: Important modification.
+// Memory allocation is carried out in advanse.
+// This is for compatibility with C language.
+// wavread() must be called after GetAudioLength().
+//---------------------------------------------------------------------------
+// Analysis part
+//---------------------------------------------------------------------------
+// 2016/02/02
+// A new struct is introduced to implement safe program.
+// You must set fs and frame_period before analysis/synthesis.
+// 5.0 ms is the default value.
+// Generally, the inverse of the lowest F0 of speech is the best.
+// However, the more elapsed time is required.
+// F0 estimation
+// Spectral envelope estimation
+// Aperiodicity estimation by D4C
+// Note that F0 must not be changed until all parameters are estimated.
+//---------------------------------------------------------------------------
+// Synthesis part
+//---------------------------------------------------------------------------
+// The length of the output waveform
+// Synthesis
+// Output

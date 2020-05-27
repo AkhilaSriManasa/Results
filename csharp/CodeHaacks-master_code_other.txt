@@ -1,0 +1,892 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AddressInfo.cs
+/// <summary>
+/// Address Info.
+/// </summary>
+/// <summary>
+/// Gets the street address.
+/// </summary>
+/// <value></value>
+/// <summary>
+/// Gets the city.
+/// </summary>
+/// <value></value>
+/// <summary>
+/// Gets the state.
+/// </summary>
+/// <value></value>
+/// <summary>
+/// Gets the postal code.
+/// </summary>
+/// <value></value>
+/// <summary>
+/// Gets the country.
+/// </summary>
+/// <value></value>
+/// <summary>
+/// Constructor.
+/// </summary>
+/// <param name="streetAddress"></param>
+/// <param name="city"></param>
+/// <param name="state"></param>
+/// <param name="postalCode"></param>
+/// <param name="country"></param>
+/// <summary>
+/// Gets the state given the state code.
+/// </summary>
+/// <param name="stateCode">State code.</param>
+/// <returns></returns>
+/// <summary>
+/// Returns the two letter state code for the given State enum value.
+/// </summary>
+/// <param name="state"></param>
+/// <returns></returns>
+/// <summary>
+/// Converts a State to a StateCode.
+/// </summary>
+/// <param name="value">A State enum value.</param>
+/// <returns></returns>
+/// <summary>
+/// Converts a StateCode to a State.
+/// </summary>
+/// <param name="value">A StateCode enum value.</param>
+/// <returns></returns>
+/// <summary>
+/// Returns the State enum value for the state.
+/// </summary>
+/// <param name="state">Name of the state.</param>
+/// <returns></returns>
+/// <summary>
+/// Returns the StateCode enum value for the state.
+/// </summary>
+/// <param name="stateCode">Two letter state code</param>
+/// <returns></returns>
+/// <summary>
+/// Simple enum for all the states.
+/// </summary>
+/// <summary>AL</summary>
+/// <summary>AK (Home Sweet Home)</summary>
+/// <summary>AS</summary>
+/// <summary>AZ</summary>
+/// <summary>AR</summary>
+/// <summary>CA (Home of SkillJam Technologies).</summary>
+/// <summary>CO</summary>
+/// <summary>CN</summary>
+/// <summary>DE</summary>
+/// <summary>DC</summary>
+/// <summary>FM</summary>
+/// <summary>FL</summary>
+/// <summary>GA</summary>
+/// <summary>GU</summary>
+/// <summary>HI</summary>
+/// <summary>ID</summary>
+/// <summary>IL</summary>
+/// <summary>IN</summary>
+/// <summary>IA</summary>
+/// <summary>KS</summary>
+/// <summary>KY</summary>
+/// <summary>LA</summary>
+/// <summary>ME</summary>
+/// <summary>MH</summary>
+/// <summary>MD</summary>
+/// <summary>MA</summary>
+/// <summary>MI</summary>
+/// <summary>MN</summary>
+/// <summary>MS</summary>
+/// <summary>MO</summary>
+/// <summary>MT</summary>
+/// <summary>NE</summary>
+/// <summary>NV</summary>
+/// <summary>NH</summary>
+/// <summary>NJ</summary>
+/// <summary>NM</summary>
+/// <summary>NY</summary>
+/// <summary>NC</summary>
+/// <summary>ND</summary>
+/// <summary>MP</summary>
+/// <summary>OH</summary>
+/// <summary>OK</summary>
+/// <summary>OR</summary>
+/// <summary>PW</summary>
+/// <summary>PA</summary>
+/// <summary>PR</summary>
+/// <summary>RI</summary>
+/// <summary>SC</summary>
+/// <summary>SD</summary>
+/// <summary>TN</summary>
+/// <summary>TX</summary>
+/// <summary>UT</summary>
+/// <summary>VT</summary>
+/// <summary>VI</summary>
+/// <summary>VA</summary>
+/// <summary>WA</summary>
+/// <summary>WV</summary>
+/// <summary>WI</summary>
+/// <summary>WY</summary>
+/// <summary>
+/// 2 letter state codes for the US states
+/// </summary>
+/// <summary>Alabama</summary>
+/// <summary>Alaska</summary>
+/// <summary>American Samoa</summary>
+/// <summary>Arizona</summary>
+/// <summary>Arkansas</summary>
+/// <summary>California</summary>
+/// <summary>Colorado</summary>
+/// <summary>Connecticut</summary>
+/// <summary>Delaware</summary>
+/// <summary>District of Columbia</summary>
+/// <summary>Federated States of Micronesia</summary>
+/// <summary>Florida</summary>
+/// <summary>Georgia</summary>
+/// <summary>Guam</summary>
+/// <summary>Hawaii</summary>
+/// <summary>Idaho</summary>
+/// <summary>Illinois</summary>
+/// <summary>Indiana</summary>
+/// <summary>Iowa</summary>
+/// <summary>Kansas</summary>
+/// <summary>Kentucky</summary>
+/// <summary>Louisiana</summary>
+/// <summary>Maine</summary>
+/// <summary>Marshall Islands</summary>
+/// <summary>Maryland</summary>
+/// <summary>Massachusetts</summary>
+/// <summary>Michigan</summary>
+/// <summary>Minnesota</summary>
+/// <summary>Mississippi</summary>
+/// <summary>Missouri</summary>
+/// <summary>Montana</summary>
+/// <summary>Nebraska</summary>
+/// <summary>Nevada</summary>
+/// <summary>New Hampshire</summary>
+/// <summary>New Jersey</summary>
+/// <summary>New Mexico</summary>
+/// <summary>New York</summary>
+/// <summary>North Carolina</summary>
+/// <summary>North Dakota</summary>
+/// <summary>Northern Mariana Islands</summary>
+/// <summary>Ohio</summary>
+/// <summary>Oklahoma</summary>
+/// <summary>Oregon</summary>
+/// <summary>Palau</summary>
+/// <summary>Pennsylvania</summary>
+/// <summary>Puerto Rico</summary>
+/// <summary>Rhode Island</summary>
+/// <summary>South Carolina</summary>
+/// <summary>South Dakota</summary>
+/// <summary>Tennessee</summary>
+/// <summary>Texas</summary>
+/// <summary>Utah</summary>
+/// <summary>Vermont</summary>
+/// <summary>Virgin Islands</summary>
+/// <summary>Virginia</summary>
+/// <summary>Washington</summary>
+/// <summary>West Virginia</summary>
+/// <summary>Wisconsin</summary>
+/// <summary>Wyoming</summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack\SuppressFormsAuthenticationRedirectModule.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]i
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack.DemoWeb\Global.asax.cs
+// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+// visit http://go.microsoft.com/?LinkId=9394801
+// Route name
+// URL with parameters
+// Parameter defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack.DemoWeb\App_Start\FormsAuthenticationConfig.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack.DemoWeb\Controllers\AccountController.cs
+//
+// GET: /Account/LogOn
+//
+// POST: /Account/LogOn
+//") && !returnUrl.StartsWith("/\\")) {
+// If we got this far, something failed, redisplay form
+//
+// GET: /Account/LogOff
+//
+// GET: /Account/Register
+//
+// POST: /Account/Register
+// Attempt to register the user
+/* createPersistentCookie */);
+// If we got this far, something failed, redisplay form
+//
+// GET: /Account/ChangePassword
+//
+// POST: /Account/ChangePassword
+// ChangePassword will throw an exception rather
+// than return false in certain failure scenarios.
+/* userIsOnline */);
+// If we got this far, something failed, redisplay form
+//
+// GET: /Account/ChangePasswordSuccess
+// See http://go.microsoft.com/fwlink/?LinkID=177550 for
+// a full list of status codes.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack.DemoWeb\Controllers\HomeController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack.DemoWeb\Models\AccountModels.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\AspNetHaack.DemoWeb\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ControllerInspectorTests\ControllerValidatorTests.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ControllerInspectorTests\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\JsonHijackDemo\Global.asax.cs
+// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+// visit http://go.microsoft.com/?LinkId=9394801
+// Route name
+// URL with parameters
+// Parameter defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\JsonHijackDemo\Controllers\AccountController.cs
+//
+// GET: /Account/LogOn
+//
+// POST: /Account/LogOn
+//") && !returnUrl.StartsWith("/\\"))
+// If we got this far, something failed, redisplay form
+//
+// GET: /Account/LogOff
+//
+// GET: /Account/Register
+//
+// POST: /Account/Register
+// Attempt to register the user
+/* createPersistentCookie */);
+// If we got this far, something failed, redisplay form
+//
+// GET: /Account/ChangePassword
+//
+// POST: /Account/ChangePassword
+// ChangePassword will throw an exception rather
+// than return false in certain failure scenarios.
+/* userIsOnline */);
+// If we got this far, something failed, redisplay form
+//
+// GET: /Account/ChangePasswordSuccess
+// See http://go.microsoft.com/fwlink/?LinkID=177550 for
+// a full list of status codes.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\JsonHijackDemo\Controllers\HomeController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\JsonHijackDemo\Models\AccountModels.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\JsonHijackDemo\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ListModelBindingDemo\ListModelBindingWeb\Global.asax.cs
+// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+// visit http://go.microsoft.com/?LinkId=9394801
+// Route name
+// URL with parameters
+// Parameter defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ListModelBindingDemo\ListModelBindingWeb\Controllers\HomeController.cs
+// Demo 1
+// Demo 2
+// Demo 3
+// Demo 4
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ListModelBindingDemo\ListModelBindingWeb\Helpers\ListModelBindingExtensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ListModelBindingDemo\ListModelBindingWeb\Models\Book.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ListModelBindingDemo\ListModelBindingWeb\Models\BookEditModel.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ListModelBindingDemo\ListModelBindingWeb\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtils\AttributeExtensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtils\Ensure.cs
+/// <summary>
+///   Ensure input parameters
+/// </summary>
+// Tells CodeAnalysis that this argument is being validated 
+// to be not null. Great for guard methods.
+// Internal so it doesn't conflict with the potential billion 
+// other implementations of this attribute.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtils\PathString.cs
+// So the XmlSerializer can create this.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtils\StringEquivalent.cs
+// If both are null, or both are same instance, return true.
+// If one is null, but not both, return false.
+// Return true if the fields match:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtils\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtilsTests\AttributeExtensionsTests.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtilsTests\PathStringTests.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MiscUtilsTests\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax\JsonActionInvoker.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax\JsonController.cs
+// This is where the proxy places the action.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax\JsonRoute.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax\ValidateJsonAntiForgeryTokenAttribute.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Global.asax.cs
+// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+// visit http://go.microsoft.com/?LinkId=9394801
+// Route name
+// URL with parameters
+// Parameter defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\App_Start\AjaxDemoAppStart.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\App_Start\EntityFramework.SqlServerCompact.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\AjaxDemoAreaRegistration.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\Controllers\ComicsController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\Controllers\ComicsDemoController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\Controllers\HomeController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\Controllers\PublishersController.cs
+//
+// GET: /Publishers/Edit/5
+//
+// POST: /Publishers/Edit/5
+//
+// GET: /Publishers/Delete/5
+//
+// POST: /Publishers/Delete/5
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\Models\ComicBook.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\Models\ComicContext.cs
+// You can add custom code to this file. Changes will not be overwritten.
+// 
+// If you want Entity Framework to drop and regenerate your database
+// automatically whenever you change your model schema, add the following
+// code to the Application_Start method in your Global.asax file.
+// Note: this will destroy and re-create your database with every model change.
+// 
+// System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<MvcHaack.Ajax.Sample.ComicContext>());
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Areas\MvcAjaxDemo\Models\Publisher.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.DemoWeb\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.V2\JsonActionInvoker.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.V2\JsonController.cs
+/// <summary>
+/// Note: this version of the code only compiles against MVC4 where Controller implements IAsyncController.
+/// </summary>
+// This is where the proxy places the action.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.V2\JsonRoute.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.V2\ValidateJsonAntiForgeryTokenAttribute.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.Ajax.V2\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector\AppStart.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector\ControllerDetailer.cs
+// This is tricky because some of the action parameters may not be meant to come from the route.
+// e.g. they could come from a POST body.
+// In that case, they may end up as bogus query string params on the path, which is a bit buggy
+// If it's a string, giving some value based on the param name
+// If it's a number, pick some sample number.
+// For other value types, go with the default value
+// using definition of complex type from ModelMetadata class
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector\ControllerDetails.generated.cs
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.237
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector\ControllerValidator.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector\InspectorActionInvoker.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector\InspectorControllerFactory.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector.DemoWeb\Global.asax.cs
+// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+// visit http://go.microsoft.com/?LinkId=9394801
+// Route name
+// URL with parameters
+// Parameter defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector.DemoWeb\Controllers\HomeController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector.DemoWeb\Controllers\MistakeController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector.DemoWeb\Controllers\TypoControler.cs
+//
+// GET: /TypoControler/
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ControllerInspector.DemoWeb\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ViewMobilizer\ViewMobilizerForm.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ViewMobilizer\ViewMobilizerForm.Designer.cs
+/// <summary>
+/// Required designer variable.
+/// </summary>
+/// <summary>
+/// Clean up any resources being used.
+/// </summary>
+/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+/// <summary>
+/// Required method for Designer support - do not modify
+/// the contents of this method with the code editor.
+/// </summary>
+// 
+// viewsCheckBoxList
+// 
+// 
+// mobilizeButton
+// 
+// 
+// cancelButton
+// 
+// 
+// warningLabel
+// 
+// 
+// label1
+// 
+// 
+// suffixTextBox
+// 
+// 
+// label2
+// 
+// 
+// ViewMobilizerForm
+// 
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ViewMobilizer\ViewMobilizerModel.cs
+// Collect
+// Filter
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ViewMobilizer\ViewMobilizerRecipe.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ViewMobilizer\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\MvcHaack.ViewMobilizer\Properties\Resources.Designer.cs
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.17020
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+/// <summary>
+///   A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the StronglyTypedResourceBuilder
+// class via a tool like ResGen or Visual Studio.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/// <summary>
+///   Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///   Overrides the current thread's CurrentUICulture property for all
+///   resource lookups using this strongly typed resource class.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ViewMobilizerTests\ViewMobilizerModelTests.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\ViewMobilizerTests\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack\ConfigExtensions.cs
+// Original request handler
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack\RequireAuthorizationAttribute.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack\OperationHandlers\AuthOperationHandler.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack.DemoWeb\Global.asax.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack.DemoWeb\Api\CommentsApi.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack.DemoWeb\AppStart\CommentsConfiguration.cs
+// TODO: Configure request operation handlers
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack.DemoWeb\Models\Comment.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WebApiHaack.DemoWeb\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WindowPlacementRxDemo\App.xaml.cs
+/// <summary>
+/// Interaction logic for App.xaml
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WindowPlacementRxDemo\MainWindow.xaml.cs
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WindowPlacementRxDemo\WindowPlacement.cs
+// Following code from http://blogs.msdn.com/b/davidrickard/archive/2010/03/09/saving-window-size-and-location-in-wpf-and-winforms.aspx
+// RECT structure required by WINDOWPLACEMENT structure
+// POINT structure required by WINDOWPLACEMENT structure
+// WINDOWPLACEMENT stores the position, size, and state of a window
+// Parsing placement XML failed. Fail silently.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WindowPlacementRxDemo\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+//In order to begin building localizable applications, set 
+//<UICulture>CultureYouAreCodingWith</UICulture> in your .csproj file
+//inside a <PropertyGroup>.  For example, if you are using US english
+//in your source files, set the <UICulture> to en-US.  Then uncomment
+//the NeutralResourceLanguage attribute below.  Update the "en-US" in
+//the line below to match the UICulture setting in the project file.
+//[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
+//where theme specific resource dictionaries are located
+//(used if a resource is not found in the page, 
+// or application resource dictionaries)
+//where the generic resource dictionary is located
+//(used if a resource is not found in the page, 
+// app, or any theme specific resource dictionaries)
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WindowPlacementRxDemo\Properties\Resources.Designer.cs
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.261
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+/// <summary>
+///   A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the StronglyTypedResourceBuilder
+// class via a tool like ResGen or Visual Studio.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/// <summary>
+///   Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///   Overrides the current thread's CurrentUICulture property for all
+///   resource lookups using this strongly typed resource class.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CodeHaacks-master\CodeHaacks-master\src\WindowPlacementRxDemo\Properties\Settings.Designer.cs
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.261
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------

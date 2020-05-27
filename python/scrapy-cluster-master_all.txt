@@ -1,0 +1,1527 @@
+﻿The MIT License (MIT)
+
+Copyright (c) 2017 IST Research
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+# Scrapy Cluster
+
+[![Build Status](https://travis-ci.org/istresearch/scrapy-cluster.svg?branch=master)](https://travis-ci.org/istresearch/scrapy-cluster) [![Documentation](https://readthedocs.org/projects/scrapy-cluster/badge/?version=latest)](http://scrapy-cluster.readthedocs.io/en/latest/) [![Join the chat at https://gitter.im/istresearch/scrapy-cluster](https://badges.gitter.im/istresearch/scrapy-cluster.svg)](https://gitter.im/istresearch/scrapy-cluster?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Coverage Status](https://coveralls.io/repos/github/istresearch/scrapy-cluster/badge.svg?branch=master)](https://coveralls.io/github/istresearch/scrapy-cluster?branch=master) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/istresearch/scrapy-cluster/blob/master/LICENSE) [![Docker Pulls](https://img.shields.io/docker/pulls/istresearch/scrapy-cluster.svg)](https://hub.docker.com/r/istresearch/scrapy-cluster/)
+
+This Scrapy project uses Redis and Kafka to create a distributed on demand scraping cluster.
+
+The goal is to distribute seed URLs among many waiting spider instances, whose requests are coordinated via Redis. Any other crawls those trigger, as a result of frontier expansion or depth traversal, will also be distributed among all workers in the cluster.
+
+The input to the system is a set of Kafka topics and the output is a set of Kafka topics. Raw HTML and assets are crawled interactively, spidered, and output to the log. For easy local development, you can also disable the Kafka portions and work with the spider entirely via Redis, although this is not recommended due to the serialization of the crawl requests.
+
+## Dependencies
+
+Please see the ``requirements.txt`` within each sub project for Pip package dependencies.
+
+Other important components required to run the cluster
+
+- Python 2.7: https://www.python.org/downloads/
+- Redis: http://redis.io
+- Zookeeper: https://zookeeper.apache.org
+- Kafka: http://kafka.apache.org
+
+## Core Concepts
+
+This project tries to bring together a bunch of new concepts to Scrapy and large scale distributed crawling in general. Some bullet points include:
+
+- The spiders are dynamic and on demand, meaning that they allow the arbitrary collection of any web page that is submitted to the scraping cluster
+- Scale Scrapy instances across a single machine or multiple machines
+- Coordinate and prioritize their scraping effort for desired sites
+- Persist data across scraping jobs
+- Execute multiple scraping jobs concurrently
+- Allows for in depth access into the information about your scraping job, what is upcoming, and how the sites are ranked
+- Allows you to arbitrarily add/remove/scale your scrapers from the pool without loss of data or downtime
+- Utilizes Apache Kafka as a data bus for any application to interact with the scraping cluster (submit jobs, get info, stop jobs, view results)
+- Allows for coordinated throttling of crawls from independent spiders on separate machines, but behind the same IP Address
+- Enables completely different spiders to yield crawl requests to each other, giving flexibility to how the crawl job is tackled
+
+## Scrapy Cluster test environment
+
+To set up a pre-canned Scrapy Cluster test environment, make sure you have the latest **Virtualbox** + **Vagrant >= 1.7.4** installed.  Vagrant will automatically mount the base **scrapy-cluster** directory to the **/vagrant** directory, so any code changes you make will be visible inside the VM. Please note that at time of writing this will not work on a [Windows](http://docs.ansible.com/ansible/intro_installation.html#control-machine-requirements) machine.
+
+### Steps to launch the test environment:
+1.  `vagrant up` in base **scrapy-cluster** directory.
+2.  `vagrant ssh` to ssh into the VM.
+3.  `sudo supervisorctl status` to check that everything is running.
+4.  `virtualenv sc` to create a virtual environment
+5.  `source sc/bin/activate` to activate the virtual environment
+6.  `cd /vagrant` to get to the **scrapy-cluster** directory.
+7.  `pip install -r requirements.txt` to install Scrapy Cluster dependencies.
+8.  `./run_offline_tests.sh` to run offline tests.
+9.  `./run_online_tests.sh` to run online tests (relies on kafka, zookeeper, redis).
+
+## Documentation
+
+Please check out the official [Scrapy Cluster 1.2.1 documentation](http://scrapy-cluster.readthedocs.org/en/latest/) for more information on how everything works!
+
+## Branches
+
+The `master` branch of this repository contains the latest stable release code for `Scrapy Cluster 1.2.1`.
+
+The `dev` branch contains bleeding edge code and is currently working towards [Scrapy Cluster 1.3](https://github.com/istresearch/scrapy-cluster/milestone/3). Please note that not everything may be documented, finished, tested, or finalized but we are happy to help guide those who are interested.
+# this file is deprecated and will be removed
+
+ConcurrentLogHandler==0.9.1
+Flask==0.12 # Updated from 0.11
+Jinja2==2.9.5 # Updated from 2.8
+MarkupSafe==1.0 # Updated from 0.23
+PyDispatcher==2.0.5
+PyYAML==3.12
+Scrapy==1.3.3 # Updated from 1.3.1
+Twisted==17.1.0 # Updated from 16.4.0
+Werkzeug==0.12.1 # Updated from 0.11.11
+attrs==16.3.0 # Updated from 16.1.0
+cffi==1.9.1 # Updated from 1.7.0
+characteristic==14.3.0
+click==6.7 # Updated from 6.6
+coverage==4.3.4 # Updated from 4.0.3
+cryptography==1.8.1 # Updated from 1.5
+cssselect==1.0.1 # Updated from 0.9.2
+enum34==1.1.6
+funcsigs==1.0.2
+future==0.16.0 # Updated from 0.15.2
+idna==2.5 # Updated from 2.1
+ipaddress==1.0.18 # Updated from 1.0.16
+itsdangerous==0.24
+jsonschema==2.6.0 # Updated from 2.5.1
+kafka-python==1.3.3 # Updated from 1.3.2
+kazoo==2.2.1
+lxml==3.7.3 # Updated from 3.6.4
+mock==2.0.0
+nose==1.3.7
+parsel==1.1.0 # Updated from 1.0.3
+pbr==2.0.0 # Updated from 1.10.0
+pyOpenSSL==16.2.0 # Updated from 16.1.0
+pyasn1-modules==0.0.8
+pyasn1==0.2.3 # Updated from 0.1.9
+pycparser==2.17 # Updated from 2.14
+python-json-logger==0.1.7 # Updated from 0.1.5
+python-redis-lock==3.2.0 # Updated from 3.1.0
+queuelib==1.4.2
+redis==2.10.5
+requests-file==1.4.1 # Updated from 1.4
+requests==2.13.0 # Updated from 2.11.1
+retrying==1.3.3
+scutils==1.2.0
+service-identity==16.0.0
+six==1.10.0
+testfixtures==4.13.5 # Updated from 4.11.0
+tldextract==2.0.2 # Updated from 2.0.1
+ujson==1.35
+w3lib==1.17.0 # Updated from 1.16.0
+zope.interface==4.3.3 # Updated from 4.2.0
+# Generated with piprot 0.9.7The MIT License (MIT)
+
+Copyright (c) 2014 David Wittman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is 
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+# Dec. 3, 1024
+# Original scripts modified by andrew.carter@soteradefense.com to remove Debian support, and be managed by supervisord.
+
+
+# ansible-redis
+
+[![Build Status](https://travis-ci.org/DavidWittman/ansible-redis.svg?branch=master)](https://travis-ci.org/DavidWittman/ansible-redis)
+
+ - Requires Ansible 1.6.3+
+ - Compatible with most versions of Ubuntu/Debian and RHEL/CentOS 6.x
+
+## Installation
+
+``` bash
+$ ansible-galaxy install DavidWittman.redis
+```
+
+## Getting started
+
+### Single Redis node
+
+Deploying a single Redis server node is pretty trivial; just add the role to your playbook and go. Here's an example which we'll make a little more exciting by setting the bind address to 127.0.0.1:
+
+``` yml
+---
+- hosts: redis01.example.com
+  vars:
+    - redis_bind: 127.0.0.1
+  roles:
+    - redis
+```
+
+``` bash
+$ ansible-playbook -i redis01.example.com, redis.yml
+```
+
+**Note:** You may have noticed above that I just passed a hostname in as the Ansible inventory file. This is an easy way to run Ansible without first having to create an inventory file, you just need to suffix the hostname with a comma so Ansible knows what to do with it.
+
+That's it! You'll now have a Redis server listening on 127.0.0.1 on redis01.example.com. By default, the Redis binaries are installed under /opt/redis, though this can be overridden by setting the `redis_install_dir` variable.
+
+### Master-Slave replication
+
+Configuring [replication](http://redis.io/topics/replication) in Redis is accomplished by deploying multiple nodes, and setting the `redis_slaveof` variable on the slave nodes, just as you would in the redis.conf. In the example that follows, we'll deploy a Redis master with three slaves.
+
+In this example, we're going to use groups to separate the master and slave nodes. Let's start with the inventory file:
+
+``` ini
+[redis-master]
+redis-master.example.com
+
+[redis-slave]
+redis-slave0[1:3].example.com
+```
+
+And here's the playbook:
+
+``` yml
+---
+- name: configure the master redis server
+  hosts: redis-master
+  roles:
+    - redis
+
+- name: configure redis slaves
+  hosts: redis-slave
+  vars:
+    - redis_slaveof: redis-master.example.com 6379
+  roles:
+    - redis
+```
+
+In this case, I'm assuming you have DNS records set up for redis-master.example.com, but that's not always the case. You can pretty much go crazy with whatever you need this to be set to. In many cases, I tell Ansible to use the eth1 IP address for the master. Here's a more flexible value for the sake of posterity:
+
+``` yml
+redis_slaveof: "{{ hostvars['redis-master.example.com'].ansible_eth1.ipv4.address }} {{ redis_port }}"
+```
+
+Now you're cooking with gas! Running this playbook should have you ready to go with a Redis master and three slaves.
+
+### Redis Sentinel
+
+#### Introduction
+
+Using Master-Slave replication is great for durability and distributing reads and writes, but not so much for high availability. If the master node fails, a slave must be manually promoted to master, and connections will need to be redirected to the new master. The solution for this problem is [Redis Sentinel](http://redis.io/topics/sentinel), a distributed system which uses Redis itself to communicate and handle automatic failover in a Redis cluster.
+
+Sentinel itself uses the same redis-server binary that Redis uses, but runs with the `--sentinel` flag and with a different configuration file. All of this, of course, is abstracted with this Ansible role, but it's still good to know.
+
+#### Configuration
+
+To add a Sentinel node to an existing deployment, assign this same `redis` role to it, and set the variable `redis_sentinel` to True on that particular host. This can be done in any number of ways, and for the purposes of this example I'll extend on the inventory file used above in the Master/Slave configuration:
+
+``` ini
+[redis-master]
+redis-master.example.com
+
+[redis-slave]
+redis-slave0[1:3].example.com
+
+[redis-sentinel]
+redis-sentinel0[1:3].example.com redis_sentinel=True
+```
+
+Above, we've added three more hosts in the **redis-sentinel** group (though this group serves no purpose within the role, it's merely an identifier), and set the `redis_sentinel` variable inline within the inventory file.
+
+Now, all we need to do is set the `redis_sentinel_monitors` variable to define the Redis masters which Sentinel should monitor. In this case, I'm going to do this within the playbook:
+
+``` yml
+- name: configure the master redis server
+  hosts: redis-master
+  roles:
+    - redis
+
+- name: configure redis slaves
+  hosts: redis-slave
+  vars:
+    - redis_slaveof: redis-master.example.com 6379
+  roles:
+    - redis
+
+- name: configure redis sentinel nodes
+  hosts: redis-sentinel
+  vars:
+    - redis_sentinel_monitors:
+      - name: master01
+        host: redis-master.example.com
+        port: 6379
+  roles:
+    - redis
+```
+
+This will configure the Sentinel nodes to monitor the master we created above using the identifier `master01`. By default, Sentinel will use a quorum of 2, which means that at least 2 Sentinels must agree that a master is down in order for a failover to take place. This value can be overridden by setting the `quorum` key within your monitor definition. See the [Sentinel docs](http://redis.io/topics/sentinel) for more details.
+
+Along with the variables listed above, Sentinel has a number of its own configurables just as Redis server does. These are prefixed with `redis_sentinel_`, and are enumerated in the **Configurables** section below.
+
+
+## Installing redis from a source file in the ansible role
+
+If the environment your server resides in does not allow downloads (i.e. if the machine is sitting in a dmz) set the variable `redis_tarball` to the path of a locally downloaded tar.gz file to prevent a http download from redis.io.  
+Do not forget to set the version variable to the same version of the tar.gz. to avoid confusion !
+
+For example (file was stored in same folder as the playbook that included the redis role):
+```yml
+vars:
+  - redis_version: 2.8.14
+  - redis_tarball: redis-2.8.14.tar.gz
+```
+In this case the source archive is copied towards the server over ssh rather than downloaded.
+
+
+
+## Configurables
+
+Here is a list of all the default variables for this role, which are also available in defaults/main.yml. One of these days I'll format these into a table or something.
+
+``` yml
+---
+## Installation options
+redis_version: 2.8.8
+redis_install_dir: /opt/redis
+redis_user: redis
+# Working directory for Redis. RDB and AOF files will be written here.
+redis_dir: /var/lib/redis/{{ redis_port }}
+redis_tarball: false
+# The open file limit for Redis/Sentinel
+redis_nofile_limit: 16384
+# Configure Redis as a service
+# When set to false, this role will not create init scripts or manage
+# the Redis/Sentinel processes.
+# This is usually needed when a tool like Supervisor will manage the process.
+redis_as_service: true
+
+## Networking/connection options
+redis_bind: 0.0.0.0
+redis_port: 6379
+redis_password: false
+redis_tcp_backlog: 511
+redis_tcp_keepalive: 0
+# Max connected clients at a time
+redis_maxclients: 10000
+redis_timeout: 0
+
+## Replication options
+# Set slaveof just as you would in redis.conf. (e.g. "redis01 6379")
+redis_slaveof: false
+# Make slaves read-only. "yes" or "no"
+redis_slave_read_only: "yes"
+redis_slave_priority: 100
+redis_repl_backlog_size: false
+
+## Logging
+redis_logfile: '""'                                                             
+# Enable syslog. "yes" or "no"                                                  
+redis_syslog_enabled: "yes"                                                     
+redis_syslog_ident: redis_{{ redis_port }}                                      
+# Syslog facility. Must be USER or LOCAL0-LOCAL7                                
+redis_syslog_facility: USER   
+
+## General configuration
+redis_daemonize: "yes"                                                          
+redis_pidfile: /var/run/redis/{{ redis_port }}.pid
+# Number of databases to allow
+redis_databases: 16
+redis_loglevel: notice
+# Log queries slower than this many milliseconds. -1 to disable
+redis_slowlog_log_slower_than: 10000
+# Maximum number of slow queries to save
+redis_slowlog_max_len: 128
+# Redis memory limit (e.g. 4294967296, 4096mb, 4gb)
+redis_maxmemory: false
+redis_maxmemory_policy: noeviction
+redis_rename_commands: []
+# How frequently to snapshot the database to disk
+# e.g. "900 1" => 900 seconds if at least 1 key changed
+redis_save:
+  - 900 1
+  - 300 10
+  - 60 10000
+
+## Redis sentinel configs
+# Set this to true on a host to configure it as a Sentinel
+redis_sentinel: false
+redis_sentinel_dir: /var/lib/redis/sentinel_{{ redis_sentinel_port }}
+redis_sentinel_bind: 0.0.0.0
+redis_sentinel_port: 26379
+redis_sentinel_pidfile: /var/run/redis/sentinel_{{ redis_sentinel_port }}.pid
+redis_sentinel_logfile: '""'                                                    
+redis_sentinel_syslog_ident: sentinel_{{ redis_sentinel_port }}
+redis_sentinel_monitors:
+  - name: master01
+    host: localhost
+    port: 6379
+    quorum: 2
+    auth_pass: ant1r3z
+    down_after_milliseconds: 30000
+    parallel_syncs: 1
+    failover_timeout: 180000
+    notification_script: false
+    client_reconfig_script: false
+```
+
+## Facts
+
+The following facts are accessible in your inventory or tasks outside of this role.
+
+- `{{ ansible_local.redis.bind }}`
+- `{{ ansible_local.redis.port }}`
+- `{{ ansible_local.redis.sentinel_bind }}`
+- `{{ ansible_local.redis.sentinel_port }}`
+- `{{ ansible_local.redis.sentinel_monitors }}`
+attrs==16.3.0 # Updated from 16.1.0
+cffi==1.9.1 # Updated from 1.7.0
+ConcurrentLogHandler==0.9.1
+cryptography==1.8.1 # Updated from 1.5
+cssselect==1.0.1 # Updated from 0.9.2
+enum34==1.1.6
+funcsigs==1.0.2
+future==0.16.0 # Updated from 0.15.2
+idna==2.5 # Updated from 2.1
+ipaddress==1.0.18 # Updated from 1.0.16
+kafka-python==1.3.3 # Updated from 1.3.2
+kazoo==2.2.1
+lxml==3.7.3 # Updated from 3.6.4
+mock==2.0.0
+nose==1.3.7
+parsel==1.1.0 # Updated from 1.0.3
+pbr==2.0.0 # Updated from 1.10.0
+pyasn1==0.2.3 # Updated from 0.1.9
+pyasn1-modules==0.0.8
+pycparser==2.17 # Updated from 2.14
+PyDispatcher==2.0.5
+pyOpenSSL==16.2.0 # Updated from 16.1.0
+python-json-logger==0.1.7 # Updated from 0.1.5
+PyYAML==3.12
+queuelib==1.4.2
+redis==2.10.5
+requests==2.13.0 # Updated from 2.11.1
+requests-file==1.4.1 # Updated from 1.4
+retrying==1.3.3
+Scrapy==1.3.3
+scutils==1.2.0
+service-identity==16.0.0
+six==1.10.0
+testfixtures==4.13.5 # Updated from 4.10.0
+tldextract==2.0.2 # Updated from 2.0.1
+Twisted==17.1.0 # Updated from 16.4.0
+ujson==1.35
+w3lib==1.17.0 # Updated from 1.16.0
+zope.interface==4.3.3 # Updated from 4.2.0
+# Generated with piprot 0.9.7
+Docker
+======
+
+This folder houses the Dockerfiles and settings associated with Scrapy Cluster.
+
+For more information please check out the [documentation](http://scrapy-cluster.readthedocs.org)
+
+Want to build your own containers? From the root directory of this project run
+
+```
+$ docker build -t <your_tag> -f docker/<component>/Dockerfile .
+
+# build the redis monitor on the dev branch
+$ docker build -t istresearch/scrapy-cluster:redis-monitor-dev -f docker/redis-monitor/Dockerfile .
+```# Scrapy Cluster Documentation
+
+You can follow [this](http://docs.readthedocs.org/en/latest/getting_started.html#in-rst) guide on readthedocs to get your own local documentation up and running.
+
+Otherwise, it boils down to the following commands
+
+```bash
+$ pip install sphinx sphinx-autobuild sphinx-rtd-theme
+$ cd docs
+$ sphinx-build . _build_html
+$ sphinx-autobuild . _build_html
+
+Serving on http://127.0.0.1:8000
+...
+```
+
+You will now be able to view the documentation as you live edit it on your machine.
+License
+=======
+
+::
+
+    The MIT License (MIT)
+
+    Copyright (c) 2017 IST Research
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+ELK
+===
+
+This folder houses sample files used when integrating Scrapy Cluster with Elasticsearch, Logstash and Kibana. For more information please see Scrapy Cluster's official Documentation.
+
+Last tested on Nov 27, 2016 with:
+
+* Elasticsearch 5.0
+
+* Logstash 5.0
+
+* Kibana 5.0ConcurrentLogHandler==0.9.1
+funcsigs==1.0.2
+future==0.16.0 # Updated from 0.15.2
+idna==2.5 # Updated from 2.1
+jsonschema==2.6.0 # Updated from 2.5.1
+kafka-python==1.3.3 # Updated from 1.3.2
+kazoo==2.2.1
+mock==2.0.0
+nose==1.3.7
+pbr==2.0.0 # Updated from 1.10.0
+python-json-logger==0.1.7 # Updated from 0.1.5
+python-redis-lock==3.2.0 # Updated from 3.1.0
+PyYAML==3.12
+redis==2.10.5
+requests==2.13.0 # Updated from 2.11.1
+requests-file==1.4.1 # Updated from 1.4
+retrying==1.3.3
+scutils==1.2.0
+six==1.10.0
+testfixtures==4.13.5 # Updated from 4.10.0
+tldextract==2.0.2 # Updated from 2.0.1
+ujson==1.35
+# Generated with piprot 0.9.7ConcurrentLogHandler==0.9.1
+funcsigs==1.0.2
+future==0.16.0 # Updated from 0.15.2
+kafka-python==1.3.3 # Updated from 1.3.2
+kazoo==2.2.1
+mock==2.0.0
+nose==1.3.7
+pbr==2.0.0 # Updated from 1.10.0
+python-json-logger==0.1.7 # Updated from 0.1.5
+python-redis-lock==3.2.0 # Updated from 3.1.0
+PyYAML==3.12
+redis==2.10.5
+retrying==1.3.3
+scutils==1.2.0
+six==1.10.0
+testfixtures==4.13.5 # Updated from 4.10.0
+ujson==1.35
+# Generated with piprot 0.9.7click==6.7 # Updated from 6.6
+ConcurrentLogHandler==0.9.1
+Flask==0.12 # Updated from 0.11
+funcsigs==1.0.2
+future==0.16.0 # Updated from 0.15.2
+itsdangerous==0.24
+Jinja2==2.9.5 # Updated from 2.8
+jsonschema==2.6.0 # Updated from 2.5.1
+kafka-python==1.3.3 # Updated from 1.3.2
+kazoo==2.2.1
+MarkupSafe==1.0 # Updated from 0.23
+mock==2.0.0
+nose==1.3.7
+pbr==2.0.0 # Updated from 1.10.0
+python-json-logger==0.1.7 # Updated from 0.1.5
+redis==2.10.5
+requests==2.13.0 # Updated from 2.11.1
+retrying==1.3.3
+scutils==1.2.0
+six==1.10.0
+testfixtures==4.13.5 # Updated from 4.11.0
+ujson==1.35
+Werkzeug==0.12.1 # Updated from 0.11.11
+# Generated with piprot 0.9.7************************
+Scrapy Cluster Utilities
+************************
+
+Overview
+--------
+
+The ``scutils`` package is a collection of utilities that are used by the Scrapy Cluster project.  These utilities are agnostic enough that they can be used by any application.
+
+Requirements
+------------
+
+- Unix based machine (Linux or OS X)
+- Python 2.7.x
+
+Installation
+------------
+
+Inside a virtualenv, run ``pip install -U scutils``.  This will install the latest version of the Scrapy Cluster Utilities.  If you are running a Scrapy Cluster, ``scutils`` is included inside of the **requirements.txt** so there is no need to install it separately.
+
+Documentation
+-------------
+
+Full documentation for the ``scutils`` package is included as part of the Official Scrapy Cluster Documentation, which can be found `here <http://scrapy-cluster.readthedocs.org/en/latest/topics/utils/index.html>`_ under the **Utilities** section.
+
+argparse_helper.py
+==================
+
+The ``argparse_helper`` module is used to help print top level ``--help`` arguments from argparse when used with subparsers. Useful for running applications that have multiple combinations of subcommands and command line arguments.
+
+log_factory.py
+==============
+
+The ``log_factory`` module provides a standardized way for creating logs for multithreaded and concurrent process log data.  It supports all log levels, stdout or to a file, and various output formats including JSON.
+
+method_timer.py
+===============
+
+The ``method_timer`` module provides a simple decorator that can be added to functions or methods requiring an execution timeout period.
+
+redis_queue.py
+==============
+
+The ``redis_queue`` module provides 3 core queue classes which use Redis as the place to store data. Includes FIFO, Stack, and Priority Queues.
+
+redis_throttled_queue.py
+========================
+
+The ``redis_throttled_queue`` module provides a throttled or moderated Redis queue structure that can be used to mitigate the number of pops from the queue within a given time frame.
+
+settings_wrapper.py
+===================
+
+The ``settings_wrapper`` module is a class the handles loading of default python application settings, which can then be overridden or added to by a local settings file. In the end provides a single dictionary object of all your loaded application settings.
+
+
+stats_collector.py
+==================
+
+The ``stats_collector`` module generates Redis based statistics based on time windows or in total. Statistics collection includes time windows, rolling time windows, counters, unique counters, hyperloglog counters, and bitmap counters.
+
+zookeeper_watcher.py
+====================
+
+The ``zookeeper_watcher`` module provides an easy way to tell an application that it's watched Zookeeper file has changed. It also handles Zookeeper session disconnects and reconnects behind the scenes of your application.
+# from http://stackoverflow.com/questions/3041986/python-command-line-yes-no-input
+# Upgrade 1.0 to 1.1
+# loop through all elements
+# format key
+# shortcut to shove stuff into the priority queue
+# loop through all new keys
+# Upgrade 1.1 to 1.2
+# loop through all elements
+# load and cache request
+# done geting all elements, drop queue if needed
+# insert cached items back in
+# shortcut to shove stuff into the priority queue
+# ensure path exists
+# push the conf file
+# custom line
+# set Cookie header
+# the redis connection
+# the dict of throttled queues
+# the spider using this scheduler
+# the list of current queues
+# the class to use for the queue
+# the redis dupefilter
+# the last time the queues were updated
+# the last time the ip was updated
+# how often to update the queues
+# the tld extractor
+# default number of hits for a queue
+# default window to calculate number of hits
+# the ip address of the scheduler (if needed)
+# the old ip for logging
+# the interval to update the ip address
+# add spider type to redis throttle queue key
+# add spider public ip to redis throttle queue key
+# the number of extra tries to get an item
+# the generated UUID for the particular scrapy process
+# Zookeeper Dynamic Config Vars
+# The list of domains and their configs
+# The id used to read the throttle config
+# Flag to reload queues if settings are wiped too
+# The base assigned configuration path to read
+# The KazooClient to manage the config
+# Zookeeper path to read actual yml config
+# the domains to ignore thanks to zookeeper config
+# set up tldextract
+# if we need better uuid's mod this line
+# vetting process to ensure correct configs
+# check valid
+# we already have a throttled queue for this domain, update it to new settings
+# if scale is applied, scale back; otherwise use updated hits
+# round to int
+# lost connection to zookeeper, reverting back to defaults
+# new config could have loaded between scrapes
+# build final queue key, depending on type and ip bools
+# add the tld from the key `type:tld:queue`
+# use default window and hits
+# this is now a tuple, all access needs to use [0] to get
+# the object, use [1] to get the time
+# use custom window and hits
+# adjust the crawl rate based on the scale if exists
+# assign local ip in case of exception
+# grab the tld of the request
+# allow only if we want all requests or we want
+# everything but blacklisted domains
+# insert if crawl never expires (0) or time < expires
+# we may already have the queue in memory
+# shoving into a new redis queue, negative b/c of sorted sets
+# this will populate ourself and other schedulers when
+# they call create_queues
+# urls should be safe (safe_string_url)
+#  callback/errback are assumed to be a bound instance of the spider
+# skip if the whole domain has been blacklisted in zookeeper
+# the throttled queue only returns an item if it is allowed
+# update timeout and return
+# update the redis queues every so often
+# update the ip address every so often
+# need absolute url
+# need better url validation here
+# defaults not in schema
+# extra check to add items to request
+# -*- coding: utf-8 -*-
+# Define here the models for your scraped items
+# set up the default sc logger
+# stats setup
+# plugin is essential to functionality
+# hack to update passed in settings
+# we chose to handle 504's here as well as in the middleware
+# in case the middleware is disabled
+# set up the default sc logger
+# only operate on requests
+# pass along all known meta fields, only if
+# they were not already set in the spider's new request
+# -*- coding: utf-8 -*-
+# Define your item pipelines here
+# make duplicate item, but remove unneeded keys
+# this is critical so we choose to exit.
+# exiting because this is a different thread from the crawlers
+# and we want to ensure we can connect to Kafka when we boot
+# our priority setup is different from super
+# set up the default sc logger
+# set up redis
+# plugin is essential to functionality
+# we chose to handle 504's here as well as in the middleware
+# in case the middleware is disabled
+# This file houses all default settings for the Crawler
+# to override please use a custom localsettings.py file
+# Scrapy Cluster Settings
+# ~~~~~~~~~~~~~~~~~~~~~~~
+# Specify the host and port to use when connecting to Redis.
+# Kafka server information
+# base64 encode the html body to avoid json dump errors due to malformed text
+# 25 ms before flush
+# 4MB before blocking
+# Don't cleanup redis queues, allows to pause/resume crawls.
+# seconds to wait between seeing new queues, cannot be faster than spider_idle time of 5
+# throttled queue defaults per domain, x hits in a y second window
+# we want the queue to produce a consistent pop flow
+# how long we want the duplicate timeout queues to stick around in seconds
+# how often to refresh the ip address of the scheduler
+# whether to add depth >= 1 blacklisted domain requests back to the queue
+# add Spider type to throttle mechanism
+# add ip address to throttle mechanism
+# how many times to retry getting an item from the queue before the spider is considered idle
+# how long to keep around stagnant domain queues
+# log setup scrapy cluster crawler
+# stats setup
+# from time variables in scutils.stats_collector class
+# Scrapy Settings
+# ~~~~~~~~~~~~~~~
+# Scrapy settings for distributed_crawling project
+#
+# Enables scheduling storing requests queue in redis.
+# Store scraped item in redis for post-processing.
+# disable built-in DepthMiddleware, since we do our own
+# depth management per crawl request
+# Handle timeout retries with the redis scheduler and logger
+# exceptions processed in reverse order
+# custom cookies to not persist across crawl requests
+# Disable the built in logging in production
+# Allow all return codes
+# Avoid in-memory DNS cache. See Advanced topics of docs for info
+# Local Overrides
+# ~~~~~~~~~~~~~~~
+# capture raw response
+# populated from response.meta
+# populated from raw HTTP response
+# determine whether to continue spidering
+# we are spidering -- yield Request for each discovered link
+# link that was discovered
+# raw response has been processed, yield to item pipeline
+# hacky way to get the underlying lxml parsed document
+# pseudo lxml.html.HtmlElement.make_links_absolute(base_url)
+# skipping bogus links
+# added 'ignore' to encoding errors
+# to fix relative links after process_value
+# custom parser override
+# begin reconstructing headers from scratch...
+# Example Wandering Spider
+# debug output for receiving the url
+# step counter for how many pages we have hit
+# Create Item to send to kafka
+# capture raw response
+# populated from response.meta
+# populated from raw HTTP response
+# we want to know how far our spider gets
+# determine what link we want to crawl
+# there are links on the page
+# increment our step counter for this crawl job
+# pass along our user agent as well
+# debug output
+# yield the Request to the scheduler
+# raw response has been processed, yield to item pipeline
+# set up redis
+# plugin is essential to functionality
+# clear out older test keys if any
+# set up kafka to consumer potential result
+# add crawl to redis
+# run the spider, give 20 seconds to see the url, crawl it,
+# and send to kafka. Then we kill the reactor
+# if for some reason the tests fail, we end up falling behind on
+# the consumer
+# required
+# test request already seen
+# test request not expiring and queue seen
+# this should not be reached
+# test request not expiring and queue not seen
+# this should not be reached
+# test whole domain blacklisted, but we allow it
+# this should not be reached
+# test dont allow blacklist domains back into the queue
+# test allow domain back into queue since not blacklisted
+# reset
+# test request expired
+# test request blacklisted via stop or expire from redis-monitor
+# test finding an item
+# test failed to find an item
+# test skip due to blacklist
+# should also not raise exception
+# test update queues
+# this should not be reached
+# test update ip address
+# this should not be reached
+# test got item
+# test didn't get item
+# correctly loaded
+# both are not correct yaml setups
+# test without scale factor
+# test with scale factor
+# the scale factor effects the limit only
+# assert max
+# assert min
+# assert normal
+# test basic
+# test type
+# test ip
+# test type and ip
+# assert not expired
+# assert expired
+# assert remove from queue_keys also
+# test too deep
+# test raw depth recursion
+# test allowed_domains filter
+# test allow regex filter
+# test deny regex filter
+# test deny_extensions filter
+# no pages that end in .html
+# test nothing
+# test good/bad rolling stats
+# for totals, not DUMB
+# check that both keys are set up
+# create fake response
+# test all types of results from a spider
+# dicts, items, or requests
+# 1 debug for the method, 1 debug for the request
+# test meta unchanged if already exists
+# key1 value1 did not pass through, since it was already set
+# key2 was not set, therefor it passed through
+# test unknown item
+# test normal send, no appid topics
+# test normal send, with appids
+# test base64 encode
+# test kafka exception
+# send should not crash the pipeline
+# successfully added
+# unsuccessfully added
+# number of retries less than max
+# over max
+# test nothing
+# test status codes only
+# test good/bad rolling stats
+# for totals, not DUMB
+# check that both keys are set up
+# 4 calls for link, 4 calls for wandering
+# should always yield one request
+# link following tests ran via link spider
+# THIS FILE SHOULD STAY IN SYNC WITH /crawler/crawling/settings.py
+# This file houses all default settings for the Crawler
+# to override please use a custom localsettings.py file
+# Scrapy Cluster Settings
+# ~~~~~~~~~~~~~~~~~~~~~~~
+# Specify the host and port to use when connecting to Redis.
+# Kafka server information
+# base64 encode the html body to avoid json dump errors due to malformed text
+# 25 ms before flush
+# 4MB before blocking
+# Don't cleanup redis queues, allows to pause/resume crawls.
+# seconds to wait between seeing new queues, cannot be faster than spider_idle time of 5
+# throttled queue defaults per domain, x hits in a y second window
+# we want the queue to produce a consistent pop flow
+# how long we want the duplicate timeout queues to stick around in seconds
+# how often to refresh the ip address of the scheduler
+# whether to add depth >= 1 blacklisted domain requests back to the queue
+# add Spider type to throttle mechanism
+# add ip address to throttle mechanism
+# how many times to retry getting an item from the queue before the spider is considered idle
+# how long to keep around stagnant domain queues
+# log setup scrapy cluster crawler
+# stats setup
+# from time variables in scutils.stats_collector class
+# Scrapy Settings
+# ~~~~~~~~~~~~~~~
+#DOWNLOADER_CLIENTCONTEXTFACTORY = 'crawling.contextfactory.MyClientContextFactory'
+# Scrapy settings for distributed_crawling project
+#
+# Enables scheduling storing requests queue in redis.
+# Store scraped item in redis for post-processing.
+# disable built-in DepthMiddleware, since we do our own
+# depth management per crawl request
+# Handle timeout retries with the redis scheduler and logger
+# exceptions processed in reverse order
+# custom cookies to not persist across crawl requests
+# Disable the built in logging in production
+# Allow all return codes
+# Avoid in-memory DNS cache. See Advanced topics of docs for info
+# Local Overrides
+# ~~~~~~~~~~~~~~~
+# THIS FILE SHOULD STAY IN SYNC WITH /kafka-monitor/settings.py
+# Redis host information
+# Kafka server information
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# plugin setup
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# main thread sleep time
+# THIS FILE SHOULD STAY IN SYNC WITH /redis-monitor/settings.py
+# This file houses all default settings for the Redis Monitor
+# to override please use a custom localsettings.py file
+# Redis host configuration
+# 25 ms before flush
+# 4MB before blocking
+# Zookeeper Settings
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# retry failures on actions
+# main thread sleep time
+# THIS FILE SHOULD STAY IN SYNC WITH /rest/settings.py
+# This file houses all default settings for the Redis Monitor
+# to override please use a custom localsettings.py file
+# Flask configuration
+# Redis host information
+# Kafka server information ------------
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# logging setup
+# internal configuration
+# -*- coding: utf-8 -*-
+#
+# Scrapy Cluster documentation build configuration file, created by
+# sphinx-quickstart on Wed May  6 19:06:41 2015.
+#
+# This file is execfile()d with the current directory set to its
+# containing dir.
+#
+# Note that not all possible configuration values are present in this
+# autogenerated file.
+#
+# All configuration values have a default; values that are commented out
+# serve to show the default.
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#sys.path.insert(0, os.path.abspath('.'))
+# -- General configuration ------------------------------------------------
+# If your documentation needs a minimal Sphinx version, state it here.
+#needs_sphinx = '1.0'
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+# Add any paths that contain templates here, relative to this directory.
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+# source_suffix = ['.rst', '.md']
+# The encoding of source files.
+#source_encoding = 'utf-8-sig'
+# The master toctree document.
+# General information about the project.
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+# The full version, including alpha/beta/rc tags.
+# The language for content autogenerated by Sphinx. Refer to documentation
+# for a list of supported languages.
+#
+# This is also used if you do content translation via gettext catalogs.
+# Usually you set "language" from the command line for these cases.
+# There are two options for replacing |today|: either, you set today to some
+# non-false value, then it is used:
+#today = ''
+# Else, today_fmt is used as the format for a strftime call.
+#today_fmt = '%B %d, %Y'
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# The reST default role (used for this markup: `text`) to use for all
+# documents.
+#default_role = None
+# If true, '()' will be appended to :func: etc. cross-reference text.
+#add_function_parentheses = True
+# If true, the current module name will be prepended to all description
+# unit titles (such as .. function::).
+#add_module_names = True
+# If true, sectionauthor and moduleauthor directives will be shown in the
+# output. They are ignored by default.
+#show_authors = False
+# The name of the Pygments (syntax highlighting) style to use.
+# A list of ignored prefixes for module index sorting.
+#modindex_common_prefix = []
+# If true, keep warnings as "system message" paragraphs in the built documents.
+#keep_warnings = False
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+# -- Options for HTML output ----------------------------------------------
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+#html_theme_options = {}
+# Add any paths that contain custom themes here, relative to this directory.
+#html_theme_path = []
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+#html_title = None
+# A shorter title for the navigation bar.  Default is the same as html_title.
+#html_short_title = None
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+#html_logo = None
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+#html_favicon = None
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# Add any extra paths that contain custom files (such as robots.txt or
+# .htaccess) here, relative to this directory. These files are copied
+# directly to the root of the documentation.
+#html_extra_path = []
+# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
+# using the given strftime format.
+#html_last_updated_fmt = '%b %d, %Y'
+# If true, SmartyPants will be used to convert quotes and dashes to
+# typographically correct entities.
+#html_use_smartypants = True
+# Custom sidebar templates, maps document names to template names.
+#html_sidebars = {}
+# Additional templates that should be rendered to pages, maps page names to
+# template names.
+#html_additional_pages = {}
+# If false, no module index is generated.
+#html_domain_indices = True
+# If false, no index is generated.
+#html_use_index = True
+# If true, the index is split into individual pages for each letter.
+#html_split_index = False
+# If true, links to the reST sources are added to the pages.
+#html_show_sourcelink = True
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+#html_show_sphinx = True
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+#html_show_copyright = True
+# If true, an OpenSearch description file will be output, and all pages will
+# contain a <link> tag referring to it.  The value of this option must be the
+# base URL from which the finished HTML is served.
+#html_use_opensearch = ''
+# This is the file name suffix for HTML files (e.g. ".xhtml").
+#html_file_suffix = None
+# Language to be used for generating the HTML full-text search index.
+# Sphinx supports the following languages:
+#   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
+#   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
+#html_search_language = 'en'
+# A dictionary with options for the search language support, empty by default.
+# Now only 'ja' uses this config value
+#html_search_options = {'type': 'default'}
+# The name of a javascript file (relative to the configuration directory) that
+# implements a search results scorer. If empty, the default will be used.
+#html_search_scorer = 'scorer.js'
+# Output file base name for HTML help builder.
+# -- Options for LaTeX output ---------------------------------------------
+# The paper size ('letterpaper' or 'a4paper').
+#'papersize': 'letterpaper',
+# The font size ('10pt', '11pt' or '12pt').
+#'pointsize': '10pt',
+# Additional stuff for the LaTeX preamble.
+#'preamble': '',
+# Latex figure (float) alignment
+#'figure_align': 'htbp',
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+#latex_logo = None
+# For "manual" documents, if this is true, then toplevel headings are parts,
+# not chapters.
+#latex_use_parts = False
+# If true, show page references after internal links.
+#latex_show_pagerefs = False
+# If true, show URL addresses after external links.
+#latex_show_urls = False
+# Documents to append as an appendix to all manuals.
+#latex_appendices = []
+# If false, no module index is generated.
+#latex_domain_indices = True
+# -- Options for manual page output ---------------------------------------
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+# If true, show URL addresses after external links.
+#man_show_urls = False
+# -- Options for Texinfo output -------------------------------------------
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+# Documents to append as an appendix to all manuals.
+#texinfo_appendices = []
+# If false, no module index is generated.
+#texinfo_domain_indices = True
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#texinfo_show_urls = 'footnote'
+# If true, do not generate a @detailmenu in the "Top" node's menu.
+#texinfo_no_detailmenu = False
+# initial main parser setup
+# args to use for all commands
+# list command
+# dump command
+# Exception is thrown when group_id is None.
+# See https://github.com/dpkp/kafka-python/issues/619
+#!/usr/bin/python
+# skip loading the plugin if its value is None
+# valid plugin, import and setup
+# negate because logger wants True for std out
+# only log every X seconds
+# to prevent reference modification
+# break if nothing is returned
+# consumer has no idea where they are
+# initial parsing setup
+# This file houses all default settings for the Kafka Monitor
+# to override please use a custom localsettings.py file
+# Redis host information
+# Kafka server information
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# plugin setup
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# main thread sleep time
+# plugin is essential to functionality
+# format key
+# override this with your own 'something.json' schema
+# plugin is essential to functionality
+# format key
+# shortcut to shove stuff into the priority queue
+# if timeout crawl, add value to redis
+# log success
+# plugin is essential to functionality
+# format key
+# plugin is essential to functionality
+# format key
+# setup custom class to handle our requests
+# ensure the group id is present so we pick up the 1st message
+# test loading default plugins
+# test removing a plugin from settings
+# fail if the class is not found
+# Throw error if schema could not be found
+# test no rolling stats, only total
+# test good/bad rolling stats
+# for totals, not DUMB
+# lets assume we are loading the default plugins
+# test no rolling stats
+# test good/bad rolling stats
+# for totals, not DUMB
+# handle kafka offset errors
+# handle bad json errors
+# fake class so we can use dot notation
+# set up to process messages
+#  test that handler function is called for the scraper
+# test that handler function is called for the actions
+# check it is added to redis
+# check timeout is added
+# negate because logger wants True for std out
+# essential to functionality
+# skip loading the plugin if its value is None
+# valid plugin, import and setup
+# continue
+# only log every X seconds
+# acquire lock
+# remove lock regardless of if exception or was handled ok
+# get the current failure count
+# stats setup
+# we only care about the spider
+# got a time based stat
+# got a spider identifier
+# simple counts
+# This file houses all default settings for the Redis Monitor
+# to override please use a custom localsettings.py file
+# Redis host configuration
+# 25 ms before flush
+# 4MB before blocking
+# Zookeeper Settings
+# logging setup
+# stats setup
+# from time variables in scutils.stats_collector class
+# retry failures on actions
+# main thread sleep time
+# override this with your own regex to look for in redis
+# very similar to stop
+# break down key
+# log ack of expire
+# add crawl to blacklist so it doesnt propagate
+# add this to the blacklist set
+# everything stored in the queue is now expired
+# add result to our dict
+# the master dict to return
+# break down key
+# log we received the info message
+# generate the information requested
+# keys based on score
+# this doesnt return them in order, need to bin first
+# score is negated in redis
+# used for finding total count of domains
+# get all domain queues
+# now iterate through binned dict
+# add new crawlid to master dict
+# get all domain queues
+# now iterate through binned dict
+# dont want logger in outbound kafka message
+# break down key
+# log we received the stats request
+# break down key
+# main is self, end is machine, true_tail is uuid
+# get hll value
+# get zcard value
+# we only care about the spider
+# got a time based stat
+# got a spider identifier
+# simple counts
+# break down key
+# we only care about the machine, not spider type
+# simple count
+# break down key
+# log we received the stop message
+# add this to the blacklist set
+# purge crawlid from current set
+# item to send to kafka
+# delete timeout for crawl (if needed) since stopped
+# purge three times to try to make sure everything is cleaned
+# using scan for speed vs keys
+# break down key
+# the master dict to return
+# log we received the info message
+# get the current zk configuration
+# update the configuration
+# write the configuration back to zookeeper
+# ack the data back to kafka
+# set the info flag
+# process the request
+# ensure the key is gone
+# now test the message was sent to kafka
+# if for some reason the tests fail, we end up falling behind on
+# the consumer
+# redis key finding is different than regex finding
+# if the stop monitor passes then this is just testing whether
+# the handler acts on the key only if it has expired
+# not timed out
+# timed out
+# trying to make sure that everything is called
+# set up looping calls to redis_conn.keys()
+# tests stats on three different machines, with different spiders
+# contributing to the same or different stats
+# tests stats on three different machines, with different spiders
+# contributing to the same or different stats
+# domain update
+# domain remove
+# blacklist update
+# blacklist remove
+# test error on get
+# set error on set
+# test loading default plugins
+# test removing a plugin from settings
+# fail if the class is not found
+# test that exceptions are caught within each plugin
+# assuming now all plugins are loaded
+# BaseExceptions are never raised normally
+# lets just assume the regex worked
+# info
+# action
+# expire
+# test that an exception within a handle method is caught
+# tests for _process_plugins with locking
+# lets just assume the regex worked
+# test didnt acquire lock
+# test got lock
+# test lock released
+# test lock not held not released
+# lets assume we are loading the default plugins
+# test no rolling stats
+# test good/bad rolling stats
+# for totals, not DUMB
+# this should not raise an exception
+# this should
+# test not set
+# test set
+# test exceeded
+# Route Decorators --------------------
+# static strings
+# negate because logger wants True for std out
+# spawn heartbeat processing loop
+# disable flask logger
+# consumer has no idea where they are
+# close older connections
+# create new connections
+# close threads
+# close kafka
+# Routes --------------------
+# self.app.add_url_rule('/', 'catch', self.catch, methods=['GET'],
+#                        defaults={'path': ''})
+# proof of concept to write things to kafka
+# key still exists, means we didnt find get our
+# response in time
+# Flask configuration
+# Hex representation of 'SC'
+# Redis host information
+# Kafka server information ------------
+# 10MB
+# 25 ms before flush
+# 4MB before blocking
+# logging setup
+# internal configuration
+# random port number for local connections
+# sleep 10 seconds for everything to boot up
+# handle kafka offset errors
+# handle bad json errors
+# fake class so we can use dot notation
+# test got poll result
+# test got in process call result
+# test not connected
+# test connected
+# throw error
+# connection setup
+# all connected
+# disconnecting
+# disconnected
+# test not connected
+# test connected
+# throw error
+# consumer/producer != None
+# eary exit to ensure everything is closed
+# test if everything flows through
+# failure
+# success
+# data
+# error message
+# error cause
+# closed fine
+# didnt close
+# test good
+# test bad
+# Route decorators --------
+# test uncaught exception thrown
+# test normal response
+# test normal response with alternate response code
+# bad json
+# no json
+# good json
+# valid schema
+# invalid schema
+# Routes ------------------
+# test not connected
+# connected
+# test failed to send to kafka
+# test no uuid
+# test with uuid, got response
+# fake multithreaded response from kafka
+# test with uuid, no response
+# test not connected
+# test connected found poll key
+# test connected didnt find poll key
+# test connection error
+# test value error
+# use the default argparse setup, comment out the lines above
+#parser = argparse.ArgumentParser(
+#    description='example_ah.py: Prints various family members')
+# args here are applied to all sub commands using the `parents` parameter
+# subcommand 1, requires name of brother
+# subcommand 2, requires name of sister and optionally mom
+# define a hidden method to sleep and wait based on parameters
+# call the newly declared function
+# change these for your Redis host
+# set up arg parser
+# set up arg parser
+# load up settings
+# You can use any or all of these, polling + handlers, some handlers, etc
+# add subparsers below these lines
+# set up logger
+# set up to std out
+# set up to file
+# try to make dir
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# triger alarm in timeout_time seconds
+# ignore priority
+# use atomic range/remove using multi/exec
+# the instantiated queue class
+# the window to use to limit requests
+# number of requests in the given window
+# the redis connection
+# whether to use moderation or not
+# the last time the moderated queue was pulled
+# appended to end of window queue key
+# appended to end to time key
+# use elastic catch up
+# tolerance
+# counter to get to limit before elastic kicks in
+# default window name
+# moderation is useless when only grabbing 1 item in x secs
+# used for communicating throttle moderation across queue instances
+# Expire old keys (hits)
+# check if we are hitting too fast for moderation
+# ---- LOCK
+# from this point onward if no errors are raised we
+# successfully incremented the counter
+# passed the moderation limit, now check time window
+# If we have less keys than max, update out moderate key
+# this is a valid transaction, set the new time
+# watch was changed, another thread just incremented
+# the value
+# If we currently have more keys than max,
+# then limit the action
+# get key, otherwise default the moderate key expired and
+# we dont care
+# check moderation difference
+# ---- LOCK
+# push value into key
+# expire it if it hasnt been touched in a while
+# watch was changed, another thread just messed with the
+# queue so we can't tell if our result is ok
+# create a rolling time window that saves the last 24 hours of hits
+# that's it!
+# Easy to use time variables
+# special case to auto generate correct start time
+#hyperloglogs
+# The KazooClient to manage the config
+# Zookeeper path to pointed to file
+# is True when the assignment has been set to
+# None but we cannot remove the config listener
+# the function to call when the validity changes
+# the function to call when the config changes
+# the function to call when an error occurs in reading
+# the current state of the ConfigWatcher with ZK
+# used when closing via ^C
+# The current file contents, to see if a change occurred
+# the current pointed path, to see if change occurred
+# this will throw an exception if it can't start right away
+# self.zoo_client.stop()
+# This is going to throw a SUSPENDED kazoo error
+# which will cause the sessions to be wiped and re established.
+# Used b/c of massive connection pool issues
+# dummy ping to ensure we are still connected
+# grab the file
+# file is a pointer, go update and watch other file
+# file is not a pointer, return contents
+# only grab file if our pointer is still good (not None)
+# You can use any or all of these, polling + handlers, some handlers, etc
+# Set default logging handler to avoid "No handler found" warnings.
+# Python 2.7+
+# Highest to lowest priority
+# test rolling the key we are using
+# this test ensures the thread can start and stop
+# test removing old keys
+# rough sleep to get us back on track
+# at this point the first 2 counts have expired
+# now everything has expired
+# check to ensure counter is still working
+# rough sleep to get us back on track
+# now the counter should have rolled
+# rough sleep to get us back on track
+# now the counter should have rolled
+# percent
+# rough sleep to get us back on track
+# rough sleep to get us back on track
+# we should be on to a new counter window by now
+# rough sleep to get us back on track
+# build testing suite
+# moved to the top to help get better consistency
+# from http://stackoverflow.com/questions/4219717/how-to-assert-output-with-nosetest-unittest-in-python
+# don't output an empty dict
+# Callback shouldn't fire
+# Callback shouldn't fire
+# assert example good encoding
+# assert bad encodings
+# python pickling is different between versions
+# limit is 2 hits in the window
+# an unmoderated queue is really just testing the number
+# of hits in a given window
+# mock exception raised even with good hits
+# a moderated queue should pop ~ every x seconds
+# we already tested the window limit in the unmoderated test
+# mock exception raised even with good moderation
+# test elastic kick in hasnt happened yet
+# kick in overrides, even though we were moderated
+# test no prior defaults
+#!/opt/miniconda/bin/python

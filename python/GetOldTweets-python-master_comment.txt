@@ -1,0 +1,15 @@
+﻿# -*- coding: utf-8 -*-
+# Example 1 - Get tweets by username
+### Example 1 - Get tweets by username [barackobama]", tweet)
+# Example 2 - Get tweets by query search
+### Example 2 - Get tweets by query search [europe refugees]", tweet)
+# Example 3 - Get tweets by username and bound dates
+### Example 3 - Get tweets by username and bound dates [barackobama, '2015-09-10', '2015-09-12']", tweet)
+#Remove incomplete tweets withheld by Twitter Guidelines
+# ', '#').replace('@ ', '@'))
+#\\w*)').findall(tweet.text))
+#Remove incomplete tweets withheld by Twitter Guidelines
+# ', '#').replace('@ ', '@'))
+#\\w*)').findall(tweet.text))
+#print(url)
+#print("Twitter weird response. Try to see on browser: ", url)

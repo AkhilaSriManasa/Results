@@ -1,0 +1,159 @@
+﻿#!/usr/bin/env python
+# FIXME
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# blog urls
+# rss & atom feed
+# sitemap
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+# SECURITY WARNING: keep the secret key used in production secret!
+#*r9=0wh5d0oo'
+# SECURITY WARNING: don't run with debug turned on in production!
+# Application definition
+# Database
+# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+# Internationalization
+# https://docs.djangoproject.com/en/1.6/topics/i18n/
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.6/howto/static-files/
+# Social Auth Settings
+# Rules
+# defined in settings_local.py
+# defined in settings_local.py
+# Use Django's standard `django.contrib.auth` permissions,
+# or allow read-only access for unauthenticated users.
+# Markitup Settings
+# default premise view: 'tree' or 'list'
+# Sitemap
+# it's required for gravatar
+# sometimes we have to create custom related object bundle.
+# for example: following actions. because user actions are
+# holding on relational database.
+# tricky a little bit.
+# if the page loaded full, probably there are more news
+# entries. if not, returns a single empty page, it's not a problem.
+# it's more effortless instead of get all collection for now.
+# -*- coding: utf-8 -*-
+# to avoid circular import
+# -*- coding:utf-8 -*-
+# coding=utf-8
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
+# avoid self-loop
+# prepare
+# mark as deleted
+# trigger
+# todo: find a proper way to handle this and remove this mixin
+# -*- coding: utf-8 -*-
+# add date_creation
+# avoid circular import
+# find a proper way to randomize
+# suggestions
+# denormalized field
+# denormalized field
+# denormalized field
+# RETURNS ALL THE CHILD PREMISE IDS
+# Encapsulated for newsfeed app.
+# self.save_karma_tree()
+# Create your tests here.
+# -*- coding:utf-8 -*-
+# remove notification
+#%s" % premise.pk
+#%s" % premise.pk
+#%s" % premise.pk
+#%s" % premise.pk
+# coding=utf-8
+#graph.add_node(premise.argument.pk, type="argument")
+#graph.add_edge(premise.argument.pk, node, type="reported")
+# coding=utf-8
+# coding=utf-8
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+#%(slug)s">%(name)s</a>'
+# -*- coding: utf-8 -*-
+# Since User.username is unique, this check is redundant,
+# but it sets a nicer error message than the ORM. See #13147.
+# -*- coding: utf-8 -*-
+# todo: find a way to make reverse relationships
+# with symmetrical false option
+# CALCULATES THE KARMA POINT OF USER
+# ACCORDING TO HOW MANY TIMES SUPPORTED * 2
+# DECREASE BY FALLACY COUNT * 2
+# HOW MANY CHILD PREMISES ARE ADDED TO USER'S PREMISES
+# sender can be `null` for system notifications
+# notification should be anonymous
+# Calculate the support count
+# print user.username, '==', user.karma
+# denormalizes sibling counts
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-

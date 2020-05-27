@@ -1,0 +1,733 @@
+﻿The MIT License (MIT)
+Copyright (c) 2016 runeberg (github: 1runeberg, UE4 Forums: runeberg)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+# Unreal Engine VR Plugin v3.0.6
+**Demo Project + Plugin Repository**
+
+Unreal Engine Virtual Reality Pawn and Components plugin for common VR mechanics. Can be used for either Blueprint or C++ VR projects. All nodes (Blueprint) and Functions (C++) have a range of parameters for full flexibility and compatible with the VIVE Motion Controllers/Room-Scale VR projects. 
+
+Also available in the [Unreal Engine Marketplace](https://www.unrealengine.com/marketplace/vr-pawn-components-plugin)
+
+**Supports both SteamVR/Vive & the Oculus Rift**
+
+## IMPORTANT:
+**For a plugin only repo (without demo project) [CLICK HERE](https://github.com/1runeberg/RunebergVR_Plugin/tree/4.22)**
+
+**For a UE 4.21 compatible project [CLICK HERE](https://github.com/1runeberg/RunebergVRPlugin/tree/4.21)**
+
+**For a UE 4.20 compatible project [CLICK HERE](https://github.com/1runeberg/RunebergVRPlugin/tree/4.20)**
+
+**If you need an empty starter project: https://github.com/1runeberg/RunebergVR_TESTMAP**
+
+## Latest Release Notes (UE 4.22)
+3.0.6
+- Hotfix for Teleport Component not working properly if BeamHitNavMeshTolerance is set beyond FVector::ZeroVector
+
+3.0.5:
+- Add Nav mesh checking ability to 360 movement (6 DOF) mechanic
+
+3.0.4:
+- Fix Oculus Teleport custom height offset not being applied (Teleporter)
+- Set default pawn spawn collision to ignore any colliding assets within the level (VRPawn)
+
+3.0.3:
+- IWYU Compliance
+
+3.0.2:
+- Gaze category fix, change default rift height offsets, minor refactor
+
+3.0.1.1:
+- Minor bug fixes & refactor (Gaze component)
+- Max Step Rate for Uneven Terrain by MrBigToe (VR Pawn)
+
+3.0:
+- New Teleport Fade In & Out Options (Teleport)
+- New Configurable beam/arc boundary object types (Teleport)
+- New Option to have target mesh indicator to face player camera (Gaze)
+- New Configurable grabbable object types - not auto attached (Grabber)
+- New Radial trace grab, allows main Grabber component to act like  the SimpleGrabber component (Grabber)
+- New Base content - hand, beam, whiteboxing shaders (Plugin)
+- Fixed HMD location offset issue (Teleport)
+- Fixed issue with Front Gaze Variable struct members not properly accessible in Blueprint (Gaze)
+- Fixed compiler warnings (Plugin)
+	
+2.73:
+- Bugfix Teleport HMD Type check causes crashes when no HMD device is available
+
+2.72:
+- Allow Grabber origin to respect Relative Rotation and Location defined in the Components Tab (Grabber)
+- Added Acceleration to Gravity's influence (VRPawn)
+- Added StepUp Rate in Uneven Terrain Pawn Z/Height adjustments (VRPawn)
+
+2.71:
+  - Removed remnants of SteamVR specific references in code base
+  
+2.7:
+  - Enable VR Pawn to react/move properly through uneven terrain (VRPawn)
+  - Dedicated node for 360 movement with thumbstick/thumbpad of Motion controllers (Movement component)
+  - Various fixes and polish for Gaze, Movement and VR Pawn
+
+2.65:
+  - Migrated to UE4.17
+
+2.6:
+  - Automatically set HMD Tracking Origin (VRPawn)
+  - Added gravity (VRPawn)
+  - Customizable target mesh (Beta, Gaze Component)
+  - Full 360 Yaw Movement Freedom for use with thumbstick input (Beta, Movement Component)
+  - Fix for Oculus height offset issue (VRPawn)
+
+
+2.5:
+  - Added Gaze interaction mechanic (new)
+  - Added function to check if HMD is currently worn (in VRPawn)
+  - Automatically set camera FOV to 110 to suit current released hardware, overridable (in VRPawn)
+
+
+## What you get:
+  - Pre-configured VR Pawn
+  - Gestures Component (Record & Recognize custom VR Gestures)
+  - Movement Component (free axis, locked axis, dash/timed motion, bounce from VR bounds & optional use of Nav Mesh bounds)
+  - Teleport (Arc, Ray, Blink)
+  - Grabber (precision, lock, scan only, grab sky/sun with cycle day and night)
+  - Gaze interaction
+  - Scalable meshes
+  - Climb
+
+## Preview:
+https://youtu.be/0Z49S7Q5lpw
+
+## Tutorials:
+
+#### Playlist
+https://www.youtube.com/playlist?list=PLngZ5l9HmlOQBtL8dzDD1lTAdXhsVEm4g
+
+#### 1. Setting up a new VR project & enabling VR in existing projects
+https://youtu.be/BOPFAYPeCAo
+
+#### 2. Movement / VR Locomotion Component Deep Dive
+https://youtu.be/QulxyAc2E08
+
+#### 3. Teleport Component Deep Dive
+https://youtu.be/kNZZf6j6T2M
+
+#### 4. Grabber Component Deep Dive
+https://youtu.be/cdUKwm9HesU
+
+#### 5. VR Gestures Component Deep Dive
+https://youtu.be/z78CMOwGWxM
+
+#### 6. RunebergVR Plugin v2 - Gaze Component Deep Dive
+https://youtu.be/tkYi9lnHbVw
+
+#### 7. RunebergVR Plugin v2 - Pawn Gravity, Uneven Terrain, Thumbstick 360 Movement 
+https://youtu.be/73Y1tcBl_Lw
+
+
+## Support Channels:
+a. UE4 Forums: 
+https://forums.unrealengine.com/showthread.php?109058-VR-Ready-C-Blueprintable-Pawn-with-common-VR-functions-Also-good-as-a-SteamVR-project-template
+
+b. GitHub:
+https://github.com/1runeberg/RunebergVRPlugin/issues
+
+c. Reddit:
+https://www.reddit.com/r/Vive/comments/4yx3q1/ue4_vr_components_plugin_easily_call_common_vr/
+
+
+Completely free for personal and commercial use under the [MIT] (https://opensource.org/licenses/MIT) License
+
+*... more tutorials to follow!*
+
+
+## Credits (for assets in the demo project)
+
+Most assets made by:
+Ty Hegner
+
+Surfboard model:
+Zaurian868
+https://free3d.com/3d-model/surfboard-31485.html
+
+Sword:
+lucasfalcao
+http://www.blendswap.com/blends/view/70259
+
+Voice:
+http://onlinetonegenerator.com/voice-generator.html
+
+Other Third Party:
+
+1. SFX by Freesound.org
+2. UE4 Starter & Sample Content
+3. UE4 Demoes:Kite, Elemental
+4. UE4 Particle Effects Project
+5. UE Landscape Project
+6. Sonniss.com GDC Bundle + Bulk SFX Samples for Fruity Loops
+7. Earth Satellite pic from NASA
+
+To the best of my knowledge, all art & sound assets used in this project are provided either royalty-free or are in the public domain - contact me for any questions.
+// Copyright (C) 2017  Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
+// we call this function before unloading the module.
+// Copyright (C) 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Called every frame
+// Climbing motion
+// Disable custom gravity if defined
+/** Enable climb mode */
+// Get parent attachment
+// If no climb tags have been specified, free climb
+// Climb tags have been specified, check for overlapping components. Parent must be of Primitive type
+// Check this component for defined climb tags
+// Set Climbing mode to active and initialize starting location
+// Stop custom gravity if defined
+/** Deactivate climb mode */
+// Deactivate climbing mode
+// Activate custom gravity if defined
+// Copyright (C) 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Called every frame
+// Move this actor to the direction of gravity
+/** Stop or Start Gravity if collided component or actor has the corresponding start/stop tag */
+// Check whether to stop gravity
+// Check whether to start gravity
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Called every frame
+// Check if we are gazing
+// Do line trace / ray-cast
+//if (bHit && Hit.GetActor())
+//{
+//	UE_LOG(LogTemp, Warning, TEXT("Actor hit is %s"), *Hit.GetActor()->GetName());
+//}
+// Draw Debug line
+// Return any hits
+// Check for tag
+// Save Hit
+// Add deltatime to current duration
+// Report hit
+// Show targetting static mesh if there's one
+// Spawn the beam mesh
+// Set the material for the targetting mesh
+// Set Target Mesh Transform
+// Spawn target mesh
+// Face the target mesh to the pawn
+// Check if sufficient time has elapsed for gaze to be considered a hit
+//else if (bHit && Hit.GetActor() && !Hit.GetActor()->ActorHasTag(TargetTag))
+//{
+//	// No valid actor in gaze range, reset gaze duration
+//	GazeHasHit = false;
+//	GazeCurrentDuration = 0.f;
+//	OnGazeLost.Broadcast(Hit);
+//}
+// No hit
+// Hide TargetMesh if it was spawned
+// Start gaze
+// End Gaze
+// Destroy TargetMesh if it was spawned
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Called when the game starts
+// Initialize Gesture
+// Called every frame
+// Add the time since last tick to the delta time
+// Check if the right amount of time has passed
+// Record current location of the controller and add to the existing pattern
+// Reset timer
+// Draw Real-time line if needed
+// Add spline point
+// Add the line mesh
+// Add mesh to spline
+// Set the location of the spline
+// Set prior vector to current point 
+// Set new prior vector
+// Create spline if there's not one already
+// Add initial spline point
+// Start recording VR Gesture
+// Name the gesture
+// Create a default name if none was provided
+// Clear the pattern array
+// Add the first vector in the pattern
+// Clear the timer
+// Set the recording interval
+// Set minimum interval if invalid interval was provided by user
+// Set realtime recording variables if needed
+// Start recording
+// Stop recording VR Gesture
+// Add the final vector in the pattern
+// Stop recording
+// Set the pattern to local space
+// Save to database
+// Remove realtime draw line
+// Reset realtime line variables
+// Return currently stored VR Gesture
+// Convenience function to save a gesture to DB
+// Add the normalized gesture into the DB
+// Convenience function to empty a Gesture DB
+// Remove Gesture
+// Clear spline meshes
+// Remove mesh component
+// Remove spline component
+// Clear spline point
+// Destroy spline
+// Draw stored gesture
+// Create Spline Component to draw on
+// Set the point type for the curve
+// Add spline points to spline
+// Add spline point
+// Draw gesture using the spline
+// Add the line mesh
+// Bend mesh to conform to arc
+// Set the location and orientation of the spline
+// Add Gesture to array of drawn gestures
+// Remove spline via timer
+// Clear drawn VR Gesture
+// Calculate the Manhattan Distance between two points
+// Calculate the Euclidian distance between two points
+// Calculate the minimum Dynamic Time Warping (DTW) distance between Gesture2 and every possible ending of Gesture1
+// Initialize reversed arrays (copy & reverse)
+// Create DTW Matrix
+// Dynamic computation of the DTW matrix.
+// Find the best match between Gesture2 and an ending of Gesture1
+// Find Gesture in the Known Gestures Database
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Called every frame
+// Pull-Push Mechanic
+// Update controller location & rotation
+// Update grabbed object location & rotation (if any)
+// Update controller location & rotation
+// Add controller rotation offsets
+// Set grabbed object rotation
+// Day Night cycle
+// Update controller location & rotation
+// Update Day-Night Cycle
+// Ray-Cast and grab an Actor
+// Set component vars
+// Update controller location & rotation
+// Calculate Standard Offset - invert Roll to ensure rotation of grabbed objects are retained
+// Show Debug line (helpful for a visual indicator during testing)
+// Draw Debug Sphere
+// Draw Debug Line Trace
+// Calculate Reach
+// Line trace
+// Check if there's a valid object to grab
+// Only grab an object with a Physics Handle
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - I grabbed : %s"), *ActorHit->GetName());
+// Automatic Attachment - Attach to Physics Handle
+// Check for actor tag
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - Couldn't find %s tag in this physics handle."), *TagName.ToString());
+// Do a Physics Handle Grab if automatic attachment is selected
+// Physics Handle found! Attempt to Grab Object
+// Make object face controller
+//FRotator TempRotator = UKismetMathLibrary::FindLookAtRotation(GrabbedObject->GetOwner()->GetActorLocation(), GetAttachParent()->GetComponentLocation());
+//GrabbedObject->SetTargetRotation(TempRotator);
+// Check for precision grab
+// Grab
+// NewGrabbedLocation holds the impact point of the line trace
+// Set transform
+// Grab
+// NewGrabbedLocation holds the impact point of the line trace
+// Set transform
+// Grab
+// NewGrabbedLocation holds the impact point of the line trace
+// Set transform
+// Grab
+// Set transform
+// UE_LOG(LogTemp, Warning, TEXT("GRABBER - Returning Actor %s."), *ActorHit->GetName());
+// Raycast and get any object hit by the line trace
+// Set a default grabbable object type if none was specified
+// Check if we need to do a radial trace or a simple line trace
+// Do a radial trace
+// Return the first hit result
+// Do line trace / ray-cast
+// See what we hit
+// Return any hits
+// Update Distance with hit distance
+// Set Grabbed transform for precision grabs
+// Send back actor that was hit by the line trace
+// Release hold of object
+// Check if we're currently pulling or pushing the grabbed object
+// Save the currently attached object
+// Player has latched on to something, release it
+// Set distance from controller
+// Set specified bounds
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - MinDistance: %f   MaxDistance: %f"), MinDistanceFromController, MaxDistanceFromController);
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - CurrentDistance: %f   Speed: %f"), DistanceFromController, Speed);
+// Check if we're pulling
+// Update controller location & rotation
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - PULLING..."));
+// Check if we're pushing
+// Update controller location & rotation
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - PUSHING..."));
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - NewDistance: %f   Speed: %f"),NewDistance, Speed);
+// Pull grabbed object
+// Update controller location & rotation
+// Set variables and begin pull
+// Push grabbed object
+// Update controller location & rotation
+// Set variables and begin pull
+// Update Pulled-Pushed Object
+// Get the distance from the controller
+// Try to set the new distance
+// Stop Pull
+// Stop Pull
+// Save the currently attached object
+// Stop ush
+// Stop Push
+// Save the currently attached object
+// Cycle World Day/Night
+// Check for given sky sphere
+// Check if this is a valid Skysphere
+// Valid Skysphere - get the directional light actor
+// No directional light for this sphere
+// Sun directional light component not found - possible invalid skysphere
+// Not a valid sky sphere
+// Check for valid given params
+// Update controller location & rotation
+// Set global params
+// Calculate the Distance from the Sun Reference Point (in case we are grabbing the sun for the day/night cycle mechanic
+// Ensure Light Actor is moveable
+// Initiate update on tick
+// Update Day/Night Cycle
+// Get Current Distance From Sun
+// Check direction of controller movement
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - CurrentDist: %f   Prev Dist: %f"),CurrentDistanceFromSun, DistanceFromSun);
+// WIP: Check for instances of the "reverse dawn" issue and compensate
+// Do not move beyond controller twist 
+// Retain current direction boolean (no change) and calculate delta rotation
+// Check Direction
+// Check for a negative pitch rotation for the controller
+// Negative rotation pitch -- invert direction (keep moving in the same direction to avoid the sun moving back after the controller hits a negative pitch)
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - 1"));
+// Positive rotation pitch -- move in the direction of the controller (towards or away from the westmost reference point)
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - 2"));
+// Check for a negative pitch rotation for the controller
+// Positive rotation pitch -- move in the direction of the controller (towards or away from the westmost reference point)
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - 3"));
+// Negative rotation pitch -- invert direction (keep moving in the same direction to avoid the sun moving back after the controller hits a negative pitch)
+//UE_LOG(LogTemp, Warning, TEXT("GRABBER - 4"));
+// Update light rotation
+// ensure negative delta pitch
+// ensure positive delta pitch
+// Update day-night cycle mechanic variables
+// Update the sun's brightness
+// Update the sun direction
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Called when the game starts
+// Get reference to the Pawn
+// Called every frame
+// Check if there's a movement reference actor
+// Set rotation/orientation
+// Apply rotation offset
+// Apply rotation offset (if any)
+// Set axis locks : Pitch (Y), Yaw (Z), Roll (X)
+// Set Target Location
+// Do we need to move within Nav Mesh Bounds?
+// Check TargetLocation if it's in the nav mesh
+// Check if target location is within the nav mesh
+// Move Pawn to Target Location
+// Stop movement
+// Move Pawn to Target Location
+// Move VR Pawn
+// Check if there's a movement reference actor
+// Set axis locks
+// Set Custom Direction as rotation offset
+// Set Movement speed
+// Set the Pawn to moving state
+// Enable VR Movement
+// Check if we need to respect Nav Mesh Bounds
+// Disable VR Movement
+// Set the Pawn to static state
+// Reset Offset
+// Apply acceleration multiplier to current movement speed - can be used for smooth acceleration/deceleration
+// Disable VR Bounds Bounce Back Movement
+// Bring back movement state of pawn when we started the bounce back
+// Set the Pawn to static state
+// Timed movement - move pawn for a specified amount of time
+// Start movement
+// End movement via timer
+// Dash move (timed)  - dash into a predefined direction and time
+// Start movement
+// End movement via timer
+// Bounce back from VR bounds
+// Set whether we want to reinstate movement state of pawn after the bounce back
+// Disable standard VR Movement
+// Start movement
+// End movement via timer
+// Full 360 Movement
+// Inverse sign of Y Axis t
+// Get target Rotation
+// Calculate direction
+// Set axis locks : Pitch (Y), Yaw (Z), Roll (X)
+// Move Pawn
+// Check if we need to obey nav mesh
+// Check TargetLocation if it's in the nav mesh
+// Check if target location is within the nav mesh
+// Move Pawn to Target Location
+// Move Pawn to Target Location
+// Stop movement if doing full 360 and no x,y axis input is registered (e.g. thumbstick)
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values
+// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+// Set Base Eye Height
+// Set root scene component - use static mesh to ensure collisions
+// Ensure pawn always spawns regardless of collision
+// Add Scene component (for headset positioning), set to -110 to ensure headset starts at floor
+// Add camera
+// Add Capsule Collission, set default VR half height and radius values
+// Add Motion Controllers
+// Called when the game starts
+// Adjust pawn spawn target offset based on HMD
+// Override height offset for Oculus Rift
+// This ensure we use the Oculus location offset for uneven terrain calculations
+// Set Motion Controller Hands - backwards compatibility for projects made in UE4.18 and earlier
+// Set tracking origin (Oculus & Vive)
+// Set Current Gravity Strength
+// Called every frame
+// Get the current position of the Camera
+// Apply gravity if enabled and camera is positioned at the head of the player
+// Set line trace for gravity variables
+// Initialize Gravity Trace Hit Result var
+//RayTraceParams.bTraceAsyncScene = true;
+// Do a line trace and check for a component that can be stepped on
+// Check if we need to float the Pawn over uneven terrain
+// Check for MaxStepHeight 
+// Apply gravity
+// Calculate gravity with acceleration and apply to the pawn
+// Reset current gravity
+// Override all default pawn values
+// Set Pawn base eye hegiht
+// Set Camera Field of View
+// Set capsule collision settings
+// Set scene location
+// Set motion controller location
+// Check if the HMD is worn
+// Pawn Rotation - usefull for static mouse rotations during development
+// Print debug message
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Called when the game starts
+// Get all child skeletal & static meshes of this component
+// Called every frame
+// Set visibility
+// Set scales for each direction as needed
+// Update Scales (exploded for possible future tweaking)
+// Check if we can stop scaling now
+// Set scales for each direction as needed
+// Update Scales (exploded for possible future tweaking)
+// Check if we can stop scaling now
+// Set New Visibility
+// Stop Scaling
+// Set visibility
+// Face mesh to target location
+// We haven't reached the target location yet, set the mesh scale
+// Update times to scale
+// Check if we can stop scaling now
+// Face pawn to target location
+//GetOwner()->SetActorRotation(UKismetMathLibrary::FindLookAtRotation(GetOwner()->GetActorLocation(), TargetLocation));
+// We haven't reached the target location yet, set the mesh scale
+// Move Pawn towards target location
+// Update times to scale
+// Check if we can stop scaling now
+// Set New Visibility
+// Turn off scaling
+// Scale mesh to specified distance amount
+// Scale mesh down
+// Scale mesh to specified location
+// Update variables
+// Use X as magnitude for any direction
+// Calculate how much to scale
+// Initiate mesh scale
+// Scale mesh down and move pawn to target location
+// Update variables
+// Use X as magnitude for any direction
+// Calculate how much to scale
+// Initiate mesh scale
+// Copyright (C) 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Create sphere collision
+// Register the collision delegate function (begin overlap)
+// Called when the game starts
+// Set Sphere Component Defaults
+// Enable grabbing mode
+// Disable grabbing mode
+// Detach grabbed object from grabber
+// Empty grabbed object holder
+// Re-enable physics on component
+// Empty grabbed component holder
+// Copyright (C) 2016, 2017 Runeberg (github: 1runeberg, UE4 Forums: runeberg)
+/*
+// Sets default values for this component's properties
+// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+// off to improve performance if you don't need them.
+// Auto Activate this component
+// Called when the game starts
+// Ensure target marker is not visible at start
+// Set default object type for the teleport arc to recognize as a boundary if none was provided
+// World static objects
+//ArcTeleportBoundary_ObjectTypes.Add(EObjectTypeQuery::ObjectTypeQuery2);	// Dynamic objects 
+// Create teleport arc spline
+// Called every frame
+// Draw Teleport Arc
+// Set Teleport Arc Parameters
+// Do the arc trace
+// Show Target Marker (if a valid teleport location)
+// Check if arc hit location is within the nav mesh
+// Set Marker location
+// Check marker rotation
+// Apply marker position and orientation
+// Set Target Marker Visibility
+// Set Target Marker Visibility
+// Set Target Marker Visibility
+// Set the teleport arc points
+// Clean-up old Spline
+// Set the point type for the curve
+// Add the point to the arc spline
+// Populate arc points with meshes
+// Add the arc mesh
+//ArcMesh->AttachToComponent(ArcSpline, FAttachmentTransformRules::KeepRelativeTransform);
+// Bend mesh to conform to arc
+// Clear Teleport arc
+// Clear Arc
+// Show the teleportation arc trace
+// Remove the teleportation arc trace
+// Get last teleport location status
+// Clear teleport vars
+// Clear Target Marker
+// Remove the teleportation ray trace
+// Clear Target Marker
+// Clear Teleport ray
+// Remove ray mesh component
+// Draw Teleport Ray
+// Setup ray trace
+//Ray_TraceParams.bTraceAsyncScene = true;
+// Initialize Hit Result var
+// Get Target Location
+// Do the ray trace
+// Reset Target Marker
+// Check if we hit a possible location to teleport to
+// Check if target location is within the nav mesh
+// Set Target Marker Visibility
+// Check marker rotation
+// Draw ray mesh
+// Spawn the beam mesh
+// Scale the beam mesh
+// Calculate how long the beam should be using RayScaleRate as the base unit
+// Scale beam mesh gradually until it reaches the target location
+// We haven't reached the target location yet, set the mesh scale
+// Update temp scale variables
+// Scale mesh to max possible size to hit target location
+// Show the teleportation ray trace
+// Teleport object
+// Only teleport if targetting is enabled
+// Get HMD Position & Orientation
+// Calculate target location
+// Setup camera offsets
+// Use camera vs pawn location as an accurate offset over the HMD location
+// Location Troubleshooting
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Current Pawn Location (pre-teleport): %s"), *GetOwner()->GetActorLocation().ToString());
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Current HMD Location: %s"), *HMDLocation.ToString());
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Current Camera World Location: %s"), *PawnCamera->GetComponentLocation().ToString());
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Current Camera Relative Location: %s"), *PawnCamera->GetRelativeTransform().GetLocation().ToString());
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Unadjusted Target Location is: %s"), *TeleportTargetLoc.ToString());
+// Set target location adjustments
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Adjusted Target Location is: %s"), *TeleportTargetLoc.ToString());
+// Apply Custom Rotation if needed
+// Set Target Physics
+// Check if we need to fade out
+// Teleport pawn
+// Apply teleport offset time
+// Immediately teleport
+// Wait for fade out before teleporting
+// Start Fade out - hold fade if there's an active fade in effect
+// No effective fade out, instantly teleport pawn
+// Check if we need to fade in
+// Start fade in
+// Remove teleport artifacts
+// Reset Teleport mode
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Current Pawn Location (post-teleport): %s"), *GetOwner()->GetActorLocation().ToString());
+// Teleport Pawn
+// Clear Fade Timer Handle
+// Show the teleport target marker
+// Calculate Target Location
+// Check if target location is within the nav mesh
+// Set Target Marker Visibility
+// Set teleport parameters
+// Show target marker
+// Calculate Rotation of marker to face player and set the new transform
+// Make target marker visible
+// Remove Marker
+// Clear Target Marker
+// Move marker
+// Only move marker if it is visible and active
+// Tilt original marker location to point Westwards
+// Calculate target location 
+// Tilt original marker location to point Eastwards
+// Calculate target location 
+// Show target location marker
+// Activate Particle System if available
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Current Particle Marker Transform is: %s"), *TargetParticleSystemComponent->GetComponentTransform().ToString());
+// Show Static Mesh if available
+// Create new static mesh component and attach to actor
+//Set Mesh
+//UE_LOG(LogTemp, Warning, TEXT("[TELEPORT] Current Static Mesh Marker Transform is: %s"), *TargetStaticMeshComponent->GetComponentTransform().ToString());
+// Remove target location marker
+// Destroy Particle System if available
+// Destroy Static Mesh if available
+// Show target location marker
+// Activate Particle System if available
+// Show Static Mesh if available
+// Move target location marker
+// Activate Particle System if available
+// Show Static Mesh if available
+// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
+// Uncomment if you are using Slate UI
+// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
+// Uncomment if you are using online features
+// PrivateDependencyModuleNames.Add("OnlineSubsystem");
+// if ((Target.Platform == UnrealTargetPlatform.Win32) || (Target.Platform == UnrealTargetPlatform.Win64))
+// {
+//		if (UEBuildConfiguration.bCompileSteamOSS == true)
+//		{
+//			DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
+//		}
+// }

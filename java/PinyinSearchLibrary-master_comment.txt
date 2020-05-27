@@ -1,0 +1,365 @@
+﻿/**
+//d.android.com/tools/testing">Testing documentation</a>
+// Context of the app under test.
+// load fragment
+// TODO Auto-generated method stub
+/**
+// ms
+//Toast.makeText(context, "AppChangedReceiver["+intent.getAction()+"]", Toast.LENGTH_LONG).show();
+//Toast.makeText(context, "AppChangedReceiver ACTION_PACKAGE_ADDED", Toast.LENGTH_LONG).show();
+//Toast.makeText(context, "AppChangedReceiver ACTION_PACKAGE_CHANGED", Toast.LENGTH_LONG).show();
+//AppInfoHelper.getInstance().setAppInfoChanged(true);
+//Toast.makeText(context, "AppChangedReceiver ACTION_PACKAGE_REMOVED", Toast.LENGTH_LONG).show();
+//AppInfoHelper.getInstance().setAppInfoChanged(true);
+/* Start: OnNavigationBarLayout */
+/* End: OnNavigationBarLayout */
+/**
+/**
+/**
+/* start: T9 search view */
+/* end: T9 search view */
+/* start: Qwerty search view */
+/* end: Qwerty search view */
+/* start: T9 search tab */
+/* end: T9 search tab */
+/* start: Qwerty search tab */
+/* end: Qwerty search tab */
+// Toast.makeText(getContext(),addressBookView.getTag().toString()+"+++"
+// , Toast.LENGTH_LONG).show();
+/* start: OnAppInfoLoad */
+/* end: OnAppInfoLoad */
+/* start: OnTabChange */
+// ((T9SearchFragment) fragment).updateView(tabChangeState);
+/* end: OnTabChange */
+/*start: OnSearchBox*/
+/*end: OnSearchBox*/
+/* start: OnT9TelephoneDialpadView */
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/* end: OnT9TelephoneDialpadView */
+// TODO Auto-generated method stub
+//setAppInfoChanged(false);
+//Toast.makeText(mContext, "endLoadTime-startLoadTime["+(endLoadTime-startLoadTime)+"]", Toast.LENGTH_LONG).show();
+//appInfos.addAll(nonKanjiStartAppInfos);
+/*Start: merge nonKanjiStartAppInfos and kanjiStartAppInfos*/
+//Log.i(TAG, "nonKanfirstLetter=["+nonKanfirstLetter+"]["+nonKanjiStartAppInfos.get(i).getLabel()+"]["+Integer.valueOf(nonKanjiStartAppInfos.get(i).getLabel().charAt(0))+"]");
+//Log.i(TAG, "lastIndex="+lastIndex);
+/*End: merge nonKanjiStartAppInfos and kanjiStartAppInfos*/
+/*		for(int i=0; i<appInfos.size(); i++){
+//Toast.makeText(context,"["+ appInfos.get(0).getLabel()+"]["+appInfos.get(0).getPackageName()+"]", Toast.LENGTH_LONG).show();
+// search by LabelPinyinUnits;
+// search by LabelPinyinUnits;
+/*QuickAlphabeticBar.DEFAULT_INDEX_CHARACTER*/'#')
+//case ALL_APP:
+/**
+// as the sort key word
+// save the mLabel converted to Pinyin characters.
+// Used to save the type of search
+// Used to save the type of Match Keywords.(label)
+//the match start  position of mMatchKeywords in original string(label).
+//the match length of mMatchKeywords in original string(name or phoneNumber).
+/*SYSTEM_APP,
+// TODO Auto-generated constructor stub
+// TODO Auto-generated method stub
+/**
+// tag
+// selected_unfocused Icon
+// selected_focused Icon
+// unselected Icon
+// text
+// TODO Auto-generated method stub
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//without underline
+/**
+// Set up touch listener for non-text box views to hide keyboard.
+// If a layout container, iterate over children and seed recursion.
+/**
+// mTitleTv.setTextSize(mContext.getResources().getDimension(R.dimen.tab_index_text_size));
+/*
+/* start: search box */
+/* end: search box */
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/**
+/**
+/**
+// this Custom View As the T9TelephoneDialpadView
+// of children
+/**
+/**
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+// Toast.makeText(mContext,
+// "onDialInputTextChanged[" + s.toString() + "]",
+// Toast.LENGTH_SHORT).show();
+// In order to prevent the soft keyboard pops up,but also can
+// not make EditText get focus.
+// the listener has consumed the event
+// Toast.makeText(mContext, "addSingleDialCharacter[" + addCharacter +
+// "]",
+// Toast.LENGTH_SHORT).show();
+//data
+/*Start: OnClickListener*/
+/*End: OnClickListener*/
+//this.setPadding(PADDING_LEFT_DEFAULT, PADDING_TOP_DEFAULT, PADDING_RIGHT_DEFAULT, PADDING_BOTTOM_DEFAULT);
+//lp.setMargins(MARGIN_LEFT_DEFAULT, MARGIN_TOP_DEFAULT, MARGIN_RIGHT_DEFAULT, MARGIN_BOTTOM_DEFAULT);
+//change tab
+//click tab
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+// Context of the app under test.
+// load fragment
+// TODO Auto-generated method stub
+/**
+//public static final String PINYIN_FIRST_LETTER_DEFAULT_VALUE="#";
+//void onContactsSelectedChanged(List<Contacts> contacts);
+//clear data
+//other phoneNumber
+//refresh view
+//show the first alphabet of name
+//show name and phone number
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/*Toast.makeText(mContext,PinyinUtil.getFirstCharacter(contacts.getNamePinyinUnits()),
+/**
+/**
+/**
+//private EditText mSearchEt;
+/*Start: OnContactsLoad*/
+/*End: OnContactsLoad*/
+/*start: OnSearchBox*/
+/*end: OnSearchBox*/
+/*Start: OnContactsOperationView*/
+//Toast.makeText(mContext, "onContactsCall"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+//Toast.makeText(mContext, "onContactsSms"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+/*Start: OnContactsOperationView*/
+/*start:OnT9TelephoneDialpadView*/
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/*end:OnT9TelephoneDialpadView*/
+/*start:OnContactsLoad*/
+//just background printing contacts information
+//ContactsHelper.getInstance().showContactsInfo();
+//ContactsIndexHelper.getInstance().showContactsInfo();
+/*end:OnContactsLoad*/
+/*start:OnContactsOperationView*/
+//Toast.makeText(mContext, "onContactsCall"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+//Toast.makeText(mContext, "onContactsSms"+contacts.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+/*end:OnContactsOperationView*/
+// The basic data used for the search
+// The search results from the basic data
+/*
+/*
+//(id+phoneNumber)as key
+/* private Handler mContactsHandler=new Handler(); */
+// registerContentObserver();
+// unregisterContentObserver();
+// the system will free other memory.
+// public void setBaseContacts(List<Contacts> baseContacts) {
+// mBaseContacts = baseContacts;
+// }
+// public void setSearchContacts(List<Contacts> searchContacts) {
+// mSearchContacts = searchContacts;
+// }
+/**
+/**
+// add all base data to search
+//mSearchContacts.addAll(mBaseContacts);
+/**
+// search by name;
+// search by phone number
+/**
+// add all base data to search
+//mSearchContacts.addAll(mBaseContacts);
+/**
+// search by name;
+// search by phone number
+// just for debug
+//List<PinyinUnit> pinyinUnit = currentCoutacts.getPinyinSearchUnit().getPinyinUnits();//.getNamePinyinUnits();
+//.getNamePinyinUnits();
+//	Log.i(TAG, "id=["+id+"]name=["+displayName+"]"+"number=["+phoneNumber+"]");
+//contacts.addAll(nonKanjiStartContacts);
+//merge nonKanjiStartContacts and kanjiStartContacts
+//Log.i(TAG, "nonKanfirstLetter=["+nonKanfirstLetter+"]");
+//Log.i(TAG, "lastIndex="+lastIndex);
+/*for (int i = 0; i < contacts.size(); i++) {
+/**
+/**
+/*public void setContactsIndexs(List<ContactsIndex> contactsIndexs) {
+/*public void showContactsInfo2(){
+//Log.i("ContactsContacts", "indexKey=["+mContactsIndexs.get(i).getIndexKey()+"]");
+// as the sort key word
+// save the mName converted to Pinyin characters.
+// Used to save the type of search
+// Used to save the type of Match Keywords.(name or phoneNumber)
+//the match start  position of mMatchKeywords in original string(name or phoneNumber).
+//the match length of mMatchKeywords in original string(name or phoneNumber).
+//whether select contact
+//whether the first multiple Contacts
+//whether hide multiple contacts
+//whether belong multiple contacts phone, the value of the variable will not change once you set.
+//whether hide operation view
+//point the contacts information who has multiple numbers. 
+/*public static Comparator<List<Contacts>> mAscComparator = new Comparator<List<Contacts>>() {
+// not deep copy
+/*	public void showContacts(){
+/**
+//'#','A'~'Z'
+/*public void setContacts(List<Contacts> contacts) {
+/**
+/**
+/**
+/**
+//without underline
+/**
+// Set up touch listener for non-text box views to hide keyboard.
+// If a layout container, iterate over children and seed recursion.
+/**
+// listview
+// data
+// adapter
+// mContactsIndexView.setBackgroundColor(getResources().getColor(R.color.cyan3));
+// setCurrentSelectChar('#');
+/*mIndexValueLv.setOnItemClickListener(new OnItemClickListener() {
+//set current index key
+//set current index value
+//				if(contacts.get(j-1).getName().charAt(0)!=contacts.get(j).getName().charAt(0)){
+/*	for (int j = 0; j < mContactsIndex.getContacts().size(); j++) {
+/*Toast.makeText(mContext,PinyinUtil.getFirstCharacter(contacts.getNamePinyinUnits()),
+// ms
+// mQuickAlphabeticLv.setSelection(position);
+//Log.i(TAG, "onQuickAlphabeticBarDown");
+// hideView(mContactsIndexView);
+/*start:OnContactsAdapter*/
+// TODO Auto-generated method stub
+/*end:OnContactsAdapter*/
+// TODO Auto-generated method stub
+// Log.i(TAG,
+// "firstVisibleItem=["+firstVisibleItem+"]visibleItemCount=["+visibleItemCount+"totalItemCount=["+totalItemCount+"]");
+/*public static void setSelectCharacters(char[] mSelectCharacters) {
+//Log.i(TAG,"index="+index);
+//show select char
+//reference: http://blog.csdn.net/jack_l1/article/details/14165291
+//Log.i(TAG,"position="+position);
+//hide select char
+//xPos=getMeasuredWidth()/2- mOtherIndexPaint.measureText(String.valueOf(mSelectCharacters[i])); 
+/* start: search box */
+/* end: search box */
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+/**
+/**
+// this Custom View As the T9TelephoneDialpadView
+// of children
+/**
+/**
+// TODO Auto-generated method stub
+// TODO Auto-generated method stub
+// Toast.makeText(mContext,
+// "onDialInputTextChanged[" + s.toString() + "]",
+// Toast.LENGTH_SHORT).show();
+// In order to prevent the soft keyboard pops up,but also can
+// not make EditText get focus.
+// the listener has consumed the event
+// Toast.makeText(mContext, "addSingleDialCharacter[" + addCharacter +
+// "]",
+// Toast.LENGTH_SHORT).show();
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+// Context of the app under test.
+/**
+//d.android.com/tools/testing">Testing documentation</a>
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//the original string
+//the sub string of base data which search by key word
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.cnblogs.com/bomo/archive/2012/12/25/2833081.html
+//Whether Pinyin
+//save starting index position that the variables in the original string. 
+/*
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// init Pinyin Output Format
+/**
+// add continuous non-kanji characters to PinyinUnit
+// add single Chinese characters Pinyin(include Multiple Pinyin)
+// to PinyinUnit
+// add continuous non-kanji characters to PinyinUnit
+/**
+/**
+/**
+/**
+// no more than one pinyin
+// more than one pinyin.//we must delete the same pinyin
+// string,because pinyin without tone.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// private static final String TAG="QwertyMatchPinyinUnits";
+/**
+//search by  original string
+//search by pinyin characters
+/**
+// match success
+// match pinyin first character
+// delete the match character
+// The string of "search" is the string of pinyinBaseUnit.getPinyin() of a subset. means match success.
+// match quanpin success
+// The string of pinyinBaseUnit.getPinyin() is the string of "search" of a subset.
+// mismatch
+// non-pure Pinyin
+// The string of "search" is the string of pinyinBaseUnit.getPinyin() of a subset.
+// match all non-pure pinyin
+// The string of pinyinBaseUnit.getPinyin() is the string of "search" of a subset.
+// match case:[Non-Chinese characters]+[Chinese characters]
+// for example:baseData="Tony测试"; match this case:"onycs"
+// start [Non-Chinese characters]+[Chinese characters]
+// end [Non-Chinese characters]+[Chinese characters]
+// in fact,if pyUnit.isPinyin()==false, pyUnit.getQwertyPinyinUnitIndex().size()==1. The function of findPinyinUnits() will return false.
+// mismatch
+// in fact,if pyUnit.isPinyin()==false, pyUnit.getQwertyPinyinUnitIndex().size()==1. The function of findPinyinUnits() will return false.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//private static final String TAG="T9MatchPinyinUnits";
+/**
+/**
+//pyUnit=pinyinUnits.get(i);
+//for(int j=0; j<pyUnit.getPinyinBaseUnitIndex().size(); j++){
+// }
+/**
+//match success
+// match pinyin first character
+//delete the match character
+//The string of "search" is the string of t9PinyinUnit.getNumber() of a subset. means match success.
+//match quanpin  success
+//The string of t9PinyinUnit.getNumber() is the string of "search" of a subset.
+//mismatch
+//non-pure Pinyin
+//The string of "search" is the string of t9PinyinUnit.getNumber() of a subset.
+//match all non-pure pinyin 
+//The string of t9PinyinUnit.getNumber() is the string of "search" of a subset.
+// match case:[Non-Chinese characters]+[Chinese characters]
+//for example:baseData="Tony测试"; match this case:"onycs"<===>"66927" 
+//start [Non-Chinese characters]+[Chinese characters]
+//end [Non-Chinese characters]+[Chinese characters]
+//in fact,if pyUnit.isPinyin()==false, pyUnit.getPinyinBaseUnitIndex().size()==1. The function of findPinyinUnits() will return false.
+//mismatch
+//in fact,if pyUnit.isPinyin()==false, pyUnit.getPinyinBaseUnitIndex().size()==1.  The function of findPinyinUnits() will return false.

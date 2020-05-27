@@ -1,0 +1,638 @@
+﻿//
+//          Copyright Marshall Clow 2009-2010
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//
+//
+//	typedef std::pair < std::string, string_type > header_type;
+// typedef boost::mime::mime_part<>	mime_part;
+//	std::cout << "    " << berr.what () << std::endl;
+//	std::ofstream out ( (std::string ( argv[i] ) + "-Results").c_str (),
+// std::ios::binary );
+//	out << rmp;
+//
+//          Copyright Marshall Clow 2009-2010
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//
+//
+//	typedef std::pair < std::string, string_type > header_type;
+//	(1) a really simple part
+//	Three trips around the house before we go through the door.
+//	Make a part, copy it onto the heap, and wrap it into a shared pointer.
+//	Build a multipart
+//	stream it out to a string, then make a new part from the string
+//	Write the differences out to files for examination
+/*
+//	typedef std::pair < std::string, string_type > header_type;
+// using namespace boost::mime;
+// Following test is removed because the file it used often tripped
+// false-positives when scanned by virus checkers.
+//    framework::master_test_suite().add ( BOOST_TEST_CASE( boost::bind (
+// test_roundtrip, "TestMessages/00001136" )));
+//	test cases that fail
+//  framework::master_test_suite().add ( BOOST_TEST_CASE( boost::bind (
+// test_roundtrip, "TestMessages/0019-NoBoundary" )));
+/*
+//	typedef std::pair < std::string, string_type > header_type;
+//	std::cout << "    " << berr.what () << std::endl;
+// Copyright 2008, 2014 Dean Michael Berris <dberris@google.com>
+// Copyright 2014 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//[ http_client_main
+/*`
+//]
+//          Copyright Dean Michael Berris 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//            Copyright (c) Glyn Matthews 2009, 2010.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//[ simple_wget_main
+/*`
+// namespace
+//]
+// Copyright 2014 Dean Michael Berris <dberris@google.com>
+// Copyright 2014 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.google.com/");
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+// namespace atom
+// namespace network
+// namespace boost
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// chunk it up page by page
+// Maximum size for incoming request bodies.
+/*
+//www.boost.org/LICENSE_1_0.txt)
+// This is needed to terminate the worker queue, and must be visible to the signal handler.
+/**
+/**
+/**
+/**
+/**
+// some heavy work!
+// the thread group
+// setup asio::io_service
+// io_service threads
+// the shared work queue
+// worker threads that will process the request; off the queue
+// setup the async server
+// setup clean shutdown
+// run the async server
+//            Copyright (c) Glyn Matthews 2010.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//[ hello_world_client_main
+/*`
+/*<< Creates the client. >>*/
+/*<< Creates a request using a URI supplied on the command
+/*<< Gets a response from the HTTP server. >>*/
+/*<< Prints the response body to the console. >>*/
+//]
+// Copyright 2009 (c) Tarro, Inc.
+// Copyright 2009 (c) Dean Michael Berris <mikhailberis@gmail.com>
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//
+//[ hello_world_server_main
+/*`
+/*<< Defines the server. >>*/
+/*<< Defines the request handler.  It's a class that defines two
+/*<< This is the function that handles the incoming request. >>*/
+/*<< Creates the request handler. >>*/
+/*<< Creates the server. >>*/
+/*<< Runs the server. >>*/
+//]
+// Copyright Dean Michael Berris 2010.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//[ http_one_liner_main
+/*`
+/*<< The client sends an HTTP request to the server, and the output
+//www.boost.org/")));
+/*
+//www.openssl.org/)
+//www.boost.org/LICENSE_1_0.txt)
+/**
+/**
+// setup boost::asio::io_service
+// Initialize SSL context
+// Set keys
+// setup the async server
+// setup clean shutdown
+// run the async server
+// we are stopped - shutting down
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+// namespace rss
+// namespace network
+// namespace boost
+// Since we're having issues with libc++ on OS X we're excluding this in the
+// meantime if we're using libc++
+// the main entry point does nothing; the tests are run by constructors
+// of testing classes, which are executed by global variables
+// macros to build names of test classes ans gobal runner variables
+// testing block sizes (im MB) which let the tests run approximately
+// 5s on my machine in the optimized mode
+// testing block sizes (im MB) which let the tests run approximately
+// 5s on my machine in the not optimized mode
+// the class name of a test suite; base64 has to be defined as a namespace
+// name with an alternative implementation of the base64 encoding interface
+// the code which actually performs the encoding; base64 has to be defined
+// as a namespace name - see above
+// testing the code from experimental/base64-stateless.hpp
+// NOTE(dberris): Only do this if we're NOT using libc++.
+// enable the second test case, which encodes the input buffer chunk by chunk
+// and remembers the encoding state to be able to continue
+// testing the code from experimental/base64-stateful_buffer.hpp
+// _LIBCPP_VERSION
+// testing the code from experimental/base64-stateful_transform.hpp
+// testing the code from experimental/base64-stateful_iterator.hpp
+// testing the code from experimental/base64-standalone.hpp,
+// which has become the code in boost/network/utils/base64/encode.hpp
+// redefine the testing code to use the iostream implementation from
+// boost/network/utils/base64/encode-io.hpp which depends on the
+// interface from boost/network/utils/base64/encode.hpp
+// testing the iostream implementation with the code from
+// boost/network/utils/base64/encode.hpp
+// Copyright 2011 Dean Michael Berris (dberris@google.com).
+// Copyright 2011 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// Copyright 2013 Google, Inc.
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// <typename Attrib, typename T, typename Enable>
+// namespace traits
+// namespace spirit
+// namespace boost
+// namespace http
+// namespace network
+// namespace boost
+//            Copyright (c) Glyn Matthews 2010.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//
+// The problem here is a bizarre compilation failure in including
+// these two files, and instantiating a client.  It's described at
+// http://github.com/cpp-netlib/cpp-netlib/issues#issue/13
+//
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// do nothing here.
+// proves that all public functions are compilable; the result check
+// is very minimum here, so that the test doesn't look so stupid ;-)
+// check string literal
+// check std::string
+// check array of chars
+// check boost::array of chars
+// check std::vector of chars
+// check array of ints
+// check boost::array of ints
+// check std::vector of ints
+// check that base64::encode_rest is compilable and callable
+// check that the iostream interface is compilable and callable
+// checks that functions encoding a single chunk append the correct padding
+// if the input byte count is not divisible by 3
+// check that functions using encoding state interrupt and resume encoding
+// correcly if the byte count of the partial input is not divisible by 3
+// check encoding empty input; including the state value
+// check one third of quantum which needs two character padding;
+// including how the state develops when encoded by single character
+// check two thirds of quantum which needs one character padding;
+// including how the state develops when encoded by single character
+// check a complete quantum which needs no padding; including
+// how the state develops when encoded by single character
+// checks that the base64 output can be returned as wchar_t too
+// checks that the base64-io manipulators are compilable and work
+// check complete quantum where no state has to be remembered
+// check that encode_rest clears the state
+// check that forced clearing the state works
+// check one third of quantum which has to be remembered in state
+// check two thirds of quantum which have to be remembered in state.
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2015 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// This test specifies the requirements for a thread pool interface. At the
+// very least any thread pool implementation should be able to pass the simple
+// tests that this unit test requires of thread pools. Ultimately the
+// requirements will show up in the Concept documentation, but this test is the
+// canonical definition of what a thread pool should look like at least
+// syntactically.
+//
+// require that pool is destroyed here, RAII baby
+// Test using multiple threads.
+// nice round number of threads.
+// Wait for threads to be done.
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2015 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// Migrated from using Boost.Test to using googletest intead.
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.boost.org:80/");
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//cpp-netlib.org/");
+// XXX we should find a better way to check if `ready()` has done his job
+// Copyright 2011 Dean Michael Berris &lt;mikhailberis@gmail.com&gt;.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.boost.org");
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2017 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//cpp-netlib.org/");
+//www.github.com/");
+//cpp-netlib.org/");
+//malformed.google.comq");
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//localhost:12121/");
+//localhost:8000/cgi-bin/sleep.py?3");
+//localhost:8000/cgi-bin/sleep.py?3");
+// Copyright Divye Kapoor 2008.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//
+// Changes by Kim Grasman 2008
+// Changes by Dean Michael Berris 2008, 2010, 2016
+//localhost:8000";
+// Uncomment the below if you're running Python pre-2.6. There was a bug
+// in the Python HTTP server for earlier versions that causes this test
+// case to fail.
+// BOOST_AUTO_TEST_CASE_EXPECTED_FAILURES(text_query_preserves_crlf, 2);
+// Tests presence of body in http responses
+// Tests correct parsing of the content-type header sent by the server
+// Tests correct parsing of content-type for binary files such as .zip files
+// Uses the test.xml file to ensure that the file was received at the correct
+// length for a text encoding
+// Tests proper transfer of a text file
+// Tests proper transfer of a binary image
+// Get a dynamic request with no Content-Length header
+// Ensure that we have a body
+// Request for a non existing file.
+// Ensure that we have a body even in the presence of an error response
+// This test checks that the headers echoed through echo_headers.py
+// are in fact the same as what are sent through the POST request
+// This test checks that post(request, body) derives Content-Length
+// and Content-Type
+// This test checks that post(request, content_type, body) derives
+// Content-Length,
+// and keeps Content-Type
+// This test checks that post(request, body) gets the post data
+// through to the server
+// This test checks that custom headers pass through to the server
+// when posting
+// Copyright Divye Kapoor 2008.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// https://www.boost.org/LICENSE_1_0.txt)
+//
+// Changes by Kim Grasman 2008
+// Changes by Dean Michael Berris 2008, 2009, 2016
+//localhost:8443";
+// Uncomment the below if you're running Python pre-2.6. There was a bug
+// in the Python HTTP server for earlier versions that causes this test
+// case to fail.
+// BOOST_AUTO_TEST_CASE_EXPECTED_FAILURES(text_query_preserves_crlf, 2);
+// Tests presence of body in http responses
+// Tests correct parsing of the content-type header sent by the server
+// Tests correct parsing of content-type for binary files such as .zip files
+// Uses the test.xml file to ensure that the file was received at the correct
+// length for a text encoding
+// Tests proper transfer of a text file
+// Tests proper transfer of a binary image
+// Request for a non existing file.
+// Ensure that we have a body even in the presence of an error response
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// Copyright 2010 (c) Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//boost.org");
+//boost.org/handler.php");
+//boost.org/handler.php");
+//boost.org/");
+// ADL
+//boost.org/");
+//boost.org/");
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+/** Synopsis
+// default constructible
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.boost.org");
+/*\r\n"
+/*\r\n"
+//www.boost.org");
+// We can override the defaulted headers and test that here.
+// Copyright Dean Michael Berris 2010.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+/** Synopsis
+// default constructible
+/** In this test we want to be able to parse incrementally a
+// default constructible
+/** In this test we then want to check that we can parse a status
+// We want to create a parser that has been initialized to a specific
+// state. In this case we assume that the parser has already parsed
+// the version part of the HTTP Response.
+/** In this test then we get the rest of the first line of the HTTP
+/** This test specifices how one-line-per-header parsing happens incrementally.
+// Really, this is just for testing purposes
+// In this batch of tests we ensure that calling run and stop on an
+// async_server, in any sequence, is thread safe.
+// stop from main thread
+// run-stop from main thread
+// run-stop from another thread
+// run-stop-run-stop from another thread
+// run-run-stop from another thread
+// run-stop-stop from another thread
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// Really, this is just for testing purposes
+// Copyright 2013 Rudolfs Bundulis
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+/** Synopsis
+// Copyright 2016 Glyn Matthews.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//cpp-netlib.org/"));
+// Copyright 2016 Glyn Matthews.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+# Copyright 2013 Google, Inc.
+# Copyright 2013 Dean Michael Berris <dberris@google.com>
+# Distributed under the Boost Software License, Version 1.0.
+# (See accompanying file LICENSE_1_0.txt or copy at
+# http://www.boost.org/LICENSE_1_0.txt)
+#
+# Project-wide configuration for YouCompleteMe Vim plugin.
+#
+# Based off of Valloric's .ycm_conf_extra.py for YouCompleteMe:
+#  https://github.com/Valloric/YouCompleteMe/blob/master/cpp/ycm/.ycm_extra_conf.py
+#
+# add dependency to googletest and googlemock
+# add dependency to asio
+# Always enable debugging for the project when building for semantic
+# completion.
+#!/usr/bin/python
+#
+#	A python program to compare against the output from "mime-structure" tool.
+#
+#	Usage: python mimeParse.py <file list>
+#
+#	if prefix != "":
+#		print msg
+#	_structure ( msg )
+# -*- coding: utf-8 -*-
+#
+# cpp-netlib documentation build configuration file, created by
+# sphinx-quickstart on Wed Jun 23 20:50:04 2010.
+#
+# This file is execfile()d with the current directory set to its containing dir.
+#
+# Note that not all possible configuration values are present in this
+# autogenerated file.
+#
+# All configuration values have a default; values that are commented out
+# serve to show the default.
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+# Use breathe for doxygen integration
+# -- General configuration -----------------------------------------------------
+# Add any Sphinx extension module names here, as strings. They can be extensions
+# coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+# Tell breathe about the doxygen project.
+# Default breathe project
+# Add any paths that contain templates here, relative to this directory.
+# templates_path = ['_templates']
+# The suffix of source filenames.
+# The encoding of source files.
+# The master toctree document.
+# General information about the project.
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+# The full version, including alpha/beta/rc tags.
+# The language for content autogenerated by Sphinx. Refer to documentation
+# for a list of supported languages.
+#language = None
+# There are two options for replacing |today|: either, you set today to some
+# non-false value, then it is used:
+#today = ''
+# Else, today_fmt is used as the format for a strftime call.
+# List of documents that shouldn't be included in the build.
+# List of directories, relative to source directory, that shouldn't be searched
+# for source files.
+# If true, '()' will be appended to :func: etc. cross-reference text.
+# add_function_parentheses = True
+# If true, the current module name will be prepended to all description
+# unit titles (such as .. function::).
+# If true, sectionauthor and moduleauthor directives will be shown in the
+# output. They are ignored by default.
+# show_authors = False
+# The name of the Pygments (syntax highlighting) style to use.
+# pygments_style = 'sphinx'
+# A list of ignored prefixes for module index sorting.
+# modindex_common_prefix = []
+# -- Options for HTML output ---------------------------------------------------
+# The theme to use for HTML and HTML Help pages.  Major themes that come with
+# Sphinx are currently 'default' and 'sphinxdoc'.
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+# A shorter title for the navigation bar.  Default is the same as html_title.
+# html_short_title = 'cpp-netlib'
+# Use an HTML index.
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# html_style = 'cpp-netlib.css'
+# html_static_path = ['_static']
+# html_translator_class = "adjusts.CppNetlibHTMLTranslator"
+# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
+# using the given strftime format.
+# If true, SmartyPants will be used to convert quotes and dashes to
+# typographically correct entities.
+# Output file base name for HTML help builder.
+# htmlhelp_basename = 'cpp-netlibdoc'
+#            Copyright (c) 2010.
+# Distributed under the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http://www.boost.org/LICENSE_1_0.txt)
+#!/bin/env python
+# Good request case, there's a content-length header for POST
+# Good request case, there's a content-length header for PUT
+# Bad request case, no content-length for POST
+# Bad request case, no content-length for PUT
+#!/usr/bin/python
+#
+#          Copyright Divye Kapoor 2008.
+# Distributed under the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http:#www.boost.org/LICENSE_1_0.txt)
+#
+# This program sets up a CGI HTTP Server at port 8000 on localhost
+# It will be used to test the http::client interface of the library
+#!/usr/bin/env python
+# Copyright 2009 Jeroen Habraken
+# Copyright 2009 Dean Michael Berris
+# Distributed under  the Boost Software License, Version 1.0.
+# (See accompanying file LICENSE_1_0.txt or copy at
+# http://www.boost.org/LICENSE_1_0.txt)
+# run the rest of run_cgi
+#!/usr/bin/env python
+#
+#         Copyright Allister Levi Sanchez 2008.
+# Distributed under  the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http://www.boost.org/LICENSE_1_0.txt)
+#
+# This program sets up a CGI HTTP Server at port 8000 on localhost
+# It will be used to test the http::client interface of the library
+# run the rest of run_cgi
+#!/usr/bin/python 
+#
+#          Copyright Kim Grasman 2008.
+# Distributed under the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http:#www.boost.org/LICENSE_1_0.txt)
+#
+# I'm sure there are better ways to do this in Python,
+# but I don't know my way around so well
+# re-join the rest of the items as value
+#!/usr/bin/python 
+#
+#          Copyright Divye Kapoor 2008.
+# Distributed under the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http:#www.boost.org/LICENSE_1_0.txt)
+#
+# This program sets up a CGI application on localhost
+# It can be accessed by http://localhost:8000/cgi-bin/echo_form.py
+# It returns the query parameters passed to the CGI Script as plain text.
+#
+# for debugging only
+# POST data/form data is available in the .value property
+#!/usr/bin/python 
+#
+#          Copyright Kim Grasman 2008.
+# Distributed under the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http:#www.boost.org/LICENSE_1_0.txt)
+#
+# This program sets up a CGI application on localhost
+# It can be accessed by http://localhost:8000/cgi-bin/echo_headers.py
+#
+#!/usr/bin/python 
+#
+#          Copyright Divye Kapoor 2008.
+# Distributed under the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http:#www.boost.org/LICENSE_1_0.txt)
+#
+# This program sets up a CGI application on localhost
+# It can be accessed by http://localhost:8000/cgi-bin/requestinfo.py
+# It returns the query parameters passed to the CGI Script as plain text.
+#
+# for debugging only
+# parse_qs(query_string,keep_blanks,strict_parsing)
+# Remove GET params and print only the POST ones
+#!/usr/bin/python 
+#
+#          Copyright Divye Kapoor 2008.
+# Distributed under the Boost Software License, Version 1.0.
+#    (See accompanying file LICENSE_1_0.txt or copy at
+#          http:#www.boost.org/LICENSE_1_0.txt)
+#
+# This program sets up a CGI application on localhost
+# It can be accessed by http://localhost:8000/cgi-bin/requestinfo.py
+# It returns the query parameters passed to the CGI Script as plain text.
+#
+# for debugging only
+# parse_qs(query_string,keep_blanks,strict_parsing)
+# Remove GET params and print only the POST ones
+# In case of empty POST bodies.
+#!/usr/bin/python

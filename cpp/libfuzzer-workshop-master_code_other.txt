@@ -1,0 +1,36 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\lessons\02\generate_testcases.py
+#!/usr/bin/env python2
+# Create work `directory` and `corpus` subdirectory.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\lessons\02\run_fuzzing.py
+#!/usr/bin/env python2
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\lessons\08\coverage-report-server.py
+#!/usr/bin/env python3
+#===- symcov-report-server.py - Coverage Reports HTTP Serve --*- python -*--===#
+#
+#                     The LLVM Compiler Infrastructure
+#
+# This file is distributed under the University of Illinois Open Source
+# License. See LICENSE.TXT for details.
+#
+#===------------------------------------------------------------------------===#
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/libfuzzer-workshop-master\libfuzzer-workshop-master\libFuzzer\Fuzzer\standalone\StandaloneFuzzTargetMain.c
+//
+/*===- StandaloneFuzzTargetMain.c - standalone main() for fuzz targets. ---===//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+// This main() function can be linked to a fuzz target (i.e. a library
+// that exports LLVMFuzzerTestOneInput() and possibly LLVMFuzzerInitialize())
+// instead of libFuzzer. This main() function will not perform any fuzzing
+// but will simply feed all input files one by one to the fuzz target.
+//
+// Use this file to provide reproducers for bugs when linking against libFuzzer
+// or other fuzzing engine is undesirable.
+//===----------------------------------------------------------------------===*/

@@ -1,0 +1,38 @@
+﻿// to make syntax Unreal friendly
+// default constructor
+// this MUST be an isogram
+// if the guess isn't an isogram
+// if the guess isn't all lowercase
+// if the guess length is wrong
+// receives a VALID guess, incriments turn, and returns count
+// assuming same length as guess
+// loop through all letters in the hidden word
+// compare letters against the guess
+// if they match then
+// if they're in the same place
+// incriment bulls
+// must be a cow
+// treat 0 and 1 letter words as isograms
+// setup our map
+// for all letters of the word
+// handle mixed case
+// if the letter is in the map
+// we do NOT have an isogram
+// add the letter to the map
+// for example in cases where /0 is entered
+// if not a lowercase letter
+/* This is the console executable, that makes use of the BullCow class
+// to make syntax Unreal friendly
+// function prototypes as outside a class
+// instantiate a new game, which we re-use across plays
+// the entry point for our application
+// exit the application
+// plays a single game to completion
+// loop asking for guesses while the game
+// is NOT won and there are still tries remaining
+// submit valid guess to the game, and receive counts
+// loop continually until the user gives a valid guess
+// get a guess from the player
+// check status and give feedback
+// assume the guess is valid
+// keep looping until we get no errors

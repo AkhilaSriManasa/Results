@@ -1,0 +1,73 @@
+﻿#sample frequency in Hz
+#length of clips for training. Defined in seconds
+#block sizes used for training - this defines the size of our input state
+#Used later for zero-padding song sequences
+#Step 1 - convert MP3s to WAVs
+#Step 2 - convert WAVs to frequency domain with mean 0 and standard deviation of 1
+#Load up the training data
+#X_train is a tensor of size (num_train_examples, num_timesteps, num_frequency_dims)
+#y_train is a tensor of size (num_train_examples, num_timesteps, num_frequency_dims)
+#X_mean is a matrix of size (num_frequency_dims,) containing the mean for each frequency dimension
+#X_var is a matrix of size (num_frequency_dims,) containing the variance for each frequency dimension
+#Figure out how many frequencies we have in the data
+#Creates a lstm network
+#You could also substitute this with a RNN or GRU
+#model = network_utils.create_gru_network()
+#Load existing weights if available
+#Here's the interesting part
+#We need to create some seed sequence for the algorithm to start with
+#Currently, we just grab an existing seed sequence from our training data and use that
+#However, this will generally produce verbatum copies of the original songs
+#In a sense, choosing good seed sequences = how you get interesting compositions
+#There are many, many ways we can pick these seed sequences such as taking linear combinations of certain songs
+#We could even provide a uniformly random sequence, but that is highly unlikely to produce good results
+#Defines how long the final song is. Total song length in samples = max_seq_len * example_len
+#Save the generated sequence to a WAV file
+#Load up the training data
+#X_train is a tensor of size (num_train_examples, num_timesteps, num_frequency_dims)
+#y_train is a tensor of size (num_train_examples, num_timesteps, num_frequency_dims)
+#Figure out how many frequencies we have in the data
+#Creates a lstm network
+#You could also substitute this with a RNN or GRU
+#model = network_utils.create_gru_network()
+#Load existing weights if available
+#Number of iterations for training
+#Number of iterations before we save our model
+#Number of training examples pushed to the GPU per batch.
+#Larger batch sizes require more memory, but training will be faster
+#We set cross-validation to 0,
+#as cross-validation will be on different datasets 
+#if we reload our model between runs
+#The moral way to handle this is to manually split 
+#your data into two sets and run cross-validation after 
+#you've trained the model for some number of epochs
+#Number of hidden dimensions.
+#For best results, this should be >= freq_space_dims, but most consumer GPUs can't handle large sizes
+#The weights filename for saving/loading trained models
+#The model filename for the training data
+#The dataset directory
+#Normalize 16-bit input to [-1, 1] range
+#np_arr = np.array(np_arr)
+#Mean across num examples and num timesteps
+# STD across num examples and num timesteps
+#Clamp variance if too tiny
+#Mean 0
+#Variance 1
+#Mean 0
+#Variance 1
+#Add special end block composed of all zeros
+#A very simple seed generator
+#Copies a random example's first seed_length sequences as input to the generation algorithm
+#Extrapolates from a given seed sequence
+#The generation algorithm is simple:
+#Step 1 - Given A = [X_0, X_1, ... X_n], generate X_n + 1
+#Step 2 - Concatenate X_n + 1 onto A
+#Step 3 - Repeat MAX_SEQ_LEN times
+#Step 1. Generate X_n + 1
+#Step 2. Append it to the sequence
+#Finally, post-process the generated sequence so that we have valid frequencies
+#We're essentially just undo-ing the data centering process
+#This layer converts frequency space to hidden space
+#This layer converts hidden space back to frequency space
+#This layer converts frequency space to hidden space
+#This layer converts hidden space back to frequency space

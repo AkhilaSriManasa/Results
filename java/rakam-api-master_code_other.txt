@@ -1,0 +1,669 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\Coordination.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\CSV.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\GeoIPModuleConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\GeoLocation.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\HttpDownloadHelper.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//don't do any progress, unless asked
+//set the timestamp to the file date.
+//if (and only if) the use file time option is set, then
+//the saved file now has its timestamp set to that of the
+//downloaded file
+// set up the URL connection
+// modify the headers
+// NB: things like user authentication could go in here too.
+// connect to the remote site (may take some time)
+// First check on a 301 / 302 (moved) response (HTTP only)
+// next test for a 304 result (HTTP only)
+// not modified so no file download. just return
+// instead and trace out something so the user
+// doesn't think that the download happened when it
+// didn't
+// test for 401 result (HTTP only)
+// this three attempt trick is to get round quirks in different
+// Java implementations. Some of them take a few goes to bind
+// property; we ignore the first couple of such failures.
+// we have started to (over)write dest, but failed.
+// Try to delete the garbage we'd otherwise leave
+// behind.
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\IP2LocationGeoIPEventMapper.java
+// it may be slow because java performs reverse hostname lookup.
+// Cloudflare country code header (Only works when the request passed through CF servers)
+// it may be slow because java performs reverse hostname lookup.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\IP2LocationGeoIPModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\IPReader.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-ip2location\src\main\java\org\rakam\collection\mapper\geoip\maxmind\ip2location\utils\IP4Converter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-maxmind\src\main\java\org\rakam\collection\mapper\geoip\maxmind\HttpDownloadHelper.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//don't do any progress, unless asked
+//set the timestamp to the file date.
+//if (and only if) the use file time option is set, then
+//the saved file now has its timestamp set to that of the
+//downloaded file
+// set up the URL connection
+// modify the headers
+// NB: things like user authentication could go in here too.
+// connect to the remote site (may take some time)
+// First check on a 301 / 302 (moved) response (HTTP only)
+// next test for a 304 result (HTTP only)
+// not modified so no file download. just return
+// instead and trace out something so the user
+// doesn't think that the download happened when it
+// didn't
+// test for 401 result (HTTP only)
+// this three attempt trick is to get round quirks in different
+// Java implementations. Some of them take a few goes to bind
+// property; we ignore the first couple of such failures.
+// we have started to (over)write dest, but failed.
+// Try to delete the garbage we'd otherwise leave
+// behind.
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-maxmind\src\main\java\org\rakam\collection\mapper\geoip\maxmind\MaxmindGeoIPEventMapper.java
+// it may be slow because java performs reverse hostname lookup.
+// it may be slow because java performs reverse hostname lookup.
+// Cloudflare country code header (Only works when the request passed through CF servers)
+// it may be slow because java performs reverse hostname lookup.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-maxmind\src\main\java\org\rakam\collection\mapper\geoip\maxmind\MaxmindGeoIPModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-maxmind\src\main\java\org\rakam\collection\mapper\geoip\maxmind\MaxmindGeoIPModuleConfig.java
+//geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-geoip-maxmind\src\test\java\org\rakam\collection\mapper\geoip\maxmind\TestGeoIPEventMapper.java
+// even if these are Google's ip Maxmind demo database may not identify so don't rely on their popularity.
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-ISP-Test.mmdb")));
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-Connection-Type-Test.mmdb")));
+// TODO: find a reliable ip that can be mapped.
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-Connection-Type-Test.mmdb"))
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-ISP-Test.mmdb")));
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-Connection-Type-Test.mmdb"))
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-ISP-Test.mmdb")));
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-Connection-Type-Test.mmdb"))
+//github.com/maxmind/MaxMind-DB/raw/master/test-data/GeoIP2-ISP-Test.mmdb"));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-website\src\main\java\org\rakam\module\website\ReferrerEventMapper.java
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-website\src\main\java\org\rakam\module\website\UserAgentEventMapper.java
+// A bit SEO wouldn't hurt.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-website\src\main\java\org\rakam\module\website\UserIdEventMapper.java
+//        if (user.id == null) {
+//            FieldType fieldType = userTypeCache.getUnchecked(project);
+//            Schema field = AvroUtil.generateAvroSchema(fieldType);
+//            Schema.Type type = field.getTypes().get(1).getType();
+//            Object anonymousUser = requestParams.cookies().stream()
+//                    .filter(e -> e.name().equals("_anonymous_user")).findAny()
+//                    .map(e -> cast(type, e.value())).orElse(generate(type));
+//
+//            user.setId(anonymousUser);
+//            return ImmutableList.of(new DefaultCookie("_anonymous_user", String.valueOf(anonymousUser)));
+//        }
+//
+/**
+// Iterate all the network interfaces
+// Iterate all the addresses assigned to the network interface
+// Found a non-loopback site-local address
+// Found the first non-loopback, non-site-local address
+// Return the first non-loopback, non-site-local address
+// Return the local host address (may be the loopback address)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-website\src\main\java\org\rakam\module\website\WebsiteEventMapperModule.java
+//        eventMappers.addBinding().to(UserIdEventMapper.class).in(Scopes.SINGLETON);
+//        userPropertyMappers.addBinding().to(UserIdEventMapper.class).in(Scopes.SINGLETON);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-website\src\main\java\org\rakam\module\website\WebsiteMapperConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-website\src\test\java\org\rakam\module\website\TestReferrerEventMapper.java
+//google.com/?q=test"), EventMapper.RequestParams.EMPTY_PARAMS},
+//google.com/?q=test")},
+//google.com/?q=test"), (EventMapper.RequestParams) () -> new DefaultHttpHeaders().set("Referer", "https://google.com/?q=test")}
+//test.com");
+//google.com/?q=test");
+//test.com/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\mapper\rakam-mapper-website\src\test\java\org\rakam\module\website\TestUserAgentEventMapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\bin\launcher.py
+#!/usr/bin/env python
+#'):
+# noinspection PyTypeChecker
+# set process name: https://github.com/electrum/procname
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\LogModule.java
+//
+//76daa36329be422ab9b592ab7239c2aa@sentry.io/1290994?release=%s&servername=%s&stacktrace.app.packages=org.rakam",
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\ServiceStarter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\SystemRegistryGenerator.java
+// TODO: support for breaking words to multiple lines
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\analysis\AdminHttpService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\analysis\ProjectHttpService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\analysis\SchemaConverter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\analysis\webhook\WebhookConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\analysis\webhook\WebhookEventMapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\analysis\webhook\WebhookModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\bootstrap\ProxyBootstrap.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\bootstrap\SystemRegistry.java
+// process modules and add used properties to ConfigurationFactory
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\collection\AvroEventDeserializer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\collection\CsvEventDeserializer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\collection\EventCollectionHttpService.java
+///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+// TODO: find a way to parse the content type
+// do not set CsvSchema setUseHeader, it has extra overhead and the deserializer cannot handle that.
+// do not set CsvSchema setUseHeader, it has extra overhead and the deserializer cannot handle that.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\collection\EventListDeserializer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\collection\HeaderDefaultFullHttpResponse.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\collection\JsonEventDeserializer.java
+// if the array is null, return null as value.
+// TODO: if the key already has a type, return that type instead of null.
+// TODO: what if the other values are not null?
+// if the map is null, return null as value.
+// TODO: if the key already has a type, return that type instead of null.
+// TODO: what if the other values are not null?
+// pass START_OBJECT
+// the type of magic _user field must be consistent between collections
+// if the type of new field is ARRAY, we already switched to next token
+// so current token is not START_ARRAY.
+// the type is null or an empty array
+// TODO: get rid of this loop.
+// try to parse the value
+// In order to determine the value type of map, getTypeForUnknown method performed an extra
+// jp.nextToken() so the cursor should be at VALUE_STRING token.
+// if the passStartArrayToken is true, we already performed jp.nextToken
+// so there is no need to check if the current token is START_ARRAY
+// Stack traces are expensive and we don't need them.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\collection\WebHookHttpService.java
+/*")
+/*")
+/*")
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\http\ForHttpServer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\http\HttpServerConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\http\OptionMethodHttpService.java
+/*")
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\http\WebServiceModule.java
+//www.apache.org/licenses/LICENSE-2.0.html"));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\CustomEventMapperHttpService.java
+//@Path("/custom-event-mapper")
+//@Api(value = "/custom-event-mapper", nickname = "collection", description = "Custom event mapper", tags = "event-mapper")
+// field not exists, create it
+// TODO :what if the new code has same hashcode?
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\JSEventMapperModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\PluginClassLoader.java
+// child first requires a parent class loader
+// grab the magic lock
+// Check if class is in the loaded classes cache
+// If this is not a parent first class, look for the class locally
+// not a local class
+// Check parent class loaders, unless this is a hidden class
+// this parent didn't have the class
+// If this is a parent first class, now look for the class locally
+// todo maybe make this more precise and only match base package
+// todo maybe make this more precise and only match base package
+// If this is not a parent first resource, check local resources first
+// Check parent class loaders
+// If this is a parent first resource, now check local resources
+// If this is not a parent first resource, add resources from local urls first
+// Add parent resources
+//        if (!isHiddenResource(name)) {
+//            Iterator<URL> parentResources = Iterators.forEnumeration(getParent().getResources(name));
+//            resources.add(parentResources);
+//        }
+// If this is a parent first resource, now add resources from local urls
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\PluginConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\WebhookModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\user\UserActionService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\user\UserHttpService.java
+// TODO: bound event mappers to Netty Channels and runStatementSafe them in separate thread
+// TODO: we may cache these values and reduce the db hit.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\plugin\user\UserModule.java
+//            .put("email", UserEmailActionService.class)
+//            eventMappers.addBinding().to(UserIdCheckEventMapper.class).in(Scopes.SINGLETON);
+//            userPropertyMappers.addBinding().to(UserIdCheckEventMapper.class).in(Scopes.SINGLETON);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\ExportUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\RakamHealthCheckModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\StringTemplate.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\ILogger.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\JavascriptConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\JavascriptModule.java
+//@AutoService(RakamModule.class)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\JSCodeCompiler.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\JSCodeJDBCLoggerService.java
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\JSConfigManager.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\JSLoggerService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\main\java\org\rakam\util\javascript\MonitorThread.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\test\java\Test.java
+// or from String, URL etc
+//            System.out.println(row.get("latitude"));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\test\java\TestCSVParser.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\test\java\TestEventJsonParser.java
+//    @Test(expectedExceptions = JsonMappingException.class, expectedExceptionsMessageRegExp = "Cannot cast object to INTEGER for 'test' field.*")
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\test\java\TestJSCodeCompiler.java
+//        jsCodeCompiler.createEngine("test", "new Array(100000000).concat(new Array(100000000));", "");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\test\java\bloom\OoaBFilter.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam\src\test\java\bloom\TestFilter.java
+//    @Test
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\apache\avro\generic\FilteredRecordWriter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\rakam\aws\AWSConfig.java
+// TODO: add an extra option the allow these values to be NULL.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\rakam\aws\kinesis\AWSKinesisEventStore.java
+// TODO: async callback?
+//        while (producer.getOutstandingRecordsCount() > MAX_RECORDS_IN_FLIGHT) {
+//            Thread.sleep(SLEEP_BACKOFF_IN_MS);
+//        }
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\rakam\aws\kinesis\AWSKinesisModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\rakam\aws\kinesis\ForStreamer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\rakam\aws\kinesis\KinesisUtils.java
+/*
+//aws.amazon.com/asl/
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\rakam\aws\kinesis\StreamQuery.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\main\java\org\rakam\aws\s3\S3BulkEventStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-aws\src\test\java\org\rakam\aws\DynamodbUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\PostgresqlApiKeyService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\PostgresqlConfigManager.java
+// handle race condition
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\PostgresqlModule.java
+// use same jdbc pool if report.metadata.store is not set explicitly.
+// Postgresql BRIN support came in 9.5 version
+// We cant't use CONCURRENTLY because it causes dead-lock with ALTER TABLE and it's slow.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\analysis\JDBCApiKeyService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\analysis\PostgresqlConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\analysis\PostgresqlEventStore.java
+// check_violation -> https://www.postgresql.org/docs/8.2/static/errcodes-appendix.html
+// last event must have the last schema
+// check_violation -> https://www.postgresql.org/docs/8.2/static/errcodes-appendix.html
+// check_violation -> https://www.postgresql.org/docs/8.2/static/errcodes-appendix.html
+// get the event with the last schema
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\analysis\PostgresqlMetastore.java
+//                    if(type == FieldType.MAP_STRING_STRING) {
+//                        return "hstore";
+//                    }
+// syntax error exception
+//www.postgresql.org/docs/devel/static/sql-keywords-appendix.html");
+// column or table already exists
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\plugin\user\PostgresqlUserModule.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\plugin\user\PostgresqlUserService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\main\java\org\rakam\postgresql\plugin\user\PostgresqlUserStorage.java
+// we need it in order to prevent race condition
+// may use transaction when we start to use Postgresql 9.5. Since we use insert or merge, it doesn't work right now.
+// it must be called from a separated transaction, otherwise it may lock table and the other insert may cause deadlock.
+// what if the type does not match?
+//        format("DROP TABLE IF EXISTS %s", table)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\test\java\org\rakam\pg10\TestingEnvironmentPg10.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\test\java\org\rakam\pg10\analysis\TestPostgresqlApiKeyService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\test\java\org\rakam\pg10\collection\TestPostgresqlUserStorage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\test\java\org\rakam\pg9\TestingEnvironmentPg9.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\test\java\org\rakam\pg9\analysis\TestPostgresqlApiKeyService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-postgresql\src\test\java\org\rakam\pg9\collection\TestPostgresqlUserStorage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto\src\main\java\org\rakam\presto\MetadataModule.java
+// we only support mysql at the moment
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto\src\main\java\org\rakam\presto\PrestoType.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto\src\main\java\org\rakam\presto\analysis\MetadataDao.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto\src\main\java\org\rakam\presto\analysis\MysqlConfigManager.java
+// handle race condition
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto\src\main\java\org\rakam\presto\analysis\MysqlExplicitMetastore.java
+// the table does not exist
+// the table is already created
+// the table is already created
+// this field should be removed since the server sets it
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto\src\main\java\org\rakam\presto\analysis\SchemaDao.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto-kafka\src\main\java\org\apache\avro\generic\SourceFilteredRecordWriter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto-kafka\src\main\java\org\rakam\kafka\collection\KafkaCollectorModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto-kafka\src\main\java\org\rakam\kafka\collection\KafkaConfig.java
+//    @Size(min = 1)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto-kafka\src\main\java\org\rakam\kafka\collection\KafkaEventStore.java
+// TODO: implement this
+//        executorService.scheduleAtFixedRate(kafkaManager::updateOffsets, updateInterval, updateInterval, TimeUnit.SECONDS);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto-kafka\src\main\java\org\rakam\kafka\collection\KafkaOffsetManager.java
+// The API implies that this will always return all of the offsets. So it seems a partition can not have
+// more than Integer.MAX_VALUE-1 segments.
+//
+// This also assumes that the lowest value returned will be the first segment available. So if segments have been dropped off, this value
+// should not be 0.
+// Leader election going on...
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-presto-kafka\src\main\java\org\rakam\kafka\collection\KafkaSimpleConsumerManager.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\Access.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\Mapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\TestingConfigManager.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\ApiKeyService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\ConfigManager.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\CustomParameter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\EscapeIdentifier.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\InMemoryApiKeyService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\InMemoryEventStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\InMemoryMetastore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\InternalConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\JDBCPoolDataSource.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\RequestContext.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\RequestPreProcessorItem.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\metadata\AbstractMetastore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\metadata\Metastore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\analysis\metadata\SchemaChecker.java
+//    @PostConstruct
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\collection\Event.java
+// TODO: find a way to make this class immutable
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\collection\EventList.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\collection\FieldDependencyBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\collection\FieldType.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\collection\SchemaField.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\config\EncryptionConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\config\JDBCConfig.java
+//" + dbUri.getHost() : "") +
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\config\MetadataConfig.java
+//rakam.io/doc").description("Rakam Documentation");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\config\ProjectConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\config\TaskConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\DummyEventStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\EventMapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\EventStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\InjectionHook.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\Parameter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\ProjectItem.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\RakamModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\SyncEventMapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\SyncEventStore.java
+// SynchronousQueue
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\SystemEvents.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\TimestampEventMapper.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// match server time and client time and get an estimate
+//                ,new SchemaField(projectConfig.getClientTimeColumn(), FieldType.TIMESTAMP)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\stream\CollectionStreamQuery.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\stream\EventStream.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\stream\EventStreamConfig.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\stream\StreamResponse.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\user\AbstractUserService.java
+// non-static inner classes doesn't work with Jackson
+// so we pass the outer variable manually.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\user\ISingleUserBatchOperation.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\user\User.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\user\UserPluginConfig.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\user\UserPropertyMapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\plugin\user\UserStorage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\report\QueryError.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\report\QueryResult.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\server\http\RakamServletWrapper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\AllowCookie.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\AlreadyExistsException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\AvroUtil.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// no-op
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\ConditionalModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\CryptUtil.java
+/*base 32,2^5*/, random).toString(32)).length() < length) {
+// grab first 16 bytes - that's the IV
+// grab everything else - that's the cipher-text (encrypted message)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\DateTimeUtils.java
+// Joda parses [0-9]{10} as TIMESTAMP with huge value so we limit the characters.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\JDBCUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\JsonHelper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\LogUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\MailSender.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\MapProxyGenericRecord.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\NotExistsException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\NotFoundHandler.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\ProjectCollection.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\RakamClient.java
+//pool1.rakam.io/event/collect";
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\RakamException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\RAsyncHttpClient.java
+//        public NashornHttpRequest cookie(String key, String value, String domain, String path, boolean secure, boolean httpOnly)
+//        {
+//            requestBuilder.addCookie(Cookie.newValidCookie(key, value, true, domain, path, System.currentTimeMillis() + 1000, secure, httpOnly));
+//            return this;
+//        }
+//
+//        public NashornHttpRequest cookie(String key, String value)
+//        {
+//            requestBuilder.addCookie(Cookie.newValidCookie(key, value, true, null, null, System.currentTimeMillis() + 1000, true, true));
+//            return this;
+//        }
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\StandardErrors.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\SuccessMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\main\java\org\rakam\util\ValidationUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\test\java\org\rakam\EventBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\test\java\org\rakam\analysis\TestApiKeyService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\test\java\org\rakam\analysis\TestConfigManager.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\test\java\org\rakam\collection\TestMetastore.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/rakam-api-master\rakam-api-master\rakam-spi\src\test\java\org\rakam\collection\TestUserStorage.java
+//        User test = userService.getUser(CONTEXT, 2).join();
+//        assertEquals(test.id, 2);
+//        assertEquals((Object) test.properties, JsonHelper.jsonObject()
+//                .put("test", 2.0)
+//                .put("test1 naber abi", "324")
+//                .put("test4 samil", true)
+//                .put("created_at", Instant.ofEpochMilli(100).toString())
+//                .put("test5", 2.5));
+//        User test = userService.getUser(CONTEXT, 3).join();
+//        assertEquals(test.id, 3);
+//        assertEquals((Object) test.properties, samplePropertiesExpected);
+//        User test = userService.getUser(CONTEXT, 3).join();
+//        assertEquals(test.id, 3);
+//        assertNotNull(test.properties.get("created_at").asText());
+//        User test = userService.getUser(CONTEXT, 3).join();
+//        assertEquals(test.id, 3);
+//        assertEquals((Object) test.properties, JsonHelper.jsonObject()
+//                .put("test10", "val")
+//                .put("created_at", Instant.ofEpochMilli(100).toString()));
+//        User test = userService.getUser(CONTEXT, 3).join();
+//        assertEquals(test.id, 3);
+//        assertEquals((Object) test.properties, samplePropertiesExpected);
+//        assertEquals((Object) samplePropertiesExpected,
+//                userService.getUser(CONTEXT, isNumeric.get() ? 3 : "3").join().properties);
+//        User test = userService.getUser(CONTEXT, "3").join();
+//        assertEquals(test.id, "3");
+//        assertEquals((Object) test.properties, samplePropertiesExpected);
+//        User test = userService.getUser(CONTEXT, "selami").join();
+//        assertEquals(test.id, 3);
+//        assertEquals((Object) test.properties, samplePropertiesExpected);
+//        User test = getUserService().getUser(CONTEXT, 3).join();
+//        assertEquals(test.id, 3);
+//        ObjectNode builder = JsonHelper.jsonObject();
+//        builder.put("created_at", Instant.ofEpochMilli(10).toString());
+//        for (String object : objects) {
+//            builder.put(object, 10.0);
+//        }
+//        assertEquals((Object) test.properties, builder);
+//        User test = userService.getUser(CONTEXT, 7).join();
+//        assertEquals(test.id, 7);
+//        assertEquals((Object) test.properties, JsonHelper.jsonObject()
+//                .put("created_at", Instant.ofEpochMilli(100).toString())
+//                .put("test5", 1.5));
+//        assertEquals(userService.getUser(CONTEXT, 8).join().properties.get("test").asDouble(), 10.0);
+//        assertEquals(userService.getUser(CONTEXT, 8).join().properties.get("test").asDouble(), 20.0);

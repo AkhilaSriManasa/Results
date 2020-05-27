@@ -1,0 +1,2366 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\hprose\Benchmark.java
+//localhost:4321");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\hprose\IService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\hprose\Server.java
+//localhost:4321");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\hprose\ServiceImpl.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\rmi\Benchmark.java
+//localhost/serviceRMI";
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\rmi\IService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\rmi\Server.java
+//localhost/serviceRMI", serviceRMI);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Benchmark\src\main\java\benchmark\rmi\ServiceImpl.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam1.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam10.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam11.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam2.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam3.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam4.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam5.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam6.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam7.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam8.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\ClientExam9.java
+//localhost:8084/examserver/Methods");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\IExam1.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\IExam2.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\Sex.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\client\src\main\java\hprose\exam\client\User.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\server\src\main\java\hprose\exam\server\Exam1.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\server\src\main\java\hprose\exam\server\Exam2.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\server\src\main\java\hprose\exam\server\MyHproseServlet.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\server\src\main\java\hprose\exam\server\MyHproseServlet2.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\server\src\main\java\hprose\exam\server\Sex.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\exam\server\src\main\java\hprose\exam\server\User.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam1.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam10.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam11.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam2.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam3.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam4.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam5.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam6.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam7.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam8.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\Exam9.java
+//www.hprose.com/example/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\client\TimeoutClient.java
+//0.0.0.0:4321");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\Client.java
+//127.0.0.1:8084");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\Server.java
+//0.0.0.0:8084");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\compress\Client.java
+//127.0.0.1:8083");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\compress\CompressFilter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\compress\Server.java
+//0.0.0.0:8083");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\compress\SizeFilter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\log\Client.java
+//127.0.0.1:8082");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\log\LogFilter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\log\Server.java
+//0.0.0.0:8082");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\stat\Client.java
+//127.0.0.1:8083");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\stat\Server.java
+//0.0.0.0:8083");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filter\stat\StatFilter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filterhandler\Client.java
+//127.0.0.1:8087");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filterhandler\Server.java
+//0.0.0.0:8087");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filterhandler\log\Client.java
+//127.0.0.1:8086");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filterhandler\log\LogHandler.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filterhandler\log\Server.java
+//0.0.0.0:8086");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filterhandler\size\SizeHandler.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\filterhandler\stat\StatHandler.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\invokehandler\cache\CacheHandler.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\invokehandler\cache\Client.java
+//127.0.0.1:8085");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\invokehandler\log\Client.java
+//127.0.0.1:8085");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\invokehandler\log\LogHandler.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\invokehandler\log\Server.java
+//0.0.0.0:8085");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\ClassManagerExam.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\GenericExam.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\ImmutablePairConverter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\ImmutablePairExam.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\ImmutablePairSerializer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\ImmutablePairUnserializer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\Message.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\ReaderExam.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\User.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\io\WriterExam.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam1.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam10.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam11.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam12.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam13.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam14.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam15.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam16.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam17.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam18.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam19.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam2.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam3.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam4.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam5.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam6.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam7.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam8.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\promise\Exam9.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\push\BroadcastClient.java
+//127.0.0.1:8081");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\push\BroadcastServer.java
+//0.0.0.0:8081");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\push\TimePushClient.java
+//127.0.0.1:8080");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\push\TimePushClient2.java
+//127.0.0.1:8080");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\push\TimePushServer.java
+//0.0.0.0:8080");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\tcp\Client.java
+//127.0.0.1:8081");
+//127.0.0.1:8081");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\tcp\Message.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\tcp\Server.java
+//0.0.0.0:8081");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\Example\src\main\java\hprose\example\tcp\User.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\hello\client\src\main\java\hprose\hello\client\HelloClient.java
+//localhost:8084/helloserver/Hello");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\hello\server\src\main\java\hprose\hello\server\Hello.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\hello\server\src\main\java\hprose\hello\server\WebSocketServer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\MyApplication\app\src\androidTest\java\org\hprose\myapplication\ApplicationTest.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\MyApplication\app\src\main\java\org\hprose\myapplication\MainActivity.java
+//hprose.com/example/index.php");
+//button.setVisibility(View.GONE);//设置button隐藏不可见
+// Inflate the menu; this adds items to the action bar if it is present.
+// Handle action bar item clicks here. The action bar will
+// automatically handle clicks on the Home/Up button, so long
+// as you specify a parent activity in AndroidManifest.xml.
+//noinspection SimplifiableIfStatement
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\tcphelloexam\src\main\java\hprose\tcphelloexam\TCPHelloClient.java
+//localhost:4321", "tcp://localhost:4321"} );
+//        client.subscribe("news", new Action<String>() {
+//            @Override
+//            public void call(String value) throws Throwable {
+//                //System.out.println(value);
+//            }
+//        }, String.class);
+//        client.addFilter(new HproseFilter() {
+//            public String getString(ByteBuffer buffer) {
+//                Charset charset;
+//                CharsetDecoder decoder;
+//                CharBuffer charBuffer;
+//                try
+//                {
+//                    charset = Charset.forName("UTF-8");
+//                    decoder = charset.newDecoder();
+//                    charBuffer = decoder.decode(buffer.asReadOnlyBuffer());
+//                    return charBuffer.toString();
+//                }
+//                catch (Exception ex)
+//                {
+//                    ex.printStackTrace();
+//                    return "";
+//                }
+//            }
+//            @Override
+//            public ByteBuffer inputFilter(ByteBuffer istream, HproseContext context) {
+//                System.out.println(getString(istream));
+//                return istream;
+//            }
+//            @Override
+//            public ByteBuffer outputFilter(ByteBuffer ostream, HproseContext context) {
+//                System.out.println(getString(ostream));
+//                return ostream;
+//            }
+//        });
+//        System.out.println(client.invoke("hello", new Object[] {"World"}));
+//        client.invoke("hello", new Object[] {"Async World"}, Promise.class).then(new Action<String>() {
+//            @Override
+//            public void call(String value) throws Throwable {
+//                System.out.println(value);
+//            }
+//        }, new Action<Throwable>() {
+//            @Override
+//            public void call(Throwable value) throws Throwable {
+//                Logger.getLogger(TCPHelloClient.class.getName()).log(Level.SEVERE, null, value);
+//            }
+//        });
+//        start = System.currentTimeMillis();
+//        for (int i = 0; i < 10; i++) {
+//            client.invoke("hello", new Object[] {"World"}, new HproseCallback1<String>() {
+//                @Override
+//                public void handler(String result) {
+//                    System.out.println(result);
+//                }
+//            });
+//        }
+//        client.unsubscribe("news");
+//        end = System.currentTimeMillis();
+//        System.out.println(end - start);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\tcphelloexam\src\main\java\hprose\tcphelloexam\TCPHelloClient2.java
+//127.0.0.1:4321/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\tcphelloexam\src\main\java\hprose\tcphelloexam\TCPHelloServer.java
+//localhost:4321");
+//        server.addFilter(new HproseFilter() {
+//            public String getString(ByteBuffer buffer) {
+//                Charset charset;
+//                CharsetDecoder decoder;
+//                CharBuffer charBuffer;
+//                try
+//                {
+//                    charset = Charset.forName("UTF-8");
+//                    decoder = charset.newDecoder();
+//                    charBuffer = decoder.decode(buffer.asReadOnlyBuffer());
+//                    return charBuffer.toString();
+//                }
+//                catch (Exception ex)
+//                {
+//                    ex.printStackTrace();
+//                    return "";
+//                }
+//            }
+//            @Override
+//            public ByteBuffer inputFilter(ByteBuffer istream, HproseContext context) {
+//                System.out.println(getString(istream));
+//                return istream;
+//            }
+//            @Override
+//            public ByteBuffer outputFilter(ByteBuffer ostream, HproseContext context) {
+//                System.out.println(getString(ostream));
+//                return ostream;
+//            }
+//        });
+//        server.setEnabledThreadPool(true);
+//        ExecutorService pool = Executors.newFixedThreadPool(2);
+//        server.setThreadPool(pool);
+//pool.shutdown();
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\tcpsessionexam\src\main\java\hprose\tcpsessionexam\TCPSessionClient.java
+//localhost:4321");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\example\tcpsessionexam\src\main\java\hprose\tcpsessionexam\TCPSessionServer.java
+//localhost:4321");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\spring-hprose\src\main\java\org\springframework\remoting\hprose\HproseHttpServiceExporter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\spring-hprose\src\main\java\org\springframework\remoting\hprose\HproseProxyFactoryBean.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+// for HproseHttpClient
+// for HproseClient
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\spring-hprose\src\main\java\org\springframework\remoting\hprose\HproseTcpServiceExporter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\client\ClientContext.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\client\CookieManager.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+// Tomcat can return SetCookie2 with path wrapped in "
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\client\HproseClient.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\client\HproseHttpClient.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\client\HproseInvocationHandler.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\client\HproseTcpClient.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+//                while ((request = requests.poll()) != null) {
+//                    request.result.reject(ex);
+//                }
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\ByRef.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\Failswitch.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\FilterHandler.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\FilterHandlerManager.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HandlerManager.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseCallback.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseCallback1.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseContext.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseErrorEvent.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseException.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseFilter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseMethod.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseMethods.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\HproseResultMode.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\Idempotent.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\InvokeHandler.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\InvokeSettings.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\MethodName.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\NextFilterHandler.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\NextInvokeHandler.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\Oneway.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\ResultMode.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\Retry.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\SimpleMode.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\common\Timeout.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\ByteBufferInputStream.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\ByteBufferOutputStream.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\ByteBufferStream.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\HproseClassManager.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\HproseFormatter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\HproseMode.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\HproseReader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\HproseTags.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+/* Serialize Tags */
+/* Serialize Marks */
+/* Protocol Tags */
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\HproseWriter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\Accessors.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\BoolFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\ByteFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\CharFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\ConstructorAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\DoubleFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\FieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\FloatFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\IntFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\LongFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\MemberAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\PropertyAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\SafeFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\access\ShortFieldAccessor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\BigDecimalConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\BigIntegerConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\BooleanConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\ByteConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\CalendarConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\CharConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\Converter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\ConverterFactory.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\DateConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\DateTimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\DefaultConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\DoubleConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\FloatConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\HproseDateTimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\IntConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\LocaleConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\LongConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\PatternConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\ShortConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\StringBufferConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\StringBuilderConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\StringConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\TimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\TimestampConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\TimeZoneConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\URIConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\URLConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\UUIDConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\ConverterLoader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\DurationConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\InstantConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\LocalDateConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\LocalDateTimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\LocalTimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\MonthDayConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\OffsetDateTimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\OffsetTimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\PeriodConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\YearConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\YearMonthConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\ZonedDateTimeConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\ZoneIdConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\convert\java8\ZoneOffsetConverter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\AtomicBooleanSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\AtomicIntegerArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\AtomicIntegerSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\AtomicLongArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\AtomicLongSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\AtomicReferenceArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\AtomicReferenceSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\BigDecimalArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\BigDecimalSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\BigIntegerArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\BigIntegerSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\BooleanArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\BooleanSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ByteArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\BytesArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ByteSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\CalendarArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\CalendarSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\CharArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\CharsArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\CharSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\CollectionSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\DateArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\DateSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\DateTimeArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\DateTimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\DoubleArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\DoubleSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\EnumSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\FloatArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\FloatSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\HproseDateTimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\IntArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\IntegerSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ListSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\LongArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\LongSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\MapSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\NullSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ObjectArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ObjectSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\OtherTypeArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\OtherTypeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ReferenceSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+// write your actual serialization code in sub class
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\Serializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\SerializerFactory.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ShortArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ShortSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\StringArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\StringBufferArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\StringBufferSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\StringBuilderArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\StringBuilderSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\StringSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\TimeArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\TimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\TimestampArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\TimestampSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\TimeZoneSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ToStringSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\UUIDArraySerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\UUIDSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\ValueWriter.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\Writer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\WriterRefer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\java8\LocalDateSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\java8\LocalDateTimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\java8\LocalTimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\java8\OffsetDateTimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\java8\OffsetTimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\java8\SerializerLoader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\serialize\java8\ZonedDateTimeSerializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ArrayListUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\AtomicBooleanUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\AtomicIntegerArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\AtomicIntegerUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\AtomicLongArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\AtomicLongUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\AtomicReferenceArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\AtomicReferenceUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BaseUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BigDecimalArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BigDecimalUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BigIntegerArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BigIntegerUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BooleanArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BooleanObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BooleanUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ByteArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ByteObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\BytesArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ByteUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CalendarArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CalendarUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CaseInsensitiveMapUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CharArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CharObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CharsArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CharUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\CollectionUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DateArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DateTimeArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DateTimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DateUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DefaultUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DoubleArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DoubleObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\DoubleUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\EnumUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\FloatArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\FloatObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\FloatUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\HashMapUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\HashSetUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\HproseDateTimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\IntArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\IntObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\IntUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\LinkedCaseInsensitiveMapUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\LinkedHashMapUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\LinkedListUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\LocaleUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\LongArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\LongObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\LongUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\MapUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ObjectArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\PatternUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\RawReader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\Reader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ReferenceReader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ShortArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ShortObjectUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ShortUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\StringArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\StringBufferArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\StringBufferUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\StringBuilderArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\StringBuilderUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\StringUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\TimeArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\TimestampArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\TimestampUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\TimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\TimeZoneUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\TreeMapUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\TreeSetUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\Unserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\UnserializerFactory.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\URIUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\URLUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\UUIDArrayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\UUIDUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\ValueReader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+// fallthrough
+// fallthrough
+// fallthrough
+// fallthrough
+// 0xxx xxxx
+// 110x xxxx   10xx xxxx
+// 1111 0xxx  10xx xxxx  10xx xxxx  10xx xxxx
+// fallthrough
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\DurationUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\InstantUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\LocalDateTimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\LocalDateUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\LocalTimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\MonthDayUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\OffsetDateTimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\OffsetTimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\PeriodUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\UnserializerLoader.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\YearMonthUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\YearUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\ZonedDateTimeUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\ZoneIdUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\io\unserialize\java8\ZoneOffsetUnserializer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\Acceptor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\Connection.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\ConnectionHandler.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\Connector.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\OutPacket.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\Reactor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\ReactorGroup.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\ReceiveCallback.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\net\TimeoutType.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseClients.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseHttpMethods.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseHttpService.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseHttpServiceEvent.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseService.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseServiceEvent.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseServlet.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseTcpMethods.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseTcpServer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseTcpServiceEvent.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseWebSocketMethods.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HproseWebSocketService.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\HttpContext.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\Message.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\PushEvent.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\ServiceContext.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\TcpContext.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\Topic.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\server\WebSocketContext.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\Base64.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+/* b1 */
+/* b2 */
+/* b3 */
+/* b4 */
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\CaseInsensitiveMap.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\ClassUtil.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\DateTime.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\JdkVersion.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\LinkedCaseInsensitiveMap.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\StrUtil.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\TimeZoneUtil.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Action.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\AsyncCall.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\AsyncFunc.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Call.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Callback.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Executor.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Func.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Handler.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Promise.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\PromiseFuture.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Reducer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Rejector.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Resolver.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\State.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Subscriber.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Thenable.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Threads.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\Timer.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/hprose-java-master\hprose-java-master\src\main\java\hprose\util\concurrent\TypeException.java
+/**********************************************************\
+//www.hprose.com/                 |
+//www.hprose.org/                 |
+/**********************************************************\

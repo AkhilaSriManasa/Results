@@ -1,0 +1,463 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\common\src\main\java\com\instagram\common\json\JsonAnnotationProcessorConstants.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\common\src\main\java\com\instagram\common\json\JsonFactoryHolder.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\common\src\main\java\com\instagram\common\json\JsonHelper.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\common\src\main\java\com\instagram\common\json\annotation\JsonField.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\common\src\main\java\com\instagram\common\json\annotation\JsonType.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\igmodel\src\main\java\com\instagram\common\json\app\igmodel\IgListOfModels.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\igmodel\src\main\java\com\instagram\common\json\app\igmodel\IgModelRequest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\igmodel\src\main\java\com\instagram\common\json\app\igmodel\IgModelWorker.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\src\main\java\com\instagram\common\json\app\BenchmarkActivity.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+// we're doing this absurd thing with encoding the json file in base64 because phabricator
+// chokes on it otherwise.
+//ignored
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\src\main\java\com\instagram\common\json\app\BenchmarkStats.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\src\main\java\com\instagram\common\json\app\ommodel\OmListOfModels.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\src\main\java\com\instagram\common\json\app\ommodel\OmModelRequest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\demo\src\main\java\com\instagram\common\json\app\ommodel\OmModelWorker.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\javawriter\src\main\java\com\instagram\javawriter\JavaWriter.java
+// Copyright 2013 Square, Inc.
+/** A utility class which aids in generating Java source files. */
+/** Map fully qualified type names to their short names. */
+/**
+/** Emit a package declaration and empty line. */
+/**
+/**
+/**
+/**
+/**
+/**
+/** Try to compress a fully-qualified class name to only the class name. */
+// Copy non-matching characters like "<".
+// Copy a single class name, shortening it if possible.
+// check to see if the part after the package looks like a class
+/**
+/**
+/** Ends the current initializer declaration. */
+/**
+/**
+/**
+/** Completes the current type declaration. */
+/** Emits a field declaration. */
+/** Emits a field declaration. */
+/** Emits a field declaration. */
+/**
+/**
+/** Emits some Javadoc comments with line separated by {@code \n}. */
+/**\n");
+/** Emits a single line comment. */
+// ");
+/**
+/** Emit a list of enum values followed by a semi-colon ({@code ;}). */
+/** Equivalent to {@code annotation(annotation, emptyMap())}. */
+/** Equivalent to {@code annotation(annotationType.getName(), emptyMap())}. */
+/**
+/**
+/** Equivalent to {@code annotation(annotationType.getName(), attributes)}. */
+/**
+/**
+/**
+/**
+/**
+/**
+/** Completes the current method declaration. */
+// support calling a constructor a "method" to support the legacy code
+/** Completes the current constructor declaration. */
+/** Returns the string literal representing {@code data}, including wrapping quotes. */
+/** Build a string representation of a type and optionally its generic type arguments. */
+/** Emits the modifiers to the writer. */
+// Use an EnumSet to ensure the proper ordering
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\jitpack-example\src\main\java\com\instagram\Consumer.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\jitpack-example\src\main\java\com\instagram\Dessert.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\main\java\com\instagram\common\json\annotation\processor\CodeFormatter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\main\java\com\instagram\common\json\annotation\processor\JsonAnnotationProcessor.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// each round of processing requires a clean state.
+// Field annotations are only needed if we're generating method bodies.
+/**
+// Process each @TypeTesting elements.
+/**
+// The annotation should be validated for an interface, but no code should be generated.
+// Verify containing class visibility is not private.
+// Superclass info is only needed if we're generating method bodies.
+// walk up the superclass hierarchy until we find another class we know about.
+/**
+// Process each @TypeTesting elements.
+/**
+// Verify common generated code restrictions.
+// inspect the inner type.
+// Use the parsable object's value extract formatter if existing one is empty
+// verify that we have value extract and serializer formatters.
+// Verify containing type.
+// Verify containing class visibility is not private.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\main\java\com\instagram\common\json\annotation\processor\JsonParserClassData.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Add any additional imports from this class's annotations.
+// Generate the set of imports from the parsable objects referenced.
+// always skip children.  if we expected an array or an object, we would have
+// consumed the START_ARRAY or START_OBJECT.  therefore, we would only skip
+// forward if we're seeing something unexpected.
+// if we reached here, we need to call the superclasses processSingleField
+// method.
+// if we have a superclass, we need to call its serialize method.
+/**
+/**
+/**
+// These are all the default formatters.
+/**
+// needed to do a typecast for erased types
+// map type
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\main\java\com\instagram\common\json\annotation\processor\StrFormat.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\main\java\com\instagram\common\json\annotation\processor\StringUtil.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/*package*/ static boolean isNullOrEmpty(String string) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\main\java\com\instagram\common\json\annotation\processor\TypeData.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\test\java\com\instagram\common\json\annotation\processor\DeserializeTest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// boolean exact fail.  should throw exception.
+// this is expected.
+// Boolean exact fail.  should be null.
+// int exact fail.  should throw exception.
+// this is expected.
+// Integer exact fail.  should be null.
+// long exact fail.  should throw exception.
+// this is expected.
+// Long exact fail.  should be null.
+// float exact fail.  should throw exception.
+// this is expected.
+// Float exact fail.  should be null.
+// double exact fail.  should throw exception.
+// this is expected.
+// Double exact fail.  should be null.
+// string exact fail.  should be null.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\test\java\com\instagram\common\json\annotation\processor\InterModuleTest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// serialize it
+/**
+// serialize it
+/**
+// serialize it
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\test\java\com\instagram\common\json\annotation\processor\MalformedJsonTest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\test\java\com\instagram\common\json\annotation\processor\NobodiesTest.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\test\java\com\instagram\common\json\annotation\processor\SelectiveGenerationTest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\src\test\java\com\instagram\common\json\annotation\processor\SerializeTest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// intentionally do not set integerField
+// intentionally do not set integerListField
+// Test that fields appear in the order specified in the class
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\support\src\main\java\com\instagram\common\json\annotation\processor\support\ExtensibleJSONWriter.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// call some function that writes the object data
+/**
+/**
+/////////////
+// The remaining methods are simply overriden methods of {@link JSONWriter} that return an
+// {@link ExtensibleJSONWriter}.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\dependent\src\main\java\com\instagram\common\json\annotation\processor\SubclassUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\dependent\src\main\java\com\instagram\common\json\annotation\processor\SubclassWithAbstractParentUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\dependent\src\main\java\com\instagram\common\json\annotation\processor\TypeFormatterImportsContainerUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\dependent\src\main\java\com\instagram\common\json\annotation\processor\WrapperClassUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\dependent\src\main\java\com\instagram\common\json\annotation\processor\WrapperInterfaceUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\nobodies\src\main\java\com\instagram\common\json\annotation\processor\NoBodyUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\noserializers\src\main\java\com\instagram\common\json\annotation\processor\NoSerializerGlobalUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\AbstractParentUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\DynamicDispatchAdapter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceImplementation2UUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceImplementationUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceParentDynamicUUT.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceParentDynamicUUTHelper.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceParentNoFormattersUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceParentUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceParentWithWrapperUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\InterfaceParentWrapperUUT.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\ParentUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\TypeFormatterImportsCompanionUUT.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\parent\src\main\java\com\instagram\common\json\annotation\processor\TypeFormatterImportsUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\AlternateFieldUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\CustomParseContainerUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+// validate that we're on the right token
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\EnumUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\ExactMappingUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\FormatterUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\GetterUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\ImportsUUT.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\MapUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\NoSerializerClassUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\PostprocessingUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\SimpleParseUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\StrictListParseUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\processor\testuut\src\main\java\com\instagram\common\json\annotation\processor\StringInterfaceUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\src\main\java\com\instagram\common\json\annotation\util\Console.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Contains Messagers for which errors have been reported through this class.
+//
+// In a build system that does in-process compilation (like Buck), it is possible for multiple
+// instances of our annotation processor to be running in parallel. Because this information
+// is only needed for a (hopefully short term) workaround, rather than rework Console to be
+// an instance class per ProcessingEnvironment, we take advantage of some implementation
+// details. Each instance of our processor will be in a different ProcessingEnvironment, and
+// each ProcessingEnvironment has its own Messager, so we can just track the Messagers that
+// have been used to report errors.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\src\main\java\com\instagram\common\json\annotation\util\ProcessorClassData.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\src\main\java\com\instagram\common\json\annotation\util\TypeUtils.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// is it an enum?
+/**
+// sanity check.
+// sanity check.
+/**
+/**
+// Interfaces do not currently generate classes
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\src\test\java\com\instagram\common\json\annotation\util\TypeUtilsTest.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\testprocessor\src\main\java\com\instagram\common\json\annotation\util\FieldData.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\testprocessor\src\main\java\com\instagram\common\json\annotation\util\MarkedTypes.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\testprocessor\src\main\java\com\instagram\common\json\annotation\util\TestAnnotationProcessor.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/*Console.getNullMessager()*/ env.getMessager());
+// each round of processing requires a clean state.
+// Process each @TypeTesting elements.
+// walk up the superclass hierarchy until we find another class we know about.
+// Verify containing class visibility is not private.
+// Process each @TypeTesting elements.
+// Verify common generated code restrictions.
+// inspect the inner type.
+// Verify containing type.
+// Verify containing class visibility is not private.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\testprocessor\src\main\java\com\instagram\common\json\annotation\util\TypeGathererClassData.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\testprocessor\src\main\java\com\instagram\common\json\annotation\util\TypeTesting.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\testuututil\src\main\java\com\instagram\common\json\annotation\util\SubclassUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/ig-json-parser-master\ig-json-parser-master\util\testuututil\src\main\java\com\instagram\common\json\annotation\util\TypeInspectionUUT.java
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+//////
+// primitives and their boxed counterparts.
+//////
+// strings.
+//////
+// collection types.
+//////
+// nesting

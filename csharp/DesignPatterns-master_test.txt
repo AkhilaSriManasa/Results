@@ -1,0 +1,186 @@
+﻿
+***********other formats****************
+csproj
+gitattributes
+gitignore
+sln
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+DesignPatterns-master/DesignPatterns-master/CODE_OF_CONDUCT.md
+DesignPatterns-master/DesignPatterns-master/LICENSE
+DesignPatterns-master/DesignPatterns-master/README.md
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+DesignPatterns-master/DesignPatterns-master/.gitattributes
+DesignPatterns-master/DesignPatterns-master/.gitignore
+DesignPatterns-master/DesignPatterns-master/DesignPatternsDotNetCore.sln
+DesignPatterns-master/DesignPatterns-master/AdapterPattern/AdapterPattern.csproj
+DesignPatterns-master/DesignPatterns-master/BridgePattern/BridgePattern.csproj
+DesignPatterns-master/DesignPatterns-master/BuilderPattern/BuilderPattern.csproj
+DesignPatterns-master/DesignPatterns-master/ChainOfResponsibilityPattern/ChainOfResponsibilityPattern.csproj
+DesignPatterns-master/DesignPatterns-master/CommandPattern/CommandPattern.csproj
+DesignPatterns-master/DesignPatterns-master/CompositePattern/CompositePattern.csproj
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/DecoratorPattern.csproj
+DesignPatterns-master/DesignPatterns-master/FacadePattern/FacadePattern.csproj
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/FactoryPattern.csproj
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/FlyweightPattern.csproj
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/IteratorPattern.csproj
+DesignPatterns-master/DesignPatterns-master/ObserverPattern/ObserverPattern.csproj
+DesignPatterns-master/DesignPatterns-master/SingletonPattern/SingletonPattern.csproj
+DesignPatterns-master/DesignPatterns-master/StatePattern/StatePattern.csproj
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/StrategyPattern.csproj
+DesignPatterns-master/DesignPatterns-master/TemplatePattern/TemplatePattern.csproj
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/VisitorPattern.csproj
+
+***********other code file list***************
+DesignPatterns-master/DesignPatterns-master/AdapterPattern/IDuck.cs
+DesignPatterns-master/DesignPatterns-master/AdapterPattern/ITurkey.cs
+DesignPatterns-master/DesignPatterns-master/AdapterPattern/MallardDuck.cs
+DesignPatterns-master/DesignPatterns-master/AdapterPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/AdapterPattern/TurkeyAdapter.cs
+DesignPatterns-master/DesignPatterns-master/AdapterPattern/WildTurkey.cs
+DesignPatterns-master/DesignPatterns-master/BridgePattern/FlyingEnchantment.cs
+DesignPatterns-master/DesignPatterns-master/BridgePattern/Hammer.cs
+DesignPatterns-master/DesignPatterns-master/BridgePattern/IEnchantment.cs
+DesignPatterns-master/DesignPatterns-master/BridgePattern/IWeapon.cs
+DesignPatterns-master/DesignPatterns-master/BridgePattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/BridgePattern/SoulEatingEnchantment.cs
+DesignPatterns-master/DesignPatterns-master/BridgePattern/Sword.cs
+DesignPatterns-master/DesignPatterns-master/BuilderPattern/Cook.cs
+DesignPatterns-master/DesignPatterns-master/BuilderPattern/Hamburger.cs
+DesignPatterns-master/DesignPatterns-master/BuilderPattern/IBuilder.cs
+DesignPatterns-master/DesignPatterns-master/BuilderPattern/MyHamburgerBuilder.cs
+DesignPatterns-master/DesignPatterns-master/BuilderPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/BuilderPattern/WifesHamburgerBuilder.cs
+DesignPatterns-master/DesignPatterns-master/ChainOfResponsibilityPattern/AdditionHandler.cs
+DesignPatterns-master/DesignPatterns-master/ChainOfResponsibilityPattern/BaseHandler.cs
+DesignPatterns-master/DesignPatterns-master/ChainOfResponsibilityPattern/IHandler.cs
+DesignPatterns-master/DesignPatterns-master/ChainOfResponsibilityPattern/MultiplicationHandler.cs
+DesignPatterns-master/DesignPatterns-master/ChainOfResponsibilityPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/ChainOfResponsibilityPattern/SubtractionHandler.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/Garage.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/GarageDoorCloseCommand.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/GarageDoorOpenCommand.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/ICommand.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/Light.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/LightOffCommand.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/LightOnCommand.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/MacroCommand.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/NoCommand.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/OnOffStruct.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/CommandPattern/RemoteControl.cs
+DesignPatterns-master/DesignPatterns-master/CompositePattern/Client.cs
+DesignPatterns-master/DesignPatterns-master/CompositePattern/Menu.cs
+DesignPatterns-master/DesignPatterns-master/CompositePattern/MenuComponent.cs
+DesignPatterns-master/DesignPatterns-master/CompositePattern/MenuItem.cs
+DesignPatterns-master/DesignPatterns-master/CompositePattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/Beverage.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/CondimentDecorator.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/DarkRoast.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/Espresso.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/HouseBlend.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/MochaCondiment.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/DecoratorPattern/WhipCondiment.cs
+DesignPatterns-master/DesignPatterns-master/FacadePattern/Dimmer.cs
+DesignPatterns-master/DesignPatterns-master/FacadePattern/Dvd.cs
+DesignPatterns-master/DesignPatterns-master/FacadePattern/DvdPlayer.cs
+DesignPatterns-master/DesignPatterns-master/FacadePattern/HometheaterFacade.cs
+DesignPatterns-master/DesignPatterns-master/FacadePattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/ChicagoIngredientsFactory.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/IIngredientsFactory.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/NYIngredientsFactory.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/CherryTomato.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Cucumber.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/DeepDish.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/FreshClam.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/FrozenClam.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Mozarella.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Olive.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Onion.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Parmesan.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Pepper.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/PlumTomato.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/ThinCrust.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Intefaces/ICheese.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Intefaces/IClam.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Intefaces/IDough.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Intefaces/ISauce.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Abstract Factory/Ingredients/Intefaces/IVeggies.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Factory Method/ChicagoPizzaFactory.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Factory Method/NYPizzaFactory.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Factory Method/PizzaFactory.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Pizza/CheesePizza.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Pizza/ClamPizza.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Pizza/Pizza.cs
+DesignPatterns-master/DesignPatterns-master/FactoryPattern/Pizza/VeggiePizza.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/BeverageFlyweightFactory.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/BeverageType.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/BubbleMilkTea.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/BubbleTeaShop.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/CoconutMilkTea.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/FoamMilkTea.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/IBeverage.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/OolingMilkTea.cs
+DesignPatterns-master/DesignPatterns-master/FlyweightPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/BreakfastMenu.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/BreakfastMenuEnum.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/BreakfastMenuIterator.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/Client.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/DinnerMenu.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/DinnerMenuEnum.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/DinnerMenuIterator.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/Menu.cs
+DesignPatterns-master/DesignPatterns-master/IteratorPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/ObserverPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/ObserverPattern/Unsubscriber.cs
+DesignPatterns-master/DesignPatterns-master/ObserverPattern/Weather.cs
+DesignPatterns-master/DesignPatterns-master/ObserverPattern/WeatherMonitor.cs
+DesignPatterns-master/DesignPatterns-master/ObserverPattern/WeatherSupplier.cs
+DesignPatterns-master/DesignPatterns-master/SingletonPattern/ChocolateBoiler.cs
+DesignPatterns-master/DesignPatterns-master/SingletonPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/SingletonPattern/Status.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/GumballMachine.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/HasQuarterState.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/IState.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/NoQuarterState.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/SoldOutState.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/SoldState.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/WinnerState.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/Legacy/GumballMachine.cs
+DesignPatterns-master/DesignPatterns-master/StatePattern/Legacy/State.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/FlyNope.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/FlyWings.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/IFlyBehaviour.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/IQuackBehaviour.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/QuackNope.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/QuackNormal.cs
+DesignPatterns-master/DesignPatterns-master/StrategyPattern/QuackSqueak.cs
+DesignPatterns-master/DesignPatterns-master/TemplatePattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/TemplatePattern/Beverages/Beverage.cs
+DesignPatterns-master/DesignPatterns-master/TemplatePattern/Beverages/Coffee.cs
+DesignPatterns-master/DesignPatterns-master/TemplatePattern/Beverages/Tea.cs
+DesignPatterns-master/DesignPatterns-master/TemplatePattern/Comparable/Person.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/Apartment.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/ApartmentVisitor.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/Bedroom.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/BedroomVisitor.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/IUnitVisitor.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/LivingRoom.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/LivingRoomVisitor.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/Program.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/Studio.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/StudioVisitor.cs
+DesignPatterns-master/DesignPatterns-master/VisitorPattern/Unit.cs

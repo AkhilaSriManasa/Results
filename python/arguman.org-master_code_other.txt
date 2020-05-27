@@ -1,0 +1,513 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\manage.py
+#!/usr/bin/env python
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\arguments\serializers.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\arguments\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\arguments\views.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\arguments\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\auth\serializers.py
+# FIXME
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\auth\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\auth\views.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\auth\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\newsfeed\mixins.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\newsfeed\renderers.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\newsfeed\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\newsfeed\views.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\newsfeed\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\notifications\serializers.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\notifications\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\notifications\views.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\notifications\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\users\serializers.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\users\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\users\views.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\api\v1\users\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\admin.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\models.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\sitemaps.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\urls.py
+# blog urls
+# rss & atom feed
+# sitemap
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\views.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\migrations\0001_initial.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\migrations\0002_post_is_announcement.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\blog\migrations\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\i18n\middleware.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\i18n\utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\i18n\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\main\postmark_backend.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\main\settings.py
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+# SECURITY WARNING: keep the secret key used in production secret!
+#*r9=0wh5d0oo'
+# SECURITY WARNING: don't run with debug turned on in production!
+# Application definition
+# Database
+# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+# Internationalization
+# https://docs.djangoproject.com/en/1.6/topics/i18n/
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.6/howto/static-files/
+# Social Auth Settings
+# Rules
+# defined in settings_local.py
+# defined in settings_local.py
+# Use Django's standard `django.contrib.auth` permissions,
+# or allow read-only access for unauthenticated users.
+# Markitup Settings
+# default premise view: 'tree' or 'list'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\main\urls.py
+# Sitemap
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\main\utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\main\wsgi.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\main\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\constants.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\models.py
+# it's required for gravatar
+# sometimes we have to create custom related object bundle.
+# for example: following actions. because user actions are
+# holding on relational database.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\views.py
+# tricky a little bit.
+# if the page loaded full, probably there are more news
+# entries. if not, returns a single empty page, it's not a problem.
+# it's more effortless instead of get all collection for now.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\management\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\management\commands\create_initial_newsfeed.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\management\commands\update_fallacies.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\management\commands\update_newsfeed_language.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\newsfeed\management\commands\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\admin.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\forms.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\models.py
+# to avoid circular import
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\utils.py
+# -*- coding:utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\views.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\management\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\management\commands\set_noun_languages.py
+# coding=utf-8
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\management\commands\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0001_initial.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0002_auto_20151028_1935.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0003_auto_20151028_1947.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0004_auto_20151029_1337.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0005_noun_dictionary_level.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0006_auto_20151029_1729.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0007_synonym_is_active.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0008_auto_20151031_2148.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0009_auto_20151102_1810.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0010_auto_20151102_2153.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0011_auto_20151102_2154.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0012_auto_20151102_2209.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0013_remove_keyword_is_visible.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0014_auto_20151104_0127.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0015_auto_20151104_2059.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0016_channel.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0017_channel_language.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\0018_channel_is_featured.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\nouns\migrations\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\admin.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\constants.py
+# -*- coding:utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\export_fallacies.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\forms.py
+# -*- coding: utf-8 -*-
+# avoid self-loop
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\managers.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\mixins.py
+# prepare
+# mark as deleted
+# trigger
+# todo: find a proper way to handle this and remove this mixin
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\models.py
+# -*- coding: utf-8 -*-
+# add date_creation
+# avoid circular import
+# find a proper way to randomize
+# suggestions
+# denormalized field
+# denormalized field
+# denormalized field
+# RETURNS ALL THE CHILD PREMISE IDS
+# Encapsulated for newsfeed app.
+# self.save_karma_tree()
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\signals.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\sitemaps.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\tests.py
+# Create your tests here.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\views.py
+# -*- coding:utf-8 -*-
+# remove notification
+#%s" % premise.pk
+#%s" % premise.pk
+#%s" % premise.pk
+#%s" % premise.pk
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\normalize_fallacies.py
+# coding=utf-8
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\reports_to_gml.py
+#graph.add_node(premise.argument.pk, type="argument")
+#graph.add_edge(premise.argument.pk, node, type="reported")
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\set_contention_languages.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\set_contention_scores.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\update_nouns.py
+# coding=utf-8
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\update_premise_weights.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\update_twitter_accounts.py
+# coding=utf-8
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\management\commands\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0001_initial.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0002_auto_20141009_1922.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0003_premise_text.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0004_auto_20141012_0056.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0005_auto_20141012_0301.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0006_contention_is_published.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0007_auto_20141020_2215.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0008_auto_20141022_1951.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0008_auto_20141023_0133.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0009_merge.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0010_auto_20141027_0204.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0011_auto_20141027_1845.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0012_auto_20141027_1905.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0013_premise_child_count.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0014_premise_max_sibling_count.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0015_premise_collapsed.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0016_report_fallacy_type.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0017_auto_20141030_0353.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0018_premise_supporters.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0019_premise_date_creation.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0020_auto_20141105_0153.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0021_auto_20141107_0059.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0022_auto_20141112_1823.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0023_auto_20151011_1629.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0024_auto_20151011_2239.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0025_auto_20151011_2241.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0026_auto_20151028_1542.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0026_contention_score.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0027_auto_20151028_2210.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0027_auto_20151031_2149.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0028_auto_20151028_2252.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0028_auto_20151102_2154.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0029_contention_related_nouns.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0030_merge.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0030_report_reason.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0031_premise_weight.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0032_merge.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0033_auto_20151115_2230.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0034_contention_is_public.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0035_premise_related_argument.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0036_auto_20151204_2328.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\0037_missing_migrations.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\migrations\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\templatetags\premise_tags.py
+#%(slug)s">%(name)s</a>'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\premises\templatetags\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\admin.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\forms.py
+# -*- coding: utf-8 -*-
+# Since User.username is unique, this check is redundant,
+# but it sets a nicer error message than the ORM. See #13147.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\mixins.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\models.py
+# -*- coding: utf-8 -*-
+# todo: find a way to make reverse relationships
+# with symmetrical false option
+# CALCULATES THE KARMA POINT OF USER
+# ACCORDING TO HOW MANY TIMES SUPPORTED * 2
+# DECREASE BY FALLACY COUNT * 2
+# HOW MANY CHILD PREMISES ARE ADDED TO USER'S PREMISES
+# sender can be `null` for system notifications
+# notification should be anonymous
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\signals.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\sitemaps.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\views.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\management\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\management\commands\update_karma.py
+# Calculate the support count
+# print user.username, '==', user.karma
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\management\commands\update_premises.py
+# denormalizes sibling counts
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\management\commands\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0001_initial.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0002_notification.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0003_auto_20141112_1823.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0004_profile_notification_email.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0005_auto_20151026_1924.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0005_auto_20151028_1542.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0006_profile_karma_point.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0007_auto_20151028_2252.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0008_merge.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\0009_profile_twitter_username.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/arguman.org-master\arguman.org-master\web\profiles\migrations\__init__.py

@@ -1,0 +1,77 @@
+﻿
+***********other formats****************
+bat
+gitignore
+gradle
+jar
+pro
+properties
+ttf
+xml
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/README.md
+
+***********img file list***************
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/anastasia.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/daria.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/irene.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/julia.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/kate.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/kirill.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/paul.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/yalantis.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/mipmap-hdpi/ic_launcher.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/mipmap-mdpi/ic_launcher.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/mipmap-xhdpi/ic_launcher.png
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png
+
+***********uml file list***************
+
+***********other file list***************
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/.gitignore
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/build.gradle
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/gradle.properties
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/gradlew
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/gradlew.bat
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/mavenpush.gradle
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/settings.gradle
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/.gitignore
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/build.gradle
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/gradle.properties
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/proguard-rules.pro
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/src/main/AndroidManifest.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/src/main/res/layout/flipper.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/src/main/res/values/attrs.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/gradle/wrapper/gradle-wrapper.jar
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/gradle/wrapper/gradle-wrapper.properties
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/.gitignore
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/build.gradle
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/proguard-rules.pro
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/AndroidManifest.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/assets/fonts/Roboto-Bold.ttf
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/assets/fonts/Roboto-Light.ttf
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/assets/fonts/Roboto-Medium.ttf
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/assets/fonts/Roboto-Regular.ttf
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/drawable/round_textview.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/layout/activity_friends.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/layout/friends_info.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/layout/friends_merge_page.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/values/colors.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/values/strings.xml
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/res/values/styles.xml
+
+***********other code file list***************
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/src/androidTest/java/com/yalantis/flipviewpager/ApplicationTest.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/src/main/java/com/yalantis/flipviewpager/adapter/BaseFlipAdapter.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/src/main/java/com/yalantis/flipviewpager/utils/FlipSettings.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/flipviewpager/src/main/java/com/yalantis/flipviewpager/view/FlipViewPager.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/androidTest/java/com/yalantis/flip/sample/ApplicationTest.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/java/com/yalantis/flip/sample/Utils.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/java/com/yalantis/flip/sample/activity/FriendsActivity.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/java/com/yalantis/flip/sample/model/Friend.java
+FlipViewPager.Draco-master/FlipViewPager.Draco-master/sample/src/main/java/com/yalantis/flip/sample/views/FontTextView.java

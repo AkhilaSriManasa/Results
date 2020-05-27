@@ -1,0 +1,2116 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017\MigrationFacility.cs
+// ReSharper disable MemberCanBePrivate.Global
+/// <summary>
+/// Supported files to be considered for migration/analysis
+/// </summary>
+/// <summary>
+/// Supported project/solution file extensions
+/// </summary>
+/// <summary>
+/// The ordered list of processors applied to each supported file until one returns true
+/// </summary>
+// ReSharper restore MemberCanBePrivate.Global
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017\PatternProcessor.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017\ProcessSingleItemCallback.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017\ProjectConverterExtensions.cs
+// Process the only solution in given directory
+// Process all csprojs found in given directory
+// todo: rewrite both directory enumerations to use FileInfo instead of raw strings
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\BasicTransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ChainTransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ConversionOptions.cs
+/// <summary>
+/// Project cache, if any. When null no caching is used.
+/// </summary>
+/// <summary>
+/// Whether to keep the AssemblyInfo.cs file, or to
+/// move the attributes into the project file
+/// </summary>
+/// <summary>
+/// Change the target framework to a specific framework, or to
+/// multi target frameworks
+/// </summary>
+/// <summary>
+/// Append the target framework to the output path
+/// </summary>
+/// <summary>
+/// A collection of transforms executed before the execution of default ones
+/// </summary>
+/// <summary>
+/// A collection of transforms executed after the execution of default ones
+/// </summary>
+/// <summary>
+/// A collection of transform class names executed despite being intended for different project system,
+/// like forcing <see cref="ILegacyOnlyProjectTransformation"/> run on already converted project.
+/// </summary>
+/// <summary>
+/// Action that will be executed when project reader cannot unambiguously determine target frameworks
+/// for the currently processing project.
+/// </summary>
+/// <summary>
+/// Force conversion ignoring any checks we might do that prevent a conversion.
+/// </summary>
+/// <summary>
+/// Force conversion of projects otherwise considered of an unsupported type.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Extensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ExtensionsCompat.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ExtensionsExternal.cs
+/// <summary>
+/// If on Unix, convert backslashes to slashes for strings that resemble paths.
+/// The heuristic is if something resembles paths (contains slashes) check if the
+/// first segment exists and is a directory.
+/// Use a native shared method to massage file path. If the file is adjusted,
+/// that qualifies is as a path.
+///
+/// @baseDirectory is just passed to LooksLikeUnixFilePath, to help with the check
+/// </summary>
+// Don't bother with arrays or properties or network paths, or those that
+// have no slashes.
+// For Unix-like systems, we may want to convert backslashes to slashes
+// Find the part of the name we want to check, that is remove quotes, if present
+// Performs Regex.Replace(str, @"[\\/]+", "/")
+/// <summary>
+/// If on Unix, check if the string looks like a file path.
+/// The heuristic is if something resembles paths (contains slashes) check if the
+/// first segment exists and is a directory.
+///
+/// If @baseDirectory is not null, then look for the first segment exists under
+/// that
+/// </summary>
+// The first slash will either be at the beginning of the string or after the first directory name
+// Check for actual files or directories under / that get missed by the above logic
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ExtensionsGraph.cs
+/// <summary>
+/// Choose and order all transformations from set that are suitable for the project type.
+/// </summary>
+/// <param name="set">Transformation set to choose from</param>
+/// <param name="project">Project to be based upon when determining suitability</param>
+/// <param name="logger">Logger for transformations to use</param>
+/// <param name="conversionOptions">Conversion options for transformations to use, or to override suitability choice</param>
+/// <returns></returns>
+/// <summary>
+/// Choose all transformations from sequence that are suitable for the project type.
+/// </summary>
+/// <param name="source">Sequence to choose from</param>
+/// <param name="project">Project to be based upon when determining suitability</param>
+/// <param name="conversionOptions">Conversion options for transformations to use, or to override suitability choice</param>
+/// <returns></returns>
+// When Span<T> becomes available - replace with
+// var used = count <= 256 ? stackalloc byte[count] : new byte[count];
+// topological order on reverse graph is reverse topological order on the original
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ExtensionsPath.cs
+/// <summary>
+/// https://stackoverflow.com/a/31941159
+/// </summary>
+/// <summary>
+/// Returns true if <paramref name="path"/> starts with the path <paramref name="baseDirPath"/>.
+/// The comparison is case-insensitive, handles / and \ slashes as folder separators and
+/// only matches if the base dir folder name is matched exactly ("c:\foobar\file.txt" is not a sub path of "c:\foo").
+/// </summary>
+/// <summary>
+/// Returns <paramref name="str"/> with the minimal concatenation of <paramref name="ending"/> (starting from end) that
+/// results in satisfying .EndsWith(ending).
+/// </summary>
+/// <example>"hel".WithEnding("llo") returns "hello", which is the result of "hel" + "lo".</example>
+// Right() is 1-indexed, so include these cases
+// * Append no characters
+// * Append up to N characters, where N is ending length
+/// <summary>Gets the rightmost <paramref name="length" /> characters from a string.</summary>
+/// <param name="value">The string to retrieve the substring from.</param>
+/// <param name="length">The number of characters to retrieve.</param>
+/// <returns>The substring.</returns>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ITransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\NoopLogger.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\NoopTransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\PathCompat.NETCore.cs
+/// <summary>
+/// Create a relative path from one path to another. Paths will be resolved before calculating the difference.
+/// Default path comparison for the active platform will be used (OrdinalIgnoreCase for Windows or Mac, Ordinal for Unix).
+/// </summary>
+/// <param name="relativeTo">The source path the output should be relative to. This path is always considered to be a directory.</param>
+/// <param name="path">The destination path.</param>
+/// <returns>The relative path or <paramref name="path"/> if the paths don't share the same root.</returns>
+/// <exception cref="ArgumentNullException">Thrown if <paramref name="relativeTo"/> or <paramref name="path"/> is <c>null</c> or an empty string.</exception>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\PathCompat.NETFramework.cs
+// ReSharper disable InconsistentNaming
+/// <summary>
+/// Create a relative path from one path to another. Paths will be resolved before calculating the difference.
+/// Default path comparison for the active platform will be used (OrdinalIgnoreCase for Windows or Mac, Ordinal for Unix).
+/// </summary>
+/// <param name="relativeTo">The source path the output should be relative to. This path is always considered to be a directory.</param>
+/// <param name="path">The destination path.</param>
+/// <returns>The relative path or <paramref name="path"/> if the paths don't share the same root.</returns>
+/// <exception cref="ArgumentNullException">Thrown if <paramref name="relativeTo"/> or <paramref name="path"/> is <c>null</c> or an empty string.</exception>
+// Need to check if the roots are different- if they are we need to return the "to" path.
+// If there is nothing in common they can't share the same root, return the "to" path as is.
+// Trailing separators aren't significant for comparison
+// If we have effectively the same path, return "."
+// We have the same root, we need to calculate the difference now using the
+// common Length and Segment count past the length.
+//
+// Some examples:
+//
+//  C:\Foo C:\Bar L3, S1 -> ..\Bar
+//  C:\Foo C:\Foo\Bar L6, S0 -> Bar
+//  C:\Foo\Bar C:\Bar\Bar L3, S2 -> ..\..\Bar\Bar
+//  C:\Foo\Foo C:\Foo\Bar L7, S1 -> ..\Bar
+// Add parent segments for segments past the common on the "from" path
+// No parent segments and we need to eat the initial separator
+//  (C:\Foo C:\Foo\Bar case)
+// Now add the rest of the "to" path, adding back the trailing separator
+/// <summary>
+/// Returns true if the path ends in a directory separator.
+/// </summary>
+/// <summary>
+/// Returns true if the two paths have the same root
+/// </summary>
+// \\?\, \\.\, \??\
+// \\
+// \\?\UNC\, \\.\UNC\
+/// <summary>
+/// Returns true if the path uses the canonical form of extended syntax ("\\?\" or "\??\"). If the
+/// path matches exactly (cannot use alternate directory separators) Windows will skip normalization
+/// and path length checks.
+/// </summary>
+// While paths like "//?/C:/" will work, they're treated the same as "\\.\" paths.
+// Skipping of normalization will *only* occur if back slashes ('\') are used.
+/// <summary>
+/// Returns true if the path uses any of the DOS device path syntaxes. ("\\.\", "\\?\", or "\??\")
+/// </summary>
+// If the path begins with any two separators is will be recognized and normalized and prepped with
+// "\??\" for internal usage correctly. "\??\" is recognized and handled, "/??/" is not.
+/// <summary>
+/// Returns true if the path is a device UNC (\\?\UNC\, \\.\UNC\)
+/// </summary>
+/// <summary>
+/// Returns true if the given character is a valid drive letter
+/// </summary>
+/// <summary>
+/// Gets the length of the root of the path (drive, share, etc.).
+/// </summary>
+// UNC or simple rooted path (e.g. "\foo", NOT "\\?\C:\foo")
+// UNC (\\?\UNC\ or \\), scan past server\share
+// Start past the prefix ("\\" or "\\?\UNC\")
+// Skip two separators at most
+// Current drive rooted (e.g. "\foo")
+// Device path (e.g. "\\?\.", "\\.\")
+// Skip any characters following the prefix that aren't a separator
+// If there is another separator take it, as long as we have had at least one
+// non-separator after the prefix (e.g. don't take "\\?\\", but take "\\?\a\")
+// Valid drive specified path ("C:", "D:", etc.)
+// If the colon is followed by a directory separator, move past it (e.g "C:\")
+/// <summary>
+/// Returns true if the path is effectively empty for the current OS.
+/// For unix, this is empty or null. For Windows, this is empty, null, or
+/// just spaces ((char)32).
+/// </summary>
+/// <summary>
+/// True if the given character is a directory separator.
+/// </summary>
+/// <summary>
+/// Get the common path length from the start of the string.
+/// </summary>
+// If nothing matches
+// Or we're a full string and equal length or match to a separator
+// It's possible we matched somewhere in the middle of a segment e.g. C:\Foodie and C:\Foobar.
+/// <summary>
+/// Gets the count of common characters from the left optionally ignoring case
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\ProjectConverter.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\UnknownTargetFrameworkCallback.cs
+/// <summary>
+/// Action that will be executed when project reader cannot unambiguously determine target frameworks
+/// for the currently processing project.
+/// </summary>
+/// <param name="project">Project that is being parsed</param>
+/// <param name="foundTargetFrameworks">A list of ambiguous target frameworks set</param>
+/// <returns>true if the parsing should continue, false if it should be aborted</returns>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\UnsupportedProjectReason.cs
+/// <summary>
+/// Supported.
+/// </summary>
+/// <summary>
+/// Not supported because entity framework is likely used.
+/// </summary>
+/// <summary>
+/// Not supported because the project type is not supported, <seealso cref="https://github.com/dotnet/project-system/blob/master/docs/feature-comparison.md"/>.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\UnsupportedProjectTypes.cs
+/// <summary>
+/// Helper library to filter out unsupported project types
+/// </summary>
+/// <summary>
+/// Check for unsupported ProjectTypeGuids in project
+/// </summary>
+/// <param name="project">source project to check</param>
+/// <returns></returns>
+// if any guid matches an unsupported type, return true
+// Code-first
+// EF Designer
+/// <summary>
+/// Guids that cannot be converted
+/// </summary>
+/// <remarks>
+/// Types of projects that are not supported:
+/// https://github.com/dotnet/project-system/blob/master/docs/feature-comparison.md
+/// The GUIDs taken from
+/// https://www.codeproject.com/Reference/720512/List-of-Visual-Studio-Project-Type-GUIDs
+/// Note that the list here is in upper case but project file guids are normally lower case
+/// This list does not include Windows Forms apps, these have no type guid
+/// </remarks>
+// ASP.NET 5
+// ASP.NET MVC 1
+// ASP.NET MVC 2
+// ASP.NET MVC 3
+// ASP.NET MVC 4
+// ASP.NET MVC 5
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\AnalysisExtensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\AnalysisOptions.cs
+/// <summary>
+/// Including ID of diagnostics in this list will make analyzer skip their execution and therefore output
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\Analyzer.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\DiagnosticBase.cs
+/// <summary>
+/// Report found issue using user-selected means of logging
+/// </summary>
+/// <param name="project">Project in which the issue was found</param>
+/// <param name="message">Informative message about the issue</param>
+/// <param name="source">File or directory for user reference</param>
+/// <param name="sourceLine">File line for user reference</param>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\DiagnosticLocation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\DiagnosticResult.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\DiagnosticSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\IDiagnostic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\IDiagnosticLocation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\IDiagnosticResult.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\IllegalDiagnosticStateException.cs
+/// <inheritdoc />
+/// <inheritdoc />
+/// <inheritdoc />
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\IReporter.cs
+/// <summary>
+/// Default options for any project
+/// </summary>
+/// <summary>
+/// Do the actual issue reporting
+/// </summary>
+/// <param name="results">Diagnostics to report</param>
+/// <param name="reporterOptions">Options for the reporter</param>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\IReporterOptions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\LoggerReporter.cs
+/// <inheritdoc />
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\LoggerReporterOptions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\ReporterBase.cs
+/// <inheritdoc />
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\Diagnostics\W001IllegalProjectTypeDiagnostic.cs
+/// <inheritdoc />
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\Diagnostics\W002MissingProjectFileDiagnostic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\Diagnostics\W010ConfigurationsMismatchDiagnostic.cs
+/// <inheritdoc />
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Analysis\Diagnostics\W011UnsupportedConditionalDiagnostic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Caching\DefaultProjectCache.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Caching\IProjectCache.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Caching\NoProjectCache.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\ApplicationType.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\AssemblyAttributes.cs
+//Find the specified attribute and which attribute list it is in
+//Make the assumption that it at least has a string argument
+//because all of the attributes we currently look for do have
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\AssemblyReference.cs
+// Reference
+// Attributes
+// Elements
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\IReference.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\PackageConfiguration.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\PackageReference.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\Project.cs
+//schemas.microsoft.com/developer/msbuild/2003";
+/// <summary>
+/// Files or folders that should be deleted as part of the conversion
+/// </summary>
+/// <summary>
+/// The directory where NuGet stores its extracted packages for the project.
+/// In general this is the 'packages' folder within the parent solution, but
+/// it can be overridden, which is accounted for here.
+/// </summary>
+//return the explicitly set path, or if there isn't one, then use the solution's path if one was provided.
+//Otherwise assume a solution is one level above the project and therefore so is the 'packages' folder
+/// <summary>
+/// The solution in which this project was found, if any.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\ProjectExtensions.cs
+// log unexpected case
+// parse the CSV list
+/* unexpected case */ Guid.Empty)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\ProjectReference.cs
+/// <summary>
+/// Extension of the project file, if any
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Definition\Solution.cs
+/// <summary>
+/// The directory where nuget stores its extracted packages for the solution.
+/// In general this is the 'packages' folder within the solution oflder, but
+/// it can be overridden, which is accounted for here.
+/// </summary>
+//return the explicitly set path, or if there isn't one, then assume the 'packages' folder is in the solution folder
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\AssemblyInfoReader.cs
+// for modern projects an assembly info is not required.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\ConditionEvaluationStateImpl.cs
+/// <inheritdoc />
+/// <inheritdoc />
+/// <inheritdoc />
+// it makes little sense for condition to be that short
+// return value ignored
+// ignored
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\ConditionEvaluator.Cache.cs
+/// <summary>
+///
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\ConditionEvaluator.cs
+/// <summary>
+/// Update our table which keeps track of all the properties that are referenced
+/// inside of a condition and the string values that they are being tested against.
+/// So, for example, if the condition was " '$(Configuration)' == 'Debug' ", we
+/// would get passed in leftValue="$(Configuration)" and rightValueExpanded="Debug".
+/// This call would add the string "Debug" to the list of possible values for the
+/// "Configuration" property.
+///
+/// This method also handles the case when two or more properties are being
+/// concatenated together with a vertical bar, as in '
+///     $(Configuration)|$(Platform)' == 'Debug|x86'
+/// </summary>
+// List of possible values, keyed by property name
+// The raw value on the left side of the operator
+// The fully expanded value on the right side
+// of the operator.
+// The left side should be exactly "$(propertyname)" or "$(propertyname1)|$(propertyname2)"
+// or "$(propertyname1)|$(propertyname2)|$(propertyname3)", etc.  Anything else,
+// and we don't touch the table.
+// Split up the leftValue into pieces based on the vertical bar character.
+// PERF: Avoid allocations from string.Split by forming spans between 'pieceStart' and 'pieceEnd'
+// Loop through each of the pieces.
+// Find the first vertical bar on the right-hand-side expression.
+// If there was no vertical bar, then just use the remainder of the right-hand-side
+// expression as the value of the property, and terminate the loop after this iteration.
+// Also, if we're on the last segment of the left-hand-side, then use the remainder
+// of the right-hand-side expression as the value of the property.
+// If we found a vertical bar, then the portion before the vertical bar is the
+// property value which we will store in our table.  Then remove that portion
+// from the original string so that the next iteration of the loop can easily search
+// for the first vertical bar again.
+// Capture the property name out of the regular expression.
+// Get the string collection for this property name, if one already exists.
+// If this property is not already represented in the table, add a new entry
+// for it.
+// If the "rightValueExpanded" is not already in the string collection
+// for this property name, add it now.
+// it makes little sense for condition to be that short
+// in case we don't know what some part of the condition does - don't make any assumptions at all
+// ignored
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\NuSpecReader.cs
+//schemas.microsoft.com/packaging/2010/07/nuspec.xsd",
+//schemas.microsoft.com/packaging/2011/08/nuspec.xsd",
+//schemas.microsoft.com/packaging/2013/05/nuspec.xsd"
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\ProjectPropertiesReader.cs
+// Ref.: https://www.codeproject.com/Reference/720512/List-of-Visual-Studio-Project-Type-GUIDs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\ProjectReader.cs
+// get ProjectTypeGuids and check for unsupported types
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\SolutionReader.cs
+// An example of a project line looks like this:
+//  Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{05A5AD00-71B5-4612-AF2F-9EA9121C4111}"
+// Beginning of line
+// Any amount of whitespace plus "=" plus any amount of whitespace
+// Any amount of whitespace plus "," plus any amount of whitespace
+// Any amount of whitespace plus "," plus any amount of whitespace
+// End-of-line
+/// <summary>
+/// Parse the first line of a Project section of a solution file. This line should look like:
+///
+///  Project("{Project type GUID}") = "Project name", "Relative path to project file", "{Project GUID}"
+///
+/// </summary>
+/// <returns>true if project type is supported by csproj-to-2017</returns>
+// If the project name is empty (as in some bad solutions) set it to some generated generic value.
+// This allows us to at least generate reasonable target names etc. instead of crashing.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\AndExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Performs logical AND on children
+/// Does not update conditioned properties table
+/// </summary>
+/// <summary>
+/// Evaluate as boolean
+/// </summary>
+// Short circuit
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\CharacterUtilities.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\ConversionUtilities.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// This class contains only static methods, which are useful throughout many
+/// of the MSBuild classes and don't really belong in any specific class.   
+/// </summary>
+/// <summary>
+/// Converts a string to a bool.  We consider "true/false", "on/off", and 
+/// "yes/no" to be valid boolean representations in the XML.
+/// </summary>
+/// <param name="parameterValue">The string to convert.</param>
+/// <returns>Boolean true or false, corresponding to the string.</returns>
+// Unsupported boolean representation.
+/// <summary>
+/// Returns a hex representation of a byte array.
+/// </summary>
+/// <param name="bytes">The bytes to convert</param>
+/// <returns>A string byte types formated as X2.</returns>
+/// <summary>
+/// Returns true if the string can be successfully converted to a bool,
+/// such as "on" or "yes"
+/// </summary>
+/// <summary>
+/// Returns true if the string represents a valid MSBuild boolean true value,
+/// such as "on", "!false", "yes"
+/// </summary>
+/// <summary>
+/// Returns true if the string represents a valid MSBuild boolean false value,
+/// such as "!on" "off" "no" "!true"
+/// </summary>
+/// <summary>
+/// Converts a string like "123.456" into a double. Leading sign is allowed.
+/// </summary>
+/// <summary>
+/// Converts a hex string like "0xABC" into a double.
+/// </summary>
+/// <summary>
+/// Converts a string like "123.456" or "0xABC" into a double.
+/// Tries decimal conversion first.
+/// </summary>
+/// <summary>
+/// Returns true if the string is a valid hex number, like "0xABC"
+/// </summary>
+/// <summary>
+/// Returns true if the string is a valid decimal number, like "-123.456"
+/// </summary>
+/// <summary>
+/// Returns true if the string is a valid decimal or hex number
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\EqualExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Compares for equality
+/// </summary>
+/// <summary>
+/// Compare numbers
+/// </summary>
+/// <summary>
+/// Compare booleans
+/// </summary>
+/// <summary>
+/// Compare strings
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\ErrorUtilities.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// This class contains methods that are useful for error checking and validation.
+/// </summary>
+/// <summary>
+/// Emergency escape hatch. If a customer hits a bug in the shipped product causing an internal exception,
+/// and fortuitously it happens that ignoring the VerifyThrow allows execution to continue in a reasonable way,
+/// then we can give them this undocumented environment variable as an immediate workaround.
+/// </summary>
+/// <summary>
+/// Throws InternalErrorException. 
+/// This is only for situations that would mean that there is a bug in MSBuild itself.
+/// </summary>
+/// <summary>
+/// Throws InternalErrorException. 
+/// This is only for situations that would mean that there is a bug in MSBuild itself.
+/// </summary>
+/// <summary>
+/// Throws InternalErrorException. 
+/// Indicates the code path followed should not have been possible.
+/// This is only for situations that would mean that there is a bug in MSBuild itself.
+/// </summary>
+/// <summary>
+/// Throws InternalErrorException. 
+/// Indicates the code path followed should not have been possible.
+/// This is only for situations that would mean that there is a bug in MSBuild itself.
+/// </summary>
+// Check it has a real implementation of ToString()
+/// <summary>
+/// Helper to throw an InternalErrorException when the specified parameter is null.
+/// This should be used ONLY if this would indicate a bug in MSBuild rather than
+/// anything caused by user action.
+/// </summary>
+/// <param name="parameter">The value of the argument.</param>
+/// <param name="parameterName">Parameter that should not be null</param>
+/// <summary>
+/// Helper to throw an InternalErrorException when a lock on the specified object is not already held.
+/// This should be used ONLY if this would indicate a bug in MSBuild rather than
+/// anything caused by user action.
+/// </summary>
+/// <param name="locker">The object that should already have been used as a lock.</param>
+/// <summary>
+/// Helper to throw an InternalErrorException when the specified parameter is null or zero length.
+/// This should be used ONLY if this would indicate a bug in MSBuild rather than
+/// anything caused by user action.
+/// </summary>
+/// <param name="parameterValue">The value of the argument.</param>
+/// <param name="parameterName">Parameter that should not be null or zero length</param>
+/// <summary>
+/// Helper to throw an InternalErrorException when the specified parameter is not a rooted path.
+/// This should be used ONLY if this would indicate a bug in MSBuild rather than
+/// anything caused by user action.
+/// </summary>
+/// <param name="value">Parameter that should be a rooted path</param>
+/// <summary>
+/// This method should be used in places where one would normally put
+/// an "assert". It should be used to validate that our assumptions are
+/// true, where false would indicate that there must be a bug in our
+/// code somewhere. This should not be used to throw errors based on bad
+/// user input or anything that the user did wrong.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="unformattedMessage"></param>
+// PERF NOTE: explicitly passing null for the arguments array
+// prevents memory allocation
+/// <summary>
+/// Overload for one string format argument.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="unformattedMessage"></param>
+/// <param name="arg0"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInternalError() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Overload for two string format arguments.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="unformattedMessage"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInternalError() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Overload for three string format arguments.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="unformattedMessage"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+/// <param name="arg2"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInternalError() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Overload for four string format arguments.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="unformattedMessage"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+/// <param name="arg2"></param>
+/// <param name="arg3"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInternalError() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Throws an InvalidOperationException with the specified resource string
+/// </summary>
+/// <param name="resourceName">Resource to use in the exception</param>
+/// <param name="args">Formatting args.</param>
+/// <summary>
+/// Throws an InvalidOperationException if the given condition is false.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+// PERF NOTE: explicitly passing null for the arguments array
+// prevents memory allocation
+/// <summary>
+/// Overload for one string format argument.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInvalidOperation() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Overload for two string format arguments.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInvalidOperation() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Overload for three string format arguments.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+/// <param name="arg2"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInvalidOperation() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Overload for four string format arguments.
+/// </summary>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+/// <param name="arg2"></param>
+/// <param name="arg3"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowInvalidOperation() method, because that method always
+// allocates memory for its variable array of arguments
+/// <summary>
+/// Throws an ArgumentException that can include an inner exception.
+/// 
+/// PERF WARNING: calling a method that takes a variable number of arguments
+/// is expensive, because memory is allocated for the array of arguments -- do
+/// not call this method repeatedly in performance-critical scenarios
+/// </summary>
+/// <summary>
+/// Throws an ArgumentException that can include an inner exception.
+/// 
+/// PERF WARNING: calling a method that takes a variable number of arguments
+/// is expensive, because memory is allocated for the array of arguments -- do
+/// not call this method repeatedly in performance-critical scenarios
+/// </summary>
+/// <remarks>
+/// This method is thread-safe.
+/// </remarks>
+/// <param name="innerException">Can be null.</param>
+/// <param name="resourceName"></param>
+/// <param name="args"></param>
+/// <summary>
+/// Throws an ArgumentException if the given condition is false.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+/// <summary>
+/// Overload for one string format argument.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+/// <summary>
+/// Overload for two string format arguments.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <param name="condition"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+/// <summary>
+/// Overload for three string format arguments.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <summary>
+/// Overload for four string format arguments.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <summary>
+/// Throws an ArgumentException that includes an inner exception, if
+/// the given condition is false.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <param name="condition"></param>
+/// <param name="innerException">Can be null.</param>
+/// <param name="resourceName"></param>
+// PERF NOTE: explicitly passing null for the arguments array
+// prevents memory allocation
+/// <summary>
+/// Overload for one string format argument.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <param name="condition"></param>
+/// <param name="innerException"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowArgument() method, because that method always allocates
+// memory for its variable array of arguments
+/// <summary>
+/// Overload for two string format arguments.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <param name="condition"></param>
+/// <param name="innerException"></param>
+/// <param name="resourceName"></param>
+/// <param name="arg0"></param>
+/// <param name="arg1"></param>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowArgument() method, because that method always allocates
+// memory for its variable array of arguments
+/// <summary>
+/// Overload for three string format arguments.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowArgument() method, because that method always allocates
+// memory for its variable array of arguments
+/// <summary>
+/// Overload for four string format arguments.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+// PERF NOTE: check the condition here instead of pushing it into
+// the ThrowArgument() method, because that method always allocates
+// memory for its variable array of arguments
+/// <summary>
+/// Throws an argument out of range exception.
+/// </summary>
+/// <summary>
+/// Throws an ArgumentOutOfRangeException using the given parameter name
+/// if the condition is false.
+/// </summary>
+/// <summary>
+/// Throws an ArgumentNullException if the given parameter is null.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+/// <param name="parameter"></param>
+/// <param name="parameterName"></param>
+/// <summary>
+/// Throws an ArgumentNullException if the given parameter is null.
+/// </summary>
+/// <remarks>This method is thread-safe.</remarks>
+// Most ArgumentNullException overloads append its own rather clunky multi-line message. 
+// So use the one overload that doesn't.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\FunctionCallExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Evaluates a function expression, such as "Exists('foo')"
+/// </summary>
+/// <summary>
+/// Evaluate node as boolean
+/// </summary>
+// often used to append slash to path so return false to enable this codepath
+// We haven't implemented any other "functions"
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\GenericExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Base class for all expression nodes.
+/// </summary>
+/// <summary>
+/// Returns true if this node evaluates to an empty string,
+/// otherwise false.
+/// (It may be cheaper to determine whether an expression will evaluate
+/// to empty than to fully evaluate it.)
+/// Implementations should cache the result so that calls after the first are free.
+/// </summary>
+/// <summary>
+/// Value after any item and property expressions are expanded
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Value before any item and property expressions are expanded
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// If any expression nodes cache any state for the duration of evaluation, 
+/// now's the time to clean it up
+/// </summary>
+/// <summary>
+/// The main evaluate entry point for expression trees
+/// </summary>
+/// <param name="state"></param>
+/// <returns></returns>
+/// <summary>
+/// Get display string for this node for use in the debugger.
+/// </summary>
+/* do nothing */ }
+/* do nothing */ }
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\GreaterThanExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Compares for left > right
+/// </summary>
+/// <summary>
+/// Compare numerically
+/// </summary>
+/// <summary>
+/// Compare Versions. This is only intended to compare version formats like "A.B.C.D" which can otherwise not be compared numerically
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\GreaterThanOrEqualExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Compares for left >= right
+/// </summary>
+/// <summary>
+/// Compare numerically
+/// </summary>
+/// <summary>
+/// Compare Versions. This is only intended to compare version formats like "A.B.C.D" which can otherwise not be compared numerically
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\IConditionEvaluationState.cs
+/// <summary>
+///     Table of conditioned properties and their values.
+///     Used to populate configuration lists in some project systems.
+///     If this is null, as it is for command line builds, conditioned properties
+///     are not recorded.
+/// </summary>
+/// <summary>
+///     May return null if the expression would expand to non-empty and it broke out early.
+///     Otherwise, returns the correctly expanded expression.
+/// </summary>
+/// <summary>
+///     Expands the specified expression into a string.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\InternalErrorException.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// This exception is to be thrown whenever an assumption we have made in the code turns out to be false. Thus, if this
+/// exception ever gets thrown, it is because of a bug in our own code, not because of something the user or project author
+/// did wrong.
+/// 
+/// !~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~
+/// WARNING: When this file is shared into multiple assemblies each assembly will view this as a different type.
+///          Don't throw this exception from one assembly and catch it in another.
+/// !~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~
+///     
+/// </summary>
+/// <summary>
+/// Default constructor.
+/// SHOULD ONLY BE CALLED BY DESERIALIZER. 
+/// SUPPLY A MESSAGE INSTEAD.
+/// </summary>
+// do nothing
+/// <summary>
+/// Creates an instance of this exception using the given message.
+/// </summary>
+/// <summary>
+/// Creates an instance of this exception using the given message and inner exception.
+/// Adds the inner exception's details to the exception message because most bug reporters don't bother
+/// to provide the inner exception details which is typically what we care about.
+/// </summary>
+/// <summary>
+/// A fatal internal error due to a bug has occurred. Give the dev a chance to debug it, if possible.
+/// 
+/// Will in all cases launch the debugger, if the environment variable "MSBUILDLAUNCHDEBUGGER" is set.
+/// 
+/// In DEBUG build, will always launch the debugger, unless we are in razzle (_NTROOT is set) or in NUnit,
+/// or MSBUILDDONOTLAUNCHDEBUGGER is set (that could be useful in suite runs).
+/// We don't launch in retail or LKG so builds don't jam; they get a callstack, and continue or send a mail, etc.
+/// We don't launch in NUnit as tests often intentionally cause InternalErrorExceptions.
+/// 
+/// Because we only call this method from this class, just before throwing an InternalErrorException, there is 
+/// no danger that this suppression will cause a bug to only manifest itself outside NUnit
+/// (which would be most unfortunate!). Do not make this non-private.
+/// 
+/// Unfortunately NUnit can't handle unhandled exceptions like InternalErrorException on anything other than
+/// the main test thread. However, there's still a callstack displayed before it quits.
+/// 
+/// If it is going to launch the debugger, it first does a Debug.Fail to give information about what needs to
+/// be debugged -- the exception hasn't been thrown yet. This automatically displays the current callstack.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\LessThanExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Compares for left &lt; right
+/// </summary>
+/// <summary>
+/// Compare numerically
+/// </summary>
+/// <summary>
+/// Compare Versions. This is only intended to compare version formats like "A.B.C.D" which can otherwise not be compared numerically
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\LessThanOrEqualExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Compares for left &lt;= right
+/// </summary>
+/// <summary>
+/// Compare numerically
+/// </summary>
+/// <summary>
+/// Compare Versions. This is only intended to compare version formats like "A.B.C.D" which can otherwise not be compared numerically
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+// If they have same "major" number, then that means we are comparing something like "6.X.Y.Z" to "6". Version treats the objects with more dots as
+// "larger" regardless of what those dots are (e.g. 6.0.0.0 > 6 is a true statement)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\MultipleComparisonExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Evaluates as boolean and evaluates children as boolean, numeric, or string.
+/// Order in which comparisons are attempted is numeric, boolean, then string.
+/// Updates conditioned properties table.
+/// </summary>
+/// <summary>
+/// Compare numbers
+/// </summary>
+/// <summary>
+/// Compare booleans
+/// </summary>
+/// <summary>
+/// Compare strings
+/// </summary>
+/// <summary>
+/// Evaluates as boolean and evaluates children as boolean, numeric, or string.
+/// Order in which comparisons are attempted is numeric, boolean, then string.
+/// Updates conditioned properties table.
+/// </summary>
+// It's sometimes possible to bail out of expansion early if we just need to know whether 
+// the result is empty string.
+// If at least one of the left or the right hand side will evaluate to empty, 
+// and we know which do, then we already have enough information to evaluate this expression.
+// That means we don't have to fully expand a condition like " '@(X)' == '' " 
+// which is a performance advantage if @(X) is a huge item list.
+// string comparison
+/// <summary>
+/// Reset temporary state
+/// </summary>
+/// <summary>
+/// Updates the conditioned properties table if it hasn't already been done.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\NotEqualExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Compares for inequality
+/// </summary>
+/// <summary>
+/// Compare numbers
+/// </summary>
+/// <summary>
+/// Compare booleans
+/// </summary>
+/// <summary>
+/// Compare strings
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\NotExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Performs logical NOT on left child
+/// Does not update conditioned properties table
+/// </summary>
+/// <summary>
+/// Evaluate as boolean
+/// </summary>
+/// <summary>
+/// Returns unexpanded value with '!' prepended. Useful for error messages.
+/// </summary>
+/// <summary>
+/// Returns expanded value with '!' prepended. Useful for error messages.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\NumericComparisonExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Evaluates a numeric comparison, such as less-than, or greater-or-equal-than
+/// Does not update conditioned properties table.
+/// </summary>
+/// <summary>
+/// Compare numbers
+/// </summary>
+/// <summary>
+/// Compare Versions. This is only intended to compare version formats like "A.B.C.D" which can otherwise not be compared numerically
+/// </summary>
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+/// <summary>
+/// Compare mixed numbers and Versions
+/// </summary>
+/// <summary>
+/// Evaluate as boolean
+/// </summary>
+// If the values identify as numeric, make that comparison instead of the Version comparison since numeric has a stricter definition
+// If the numbers are of a mixed type, call that specific Compare method
+// Throw error here as this code should be unreachable
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\NumericExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Represents a number - evaluates as numeric.
+/// </summary>
+/// <summary>
+/// Evaluate as boolean
+/// </summary>
+// Should be unreachable: all calls check CanBoolEvaluate() first
+/// <summary>
+/// Evaluate as numeric
+/// </summary>
+/// <summary>
+/// Evaluate as a Version
+/// </summary>
+/// <summary>
+/// Whether it can be evaluated as a boolean: never allowed for numerics
+/// </summary>
+// Numeric expressions are never allowed to be treated as booleans.
+/// <summary>
+/// Whether it can be evaluated as numeric
+/// </summary>
+// It is not always possible to numerically evaluate even a numerical expression -
+// for example, it may overflow a double. So check here.
+/// <summary>
+/// Whether it can be evaluated as a Version
+/// </summary>
+// Check if the value can be formatted as a Version number
+// This is needed for nodes that identify as Numeric but can't be parsed as numbers (e.g. 8.1.1.0 vs 8.1)
+/// <summary>
+/// Get the unexpanded value
+/// </summary>
+/// <summary>
+/// Get the expanded value
+/// </summary>
+/// <summary>
+/// If any expression nodes cache any state for the duration of evaluation, 
+/// now's the time to clean it up
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\OperandExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Base class for all nodes that are operands (are leaves in the parse tree)
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\OperatorExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Base class for nodes that are operators (have children in the parse tree)
+/// </summary>
+/// <summary>
+/// Numeric evaluation is never allowed for operators
+/// </summary>
+// Should be unreachable: all calls check CanNumericEvaluate() first
+/// <summary>
+/// Version evaluation is never allowed for operators
+/// </summary>
+/// <summary>
+/// Whether boolean evaluation is allowed: always allowed for operators
+/// </summary>
+/// <summary>
+/// Whether the node can be evaluated as a numeric: by default,
+/// this is not allowed
+/// </summary>
+/// <summary>
+/// Whether the node can be evaluated as a version: by default,
+/// this is not allowed
+/// </summary>
+/// <summary>
+/// Value after any item and property expressions are expanded
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Value before any item and property expressions are expanded
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// If any expression nodes cache any state for the duration of evaluation,
+/// now's the time to clean it up
+/// </summary>
+/// <summary>
+/// Storage for the left child
+/// </summary>
+/// <summary>
+/// Storage for the right child
+/// </summary>
+// Read the state of the current node
+// Reset the flags on the current node
+// Process the children of the node if preset
+// Read the state of the current node
+// Reset the flags on the current node
+// Process the children of the node if preset
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\OrExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Performs logical OR on children
+/// Does not update conditioned properties table
+/// </summary>
+/// <summary>
+/// Evaluate as boolean
+/// </summary>
+// Short circuit
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\Parser.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// This class implements the grammar for complex conditionals.
+///
+/// The expression tree can then be evaluated and re-evaluated as needed.
+/// </summary>
+/// <remarks>
+/// UNDONE: When we copied over the conditionals code, we didn't copy over the unit tests for scanner, parser, and expression tree.
+/// </remarks>
+// useful for unit tests
+// nothing to see here, move along.
+//
+// Main entry point for parser.
+// You pass in the expression you want to parse, and you get an
+// ExpressionTree out the back end.
+//
+// We currently have no support (and no scenarios) for disallowing property references
+// in Conditions.
+//
+// Top node of grammar
+//    See grammar for how the following methods relate to each
+//    other.
+//
+// I think this is ok.  ExprPrime always shows up at
+// the rightmost side of the grammar rhs, the EndOfInput case
+// takes care of things
+// Should this be error case?
+// Checks for TokenTypes String, Numeric, Property, ItemMetadata, and ItemList.
+// If it's one of those, return it.
+// If it's not one of those, check for other TokenTypes.
+/* requires expansion */);
+/* requires expansion */);
+/* requires expansion */);
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\Scanner.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Class:       Scanner
+/// This class does the scanning of the input and returns tokens.
+/// The usage pattern is:
+///    Scanner s = new Scanner(expression, CultureInfo)
+///    do {
+///      s.Advance();
+///    while (s.IsNext(Token.EndOfInput));
+/// 
+///  After Advance() is called, you can get the current token (s.CurrentToken),
+///  check it's type (s.IsNext()), get the string for it (s.NextString()).
+/// </summary>
+// What we found instead of what we were looking for
+/// <summary>
+/// Lazily format resource string to help avoid (in some perf critical cases) even loading
+/// resources at all.
+/// </summary>
+//
+// Constructor takes the string to parse and the culture.
+//
+// We currently have no support (and no scenarios) for disallowing property references
+// in Conditions.
+// invalid
+/// <summary>
+/// If the lexer errors, it has the best knowledge of the error message to show. For example,
+/// 'unexpected character' or 'illformed operator'. This method returns the name of the resource
+/// string that the parser should display.
+/// </summary>
+/// <remarks>Intentionally not a property getter to avoid the debugger triggering the Assert dialog</remarks>
+/// <returns></returns>
+// I do not believe this is reachable, but provide a reasonable default.
+// We should have set it
+// The string (usually a single character) we found unexpectedly. 
+// We might want to show it in the error message, to help the user spot the error.
+/// <summary>
+/// Advance
+/// returns true on successful advance
+///     and false on an erroneous token
+///
+/// Doesn't return error until the bogus input is encountered.
+/// Advance() returns true even after EndOfInput is encountered.
+/// </summary>
+// Update error position after skipping whitespace
+// If the caller specified that he DOESN'T want to allow item lists ...
+// negation and not-equal
+// gt and gte
+// lt and lte
+// expression[parsePoint + 1], counting from 1
+// store the char we found instead
+// Simple strings, function calls, decimal numbers, hex numbers
+/// <summary>
+/// Parses either the $(propertyname) syntax or the %(metadataname) syntax, 
+/// and returns the parsed string beginning with the '$' or '%', and ending with the
+/// closing parenthesis.
+/// </summary>
+/// <returns></returns>
+// set start so that we include "$(" or "%("
+// Maybe we need to generate an error for invalid characters in property/metadata name?
+// For now, just wait and let the property/metadata evaluation handle the error case.
+/// <summary>
+/// Scan for the end of the property expression
+/// </summary>
+// We have reached the end of the parenthesis nesting
+// this should be the end of the property expression
+// If it is not then the calling code will determine that
+/// <summary>
+/// Parses a string of the form $(propertyname).
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Parses a string of the form %(itemmetadataname).
+/// </summary>
+/// <returns></returns>
+// The ParsePropertyOrItemMetadata method returns the correct error resources
+// for parsing properties such as $(propertyname).  At this stage in the Whidbey
+// cycle, we're not allowed to add new string resources, so I can't add a new
+// resource specific to item metadata, so here, we just change the error to
+// the generic "UnexpectedCharacter".
+/// <summary>
+/// Helper to verify that any AllowBuiltInMetadata or AllowCustomMetadata
+/// specifications are not respected.
+/// Returns true if it is ok, otherwise false.
+/// </summary>
+// @ was not followed by (
+// Not useful to set unexpectedlyFound here. The message is going to be detailed enough.
+// Maybe we need to generate an error for invalid characters in itemgroup name?
+// For now, just let item evaluation handle the error.
+// @( ... ' was never followed by a closing quote before the closing parenthesis
+// @( was never followed by a )
+// Not useful to set unexpectedlyFound here. The message is going to be detailed enough.
+/// <summary>
+/// Parse any part of the conditional expression that is quoted. It may contain a property, item, or 
+/// metadata element that needs expansion during evaluation.
+/// </summary>
+// Standalone percent-sign must be allowed within a condition because it's
+// needed to escape special characters.  However, percent-sign followed
+// by open-parenthesis is an indication of an item metadata reference, and
+// that is only allowed in certain contexts.
+// If it's %(a.b) the name is just 'b'
+// If the caller specified that he DOESN'T want to allow item lists ...
+// Item lists have to be parsed because of the replacement syntax e.g. @(Foo,'_').
+// I have to know how to parse those so I can skip over the tic marks.  I don't
+// have to do that with other things like propertygroups, hence itemlists are
+// treated specially.
+// There may be some escaped characters in the expression
+// Quoted string wasn't closed
+// The message is going to say "expected after position n" so don't add 1 here.
+// Not useful to set unexpectedlyFound here. By definition it got to the end of the string.
+// numeric
+// simple string (handle 'and' and 'or')
+// Something that wasn't a number or a letter, like a newline (%0a)
+// There is a bug here that spaces are not required around 'and' and 'or'. For example,
+// this works perfectly well:
+// Condition="%(a.Identity)!=''and%(a.m)=='1'"
+// Since people now depend on this behavior, we must not change it.
+// Hex number
+// Decimal number
+// Do we need to error on malformed input like 0.00.00)? or will the conversion handle it?
+// For now, let the conversion generate the error.
+// Unreachable
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\StringExpressionNode.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// Node representing a string
+/// </summary>
+/// <summary>
+/// Whether the string potentially has expandable content,
+/// such as a property expression or escaped character.
+/// </summary>
+/// <summary>
+/// Evaluate as boolean
+/// </summary>
+/// <summary>
+/// Evaluate as numeric
+/// </summary>
+/// <summary>
+/// Returns true if this node evaluates to an empty string,
+/// otherwise false.
+/// It may be cheaper to determine whether an expression will evaluate
+/// to empty than to fully evaluate it.
+/// Implementations should cache the result so that calls after the first are free.
+/// </summary>
+// It broke early: we can't store the value, we just
+// know it's non empty
+// It didn't break early, the result is accurate,
+// so store it so the work isn't done again.
+/// <summary>
+/// Value before any item and property expressions are expanded
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Value after any item and property expressions are expanded
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// If any expression nodes cache any state for the duration of evaluation, 
+/// now's the time to clean it up
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Reading\Conditionals\Token.cs
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+/// <summary>
+/// This class represents a token in the Complex Conditionals grammar.  It's
+/// really just a bag that contains the type of the token and the string that
+/// was parsed into the token.  This isn't very useful for operators, but
+/// is useful for strings and such.
+/// </summary>
+/// <summary>
+/// Valid tokens
+/// </summary>
+/// <summary>
+/// Constructor for types that don't have values
+/// </summary>
+/// <param name="tokenType"></param>
+/// <summary>
+/// Constructor takes the token type and the string that
+/// represents the token
+/// </summary>
+/// <param name="type"></param>
+/// <param name="tokenString"></param>
+/* not expandable */)
+/// <summary>
+/// Constructor takes the token type and the string that
+/// represents the token.
+/// If the string may contain content that needs expansion, expandable is set.
+/// </summary>
+/// <summary>
+/// Whether the content potentially has expandable content,
+/// such as a property expression or escaped character.
+/// </summary>
+/// <summary>
+/// 
+/// </summary>
+/// <param name="type"></param>
+/// <returns></returns>
+// Return a token string for 
+// an error message.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\AssemblyAttributeTransformation.cs
+//Add to the primary property group, which then gives scope for other generic transforms to process it
+//Look if only the assembly info file is in the directory
+//Assume that the assembly info is coming from another file
+//which we don't have sight of so leave it up to consumer to
+//convert over if they wish
+//And a couple of properties which can be superceded by the package config
+//If it is included, chances are that the developer has used
+//preprocessor flags which we can't yet process
+//so just leave it in AssemblyInfo file
+//The AssemblyInfo behaviour was to fallback on the AssemblyVersion for the file version
+//but in the new format, this doesn't happen so we explicitly copy the value across
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\BasicReadTransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\BasicSimplifyTransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\EmptyGroupRemoveTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\ILegacyOnlyProjectTransformation.cs
+/// <summary>
+/// A transformation implementing this interface is supposed to be executed
+/// only on projects under legacy project system (in ordinary situations)
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\IModernOnlyProjectTransformation.cs
+/// <summary>
+/// A transformation implementing this interface is supposed to be executed
+/// only on projects under CPS (in ordinary situations)
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\ITransformation.cs
+/// <summary>
+/// Alter the provided project in some way
+/// </summary>
+/// <param name="definition"></param>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\ITransformationWithDependencies.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\ITransformationWithTargetMoment.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\NuGetPackageTransformation.cs
+//Id does not need to be specified in new project format if it is just the same as the assembly name
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\PrimaryProjectPropertiesUpdateTransformation.cs
+// ignore default "Debug;Release" configuration set
+// ignore default "AnyCPU" platform set
+//Add those properties not already covered by the project properties
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\PropertyDeduplicationTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\PropertySimplificationTransformation.cs
+// That's actually not what MSBuild does, but it is done to simplify tests
+// and has a incredibly low probability of being triggered on real projects
+// (no project file? empty project filename? seriously?)
+// special case handling for when condition-guarded props override global props not set to their defaults
+// no sane condition is 1 char long
+// Regex is the easiest way to replace string between two unknown chars preserving both as is
+// so that bin\Debug\net472 is turned into bin\$(Configuration)\net472
+// and bin/Debug\net472 is turned into bin/$(Configuration)\net472, preserving path separators
+// VS2013 NuGet bugs workaround
+// legacy generic properties
+// legacy frameworks
+// VCS properties
+// Project properties set to defaults (Microsoft.NET.Sdk)
+// Conditional platform default values
+// Conditional configuration (Debug/Release) default values
+// Default project values for Platform and Configuration
+// Extra ProjectName duplicates
+// following local methods will capture parent scope
+// we cannot remove elements correctly while iterating through elements, 2nd pass is needed
+/// <summary>
+/// Get all non-conditional properties and their respective values
+/// </summary>
+/// <param name="propertyGroup">Primary unconditional PropertyGroup to be inspected</param>
+/// <param name="globalOverrides"></param>
+/// <returns>Dictionary of properties' keys and values</returns>
+// no sane condition is 1 char long
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\ServiceFilterTransformation.cs
+// Fix is included with VS15.7 and above, but we might target VS15.0
+// All known test providers also have a fix included
+// In theory, we should be checking versions of these test frameworks
+// to see, if they have the fix included.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\TargetFrameworkReplaceTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Transforms\TargetTransformationExecutionMoment.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Writing\ProjectWriteOptions.cs
+/// <summary>
+/// Make backup copies of files before their modification or deletion
+/// </summary>
+/// <summary>
+/// The operation to use to delete a file.
+/// Certain source control systems may require the deletion to be done using a special command
+/// </summary>
+/// <summary>
+/// The operation to use to checkout a file (if required)
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Core\Writing\ProjectWriter.cs
+//Nothing to do
+//Find a suitable backup directory that doesn't already exist
+// manual includes
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\SystemNuGetPackages.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Vs15DiagnosticSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Vs15ModernizationTransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Vs15TransformationSet.cs
+// Generic
+// VS15 migration
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Diagnostics\W020MicrosoftCSharpDiagnostic.cs
+/// <inheritdoc />
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Diagnostics\W021SystemNuGetPackagesDiagnostic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Diagnostics\W030LegacyDebugTypesDiagnostic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Diagnostics\W031MSBuildSdkVersionSpecificationDiagnostic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Diagnostics\W032OldLanguageVersionDiagnostic.cs
+// last 2 versions + default
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Diagnostics\W033ObsoletePortableClassLibrariesDiagnostic.cs
+// not all profiles can be mapped to .NET Standard (thanks to Silverlight & Framework 4.0)
+// we could skip emitting diagnostics in such cases, but we don't
+// instead we suggest dropping such old targets (WinXP can still be covered by net40 in TargetFrameworks)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Diagnostics\W034ReferenceAliasesDiagnostic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\AssemblyFilterDefaultTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\AssemblyFilterHintedPackageReferencesTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\AssemblyFilterPackageReferencesTransformation.cs
+// We don't need to keep any references to package files as these are
+// now generated dynamically at build time
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\BrokenHookTargetsTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\FileTransformation.cs
+// For all retained Page, Content, etc that have .cs extension we get file paths.
+// For all these paths we add <Compile Remove="(path)" />.
+// So that there is no wildcard match like <Compile Include="**/*.cs" /> for file test.cs,
+/*.cs" /> for file test.cs,
+// already included as (e.g.) Content: <Content Include="test.cs" />
+// Do file search, find all real files matching glob pattern
+// Wildcards from Microsoft.NET.Sdk.DefaultItems.props
+// Visual Studio Test Projects
+// Remove packages.config since those references were already added to the CSProj file.
+// Nuspec is no longer required
+// keep Link as an Include
+// retain only if it is not <SubType>Code</SubType>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\FrameworkReferencesTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\ImportsTargetsFilterPackageReferencesTransformation.cs
+// Expect no more than 1 property group
+// Expect no more than 1 'ErrorText' element
+// Some other property
+// Error element with condition is required
+// this target is not what we need
+// Continue iterating targets, filter this one OUT.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\TestProjectPackageReferenceTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\UpgradeDebugTypeTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\UpgradeFrameworkAssembliesToNuGetTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\UpgradeTestServiceTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\UpgradeUseComVisibleDefaultTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\UpgradeUseDefaultOutputPathTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Library\Transforms\XamlPagesTransformation.cs
+/// <inheritdoc />
+// from now on (include != null) is invariant
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2017.Tool\Program.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2019.Library\Vs16DiagnosticSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2019.Library\Vs16ModernizationTransformationSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2019.Library\Vs16TransformationSet.cs
+// Generic
+// VS16 migration
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2019.Library\Transforms\Vs16FrameworkReferencesTransformation.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Migrate2019.Tool\Program.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\CommandExceptions.cs
+/// <summary>Allows control flow to be interrupted in order to display help in the console.</summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\CommandLogic.AskBinaryChoice.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\CommandLogic.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\CommandLogic.Wizard.UnknownTargetFramework.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\CommandLogic.WizardMigrate.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\CommandLogic.WizardModernCleanUp.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\CommandLogic.WizardModernize.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\ProgramBase.ApplyVerbosity.cs
+// ReSharper disable once StringLiteralTypo
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\ProgramBase.Common.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\ProgramBase.Options.cs
+// ReSharper disable StringLiteralTypo
+// ReSharper restore StringLiteralTypo
+// ReSharper disable once StringLiteralTypo
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\ProgramBase.PrimaryCommands.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\WizardTransformationSets.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\Accept.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\AppliedOption.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// Options must be respecified in order to accept additional arguments. This is 
+// not the case for commands.
+// if a subcommand has already been applied, don't accept this one
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\AppliedOptionExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\AppliedOptionSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ArgumentsRule.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ArgumentsRuleExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\Command.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\CommandExecutionResult.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\Create.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\DefaultHelpViewText.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\DefaultValidationMessages.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\EnumerableExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\HelpViewExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\IValidationMessages.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\Option.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\OptionError.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\OptionExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\OptionSet.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\OptionSet{T}.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ParseException.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\Parser.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// stop parsing further tokens
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ParserConfiguration.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ParseResult.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ParseResultExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ParserExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\StringExtensions.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// unbundle e.g. -xyz into -x -y -z
+// if token matches the current command name, consider it an argument
+// when a subcommand is encountered, re-scope which tokens are valid
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\Suggest.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\Token.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\TokenType.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.MigrateXXXX.Tool\Microsoft.DotNet.Cli.CommandLine\ValidationMessages.cs
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\AssemblyAttributeTransformationTest.cs
+//FileVersion should use this. In old projects, this happens automatically
+//but the converter needs to explicitly copy it
+//Should be copied from assembly version
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\AssemblyFilterDefaultTransformationTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\AssemblyFilterHintedPackageReferencesTransformationTest.cs
+//Then attempt to clear any referencing the nuget packages folder
+//The only one left which points to another folder
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\AssemblyFilterPackageReferencesTransformationTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\AssemblyInfoReadTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\DummyLogger.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\FileTransformationTest.cs
+// #73 include things that are not ending in .resx
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\ImportsTargetsFilterPackageReferencesTransformationTest.cs
+//Then attempt to clear any referencing the nuget packages folder
+//schemas.microsoft.com/developer/msbuild/2003"" />",
+//schemas.microsoft.com/developer/msbuild/2003"" />"
+//The only ones left which point to another folder
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\NuGetPackageTransformationTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\NuSpecReaderTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\PrimaryProjectPropertiesUpdateTransformationTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\ProgramTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\ProjectPropertiesReadTest.cs
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+// Configurations property must take precedence
+// Release_CI will be ignored, but still some transformations will apply
+// We must assume if user intentionally omits things from Configurations or Platforms
+// they did that in full awareness of the consequences
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\ProjectReferenceReadTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\ProjectWriterTest.cs
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//Just simulate deletion so we can just check the list
+//Just simulate deletion so we can just check the list
+//delete the dummy file we put in to make sure the folder was copied over
+//Just simulate deletion so we can just check the list
+//Just simulate deletion so we can just check the list
+//need to actually delete this one so the folder can be deleted
+//Restore the directory and file back to how it was before test
+//Just simulate deletion so we can just check the list
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\PropertySimplificationTransformationTest.cs
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"">
+// non-standard additional WINDOWS_DESKTOP constant present only in Debug
+//schemas.microsoft.com/developer/msbuild/2003"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+// Configurations property must take precedence
+// Release_CI will be ignored, but still some transformations will apply
+// We must assume if user intentionally omits things from Configurations or Platforms
+// they did that in full awareness of the consequences
+// We remove only one property set to global default (FileAlignment)
+// check we are keeping original slashes and replacing configuration name with $(Configuration)
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\ServiceFilterTransformationTest.cs
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+//schemas.microsoft.com/developer/msbuild/2003"" ToolsVersion=""4.0"">
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\SolutionReaderTests.cs
+//Should be no warnings or errors
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TargetFrameworkReplaceTransformationTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestProjectPackageReferenceTransformationTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\UnsupportedProjectTypesTest.cs
+/// <summary>
+/// Run test cases
+/// </summary>
+/// <summary>
+/// Run test cases
+/// </summary>
+/// <summary>
+/// Create a test case using the given element name + value
+/// </summary>
+/// <param name="elementName">element name to add to PropertyGroup</param>
+/// <param name="value">value to set</param>
+/// <returns></returns>
+// parse empty template
+/// <summary>
+/// Very basic proj template to create XDocument
+/// </summary>
+//schemas.microsoft.com/developer/msbuild/2003\">" +
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\W001IllegalProjectTypeDiagnosticTest.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\XamlTransformationTest.cs
+//schemas.microsoft.com/developer/msbuild/2003"">
+// App.xaml is NOT included due to ApplicationDefinition
+// App.xaml.cs is NOT included (.xaml.cs in project folder, verified children)
+// Views\Shell.xaml.cs is NOT included (.xaml.cs in project folder, verified children)
+// .\..\Views\Initialize.xaml.cs is included (not in project folder)
+// Views\Shell.xaml is NOT included due to Page
+// .\..\Views\Initialize.xaml is included (not in project folder)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\AssemblyInfoHandling\ClassDataLeft\Properties\AssemblyInfo.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\AssemblyInfoHandling\Empty\Properties\AssemblyInfo.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\AssemblyInfoHandling\Redundant\Properties\AssemblyInfo.cs
+//some comment
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\AnotherFile.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\Class1.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\IncludedFile.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\Program.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\Resources.Designer.cs
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.42000
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+/// <summary>
+///   A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the StronglyTypedResourceBuilder
+// class via a tool like ResGen or Visual Studio.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/// <summary>
+///   Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///   Overrides the current thread's CurrentUICulture property for all
+///   resource lookups using this strongly typed resource class.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\SourceFileAsResource.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\SourceFileSubTypeCode.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\SourceFileWithDesigner.cs
+//www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\SourceFileWithDesigner.Designer.cs
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.42000
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+/// <summary>
+///   A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the StronglyTypedResourceBuilder
+// class via a tool like ResGen or Visual Studio.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/// <summary>
+///   Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///   Overrides the current thread's CurrentUICulture property for all
+///   resource lookups using this strongly typed resource class.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\Folder\FileIncludedByWildcard.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\Folder\FileInFolder.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\Properties\AssemblyInfo.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\Properties\Resources.Designer.cs
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.42000
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+/// <summary>
+///   A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the StronglyTypedResourceBuilder
+// class via a tool like ResGen or Visual Studio.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/// <summary>
+///   Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///   Overrides the current thread's CurrentUICulture property for all
+///   resource lookups using this strongly typed resource class.
+/// </summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\FileInclusion\WildcardFolder\WildcardSubFolder\SubFolderWildcardFile.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\OtherTestProjects\AssemblyInfo.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\OtherTestProjects\OtherTestClass.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\Solutions\ClassLibrary\Class1.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/CsprojToVs2017-master\CsprojToVs2017-master\Project2015To2017.Tests\TestFiles\Solutions\ClassLibrary\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible
+// to COM components.  If you need to access a type in this assembly from
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]

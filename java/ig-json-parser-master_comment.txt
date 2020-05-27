@@ -1,0 +1,317 @@
+﻿// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// we're doing this absurd thing with encoding the json file in base64 because phabricator
+// chokes on it otherwise.
+//ignored
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2013 Square, Inc.
+/** A utility class which aids in generating Java source files. */
+/** Map fully qualified type names to their short names. */
+/**
+/** Emit a package declaration and empty line. */
+/**
+/**
+/**
+/**
+/**
+/**
+/** Try to compress a fully-qualified class name to only the class name. */
+// Copy non-matching characters like "<".
+// Copy a single class name, shortening it if possible.
+// check to see if the part after the package looks like a class
+/**
+/**
+/** Ends the current initializer declaration. */
+/**
+/**
+/**
+/** Completes the current type declaration. */
+/** Emits a field declaration. */
+/** Emits a field declaration. */
+/** Emits a field declaration. */
+/**
+/**
+/** Emits some Javadoc comments with line separated by {@code \n}. */
+/**\n");
+/** Emits a single line comment. */
+// ");
+/**
+/** Emit a list of enum values followed by a semi-colon ({@code ;}). */
+/** Equivalent to {@code annotation(annotation, emptyMap())}. */
+/** Equivalent to {@code annotation(annotationType.getName(), emptyMap())}. */
+/**
+/**
+/** Equivalent to {@code annotation(annotationType.getName(), attributes)}. */
+/**
+/**
+/**
+/**
+/**
+/**
+/** Completes the current method declaration. */
+// support calling a constructor a "method" to support the legacy code
+/** Completes the current constructor declaration. */
+/** Returns the string literal representing {@code data}, including wrapping quotes. */
+/** Build a string representation of a type and optionally its generic type arguments. */
+/** Emits the modifiers to the writer. */
+// Use an EnumSet to ensure the proper ordering
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// each round of processing requires a clean state.
+// Field annotations are only needed if we're generating method bodies.
+/**
+// Process each @TypeTesting elements.
+/**
+// The annotation should be validated for an interface, but no code should be generated.
+// Verify containing class visibility is not private.
+// Superclass info is only needed if we're generating method bodies.
+// walk up the superclass hierarchy until we find another class we know about.
+/**
+// Process each @TypeTesting elements.
+/**
+// Verify common generated code restrictions.
+// inspect the inner type.
+// Use the parsable object's value extract formatter if existing one is empty
+// verify that we have value extract and serializer formatters.
+// Verify containing type.
+// Verify containing class visibility is not private.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Add any additional imports from this class's annotations.
+// Generate the set of imports from the parsable objects referenced.
+// always skip children.  if we expected an array or an object, we would have
+// consumed the START_ARRAY or START_OBJECT.  therefore, we would only skip
+// forward if we're seeing something unexpected.
+// if we reached here, we need to call the superclasses processSingleField
+// method.
+// if we have a superclass, we need to call its serialize method.
+/**
+/**
+/**
+// These are all the default formatters.
+/**
+// needed to do a typecast for erased types
+// map type
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/*package*/ static boolean isNullOrEmpty(String string) {
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// boolean exact fail.  should throw exception.
+// this is expected.
+// Boolean exact fail.  should be null.
+// int exact fail.  should throw exception.
+// this is expected.
+// Integer exact fail.  should be null.
+// long exact fail.  should throw exception.
+// this is expected.
+// Long exact fail.  should be null.
+// float exact fail.  should throw exception.
+// this is expected.
+// Float exact fail.  should be null.
+// double exact fail.  should throw exception.
+// this is expected.
+// Double exact fail.  should be null.
+// string exact fail.  should be null.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// serialize it
+/**
+// serialize it
+/**
+// serialize it
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// NOTE: this is because ArrayDeque hilariously does not implement .equals()/.hashcode().
+// intentionally do not set integerField
+// intentionally do not set integerListField
+// Test that fields appear in the order specified in the class
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// call some function that writes the object data
+/**
+/**
+/////////////
+// The remaining methods are simply overriden methods of {@link JSONWriter} that return an
+// {@link ExtensibleJSONWriter}.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+// Copyright 2004-present Facebook. All Rights Reserved.
+// validate that we're on the right token
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Contains Messagers for which errors have been reported through this class.
+//
+// In a build system that does in-process compilation (like Buck), it is possible for multiple
+// instances of our annotation processor to be running in parallel. Because this information
+// is only needed for a (hopefully short term) workaround, rather than rework Console to be
+// an instance class per ProcessingEnvironment, we take advantage of some implementation
+// details. Each instance of our processor will be in a different ProcessingEnvironment, and
+// each ProcessingEnvironment has its own Messager, so we can just track the Messagers that
+// have been used to report errors.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// is it an enum?
+/**
+// sanity check.
+// sanity check.
+/**
+/**
+// Interfaces do not currently generate classes
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/*Console.getNullMessager()*/ env.getMessager());
+// each round of processing requires a clean state.
+// Process each @TypeTesting elements.
+// walk up the superclass hierarchy until we find another class we know about.
+// Verify containing class visibility is not private.
+// Process each @TypeTesting elements.
+// Verify common generated code restrictions.
+// inspect the inner type.
+// Verify containing type.
+// Verify containing class visibility is not private.
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+/**
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+// Copyright 2004-present Facebook. All Rights Reserved.
+/**
+//////
+// primitives and their boxed counterparts.
+//////
+// strings.
+//////
+// collection types.
+//////
+// nesting

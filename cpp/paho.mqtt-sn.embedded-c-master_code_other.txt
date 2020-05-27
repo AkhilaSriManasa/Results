@@ -1,0 +1,383 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\pub0sub1.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* subscribe */
+/* wait for suback */
+/* publish with short name */
+/* wait for puback */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\qos-1pub.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* publish with short name */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\qos-1pub_extended.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\qos0pub.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//	char *topicname = "a long topic name";
+/* wait for connack */
+/* publish with short name */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\qos0pub_register.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* register topic name */
+/* wait for regack */
+/* publish with obtained id */
+// Publish a message every second
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\qos1pub.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* publish with short name */
+/* wait for puback */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\transport.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/** error in socket operation */
+/* default on Windows is 64 - increase to make Linux and Windows the same */
+/**
+//printf("received %d bytes count %d\n", rc, (int)count);
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\linux\udp\lowlevel.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/** error in socket operation */
+/* default on Windows is 64 - increase to make Linux and Windows the same */
+/**
+//printf("received %d bytes count %d\n", rc, (int)count);
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\linux\udp\pub0sub1.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* subscribe */
+/* wait for suback */
+/* publish with short name */
+/* wait for puback */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\linux\udp\qos-1pub.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* publish with short name */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\linux\udp\qos-1pub_extended.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\linux\udp\qos0pub.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//	char *topicname = "a long topic name";
+/* wait for connack */
+/* publish with short name */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\linux\udp\qos0pub_register.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* register topic name */
+/* wait for regack */
+/* publish with obtained id */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\samples\linux\udp\qos1pub.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* publish with short name */
+/* wait for puback */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNConnectClient.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/* write length */
+/* write message type */
+/* protocol ID */
+/**
+/* read length */
+/**
+/**
+/* write length */
+/* write message type */
+/**
+/* write length */
+/* write message type */
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+/**
+/**
+/**
+/* write length */
+/* write message type */
+/**
+/**
+/**
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNConnectServer.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/**
+/* write length */
+/**
+/* read length */
+/**
+/* write length */
+/**
+/* write length */
+/**
+/* read length */
+/**
+/* write length */
+/**
+/* read length */
+/**
+/**
+/**
+/* read length */
+/**
+/**
+/**
+/* write length */
+/**
+/* write length */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNDeserializePublish.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/* special arrangement for long topic names in QoS -1 publishes.  The length of the topic is in the topicid field */
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNPacket.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/* the length of the whole packet including length field */
+/* 1. read a packet - UDP style */
+/* 2. read the length.  This is variable in itself */
+/* there was an error */
+/* return the packet type */
+/* the length of the whole packet including length field */
+/* 2. read the length.  This is variable in itself */
+/* there was an error */
+/* return the packet type */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNSearchClient.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+/**
+/* read length */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNSearchServer.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* write length */
+/* write message type */
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNSerializePublish.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/* write length */
+/* write message type */
+/* special arrangement for long topic names in QoS -1 publishes.  The length of the topic is in the topicid field */
+/* topic length */
+/* write length */
+/* write message type */
+/**
+/* ack packet length */
+/* write length */
+/* write packet type */
+/**
+/**
+/**
+/**
+/**
+/* write length */
+/* write message type */
+/**
+/* write length */
+/* write message type */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNSubscribeClient.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/* write length */
+/* write message type */
+/* now the topic id or name */
+/* means long topic name */
+/**
+/* read length */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNSubscribeServer.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNUnsubscribeClient.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* write length */
+/* write message type */
+/* now the topic id or name */
+/* means long topic name */
+/**
+/* read length */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\src\MQTTSNUnsubscribeServer.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* read length */
+/* write length */
+/* write message type */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\test\test1.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**< connection to system under test. */
+//m2m.eclipse.org:1883",
+/* TODO - unused - remove? static struct timeval start_time; */
+/* data after should be the same as data before */
+/* Pingreq without clientid */
+/* data after should be the same as data before */
+/* Pingreq with clientid */
+/* data after should be the same as data before */
+/* Disconnect without duration */
+/* data after should be the same as data before */
+/* Disconnect with duration */
+/* data after should be the same as data before */
+/* Pingreq with clientid */
+/* exit: */
+/* data after should be the same as data before */
+/*exit:*/
+/* exit: */
+/* data after should be the same as data before */
+/*exit:*/
+/* data after should be the same as data before */
+/*exit:*/
+/* data after should be the same as data before */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* run all the tests */
+/* return number of failures.  0 = test succeeded */
+/* run just the selected test */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/paho.mqtt-sn.embedded-c-master\paho.mqtt-sn.embedded-c-master\MQTTSNPacket\test\test2.c
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/** error in socket operation */
+/* TODO - unused - remove? static struct timeval start_time; */
+//printf("received %d bytes count %d\n", rc, (int)count);
+/* wait for connack */
+/* wait for connack */
+/* subscribe */
+/*msgid*/ 1, &topic);
+/* wait for suback */
+/*
+/* exit: */
+/* data after should be the same as data before */
+/*exit:*/
+/* data after should be the same as data before */
+/* exit: */
+/* data after should be the same as data before */
+/* exit: */
+/* data after should be the same as data before */
+/* exit: */
+/* run all the tests */
+/* return number of failures.  0 = test succeeded */
+/* run just the selected test */

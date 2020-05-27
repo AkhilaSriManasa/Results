@@ -1,0 +1,663 @@
+﻿/*
+// Filter specific genotypes by quality
+// Have quality info
+// Set the include_genotype flag on the basis of depth
+// Have depth info
+// Have GFilter info
+// If removing all filters, only keep things with label PASS
+// Only removing specific filters
+// Set missing return values if requested a value, but couldn't find it
+// Output BCF entry to output stream in VCF format
+// endl flushes the buffer, which is slow. This (should be) quicker.
+// Output BCF entry to output stream in BCF format
+/*
+// Don't bother storing "unfiltered" state.
+// Don't bother storing "unfiltered" state.
+/*
+// Included in zlib v1.2.4 and makes things MUCH faster
+// Note: don't both swapping character arrays - BCF is defined as little endian.
+/*
+// V/N to calculate/not calculate the left eigenvectors of the matrix H.
+// As above, but for the right eigenvectors.
+// The leading dimension of the matrix a.
+// Convert the matrix H from double pointer C form to single pointer Fortran form.
+/* Whether we want them or not, we need to define the matrices
+//Sort the results by eigenvalue in decreasing magnitude.
+/*
+/*
+// Equilibrium as described in Wigginton, JE, Cutler, DJ, and
+// Abecasis, GR (2005) A Note on Exact Tests of Hardy-Weinberg
+// Equilibrium. American Journal of Human Genetics. 76: 000 - 000
+//
+// Written by Jan Wigginton
+//p_hi_lo = 1.0;
+/* start at midpoint */
+/* check to ensure that midpoint and rare alleles have same parity */
+/* 2 fewer heterozygotes for next iteration -> add one rare, one common homozygote */
+/* add 2 heterozygotes for next iteration -> subtract one rare, one common homozygote */
+// alternate p-value calculation for p_hi/p_lo
+//p_hi_lo = p_hi < p_lo ? 2.0 * p_hi : 2.0 * p_lo;
+/*  p-value calculation for p_hwe  */
+//0000000011111111
+/*
+// 	Apply all filters in turn.
+// Get first chromosome in list (there should only be one).
+// Filter genotypes by quality
+// Filter genotypes by depth
+// Filter genotypes by Filter Flags
+// Filter sites by user provided lists
+// Filter sites by user provided list
+// Filter sites by user provided list
+// Filter sites by quality
+// The QUAL field has different definitions depending on the state of the
+// alternative allele. Here I treat them separately, although in this case
+// it is unnecessary.
+// The case that the alternative allele is unknown
+// QUAL is -10log_10 p(variant)
+// The normal case
+// QUAL is -10log_10 p(no variant)
+// Filter sites by mean depth
+// Filter sites by user provided position range
+// Filter sites by a user defined file containing a list of positions
+// Trim whitespace at end of line (required in gzipped case!)
+// Trim whitespace at end of line (required in gzipped case!)
+// Check to see if position is in keep list
+// Check to see if position is in exclude list
+// Filter sites by overlapping with a user defined file containing a list of positions
+// Trim whitespace at end of line (required in gzipped case!)
+// Trim whitespace at end of line (required in gzipped case!)
+// Check to see if position is in keep list
+// Check to see if position is in exclude list
+// Filter sites depending on positions in a BED file.
+// Ignore header
+// Exclude sites not in BED file
+// No need to start this loop at zero every time...
+// Start pos inside bin
+// End pos inside bin
+// Variant spans bin
+// Exclude sites in BED file
+// No need to start this loop at zero every time...
+// Start pos inside bin
+// End pos inside bin
+// Variant spans bin
+// Filter sites on the basis of a fasta-like mask file.
+// Filter sites by the number of alleles (e.g. 2 for bi-allelic)
+// Filter sites so that all allele frequencies are between limits
+// Filter sites so that all allele counts are between limits
+// Filter sites by HWE p-value
+// Note this assumes Biallelic SNPs.
+// Filter sites by entries in the FILTER field.
+// Filter out sites with unphased entries
+// TODO: Alter this to allow for a max/min level of unphased-ness.
+// Filter sites so that no two SNPs are within some minimum distance
+// Filter sites by entries in the INFO field.
+/*
+// Return the CHROMosome name
+// Return the CHROMosome name
+// Reference isn't a single base
+// No alternative allele
+// Alternative allele isn't a single base
+// Reference isn't a single base
+// Not biallelic
+// Alternative allele isn't a single base
+// Didn't find any INFO fields to keep
+// Return the alleles of a genotype as a pair of strings.
+// Return the frequency (counts) of each allele.
+// Return the frequency (counts) of each allele.
+//FILTERING BY INDIVIDUAL
+// Return the counts of homozygote1, heterozygotes, and homozygote2
+/*
+/*
+// Found an INFO descriptor
+// Found a FILTER descriptor
+// Found a genotype filter descriptor
+// Found a contig descriptor
+// #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	(FORMAT	NA00001 NA00002 ... )
+/*
+/*
+// Class for reading in, checking and storing user parameters
+// Get environment variable
+// Handle case where TMPDIR is NULL.
+// VCF file to process
+// BCF file to process
+// Output as 0/1/2 matrix
+// Output as BEAGLE Genotype Likelihood format
+// Output as BEAGLE Genotype Likelihood format
+// Write output to stream
+// Chromosome to process
+// Chromosome map for plink conversion
+// Contigs file for header
+// Output per-site allele count statistics
+// Output per-site allele count statistics
+// Output per-individual coverage statistics
+// Output frequencies so that AA is first.
+// Calculate some consensus statistics
+// Calculate some consensus statistics
+// Calculate some consensus statistics
+// Map individual ids in the second file
+// Calculate some consensus statistics
+// Calculate some consensus statistics
+// Calculate some consensus statistics
+// Calculate some consensus statistics
+// Calculate some consensus statistics
+// List of SNPs to exclude
+// Output per-site frequency statistics
+// Output per-site frequency statistics
+// Start position
+// Window size for Fst calculation
+// Window step for Fst calculation
+// Output Depth for each genoptype
+// Output pairwise LD (r^2)
+// Output pairwise LD (r^2)
+// Output pairwise LD (r^2)
+// Add to list of INFO fields to extract
+// Calculate some concensus statistics
+// Compressed VCF file to process
+// Haplotype count
+// Output pairwise LD (r^2)
+// Output pairwise LD (r^2)
+// Output HWE statistics
+// Output heterozygosity statistics
+// Minimum per-site HWE p-value
+// Output as IMPUTE format
+// List of individuals to keep
+// Output pairwise LD (r^2)
+// Output pairwise LD (r^2)
+// Remove a specific filter flag
+// List of individuals to keep
+// Filter sites by INFO flags
+// Old command (soon to be depreciated)
+//Output sites that pass filters
+// Max bp distance for LD output
+// Max SNP distance for LD output
+// Max bp distance for LD output
+// Max SNP distance for LD output
+// Output as LDhat format
+// Output as LDhelmet format
+// Minimum Site MAC
+// Minimum Site MAF
+// Maximum number of alleles per-site
+// Maximum site MAC
+// Maximum Site MAF
+// Site Maximum mean depth across individuals
+// Site maximum missing genotypes
+// Minimum Site non-ref AC
+// Minimum Site non-ref AF
+// Minimum Site non-ref AC
+// Minimum Site non-ref AF
+// Maximum genotype depth
+// Minimum number of alleles per-site
+// Site Minimum mean depth
+// Min r^2 for LD output
+// Minimum genotype depth
+// Minimum genotype quality
+// Minimum per-site quality
+// Output Individual missingness summary
+// Output Site missingness summary
+// Minimum Site non-ref AC
+// Minimum Site non-ref AF
+// Minimum Site non-ref AC
+// Minimum Site non-ref AF
+// Chromosome to process
+// Output file prefix
+// Keep only phased individuals / sites
+// Output as PLINK file
+// Output as PLINK tped file
+// Output VCF file
+// Output BCF file
+// Specify INFO to keep when recoding
+// Specify INFO to keep when recoding
+// Estimate relatedness between individuals
+// Estimate relatedness between individuals
+// Remove sites flagged as filtered
+// Remove genotypes flagged as filtered
+// Remove genotypes flagged as filtered
+// Remove a specific filter flag
+// List of individuals to keep
+// Filter sites by INFO flags
+// List of individuals to exclude
+// Output as 0/1/2 mat
+// Output Depth for each site
+// Output Mean Depth for each site
+//Output nucleotide diversity for each site
+// Output per-site qualities
+// SNP to keep
+// Output SNP density using Bin Size
+// List of SNPs to keep
+// Write output to stream
+//Output Tajima D
+// Directory for vcftools temporary files
+// End position
+// Set minimum distance between SNPs
+// Output Ts/Tv stats
+// Output Ts/Tv stats
+// If there are no user parameters, display help.
+//vcftools.github.io/man_latest.html" << endl;
+/*
+// Return the number of individuals that have not been filtered out
+// Return the number of sites that have not been filtered out
+// Return the total number of sites in the file
+/*
+// Build a list of individuals contained in each file
+// Individual not found in one of the files
+// Alleles match, so can compare ids instead of strings
+// Match
+// Don't do anything
+// Mismatch
+// Both missing
+// Don't do anything.
+// Genotype 1 is not missing, genotype 2 is.
+// Don't do anything.
+// Genotype 2 is not missing, genotype 1 is.
+// Don't do anything.
+// Alleles don't match, so need to be more careful and compare strings
+// No missing data
+// Match
+// Don't do anything
+// Mismatch
+// Both missing
+// Don't do anything
+// Genotype 1 is not missing, genotype 2 is.
+// Don't do anything
+// Genotype 2 is not missing, genotype 1 is.
+// Don't do anything
+// Number of genotypes called in both files
+// Individual not found in one of the files
+// Alleles match, so can compare ids instead of strings
+// Match
+// Mismatch
+// Both missing
+// Genotype 1 is not missing, genotype 2 is.
+// Genotype 2 is not missing, genotype 1 is.
+// Alleles don't match, so need to be more careful and compare strings
+// No missing data
+// Match
+// Mismatch
+// Both missing
+// Genotype 1 is not missing, genotype 2 is.
+// Genotype 2 is not missing, genotype 1 is.
+// Individual not found in one of the files
+// Alleles match, so can compare ids instead of strings
+// Haploid
+// Number of genotypes called in both files
+// Individual not found in one of the files
+// No missing data
+// Have a matching genotypes in files 1 and 2
+// It's a heterozgote
+// Calculate Phasing error (switch error)
+// Must be a switch error
+/*
+// Filter individuals by user provided lists
+// Filter individuals by user provided list
+// Filter individuals by user provided list
+// Filter individuals randomly until have a random subset
+// Get a random order
+// Only keep a subset
+/*
+// Output as PLINK formatted PED/MAP files.
+// Male X-chr, Y-chr etc
+// Output as Plink Transposed file
+// Output as PLINK formatted PED/MAP files.
+// Only output sites with at most one alternative allele
+// Male X-chr, Y-chr etc
+// Output as PLINK formatted PED/MAP files.
+// Missing data
+// No copies of the alternative allele
+// Two copies of the alternative allele
+// Must be one copy of the alternative allele.
+// Output as IMPUTE format
+// Exclude entries with missing data and/or unphased
+// Clean up temp files.
+// Clean up temp files.
+// Note - this is incorrect for the X-chr.
+// Clean up temp files
+// Haploid case
+// Haploid case
+// Haploid case
+// Haploid case
+// Output LDhelmet format
+// Clean up temp files.
+// Clean up temp files.
+// Output INFO fields in tab-delimited format
+// Output FORMAT information in tab-delimited format.
+// Output genotype likelihoods from GL or PL FORMAT tag, ready for input into BEAGLE
+// using the Genotype likelihoods file format.
+// Mark as unknown
+/*
+// Output statistics of frequency at each site
+// Comment this out if only want high quality sites.
+// Output statistics on Heterozygosity for each individual
+// Following the calculations in PLINK....
+// Note this assumes Biallelic SNPs.
+// P(Homo) = F + (1-F)P(Homo by chance)
+// P(Homo by chance) = p^2+q^2 for a biallelic locus.
+// For an individual with N genotyped loci, we
+//   1. count the total observed number of loci which are homozygous (O),
+//   2. calculate the total expected number of loci homozygous by chance (E)
+// Then, using the method of moments, we have
+//    O = NF + (1-F)E
+// Which rearranges to give
+//    F = (O-E)/(N-E)
+// Frequency of non-reference allele
+// Output HWE statistics for each site as described in Wigginton, Cutler, and Abecasis (2005)
+// Note this assumes Biallelic SNPs.
+/* PLINK code:
+// Isn't biallelic
+// Isn't diploid
+// Output the burden within each individual of variants at each frequency.
+// Comment this out if only want high quality sites.
+// Output the burden within each individual of variants at each frequency.
+// Assuming diploidy...
+// Comment this out if only want high quality sites.
+// Count the second allele if required
+// Output information regarding the mean depth for each individual
+// Output SNP density (technically variant density)
+// Output missingness by individual
+// Output missingness by site
+// Phased missing genotypes indicate haploid genome
+// (allele1 !=0 && allele2 != 0)
+// Calculate r2 for either haplotypes or genotypes using the em algorithm...
+// TODO... not yet implemented...!
+// Don't use incomplete cases
+// Count the number of haplotypes within user-defined bins
+// Very naive check to ensure BED file is non-overlapping
+// Moved to a new chromosome, so output last chromosome
+// Process any remaining data
+// Set up for new chromosome
+// No need to start this loop at zero every time...
+// We're in a BED bin, so add to haplotypes
+// Changed bin, so update haplotype count in previous bin, and reset for next bin
+// Inside a bin, so append to haplotypes
+// Output any remaining data from last chromosome
+// Process any remaining data
+// Output pairwise LD statistics, using traditional r^2. Requires phased haplotypes.
+// Isn't biallelic
+// Output pairwise LD statistics, using genotype r^2. This is the same formula as used by PLINK, and is basically the squared
+// correlation coefficient between genotypes numbered as 0, 1, 2.
+// Isn't biallelic
+// Output pairwise LD statistics, using genotype r^2. This is the same formula as used by PLINK, and is basically the squared
+// correlation coefficient between genotypes numbered as 0, 1, 2.
+// Output pairwise LD statistics, using genotype r^2. This is the same formula as used by PLINK, and is basically the squared
+// correlation coefficient between genotypes numbered as 0, 1, 2.
+// Isn't biallelic
+// Output pairwise LD statistics, using genotype r^2. This is the same formula as used by PLINK, and is basically the squared
+// correlation coefficient between genotypes numbered as 0, 1, 2.
+// Isn't biallelic
+// Isn't biallelic
+// Isn't biallelic
+// Locate and output singletons (and private doubletons)
+// Singleton
+// Possible doubleton
+// Output genotype depth in tab-delimited format.
+// Output a summary of sites in various FILTER categories.
+// Don't count this snp towards Ts/Tv
+// Output Ts/Tv ratios in bins of a given size.
+// Output Ts/Tv summary.
+// Output Ts/Tv ratios in bins of a given size.
+// Ts
+// Ts
+// Ts
+// Ts
+// Ts
+// Tv;
+// Output Ts/Tv ratios in bins of a given size.
+// Ts
+// Ts
+// Ts
+// Ts
+// Ts
+// Tv;
+// Output per-site quality information.
+// Output per-site depth information
+// Implements the bi-allelic version of Weir and Cockerham's Fst
+// First, read in the relevant files.
+// diploid
+//diploid
+// First, read in the relevant files.
+// Calculate number of bins for each chromosome and allocate memory for them.
+// Each bin is a vector with four entries:
+// N_variant_sites: Number of sites in a window that have VCF entries
+// N_variant_site_pairs: Number of possible pairwise mismatches at polymorphic sites within a window
+// N_mismatches: Number of actual pairwise mismatches at polymorphic sites within a window
+// N_polymorphic_sites: number of sites within a window where there is at least 1 sample that is polymorphic with respect to the reference allele
+// sum1, sum2, sum3, count
+// diploid
+//diploid
+// Output nucleotide diversity, calculated on a per-site basis.
+// Pi = average number of pairwise differences
+// Assumes a constant distance of 1 between all possible mutations
+//Output Tajima's D
+//Carlson et al. Genome Res (2005)
+// Output nucleotide diversity, as calculated in windows.
+// Average number of pairwise differences in windows.
+// Calculate number of bins for each chromosome and allocate memory for them.
+// Each bin is a vector with four entries:
+// N_variant_sites: Number of sites in a window that have VCF entries
+// N_variant_site_pairs: Number of possible pairwise mismatches at polymorphic sites within a window
+// N_mismatches: Number of actual pairwise mismatches at polymorphic sites within a window
+// N_polymorphic_sites: number of sites within a window where there is at least 1 sample that is polymorphic with respect to the reference allele
+// Count polymorphic sites and pairwise mismatches
+// Site is actually fixed.
+// Place the counts into bins
+// Calculate and print nucleotide diversity statistics
+// Number of pairwise comparisons at a monomorphic site
+// Number of pairwise comparisons within a window
+// This number can be slightly off for the last bin since the
+// window size can go off the end of the chromosome.
+// The total number of possible pairwise comparisons is the sum of
+// pairwise comparisons at polymorphic sites and pairwise
+// comparisons at monomorphic sites.
+// Output lists of sites that have been filtered (or not).
+// Output lists of sites that have been filtered (or not).
+// Detect and output Long Runs of Homozygosity, following the method
+// developed by Adam Boyko, and described in Auton et al., Genome Research, 2009
+// (Although using Forward-backwards algorithm in place of Viterbi).
+// Number of generations since common ancestry
+// Assumed genotype error rate
+// Prior probability of being in autozygous state
+// Threshold for reporting autozygous region
+// Threshold for reporting autozygous region
+//if (e->get_N_alleles() != 2)
+//{
+//	LOG.one_off_warning("\tLROH: Only using bialleleic sites.");
+//	continue;	// TODO: Probably could do without this...
+//}
+// Skip missing genotypes
+// Heterozygosity
+// Heterozygote
+// Homozygote
+// Assume 1cM/Mb.
+// Morgans
+//A[1]
+//A[2]
+//A[0]
+// A[3]
+// Forward-backward algorithm
+// Renormalise to prevent underflow
+// Renormalise to prevent underflow
+// Calculate probability of each site being autozygous
+// Generate output
+// Start of autozygous region
+// end of autozygous region
+// Find next_het position
+// Report final region if needed
+// Calculate and output a relatedness statistic based on the method of
+// Manichaikul et al., BIOINFORMATICS 2010
+// doi:10.1093/bioinformatics/btq559
+// Only use biallelic loci
+// Calculate and output a relatedness statistic based on the method of
+// Yang et al, 2010 (doi:10.1038/ng.608). Specifically, calculate the
+// unadjusted Ajk statistic (equation 6 of paper).
+// Expectation of Ajk is zero for individuals within a populations, and
+// one for an individual with themselves.
+// Only use biallelic loci
+// Alt allele frequency
+// Output PCA, following method of Patterson, Price and Reich 2006.
+// Store list of included individuals
+// Potentially uses a lot of memory. Should issue a warning about this.
+// Populate M
+// Alt allele frequency
+// Now construct X = (1/n)MM'.
+// Only populate one half of matrix
+// Populate other half
+// Call LAPACK routine to calculate eigenvectors and eigenvalues
+// Check there are no complex eigenvalues.
+// Output results
+// Output eigenvectors (as columns)
+// TODO: This function duplicates a lot of what is in the output PCA function. Would be better to combine in a more
+// sensible fashion.
+// Output PCA, following method of Patterson, Price and Reich 2006.
+// Alt allele frequency
+// Now construct X = (1/n)MM'.
+// Only populate one half of matrix
+// Populate other half
+// Call LAPACK routine to calculate eigenvectors and eigenvalues
+// Check there are no complex eigenvalues.
+// Check all bases are ATCGatcg
+// Trio is in the VCF
+//	cout << CHROM << "\t" << POS << "\t" << REF << "\t" << ALT << "\t" << family_ids[trio] << "\t" << child_alleles.first << "/" << child_alleles.second;
+//	cout << "\t" << father_alleles.first << "/" << father_alleles.second << "\t" << mother_alleles.first << "/" << mother_alleles.second << endl;
+// Mendel error!
+/*
+// The following turns off sync between C and C++ streams.
+// Apparently it's faster to turn sync off, and as I don't use C streams, it's okay to turn off.
+/*
+// Reset the VCF entry object with a new data line
+// Tokenize the basic information in a VCF data line (at the tab level)
+// Convert to uppercase for consistency
+// Note that VCF v4.1 allows mixtures of lower/upper case in REF and ALT.
+// However, the spec specifically states that tools using VCF are not required
+// to preserve the case.
+// Tokenize the genotype information (at the 'tab' level) in the VCF entry
+// Tokenize a given genotype entry into it's component parts
+// Set missing return values if requested a value, but couldn't find it
+// Read the VCF entry and fully populate the object
+// Output VCF entry to output stream
+// (FORMAT[count] == "GT")
+// Handle haploid case
+//(FORMAT[count] == "GQ")
+// (FORMAT[count] == "DP")
+// (FORMAT[count] == "FT")
+// Unknown FORMAT so just replicate original output
+// Output VCF entry to output stream in binary
+// Set the include_genotype flag on the basis of depth
+// Have depth info
+// Filter specific genotypes by quality
+// Have quality info
+// Exclude genotypes with a filter flag.
+// Have GFilter info
+// If removing all filters, only keep things with label PASS
+// Only removing specific filters
+/*
+// The following function reads in a genotype from a '0/1'-like string.
+// Should handle haploid types to, but NOT polyploidy.
+// Fast, diploid case...
+// More complex case...
+// autosome
+// Male chrX, or chrY
+// Check for polypoidy
+// Don't bother storing "unfiltered" state.
+// If there is a value entry, read it now
+// Otherwise, set it equal to 1
+/*
+// Included in zlib v1.2.4 and makes things MUCH faster
+// Returns 1 when EOF has previously been detected reading the given input stream, otherwise zero.
+// Trim whitespace at end of line
+// Trim whitespace at end of line (required in gzipped case!)
+/* The MIT License
+// ~defined(_USE_KNETFILE)
+// ~defined(_WIN32)
+// ~defined(_WIN32)
+// ~define(_USE_KNETFILE)
+/* BGZF/GZIP header (speciallized from RFC 1952; little endian):
+// compress_level==-1 for the default level
+// Z_DEFAULT_COMPRESSION==-1
+// get the compress level from the mode string
+// compress the body
+// -15 to disable zlib header/footer
+// write the header
+// the last two bytes are a place holder for the length of the block
+// write the compressed length; -1 to fit 2 bytes
+// write the footer
+// Deflate the block in fp->uncompressed_block into fp->compressed_block. Also adds an extra field that stores the compressed block length.
+// Inflate the block in fp->compressed_block into fp->uncompressed_block
+/* A better way would be to remove the oldest block in the
+// if this happens, a bug!
+// no data read
+// +1 because when writing this number, we used "-1"
+// Do not reset offset if this read follows a seek.
+// wait for condition: to process or all done
+// to quit the thread
+// tid[0] is not used, as the worker 0 is launched by the master
+// worker 0 is effectively launched by the master thread
+// signal all workers to quit
+// worker 0 is effectively launched by the master thread
+// free other data allocated on heap
+// guaranteed by the caller
+// guaranteed that assertion does not fail
+// signal all the workers to compress
+// worker 0 is doing things here
+// wait for all the threads to complete
+// dump data to disk
+// ~ #ifdef BGZF_MT
+// possibly truncated file
+// write an empty block
+// indicates current block has not been loaded
+/* error */
+/* end-of-file */
+/* The MIT License
+/* Probably I will not do socket programming in the next few years and
+/* In winsock.h, the type of a socket is SOCKET, which is: "typedef
+/* This function tests if the file handler is ready for reading (or
+// 5 seconds time out
+/* This function does not work with Windows due to the lack of
+//beej.us/guide/bgnet/). */
+/* In Unix/Mac, getaddrinfo() is the most convenient way to get
+/* The following two setsockopt() are used by ftplib
+/* MinGW's printf has problem with "%lld" */
+/* In windows, the first thing is to establish the TCP connection. */
+/* A slightly modfied version of the following function also works on
+// open socket
+// get host info
+// connect
+// freehostent(hp); // strangely in MSDN, hp is NOT freed (memory leak?!)
+/* recv() and read() may not read the required length of data with
+// socket is not ready for reading
+/* According to the glibc manual, section 13.2, a zero returned
+/*************************
+// FIXME: this is *VERY BAD* for unbuffered I/O
+//fputc(c, stderr);
+// socket is not ready for writing
+// initialize ->type, ->host, ->retr and ->size
+//") != fn) return 0;
+/* the Linux/Mac version of socket_connect() also recognizes a port
+// place ->fd at offset off
+/**************************
+//") != fn) return 0;
+// set ->http_host
+// get http_proxy
+// set ->host, ->port and ->path
+// when there is no proxy, server name is identical to http_host name.
+//") == proxy)? strdup(proxy + 7) : strdup(proxy);
+// FIXME: I am lazy... But in principle, 64KB should be large enough.
+// read HTTP header; FIXME: bad efficiency
+// prematured header
+// HTTP return code
+// 200 (complete result); then skip beginning of the file
+/********************
+//") == fn) {
+//") == fn) {
+// local file
+/* In windows, O_BINARY is necessary. In Linux/Mac, O_BINARY may
+// on Windows, the following block is necessary; not on UNIX
+/* Be aware that lseek() returns the offset after seeking, while fseek() returns zero on success. */
+// FIXME: can we allow SEEK_END in future?
+// FTP specific
+/* On Linux/Mac, netclose() is an alias of close(), but on
+// FTP specific
+// HTTP specific
+// NCBI FTP, large file
+//ftp.ncbi.nih.gov/1000genomes/ftp/data/NA12878/alignment/NA12878.chrom6.SLX.SRP000032.2009_06.bam", "r");
+//ftp.sanger.ac.uk/pub4/treefam/tmp/index.shtml", "r");
+//www.sanger.ac.uk/Users/lh3/index.shtml", "r");
+//www.sanger.ac.uk/Users/lh3/ex1.bam", "r");

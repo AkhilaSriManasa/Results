@@ -1,0 +1,1054 @@
+﻿/**
+//github.com/houko
+/**
+//github.com/houko
+// 三个任务都调用完成，退出循环等待
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//www.google.com/search?hl=zh-CN&newwindow=1&q=%E4%B8%AD%E5%9B%BD%E5%A4%A7%E7%99%BE%E7%A7%91%E5%9C%A8%E7%BA%BF%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2&btnG=%E6%90%9C%E7%B4%A2&lr=";
+//www.baidu.com/baidu?word=%D6%D0%B9%FA%B4%F3%B0%D9%BF%C6%D4%DA%CF%DF%C8%AB%CE%C4%BC%EC%CB%F7&tn=myie2dg";
+/**
+// 构造URL
+// 打开连接
+// 输入流
+// 1K的数据缓冲
+// 读取到的数据长度
+// 输出的文件流
+// 开始读取
+// 完毕，关闭所有链接
+/**
+// 构造URL
+// 打开连接
+// 输入流
+// 1K的数据缓冲
+// 读取到的数据长度
+// 输出的文件流
+// 开始读取
+// 完毕，关闭所有链接
+/**
+//
+//    public static void main(String[] args) throws Exception {
+//        List<List<String>> listData = getListData("E:\\thinkpage_cities.xls", 1);
+//        List<CountryModel> list = new ArrayList<>();
+//        for (List<String> listDatum : listData) {
+//            CountryModel model = new CountryModel();
+//            model.setCityName(listDatum.get(0));
+//            model.setCityNameEN(listDatum.get(1));
+//            list.add(model);
+//        }
+//        System.out.println(list);
+//    }
+/**
+// 打开HSSFWorkbook
+// 第一行为标题，不取
+// 导入时如果为公式生成的数据则无值
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//检查Sub目录是否存在
+/**
+//建立FileWriter对象，并实例化fw
+//将字符串写入文件
+/**
+//返回图片扩展名
+/**
+/**
+/**
+// 获取图片的文件名
+// 重新定义图片名字
+//上传服务器上 新文件路径
+// 判断服务器上 文件夹是否存在
+// 写入文件
+/**
+// result = result + line;
+/**
+/**
+/**
+//github.com/syoubaku
+/**
+/**
+/**
+/**
+/**
+//定义script的正则表达式
+//定义style的正则表达式
+//定义HTML标签的正则表达式
+//过滤script标签
+//过滤style标签
+//过滤html标签
+//返回文本字符串
+/**
+/**
+// 连接超时
+// 读取超时 --服务器响应比较慢，增大时间
+/**
+// 从上述SSLContext对象中得到SSLSocketFactory对象  
+// 设置域名校验
+// 连接超时
+// 读取超时 --服务器响应比较慢，增大时间
+/**
+// 关闭连接
+// 关闭连接
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// 指定为httpOnly保证安全性
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*1901-1910*/
+/*1911-1920*/
+/*1921-1930*/
+/*1931-1940*/
+/*1941-1950*/
+/*1951-1960*/
+/*1961-1970*/
+/*1971-1980*/
+/*1981-1990*/
+/*1991-2000*/
+/*2001-2010*/
+/*2011-2020*/
+/*2021-2030*/
+/*2031-2040*/
+/*2041-2050*/
+/*2051-2060*/
+/*2061-2070*/
+/*2071-2080*/
+/*2081-2090*/
+/*2091-2099*/
+/**
+// 这一年有闰月
+/**
+// 用offset减去每农历年的天数计算当天是农历第几天
+// iYear最终结果是农历的年份, offset是当年的第几天
+// 农历年份
+// 闰哪个月,1-12
+// 用当年的天数offset,逐个减去每月（农历）的天数，求出当天是本月的第几天
+// 当前月超过闰月，要校正
+// offset小于0时，也要校正
+/**
+/**
+// 如果本年有闰月且month大于闰月时，需要校正
+// 不考虑闰月
+// 传入的闰月是正确的月份
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+//localhost:8080/user/validate?email=");
+//localhost:8080/user/validate?email=");
+/**
+//github.com/houko
+/**
+//若使用本函数转换则可得到加密结果的16进制表示，即数字字母混合的形式
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// 总概率为0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+//反序列化
+/**
+//github.com/syoubaku
+/**
+/**
+// 标记本身等于分隔符的特殊情况
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//避免新旧字符一样产生死循环
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// 16进制parse整形字符串。
+/** */
+/**
+/** */
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//传入的时间是以 / 分割
+/**
+//传入的时间是以 / 分割
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// 剩余秒数
+// 秒数
+// 剩余分钟数
+// 分钟数
+// 剩余小时
+// 剩余天数
+// 获取剩余天数
+// 1天及以上的显示剩余天
+// 1小时及以上或者前面显示了天数则后面需要小时
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//文件是否存在
+//解析
+/**
+/**
+//指定输出文件
+//输出文件为原文件
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+//uus-ng.img.d.cn/snapshot/201610/999/image/388/388/hd/20161012151646257.jpeg
+/**
+/**
+/**
+/**
+/**
+/**
+// lomlok
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//每1分钟执行一次
+/**
+/**
+/**
+/**
+/**
+//package info.xiaomo.crawler.spider;
+//
+//import okhttp3.*;
+//import org.jsoup.Jsoup;
+//import org.jsoup.nodes.Document;
+//import org.jsoup.nodes.Element;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+//
+//import java.io.File;
+//import java.io.IOException;
+//import java.util.*;
+//import java.util.concurrent.*;
+//import java.util.concurrent.atomic.AtomicInteger;
+//
+//public class Crawler {
+//    private static final Logger LOGGER = LoggerFactory.getLogger(Crawler.class);
+//    private final Set<HttpUrl> fetchedUrls = Collections.synchronizedSet(new LinkedHashSet<HttpUrl>());
+//    private final BlockingQueue<HttpUrl> queue = new LinkedBlockingQueue<>();
+//    private final ConcurrentMap<String, AtomicInteger> hostnames = new ConcurrentHashMap<>();
+//    private OkHttpClient client = null;
+//
+//    private Crawler() {
+//        init();
+//    }
+//
+//    private static Crawler getInstance() {
+//        return CrawlerHolder.INSTANCE;
+//    }
+//
+//    public static void main(String[] args) throws ExecutionException, IntCodeuptedException {
+//        String[] urls = {"https://www.baidu.com/"};
+//        List<Future<String>> results = Crawler.getInstance().initUrl(urls).parallelDrainQueue(3);
+//        for (Future<String> future : results) {
+//            System.out.println(future.get());
+//        }
+//    }
+//
+//    private Crawler initUrl(String[] urls) {
+//        for (String url : urls) {
+//            queue.add(HttpUrl.parse(url));
+//        }
+//
+//        return this;
+//    }
+//
+//    private void init() {
+//        long cacheByteCount = 1024 * 1024 * 100;
+//        String dir = "C:\\test";
+//        Cache cache = new Cache(new File(dir), cacheByteCount);
+//        client = new OkHttpClient.Builder().cache(cache).build();
+//    }
+//
+//    public List<Future<String>> parallelDrainQueue(int threadCount) {
+//        ExecutorService executor = Executors.newFixedThreadPool(threadCount);
+//        List<Future<String>> results = new ArrayList<>();
+//        for (int i = 0; i < threadCount; i++) {
+//            Future<String> future = executor.submit(new Callable<String>() {
+//                @Override
+//                public String call() throws Exception {
+//                    try {
+//                        drainQueue();
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                    return null;
+//                }
+//            });
+//
+//            results.add(future);
+//        }
+//        return results;
+//    }
+//
+//    private void drainQueue() throws Exception {
+//        for (HttpUrl url; (url = queue.take()) != null; ) {
+//            if (!fetchedUrls.add(url)) {
+//                continue;
+//            }
+//
+//            try {
+//                fetch(url);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//
+//    private void fetch(HttpUrl url) throws IOException {
+//        AtomicInteger hostnameCount = new AtomicInteger();
+//        AtomicInteger previous = hostnames.putIfAbsent(url.host(), hostnameCount);
+//        if (previous != null) {
+//            hostnameCount = previous;
+//        }
+//
+//        if (hostnameCount.incrementAndGet() > 100) {
+//            return;
+//        }
+//
+//        Request request = new Request.Builder().url(url).build();
+//        Response response = client.newCall(request).execute();
+//        String responseSource = response.networkResponse() != null
+//                ? ("(network: " + response.networkResponse().code() + " over " + response.protocol() + ")") : "(cache)";
+//        int responseCode = response.code();
+//
+//        // 打印log
+//        LOGGER.info("ThreadName:【{}】,ResponseCode:【{}】,URL:【{}】,ResponseSource:【{}】", Thread.currentThread().getName(),
+//                responseCode, url, responseSource);
+//
+//        String contentType = response.header("Content-Type");
+//        if (responseCode != 200 || contentType == null) {
+//            response.body().close();
+//            return;
+//        }
+//
+//        MediaType mediaType = MediaType.parse(contentType);
+//        if (mediaType == null || !mediaType.subtype().equalsIgnoreCase("html")) {
+//            response.body().close();
+//            return;
+//        }
+//
+//        // 获取页面的a[href], 加入LinkedBlockingQueue
+//        Document document = Jsoup.parse(response.body().string(), url.toString());
+//        for (Element element : document.select("a[href]")) {
+//            String href = element.attr("href");
+//            HttpUrl link = response.request().url().resolve(href);
+//            if (link != null) {
+//                queue.add(link);
+//            }
+//        }
+//    }
+//
+//    private static class CrawlerHolder {
+//        private static final Crawler INSTANCE = new Crawler();
+//    }
+//}
+/**
+//ng.d.cn/db/yinyangshi/index.html";
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//question.xiaomo.info/")
+/**
+//github.com/houko
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//    /**
+/**
+//     */
+//    private List<String> choice;
+//    /**
+/**
+//     */
+//    private List<Integer> answer;
+/**
+//github.com/houko
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+//xiaomo.info/")
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+// 往第一个数据源中插入两条数据
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+// 定义某个定时任务
+/**
+//每1分钟执行一次
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+// 群发消息
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//api.xiaomo.info:8080/")
+//xiaomo.info/")
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+//邮箱被占用
+/**
+//找不到用户
+//密码不正确
+/**
+/**
+/**
+/**
+/**
+//数据访问层，通过email获取用户信息
+//验证码是否过期
+//激活
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+//用户没有登录
+//用户已经登录
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+// lomlok
+/**
+//github.com/houko
+// lomlok
+/**
+//github.com/houko
+// lomlok
+/**
+//github.com/houko
+// hibernate
+// lomlok
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+//github.com/houko
+/**
+/**
+//localhost:8080/user/validate?email=");
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**
+/**
+//github.com/houko
+/**

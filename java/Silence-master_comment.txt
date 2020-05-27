@@ -1,0 +1,1618 @@
+﻿#!/usr/bin/env python3
+# Clean working directory
+# Load font data
+# In case it's a path
+# Accelerate processing
+# Extract all emojis
+# TODO: parse missing emojis
+# Some flags aren't correctly sorted
+# Fix these flag names
+#!/usr/bin/env python3
+#!/usr/bin/env python3
+/*
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//silence.im/privacy")));
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//////// Event Handlers
+//silence.im"));
+///// Initializers
+//////// Helper Methods
+// Listeners
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//" + url;
+/// MessageRecord Attribute Parsers
+/*
+//noinspection ConstantConditions
+//noinspection ConstantConditions
+/// Helper Methods
+/// Event handlers
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/*", AttachmentDatabase.TRANSFER_PROGRESS_DONE));
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+//      DecryptingQueue.schedulePendingDecrypts(DatabaseUpgradeActivity.this, masterSecret);
+//      DecryptingQueue.schedulePendingDecrypts(DatabaseUpgradeActivity.this, masterSecret);
+/**
+//code.google.com/p/android/issues/detail?id=53313
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/*
+//if (!intermediaryRecipients.isGroupRecipient()) {
+//  Log.w(TAG, "Recipient is not a group, resolving members immediately.");
+//  recipients = intermediaryRecipients;
+//} else {
+//  // TODO
+//}
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+// Guardian Project Ripple
+// Amnesty International's Panic Button, made by iilab.org
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/*
+//www.gnu.org/licenses/>.
+/**
+// XXX - This shouldn't be here.
+/**
+//127.0.0.1:%d/%s", port, auth));
+//    private String filePath;
+// Create a BufferedReader for parsing the header.
+//      filePath = request.getProperty("uri");
+// It is a seek or skip request if there's a Range
+// header
+//        dataSource.skipFully(data, cbSkip);//try to skip as much as possible
+// Loop as long as there's stuff to send and client has not closed
+// Cleanup
+/**
+/**
+// Read the request line
+// Decode parameters from the URI
+// If there's another token, it's protocol version,
+// followed by HTTP headers. Ignore version but parse headers.
+// NOTE: this now forces header names lowercase since they are
+// case insensitive and vary by client.
+/**
+/**
+// Lime
+// Yellow
+// Amber
+//    MaterialColor.BROWN,
+// Grey
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//github.com/AndroidDeveloperLB/LollipopContactsRecyclerViewFastScroller
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.gnu.org/licenses/>.
+/**
+//noinspection SuspiciousNameCombination
+//noinspection SuspiciousNameCombination
+///android_asset/" + model.getSprite(),
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//details?id=" + context.getPackageName());
+// App needs to be installed via Play/Amazon store to show the rating dialog
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Add an _id column if not in columnNames
+// simply ignore it
+/**
+//www.gnu.org/licenses/>.
+/**
+/***
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// ID
+// CONTACT_ID
+// TYPE
+// NUMBER
+/*
+// LABEL
+// NAME
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/*public static class HeaderViewHolder {
+/** 
+//www.gnu.org/licenses/>.
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Names with commas are the bane of the recipient editor's existence.
+// We've worked around them by using spans, but there are edge cases
+// where the spans get deleted. Furthermore, having commas in names
+// can be confusing to the user since commas are used as separators
+// between recipients. The best solution is to simply remove commas
+// from names.
+// Make sure we leave a space between parts of names.
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// For the focus to move to the message body when soft Next is pressed
+/*
+// inserting a character
+// Remember the delimiter the user typed to end this recipient. We'll
+// need it shortly in terminateToken().
+// If the user is in the middle of editing an existing recipient, don't offer the
+// auto-complete menu. Without this, when the user selects an auto-complete menu item,
+// it will get added to the list of recipients so we end up with the old before-editing
+// recipient and the new post-editing recipient. As a precedent, gmail does not show
+// the auto-complete menu when editing an existing recipient.
+/*if (isMms) {
+// TODO: PhoneNumberUtils.isWellFormedSmsAddress() only check if the number is a valid
+// GSM SMS address. If the address contains a dialable char, it considers it a well
+// formed SMS addr. CDMA doesn't work that way and has a different parser for SMS
+// address (see CdmaSmsAddress.parse(String address)). We should definitely fix this!!!
+/*public boolean hasInvalidRecipient(boolean isMms) {
+/* TODO if (MmsConfig.getEmailGateway() == null) {
+/*public boolean containsEmail() {
+// TODO: there's a situation where the span can lose its annotations:
+//   - add an auto-complete contact
+//   - add another auto-complete contact
+//   - delete that second contact and keep deleting into the first
+//   - we lose the annotation and can no longer get the span.
+// Need to fix this case because it breaks auto-complete contacts with commas in the name.
+/**
+/**
+/**
+// Use the same delimiter the user just typed.
+// This lets them have a mixture of commas and semicolons in their list.
+// calculate the recipients total length. This is so if the name contains
+// commas or semis, we'll skip over the whole name to the next
+// recipient, rather than parsing this single name into multiple
+// recipients.
+/** 
+//www.gnu.org/licenses/>.
+/**
+/** 
+//www.gnu.org/licenses/>.
+/**
+/**
+/** 
+//www.gnu.org/licenses/>.
+/**
+//mac.update(buffer, offset, flourish);
+/** 
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/** 
+//www.gnu.org/licenses/>.
+/**
+/** 
+//www.gnu.org/licenses/>.
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+/**
+//www.gnu.org/licenses/>.
+/** 
+//www.gnu.org/licenses/>.
+/**
+//		Mac hmac = Mac.getInstance("HmacSHA1");
+//		Cipher cipher      = Cipher.getInstance("AES/CBC/PKCS5Padding");
+//		Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+/**
+//www.gnu.org/licenses/>.
+/**
+// SecretKeySpec does an internal copy in its constructor.
+/**
+//www.gnu.org/licenses/>.
+/**
+//XXX
+//XXX
+//ms
+//default for low-end devices
+//baseline starting iteration count
+// NOTE - For some reason, Sprint seems to append a single character to the
+// end of message text segments.  I don't know why, so here we just try
+// truncating the message by one if the MAC fails.
+/**
+//www.gnu.org/licenses/>.
+/*
+/**
+//android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html
+/**
+/** Hidden constructor to prevent instantiation. */
+/**
+/**
+// No need to apply the fix
+// Mix in the device- and invocation-specific seed.
+// Mix output of Linux PRNG into OpenSSL's PRNG
+/**
+// No need to apply the fix
+// Install a Linux PRNG-based SecureRandom implementation as the
+// default, if not yet installed.
+// Assert that new SecureRandom() and
+// SecureRandom.getInstance("SHA1PRNG") return a SecureRandom backed
+// by the Linux PRNG-based SecureRandom implementation.
+/**
+// Although /dev/urandom is not a SHA-1 PRNG, some apps
+// explicitly request a SHA1PRNG SecureRandom and we thus need to
+// prevent them from getting the default implementation whose output
+// may have low entropy.
+/**
+/*
+/**
+/**
+/**
+// On a small fraction of devices /dev/urandom is not writable.
+// Log and ignore.
+// Mix in the device- and invocation-specific seed.
+// NOTE: Consider inserting a BufferedInputStream between
+// DataInputStream and FileInputStream if you need higher
+// PRNG output performance and can live with future PRNG
+// output being pulled into this process prematurely.
+/**
+/**
+// We're using the Reflection API because Build.SERIAL is only available
+// since API Level 9 (Gingerbread, Android 2.3).
+/** 
+//www.gnu.org/licenses/>.
+// FIXME :: This not strictly an accurate copy constructor.
+/**
+/**
+/**
+/**
+/*package*/ Optional<Integer> process(SessionRecord sessionRecord, PreKeySignalMessage message)
+/**
+/**
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//" + mmsc;
+/**
+//www.gnu.org/licenses/>.
+//noinspection ResultOfMethodCallIgnored
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//org.smssecure.smssecure.database.conversationlist");
+//org.smssecure.smssecure.database.conversation/";
+//org.smssecure.smssecure.database.attachment");
+//org.smssecure.smssecure.database.identities");
+//org.smssecure.smssecure.database.recipients/");
+/**
+//www.gnu.org/licenses/>.
+/*
+//noinspection ResultOfMethodCallIgnored
+// NOTE (4/21/14) -- At this moment in time, we're forgetting the ability to parse
+// V1 session records.  Despite our usual attempts to avoid using shared code in the
+// upgrade path, this is too complex to put here directly.  Thus, unfortunately
+// this operation is now lost to the ages.  From the git log, it seems to have been
+// almost exactly a year since this went in, so hopefully the bulk of people have
+// already upgraded.
+//              IdentityKey identityKey     = Session.getRemoteIdentityKey(context, masterSecret, recipientId);
+//    DecryptingQueue.schedulePendingDecrypts(context, masterSecret);
+// SMS Updates
+// MMS Updates
+// Thread Updates
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+//  public void markAsSending(long messageId) {
+//    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENDING_TYPE);
+//    notifyConversationListeners(getThreadIdForMessage(messageId));
+//  }
+//  public void markAsSecure(long messageId) {
+//    updateMailboxBitmask(messageId, 0, Types.SECURE_MESSAGE_BIT);
+//  }
+/*package*/ void deleteThreads(Set<Long> threadIds) {
+/*package*/void deleteMessagesInThreadBeforeDate(long threadId, long date) {
+//telephony/carriers"), "current");
+// NOTE - This is dumb, but on some devices there's an NPE in the Android framework
+// for the provider of this call, which gets rethrown back to here through a binder
+// call.
+// Base Types
+// Message attributes
+// Key Exchange Information
+// Secure Message Information
+// Group Message Information
+// XMPP Message Information
+// Encrypted Storage Information
+//    public static final int NONE_TYPE           = 0;
+//    public static final int INBOX_TYPE          = 1;
+//    public static final int SENT_TYPE           = 2;
+//    public static final int SENT_PENDING        = 4;
+//    public static final int FAILED_TYPE         = 5;
+//
+//
+//
+//    public static final int NONE_TYPE           = 0;
+//    public static final int INBOX_TYPE          = 1;
+//    public static final int SENT_TYPE           = 2;
+//    public static final int SENT_PENDING        = 4;
+//    public static final int FAILED_TYPE         = 5;
+//
+//    public static final int OUTBOX_TYPE = 43;  // Messages are stored local encrypted and need delivery.
+//
+//
+//    public static final int ENCRYPTING_TYPE      = 42;  // Messages are stored local encrypted and need async encryption and delivery.
+//    public static final int SECURE_SENT_TYPE     = 44;  // Messages were sent with async encryption.
+//    public static final int SECURE_RECEIVED_TYPE = 45;  // Messages were received with async decryption.
+//    public static final int FAILED_DECRYPT_TYPE  = 46;  // Messages were received with async encryption and failed to decrypt.
+//    public static final int DECRYPTING_TYPE      = 47;  // Messages are in the process of being asymmetricaly decrypted.
+//    public static final int NO_SESSION_TYPE      = 48;  // Messages were received with async encryption but there is no session yet.
+//
+//    public static final int OUTGOING_KEY_EXCHANGE_TYPE  = 49;
+//    public static final int INCOMING_KEY_EXCHANGE_TYPE  = 50;
+//    public static final int STALE_KEY_EXCHANGE_TYPE     = 51;
+//    public static final int PROCESSED_KEY_EXCHANGE_TYPE = 52;
+//
+//    public static final int[] OUTGOING_MESSAGE_TYPES = {SENT_TYPE, SENT_PENDING, ENCRYPTING_TYPE,
+//                                                        OUTBOX_TYPE, SECURE_SENT_TYPE,
+//                                                        FAILED_TYPE, OUTGOING_KEY_EXCHANGE_TYPE};
+//
+//    public static boolean isFailedMessageType(long type) {
+//      return type == FAILED_TYPE;
+//    }
+//
+//    public static boolean isOutgoingMessageType(long type) {
+//      for (int outgoingType : OUTGOING_MESSAGE_TYPES) {
+//        if (type == outgoingType)
+//          return true;
+//      }
+//
+//      return false;
+//    }
+//
+//    public static boolean isPendingMessageType(long type) {
+//      return type == SENT_PENDING || type == ENCRYPTING_TYPE || type == OUTBOX_TYPE;
+//    }
+//
+//    public static boolean isSecureType(long type) {
+//      return
+//          type == SECURE_SENT_TYPE     || type == ENCRYPTING_TYPE ||
+//          type == SECURE_RECEIVED_TYPE || type == DECRYPTING_TYPE;
+//    }
+//
+//    public static boolean isKeyExchangeType(long type) {
+//      return type == OUTGOING_KEY_EXCHANGE_TYPE || type == INCOMING_KEY_EXCHANGE_TYPE;
+//    }
+/**
+//www.gnu.org/licenses/>.
+/** 
+//www.gnu.org/licenses/>.
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+/**
+//www.gnu.org/licenses/>.
+/**
+//      type |= Types.ENCRYPTION_REMOTE_BIT;
+//      type |= Types.ENCRYPTION_REMOTE_BIT;
+/*package */void deleteThread(long threadId) {
+/*package*/void deleteMessagesInThreadBeforeDate(long threadId, long date) {
+/*package*/ void deleteThreads(Set<Long> threadIds) {
+/*package */ void deleteAllThreads() {
+/*package*/ SQLiteDatabase beginTransaction() {
+/*package*/ void endTransaction(SQLiteDatabase database) {
+/*package*/ SQLiteStatement createInsertStatement(SQLiteDatabase database) {
+/**
+//www.gnu.org/licenses/>.
+//mms-sms/canonical-address/" + theirRecipientId);
+//sms/conversations/" + theirThreadId);
+/// Work around for weird sony-specific (?) bug: #4309
+//    if (context.getSharedPreferences("SecureSMS", Context.MODE_PRIVATE).getBoolean("migrated", false))
+//      return;
+//mms-sms/conversations?simple=true");
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//
+//    toastHandler.makeToast(error);
+// TODO
+//    MmsDatabase database = DatabaseFactory.getMmsDatabase(context);
+//    database.markAsSending(messageId);
+// TODO
+// See issue #1516 for bug report, and discussion on commits related to #4833 for problems
+// related to the original fix to #1516. This still may not be a correct fix if networks allow
+// SMS/MMS sending to alphanumeric recipients other than email addresses, but should also
+// help to fix issue #3099.
+// See issue #1516 for bug report, and discussion on commits related to #4833 for problems
+// related to the original fix to #1516. This still may not be a correct fix if networks allow
+// SMS/MMS sending to alphanumeric recipients other than email addresses, but should also
+// help to fix issue #3099.
+// NOTE 11/04/14 -- There's apparently a bug where for some unknown recipients
+// and messages, this will throw an NPE.  We have no idea why, so we're just
+// catching it and marking the message as a failure.  That way at least it doesn't
+// repeatedly crash every time you start the app.
+//" + messageId + System.currentTimeMillis()),
+//" + messageId + System.currentTimeMillis()),
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/*", requestCode))
+/*", requestCode))
+/*", requestCode))
+/**
+/**
+// Do nothing.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.gnu.org/licenses/>.
+/**
+// Do nothing.
+/**
+/**
+// Do nothing.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+// + Hex.dump(baos.toByteArray()));
+/**
+//www.gnu.org/licenses/>.
+// We think Sprint supports direct connection over wifi/data, but not Verizon
+// TODO determine root cause
+// see: https://github.com/WhisperSystems/Signal-Android/issues/4379
+/*, application/vnd.wap.mms-message, application/vnd.wap.sic"));
+//www.google.com/oha/rdf/ua-profile-kila.xml"));
+//magic.google.com"));
+/**
+//www.gnu.org/licenses/>.
+// XXX - This is loading everything into memory! We want the send path to be stream-like.
+/** 
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/** 
+//www.gnu.org/licenses/>.
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+// Reduce by 25% max size for encrypted MMS mesages
+///
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+//org.smssecure.smssecure/part";
+//org.smssecure.smssecure/thumb";
+/*/#", PART_ROW);
+/*/#", THUMB_ROW);
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/** 
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//DatabaseFactory.getThreadDatabase(context).setLastSeen(threadId);
+/**
+//www.gnu.org/licenses/>.
+/**
+//DatabaseFactory.getThreadDatabase(context).setLastSeen(replyThreadId);
+/**
+//www.gnu.org/licenses/>.
+/**
+//" + System.currentTimeMillis())));
+// XXX Appears to be a ROM bug, see https://github.com/WhisperSystems/Signal-Android/issues/6043
+// XXX Android ROM Bug, see https://github.com/WhisperSystems/Signal-Android/issues/6043
+/**
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//  private CharSequence summaryHasRingtone;
+//  private CharSequence summary;
+//  static {
+//    PreferenceFragmentCompat.addDialogPreference(RingtonePreference.class, RingtonePreferenceDialogFragmentCompat.class);
+//  }
+//    summaryHasRingtone = a.getText(R.styleable.RingtonePreference_summaryHasRingtone);
+//    summary = super.getSummary();
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//  /**
+/**
+//   * displayed if no ringtone is selected; otherwise the ringtone title will be used.
+//   *
+//   * @return The summary.
+//   */
+//  @Override
+//  public CharSequence getSummary() {
+//    if (ringtoneUri == null) {
+//      return summary;
+//    } else {
+//      String ringtoneTitle = getRingtoneTitle();
+//      if (summaryHasRingtone != null && ringtoneTitle != null) {
+//        return String.format(summaryHasRingtone.toString(), ringtoneTitle);
+//      } else if (ringtoneTitle != null) {
+//        return ringtoneTitle;
+//      } else {
+//        return summary;
+//      }
+//    }
+//  }
+//  /**
+/**
+//   * set, this will be displayed if no ringtone is selected; otherwise the ringtone title will be
+//   * used.
+//   *
+//   * @param summary The summary for the preference.
+//   */
+//  @Override
+//  public void setSummary(CharSequence summary) {
+//    super.setSummary(summary);
+//    if (summary == null && this.summary != null) {
+//      this.summary = null;
+//    } else if (summary != null && !summary.equals(this.summary)) {
+//      this.summary = summary.toString();
+//    }
+//  }
+//  /**
+/**
+//   * has a persisted value or the default value is set. If the summary
+//   * has a {@linkplain java.lang.String#format String formatting}
+//   * marker in it (i.e. "%s" or "%1$s"), then the current ringtone's title
+//   * will be substituted in its place.
+//   *
+//   * @return The picked summary.
+//   */
+//  @Nullable
+//  public CharSequence getSummaryHasRingtone() {
+//    return summaryHasRingtone;
+//  }
+//  /**
+/**
+//   * preference has a persisted value or the default value is set. If the summary
+//   * has a {@linkplain java.lang.String#format String formatting}
+//   * marker in it (i.e. "%s" or "%1$s"), then the current ringtone's title
+//   * will be substituted in its place.
+//   *
+//   * @param resId The summary as a resource.
+//   * @see #setSummaryHasRingtone(CharSequence)
+//   */
+//  public void setSummaryHasRingtone(@StringRes int resId) {
+//    setSummaryHasRingtone(getContext().getString(resId));
+//  }
+//  /**
+/**
+//   * the preference has a persisted value or the default value is set. If the summary
+//   * has a {@linkplain java.lang.String#format String formatting}
+//   * marker in it (i.e. "%s" or "%1$s"), then the current ringtone's title
+//   * will be substituted in its place.
+//   *
+//   * @param summaryHasRingtone The summary for the preference.
+//   */
+//  public void setSummaryHasRingtone(@Nullable CharSequence summaryHasRingtone) {
+//    if (summaryHasRingtone == null && this.summaryHasRingtone != null) {
+//      this.summaryHasRingtone = null;
+//    } else if (summaryHasRingtone != null && !summaryHasRingtone.equals(this.summaryHasRingtone)) {
+//      this.summaryHasRingtone = summaryHasRingtone.toString();
+//    }
+//
+//    notifyChanged();
+//  }
+/**
+// "playing" silence
+// FIXME static field leak
+/*");
+/*", "application/ogg"});
+/*\"."
+// This will only happen if the Uri isn't either SCHEME_CONTENT or SCHEME_FILE, so we assume
+// it already represents the file's name.
+/**
+// Make sure the storage subdirectory exists
+//noinspection ResultOfMethodCallIgnored
+// Ensure the file has a unique name, as to not override any existing file
+// This might also be reached if the number of repeated files gets too high
+// Extract requested extension from display name
+//noinspection StatementWithEmptyBody
+// Extension maps back to requested MIME type; allow it
+// No match; insist that create file matches requested MIME
+/**
+// There was some issue with scanning. Delete the copied file so it is not oprhaned.
+//noinspection ResultOfMethodCallIgnored
+// Be safe - err on the side of not tagging
+/** 
+//www.gnu.org/licenses/>.
+/** 
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+//org.smssecure.provider.smssecure.mms/mms";
+/**
+//www.gnu.org/licenses/>.
+//org.smssecure.provider.smssecure/part";
+/*/#", SINGLE_ROW);
+//org.smssecure.smssecure/capture";
+/*/*/#";
+/*/#";
+//" + AUTHORITY + "/memory");
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+// Format like this: Mike Cleron <(650) 555-1234>
+//                   Erick Tseng <(650) 555-1212>
+//                   Tutankhamun <tutank1341@gmail.com>
+//                   (408) 555-1289
+// FIXME: This class is nuts.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//code.google.com/p/android/issues/detail?id=53313
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+// ignore CLASS0 ("flash") messages
+// ignore OTP messages from Sparebank1 (Norwegian bank)
+//otp?")) {
+//ANDROID:") || // Sprint Visual Voicemail
+//BREW:")); //BREW stands for “Binary Runtime Environment for Wireless"
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+//return processSinglePartMessage(transportMessage);
+/*
+/*
+/*
+// 1 Hour
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//iharder.net/base64">http://iharder.net/base64</a>.</p>
+//www.faqs.org/rfcs/rfc3548.html">RFC3548</a>,
+//www.faqs.org/rfcs/rfc3548.html">RFC3548</a>.</li>
+//www.faqs.org/rfcs/rfc3548.html</li>
+//www.faqs.org/qa/rfcc-1940.html</li>
+//www.powerset.com/">http://www.powerset.com/</a>
+//iharder.net/base64">http://iharder.net/base64</a>
+/* ********  P U B L I C   F I E L D S  ******** */   
+/** No options specified. Value is zero. */
+/** Specify encoding in first bit. Value is one. */
+/** Specify decoding in first bit. Value is zero. */
+/** Specify that data should be gzip-compressed in second bit. Value is two. */
+/** Specify that gzipped data should <em>not</em> be automatically gunzipped. */
+/** Do break lines when encoding. Value is 8. */
+/** 
+//www.faqs.org/rfcs/rfc3548.html">http://www.faqs.org/rfcs/rfc3548.html</a>.
+/**
+//www.faqs.org/qa/rfcc-1940.html">http://www.faqs.org/qa/rfcc-1940.html</a>.
+/* ********  P R I V A T E   F I E L D S  ******** */  
+/** Maximum line length (76) of Base64 output. */
+/** The equals sign (=) as a byte. */
+/** The new line character (\n) as a byte. */
+/** Preferred encoding. */
+// Indicates white space in encoding
+// Indicates equals sign in encoding
+/* ********  S T A N D A R D   B A S E 6 4   A L P H A B E T  ******** */	
+/** The 64 valid Base64 values. */
+/* Host platform me be something funny like EBCDIC, so we hardcode these values. */
+/** 
+// Decimal  0 -  8
+// Whitespace: Tab and Linefeed
+// Decimal 11 - 12
+// Whitespace: Carriage Return
+// Decimal 14 - 26
+// Decimal 27 - 31
+// Whitespace: Space
+// Decimal 33 - 42
+// Plus sign at decimal 43
+// Decimal 44 - 46
+// Slash at decimal 47
+// Numbers zero through nine
+// Decimal 58 - 60
+// Equals sign at decimal 61
+// Decimal 62 - 64
+// Letters 'A' through 'N'
+// Letters 'O' through 'Z'
+// Decimal 91 - 96
+// Letters 'a' through 'm'
+// Letters 'n' through 'z'
+// Decimal 123 - 126
+// Decimal 127 - 139
+/*,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,     // Decimal 127 - 139
+// Decimal 153 - 165
+// Decimal 166 - 178
+// Decimal 179 - 191
+// Decimal 192 - 204
+// Decimal 205 - 217
+// Decimal 218 - 230
+// Decimal 231 - 243
+// Decimal 244 - 255 */
+/* ********  U R L   S A F E   B A S E 6 4   A L P H A B E T  ******** */
+/**
+//www.faqs.org/rfcs/rfc3548.html">http://www.faqs.org/rfcs/rfc3548.html</a>.
+/**
+// Decimal  0 -  8
+// Whitespace: Tab and Linefeed
+// Decimal 11 - 12
+// Whitespace: Carriage Return
+// Decimal 14 - 26
+// Decimal 27 - 31
+// Whitespace: Space
+// Decimal 33 - 42
+// Plus sign at decimal 43
+// Decimal 44
+// Minus sign at decimal 45
+// Decimal 46
+// Slash at decimal 47
+// Numbers zero through nine
+// Decimal 58 - 60
+// Equals sign at decimal 61
+// Decimal 62 - 64
+// Letters 'A' through 'N'
+// Letters 'O' through 'Z'
+// Decimal 91 - 94
+// Underscore at decimal 95
+// Decimal 96
+// Letters 'a' through 'm'
+// Letters 'n' through 'z'
+// Decimal 123 - 126
+// Decimal 127 - 139
+/*,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,     // Decimal 127 - 139
+// Decimal 153 - 165
+// Decimal 166 - 178
+// Decimal 179 - 191
+// Decimal 192 - 204
+// Decimal 205 - 217
+// Decimal 218 - 230
+// Decimal 231 - 243
+// Decimal 244 - 255 */
+/* ********  O R D E R E D   B A S E 6 4   A L P H A B E T  ******** */
+/**
+//www.faqs.org/qa/rfcc-1940.html">http://www.faqs.org/qa/rfcc-1940.html</a>.
+/**
+// Decimal  0 -  8
+// Whitespace: Tab and Linefeed
+// Decimal 11 - 12
+// Whitespace: Carriage Return
+// Decimal 14 - 26
+// Decimal 27 - 31
+// Whitespace: Space
+// Decimal 33 - 42
+// Plus sign at decimal 43
+// Decimal 44
+// Minus sign at decimal 45
+// Decimal 46
+// Slash at decimal 47
+// Numbers zero through nine
+// Decimal 58 - 60
+// Equals sign at decimal 61
+// Decimal 62 - 64
+// Letters 'A' through 'M'
+// Letters 'N' through 'Z'
+// Decimal 91 - 94
+// Underscore at decimal 95
+// Decimal 96
+// Letters 'a' through 'm'
+// Letters 'n' through 'z'
+// Decimal 123 - 126
+// Decimal 127 - 139
+/*,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,     // Decimal 127 - 139
+// Decimal 153 - 165
+// Decimal 166 - 178
+// Decimal 179 - 191
+// Decimal 192 - 204
+// Decimal 205 - 217
+// Decimal 218 - 230
+// Decimal 231 - 243
+// Decimal 244 - 255 */
+/* ********  D E T E R M I N E   W H I C H   A L H A B E T  ******** */
+/**
+// end getAlphabet
+/**
+// end getAlphabet
+/** Defeats instantiation. */
+/* ********  E N C O D I N G   M E T H O D S  ******** */    
+/**
+// end encode3to4
+/**
+//           1         2         3  
+// 01234567890123456789012345678901 Bit position
+// --------000000001111111122222222 Array position from threeBytes
+// --------|    ||    ||    ||    | Six bit groups to index ALPHABET
+//          >>18  >>12  >> 6  >> 0  Right shift necessary
+//                0x3f  0x3f  0x3f  Additional AND
+// Create buffer with zero-padding if there are only one or two
+// significant bytes passed in the array.
+// We have to shift left 24 in order to flush out the 1's that appear
+// when Java treats a value as negative that is cast from a byte to an int.
+// end switch
+// end encode3to4
+/**
+// end input remaining
+/**
+// end input remaining
+/**
+// end encodeObject
+/**
+// end if: null
+// Streams
+// ObjectOutputStream -> (GZIP) -> Base64 -> ByteArrayOutputStream
+// Gzip
+// Not gzipped
+// end try
+// Catch it and then throw it immediately so that
+// the finally{} block is called for cleanup.
+// end catch
+// end finally
+// Return value according to relevant encoding.
+// end try
+// Fall back to some Java default
+// end catch
+// end encode
+/**
+// Since we're not going to have the GZIP encoding turned on,
+// we're not going to have an java.io.IOException thrown, so
+// we should not force the user to have to catch it.
+// end catch
+// end encodeBytes
+/**
+// end encodeBytes
+/**
+// Since we're not going to have the GZIP encoding turned on,
+// we're not going to have an java.io.IOException thrown, so
+// we should not force the user to have to catch it.
+// end catch
+// end encodeBytes
+/**
+// Return value according to relevant encoding.
+// end try
+// end catch
+// end encodeBytes
+/**
+/**
+// end if: null
+// end if: off < 0
+// end if: len < 0
+// end if: off < 0
+// Compress?
+// GZip -> Base64 -> ByteArray
+// end try
+// Catch it and then throw it immediately so that
+// the finally{} block is called for cleanup.
+// end catch
+// end finally
+// end if: compress
+// Else, don't compress. Better not to use streams at all then.
+//int    len43   = len * 4 / 3;
+//byte[] outBuff = new byte[   ( len43 )                      // Main 4:3
+//                           + ( (len % 3) > 0 ? 4 : 0 )      // Account for padding
+//                           + (breakLines ? ( len43 / MAX_LINE_LENGTH ) : 0) ]; // New lines
+// Try to determine more precisely how big the array needs to be.
+// If we get it right, we don't have to do an array copy, and
+// we save a bunch of memory.
+// Bytes needed for actual encoding
+// Plus extra newline characters
+// end if: end of line
+// en dfor: each piece of array
+// end if: some padding needed
+// Only resize array if we didn't guess it right.
+//System.err.println("Having to resize array from " + outBuff.length + " to " + e );
+//System.err.println("No need to resize array.");
+// end else: don't compress
+// end encodeBytesToBytes
+/* ********  D E C O D I N G   M E T H O D S  ******** */
+/**
+// Lots of error checking and exception throwing
+// end if
+// end if
+// end if
+// end if
+// Example: Dk==
+// Two ways to do the same thing. Don't know which way I like best.
+//int outBuff =   ( ( DECODABET[ source[ srcOffset    ] ] << 24 ) >>>  6 )
+//              | ( ( DECODABET[ source[ srcOffset + 1] ] << 24 ) >>> 12 );
+// Example: DkL=
+// Two ways to do the same thing. Don't know which way I like best.
+//int outBuff =   ( ( DECODABET[ source[ srcOffset     ] ] << 24 ) >>>  6 )
+//              | ( ( DECODABET[ source[ srcOffset + 1 ] ] << 24 ) >>> 12 )
+//              | ( ( DECODABET[ source[ srcOffset + 2 ] ] << 24 ) >>> 18 );
+// Example: DkLE
+// Two ways to do the same thing. Don't know which way I like best.
+//int outBuff =   ( ( DECODABET[ source[ srcOffset     ] ] << 24 ) >>>  6 )
+//              | ( ( DECODABET[ source[ srcOffset + 1 ] ] << 24 ) >>> 12 )
+//              | ( ( DECODABET[ source[ srcOffset + 2 ] ] << 24 ) >>> 18 )
+//              | ( ( DECODABET[ source[ srcOffset + 3 ] ] << 24 ) >>> 24 );
+// end decodeToBytes
+/**
+/**
+// Lots of error checking and exception throwing
+// end if
+// end if
+// end if
+// Estimate on array size
+// Upper limit on size of output
+// Keep track of where we're writing
+// Four byte buffer from source, eliminating white space
+// Keep track of four byte input buffer
+// Source array counter
+// Low seven bits (ASCII) of input
+// Special value from DECODABET
+// Loop through source
+// Only the low seven bits
+// Special value
+// White space, Equals sign, or legit Base64 character
+// Note the values such as -5 and -9 in the
+// DECODABETs at the top of the file.
+// Save non-whitespace
+// Time to decode?
+// If that was the equals sign, break out of 'for' loop
+// end if: equals sign
+// end if: quartet built
+// end if: equals sign or better
+// end if: white space, equals sign or better
+// There's a bad input character in the Base64 stream.
+// end else: 
+// each input character
+// end decode
+/**
+/**
+// end if
+// end try
+// end catch
+//</change>
+// Decode
+// Check to see if it's gzip-compressed
+// GZIP Magic Two-Byte Number: 0x8b1f (35615)
+// end while: reading input
+// No error? Get new bytes.
+// end try
+// Just return originally-decoded bytes
+// end catch
+// end finally
+// end if: gzipped
+// end if: bytes.length >= 2
+// end decode
+/**
+/**
+// Decode and gunzip if necessary
+// If no custom class loader is provided, use Java's builtin OIS.
+// end if: no loader provided
+// Else make a customized object input stream that uses
+// the provided class loader.
+// Class loader knows of this class.
+// end else: not null
+// end resolveClass
+// end ois
+// end else: no custom class loader
+// end try
+// Catch and throw in order to execute finally{}
+// end catch
+// Catch and throw in order to execute finally{}
+// end catch
+// end finally
+// end decodeObject
+/**
+// end iff
+// end try
+// Catch and throw to execute finally{} block
+// end catch: java.io.IOException
+// end finally
+// end encodeToFile
+/**
+// end try
+// Catch and throw to execute finally{} block
+// end catch: java.io.IOException
+// end finally
+// end decodeToFile
+/**
+// Set up some useful variables
+// Check for size of file
+// end if: file too big for int index
+// Open a stream
+// Read until done
+// end while
+// Save in a variable to return
+// end try
+// Catch and release to execute finally{}
+// end catch: java.io.IOException
+// end finally
+// end decodeFromFile
+/**
+// Set up some useful variables
+// Need max() for math on small files (v2.2.1)
+// Open a stream
+// Read until done
+// end while
+// Save in a variable to return
+// end try
+// Catch and release to execute finally{}
+// end catch: java.io.IOException
+// end finally
+// end encodeFromFile
+/**
+// Strict, 7-bit output.
+// end try
+// Catch and release to execute finally{}
+// end catch
+// end finally    
+// end encodeFileToFile
+/**
+// end try
+// Catch and release to execute finally{}
+// end catch
+// end finally    
+// end decodeFileToFile
+/* ********  I N N E R   C L A S S   I N P U T S T R E A M  ******** */
+/**
+// Encoding or decoding
+// Current position in the buffer
+// Small buffer holding converted data
+// Length of buffer (3 or 4)
+// Number of meaningful bytes in the buffer
+// Break lines at less than 80 characters
+// Record options used to create the stream.
+// Local copies to avoid extra method calls
+/**
+// end constructor
+/**
+// Record for later
+// end constructor
+/**
+// Do we need to get data?
+// If end of stream, b is -1.
+// out of for loop
+// end else: end of stream
+// end for: each needed input byte
+// end if: got data
+// Must be end of stream
+// end else
+// end if: encoding
+// Else decoding
+// Read four "meaningful" bytes:
+// Reads a -1 if end of stream
+// end if: end of stream
+// end for: each needed input byte
+// end if: got four characters
+// end else if: also padded correctly
+// Must have broken out from above.
+// end 
+// end else: decode
+// end else: get data
+// Got data?
+// End of relevant data?
+/*!encode &&*/ position >= numSigBytes ){
+// end if: got data
+// end if
+// This isn't important when decoding
+// but throwing an extra "if" seems
+// just as wasteful.
+// end if: end
+// This is how you "cast" a byte that's
+// intended to be unsigned.
+// end else
+// end if: position >= 0
+// Else error
+// end else
+// end read
+/**
+// Out of 'for' loop
+// Out of 'for' loop
+// end for: each byte read
+// end read
+// end inner class InputStream
+/* ********  I N N E R   C L A S S   O U T P U T S T R E A M  ******** */
+/**
+// Scratch used in a few places
+// Record for later
+// Local copies to avoid extra method calls
+/**
+// end constructor
+/**
+// end constructor
+/**
+// Encoding suspended?
+// end if: supsended
+// Encode?
+// Enough to encode.
+// end if: end of line
+// end if: enough to output
+// end if: encoding
+// Else, Decoding
+// Meaningful Base64 character?
+// Enough to output.
+// end if: enough to output
+// end if: meaningful base64 character
+// end else: not white space either
+// end else: decoding
+// end write
+/**
+// Encoding suspended?
+// end if: supsended
+// end for: each byte written
+// end write
+/**
+// end if: encoding
+// end else: decoding
+// end if: buffer partially full
+// end flush
+/** 
+// 1. Ensure that pending characters are written
+// 2. Actually close the stream
+// Base class both flushes and closes.
+// end close
+/**
+// end suspendEncoding
+/**
+// end resumeEncoding
+// end inner class OutputStream
+// end class Base64
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+// The SSL patented 3-byte Value.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+// two characters form the hex value.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/*";
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/*
+//www.gnu.org/licenses/>.
+// libphonenumber doesn't seem to be correct for Germany and Finland
+// libphonenumber seems incorrect for Russia and a few other countries with 4 digit short codes.
+//TODO: Remove push
+//return getBooleanPreference(context, FALLBACK_SMS_ALLOWED_PREF, true);
+//TODO: Remove push
+//return getBooleanPreference(context, FALLBACK_SMS_ASK_REQUIRED_PREF, false);
+//TODO: Remove push
+//return getBooleanPreference(context, FALLBACK_MMS_ENABLED_PREF, true);
+//TODO: Remove push
+//return getBooleanPreference(context, DIRECT_SMS_ALLOWED_PREF, true);
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+/**
+//noinspection unchecked
+/**
+// find next view with header and compute the offscreen push if needed
+/**
+/**
+/**
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/**
+//www.gnu.org/licenses/>.
+/*
+//creativecommons.org/licenses/publicdomain
+/**
+/*
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// *** BlockingQueue methods ***
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// *** Stack methods ***
+/**
+/*
+//creativecommons.org/licenses/publicdomain
+// BEGIN android-note
+// removed link to collections framework docs
+// changed {@link #offer(Object)} to {@link #offer} to satisfy DroidDoc
+// END android-note
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// *** Queue methods ***
+/**
+/**
+/**
+/**
+/**
+/**
+// *** Stack methods ***
+/**
+/**
+// *** Collection methods ***
+/**
+/**
+/**
+/**
+/**
+/*
+//creativecommons.org/licenses/publicdomain
+/*
+/**
+/*
+/*
+/** Doubly-linked list node class */
+/**
+/**
+/**
+/**
+/**
+/** Number of items in the deque */
+/** Maximum number of items in the deque */
+/** Main lock guarding all access */
+/** Condition for waiting takes */
+/** Condition for waiting puts */
+/**
+/**
+/**
+// Never contended, but necessary for visibility
+// Basic linking and unlinking operations, called only while holding lock
+/**
+// assert lock.isHeldByCurrentThread();
+/**
+// assert lock.isHeldByCurrentThread();
+/**
+// assert lock.isHeldByCurrentThread();
+// help GC
+/**
+// assert lock.isHeldByCurrentThread();
+// help GC
+/**
+// assert lock.isHeldByCurrentThread();
+// Don't mess with x's links.  They may still be in use by
+// an iterator.
+// BlockingDeque methods
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// BlockingQueue methods
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// In this order, in case add() throws.
+// Stack methods
+/**
+/**
+// Collection methods
+/**
+/**
+/**
+/*
+//     /**
+/**
+//      * queue.  Attempts to addAll of a queue to itself result in
+//      * {@code IllegalArgumentException}. Further, the behavior of
+//      * this operation is undefined if the specified collection is
+//      * modified while the operation is in progress.
+//      *
+//      * @param c collection containing elements to be added to this queue
+//      * @return {@code true} if this queue changed as a result of the call
+//      * @throws ClassCastException            {@inheritDoc}
+//      * @throws NullPointerException          {@inheritDoc}
+//      * @throws IllegalArgumentException      {@inheritDoc}
+//      * @throws IllegalStateException         {@inheritDoc}
+//      * @see #add(Object)
+//      */
+//     public boolean addAll(Collection<? extends E> c) {
+//         if (c == null)
+//             throw new NullPointerException();
+//         if (c == this)
+//             throw new IllegalArgumentException();
+//         final ReentrantLock lock = this.lock;
+//         lock.lock();
+//         try {
+//             boolean modified = false;
+//             for (E e : c)
+//                 if (linkLast(e))
+//                     modified = true;
+//             return modified;
+//         } finally {
+//             lock.unlock();
+//         }
+//     }
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// set to initial position
+/**
+// Chains of deleted nodes ending in null or self-links
+// are possible if multiple interior nodes are removed.
+/**
+// assert next != null;
+/** Forward iterator */
+/** Descending iterator */
+/**
+// Write out capacity and any hidden stuff
+// Write out all elements in the proper order.
+// Use trailing null as sentinel
+/**
+// Read in all elements and place in queue
+/**
+//Just bytes
+// success
+/*
+//www.gnu.org/licenses/>.
+// success

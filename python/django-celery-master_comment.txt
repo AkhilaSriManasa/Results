@@ -1,0 +1,202 @@
+﻿#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# noqa
+# -*- Python 3 -*-
+# -*- Distribution Meta -*-
+# -eof meta-':
+# Ignore dirnames that start with '.'
+# noqa
+# convert to local timezone
+# ### Periodic Tasks
+# noqa
+# ChoiceField.__init__ sets ``self.choices = choices``
+# which would override ours.
+#: The Django-Celery app instance.
+# localize something.
+# Pass the current language on to the task
+# or set the language explicitly
+# noqa
+# noqa
+# pragma: no cover
+# noqa
+# noqa
+# pragma: no cover
+# noqa
+# pragma: no cover
+# noqa
+# noqa
+# ignore stupid warnings and errors
+# noqa
+# noqa
+# TypeError added for celery#962
+# Need to close any open database connection after
+# any embedded celerybeat process forks.
+# Default backend needs to be the database backend for backward
+# compatibility.
+# Django 1.6+
+# pre multidb
+# See http://groups.google.com/group/django-users/
+#            browse_thread/thread/78200863d0c07c6d/
+# the parent process may have established these,
+# so need to close them.
+# calling db.close() on some DB connections will cause
+# the inherited DB conn to also get broken in the parent
+# process so we need to remove it without triggering any
+# network IO that close() might cause.
+# use the _ version to avoid DB_REUSE preventing the conn.close() call
+# f is returned None when app_path is a module
+# pre-Django 1.2
+# noqa
+# pragma: no cover
+# Depending on the database backend used we can experience
+# various exceptions. E.g. psycopg2 raises an exception
+# if some operation breaks the transaction, so saving
+# the task result won't be possible until we rollback
+# the transaction.
+# Pre django 1.6
+# TODO compression was enabled by mistake, we need to disable it
+# but this is a backwards incompatible change that needs planning.
+# Use UTC timestamp if USE_TZ is true, or else use local timestamp
+#1694
+#513
+# noqa
+# noqa
+# This scheduler must wake up more frequently than the
+# regular of 5 minutes because it needs to take external
+# changes to the schedule into account.
+# seconds
+# timezone sanity
+# 5 second delay for re-enable.
+# for 2to3
+# Object may not be synchronized, so only
+# change the fields we care about.
+# reset schedule
+# If MySQL is running with transaction isolation level
+# REPEATABLE-READ (default), then we won't see changes done by
+# other transactions until the current transaction is
+# committed (Issue #41).
+# not in transaction management.
+# Close the connection when it is broken
+# Need to store entry by name, because the entry may change
+# in the mean time.
+# retry later
+# limit worker timestamp write freq.
+# Expiry can be timedelta or None for never expire.
+# Some fields are only stored in the RECEIVED event,
+# so we should remove these from default values,
+# so that they are not overwritten by subsequent states.
+# -- XXX This module must not use translation as that causes
+# -- a recursive loader import!
+# Database-related exceptions.
+# noqa
+# noqa
+# noqa
+# noqa
+# naive datetimes are assumed to be in UTC.
+# then convert to the Django configured timezone.
+# Ensure built-in tasks are loaded for task_list view
+# noqa
+# no multivalue
+# :copyright: (c) 2009 - 2015 by Ask Solem.
+# :license:   BSD, see LICENSE for more details.
+# -eof meta-
+# noqa
+# noqa
+# CELERY_CACHE_BACKEND overrides the django-global(tm) backend settings.
+# noqa
+# Issue #75
+# Monkey-patch Task.on_success() method
+# monkey patch django.
+# This patch make sure that we use real threads to get the ident which
+# is going to happen if we are using gevent or eventlet.
+# -- patch taken from gunicorn
+# --settings and --pythonpath are also handled
+# by BaseCommand.handle_default_options, but that is
+# called with the resulting options parsed by optparse.
+# see http://code.djangoproject.com/changeset/13319
+# see http://code.djangoproject.com/changeset/13319.
+# -*- coding: utf-8 -*-
+# Uncomment the admin/doc line below and add 'django.contrib.admindocs'
+# to INSTALLED_APPS to enable admin documentation:
+#the-test-client
+# We have no content, so the number of results if we search on
+# something should be zero.
+# coding: utf-8
+# Execute cached branch.
+# Have to avoid save() because it applies the auto_now=True.
+# Have to avoid save() because it applies the auto_now=True.
+# update schedule
+# Get the entry for m2
+# Increment the entry (but make sure it doesn't sync)
+# Fetch the raw object from db, change the args
+# and save the changes.
+# get_schedule should now see the schedule has changed.
+# and also sync the dirty objects.
+# assert not raises
+# 2016-06-01T15:00:00Z
+# Cleanup leftovers from previous tests
+# Django 1.10+
+# On Py2.4 repr(exc) includes the object id, so comparing
+# texts is pointless when the id the "same" KeyError does not match.
+# pre Django 1.5
+# -*- coding: utf-8 -*-
+# checks to make sure attr exists
+# noqa
+# coding: utf-8
+# noqa
+# is serialized properly.
+# is serialized properly.
+# bug in 3.1.10 means result did not clear cache after forget.
+# Have to avoid save() because it applies the auto_now=True.
+# -*- coding: utf-8 -*-
+# If your extensions are in another directory, add it here. If the directory
+# is relative to the documentation root, use os.path.abspath to make it
+# absolute, like shown here.
+# noqa
+# noqa
+# General configuration
+# ---------------------
+# Add any paths that contain templates here, relative to this directory.
+# The suffix of source filenames.
+# The master toctree document.
+# General information about the project.
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+# The full version, including alpha/beta/rc tags.
+# If true, '()' will be appended to :func: etc. cross-reference text.
+# The name of the Pygments (syntax highlighting) style to use.
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# If false, no module index is generated.
+# If false, no index is generated.
+# ## Issuetracker
+#(\d+)'
+# Django settings for docs project.
+# import source code dir
+# special
+# Skip always-skip stuff
+# skip when the next line is a title
+#!/usr/bin/even/python
+# Find the first previous line with text to append "::" to it.
+# non-destructive
+#!/usr/bin/env python
+# Django settings for testproj project.
+# import source code dir
+# noqa
+# ('Your Name', 'your_email@domain.com'),
+# Example:
+# (r'^tests/', include('tests.foo.urls')),
+# Uncomment the admin/doc line below and add 'django.contrib.admindocs'
+# to INSTALLED_APPS to enable admin documentation:
+# (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+# Uncomment the next line to enable the admin:
+# (r'^admin/(.*)', admin.site.root),
+# noqa
+# Create your views here.
+# noqa
+# Create your models here.
+# Create your views here.

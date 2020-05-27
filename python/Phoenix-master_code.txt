@@ -1,0 +1,433 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\samples\embedded\embedded.cpp
+//----------------------------------------------------------------------
+// Name:        embedded.cpp
+// Purpose:     To serve as an example of how to use wxPython from
+//              within a C++ wxWindows program.
+//
+// Author:      Robin Dunn
+//
+// Created:     1-May-2002
+// RCS-ID:      $Id$
+// Copyright:   (c) 2002 by Total Control Software
+// Licence:     wxWindows license
+//----------------------------------------------------------------------
+// For compilers that support precompilation, includes "wx/wx.h".
+// Import Python and wxPython headers
+//----------------------------------------------------------------------
+// Class definitions
+//----------------------------------------------------------------------
+// MyApp methods
+// don't start the app if we can't initialize wxPython.
+// Initialize Python
+// Load the wxPython core API.  Imports the wx._core_ module and sets a
+// local pointer to a function table located there.  The pointer is used
+// internally by the rest of the API functions.
+// Save the current Python thread state and release the
+// Global Interpreter Lock.
+// Restore the thread state and tell Python to cleanup after itself.
+// wxPython will do its own cleanup as part of that process.  This is done
+// in OnExit instead of ~MyApp because OnExit is only called if OnInit is
+// successful.
+//----------------------------------------------------------------------
+//RedirectStdio();
+// Make some child windows from C++
+// And get a panel from Python
+//----------------------------------------------------------------------
+// This is where the fun begins...
+// For simple Python code that doesn't have to interact with the
+// C++ code in any way, you can execute it with PyRun_SimpleString.
+// First, whenever you do anything with Python objects or code, you
+// *MUST* aquire the Global Interpreter Lock and block other
+// Python threads from running.
+// Execute the code in the __main__ module
+// Finally, release the GIL and let other Python threads run.
+// This is a helpful little tidbit to help debugging and such.  It
+// redirects Python's stdout and stderr to a window that will popup
+// only on demand when something is printed, like a traceback.
+// More complex embedded situations will require passing C++ objects to
+// Python and/or returning objects from Python to be used in C++.  This
+// sample shows one way to do it.  NOTE: The above code could just have
+// easily come from a file, or the whole thing could be in the Python
+// module that is imported and manipulated directly in this C++ code.  See
+// the Python API for more details.
+// As always, first grab the GIL
+// Now make a dictionary to serve as the global namespace when the code is
+// executed.  Put a reference to the builtins module in it.  (Yes, the
+// names are supposed to be different, I don't know why...)
+// Execute the code to make the makeWindow function
+// Was there an exception?
+// Now there should be an object named 'makeWindow' in the dictionary that
+// we can grab a pointer to:
+// Now build an argument tuple and call the Python function.  Notice the
+// use of another wxPython API to take a wxWindows object and build a
+// wxPython object that wraps it.
+// Was there an exception?
+// Otherwise, get the returned window out of Python-land and
+// into C++-ville...
+// Release the python objects we still have
+// Finally, after all Python stuff is done, release the GIL
+//----------------------------------------------------------------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\sip\siplib\bool.cpp
+// This contains all the C++ code that is needed by the sip module.
+//
+// Copyright (c) 2015 Riverbank Computing Limited <info@riverbankcomputing.com>
+//
+// This file is part of SIP.
+//
+// This copy of SIP is licensed for use under the terms of the SIP License
+// Agreement.  See the file LICENSE for more details.
+//
+// This copy of SIP may also used under the terms of the GNU General Public
+// License v2 or v3 as published by the Free Software Foundation which can be
+// found in the files LICENSE-GPL2 and LICENSE-GPL3 included in this package.
+//
+// SIP is supplied WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// Set a C++ bool for the main C implementation of the module.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\app_ex.cpp
+// If building for Windows...
+//----------------------------------------------------------------------
+// This gets run when the DLL is loaded.  We just need to save the
+// instance handle.
+//----------------------------------------------------------------------
+// handle to DLL module
+// reason for calling function
+// reserved
+// If wxPython is embedded in another wxWidgets app then
+// the instance has already been set.
+// __WXMSW__
+//----------------------------------------------------------------------
+// Classes for implementing the wxp main application shell.
+//----------------------------------------------------------------------
+//m_callFilterEvent = false;
+// Implementing OnInit is optional for wxPython apps
+// implementation only
+//bool m_callFilterEvent;
+// Exception object raised for wxASSERT failures
+// ignore it?
+// turn it into a Python exception?
+// set the exception
+// Now when control returns to whatever API wrapper was called from
+// Python it should detect that an exception is set and will return
+// NULL, signalling the exception to Python.
+// Send it to the normal log destination, but only if
+// not _DIALOG because it will call this too
+// do the normal wx assert dialog?
+// Only initialize wxWidgets once
+// Copy the values in Python's sys.argv list to a C array of char* to
+// be passed to the wxEntryStart function below.
+// borrowed reference
+// if there isn't anything in sys.argv[0] then set it to the python executable
+// Initialize wxWidgets
+// wxApp takes ownership of the argv array, don't delete it here
+// It's now ok to generate exceptions for assertion errors.
+// Call the Python wxApp's OnPreInit and OnInit functions if they exist
+// Only use CallOnInit the first time, otherwise it will block on [NSApp run] in wxOSX_Cocoa;
+//#ifdef __WXOSX_COCOA__
+//    OSXSetInitWasCalled(true);  TODO: consider adding this method to wxApp
+//#endif
+// Function to test if the Display (or whatever is the platform equivallent)
+// can be connected to.
+// This is adapted from Python's Mac/Modules/MacOS.c in the
+// MacOS_WMAvailable function.
+/*
+/* On 10.1 CGMainDisplayID() isn't available, and
+// Also foreground the application on the first call as a side-effect.
+// 
+// TODO: These APIs are deprecated, and will likely be gone in the 10.15 SDK
+//
+// [NSRunningApplication activateIgnoringOtherApps: YES]  ??
+// 
+// TODO...
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\bitmap_ex.cpp
+//--------------------------------------------------------------------------
+// Name:        src/bitmap_ex.h
+// Purpose:     Helper functions and etc. for copying bitmap data to/from
+//              buffer objects.  This file is included in etg/bitmap.py and
+//              used in the wxBitmap wrapper.
+//
+// Author:      Robin Dunn
+//
+// Created:     27-Apr-2012
+// Copyright:   (c) 2012-2018 by Total Control Software
+// Licence:     wxWindows license
+//--------------------------------------------------------------------------
+// TODO: Switch these APIs to use the new wxPyBuffer class
+// A simple sequence of RGB bytes
+// A simple sequence of RGBA bytes
+// A sequence of 32-bit values in native endian order,
+// where the alpha is in the upper 8 bits, then red, then
+// green, then blue.  The stride is the distance in bytes
+// from the beginning of one row of the image data to the
+// beginning of the next row.  This may not be the same as
+// width*4 if alignment or platform specific optimizations
+// have been utilized.
+// NOTE: This is normally used with Cairo, which seems to
+// already have the values premultiplied.  Should we have
+// a way to optionally do it anyway?
+// Some helper macros used below to help declutter the code
+// images loaded from a file may not have set the depth, at least on Mac...
+// A simple sequence of RGB bytes
+// Source has alpha, but we won't be using it because the
+// destination buffer doesn't
+// A simple sequence of RGBA bytes
+// A sequence of 32-bit values in native endian order,
+// where the alpha is in the upper 8 bits, then red, then
+// green, then blue.  The stride is the distance in bytes
+// from the beginning of one row of the image data to the
+// beginning of the next row.  This may not be the same as
+// width*4 if alignment or platform specific optimizations
+// have been utilized.
+// NOTE: This is normally used with Cairo, which seems to
+// already have the values premultiplied.  Should we have
+// a way to optionally do it anyway?
+// if (!useAlpha /*depth == 24*/)
+/*depth == 24*/)
+//--------------------------------------------------------------------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\core_ex.cpp
+// If building for Windows...
+//----------------------------------------------------------------------
+// Use an ActivationContext to ensure that the new (themed) version of
+// the comctl32 DLL is loaded.
+//----------------------------------------------------------------------
+// Note that the use of the ISOLATION_AWARE_ENABLED define replaces the
+// activation context APIs with wrappers that dynamically load the API
+// pointers from the kernel32 DLL so we don't have to do that ourselves.
+// Using ISOLATION_AWARE_ENABLED also causes the manifest resource to be put
+// in slot #2 as expected for DLLs. (See wx/msw/wx.rc)
+// ISOLATION_AWARE_ENABLED
+// __WXMSW__
+//#ifdef __WXMSW__
+////     wxCrtSetDbgFlag(_CRTDBG_LEAK_CHECK_DF
+////                     | _CRTDBG_CHECK_ALWAYS_DF
+////                     | _CRTDBG_DELAY_FREE_MEM_DF
+////         );
+//#endif
+//
+//#ifdef WXP_WITH_THREAD
+//#if wxPyUSE_GIL_STATE
+//    PyEval_InitThreads();
+//#else
+//    PyEval_InitThreads();
+//    wxPyTStates = new wxPyThreadStateArray;
+//    wxPyTMutex = new wxMutex;
+//
+//    // Save the current (main) thread state in our array
+//    PyThreadState* tstate = wxPyBeginAllowThreads();
+//    wxPyEndAllowThreads(tstate);
+//#endif
+//#endif
+// Ensure that the build options in the DLL (or whatever) match this build
+// Exception object raised for wxASSERT failures
+// Create an exception object to use for wxASSERTions
+// An alias that should be deprecated sometime
+// Create an exception object to use when the app object hasn't been created yet
+// TODO: Find some magic way to deprecate wx.Platform such that it raises
+// a warning when used...  Maybe a class that returns wx.Port for any __getattr__?
+// Make a tuple of strings that gives more info about the platform and build.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\dc_ex.cpp
+//--------------------------------------------------------------------------
+// Name:        src/dc_ex.h
+// Purpose:     Functions that can quickly draw lists of items on a DC
+//
+// Author:      Robin Dunn
+//
+// Created:     18-Aug-2012
+// Copyright:   (c) 2012-2018 by Total Control Software
+// Licence:     wxWindows license
+//--------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+// Use a new pen?
+// Use a new brush?
+// Get the Coordinates
+// call the drawOp
+// end of main for loop
+//---------------------------------------------------------------------------
+// Use a new string ?
+// Use a new foreground ?
+// Use a new background ?
+// Get the point coordinates
+// Now draw the text
+//---------------------------------------------------------------------------
+// get the x value
+// get the y value
+// The length of the sequence is returned in count.
+// Get an item: try fast way first.
+// Convert o to wxPoint.
+// Clean up.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\event_ex.cpp
+// #define wxPy_PRECALLINIT     "_preCallInit"
+// #define wxPy_POSTCALLCLEANUP "_postCallCleanup"
+// This function is used for all events destined for Python event handlers.
+// Call the event handler, passing the event object
+// steals ref to arg
+// result is ignored, but we still need to decref it
+// Just in case...
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\pseudodc.cpp
+/////////////////////////////////////////////////////////////////////////////
+// Name:        src/pseudodc.cpp
+// Purpose:     Implementation of the wxPseudoDC classes
+// Author:      Paul Lanier
+// Modified by: Robin Dunn
+//
+// Created:     25-May-2006
+// Copyright:   (c) 2006-2018 Total Control Software
+// Licence:     wxWindows licence
+/////////////////////////////////////////////////////////////////////////////
+// For compilers that support precompilation, includes "wx.h".
+//include "wx/wxprec.h"
+//#undef DEBUG
+// wxList based class definitions
+//----------------------------------------------------------------------------
+// Helper functions used for drawing greyed out versions of objects
+//----------------------------------------------------------------------------
+// ============================================================================
+// various pdcOp class implementation methods
+// ============================================================================
+// ----------------------------------------------------------------------------
+// pdcDrawPolyPolygonOp
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// pdcDrawLinesOp
+// ----------------------------------------------------------------------------
+// The first * gives us a wxPoint ptr, second * dereferences that ptr
+// ----------------------------------------------------------------------------
+// pdcDrawPolygonOp
+// ----------------------------------------------------------------------------
+// The first * gives us a wxPoint ptr, second * dereferences that ptr
+// ----------------------------------------------------------------------------
+// pdcDrawSplineOp
+// ----------------------------------------------------------------------------
+// The first * gives us a wxPoint ptr, second * dereferences that ptr
+// wxUSE_SPLINES
+// ============================================================================
+// pdcObject implementation
+// ============================================================================
+// ----------------------------------------------------------------------------
+// DrawToDC - play back the op list to the DC
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// Translate - translate all the operations by some dx,dy
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// SetGreyedOut - set the greyout member and cache grey versions of everything
+// if greyout is true
+// ----------------------------------------------------------------------------
+// ============================================================================
+// wxPseudoDC implementation
+// ============================================================================
+// ----------------------------------------------------------------------------
+// Destructor
+// ----------------------------------------------------------------------------
+// delete all the nodes in the list
+// ----------------------------------------------------------------------------
+// ClearAll - remove all nodes from list
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// GetLen - return the number of operations in the current op list
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// FindObject - find and return an object node by id.  If node doesn't exist
+//               and create is true then create one and return it.  Otherwise
+//               return NULL.
+// ----------------------------------------------------------------------------
+// see if last operation was for same id
+//~ if (m_lastObject && m_lastObject->GetId() == id)
+//~ return m_lastObject;
+// if not then search for it
+//not found
+//found
+// ----------------------------------------------------------------------------
+// AddToList - Add a node to the list at the end (preserve draw order)
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// ClearID - remove all the operations associated with a single ID
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// RemoveID - Remove the object node (and all operations) associated with an id
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// SetIdBounds - Set the bounding rect for a given id
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// GetIdBounds - Get the bounding rect for a given id
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// TranslateId - Translate all the operations of a single id
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// DrawIdToDC - Draw a specific id to the dc passed in
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// SetIdGreyedOut - Set the greyedout member of id
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// GetIdGreyedOut - Get the greyedout member of id
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// FindObjectsByBBox - Return a list of all the ids whose bounding boxes
+//                     contain (x,y)
+// ----------------------------------------------------------------------------
+//wxPyBlock_t blocked = wxPyBeginBlockThreads();
+//wxPyEndBlockThreads(blocked);
+// ----------------------------------------------------------------------------
+// FindObjects - Return a list of all the ids that draw to (x,y)
+// ----------------------------------------------------------------------------
+//wxPyBlock_t blocked = wxPyBeginBlockThreads();
+// special case radius = 0
+// setup the memdc for rendering
+// start clean
+// draw the object
+// clear and update rgn2
+// create bitmap with circle for masking
+// now setup a memdc for rendering our object
+// set the origin so (x,y) is in the bmp center
+// a region will be used to see if the result is empty
+// start clean
+//memdc.Clear();
+// draw the object
+// remove background color
+// clear and update rgn2
+//rgn2.Intersect(rgn);
+//wxPyEndBlockThreads(blocked);
+// ----------------------------------------------------------------------------
+// DrawToDCClipped - play back the op list to the DC but clip any objects
+//                   known to be not in rect.  This is a coarse level of
+//                   clipping to speed things up when lots of objects are off
+//                   screen and doesn't affect the dc level clipping
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// DrawToDC - play back the op list to the DC
+// ----------------------------------------------------------------------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\stream_input.cpp
+//--------------------------------------------------------------------------
+// This class can wrap a Python file-like object and allow it to be used
+// as a wxInputStream.
+// Make sure there is at least a read method
+// implement base class virtuals
+// cast off const
+// strings only, not unicode...
+// wxFileOffset is a 64-bit value...
+//--------------------------------------------------------------------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\stream_output.cpp
+//--------------------------------------------------------------------------
+// This class can wrap a Python file-like object and allow it to be used
+// as a wxInputStream.
+// Make sure there is at least a write method
+// implement base class virtuals
+// cast off const
+// wxFileOffset is a 64-bit value...
+//--------------------------------------------------------------------------
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/Phoenix-master\Phoenix-master\src\window_ex.cpp
+// Unlike GDK_WINDOW_XWINDOW, GDK_WINDOW_XID can't handle a NULL, so check 1st

@@ -1,0 +1,568 @@
+﻿#!/usr/bin/env python
+# SEE NOTE BELOW (*)
+# (*) Please direct queries to the discussion group:
+#     https://groups.google.com/forum/#!forum/mkdocs
+# Register all of the event methods defined for this Plugin.
+# keep item if method returned `None`
+# MkDocs provided static templates are always included
+# Build self.dirs from various sources in order of precedence
+# Include templates provided directly by MkDocs (outside any theme)
+# Handle remaining user configs. Override theme configs (if set)
+#!/usr/bin/env python
+# For acceptable version formats, see https://www.python.org/dev/peps/pep-0440/
+#!/usr/bin/env python
+# TODO: Remove this check at some point in the future.
+# (also remove flake8's 'ignore E402' comments below)
+# pragma: no cover
+# noqa: E402
+# noqa: E402
+# noqa: E402
+# noqa: E402
+# noqa: E402
+# Disable the warning that Click displays (as of Click version 5.0) when users
+# use unicode_literals in Python 2.
+# See http://click.pocoo.org/dev/python3/#unicode-literals for more details.
+# Don't override config value if user did not specify --strict flag
+# Conveniently, load_config drops None values
+# As with --strict, set the default to None so that this doesn't incorrectly
+# override the config file
+# pragma: no cover
+# Avoid ugly, unhelpful traceback
+# pragma: no cover
+# Avoid ugly, unhelpful traceback
+# pragma: no cover
+# Avoid ugly, unhelpful traceback
+# pragma: no cover
+# Support SOURCE_DATE_EPOCH environment variable for "reproducible" builds.
+# See https://reproducible-builds.org/specs/source-date-epoch/
+# Run `pre_template` plugin events.
+# Force absolute URLs in the nav of error pages and account for the
+# possability that the docs root might be different than the server root.
+# See https://github.com/mkdocs/mkdocs/issues/77.
+# However, if site_url is not set, assume the docs root and server root
+# are the same. See https://github.com/mkdocs/mkdocs/issues/1598.
+# Run `template_context` plugin events.
+# Run `post_template` plugin events.
+# When --dirty is used, only read the page if the file has been modified since the
+# previous build of the output.
+# Run the `pre_page` plugin event
+# Run `page_markdown` plugin events.
+# Run `page_content` plugin events.
+# When --dirty is used, only build the page if the file has been modified since the
+# previous build of the output.
+# Activate page. Signals to theme that this is the current page.
+# Allow 'template:' override in md source files.
+# Run `page_context` plugin events.
+# Render the template.
+# Run `post_page` plugin events.
+# Write the output file.
+# Deactivate page
+# Run `config` plugin events.
+# Run `pre_build` plugin events.
+# pragma: no cover
+# Warn user about problems that may occur with --dirty option
+# pragma: no cover
+# First gather all data from all files/pages to ensure all data is consistent across all pages.
+# Run `files` plugin events.
+# Run `nav` plugin events.
+# Run `env` plugin events.
+# Start writing files to site_dir now that all data is gathered. Note that order matters. Files
+# with lower precedence get written first so that files with higher precedence can overwrite them.
+# Run `post_build` plugin events.
+# No CNAME found.  We will use the origin URL to determine the GitHub
+# pages location.
+# Does this repository have a CNAME set for GitHub pages?
+# This GitHub pages repository has a CNAME configured.
+# This could be a GitHub Enterprise deployment.
+# Welcome to MkDocs
+## Commands
+## Project layout
+# The configuration file.
+# The documentation homepage.
+# Other markdown pages, images and other files.
+# Can't assign a policy which doesn't exist.
+# We are importing here for anyone that has issues with livereload. Even if
+# this fails, the --no-livereload alternative should still work.
+# replace livereload handler
+# Watch the documentation files, the config file and the theme files.
+# Run `serve` plugin events.
+# Importing here to seperate the code paths from the --livereload
+# alternative.
+# Create a temporary build directory, and set some options to serve it
+# PY2 returns a byte string by default. The Unicode prefix ensures a Unicode
+# string is returned. And it makes MkDocs temp dirs easier to identify.
+# Override a few config settings after validation
+# Perform the initial build
+# Ensure config_file_path is a Unicode string
+# Assume config_file_path is encoded with the file system encoding.
+# Only run the post validation steps if there are no failures, warnings
+# are okay.
+# MkDocs knows and understands ConfigurationErrors
+# Default to the standard config filename.
+# If closed file descriptor, get file path to reopen later.
+# If it is a string, we can assume it is a path and attempt to open it.
+# Ensure file descriptor is at begining
+# Filter None values from the options. This usually happens with optional
+# parameters from Click.
+# Initialise the config with the default schema .
+# First load the config file
+# Then load the options to overwrite anything in the config.
+# ensure no mutable values are assigned
+# We can't move it for the user
+# derive repo_name from repo_url if unset
+# derive edit_uri from repo_name if unset
+# ensure a well-formed edit_uri
+#')) \
+# Validate that the dir is not the parent dir of the config file.
+# Validate that the docs_dir and site_dir don't contain the
+# other as this will lead to copying back and forth on each
+# and eventually make a deep nested mess.
+# Ensure custom_dir is an absolute path
+# TODO: remove this when `pages` config setting is fully deprecated.
+# copy `pages` config to new 'nav' config setting
+# Confirm that Markdown considers extensions to be valid
+# Users may define a null (None) config
+# NOTE: The order here is important. During validation some config options
+# depend on others. So, if config option A depends on B, then A should be
+# listed higher in the schema.
+# Once we drop Python 2.6 support, this could be an OrderedDict, however, it
+# isn't really needed either as we always sequentially process the schema other
+# than at initialisation when we grab the full set of keys for convenience.
+# Reserved for internal use, stores the mkdocs.yml config file.
+# The title to use for the documentation
+# Defines the structure of the navigation.
+# TODO: remove this when the `pages` config setting is fully deprecated.
+# The full URL to where the documentation will be hosted
+# A description for the documentation project that will be added to the
+# HTML meta tags.
+# The name of the author to add to the HTML meta tags
+# The MkDocs theme for the documentation.
+# The directory containing the documentation markdown.
+# The directory where the site will be built to
+# A copyright notice to add to the footer of documentation.
+# set of values for Google analytics containing the account IO and domain,
+# this should look like, ['UA-27795084-5', 'mkdocs.org']
+# The address on which to serve the live reloading docs server.
+# If `True`, use `<page_name>/index.hmtl` style files with hyperlinks to
+# the directory.If `False`, use `<page_name>.html style file with
+# hyperlinks to the file.
+# True generates nicer URLs, but False is useful if browsing the output on
+# a filesystem.
+# Specify a link to the project source repo to be included
+# in the documentation pages.
+# A name to use for the link to the project source repo.
+# Default, If repo_url is unset then None, otherwise
+# "GitHub", "Bitbucket" or "GitLab" for known url or Hostname
+# for unknown urls.
+# Specify a URI to the docs dir in the project source repo, relative to the
+# repo_url. When set, a link directly to the page in the source repo will
+# be added to the generated HTML. If repo_url is not set also, this option
+# is ignored.
+# Specify which css or javascript files from the docs directory should be
+# additionally included in the site.
+# Similar to the above, but each template (HTML or XML) will be build with
+# Jinja2 and the global context.
+# PyMarkdown extension names.
+# PyMarkdown Extension Configs. For internal use only.
+# enabling strict mode causes MkDocs to stop the build when a problem is
+# encountered rather than display an error.
+# the remote branch to commit to when using gh-deploy
+# the remote name to push to when using gh-deploy
+# extra is a mapping/dictionary of data that is passed to the template.
+# This allows template authors to require extra configuration that not
+# relevant to all themes and doesn't need to be explicitly supported by
+# MkDocs itself. A good example here would be including the current
+# project version.
+# a list of plugins. Each item may contain a string name or a key value pair.
+# A key value pair should be the string name (as the key) and a dict of config
+# options (as the value).
+# Create the content parser and feed in the HTML for the
+# full page. This handles all the parsing and prepares
+# us to iterate through it.
+# Get the absolute URL for the page, this is then
+# prepended to the urls of the sections
+# Create an entry for the full page.
+# We only care about the opening tag for headings.
+# We are dealing with a new header, create a new section
+# for it and assign the ID if it has one.
+# We only care about the opening tag for headings.
+# This means we have some content at the start of the
+# HTML before we reach a heading tag. We don't actually
+# care about that content as it will be added to the
+# overall page entry in the search. So just skip it.
+# If this is a header, then the data is the title.
+# Otherwise it is content of something under that header
+# section.
+# Include language support files in output. Copy them directly
+# so that only the needed files are included.
+# Theme files do not override docs_dir files
+# Find the first theme dir which contains path
+# index.md or README.md => index.html
+# foo.md => foo/index.html
+# foo.md => foo.html
+# Skip any excluded directories
+# Skip any excluded files
+# Skip README.md if an index file also exists in dir
+# Items ending in '/' apply only to directories.
+# Items starting with '/' apply to the whole path.
+# In any other cases just the basename is used.
+# Nested List with full navigation of Sections, Pages, and Links.
+# Flat List of subset of Pages in nav, in order.
+# These should never change but are included for consistency with sections and pages.
+# Get only the pages from the navigation, ignoring any sections and links.
+# Include next, previous and parent links.
+# Any documentation files not found in the nav should still have an associated page.
+# However, these page objects are only accessable from File instances as `file.page`.
+# Navigation attributes
+# Support SOURCE_DATE_EPOCH environment variable for "reproducible" builds.
+# See https://reproducible-builds.org/specs/source-date-epoch/
+# Placeholders to be filled in later in the build process.
+# Capitalize if the filename was all lowercase, otherwise leave it as-is.
+# Ignore URLs unless they are a relative link to a source file.
+# AMP_SUBSTITUTE is used internally by Markdown only for email.
+# No '.' in the last part of a path indicates path does not point to a file.
+# Determine the filepath of the target.
+# Validate that the target exists in files collection.
+# Prior to Python3.4 no convert_charrefs keyword existed.
+# However, in Python3.5 the default was changed to True.
+# We need the False behavior in all versions but can only
+# set it if it exists.
+# pragma: no cover
+#" + ref)
+# Add the item to its parent if required.  If it is a topmost
+# item then instead append it to our return value.
+# If this item has children, store it as the current parent
+# For the table of contents, always mark the first element as active
+# Point to an actual dir to avoid a 'does not exist' error on validation.
+#!/usr/bin/env python
+# Fake page.read_source()
+# Test build.get_context
+# Test build._build_theme_template
+# Test build._build_extra_template
+# Test build._populate_page
+# Welcome to MkDocs'))
+# Content is empty as file read was skipped
+# Test build._build_page
+# Fake populate page
+# TODO: fix this. It seems that jinja2 chokes on the mock object. Not sure how to resolve.
+# @tempdir()
+# @mock.patch('jinja2.environment.Template')
+# def test_build_page_empty(self, site_dir, mock_template):
+#     mock_template.render = mock.Mock(return_value='')
+#     cfg = load_config(site_dir=site_dir, nav=['index.md'], plugins=[])
+#     files = Files([File('index.md', cfg['docs_dir'], cfg['site_dir'], cfg['use_directory_urls'])])
+#     nav = get_navigation(files, cfg)
+#     page = files.documentation_pages()[0].page
+#     # Fake populate page
+#     page.title = ''
+#     page.markdown = ''
+#     page.content = ''
+#     with self.assertLogs('mkdocs', level='INFO') as cm:
+#         build._build_page(page, cfg, files, nav, cfg['theme'].get_env())
+#     self.assertEqual(
+#         cm.output,
+#         ["INFO:mkdocs.commands.build:Page skipped: 'index.md'. Generated empty output."]
+#     )
+#     self.assert_mock_called_once(mock_template.render)
+#     self.assertPathNotFile(site_dir, 'index.html')
+# Fake populate page
+# Fake populate page
+# Fake populate page
+# Fake populate page
+# Test build.build
+# Verify that only non-empty md file (coverted to html), static HTML file and image are copied.
+# Verify only theme media are copied, not templates or Python files.
+# Test build.site_directory_contains_stale_files
+#!/usr/bin/env python
+# MkDocs Integration tests
+#!/usr/bin/env python
+#!/usr/bin/env python
+# Default is ignored
+# Default is used.
+# should be a list
+#!/usr/bin/env python
+# Heading 1
+## Heading 2
+### Heading 3
+#heading-1")
+#heading-2")
+#heading-3")
+# Heading 1
+## Heading 2
+### Heading 3
+# Fake page.read_source() and page.render()
+#heading-1".format(loc))
+#heading-2".format(loc))
+#heading-3".format(loc))
+# See https://stackoverflow.com/a/36501078/866026
+# See https://stackoverflow.com/a/36501078/866026
+# See https://stackoverflow.com/a/36501078/866026
+# See https://stackoverflow.com/a/36501078/866026
+# See https://stackoverflow.com/a/36501078/866026
+# See https://stackoverflow.com/a/36501078/866026
+# load_config will always close the file
+# str does not include byte strings so validation fails
+# The parent dir is not the same on every system, so use the actual dir name
+#!/usr/bin/env python
+# default theme
+# builtin theme
+# builtin as complex
+# custom only as complex
+# builtin and custom as complex
+# user defined variables
+# TODO: remove this when pages config setting is fully deprecated.
+# TODO: remove this when pages config setting is fully deprecated.
+# Same as the default schema, but don't verify the docs_dir exists.
+# Different filename
+# Different src_path
+# Different URL
+# Ensure theme file does not override docs_dir file
+# Root level file
+# Nested file
+# Wildcard
+# Root level dir
+# Nested dir
+# Files that look like dirs (no extension). Note that `is_dir` is `False`.
+# img.jpg relative to .
+# img.jpg relative to foo/
+# img.jpg relative to foo/bar/
+# img.jpg relative to foo/bar/baz/
+# img.jpg relative to foo
+# img.jpg relative to foo/bar
+# img.jpg relative to foo/bar/baz
+# foo/img.jpg relative to .
+# foo/img.jpg relative to foo/
+# foo/img.jpg relative to foo/bar/
+# foo/img.jpg relative to foo/bar/baz/
+# foo/img.jpg relative to foo
+# foo/img.jpg relative to foo/bar
+# foo/img.jpg relative to foo/bar/baz
+# . relative to .
+# . relative to foo/
+# . relative to foo/bar/
+# . relative to foo/bar/baz/
+# . relative to foo
+# . relative to foo/bar
+# . relative to foo/bar/baz
+# file relative to .
+# file relative to foo/
+# file relative to foo/bar/
+# file relative to foo/bar/baz/
+# file relative to foo
+# file relative to foo/bar
+# file relative to foo/bar/baz
+# img.jpg relative to .
+# img.jpg relative to foo/
+# img.jpg relative to foo/bar/
+# img.jpg relative to foo/bar/baz/
+# img.jpg relative to foo.html
+# img.jpg relative to foo/bar.html
+# img.jpg relative to foo/bar/baz.html
+# foo/img.jpg relative to .
+# foo/img.jpg relative to foo/
+# foo/img.jpg relative to foo/bar/
+# foo/img.jpg relative to foo/bar/baz/
+# foo/img.jpg relative to foo.html
+# foo/img.jpg relative to foo/bar.html
+# foo/img.jpg relative to foo/bar/baz.html
+# index.html relative to .
+# index.html relative to foo/
+# index.html relative to foo/bar/
+# index.html relative to foo/bar/baz/
+# index.html relative to foo.html
+# index.html relative to foo/bar.html
+# index.html relative to foo/bar/baz.html
+# file.html relative to .
+# file.html relative to foo/
+# file.html relative to foo/bar/
+# file.html relative to foo/bar/baz/
+# file.html relative to foo.html
+# file.html relative to foo/bar.html
+# file.html relative to foo/bar/baz.html
+#!/usr/bin/env python
+# Confirm nothing is active
+# Activate
+# Confirm ancestors are activated
+# Confirm non-ancestors are not activated
+# Deactivate
+# Confirm ancestors are deactivated
+# non-homepage at nav root level; see #1919.
+# non-homepage at nav root level; see #1919.
+# Welcome to MkDocs\n'))
+# Welcome to MkDocs\n'))
+# Welcome to MkDocs\n'))
+## Test'))
+# Different Title
+# Different File
+# An UTF-8 encoded file with a BOM'
+# We don't use mkdocs.tests.base.tempdir decorator here due to uniqueness of this test.
+# Create an UTF-8 Encoded file with BOM (as Micorsoft editors do). See #1186
+# Now read the file.
+# Ensure the BOM (`\ufeff`) is removed
+#edit/master'
+#edit/master/'
+# Set to blank value
+# Nothing defined
+#edit/master/testing.md',
+#edit/master/testing.md',
+#edit/master'
+#edit/master/'
+#edit/master/sub1/non-index.md',
+#edit/master/sub1/non-index.md'
+#edit/master'
+#edit/master/'
+#edit/master/sub1/non-index.md',
+#edit/master/sub1/non-index.md'
+#welcome-to-mkdocs
+#commands
+#project-layout
+# No trailing /
+# No trailing /
+# No trailing /
+#hash)'))
+#hash">link</a></p>'
+#hash)'))
+#hash">link</a></p>'
+#hash)'))
+#hash">link</a></p>'
+#hash)'))
+#hash">link</a></p>'
+# no opening ./
+# Markdown's default behavior is to obscure email addresses by entity-encoding them.
+# The following is equivalent to: '<p><a href="mailto:mail@example.com">mail@example.com</a></p>'
+#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#105;&#108;&#64;&#101;'
+#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#109;&#97;&#105;&#108;&#64;'
+#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a></p>'
+#!/usr/bin/env python
+#foo">Heading 1</a></li>
+#bar">Heading 2</a></li>
+#foo
+#bar
+# Heading 1
+## Heading 2
+### Heading 3
+#heading-1
+#heading-2
+#heading-3
+# Heading 1
+## <code>Heading</code> 2
+## Heading 3
+#heading-1
+#heading-2
+#heading-3
+# Heading 1
+# Heading 2
+# Heading 3
+#heading-1
+#heading-2
+#heading-3
+## Heading 1
+## Heading 2
+## Heading 3
+#heading-1
+#heading-2
+#heading-3
+# Heading 1
+## Heading 2
+# Heading 3
+### Heading 4
+### Heading 5
+#heading-1
+#heading-2
+#heading-3
+#heading-4
+#heading-5
+# Heading 1
+## Heading 2
+# Heading 3
+### Heading 4
+### <a>Heading 5</a>
+#heading-1
+#heading-2
+#heading-3
+#heading-4
+#heading-5
+# Heading 1
+## Heading 2
+# Heading 3
+### Heading 4
+### <a href="/">Heading 5</a>
+#heading-1
+#heading-2
+#heading-3
+#heading-4
+#heading-5
+# Heading & 1
+## Heading > 2
+### Heading < 3
+#heading-1
+#heading-2
+#heading-3
+# &#64;Header'
+#64;Header - #header'
+#foo">Header 2</a></li>
+#foo'
+# Heading 1
+## Heading 1.1
+### Heading 1.1.1
+### Heading 1.1.2
+## Heading 1.2
+#!/usr/bin/env python
+#!/usr/bin/env python
+#some_id': [
+#some_id',
+#some_id',
+#some_id'
+#some_id': [
+#some_id',
+#some_id',
+#some_id'
+# ensure src filename is appended
+# ensure missing dirs are created
+# Set src file to read-only
+# While src was read-only, dst must remain writable
+# Undo read-only so we can delete temp files
+#! /usr/bin/env python
+#
+# This file is part of the ghp-import package released under
+# the Tumbolia Public License.
+#                            Tumbolia Public License
+# Copyright 2013, Paul Davis <paul.joseph.davis@gmail.com>
+# Copying and distribution of this file, with or without modification, are
+# permitted in any medium without royalty provided the copyright notice and this
+# notice are preserved.
+# TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+#   0. opan saurce LOL
+# noqa: F821
+# noqa: F821
+# Fix unicode pathnames on OS X
+# See: https://stackoverflow.com/a/5582439/44289
+# / 3600 * 100
+# pragma: no cover
+#####################################################################
+# Data Parser                                                       #
+#####################################################################
+# First try YAML
+# No YAML deliminators. Try MultiMarkdown style
+# blank line - done
+# Add another line to existing key
+# no meta data - done
+# Attach our unicode constructor to our custom loader ensuring all strings
+# will be unicode on translation.
+# TODO: Remove this when external calls are properly cleaning up file
+# objects. Some mkdocs internal calls, sometimes in test lib, will
+# load configs with a file object but never close it.  On some
+# systems, if a delete action is performed on that file without Python
+# closing that object, there will be an access error. This will
+# process the file and close it as there should be no more use for the
+# file once we process the yaml content.
+# Don't remove hidden files from the directory. We never copy files
+# that are hidden, so we shouldn't delete them either.
+# Remove filename from other url if it has one.
+# Allow links to be fully qualified URL's
+#')):
+# We must be looking at a local path.
+# Capitalize if the dirname was all lowercase, otherwise leave it as-is.
+# '):
+# ')
+# A global instance to use throughout package

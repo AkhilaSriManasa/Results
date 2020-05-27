@@ -1,0 +1,1598 @@
+﻿# Contributing
+
+First off, thanks for taking the time! We'd love to hear from you! Drop us a line in our [chatroom](http://chat.metaflow.org)!
+
+If you are interested in contributing to Metaflow, we wrote a [guide](https://docs.metaflow.org/introduction/contributing-to-metaflow#contributing-code-and-issues)
+to get you started. 
+
+We'd appreciate [issue reports](https://github.com/Netflix/metaflow/issues) if you run into trouble using Metaflow.
+
+# Community
+
+Everyone is welcome to join us in our [chatroom](http://chat.metaflow.org)!
+
+Please maintain appropriate, professional conduct while participating in our community. This includes all channels of
+communication. We take reports of harassment or unwelcoming behavior very seriously. To report such behavior, please 
+contact us via [email](mailto:help@metaflow.org). 
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+# Metaflow
+
+Metaflow is a human-friendly Python library that helps scientists and engineers build and manage real-life data science projects. Metaflow was originally developed at Netflix to boost productivity of data scientists who work on a wide variety of projects from classical statistics to state-of-the-art deep learning.
+
+For more information, see [Metaflow's website](https://metaflow.org).
+
+## Getting Started
+
+Getting up and running with Metaflow is easy. Install metaflow from [pypi](https://pypi.org/project/metaflow/):
+
+>```sh
+>pip install metaflow
+>```
+
+and access tutorials by typing:
+
+>```sh
+>metaflow
+>```
+
+## Get in Touch
+There are several ways to get in touch with us:
+
+* Open an issue at: https://github.com/Netflix/metaflow 
+* Email us at: help@metaflow.org
+* Chat with us on: http://chat.metaflow.org 
+
+
+# Episode 00-helloworld: Metaflow says Hi!
+
+**This flow is a simple linear workflow that verifies your installation by
+printing out 'Metaflow says: Hi!' to the terminal.**
+
+#### Showcasing:
+- Basics of Metaflow.
+- Step decorator.
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```python 00-helloworld/helloworld.py show```
+3. ```python 00-helloworld/helloworld.py run```
+# Episode 01-playlist: Let's build you a movie playlist.
+
+**This flow loads a movie metadata CSV file and builds a playlist for your
+favorite movie genre. Everything in Metaflow is versioned, so you can run it
+multiple times and view all the historical playlists with the Metaflow client
+in a Notebook.**
+
+#### Showcasing:
+- Including external files with 'IncludeFile'.
+- Basic Metaflow Parameters.
+- Running workflow branches in parallel and joining results.
+- Using the Metaflow client in a Notebook.
+
+#### Before playing this episode:
+1. ```python -m pip install notebook```
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```python 01-playlist/playlist.py show```
+3. ```python 01-playlist/playlist.py run```
+4. ```python 01-playlist/playlist.py run --genre comedy```
+5. ```jupyter-notebook 01-playlist/playlist.ipynb```
+# Episode 02-statistics: Is this Data Science?
+
+**Use metaflow to load the movie metadata CSV file into a Pandas Dataframe and
+compute some movie genre specific statistics. These statistics are then used in
+later examples to improve our playlist generator. You can optionally use the
+Metaflow client to eyeball the results in a Notebook, and make some simple
+plots using the Matplotlib library.**
+
+#### Showcasing:
+- Fan-out over a set of parameters using Metaflow foreach.
+- Using external packages like Pandas.
+- Plotting results in a Notebook.
+
+#### Before playing this episode:
+1. ```python -m pip install pandas```
+2. ```python -m pip install notebook```
+3. ```python -m pip install matplotlib```
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```python 02-statistics/stats.py show```
+3. ```python 02-statistics/stats.py run```
+4. ```jupyter-notebook 02-statistics/stats.ipynb```
+# Episode 03-playlist-redux: Follow the Money.
+
+**Use Metaflow to load the statistics generated from 'Episode 02' and improve
+our playlist generator by only recommending top box office grossing movies.**
+
+#### Showcasing:
+- Using data artifacts generated from other flows.
+
+#### Before playing this episode:
+1. Run 'Episode 02-statistics: Is this Data Science?'
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```python 03-playlist-redux/playlist.py show```
+3. ```python 03-playlist-redux/playlist.py run```
+# Episode 04-playlist-plus: The Final Showdown.
+
+**Now that we've improved our genre based playlist generator. We expose a 'hint'
+parameter allowing the user to suggest a better bonus movie. The bonus movie is
+chosen from the movie that has the most similar name to the 'hint'.
+This is achieved by importing a string edit distance package using Metaflow's
+conda based dependency management feature. Dependency management builds
+isolated and reproducible environments for individual steps.**
+
+#### Showcasing:
+- Metaflow's conda based dependency management.
+
+#### Before playing this episode:
+This tutorial requires the 'conda' package manager to be installed with the
+conda-forge channel added.
+
+1. Download Miniconda at https://docs.conda.io/en/latest/miniconda.html
+2. ```conda config --add channels conda-forge```
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```python 04-playlist-plus/playlist.py --environment=conda show```
+3. ```python 04-playlist-plus/playlist.py --environment=conda run```
+4. ```python 04-playlist-plus/playlist.py --environment=conda run --hint "Data Science Strikes Back"```
+# Episode 05-helloaws: Look Mom, We're in the Cloud.
+
+**This flow is a simple linear workflow that verifies your AWS
+configuration. The 'start' and 'end' steps will run locally, while the 'hello'
+step will run remotely on AWS batch. After configuring Metaflow to run on AWS,
+data and metadata about your runs will be stored remotely. This means you can
+use the client to access information about any flow from anywhere.**
+
+#### Showcasing:
+- AWS batch decorator.
+- Accessing data artifacts generated remotely in a local notebook.
+- retry decorator.
+
+#### Before playing this episode:
+1. Configure your sandbox: https://docs.metaflow.org/metaflow-on-aws/metaflow-sandbox
+2. ```python -m pip install notebook```
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```python 05-helloaws/helloaws.py run```
+3. ```jupyter-notebook 05-helloaws/helloaws.ipynb```
+4. Open 'helloaws.ipynb' in your remote Sagemaker notebook
+# Episode 06-statistics-redux: Computing in the Cloud.
+
+**This example revisits 'Episode 02-statistics: Is this Data Science?'. With
+Metaflow, you don't need to make any code changes to scale-up your flow by
+running on remote compute. In this example we re-run the 'stats.py' workflow
+adding the '--with batch' command line argument. This instructs Metaflow to run
+all your steps on AWS batch without changing any code. You can control the
+behavior with additional arguments, like '--max-workers'. For this example,
+'max-workers' is used to limit the number of parallel genre specific statistics
+computations.
+You can then access the data artifacts (even the local CSV file) from anywhere
+because the data is being stored in AWS S3.**
+
+#### Showcasing:
+- '--with batch' command line option
+- '--max-workers' command line option
+- Accessing data locally or remotely
+
+#### Before playing this episode:
+1. Configure your sandbox: https://docs.metaflow.org/metaflow-on-aws/metaflow-sandbox
+2. ```python -m pip install pandas```
+3. ```python -m pip install notebook```
+4. ```python -m pip install matplotlib```
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```python 02-statistics/stats.py --with batch run --max-workers 4```
+3. ```jupyter-notebook 06-statistics-redux/stats.ipynb```
+4. Open 'stats.ipynb' in your remote Sagemaker notebook
+# Episode 07-worldview: Way up here.
+
+**This episode shows how you can use a notebook to setup a simple dashboard to
+monitor all of your Metaflow flows.**
+
+#### Showcasing:
+- The metaflow client API.
+
+#### Before playing this episode:
+1. Configure your sandbox: https://docs.metaflow.org/metaflow-on-aws/metaflow-sandbox
+2. ```python -m pip install notebook```
+
+#### To play this episode:
+1. ```cd metaflow-tutorials```
+2. ```jupyter-notebook 07-worldview/worldview.ipynb```
+3. Open 'worldview.ipynb' in your remote Sagemaker notebook
+# Metaflow Test Suite
+
+The integration test harness for the core Metaflow at `test/core`
+generates and executes synthetic Metaflow flows, exercising all 
+aspects of Metaflow. The test suite is executed using 
+[tox](http://tox.readthedocs.io) as configured in `tox.ini`. 
+You can run the tests by hand using `pytest` or 
+`run_tests.py` as described below.
+
+What happens when you execute `python helloworld.py run`? The execution
+involves multiple layers of the Metaflow stack. The stack looks like 
+following, starting from the most fundamental layer all the way to the 
+user interface:
+
+ 0. Python interpreter (`python2`, `python3`)
+ 1. Metaflow core (`task.py`, `runtime.py`, `datastore`, etc.)
+ 2. Metaflow plugins (`@timeout`, `@catch`, `metadata.py` etc.)
+ 3. User-defined graph
+ 4. User-defined step functions
+ 5. User interface (`cli.py`, `metaflow.client`)
+
+We could write unit tests for functions in the layers 1, 2, and 5,
+which would capture some bugs. However, a much larger superset of bugs
+is caused by unintended interactions across the layers. For instance,
+exceptions caught by the `@catch` tag (2) inside a deeply nested foreach
+graph (3) might not be returned correctly in the client API (5) when
+using Python 3 (0).
+
+The integration test harness included in the `core` directory tries to
+surface bugs like this by generating test cases automatically using
+*specifications* provided by the developer.
+
+### Specifications
+
+The test harness allows you to customize behavior in four ways that
+correspond to the layers above:
+
+ 1. You define the execution environment, including environment
+    variables, the version of the Python interpreter, and the type
+    of datastore used as *contexts* in `contexts.json` (layers 0 and 1).
+
+ 2. You define the step functions, the decorators used, and the
+    expected results as `MetaflowTest` templates, stored in the `tests`
+    directory (layers 2 and 4).
+
+ 3. You define various graphs that match the step functions as
+    simple JSON descriptions of the graph structure, stored in the
+    `graphs` directory (layer 3).
+
+ 4. You define various ways to check the results that correspond to
+    the different user interfaces of Metaflow as `MetaflowCheck` classes,
+    stored in the `metaflow_test` directory (layer 5). You can customize
+    which checkers get used in which contexts in `context.json`.
+
+The test harness takes all `contexts`, `graphs`, `tests`, and `checkers`
+and generates a test flow for every combination of them, unless you
+explicitly set constraints on what combinations are allowed. The test
+flows are then executed, optionally in parallel, and results are
+collected and summarized.
+
+#### Contexts
+
+Contexts are defined in `contexts.json`. The file should be pretty
+self-explanatory. Most likely you do not need to edit the file unless
+you are adding tests for a new command-line argument.
+
+Note that some contexts have `disabled: true`. These contexts are not
+executed by default when tests are run by a CI system. You can enable
+them on the command line for local testing, as shown below.
+
+#### Tests
+
+Take a look at `tests/basic_artifact.py`. This test verifies that
+artifacts defined in the first step are available in all steps
+downstream. You can use this simple test as a template for new
+tests.
+
+Your test class should derive from `MetaflowTest`. The class variable
+`PRIORITY` denotes how fundamental the exercised functionality is to
+Metaflow. The tests are executed in the ascending order of priority,
+to make sure that foundations are solid before proceeding to more
+sophisticated cases.
+
+The step functions are decorated with the `@steps` decorator. Note that
+in contrast to normal Metaflow flows, these functions can be applied
+to multiple steps in a graph. A core idea behind this test harness is
+to decouple graphs from step functions, so various combinations can be
+tested automatically. Hence, you need to provide step functions that
+can be applied to various step types.
+
+The `@steps` decorator takes two arguments. The first argument is an
+integer that defines the order of precedence between multiple `steps`
+functions, in case multiple step function templates match. A typical
+pattern is to provide a specific function for a specific step type,
+such as joins and give it a precedence of `0`. Then another catch-all
+can be defined with `@steps(2, ['all'])`. As the result, the special
+function is applied to joins and the catch all function for all other
+steps.
+
+The second argument gives a list of *qualifiers* specifying which
+types of steps this function can be applied to. There is a set of
+built-in qualifiers: `all`, `start`, `end`, `join`, `linear` which
+match to the corresponding step types. In addition to these built-in
+qualifiers, graphs can specify any custom qualifiers.
+
+By specifying `required=True` as a keyword argument to `@steps`,
+you can require that a certain step function needs to be used in
+combination with a graph to produce a valid test case. By creating a
+custom qualifier and setting `required=True` you can control how tests
+get matched to graphs.
+
+In general, it is beneficial to write test cases that do not specify
+overly restrictive qualifiers and `required=True`. This way you cast a
+wide net to catch bugs with many generated test cases. However, if the
+test is slow to execute and/or does not benefit from a large number of
+matching graphs, it is a good idea to make it more specific.
+
+##### Assertions
+
+The test case is not very useful unless it verifies its results. There
+are two ways to assert that the test behaves as expected.
+
+You can use a function `assert_equals(expected, got)` inside step
+functions to confirm that data inside the step functions is valid.
+Secondly, you can define a method `check_results(self, flow, checker)`
+in your test class, which verifies the stored results after the flow
+has been executed successfully.
+
+Use
+```
+checker.assert_artifact(step_name, artifact_name, expected_value)
+```
+to assert that steps contain the expected data artifacts.
+
+Take a look at existing test cases in the `tests` directory to get an
+idea how this works in practice.
+
+#### Graphs
+
+Graphs are simple JSON representations of directed graphs. They list
+every step in a graph and transitions between them. Every step can have
+an optional list of custom qualifiers, as described above.
+
+You can take a look at the existing graphs in the `graphs` directory
+to get an idea of the syntax.
+
+#### Checkers
+
+Currently the test harness exercises two types of user interfaces:
+The command line interface, defined in `cli_check.py`, and the Python
+API, defined in `mli_check.py`.
+
+Currently you can use these checkers to assert values of data artifacts
+or log output. If you want to add test for new type of functionality
+in the CLI and/or the Python API, you should add a new method in
+the `MetaflowCheck` base class and corresponding implementations in
+`mli_check.py` and `cli_check.py`. If certain functionality is only
+available in one of the interfaces, you can provide a stub implementation
+returning `True` in the other checker class.
+
+### Usage
+
+The test harness is executed by running `run_tests.py`. By default, it
+executes all valid combinations of contexts, tests, graphs, and checkers.
+This mode is suitable for automated tests run by a CI system.
+
+When testing locally, it is recommended to run the test suite as follows:
+
+```
+cd metaflow/test/core
+PYTHONPATH=`pwd`/../../ python run_tests.py --debug --contexts dev-local
+```
+
+This uses only the `dev_local` context, which does not depend
+on any over-the-network communication like `--metadata=service` or
+`--datastore=s3`. The `--debug` flag makes the harness fail fast when
+the first test case fails. The default mode is to run all test cases and
+summarize all failures in the end.
+
+You can run a single test case as follows:
+
+```
+cd metaflow/test/core
+PYTHONPATH=`pwd`/../../ python run_tests.py --debug --contexts dev-local --graphs single-linear-step --tests BasicArtifactTest
+```
+
+This chooses a single context, a single graph, and a single test. If you are developing a new test, this is the fastest way to test the test.
+
+### Coverage report
+
+The test harness uses the `coverage` package in Python to produce a test
+coverage report. By default, you can find a comprehensive test coverage
+report in the `coverage` directory after the test harness has finished.
+
+After you have developed a new feature in Metaflow, use the line-by-line
+coverage report to confirm that all lines related the new feature are
+touched by the tests.
+
+
+
+# Python 2
+# Python 3
+# Pathspec can either be run_id/step_name or run_id/step_name/task_id.
+# get all tasks
+# Pathspec can either be run_id/step_name or run_id/step_name/task_id.
+# get all tasks
+# TODO - move step and init under a separate 'internal' subcommand
+# init is a separate command instead of an option in 'step'
+# since we need to capture user-specified parameters with
+# @add_custom_parameters. Adding custom parameters to 'step'
+# is not desirable due to the possibility of name clashes between
+# user-specified parameters and our internal options. Note that
+# user-specified parameters are often defined as environment
+# variables.
+# There's a --with option both at the top-level and for the run
+# subcommand. Why?
+#
+# "run --with shoes" looks so much better than "--with shoes run".
+# This is a very common use case of --with.
+#
+# A downside is that we need to have the following decorators handling
+# in two places in this module and we need to make sure that
+# _init_decorators doesn't get called twice.
+#obj.environment.init_environment(obj.logger)
+# Package working directory only once per run.
+# We explicitly avoid doing this in `start` since it is invoked for every
+# step in the run.
+# TODO(crk): Capture time taken to package and log to keystone.
+# run/resume are special cases because they can add more decorators with --with,
+# so they have to take care of themselves.
+#TODO (savin): Enable lazy instantiation of package
+# TODO set linter settings
+# Ignore warning(s) and prevent spamming the end-user.
+# TODO: This serves as a short term workaround for RuntimeWarning(s) thrown
+# in py3.8 related to log buffering (bufsize=1).
+# instantiate the Current singleton. This will be populated
+# by task.MetaflowTask before a task is executed.
+# Set
+#
+# - METAFLOW_DEBUG_SUBCOMMAND=1
+#   to see command lines used to launch subcommands (especially 'step')
+# - METAFLOW_DEBUG_SIDECAR=1
+#   to see command lines used to launch sidecars
+# - METAFLOW_DEBUG_S3CLIENT=1
+#   to see command lines used by the S3 client. Note that this environment
+#   variable also disables automatic cleaning of subdirectories, which can
+#   fill up disk space quickly
+# use debug.$type_exec(args) to log command line for subprocesses
+# of type $type
+# use the debug.$type flag to check if logging is enabled for $type
+# No keyword arguments specified for the decorator, e.g. @foobar.
+# The first argument is the class to be decorated.
+# flow decorators add attributes in the class dictionary,
+# _flow_decorators.
+# Keyword arguments specified, e.g. @foobar(a=1, b=2).
+# Return a decorator function that will get the actual
+# function to be decorated as the first argument.
+# No keyword arguments specified for the decorator, e.g. @foobar.
+# The first argument is the function to be decorated.
+# Only the first decorator applies
+# Keyword arguments specified, e.g. @foobar(a=1, b=2).
+# Return a decorator function that will get the actual
+# function to be decorated as the first argument.
+# Attach the decorator to all steps that don't have this decorator
+# already. This means that statically defined decorators are always
+# preferred over runtime decorators.
+#
+# Note that each step gets its own instance of the decorator class,
+# so decorator can maintain step-specific state.
+# python 3
+# python 2
+# Q: Why not use StepDecorators directly as decorators?
+# A: Getting an object behave as a decorator that can work
+#    both with and without arguments is surprisingly hard.
+#    It is easier to make plain function decorators work in
+#    the dual mode - see _base_step_decorator above.
+# add flow-level decorators
+# note that this dict goes into the code package
+# so variables here should be relatively stable (no
+# timestamps) so the hash won't change all the time
+# type: (str) -> None
+# worker processes that exit with this exit code are not retried
+# worker processes that exit with this code should be retried (if retry counts left)
+# Base Exception defines its own __reduce__ and __setstate__
+# which don't work nicely with derived exceptions. We override
+# the magic methods related to pickle to get desired behavior.
+# For Python 3 compatibility
+# NOTE this assume that InvalidNextException is only raised
+# at the top level of next()
+# Attributes that are not saved in the datastore when checkpointing.
+# Name starting with '__', methods, functions and Parameters do not need
+# to be listed.
+# we import cli here to make sure custom parameters in
+# args.py get fully evaluated before cli.py is imported.
+# load the attribute from the datastore...
+# ...and cache it in the object for faster access
+# NOTE this is obviously an O(n) operation which also requires
+# downloading the whole input data object in order to find the
+# right split. One can override this method with a more efficient
+# input data handler if this is a problem.
+# this is where AttributeError happens:
+# [ foreach x ]
+#   [ foreach y ]
+#     [ inner ]
+#   [ join y ] <- call self.foreach_stack here,
+#                 self.x is not available
+# __getitem__ not supported, fall back to an iterator
+# available_vars is the list of variables from inp that should be considered
+# We have a conflict here
+# We have unresolved conflicts so we do not set anything and error out
+# If things are resolved, we go and fetch from the datastore and set here
+# check: next() is called only once
+# check: all destinations are methods of this object
+# check: foreach and condition are mutually exclusive
+# check: foreach is valid
+# check: condition is valid
+# check: non-keyword transitions are valid
+# these attributes are populated by _parse
+# these attributes are populated by _traverse_graph
+# these attributes are populated by _postprocess
+# end doesn't need a transition
+# TYPE: end
+# ensure that the tail an expression
+# determine the type of self.next transition
+# TYPE: foreach
+# TYPE: split-or
+# TYPE: split-and
+# TYPE: linear
+# any node who has a foreach as any of its split parents
+# has is_inside_foreach=True *unless* all of those foreaches
+# are joined by the node
+# ignore joins without splits
+# graph may contain loops - ignore them
+# graph may contain unknown transitions - ignore them
+# fix the order of in_funcs
+# If we get an error here, since we know that the file exists already,
+# it means that read failed which happens with Python 2.7 for large files
+# check that incoming steps come from the same lineage
+# (no cross joins)
+# This is for python2 compatibility.
+# Python3 has os.makedirs(exist_ok=True).
+# metaflow URL
+# metaflow chat
+# metaflow help email
+# print a short list of next steps.
+# Get the local data store path
+# Throw an exception
+#') if paragraph]
+# Skip hidden files (like .gitignore)
+# Validate that the list is valid.
+# Create destination `metaflow-tutorials` dir.
+# Pull specified episodes.
+# Check if episode has already been pulled before.
+# TODO: Is the following redudant?
+# Copy from (local) metaflow package dir to current.
+# NOTE: This code needs to be in sync with metaflow/metaflow_config.py.
+# Absence of default config is equivalent to running locally.
+# TODO: Should we persist empty env_dict or notify user differently?
+# Export its contents to a new file.
+# resolve_path doesn't expand `~` in `path`.
+# Write to file.
+# Import configuration.
+# Persist configuration.
+# Prompt for user input.
+# Decode the bytes to env_dict.
+# TODO: Add the URL for contact us page in the error?
+# Persist to a file.
+# Datastore configuration.
+# AWS Batch configuration (only if Amazon S3 is being used).
+# Metadata service configuration.
+# Disable multithreading security on MacOS
+# Read configuration from $METAFLOW_HOME/config_<profile>.json.
+# Initialize defaults required to setup environment variables.
+###
+# Default configuration
+###
+###
+# Datastore configuration
+###
+# Path to the local directory to store artifacts for 'local' datastore.
+# S3 bucket and prefix to store artifacts for 's3' datastore.
+# S3 datatools root location
+###
+# Datastore local cache
+###
+# Path to the client cache
+# Maximum size (in bytes) of the cache
+###
+# Metadata configuration
+###
+###
+# AWS Batch configuration
+###
+# IAM role for AWS Batch container with S3 access
+# Job queue for AWS Batch
+# Default container image for AWS Batch
+# Default container registry for AWS Batch
+# Metadata service URL for AWS Batch
+###
+# Conda configuration
+###
+# Conda package root location on S3
+###
+# Debug configuration
+###
+###
+# AWS Sandbox configuration
+###
+# Boolean flag for metaflow AWS sandbox access
+# Metaflow AWS sandbox auth endpoint
+# Metaflow AWS sandbox API auth key
+# Internal Metadata URL
+# AWS region
+# Finalize configuration
+# MAX_ATTEMPTS is the maximum number of attempts, including the first
+# task, retries, and the final fallback task and its retries.
+#
+# Datastore needs to check all attempt files to find the latest one, so
+# increasing this limit has real performance implications for all tasks.
+# Decreasing this limit is very unsafe, as it can lead to wrong results
+# being read from old tasks.
+# the naughty, naughty driver.py imported by lib2to3 produces
+# spam messages to the root logger. This is what is required
+# to silence it:
+# PINNED_CONDA_LIBS are the libraries that metaflow depends on for execution
+# and are needed within a conda environment
+# authenticate using STS
+#!/usr/bin/env python
+# This file is imported from https://github.com/aebrahim/python-git-version
+# first see if git is in the path
+# if this command succeeded, git is in the path
+# catch the exception thrown if git was not found
+# There are several locations git.exe may be hiding
+# look in program files for msysgit
+# look for the github version of git
+# git was not found
+# first, make sure we are actually in a Metaflow repo,
+# not some other repo
+# currently at a tag
+# formatted as version-N-githash
+# want to convert to version.postN-githash
+# does not allow git hash afterwards
+# not a git repository
+# type: (str) -> None
+# Python 2
+# Python 3
+# This module reimplements select functions from the standard
+# Python multiprocessing module.
+#
+# Three reasons why:
+#
+# 1) Multiprocessing has open bugs, e.g. https://bugs.python.org/issue29759
+# 2) Work around limits, like the 32MB object limit in Queue, without
+#    introducing an external dependency like joblib.
+# 3) Supports closures and lambdas in contrast to multiprocessing.
+# make sure stdout and stderr are flushed before forking. Otherwise
+# we may print multiple copies of the same output
+# we must not let any exceptions escape this function
+# which might trigger unintended side-effects
+# we can't use sys.exit(0) here since it raises SystemExit
+# that may have unintended side-effects (e.g. triggering
+# finally blocks).
+# python2
+# python3
+# handle files/folder with non ascii chars
+# path = path[2:] # strip the ./ prefix
+# if path and (path[0] == '.' or './' in path):
+#    continue
+# We want the following contents in the tarball
+# Metaflow package itself
+# the package folders for environment
+# the user's working directory
+# a modification time change should not change the hash of
+# the package. Only content modifications will.
+# Python2
+# Python3
+# ParameterContext allows deploy-time functions modify their
+# behavior based on the context. We can add fields here without
+# breaking backwards compatibility but don't remove any fields!
+# currently we execute only one flow per process, so we can treat
+# Parameters globally. If this was to change, it should/might be
+# possible to move these globals in a FlowSpec (instance) specific
+# closure.
+# it is easy to introduce a deploy-time function that that accidentally
+# returns a value whose type is not compatible with what is defined
+# in Parameter. Let's catch those mistakes early here, instead of
+# showing a cryptic stack trace later.
+# note: this doesn't work with long in Python2 or types defined as
+# click types, e.g. click.INT
+# this is called by cli.main
+# TODO: check that the type is one of the supported types
+# make sure the user is not trying to pass a function in one of the
+# fields that don't support function-values yet
+# default can be defined as a function
+# external_artfiact can be a function (returning a list), a list of
+# strings, or a string (which gets converted to a list)
+# note that separator doesn't work with DeployTimeFields unless you
+# specify type=str
+# this is needed to appease Pylint for JSONType'd parameters,
+# which may do self.param['foobar']
+# Impose length constraints on parameter names as some backend systems
+# impose limits on environment variables (which are used to implement
+# parameters)
+# Account for the parameter values to unicode strings or integer
+# values. And the name to be a unicode string.
+# Ignore headers
+# Ignore complaints about decorators missing in the metaflow module.
+# Automatic generation of decorators confuses Pylint.
+# Ignore complaints related to dynamic and JSON-types parameters
+# Ditto for IncludeFile
+# python2
+# python3
+#ms
+# The following is a list of the (data) artifacts used by the runtime while
+# executing a flow. These are prefetched during the resume operation by
+# leveraging the MetaflowDatastoreSet.
+# TODO option: output dot graph periodically about execution
+# resume logic
+# 0. If clone_run_id is specified, attempt to clone all the
+# successful tasks from the flow with `clone_run_id`. And run the
+# unsuccessful or not-run steps in the regular fashion.
+# 1. With _find_origin_task, for every task in the current run, we
+# find the equivalent task in `clone_run_id` using
+# pathspec_index=run/step:[index] and verify if this task can be
+# cloned.
+# 2. If yes, we fire off a clone-only task which copies the
+# metadata from the `clone_origin` to pathspec=run/step/task to
+# mimmick that the resumed run looks like an actual run.
+# 3. All steps that couldn't be cloned (either unsuccessful or not
+# run) are run as regular tasks.
+# Lastly, to improve the performance of the cloning process, we
+# leverage the MetaflowDatastoreSet abstraction to prefetch the
+# entire DAG of `clone_run_id` and relevant data artifacts
+# (see PREFETCH_DATA_ARTIFACTS) so that the entire runtime can
+# access the relevant data from cache (instead of going to the datastore
+# after the first prefetch).
+# fd -> subprocess mapping
+# main scheduling loop
+# 1. are any of the current workers finished?
+# 2. push new tasks triggered by the finished tasks to the queue
+# 3. if there are available worker slots, pop and start tasks
+#    from the queue.
+# TODO
+# TODO
+# on finish clean tasks
+# assert that end was executed and it was successful
+# If we are here, all children have received a signal and are shutting down.
+# We want to give them an opportunity to do so and then kill
+# While not all workers are dead and we have waited less than 5 seconds
+# give killed workers a chance to flush their logs to datastore
+# Store the parameters needed for task creation, so that pushing on items
+# onto the run_queue is an inexpensive operation.
+# if the next step is a join, we need to check that
+# all input tasks for the join have finished before queuing it.
+# CHECK: this condition should be enforced by the linter but
+# let's assert that the assumption holds
+# matching_split is the split-parent of the finished task
+# next step is a foreach join
+# required tasks are all split-siblings of the finished task
+# next step is a split-and
+# required tasks are all branches joined by the next step
+# all tasks to be joined are ready. Schedule the next join step.
+# CHECK: this condition should be enforced by the linter but
+# let's assert that the assumption holds
+# schedule all splits
+# finished tasks include only successful tasks
+# CHECK: ensure that runtime transitions match with
+# statically inferred transitions
+# Different transition types require different treatment
+# Next step is a join
+# Next step is a foreach child
+# Next steps are normal linear steps
+# worker did not finish successfully
+# worker finished successfully
+# Initialize the task (which can be expensive using remote datastores)
+# before launching the worker so that cost is amortized over time, instead
+# of doing it during _queue_push.
+# any results with an attempt ID >= MAX_ATTEMPTS will be ignored
+# by datastore, so running a task with such a retry_could would
+# be pointless and dangerous
+# task_id is preset only by persist_parameters()
+# Open the output datastore only if the task is not being cloned.
+# determine the number of retries of this task
+# This is just for usability: We could rerun the whole flow
+# if an unknown clone_run_id is provided but probably this is
+# not what the user intended, so raise a warning
+# all inputs must have the same foreach stack, so we can safely
+# pick the first one
+# Parent should be non-None since only clone the child if the parent
+# was successfully cloned.
+# foreach-join pops the topmost index
+# foreach-split pushes a new index
+# all other transitions keep the parent's foreach stack intact
+# Store the mapping from current_pathspec -> origin_pathspec which
+# will be useful for looking up origin_ds_set in find_origin_task.
+# Clone in place without relying on run_queue.
+# Store the origin pathspec in clone_origin so this can be run
+# as a task by the runtime.
+# Save a call to creating the results_ds since its same as origin.
+# note: id is not available before the task has finished
+# this is used to persist parameters before the start step
+# Killed indicates that the task was forcibly killed
+# with SIGKILL by the master process.
+# A killed task is always considered cleaned
+# A cleaned task is one that is shutting down and has been
+# noticed by the runtime and queried for its state (whether or
+# not is is properly shut down)
+# disabling atlas sidecar for cloned tasks due to perf reasons
+# decorators may modify the CLIArgs object in-place
+# the env vars are needed by the test framework, nothing else
+# NOTE bufsize=1 below enables line buffering which is required
+# by read_logline() below that relies on readline() not blocking
+# print('running', args)
+# readline() below should never block thanks to polling and
+# line buffering. If it does, things will deadlock
+# this shouldn't block, since terminate() is called only
+# after the poller has decided that the worker is dead
+# consume all remaining loglines
+# we set the file descriptor to be non-blocking, since
+# the pipe may stay active due to subprocesses launched by
+# the worker, e.g. sidecars, so we can't rely on EOF. We try to
+# read just what's available in the pipe buffer
+# ignore "resource temporarily unavailable" etc. errors
+# caused due to non-blocking. Draining is done on a
+# best-effort basis.
+# Return early if the task is cloned since we don't want to
+# perform any log collection.
+# for python 2 compatibility
+# type: (str) -> None
+# unable to start subprocess, fallback to Null sidecar
+# sidecar is disabled, ignore all messages
+# drop message, do not retry on timeout
+# Define message enums
+# add module to python path if not already present
+# todo handle other possible exceptions gracefully
+# overwrite Parameters in the flow object
+# make the parameter a read-only property
+# note x=x binds the current value of x to the closure
+# We prefer to use the parallelized version to initialize datastores
+# (via MetaflowDatastoreSet) only with more than 4 datastores, because
+# the baseline overhead of using the set is ~1.5s and each datastore
+# init takes ~200-300ms when run sequentially.
+# Prefetch 'foreach' related artifacts to improve time taken by
+# _init_foreach.
+# Note: Specify `pathspecs` while creating the datastore set to
+# guarantee strong consistency and guard against missing input.
+# initialize directly in the single input case.
+# this guards against errors in input paths
+# these variables are only set by the split step in the output
+# data. They don't need to be accessible in the flow.
+# There are three cases that can alter the foreach state:
+# 1) start - initialize an empty foreach stack
+# 2) join - pop the topmost frame from the stack
+# 3) step following a split - push a new frame in the stack
+# case 1) - reset the stack
+# case 2) - this is a join step
+# assert the lineage of incoming branches
+# the topmost indices in the stack are all
+# different naturally, so ignore them in the
+# assertion
+# assert that none of the inputs are splits - we don't
+# allow empty foreaches (joins immediately following splits)
+# Make sure that the join got all splits as its inputs.
+# Datastore.resolve() leaves out all undone tasks, so if
+# something strange happened upstream, the inputs list
+# may not contain all inputs which should raise an exception
+# foreach-join pops the topmost frame from the stack
+# a non-foreach join doesn't change the stack
+# case 3) - our parent was a split. Initialize a new foreach frame.
+# push a new index after a split to the stack
+# 1. initialize output datastore
+# 2. initialize origin datastore
+# any results with an attempt ID >= MAX_ATTEMPTS will be ignored
+# by datastore, so running a task with such a retry_could would
+# be pointless and dangerous
+# 1. initialize output datastore
+# 2. initialize input datastores
+# 3. initialize foreach state
+# 4. initialize the current singleton
+# 5. run task
+# init side cars
+# Note: All internal flow attributes (ie: non-user artifacts)
+# should either be set prior to running the user code or listed in
+# FlowSpec._EPHEMERAL to allow for proper merging/importing of
+# user artifacts in the user's step code.
+# decorators can actually decorate the step function,
+# or they can replace it altogether. This functionality
+# is used e.g. by catch_decorator which switches to a
+# fallback code if the user code has failed too many
+# times.
+# Join step:
+# Ensure that we have the right number of inputs. The
+# foreach case is checked above.
+# Multiple input contexts are passed in as an argument
+# to the step function.
+# initialize parameters (if they exist)
+# We take Parameter values from the first input,
+# which is always safe since parameters are read-only
+# Linear step:
+# We are running with a single input context.
+# The context is embedded in the flow.
+# This should be captured by static checking but
+# let's assert this again
+# initialize parameters (if they exist)
+# We take Parameter values from the first input,
+# which is always safe since parameters are read-only
+# terminate side cars
+# this writes a success marker indicating that the
+# "transaction" is done
+# final decorator hook: The task results are now
+# queryable through the client API / datastore
+# python2
+# unquote_bytes should be a function that takes a urlencoded byte
+# string, encoded in UTF-8, url-decodes it and returns it as a
+# unicode object. Confusingly, how to accomplish this differs
+# between Python2 and Python3.
+#
+# Test with this input URL:
+# b'crazypath/%01%C3%B'
+# it should produce
+# u'crazypath/\x01\xff'
+# python3
+# Provide a temporary directory since Python 2.7 does not have it inbuilt
+# quote() works reliably only with (byte)strings in Python2,
+# hence we need to .encode('utf-8') first. To see by yourself,
+# try quote(u'\xff') in python2. Python3 converts the output
+# always to Unicode, hence we need the outer to_bytes() too.
+#
+# We mark colon as a safe character to keep simple ASCII urls
+# nice looking, e.g. "http://google.com"
+# note: the order of the list matters
+# Directories exists in other casewhich is fine
+# Three output modes:
+# 1. Just a comma-separated list
+# 2. Prefix and a comma-separated list of suffixes
+# 3. zlib-compressed, base64-encoded, prefix-encoded list
+# interestingly, a typical zlib-encoded list of suffixes
+# has plenty of redundancy. Decoding the data *twice* helps a
+# lot
+# Three input modes:
+# 3. zlib-compressed, base64-encoded
+# 2. Prefix and a comma-separated list of suffixes
+# 1. Just a comma-separated list
+# we need special handling for 'with' since it is a reserved
+# keyword in Python, so we call it 'decospecs' in click args
+# This function is imported from https://github.com/cookiecutter/whichcraft
+# Check that a given file can be accessed with the correct mode.
+# Additionally check that `file` is not a directory, as on Windows
+# directories pass the os.access check.
+# Forced testing
+# If we're given a path with a directory part, look it up directly
+# rather than referring to PATH directories. This includes checking
+# relative to the current directory, e.g. ./script
+# How to work with flows
+# More questions?
+# Flow spec
+# current runtime singleton
+# data layer
+# Decorators
+# this auto-generates decorator functions from Decorator objects
+# in the top-level metaflow namespace
+# Client
+# Utilities
+# this happens on remote environments since the job package
+# does not have a version
+# python2
+# noqa E722
+# python3
+# Deduce from ms; if starts with http, use service or else use local
+# see a comment about namespace initialization
+# in Metaflow.__init__ below
+# the default namespace is activated lazily at the first object
+# invocation or get_namespace(). The other option of activating
+# the namespace at the import time is problematic, since there
+# may be other modules that alter environment variables etc.
+# which may affect the namescape setting.
+# We do not filter on namespace in the request because
+# filtering on namespace on flows means finding at least one
+# run in this namespace. This is_in_namespace() function
+# does this properly in this case
+# The JSON module in Python3 deals with Unicode. Tar gives bytes.
+# TODO add
+# @property
+# def size(self)
+# TODO add
+# @property
+# def type(self)
+# exclude private data artifacts
+# use the newest version of each key, hence sorting
+# Raised if None is present in max
+# All tasks have the same environment info so just use the first one
+# exclude _parameters step
+# maybe another client had already GC'ed the file away
+# this is for python2 compatibility.
+# Python3 has os.makedirs(exist_ok=True).
+# maybe another client had already GC'ed the file away
+# index objects lazily at the first request. This can be
+# an expensive operation
+# noqa E722
+# noqa E722
+#core client classes
+# Python 2
+# Python 3
+# TODO sort by foreach index
+# Very simple wrapper class to only keep one transform
+# of an object. This is to force garbage collection
+# on the transformed object if the transformation is
+# successful
+# Transformer is a function taking one argument (the current object) and returning another
+# object which will replace the current object if transformer does not raise an
+# exception
+# noqa E722
+# Datastore needs to implement the methods below
+# new style paths = <attempt>.<name>
+# old style paths.
+# run_id may be None when datastore is used to save
+# things not related to runs, e.g. the job package
+# what is the latest attempt ID of this data store?
+# In the case of S3, the has_metadata() below makes a
+# HEAD request to a non-existent object, which results
+# to this object becoming eventually consistent. This
+# could result to a situation that has_metadata() misses
+# the latest version although it is already existing.
+# As long as nothing opens a datastore for reading before
+# writing, this should not be a problem.
+# We have to make MAX_ATTEMPTS HEAD requests, which is
+# very unfortunate performance-wise (TODO: parallelize this).
+# On Meson it is possible that some attempts are missing, so
+# we have to check all possible attempt files to find the
+# latest one. Compared to doing a LIST operation, these checks
+# are guaranteed to be consistent as long as the task to be
+# looked up has already finished.
+# backwards-compatibility for pre-attempts.
+# was the latest attempt completed successfully?
+# load the data from the latest attempt
+# Direct access mode used by the client. We effectively don't load any
+# objects and can only access things using the load_* functions
+# to ensure compatibility between python2 and python3, we use the
+# highest protocol that works with both the versions
+# this happens when you try to serialize an oversized
+# object (2GB/4GB+)
+# Pass-down from datastore origin all information related to vars to
+# this datastore. In other words, this adds to the current datastore all
+# the variables in vars (obviously, it does not download them or anything but
+# records information about them). This is used to propagate parameters between
+# datastores without actually loading the parameters
+# Skip over properties of the class (Parameters)
+# We will force protocol 4 for serialization for anything
+# bigger than 1 GB
+# initialize with old values...
+# ...overwrite with new
+# register artifacts with the metadata service
+# Provides a fast-path to check if a given object is None.
+# Conservatively check if the actual object is None, in case
+# the artifact is stored using a different python version.
+# Slow path since this has to get the object from S3.
+# backwards compatibility: we might not have info for all objects
+# Update (and not re-assign) the artifact_cache since each datastore
+# created above has a reference to this object.
+# Compute path for DATASTORE_SYSROOT_LOCAL
+# Python2
+# noqa E722
+# We are no longer making upward progress
+# Could not find any directory to use so create a new one
+# Sort the file listing to iterate in increasing order of
+# attempts.
+# Read the corresponding metadata file.
+# Only read the metadata if the latest attempt is also done.
+# NOTE multiple tasks may try to save an object with the
+# same sha concurrently, hence we need to use a proper tmp
+# file
+# NOTE compresslevel makes a huge difference. The default
+# level of 9 can be impossibly slow.
+# this is for python2 compatibility.
+# Python3 has open(mode='x').
+# python2
+# python3
+# the s3 client is shared across all S3DataStores
+# so we don't open N connections to S3 unnecessarily
+# Note: When `pathspecs` is specified, we avoid the eventually
+# consistent `s3.list_paths` operation, and directly construct the
+# task_urls list.
+# Note for potential future optimization:
+# Find the list of latest attempt for each task first, and
+# follow up with a call to get done and metadata.
+# files are in sorted order, so overwrite is ok.
+# is_metadata_filename(fname) == True.
+# NOTE compresslevel makes a huge difference. The default
+# level of 9 can be impossibly slow.
+# filename=None
+# python2
+# python3
+# NOTE we deliberately regard NoSuchKey as an ignorable error.
+# We assume that the file just hasn't appeared in S3 yet.
+# decorator to retry functions that access S3
+# MetaflowExceptions are not related to AWS, don't retry
+# exponential backoff
+# python2
+# python3
+# all fields of S3Object should return a unicode object
+# 1. use a (current) run ID with optional customizations
+# 2. use an explicit S3 prefix
+# 3. use the client only with full URLs
+# NOTE: All URLs are handled as Unicode objects (unicde in py2,
+# string in py3) internally. We expect that all URLs passed to this
+# class as either Unicode or UTF-8 encoded byte strings. All URLs
+# returned are Unicode.
+# missing entries per return_missing=True
+# we need to recreate the StringIO object for retries since
+# apparently upload_fileobj will/may close() it
+# TODO specific error message for out of disk space
+# add some jitter to make sure retries are not synchronized
+# NOTE: re: _read_many_files and _put_many_files
+# All file IO is through binary files - we write bytes, we read
+# bytes. All inputs and outputs from these functions are Unicode.
+# Conversion between bytes and unicode is done through url_quote
+# and url_unquote.
+# python2
+# python3
+# s3op can be launched as a stand-alone script. We must set
+# PYTHONPATH for the parent Metaflow explicitly.
+# we use Metaflow's parallel_imap_unordered instead of
+# multiprocessing.Pool because https://bugs.python.org/issue31886
+# We use error codes instead of Exceptions, which are trickier to
+# handle reliably in a multi-process world
+# I can't understand what's the right way to deal
+# with boto errors. This function can be replaced
+# with better error handling code.
+# S3 worker pool
+# TODO specific error message for out of disk space
+# 1. push sources and destinations to the queue
+# 2. push end-of-queue markers
+# 3. start processes
+# 4. wait for the processes to finish
+# Utility functions
+# S3Ops class is just a wrapper for get_size and list_prefix
+# required by @aws_retry decorator, which needs the reset_client
+# method. Otherwise they would be just stand-alone functions.
+# note that an url may be both a prefix and an object
+# - the trailing slash is significant in S3
+# we get CommonPrefixes if Delimiter is a non-empty string
+# We want to reuse an s3 client instance over multiple operations.
+# This is accomplished by op_ functions below.
+# this function generates a safe local file name corresponding to
+# an S3 URL. URLs may be longer than maximum file length limit on Linux,
+# so we mostly hash the URL but retain the leaf part as a convenience
+# feature to ease eyeballing
+# parallel op divides work equally amongst num_workers
+# processes. This is a good strategy if the cost is
+# uniform over the units of work, e.g. op_get_size, which
+# is a single HEAD request to S3.
+#
+# This approach is less optimal with op_list_prefix where
+# the cost of S3 listing per prefix can vary drastically.
+# We could optimize this case by using a worker model with
+# a queue, like for downloads but the difference here is
+# that we need to return a value, which would require a
+# bit more work - something to consider if this turns out
+# to be a bottleneck.
+# CLI
+# Construct a list of URL (prefix) objects
+# Construct a url->size mapping
+# NOTE - we must retain the order of prefixes requested
+# and the listing order returned by S3
+# pretend zero size since we don't need it for anything.
+# it can't be None though, to make sure the listing below
+# works correctly (None denotes a missing file)
+# exclude the non-existent files from loading
+# Postprocess
+# We currently just use the timestamp to create an ID. We can be reasonably certain
+# that it is unique and this makes it possible to do without coordination or
+# reliance on POSIX locks in the filesystem.
+# Artifacts are actually part of the tasks in the filesystem
+# Special handling of self, artifact, and metadata
+# For the other types, we locate all the objects we need to find and return them
+# this is for python2 compatibility.
+# Python3 has os.makedirs(exist_ok=True).
+# Error raised when directory exists
+# In this case, the metadata information does not exist so we create it
+# From https://stackoverflow.com/questions/22409430/portable-meta-class-between-python2-and-python3
+# clean out class body
+# Metadata is always only at the task level
+# noqa E722
+# Special handling of self, artifact, and metadata
+# For the other types, we locate all the objects we need to find and return them
+# first ensure that the flow exists
+# noqa E722
+# handling _foreach_var and _foreach_num_splits requires some
+# deeper thinking, so let's not support that use case for now
+# pretend that self.next() was called as usual
+# store the exception
+# there was no exception, set the exception var (if any) to None
+# if the user code has failed max_user_code_retries times, @catch
+# runs a piece of fallback code instead. This way we can continue
+# running the flow downsteam, as we have a proper entry for this task.
+# type: (Message) -> None
+# type: (Timer) -> None
+# type: (Message) -> None
+# Prepare the package before any of the sub-commands are invoked.
+# The total number of attempts must not exceed MAX_ATTEMPTS.
+# attempts = normal task (1) + retries (N) + @catch fallback (1)
+# Initialize secs in __init__ so other decorators could safely use this
+# value without worrying about decorator order.
+# Convert values in attributes to type:int since they can be type:str
+# when passed using the CLI option --with.
+# enable timeout only when executing user code
+# 5 days.
+# it is important that CLIs are not imported when
+# __init__ is imported. CLIs may use e.g.
+# parameters.add_custom_parameters which requires
+# that the flow is imported first
+# Add new CLI commands in this list
+# Add new decorators in this list
+# Add Conda environment
+# Every entry in this list becomes a class-level flow decorator.
+# Add an entry here if you need a new flow-level annotation. Be
+# careful with the choice of name though - they become top-level
+# imports from the metaflow package.
+# Sidecars
+# Add logger
+# Add monitor
+# Kill the job if it is still running by throwing an exception.
+# python2
+# noqa E722
+# python3
+# If we are here, we can download the object
+# noqa F841
+# Get retry information
+# Set batch attributes
+# Add the environment variables related to the input-paths argument
+# don't retry killed tasks
+# TODO: Check statusmessage to find if the job crashed instead of failing
+# python2
+# noqa E722
+# python3
+# we use the larger of @resources and @batch attributes
+# after all attempts to run the user code have failed, we don't need
+# Batch anymore. We can execute possible fallback code locally.
+# We have a local metadata service so we need to persist it to the datastore.
+# Note that the datastore is *always* s3 (see runtime_task_created function)
+# The local metadata is stored in the local datastore
+# which, for batch jobs, is always the DATASTORE_LOCAL_DIR
+# At this point we upload what need to s3
+# Create the conda environment
+# Remove the conda environment
+# Get Python interpreter for the conda environment
+# List all conda environments associated with the flow
+# Show conda installation configuration
+# Show conda environment package configuration
+# Not every parameter is exposed via conda cli hence this ignominy
+# Print a message for now
+# Apply conda decorator to all steps
+# Guaranteed to have a conda decorator because of self.decospecs()
+# Bootstrap conda and execution environment for step
+# Add conda manifest file to job package at the top level.
+# Disable (import-error) in pylint
+# Get relevant python interpreter for step
+#The tarball maybe missing when user invokes `conda clean`!
+# force conda resolution for linux-64 architectures
+# Create a symlink to installed version of metaflow to execute user code against
+# For this example, we only need the movie title and the genres.
+# Create a simple data frame as a dictionary of lists.
+# Parse the CSV header.
+# Populate our dataframe from the lines of the CSV file.
+# Compute genre specific movies and a bonus movie in parallel.
+# Find all the movies that are not in the provided genre.
+# Choose one randomly.
+# Find all the movies titles in the specified genre.
+# Randomize the title names.
+# Reassign relevant variables from our branches.
+# Load the data set into a pandas dataaframe.
+# The column 'genres' has a list of genres for each movie. Let's get
+# all the unique genres.
+# We want to compute some statistics for each genre. The 'foreach'
+# keyword argument allows us to compute the statistics for each genre in
+# parallel (i.e. a fan-out).
+# The genre currently being processed is a class property called
+# 'input'.
+# Find all the movies that have this genre and build a dataframe with
+# just those movies and just the columns of interest.
+# Get some statistics on the gross box office for these titles.
+# Join the results from other genres.
+# Merge results from the genre specific computations.
+# Print metadata provider
+# Load the analysis from the MovieStatsFlow.
+# Compute our two recommendation types in parallel.
+# Concatenate all the genre specific data frames and choose a random
+# movie.
+# For the genre of interest, generate a potential playlist using only
+# highest gross box office titles (i.e. those in the last quartile).
+# Shuffle the playlist.
+# Print the playlist.
+# Use the specified version of python for this flow.
+# Load the analysis from the MovieStatsFlow.
+# Print metadata provider
+# Load the analysis from the MovieStatsFlow.
+# Get the dataframe from the start step before we sliced into into
+# genre specific dataframes.
+# Also grab the summary statistics.
+# Compute our two recomendation types in parallel.
+# Define a helper function to compute the similarity between two
+# strings.
+# Compute the distance and take the argmin to find the closest title.
+# For the genre of interest, generate a potential playlist using only
+# highest gross box office titles (i.e. those in the last quartile).
+# Shuffle the content.
+# Print the playlist.
+###%s%s: %s ###" % (fstr, cstr, msg)
+### %s ###" % msg
+# write scripts
+# expand environment variables
+# nonce can be used to insert entropy in env vars.
+# This is useful e.g. for separating S3 paths of
+# runs, which may have clashing run_ids
+# run flow
+# check results
+# copy coverage files
+# HACK: The two separate files are needed to store the output in separate
+# S3 buckets since jenkins test doesn't have access to `dataeng` bucket.
+# Python 2
+# Python 3
+# if the step had multiple tasks, this will fail
+# -*- coding: utf-8 -*-'
+# -*- coding: utf-8 -*-'
+# test 1) USER should be the default
+# test 2) Run should be in the listing
+# test 3) changing namespace should change namespace
+# test 4) fetching results in the incorrect namespace should fail
+# test 5) global namespace should work
+# index must stay constant over multiple steps inside foreach
+# Note this value is overridden in contexts.json
+# parameters should be immutable
+# -*- coding: utf-8 -*-
+# TODO we could call self.tag() in some steps, once it is implemented
+# CliChecker does not return a run object, that's ok
+# test crazy unicode and spaces in tags
+# these tags must be set with --tag option in contexts.json
+# test different namespaces: one is a system-tag,
+# another is a user tag
+# the flow object should not have tags
+# the run object should have the namespace tags
+# filtering by a non-existent tag should return nothing
+# a conjunction of a non-existent tag and an existent tag
+# should return nothing
+# all steps should be returned with tag filtering
+# a conjunction of two existent tags should return the original list
+# all tasks should be returned with tag filtering
+# the run object should have the tags
+# filtering by a non-existent tag should return nothing
+# filtering by the tag should not exclude any tasks
+# the task object should have the tags
+# the data artifact should have the tags
+# merge all incoming branches
+# join step needs to reassign all artifacts.
+# add data for the join step
+# very basic sanity check for CLI
+# we can't easily account for the number of foreach splits,
+# so we only care about unique lineages (hence set())
+# traverse all paths from the start step to the end,
+# collect lineages on the way and finally compare them
+# to the lineages produced by the actual run
+# Set to different things
+# Test to make sure non-merged values are reported
+# Test to make sure nothing is set if failed merge_artifacts
+# Test actual merge (ignores set values and excluded names, merges common and non modified)
+# Ensure that everything we expect is passed down
+# This is not a join so test exception for calling in non-join
+# Check that all values made it through
+# This test simply tests whether things set on a single branch will
+# still get propagated down properly. Other merge_artifacts behaviors
+# are tested in the main test (merge_artifacts.py). This test basically
+# only matches with the small-foreach graph whereas the other test is
+# more generic.
+# Set different names to different things
+# Ensure that everything we expect is passed down
+# assert that lengths are correct
+# assert that variables are correct given their indices
+# Verify that the `current` singleton contains the correct origin
+# run_id by double checking with the environment variables used
+# for tests.
+# foreach splits don't support @catch but @retry should work
+# make sure we see the latest attempt version of the artifact
+# the test uses a non-trivial derived exception on purpose
+# which is non-trivial to pickle correctly
+# die an ugly death
+# 1 normal run + 2 retries = 3 attempts
+# 1 normal run + 2 retries + 1 fallback = 4 attempts
+# task.exception is None since the exception was handled
+# The client API shouldn't choke on many tasks

@@ -1,0 +1,1310 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\glm\detail\dummy.cpp
+///////////////////////////////////////////////////////////////////////////////////
+/// OpenGL Mathematics (glm.g-truc.net)
+///
+/// Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+/// 
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+/// 
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+///
+/// @ref core
+/// @file glm/core/dummy.cpp
+/// @date 2011-01-19 / 2011-06-15
+/// @author Christophe Riccio
+///
+/// GLM is a header only library. There is nothing to compile. 
+/// dummy.cpp exist only a wordaround for CMake file.
+///////////////////////////////////////////////////////////////////////////////////
+// Ecm
+// Acm
+// Dcm
+// Scm
+// Srm
+// Acli
+// Dcli
+// Scli
+// Ppli
+// Derived: Hi
+// Sdli
+// Srli
+// Crli
+// (range: [0.0,90.0], 180.0)
+// Derived: cos(Crli)
+// (range: [1.0,0.0],-1.0)
+// K0
+// K1
+// K2
+// Sample 1
+// glm::vec3
+// glm::cross, glm::normalize
+// Sample 2
+// glm::vec3
+// glm::vec4, glm::ivec4
+// glm::mat4
+// glm::translate, glm::rotate, glm::scale, glm::perspective
+// glm::value_ptr
+// Sample 3
+// glm::vec2
+// glm::packUnorm2x16
+// glm::uint
+// glm::i8vec2, glm::i32vec2
+// Float quad geometry
+// Half-float quad geometry
+// 8 bits signed integer quad geometry
+// 32 bits signed integer quad geometry
+/*
+// glm::vec3
+// glm::normalize, glm::dot, glm::reflect
+// glm::pow
+// glm::vecRand3
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\glm\detail\glm.cpp
+///////////////////////////////////////////////////////////////////////////////////
+/// OpenGL Mathematics (glm.g-truc.net)
+///
+/// Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+/// 
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+/// 
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+///
+/// @ref core
+/// @file glm/glm.cpp
+/// @date 2013-04-22 / 2013-04-22
+/// @author Christophe Riccio
+///////////////////////////////////////////////////////////////////////////////////
+// tvec1 type explicit instantiation
+/*
+// tvec2 type explicit instantiation
+// tvec3 type explicit instantiation
+// tvec4 type explicit instantiation
+// tmat2x2 type explicit instantiation
+// tmat2x3 type explicit instantiation
+// tmat2x4 type explicit instantiation
+// tmat3x2 type explicit instantiation
+// tmat3x3 type explicit instantiation
+// tmat3x4 type explicit instantiation
+// tmat4x2 type explicit instantiation
+// tmat4x3 type explicit instantiation
+// tmat4x4 type explicit instantiation
+// tquat type explicit instantiation
+//tdualquat type explicit instantiation
+//namespace detail
+//namespace glm
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_common.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2011-09-13
+// Licence : This source is under MIT licence
+// File    : test/core/func_common.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//#include <boost/array.hpp>
+//#include <boost/date_time/posix_time/posix_time.hpp>
+//#include <boost/thread/thread.hpp>
+// Float with bool
+// Float with float
+// vec2 with bool
+// vec2 with bvec2
+// vec3 with bool
+// vec3 with bvec3
+// vec4 with bool
+// vec4 with bvec4
+//namespace test_mix
+// vec4 and float
+// vec4 and vec4
+//namespace test_step
+// GLM_LANG >= GLM_CXX0X
+//Error += test_isinf();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_exponential.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2011-09-13
+// Licence : This source is under MIT licence
+// File    : test/core/func_exponential.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_geometric.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2011-11-14
+// Licence : This source is under MIT licence
+// File    : test/core/func_geometric.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_integer.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-03
+// Updated : 2011-05-03
+// Licence : This source is under MIT licence
+// File    : test/core/func_integer.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//{0xffffffff,32, 1, 0x00000000, ASSERT}, // Throw an assert 
+//{0xffffffff, 0,33, 0x00000000, ASSERT}, // Throw an assert 
+//{0xffffffff,16,16, 0x00000000, ASSERT}, // Throw an assert 
+//extractField
+//bitRevert
+//findMSB
+//findLSB
+//namespace usubBorrow
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_matrix.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2012-05-02
+// Licence : This source is under MIT licence
+// File    : test/core/func_matrix.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//TestInputs[i] = glm::translate(MAT4(1), Axis * f);
+//glm::uint Ulp = 0;
+//Ulp = glm::max(glm::float_distance(*Dst, *Src), Ulp);
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_noise.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2011-09-13
+// Licence : This source is under MIT licence
+// File    : test/core/func_noise.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_packing.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2011-09-13
+// Licence : This source is under MIT licence
+// File    : test/core/func_packing.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*	
+/*
+//Error += B == D ? 0 : 1;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_swizzle.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-10-16
+// Updated : 2011-10-16
+// Licence : This source is under MIT License
+// File    : test/core/core_func_swizzle.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_trigonometric.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2011-09-13
+// Licence : This source is under MIT licence
+// File    : test/core/func_trigonometric.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_func_vector_relational.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-01-15
+// Updated : 2011-09-13
+// Licence : This source is under MIT licence
+// File    : test/core/vector_relational.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_setup_message.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-31
+// Updated : 2013-08-27
+// Licence : This source is under MIT License
+// File    : test/core/setup_message.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//Class<vec, float> C;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_setup_precision.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-31
+// Updated : 2011-05-31
+// Licence : This source is under MIT License
+// File    : test/core/setup_precision_highp.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_cast.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-05-06
+// Updated : 2013-05-06
+// Licence : This source is under MIT License
+// File    : test/core/type_cast.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_float.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2011-05-06
+// Licence : This source is under MIT License
+// File    : test/core/type_float.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_int.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2011-05-06
+// Licence : This source is under MIT License
+// File    : test/core/type_int.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_length.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-25
+// Updated : 2011-05-25
+// Licence : This source is under MIT License
+// File    : test/core/type_length.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat2x2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat2x2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat2x3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2013-10-04
+// Licence : This source is under MIT License
+// File    : test/core/type_mat2x3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat2x4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat2x4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat3x2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat3x2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat3x3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat3x3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat3x4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat3x4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat4x2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat4x2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat4x3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat4x3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_mat4x4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_mat4x4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_vec1.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2008-08-31
+// Licence : This source is under MIT License
+// File    : test/core/type_vec1.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_vec2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2011-05-31
+// Licence : This source is under MIT License
+// File    : test/core/type_vec2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//(GLM_HAS_ANONYMOUS_UNION && defined(GLM_SWIZZLE))
+//glm::vec2 D = glm::dvec2(2.0); // Build error TODO: What does the specification says?
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_vec3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2013-08-27
+// Licence : This source is under MIT License
+// File    : test/core/type_vec3.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//(GLM_HAS_ANONYMOUS_UNION && defined(GLM_SWIZZLE))
+// Can not assign a vec3 swizzle to a vec2
+//u = v.xyz;    //Illegal
+//u = v.rgb;    //Illegal
+//u = v.stp;    //Illegal
+// Mixed member aliases are not valid
+//u = v.rx;     //Illegal
+//u = v.sy;     //Illegal
+//v.xx = u;     //Illegal
+//v.yy = u;     //Illegal
+//v.zz = u;     //Illegal
+//GLM_LANG
+//GLM_LANG
+// Swizzle, swizzle binary operators
+// vec, swizzle binary operators
+// swizzle,vec binary operators
+//GLM_LANG
+// Compile errors
+//q = (u.yz * v.xyz);
+//q = (u * v.xy);
+// NOTE: template functions cannot pick up the implicit conversion from
+// a swizzle to the unswizzled type, therefore the operator() must be 
+// used.  E.g.:
+//
+// glm::dot(u.xy, v.xy);        <--- Compile error
+// glm::dot(u.xy(), v.xy());    <--- Compiles correctly
+// vec2
+// vec3
+// vec4
+//GLM_LANG
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\core\core_type_vec4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2008-08-31
+// Updated : 2013-12-24
+// Licence : This source is under MIT License
+// File    : test/core/type_vec4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//template<comp X, comp Y, comp Z, comp W>
+//__m128 swizzle(glm::vec4 const & v)
+//{
+//	__m128 Src = _mm_set_ps(v.w, v.z, v.y, v.x);
+//	return _mm_shuffle_ps(Src, Src, mask<(int(W) << 6) | (int(Z) << 4) | (int(Y) << 2) | (int(X) << 0)>::value);
+//}
+//(GLM_HAS_ANONYMOUS_UNION && defined(GLM_SWIZZLE))
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\external\gli\core\dummy.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_constants.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2012-09-19
+// Updated : 2012-12-13
+// Licence : This source is under MIT licence
+// File    : test/gtc/constants.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//float MinHalf = 0.0f;
+//while (glm::half(MinHalf) == glm::half(0.0f))
+//	MinHalf += std::numeric_limits<float>::epsilon();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_epsilon.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2012-09-19
+// Updated : 2012-09-19
+// Licence : This source is under MIT licence
+// File    : test/gtc/epsilon.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_matrix_access.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2013-05-10
+// Licence : This source is under MIT licence
+// File    : test/gtc/matrix_access.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_matrix_integer.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2010-09-16
+// Licence : This source is under MIT licence
+// File    : test/gtc/matrix_integer.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_matrix_inverse.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2010-09-16
+// Licence : This source is under MIT licence
+// File    : test/gtc/matrix_inverse.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_matrix_transform.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2010-09-16
+// Licence : This source is under MIT licence
+// File    : test/gtc/matrix_transform.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_noise.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-04-21
+// Updated : 2011-04-26
+// Licence : This source is under MIT licence
+// File    : test/gtc/noise.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_packing.cpp
+///////////////////////////////////////////////////////////////////////////////////
+/// OpenGL Mathematics (glm.g-truc.net)
+///
+/// Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+/// 
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+/// 
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+///
+/// @ref test
+/// @file test/gtc/packing.cpp
+/// @date 2013-08-09 / 2013-08-09
+/// @author Christophe Riccio
+///////////////////////////////////////////////////////////////////////////////////
+//	print_11bits(detail::floatTo11bit(s));
+//	printf(", ");
+//	print_10bits(detail::floatTo10bit(s));
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_quaternion.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2011-05-25
+// Licence : This source is under MIT licence
+// File    : test/gtc/quaternion.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//glm::epsilon<float>();
+// Testing a == 0
+// Must be id
+// Testing a == 1
+// Must be 90 rotation on Y : 0 0.7 0 0.7
+// Testing standard, easy case
+// Must be 45 rotation on Y : 0 0.38 0 0.92
+// Testing reverse case
+// Must be 45 rotation on Y : 0 0.38 0 0.92
+// Testing against full circle around the sphere instead of shortest path
+// Must be 45 rotation on Y
+// certainly not a 135 rotation
+// Same, but inverted
+// Must also be 45 rotation on Y :  0 0.38 0 0.92
+// -0 -0.38 -0 -0.92 is ok too
+// Testing q1 = q2
+// Must be 90 rotation on Y : 0 0.7 0 0.7
+// Testing 180 rotation
+// Must be 90 rotation on almost any axis that is on the XZ plane
+// Must be PI/4 = 0.78;
+// Testing almost equal quaternions (this test should pass through the linear interpolation)
+// Must be 0 0.00X 0 0.99999
+// Testing quaternions with opposite sign
+//GLM_HAS_INITIALIZER_LISTS
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_random.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-09-19
+// Updated : 2011-09-19
+// Licence : This source is under MIT licence
+// File    : test/gtc/random.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_reciprocal.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2012-09-19
+// Updated : 2012-09-19
+// Licence : This source is under MIT licence
+// File    : test/gtc/reciprocal.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_type_precision.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2013-04-16
+// Licence : This source is under MIT licence
+// File    : test/gtc/type_precision.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_type_ptr.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2011-05-27
+// Licence : This source is under MIT licence
+// File    : test/gtc/type_ptr.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_ulp.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-04-26
+// Updated : 2011-04-26
+// Licence : This source is under MIT licence
+// File    : test/gtc/ulp.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtc\gtc_user_defined_types.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2011-05-27
+// Licence : This source is under MIT licence
+// File    : test/gtc/type_ptr.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//func();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_bit.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2010-09-16
+// Licence : This source is under MIT licence
+// File    : test/gtx/bit.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//bitRevert
+// REG1 = x;
+// REG2 = y;
+//REG1 = ((REG1 << 16) | REG1) & glm::uint64(0x0000FFFF0000FFFF);
+//REG2 = ((REG2 << 16) | REG2) & glm::uint64(0x0000FFFF0000FFFF);
+//REG1 = ((REG1 <<  8) | REG1) & glm::uint64(0x00FF00FF00FF00FF);
+//REG2 = ((REG2 <<  8) | REG2) & glm::uint64(0x00FF00FF00FF00FF);
+//REG1 = ((REG1 <<  4) | REG1) & glm::uint64(0x0F0F0F0F0F0F0F0F);
+//REG2 = ((REG2 <<  4) | REG2) & glm::uint64(0x0F0F0F0F0F0F0F0F);
+//REG1 = ((REG1 <<  2) | REG1) & glm::uint64(0x3333333333333333);
+//REG2 = ((REG2 <<  2) | REG2) & glm::uint64(0x3333333333333333);
+//REG1 = ((REG1 <<  1) | REG1) & glm::uint64(0x5555555555555555);
+//REG2 = ((REG2 <<  1) | REG2) & glm::uint64(0x5555555555555555);
+//return REG1 | (REG2 << 1);
+// REG1 = x;
+// REG2 = y;
+//REG1 = ((REG1 << 16) | REG1) & glm::uint64(0x0000FFFF0000FFFF);
+//REG2 = ((REG2 << 16) | REG2) & glm::uint64(0x0000FFFF0000FFFF);
+//REG1 = ((REG1 <<  8) | REG1) & glm::uint64(0x00FF00FF00FF00FF);
+//REG2 = ((REG2 <<  8) | REG2) & glm::uint64(0x00FF00FF00FF00FF);
+//REG1 = ((REG1 <<  4) | REG1) & glm::uint64(0x0F0F0F0F0F0F0F0F);
+//REG2 = ((REG2 <<  4) | REG2) & glm::uint64(0x0F0F0F0F0F0F0F0F);
+//REG1 = ((REG1 <<  2) | REG1) & glm::uint64(0x3333333333333333);
+//REG2 = ((REG2 <<  2) | REG2) & glm::uint64(0x3333333333333333);
+//REG1 = ((REG1 <<  1) | REG1) & glm::uint64(0x5555555555555555);
+//REG2 = ((REG2 <<  1) | REG2) & glm::uint64(0x5555555555555555);
+//return REG1 | (REG2 << 1);
+//(GLM_ARCH != GLM_ARCH_PURE)
+// ALU
+//(GLM_ARCH != GLM_ARCH_PURE)
+//(GLM_ARCH != GLM_ARCH_PURE)
+// SIMD
+//(GLM_ARCH != GLM_ARCH_PURE)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_closest_point.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_color_space.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/color_space.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_color_space_YCoCg.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/color_space_YCoCg.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_common.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2014-09-08
+// Updated : 2014-09-08
+// Licence : This source is under MIT licence
+// File    : test/gtx/common.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_compatibility.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/compatibility.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_component_wise.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/component_wise.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_dual_quaternion.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-02-10
+// Updated : 2013-02-11
+// Licence : This source is under MIT licence
+// File    : test/gtc/gtc_dual_quaternion.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// returns values from -1 to 1 inclusive
+// testing commutative property
+// generate random rotations and translations and compare transformed by matrix and dualquats random points 
+// test both multiplication orders        
+//std::cout << "Errors count: " << Error << std::endl;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_euler_angle.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2014-01-11
+// Licence : This source is under MIT licence
+// File    : test/gtx/euler_angle.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Code sample from Filippo Ramaciotti
+//namespace test_eulerAngleX
+//namespace test_eulerAngleY
+//namespace test_eulerAngleZ
+//namespace test_eulerAngleXY
+//namespace test_eulerAngleYX
+//namespace test_eulerAngleXZ
+//namespace test_eulerAngleZX
+//namespace test_eulerAngleYZ
+//namespace test_eulerAngleZY
+//namespace eulerAngleYXZ
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_extend.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/extend.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_extented_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_fast_exponential.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_fast_square_root.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/fast_square_root.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_fast_trigonometry.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/fast_trigonometry.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_gradient_paint.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-10-13
+// Updated : 2011-10-13
+// Licence : This source is under MIT licence
+// File    : test/gtx/gradient_paint.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_handed_coordinate_space.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/handed_coordinate_space.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_inertia.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/inertia.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_integer.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-10-11
+// Updated : 2011-10-11
+// Licence : This source is under MIT licence
+// File    : test/gtx/gtx_integer.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+// Will fail with float, lack of accuracy
+//Error += glm::equalEpsilon(double(A), B, 1.0) ? 0 : 1;
+//printf("%d, %d\n", glm::nlz(i), 31u - glm::findMSB(i));
+//	Error += test_floor_log2();
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_intersect.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/intersect.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_int_10_10_10_2.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2013 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_io.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-11-22
+// Updated : 2013-11-22
+// Licence : This source is under MIT licence
+// File    : test/gtx/io.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// namespace {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_log_base.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/log_base.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_matrix_cross_product.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/matrix_cross_product.hpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_matrix_decompose.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2014-08-31
+// Updated : 2014-08-31
+// Licence : This source is under MIT licence
+// File    : test/gtx/decomposition.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_matrix_interpolation.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2012-09-19
+// Updated : 2012-09-19
+// Licence : This source is under MIT licence
+// File    : test/gtx/matrix_interpolation.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_matrix_major_storage.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/matrix_major_storage.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_matrix_operation.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/matrix_operation.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_matrix_query.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-11-22
+// Updated : 2011-11-22
+// Licence : This source is under MIT licence
+// File    : test/gtx/matrix_query.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_matrix_transform_2d.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2014-02-21
+// Updated : 2014-02-21
+// Licence : This source is under MIT licence
+// File    : test/gtx/matrix_transform_2d.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_mixed_product.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2013 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_multiple.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2012-11-19
+// Updated : 2012-11-19
+// Licence : This source is under MIT licence
+// File    : test/gtx/gtx_multiple.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_norm.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/norm.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_normal.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/normal.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_normalize_dot.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/normalize_dot.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_number_precision.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/number_precision.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_optimum_pow.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/optimum_pow.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_orthonormalize.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/orthonormalize.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_perpendicular.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/perpendicular.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_polar_coordinates.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/polar_coordinates.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_projection.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/projection.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_quaternion.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-25
+// Updated : 2011-05-31
+// Licence : This source is under MIT licence
+// File    : test/gtx/quaternion.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_random.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2012 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-31
+// Updated : 2011-05-31
+// Licence : This source is under MIT licence
+// File    : test/gtx/random.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_rotate_normalized_axis.cpp
+///////////////////////////////////////////////////////////////////////////////////
+/// OpenGL Mathematics (glm.g-truc.net)
+///
+/// Copyright (c) 2005 - 2012 G-Truc Creation (www.g-truc.net)
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+/// 
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+/// 
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+///
+/// @ref gtx_rotate_normalized_axis
+/// @file test/gtx/rotate_normalized_axis.cpp
+/// @date 2012-12-13 / 2012-12-13
+/// @author Christophe Riccio
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_rotate_vector.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-16
+// Updated : 2011-05-16
+// Licence : This source is under MIT licence
+// File    : test/gtx/rotate_vector.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_scalar_relational.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-02-04
+// Updated : 2013-02-04
+// Licence : This source is under MIT licence
+// File    : test/gtx/gtx_scalar_relational.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_simd_mat4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2010-09-16
+// Licence : This source is under MIT licence
+// File    : test/gtx/simd-mat4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//(d);
+//(d);
+//(d); 
+//std::vector<float> Test(Data.size());
+//std::vector<float> Test(Data.size());
+//std::vector<float> Test(Data.size());
+//std::vector<float> Test(Data.size());
+//std::vector<float> Test(Data.size());
+// shuffle test
+//__m128 C = _mm_shuffle_ps(A.Data, B.Data, _MM_SHUFFLE(1, 0, 1, 0));
+//(GLM_ARCH != GLM_ARCH_PURE)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_simd_vec4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2010-09-16
+// Updated : 2010-09-16
+// Licence : This source is under MIT licence
+// File    : test/gtx/simd-vec4.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//glm::vec4 G1(E1);
+//printf("A1(%2.3f, %2.3f, %2.3f, %2.3f)\n", A1.x, A1.y, A1.z, A1.w);
+//printf("B1(%2.3f, %2.3f, %2.3f, %2.3f)\n", B1.x, B1.y, B1.z, B1.w);
+//printf("C1(%2.3f, %2.3f, %2.3f, %2.3f)\n", C1.x, C1.y, C1.z, C1.w);
+//printf("D1(%2.3f, %2.3f, %2.3f, %2.3f)\n", D1.x, D1.y, D1.z, D1.w);
+//(GLM_ARCH != GLM_ARCH_PURE)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_spline.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2013-10-25
+// Updated : 2013-10-25
+// Licence : This source is under MIT licence
+// File    : test/gtx/associated_min_max.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//catmullRom
+//catmullRom
+//catmullRom
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_string_cast.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-09-01
+// Updated : 2011-09-01
+// Licence : This source is under MIT licence
+// File    : test/gtx/string_cast.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_vector_angle.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-05-15
+// Updated : 2011-05-15
+// Licence : This source is under MIT licence
+// File    : test/gtx/vector_angle.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/tango-examples-c-master\tango-examples-c-master\third_party\glm\test\gtx\gtx_vector_query.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenGL Mathematics Copyright (c) 2005 - 2014 G-Truc Creation (www.g-truc.net)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Created : 2011-11-23
+// Updated : 2011-11-23
+// Licence : This source is under MIT licence
+// File    : test/gtx/vector_query.cpp
+///////////////////////////////////////////////////////////////////////////////////////////////////

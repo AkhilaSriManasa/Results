@@ -1,0 +1,1868 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\factorial.java
+// standard Java class name in UVa OJ
+// it is in the library!
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\factorial.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\IO.java
+// comment all lines and only uncomment demo code that you are interested with
+// number of test cases
+// shortcut to repeat until 0
+// compute answer
+// on the fly
+// Scanner sc = new Scanner(new File("IO_in2.txt"));
+// int a, b;
+// // stop when both integers are 0
+// while (true) {
+//   a = sc.nextInt(); b = sc.nextInt();
+//   if ((a == 0) && (b == 0)) break;
+//   System.out.println(a+b);
+// }
+// Scanner sc = new Scanner(new File("IO_in3.txt"));
+// // Scanner class has hasNext method
+// while (sc.hasNext()) {
+//   int a = sc.nextInt(), b = sc.nextInt();
+//   System.out.println(a+b);
+// }
+// Scanner sc = new Scanner(new File("IO_in3.txt")); // same input file as before
+// int c = 0;
+// while (sc.hasNext()) {
+//   int a = sc.nextInt(), b = sc.nextInt();
+//   // notice the two '\n', Java System.out has printf too
+//   System.out.printf("Case %d: %d\n\n", ++c, a+b);
+// }
+// Scanner sc = new Scanner(new File("IO_in3.txt")); // same input file as before
+// int c = 0;
+// while (sc.hasNext()) {
+//   int a = sc.nextInt(), b = sc.nextInt();
+//   if (c > 0) System.out.println(); // 2nd/more cases
+//   System.out.printf("Case %d: %d\n", ++c, a+b);
+// }
+// Scanner sc = new Scanner(new File("IO_in4.txt"));
+// while (sc.hasNext()) {
+//   int k = sc.nextInt();
+//   int ans = 0, v;
+//   while (k-- > 0) { v = sc.nextInt(); ans += v; }
+//   System.out.println(ans);
+// }
+// Scanner sc = new Scanner(new File("IO_in5.txt"));
+// while (sc.hasNext()) { // keep looping
+//   String[] token = sc.nextLine().split(" ");
+//   int ans = 0;
+//   for (int i = 0; i < token.length; ++i)
+//     ans += Integer.parseInt(token[i]);
+//   System.out.println(ans);
+// }
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\IO.py
+# comment all lines and only uncomment demo code that you are interested with
+# IO_in1.txt
+# # IO_in2.txt
+# import sys
+# for line in sys.stdin.readlines():
+#     if line == '0 0\n': break
+#     print(sum(map(int, line.split())))
+# # IO_in3.txt
+# import sys
+# for line in sys.stdin.readlines():
+#     print(sum(map(int, line.split())))
+# # IO_in3.txt, same input file as before
+# import sys
+# for c, line in enumerate(sys.stdin.readlines(), 1):
+#     print("Case %s: %s\n" % (c, sum(map(int, line.split()))))
+# # IO_in3.txt, same input file as before
+# import sys
+# for c, line in enumerate(sys.stdin.readlines(), 1):
+#     if c > 1: print()
+#     print("Case %s: %s" % (c, sum(map(int, line.split()))))
+# # IO_in4.txt
+# import sys
+# for line in sys.stdin.readlines():
+#     print(sum(map(int, line.split()[1:]))) # skip the first integer
+# # IO_in5.txt
+# import sys
+# for line in sys.stdin.readlines():
+#     print(sum(map(int, line.split())))
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\UVa10911.java
+// UVa default class name
+// max N = 8
+// 1<<16 = 2^16
+// DP state = mask
+// we initialize `memo' with -1.0 in the main function
+// this has been computed
+// all have been matched
+// init with a large value
+// find the first off bit
+// then, try to match p1
+// with other off bit p2
+// pick the minimum
+// store result in a table
+// build distance table
+// use `hypot' function
+// DP to solve min weighted perfect matching on small general graph
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task01.java
+// Java code for task 1
+// Java has printf too!
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task03.java
+// Java code for task 3
+// 9 August 2010
+// note that month starts from 0, so we need to put 7 instead of 8
+// "Mon"
+// today
+// ans grows over time
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task03.py
+# Python code for task 3
+# CP1 launch date
+# 'Mon', %A for 'Monday'
+# ans grows over time
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task04.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task05.py
+# Python code for task 5
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task07.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task09.java
+// Java code for task 9
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task10.java
+// Java code for task 10
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task11.java
+// Java code for task 11
+// "cheat"
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task11.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch1\Exercise_1.3.4.1\task12.java
+// Java code for task 12
+// Big Integer
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\array_algorithms.java
+// This source code is not as complete as array_algorithms.cpp
+// can use this primary field to decide sorted order
+// ICPC rule: sort by number of problem solved
+// solved == o.solved, but we can use
+// secondary field to decide sorted order
+// ICPC rule: sort by descending penalty
+// solved == o.solved AND penalty == o.penalty
+// sort based on increasing team ID
+// sort descending with vector
+// if we want to modify comparison function, use the overloaded method: Collections.sort(List list, Comparator c);
+// shuffle the content again
+// sort ascending
+// without sorting, they will be ranked like this:
+// sort using a comparison function
+// after sorting using ICPC rule, they will be ranked like this:
+// output is -5 (explanation below)
+/*
+// sometimes these two useful simple macros are used
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\bit_manipulation.java
+// note: for example usage of BitSet, see ch5/primes.java
+// returns S % N, where N is a power of 2
+// in binary representation
+// to reverse the print order
+// special case for i == 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\bit_manipulation.py
+# returns S % N, where N is a power of 2
+# in binary representation
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\list.java
+// s is empty, true
+// stack is LIFO, thus the content of s is currently like this:
+// c <- top
+// b
+// a
+// output 'c'
+// pop topmost
+// output 'b'
+// s is not empty, false
+// Queue is abstract, must be instantiated with LinkedList
+// (special case for Java Queue)
+// q is empty, true
+// s  has 2 more items
+// enqueue 'b', and then 'a' (the method name in Java Queue for push/enqueue operation is 'offer')
+// add one more item
+// prints 'b'
+// in Java, it is harder to see the back of the queue...
+// output 'b', 'a', then 'z' (until queue is empty), according to the insertion order above
+// take the front first
+// before popping it
+// prints 'a - c'
+// prints 'd - c'
+// prints 'd - b'
+// prints 'a - b'
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\list.py
+# s is empty, true (1)
+# stack is LIFO, thus the content of s is currently like this:
+# c <- top
+# b
+# a
+# output 'c'
+# pop topmost
+# output 'b'
+# s is not empty, false
+# q is empty, true (1)
+# s has 2 more items
+# enqueue 'b' and 'a'
+# add one more item
+# prints 'b'
+# prints 'z'
+# output 'b', 'a', then 'z' (until queue is empty), according to the insertion order above
+# take the front first
+# before popping it
+# prints 'a - c'
+# prints 'd - c'
+# prints 'd - b'
+# prints 'a - b'
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\resizeable_array.java
+// initial value {7,7,7,0,0} and thus initial size (5)
+// initial size (5) and initial value {5,5,5,5,5}
+// 7 and 5, for Java ArrayList, we must use 'get'
+// arr = {0,1,2,3,4}
+// v = {7,8,9,10,11}, but for Java ArrayList, we must use 'set'
+// 2 and 9
+// arr[5] = 5; // static array will generate ArrayIndexOutOfBoundsException
+// // uncomment the line above to see the error
+// ArrayList resizes itself (use method add)
+// 77
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\lineards\resizeable_array.py
+# Python does not have static array
+# Initial size (5) and initial value {5,5,5,5,5}
+# 5
+# v = {7,8,9,10,11}
+# 9
+# arr[5] = 5;   # index out of range error generated as index 5 does not exist
+# uncomment the line above to see the error
+# list will resize itself after appending
+# 77
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\nonlineards\map_set.java
+// note: there are many clever usages of this set/map
+// that you can learn by looking at top coder's codes
+// must use TreeSet as Set is an abstract class
+// must use TreeMap as Map is an abstract class
+// suppose we enter these 7 name-score pairs below
+/*
+// then the internal content of mapper MAY be something like this:
+// re-read balanced BST concept if you do not understand this diagram
+// the keys are names (string)!
+//                        (grace,75) 
+//           (billy,69)               (martin,81)   
+//     (andy,80)   (felix,82)    (john,78)  (steven,77)
+// iterating through the content of mapper will give a sorted output
+// based on keys (names)
+// map can also be used like this
+// interesting usage of SubMap
+// display data between ["f".."m") ('felix' is included, martin' is excluded)
+// the internal content of used_values MAY be something like this
+// the keys are values (integers)!
+//                 (78) 
+//         (75)            (81)   
+//     (69)    (77)    (80)    (82)
+// O(log n) search, found
+// returns true
+// returns [69, 75] (these two are before 77 in the inorder traversal of this BST)
+// returns [77, 78, 80, 81, 82] (these five are equal or after 77 in the inorder traversal of this BST)
+// O(log n) search, not found
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\nonlineards\priority_queue.java
+// utilizing Java "Generics"
+// introducing 'pair'
+// overriding the compare method
+// currently max heap, reverse these two to try produce min-heap
+// suppose we enter these 7 money-name pairs below
+/*
+// inserting a pair in O(log n)
+// this is how we use Java PriorityQueue
+// priority queue will arrange items in 'heap' based
+// on the first key in pair, which is money (integer), largest first
+// if first keys tied, use second key, which is name, largest first
+// the internal content of pq heap MAY be something like this:
+// re-read (max) heap concept if you do not understand this diagram
+// the primary keys are money (integer), secondary keys are names (string)!
+//                        (2000,grace)
+//           (100,steven)               (70,martin)   
+//     (100,john)   (10,billy)     (20,andy)  (70,felix)
+// let's print out the top 3 person with most money
+// O(1) to access the top / max element + O(log n) removal of the top and repair the structure
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\nonlineards\priority_queue.py
+# suppose we enter these 7 money-name pairs below
+# priority queue will arrange items in 'heap' based
+# on the first key in pair, which is money (integer), largest first
+# if first keys tie, use second key, which is name, smallest first in python
+# the internal content of pq heap MAY be something like this (we negated the weights to make python heap a max heap):
+# re-read (max) heap concept if you do not understand this diagram
+# the primary keys are money (integer), secondary keys are names (string)!
+#                         (2000,grace)
+#            (100,steven)               (70,martin)   
+#let's print out the top 3 person with most money
+# O(1) to access the top / max element and O(log n) to delete the top and repair the structure
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\nonlineards\unordered_map_unordered_set.java
+// suppose we enter these 7 name-score pairs below
+/*
+// then the internal content of mapper/used_values are not really known
+// (implementation dependent)
+// iterating through the content of mapper will give a jumbled output
+// as the keys are hashed into various slots
+// map can also be used like this
+// there is no headSet and tailSet in an unordered_map
+// O(1) search, found
+// returns true
+// O(1) search, not found
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\fenwicktree_ds.java
+// initialization: n + 1 zeroes, ignore index 0
+// returns RSQ(1, j)
+// returns RSQ(i, j)
+// updates value of the i-th element by v (v can be +ve/inc or -ve/dec)
+// note: n = ft.size()-1
+// idx   0 1 2 3 4 5 6 7  8 9 10, no index 0!
+// ft = {-,0,0,0,0,0,0,0, 0,0,0}
+// ft = {-,0,1,0,1,0,0,0, 1,0,0}, idx 2,4,8 => +1
+// ft = {-,0,1,0,2,0,0,0, 2,0,0}, idx 4,8 => +1
+// ft = {-,0,1,0,2,2,2,0, 4,0,0}, idx 5,6,8 => +2
+// ft = {-,0,1,0,2,2,5,0, 7,0,0}, idx 6,8 => +3
+// ft = {-,0,1,0,2,2,5,2, 9,0,0}, idx 7,8 => +2
+// ft = {-,0,1,0,2,2,5,2,10,0,0}, idx 8 => +1
+// ft = {-,0,1,0,2,2,5,2,10,1,1}, idx 9,10 => +1
+// 0 => ft[1] = 0
+// 1 => ft[2] = 1
+// 7 => ft[6] + ft[4] = 5 + 2 = 7
+// 11 => ft[10] + ft[8] = 1 + 10 = 11
+// 6 => rsq(1, 6) - rsq(1, 2) = 7 - 1
+// update demo
+// now 13
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\fenwicktree_ds.py
+# Example for https://open.kattis.com/problems/fenwick
+# from sys import stdin, stdout
+#
+# def main():
+#     n, q = [int(i) for i in stdin.readline().split(' ')]
+#     f = FTree([0] * n)
+#     for l in stdin.read()[:-1].split('\n'):
+#         a = l.split(' ')
+#         if a[0] == '?':
+#             if a[1] == '0':
+#                 stdout.write("0\n")
+#             else:
+#                 stdout.write("{}\n".format(f.q(1, int(a[1]))))
+#         else:
+#             f.u(int(a[1]) + 1, int(a[2]))
+#
+# main()
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\graph_ds.java
+// Try this input for Adjacency Matrix/Adjacency List/Edge List
+// Adjacency Matrix AM
+//   for each line: |V| entries, 0 or the weight
+// Adjacency List AL
+//   for each line: num neighbors, list of neighbors + weight pairs
+// Edge List EL
+//   for each line: a-b of edge(a,b) and weight
+/*
+// we must know this size first!
+// remember that if V is > 100, try NOT to use AM!
+// O(|V|)
+// for each vertex
+// add this empty neighbor list to Adjacency List
+// to 0-based indexing
+// edges sorted by weight (smallest->largest)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\graph_ds.py
+# Try this input for Adjacency Matrix/Adjacency List/Edge List
+# Adjacency Matrix AM
+#    for each line: |V| entries, 0 or the weight
+#  Adjacency List AL
+#    for each line: num neighbors, list of neighbors + weight pairs
+#  Edge List EL
+#    for each line: a-b of edge(a,b) and weight
+# we must know this size first!
+# remember that if V is > 2000, try NOT to use AM!
+#adjacency matrix
+# O(|V|)
+#initalize AL
+# AL[0] contains the required information 
+# build a heap
+# edges sorted by weight (smallest->largest)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\IntegerPair.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\IntegerTriple.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\segmenttree_ds.java
+// the segment tree is stored like a heap array
+// same as binary heap operations
+// as L == R, either one is fine
+// store the index
+// recursively compute the values
+// O(log n)
+// current segment outside query range
+// inside query range
+// compute the min position in the left and right part of the interval
+// if we try to access segment outside query
+// same as above
+// as as in build routine
+// this update code is still preliminary, i == j
+// must be able to update range in the future!
+// if the current interval does not intersect 
+// the update interval, return this st node value!
+// if the current interval is included in the update range,
+// update that st[node]
+// update the underlying array
+// this index
+// compute the minimum position in the 
+// left and right part of the interval
+// return the position where the overall minimum is
+// copy content for local usage
+// create vector with length `len' and fill it with zeroes
+// recursive build
+// overloading
+// the original array
+// answer = index 2
+// answer = index 5
+// answer = index 4
+// answer = index 0
+// answer = index 1
+// answer = index 5
+// update A[5] from 11 to 100
+// 2
+// 4
+// 0
+// 1
+// 5->2
+// 5->4
+// 5->4
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\segmenttree_ds.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\unionfind_ds.java
+// Union-Find Disjoint Sets Library written in OOP manner, using both path compression and union by rank heuristics
+// OOP style
+// rank is used to keep the tree short
+// create 5 disjoint sets
+// 5
+// 4
+// 3
+// 2
+// will return false
+// will return true
+// findSet will return 1 for {0, 1} and 3 for {2, 3, 4}
+// 1
+// findSet will return 3 for {0, 1, 2, 3, 4}
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch2\ourown\unionfind_ds.py
+# Example for https://open.kattis.com/problems/unionfind
+# from sys import stdin, stdout
+#
+# def main():
+#     n, q = [int(i) for i in stdin.readline().split(' ')]
+#     u = UFDS(n)
+#     for l in stdin.read()[:-1].split('\n'):
+#         c, a, b = l.split(' ')
+#         if c == '?':
+#             stdout.write("yes\n" if u.find(int(a)) == u.find(int(b)) else "no\n")
+#         else:
+#             u.union(int(a), int(b))
+#
+# main()
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\itertools1.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\itertools2.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa00441.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa00725.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa00750.java
+/* 8 Queens Chess Problem */
+// it is ok to use global variables in competitive programming
+// check previously placed queens
+// an infeasible solution if share same row or same diagonal
+// try all possible row
+// if can place a queen at this col and row...
+// put this queen in this col and row
+// a candidate solution & (a, b) has 1 queen
+// recursively try next column
+// generate all possible 8! candidate solutions
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa00750.py
+#      1 2 3 4 5 6 7 8\n")
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa11742.py
+# input
+# try all possible O(n!) permutations, the largest nput 8! = 40320
+# check all constraints, max 20, each check 8 = 160 
+# all constraints are satisfied by this permutation
+# the overall time complexity is thus O(m * n!)
+# overall complexity = 160 * 40320 = 6M, should be doable with pruning...
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\cs\UVa12455.py
+# input
+#iterate through all subsets
+#pick Least Sig Bit
+#trailing zeroes
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\beepers_UVa10496.java
+// Collecting Beepers
+// DP TSP
+// Karel + max 10 beepers
+// bitmask stores the visited coordinates
+// return trip to close the loop
+// O(n) here
+// if coordinate nxt is not visited yet
+// these two values are not used
+// karel's position is at index 0
+// build distance table
+// Manhattan distance
+// DP-TSP
+// System.out.printf("The shortest path has length %d\n", dp(0, 1)); // DP-TSP
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\LIS.java
+// some adjustments are needed
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\LIS.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\Max1DRangeSum.java
+// a sample array A
+// O(n)
+// the overall running sum is still +ve
+// keep the largest RSQ overall
+// the overall running sum is -ve, we greedily restart here
+// because starting from 0 is better for future
+// iterations than starting from -ve running sum
+// should be 9
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\Max1DRangeSum.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa00108.java
+// Maximum Sum, 0.150s in UVa (C++ version runs in 0.000s)
+// UVa default class name
+// pre-processing
+// the lowest possible val
+// Max 1D Range Sum on columns of this row
+// Kadane's algorithm on rows
+// restart if negative
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa00108.py
+# input
+# How to use:
+# 1) copy line 1-25
+# 2) declare variable as SamInput()
+# Ex: test = SamInput()
+# 3) to read one line, use readln
+# Ex: newline = test.readln()
+# 4) to read one element(splitted by empty line / whitespace), use read
+# Ex: newline = test.read()
+# 5) remember, all this function will return a string, need to convert to int
+# 6) if there is no more element/line, it will return False (boolean object)
+#O(n^3) 1D DP + greedy (Kadane's) solution
+#setting up the dp table
+#the dimension of input square matrix
+# only add columns of this row i
+# lowest possible value
+#max 1D Range Sum on columns in this row
+#greedy, restart if running sum < 0
+#Kadane's algo in rows
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa00674.java
+/* Coin Change, 1.492s in Java, 0.038s in C++ */
+// O(NV) DP solution
+// N and coinValue are fixed for this problem, max V is 7489
+// This solution is TLE without using BufferedReader and PrintWriter
+// we only need to initialize this once
+// do not forget to do this
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa00674.py
+# input
+# How to use:
+# 1) copy line 1-25
+# 2) declare variable as SamInput()
+# Ex: test = SamInput()
+# 3) to read one line, use readln
+# Ex: newline = test.readln()
+# 4) to read one element(splitted by empty line / whitespace), use read
+# Ex: newline = test.read()
+# 5) remember, all this function will return a string, need to convert to int
+# 6) if there is no more element/line, it will return False (boolean object)
+#my input will return False when it is arrived at the end of input
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa10003.java
+/* Cutting Sticks, 1.762s in Java, 0.302s in C++ */
+// Top-Down DP
+// start with left = 0 and right = n + 1
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa10130.java
+/* SuperSale */
+// 0-1 Knapsack DP (Top-Down) - faster as not all states are visited
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa10943.java
+/* How do you add? */
+// top-down
+// only can use 1 number to add up to N
+// the answer is definitely 1, that number itself
+// if K > 1, we can choose one number from [0..N] to be one of the number
+// and recursively compute the rest
+// we just need the modulo 1M
+// memoize them
+// some recursion formula + top down DP
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa10943.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa11450_bu.java
+/* UVa 11450 - Wedding Shopping - Bottom Up */
+// price[g (<= 20)][model (<= 20)]
+// reachable table[money (<= 200)][g (<= 20)]
+// to simplify coding, we store K in price[i][0]
+// clear everything
+// initial values
+// if only using first garment g = 0
+// for each remaining garment (note: this is written in column major)
+// if can reach this state
+// flag the rest
+// as long as it is feasible
+// the answer is in the last column
+// nothing in this last column has its bit turned on
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa11450_bu.py
+# UVa 11450 - Wedding Shopping - Bottom Up (faster than Top Down)
+# 20 garments at most and 20 models per garment at most
+# maximum budget is 200
+# price[g (<= 20)][model (<= 20)]
+#reachable = [[False for i in range(MAX_M)] for j in range(MAX_gm)] # reachable table[g (<= 20)][money (<= 200)]
+# if using space saving technique
+# reachable table[ONLY TWO ROWS][money (<= 200)]
+# store number of models in price[g][0]
+# initial values (base cases), using first garment g = 0
+# for g in range(1, C):                            # for each remaining garment
+#   for money in range(0, M):
+#       if (reachable[g-1][money]):
+#           for k in range(1, price[g][0]+1):
+#               if (money-price[g][k] >= 0):
+#                   reachable[g][money-price[g][k]] = True  # also reachable now
+# money = 0
+# while (money <= M and not reachable[C-1][money]):
+#   money += 1
+# then we modify the main loop in main a bit
+# we start with this row
+# for each remaining garment
+# reset row
+# IMPORTANT technique: flip the two rows
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch3\dp\UVa11450_td.java
+/* UVa 11450 - Wedding Shopping - Top Down */
+// price[g (<= 20)][model (<= 20)]
+// dp table memo[money (<= 200)][g (<= 20)]
+// fail, return a large negative number (1B)
+// we have bought last garment, done
+// this state has been visited before
+// try all possible models
+// assign ans to dp table + return it!
+// easy to code if you are already familiar with it
+// to simplify coding, we store K in price[i][0]
+// initialize DP memo table
+// start the top-down DP
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\floyd_warshall.java
+/*
+// 1e9 to avoid overflow
+// directed graph
+// O(v^3) Floyd Warshall's
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\floyd_warshall.py
+# if |V| > 450, you cannot use Floyd Washall's
+# Graph in Figure 4.30
+# 5 9
+# 0 1 2
+# 0 2 1
+# 0 4 3
+# 1 3 4
+# 2 1 1
+# 2 4 1
+# 3 0 1
+# 3 2 3
+# 3 4 5
+# directed graph
+# loop order is k->u->v
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\IntegerPair.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\IntegerTriple.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\maxflow.java
+// enough for sample graph in Figure 4.24/4.25/4.26
+// we need these global variables
+// define MAX_V appropriately
+// traverse the BFS spanning tree as in print_path (section 4.3)
+// reach the source, record minEdge in a global variable `f'
+// recursive call
+// alter residual capacities
+/*
+// Graph in Figure 4.25
+// Graph in Figure 4.26.A
+// Graph in Figure 4.26.B
+// Graph in Figure 4.26.C
+// run O(VE^2) Edmonds Karp to solve the Max Flow problem
+// run BFS, please examine parts of the BFS code that is different than in Section 4.3
+// #define INF 2000000000
+// (we have to record the BFS spanning tree)
+// (we need the shortest path from s to t!)
+// immediately stop BFS if we already reach sink t
+// note: enumerating neighbors with AdjMatrix is `slow'
+// res[u][v] can change!
+// parent of vertex v is vertex u
+// find the min edge weight `f' along this path, if any
+// if we cannot send any more flow (`f' = 0), terminate the loop
+// we can still send a flow, increase the max flow!
+// this is the max flow value of this flow graph
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mcbm.java
+// global variables
+// either greedy assignment or recurse
+// we found one matching
+// no matching
+/*
+// we know there are 6 vertices in this bipartite graph, l side are numbered 0,1,2, right side 3,4,5
+//int V = 6, V_l = 3;
+//int set1[] = new int[] {1,7,11}, set2[] = new int[] {4,10,12};
+// Graph in Figure 4.41 can be built on the fly
+// we know there are 5 vertices in this bipartite graph, l side are numbered 0,1, right side 3,4,5
+// build the bipartite graph, only directed edge from l to right is needed
+// store blank ArrayList first
+// For bipartite graph in Figure 4.44, V = 5, Vleft = 3 (vertex 0 unused)
+// AL[0] = {} // dummy vertex, but you can choose to use this vertex
+// AL[1] = {3, 4}
+// AL[2] = {3}
+// AL[3] = {}   // we use directed edges from left to right set only
+// AL[4] = {}
+// store blank ArrayList first
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mst\IntegerPair.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mst\IntegerTriple.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mst\kruskal.java
+// Union-Find Disjoint Sets Library written in OOP manner, using both path compression and union by rank heuristics
+// OOP style
+// rank is used to keep the tree short
+/*
+// This example shows another form of reading graph input
+// Kruskal's algorithm
+// reorder as (w, u, v)
+// sort by w, O(E log E)
+// no edge has been taken
+// all V are disjoint sets
+// up to O(E)
+// check
+// add w of this edge
+// link them
+// 1 more edge is taken
+// optimization
+// note: the number of disjoint sets must eventually be 1 for a valid MST
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mst\kruskal_prim.py
+# Union-Find Disjoint Sets Library written in OOP manner
+# using both path compression and union by rank heuristics
+# OOP style
+# rank is used to keep the tree short
+# set u as taken and enqueue neighbors of u
+# sort by (inc) weight
+# then by (inc) id
+# Graph in Figure 4.10 left, format: list of weighted edges
+# This example shows another form of reading graph input
+# 5 7
+# 0 1 4
+# 0 2 4
+# 0 3 6
+# 0 4 6
+# 1 2 2
+# 2 3 8
+# 3 4 9
+# Kruskal's algorithm merged with Prim's algorithm
+# the graph stored in AL
+# read as (u, v, w)
+# reorder as (w, u, v)
+# sort by w, O(E log E)
+# all V are disjoint sets
+# for each edge, O(E)
+# check
+# 1 more edge is taken
+# add w of this edge
+# link them
+# note: the runtime cost of UFDS is very light
+# note: the number of disjoint sets must eventually be 1 for a valid MST
+# to avoid cycle, no vertex is taken
+# to select shorter edges
+# take+process vertex 0
+# no edge has been taken
+# until we take V-1 edges
+# we have not taken u yet
+# 1 more edge is taken
+# add w of this edge
+# take+process vertex u
+# each edge is in pq once
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\mst\prim.java
+// global boolean flag to avoid cycle
+// priority queue to help choose shorter edges
+//  we do not need to use -ve sign to reverse the sort order
+/*
+// This example shows another form of reading graph input
+// inside int main() --- assume the graph is stored in AL, pq is empty
+// a blank ArrayList
+// sort by edge weight O(E log E)
+// PQ default: sort descending. Trick: use <(negative) weight(i, j), <i, j> >
+// no edge has been taken
+// no vertex has been taken
+// take & process vertex 0
+// up to O(E)
+// no need to negate id/weight
+// already taken, skipped
+// add w of this edge
+// take+process vertex u
+// 1 more edge is taken
+// optimization
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\bellman_ford.java
+/*
+// Graph in Figure 4.19, negative cycle exists
+// Bellman Ford's routine, basically = relax all E edges V-1 times
+// INF = 1e9 here
+// total O(V*E)
+// optimization
+// these two loops = O(E)
+// important check
+// not improving, skip
+// relax operation
+// optimization
+// one more pass to check
+// should be false
+// if true => -ve cycle
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\bellman_ford.py
+# Graph in Figure 4.18, has negative weight, but no negative cycle
+# 5 5 0
+# 0 1 1
+# 0 2 10
+# 1 3 2
+# 2 3 -10
+# 3 4 3
+# Graph in Figure 4.19, negative cycle exists, Bellman Ford's can detect this
+# 3 3 0
+# 0 1 1000
+# 1 2 15
+# 2 1 -42
+# Bellman Ford's routine, basically = relax all E edges V-1 times
+# INF = 1e9 here
+# total O(V*E)
+# optimization
+# these two loops = O(E)
+# important check
+# not improving, skip
+# relax operation
+# optimization
+# optimization
+# one more pass to check
+# should be false
+# if true => -ve cycle
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\bfs.java
+/*
+// This example shows another form of reading graph input
+// as an example, we start from this source, see Figure 4.3
+// BFS routine inside void main(String[] args) -- we do not use recursion
+// INF = 1e9 here
+// p is global
+// for output printing
+// additional feature
+// w ignored
+// dist[v] != INF now
+// parent of v is u
+// for next iteration
+// same parity
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\bfs.py
+# Graph in Figure 4.3, format: list of unweighted edges
+# This example shows another form of reading graph input
+# 13 16
+# 0 1    1 2    2  3   0  4   1  5   2  6    3  7   5  6
+# 4 8    8 9    5 10   6 11   7 12   9 10   10 11  11 12
+# as an example, we start from this source, see Figure 4.3
+# BFS routine inside main() -- we do not use recursion
+# p is global
+# for output printing
+# additional feature
+# w ignored
+# dist[v] != INF now
+# parent of v is u
+# for next iteration
+# same parity
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\dijkstra.java
+/*
+// INF = 1e9 here
+// Original Dijkstra's algorithm
+/*
+// dist[u] = INF
+// but dist[s] = 0
+// sort the pairs by non-decreasing distance from s
+// main loop
+// shortest unvisited u
+// all edges from u
+// not improving, skip
+// erase old pair
+// relax operation
+// enqueue better pair
+// (Modified) Dijkstra's algorithm
+// sort the pairs by non-decreasing distance from s
+// main loop
+// shortest unvisited u
+// a very important check
+// all edges from u
+// not improving, skip
+// relax operation
+// enqueue better pair
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\dijkstra.py
+# Graph in Figure 4.17
+# 5 7 0
+# 0 1 2
+# 0 2 6
+# 0 3 7
+# 1 3 3
+# 1 4 6
+# 2 4 1
+# 3 4 5
+# directed graph
+# (Modified) Dijkstra's routine
+# sort the pairs by non-decreasing distance from s
+# main loop
+# shortest unvisited u
+# a very important check
+# all edges from u
+# not improving, skip
+# relax operation
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\IntegerPair.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\spfa.java
+/*
+// Graph in Figure 4.19, negative cycle exists, SPFA will be trapped in an infinite loop/produces WA (stop only when overflow happens)
+// SPFA from source S
+// INF = 1e9 here
+// like BFS queue
+// unique to SPFA
+// pop from queue
+// not improving, skip
+// relax operation
+// add to the queue
+// only if v is not
+// already in the queue
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\sssp\spfa.py
+# SPFA from source S
+# initially, only source vertex s has dist[s] = 0 and in the queue
+# pop from queue
+# not improving, skip
+# relax operation
+# add to the queue
+# only if v is not
+# already in the queue
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\articulation.java
+// we only need this
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// dfs_low[u] <= dfs_num[u]
+// a tree edge
+// special case, root
+// for articulation point
+// store this information first
+// for bridge
+// update dfs_low[u]
+// a back edge and not direct cycle
+// update dfs_low[u]
+/*
+// Right graph in Figure 4.6/4.7/4.8
+// store blank vector first
+// global variable
+// special case
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\cyclecheck.java
+// now we need three flags
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// back vs bidirectional
+// check edge properties
+// color u as EXPLORED
+// EXPLORED->UNVISITED
+// a tree edge u->v
+// EXPLORED->EXPLORED
+// EXPLORED->VISITED
+// color u as VISITED/DONE
+/*
+// Scanner sc = new Scanner(new File("dfs_cc_in.txt"));
+/*
+// store blank vector first
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\dfs_cc.java
+// we only need these two
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// normal usage
+// this vertex is visited
+// mark u as visited
+// w ignored
+// to avoid cycle
+// recursively visits v
+/*
+// store blank vector first
+// for each u in [0..V-1]
+// if that u is unvisited
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\IntegerPair.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\toposort.java
+// we only need these two
+// these variables have to be global to be easily accessible by our recursion (other ways exist)
+// this is the only change
+/*
+// store blank vector first
+// make sure that the given graph is DAG
+// global variable
+// global variable
+// reverse ts or simply read the content of ts backwards
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa00469.java
+// classic DFS flood fill
+/* UVa 469 - Wetlands of Florida, 0.659s in Java, 0.162s in C++ */
+// S,SE,E,NE,N,NW,W,SW
+// neighbors
+// outside
+// we want only c1
+// important step to avoid cycling!
+// coloring c1 -> c2, add 1 to answer
+// recurse to neighbors
+// inside the void main(String[] args) of the solution for UVa 469 - Wetlands of Florida
+// read the implicit graph as global 2D array 'grid'/R/C and (row, col) query coordinate
+// remove dummy line
+// start of query
+// index starts from 0!
+// change water 'W' to '.'; count size of this lake
+// restore for next query
+// last test case
+// next test case
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa10004.java
+// Bicoloring
+// bidirectional
+// add a Boolean flag
+// as with original BFS
+// don't record distances
+// just record two colors
+// u & v have same color
+// a coloring conflict :(
+// optional speedup
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa10004.py
+# Bicoloring
+# bidirectional
+# add one more boolean flag, initially true
+# but, instead of recording distance,
+# we just record two colors {0, 1}
+# u & v have the same color
+# we have a coloring conflict
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa11060.java
+// Beverages
+// give index i to B1
+// directed edge
+// enqueue vertices with zero incoming degree into a (priority) queue pq
+// min priority queue
+// next to be processed
+// smaller index first
+// Kahn's algorithm
+// process u here
+// virtually remove u->v
+// not a candidate, skip
+// enqueue v in pq
+// dummy
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa11060.py
+# Beverages
+#{}: Dilbert should drink beverages in this order:".format(caseNo))
+# enqueue vertices with zero incoming degree into a (priority) queue pq
+# min priority queue
+# all vertices with 0 in-degree can be processed
+# smaller index goes first
+# Kahn's algorithm
+# process u
+# virtually 'remove' u->v
+# v is the next candidate
+# smallest id to front
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch4\traversal\UVa11838.java
+// Come and Go
+// check if the graph is strongly connected, i.e. the SCC of the graph is the graph itself (only 1 SCC)
+// 0.835s in Java, 0.092s in C++
+// global variables
+// dfs_low[u] <= dfs_num[u]
+// stores u in a vector based on order of visitation
+// a tree edge
+// condition for update
+// a root/start of an SCC
+// pass = 1 (original), 2 (transpose)
+// as in finding topological order in Section 4.2.5
+// the transposed graph
+// always
+// if this is two way, add the reverse direction
+// run Tarjan's SCC code here
+// dfs_num = new ArrayList<>(Collections.nCopies(N, UNVISITED));
+// dfs_low = new ArrayList<>(Collections.nCopies(N, 0));
+// visited = new ArrayList<>(Collections.nCopies(N, 0));
+// St = new Stack<>();
+// dfsNumberCounter = numSCC = 0;
+// for (int u = 0; u < N; ++u)
+//   if (dfs_num.get(u) == UNVISITED)
+//     tarjanSCC(u);
+// run Kosaraju's SCC code here
+// first pass: record the post-order of original graph
+// second pass: explore SCCs using first pass order
+// if SCC is only 1, print 1, otherwise, print 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\primes.java
+// 10^7 should be enough for most cases
+// compact list of primes in form of vector<int>
+// first part
+// create list of primes in [0..upperbound]
+// add 1 to include upperbound
+// set all bits to 1
+// except index 0 and 1
+// cross out multiples of i starting from i * i!
+// also add this vector containing list of primes
+// call this method in main method
+// a good enough deterministic prime tester
+// O(1) for small primes
+// it takes longer time if N is a large prime!
+// note: only work for N <= (last prime in vi "primes")^2
+// second part
+// remember: vi is vector of integers, long is long long
+// vi `primes' (generated by sieve) is optional
+// using PF = 2, 3, 4, ..., is also ok
+// stop at sqrt(N), but N can get smaller
+// remove this PF
+// only consider primes!
+// special case if N is actually a prime
+// if pf exceeds 32-bit integer, you have to change vi
+// third part
+// count this pf only once
+// start from ans = 1
+// count the power
+// according to the formula
+// (last factor has pow = 1, we add 1 to it)
+// start from ans = 1
+// formula
+// last one
+// start from ans = N
+// only count unique factor
+// last factor
+// first part: the Sieve of Eratosthenes
+// can go up to 10^7 (need few seconds)
+// 10-digits prime
+// not a prime, 104729*1299709
+// second part: prime factors
+// slowest, 2147483647 is a prime
+// slow, 2 large pfactors 104729*1299709
+// faster, 2^10*3^4*5*7^4*11*13
+//res = primeFactors((long)(1010189899 * 1010189899)); // "error"
+//for (vi::iterator i = res.begin(); i != res.end(); i++) System.out.printf("^ %d\n", *i);
+// third part: prime factors variants
+// 2^1 * 5^2 => 3
+// 2^1 * 5^2 => 2
+// 2^1 * 5^2 => 2 + 5 + 5 = 12
+// 1, 2, 5, 10, 25, 50, 6 divisors
+// 1 + 2 + 5 + 10 + 25 + 50 = 93
+// 20 integers < 50 are relatively prime with 50
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa00350.java
+// Pseudo-Random Numbers, 0.288s in Java, 0.022s in C++
+// function "int f(int x)" must be defined earlier
+// 1st part: finding k*mu, hare's speed is 2x tortoise's
+// f(x0) is the node next to x0
+// 2nd part: finding mu, hare and tortoise move at the same speed
+// 3rd part: finding lambda, hare moves, tortoise stays
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa00350.py
+# Pseudo-Random Numbers, 0.288s in Java, 0.022s in C++, 0.160s in Python
+# 1st part: finding k*mu, hare's speed is 2x tortoise's
+# f(x0) is the node next to x0
+# 2nd part: finding mu, hare and tortoise move at the same speed
+# 3rd part: finding lambda, hare moves, tortoise stays
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa01230.java
+// 0.189s in Java
+// UVa 01230 (LA 4104)
+// valueOf converts
+// simple integer
+// into BigInteger
+// it's in the library!
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa01230.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10229.java
+// Modular Fibonacci, 0.282s in Java, 0.019s in C++
+// O(n^3 ~> 1) as n=2
+// modulo arithmetic is used here
+// O(n^3 log p ~> log p)
+// prepare identity matrix
+// iterative version of Divide & Conquer exponentiation
+// check if p is odd (the last bit is on)
+// update ans
+// square the base
+// divide p by 2
+// special Fibonaccci matrix
+// set MOD = 2^m
+// O(log n)
+// this if fib(n)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10235.java
+// 2.788s in Java
+// UVa 10235
+// certainty 10 is enough
+/*
+// old (and longer) C++ code for comparison
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10551.java
+// 0.345s in Java
+// Kattis basicremains
+// test cases are small
+// the second parameter
+// is the base
+// can output in any base
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10814.java
+// 0.212s in Java
+// UVa 10814
+// we have to use > 0
+// ignore this `/' char
+// wow :)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10814.py
+# 0.040s in Python
+# Python's built in fractions module
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10925.java
+// 0.572s in Java using Scanner
+// 0.110s in Java using BufferedReader/PrintWriter
+// in package java.math
+// UVa 10925 - Krakovia
+// use BufferedReader
+// and PrintWriter
+// = fast IO
+// N bills
+// F friends
+// built-in constant
+// sum the N large bills
+// string constructor
+// BigInteger addition
+// divide the large sum to F friends
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch5\UVa10925.py
+# make Python I/O a bit faster
+# N bills, F friends
+# native Big Integer support
+# sum the N large bills
+# native Big Integer, will not overflow
+#%d costs %d: each friend should pay %d\n"
+# integer divide the large sum to F friends
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\basic_string.java
+// make sure ch is in lowercase
+// technique to differentiate first line with the other lines
+// to differentiate whether the previous line contains a dash or not
+// if the last character is '-', delete it
+// only append " " if this line is the second one onwards
+// we can use str[i] as terminating condition as string in C++ is also terminated with NULL (0)
+// make each character lower case
+// already returns 1 or 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\basic_string.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\kmp.java
+// T = text, P = pattern
+// n = length of T, m = length of P
+// b = back table
+// try all potential starting indices
+// use boolean flag `found'
+// if mismatch found
+// abort this, shift starting index i by +1
+// if P[0 .. m - 1] == T[i .. i + m - 1]
+// call this before calling kmpSearch()
+// starting values
+// pre-process the pattern string P
+// if different, reset j using b
+// if same, advance both pointers
+// observe i = 8, 9, 10, 11, 12 with j = 0, 1, 2, 3, 4
+// in the example of P = "SEVENTY SEVEN" above
+// this is similar as kmpPreprocess(), but on string T
+// starting values
+// search through string T
+// if different, reset j using b
+// if same, advance both pointers
+// a match found when j == m
+// prepare j for the next possible match
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\sa.java
+// strncmp-in-java-SA-code-not-needed,java-LRS-minor-bug
+// the input string, up to 100K characters
+// the length of input string
+// rank array and temporary rank array
+// suffix array and temporary suffix array
+// for counting/radix sort
+// the pattern string (for string matching)
+// the length of pattern string
+// for computing longest common prefix
+// LCP[i] stores the LCP between previous suffix "T + SA[i-1]" and current suffix "T + SA[i]"
+// up to 255 ASCII chars or length of n
+// clear frequency table
+// count the frequency of each rank
+// shuffle the suffix array if necessary
+// update the suffix array SA
+// this version can go up to 100000 characters
+// initial rankings
+// initial SA: {0, 1, 2, ..., n-1}
+// repeat sorting process log n times
+// actually radix sort: sort based on the second item
+// then (stable) sort based on the first item
+// re-ranking; start from rank r = 0
+// compare adjacent suffices
+// if same pair => same rank r; otherwise, increase r
+// update the rank array RA
+// default value
+// compute Phi in O(n)
+// remember which suffix is behind this suffix
+// compute Permuted LCP in O(n)
+// special case
+// L will be increased max n times
+// L will be decreased max n times
+// compute LCP in O(n)
+// put the permuted LCP back to the correct position
+// string matching in O(m log n)
+// valid matching = [0 .. n-1]
+// find lower bound
+// this is round down
+// try to find P in suffix 'mid'
+// prune upper half (notice the >= sign)
+// prune lower half including mid
+// observe `=' in "res >= 0" above
+// if not found
+// if lower bound is found, find upper bound
+// prune upper half
+// prune lower half including mid
+// (notice the selected branch when res == 0)
+// special case
+// return lower/upper bound as the first/second item of the pair, respectively
+// print out the length and the actual LRS
+// O(n)
+// print out the length and the actual LCS
+// not used in Java version
+// char ans[MAX_N];
+// strcpy(ans, "");
+//System.out.printf("\nRemember, T = '%s'\nNow, enter another string P:\n", new String(T));
+// T already has '.' at the back
+// append P and '#'
+// update n
+// O(n log n)
+// O(n)
+// different owner
+// not used in Java version
+// strncpy(ans, T + SA[i], maxLCP);
+// ans[maxLCP] = 0;
+//System.out.printf("Enter a string T below, we will compute its Suffix Array:\n");
+// O(n log n)
+// O(n)
+// LRS demo
+// find the longest repeated substring of the first input string
+// stringMatching demo
+//System.out.printf("\nNow, enter a string P below, we will try to find P in T:\n");
+// LCS demo
+// find the longest common substring between T and P
+// note that the LRS and LCS demo are slightly different in Java version
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\str_align.java
+// Needleman Wunsnch's algorithm
+// insert/delete = -1 point
+// match = 2 points, mismatch = -1 point
+// cost for match or mismatches
+// insert/delete = -1 point
+// delete
+// insert
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch6\str_align.py
+# Needleman Wunsnch's algorithm
+# match = 2 points, mismatch = -1 point
+# insert/delete = -1 point
+# delete
+# insert
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\circles.java
+// whenever possible, work with point_i
+// default constructor
+// constructor
+// only used if more precision is needed
+// default constructor
+// constructor
+// all integer version
+// all integer
+// inside/border/outside
+// circle equation, inside, border, outside
+// 0-inside
+// 1-at border
+// 2-outside
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\points_lines.java
+// we will use constant Math.PI in Java
+//struct point_i { int x, y; };        // basic raw form, minimalist mode
+// whenever possible, work with point_i
+// default constructor
+// user-defined
+// only used if more precision is needed
+// default constructor
+// user-defined
+// use EPS (1e-9) when testing equality of two floating points
+// override less than operator
+// useful for sorting
+// first: by x-coordinate
+// second: by y-coordinate
+// they are equal
+// Euclidean distance
+// Math.hypot(dx, dy) returns sqrt(dx * dx + dy * dy)
+// return double
+// rotate p by theta degrees CCW w.r.t origin (0, 0)
+// multiply theta with PI / 180.0
+// a way to represent a line
+// the answer is stored in the third parameter
+// vertical line is fine
+// IMPORTANT: we fix the value of b to 1.0
+// not needed since we will use the more robust form: ax + by + c = 0 (see above)
+// another way to represent a line
+// special case: vertical line
+// l contains m = INF and c = x_value
+// to denote vertical line x = x_value
+// we need this return variable to differentiate result
+// l contains m and c of the line equation y = mx + c
+// check coefficients a & b
+// also check coefficient c
+// returns true (+ intersection point) if two lines are intersect
+// no intersection
+// solve system of 2 linear algebraic equations with 2 unknowns
+// special case: test for vertical line to avoid division by zero
+// name: `vec' is different from Java Vector
+// convert 2 points to vector
+// nonnegative s = [<1 .. 1 .. >1]
+// shorter.same.longer
+// translate p according to v
+// convert point and gradient/slope to line
+// always -m
+// always 1
+// compute this
+// perpendicular to l and pass through p
+// special case 1: vertical line
+// special case 2: horizontal line
+// normal line
+// intersect line l with this perpendicular line
+// the intersection point is the closest point
+// returns the reflection of point on a line
+// similar to distToLine
+// create a vector
+// translate p twice
+// returns the distance from p to the line defined by
+// two points a and b (a and b must be different)
+// the closest point is stored in the 4th parameter
+// formula: c = a + u * ab
+// translate a to c
+// Euclidean distance between p and c
+// returns the distance from p to the line segment ab defined by
+// two points a and b (still OK if a == b)
+// the closest point is stored in the 4th parameter
+// closer to a
+// Euclidean distance between p and a
+// closer to b
+// Euclidean distance between p and b
+// run distToLine as above
+// returns angle aob in rad
+//// another variant
+//int area2(point p, point q, point r) { // returns 'twice' the area of this triangle A-B-c
+//  return p.x * q.y - p.y * q.x +
+//         q.x * r.y - q.y * r.x +
+//         r.x * p.y - r.y * p.x;
+//}
+// note: to accept collinear points, we have to change the `> 0'
+// returns true if point r is on the left side of line pq
+// returns true if point r is on the same line as the line pq
+// note that both P1 and P2 are (0.00, 0.00)
+// true
+// false
+// sorting points demo
+// rearrange the points as shown in the diagram below
+/*
+// should be 5.000
+// line equations
+// should be -0.50 * x + 1.00 * y - 1.00 = 0.00
+// a vertical line, not a problem in "ax + by + c = 0" representation
+// should be 1.00 * x + 0.00 * y - 2.00 = 0.00
+// parallel, same, and line intersection tests
+// no
+// yes, l1 (P[0]-P[1]) and l3 (P[2]-P[3]) are parallel
+// no
+// yes, l2 (P[0]-P[2]) and l4 (P[2]-P[4]) are the same line (note, they are two different line segments, but same line)
+// yes, l1 (P[0]-P[1]) and l2 (P[0]-P[2]) are intersect at (2.0, 2.0)
+// other distances
+// closer to A (or P[2]) = (2.00, 4.00)
+// closer to midway between AB = (3.20, 4.60)
+// closer to B (or P[3]) = (6.00, 6.00)
+// should be (0.00, 3.00)
+// 90 degrees
+// 63.43 degrees
+// 180 degrees
+// no
+// yes
+// no
+// yes
+// collinear if r(35, 31)
+// right
+/*
+// translation
+// imagine there is an arrow from A to B (see the diagram above)
+// D will be located in coordinate (3.0 + 2.0, 2.0 + 1.0) = (5.0, 3.0)
+// E will be located in coordinate (3.0 + 1/2 * 2.0, 2.0 + 1/2 * 1.0) = (4.0, 2.5)
+// rotation
+// B = (4.0, 3.0)
+// rotate B by 90 degrees COUNTER clockwise, F = (-3.0, 4.0)
+// rotate B by 180 degrees COUNTER clockwise, G = (-4.0, -3.0)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\polygon.java
+// In Java, we can use Math.PI instead of using Math.acos(-1.0)
+// only used if more precision is needed
+// default constructor
+// user-defined
+// use EPS (1e-9) when testing equality of two floating points
+// override less than operator
+// useful for sorting
+// first: by x-coordinate
+// second: by y-coordinate
+// they are equal
+// name: `vec' is different from Java Vector
+// convert 2 points to vector
+// Euclidean distance
+// return double
+// returns the perimeter, which is the sum of Euclidian distances
+// of consecutive line segments (polygon edges)
+// remember that P[0] = P[n-1]
+// returns the area, which is half the determinant
+// works for both convex and concave polygons
+// returns angle aob in rad
+// note: to accept collinear points, we have to change the `> 0'
+// returns true if point r is on the left side of line pq
+// returns true if point r is on the same line as the line pq
+// returns true if we always make the same turn while examining
+// all the edges of the polygon one by one
+// a point/sz=2 or a line/sz=3 is not convex
+// remember one result
+// then compare with the others
+// different sign -> this polygon is concave
+// this polygon is convex
+// returns true if point p is in either convex/concave polygon P
+// assume first vertex = last vertex
+// left turn/ccw
+// right turn/cw
+// line segment p-q intersect with line A-B.
+// cuts polygon Q along the line formed by point a -> point b
+// (note: the last point must be the same as the first point)
+// Q[i] is on the left of ab
+// edge (Q[i], Q[i+1]) crosses line ab
+// make P's first point = P's last point
+// safeguard from corner case
+// special case, the CH is P itself
+// first, find P0 = point with lowest Y and if tie: rightmost X
+// swap P[P0] with P[0]
+// second, sort points by angle w.r.t. P0
+// use this global variable as reference
+// angle-sorting function
+// which one is closer?
+// third, the ccw tests
+// initial S
+// then, we check the rest
+// note: n must be >= 3 for this method to work
+// left turn, accept
+// or pop the top of S until we have a left turn
+// return the result
+// 6 points, entered in counter clockwise order, 0-based indexing
+// loop back
+// 31.64
+// 49.00
+// false (P1 is the culprit)
+//// the positions of P6 and P7 w.r.t the polygon
+//7 P5--------------P4
+//6 |                  \
+//5 |                    \
+//4 |   P7                P3
+//3 |   P1___            /
+//2 | / P6    \ ___    /
+//1 P0              P2
+//0 1 2 3 4 5 6 7 8 9 101112
+// outside this (concave) polygon
+// false
+// inside this (concave) polygon
+// true
+// cutting the original polygon based on line P[2] -> P[4] (get the left side)
+//7 P5--------------P4
+//6 |               |  \
+//5 |               |    \
+//4 |               |     P3
+//3 |   P1___       |    /
+//2 | /       \ ___ |  /
+//1 P0              P2
+//0 1 2 3 4 5 6 7 8 9 101112
+// new polygon (notice the index are different now):
+//7 P4--------------P3
+//6 |               |
+//5 |               |
+//4 |               |
+//3 |   P1___       |
+//2 | /       \ ___ |
+//1 P0              P2
+//0 1 2 3 4 5 6 7 8 9
+// smaller now 29.15
+// 40.00
+// running convex hull of the resulting polygon (index changes again)
+//7 P3--------------P2
+//6 |               |
+//5 |               |
+//4 |   P7          |
+//3 |               |
+//2 |               |
+//1 P0--------------P1
+//0 1 2 3 4 5 6 7 8 9
+// now this is a rectangle
+// precisely 28.00
+// precisely 48.00
+// true
+// true
+// true
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch7\triangles.java
+// whenever possible, work with point_i
+// default constructor
+// constructor
+// only used if more precision is needed
+// default constructor
+// constructor
+// Heron's formula, split sqrt(a * b) into sqrt(a) * sqrt(b); in implementation
+//====================================================================
+// from ch7_01_points_lines
+// a way to represent a line
+// the answer is stored in the third parameter
+// vertical line is fine
+// IMPORTANT: we fix the value of b to 1.0
+// check coefficients a & b
+// returns true (+ intersection point) if two lines are intersect
+// no intersection
+// solve system of 2 linear algebraic equations with 2 unknowns
+// special case: test for vertical line to avoid division by zero
+// name: `vec' is different from Java Vector
+// convert 2 points to vector
+// nonnegative s = [<1 .. 1 .. >1]
+// shorter.same.longer
+// translate p according to v
+//====================================================================
+// assumption: the required points/lines functions have been written
+// returns 1 if there is an inCircle center, returns 0 otherwise
+// if this function returns 1, ctr will be the inCircle center
+// and r is the same as rInCircle
+// no inCircle center
+// compute these two angle bisectors
+// get their intersection point
+// assumption: the required points/lines functions have been written
+// returns r, the radius of the circumCircle if there is a circumCenter center,
+// and set ctr to be the circumCircle center
+// returns 0 otherwise
+// distance from center to 1 of the 3 points
+// returns true if point d is inside the circumCircle defined by a,b,c
+// a right triangle
+// must be the same as above
+// 1.00
+// same, 1.00
+// (3.00, 1.00)
+// 2.50
+// same, 2.50
+// (2.00, 1.50)
+// inside triangle and circumCircle
+// outside the triangle but inside circumCircle
+// slightly outside
+// Law of Cosines
+// Law of Sines
+// Phytagorean Theorem
+// Triangle Inequality
+// yes
+// no, actually straight line
+// no
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa01079.java
+// World Finals Stockholm 2009, A - A Careful Approach, UVa 1079, LA 4445, 0.???s in Java, 0.578s in C++
+// with certain landing order, and certain L, try
+// landing those planes and see what is the gap to b[order[n - 1]]
+// greedy, 1st aircraft lands ASAP
+// for the other aircrafts
+// can land: greedily choose max of a[order[i]] or targetLandingTime
+// return +ve value to force binary search to reduce L
+// return -ve value to force binary search to increase L
+// Java does not have next_permutation like C++ <algorithm>
+// do things to curPermute
+// min 0s, max 1 day = 86400s
+// start with an infeasible solution
+// binary search L, EPS = 1e-3
+// we want the answer rounded to nearest int
+// round down first
+// must increase L
+// infeasible, must decrease L
+// get the max over all permutations
+// 2 <= n <= 8
+// plane i land safely at interval [ai, bi]
+// originally in minutes, convert to seconds
+// variable to be searched for
+// permute plane landing order, up to 8!
+// other way for rounding is to use printf format string: %.0lf:%0.2lf
+// round to nearest second
+// one digit?
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa01231.java
+// ACORN, UVa 1231, LA 4106, 0.???s in Java (submission error?), 0.344s in C++
+// there is an acorn here
+// initialization
+// from this tree, +1 above
+// best from tree at height + f
+// update this too
+// solution will be here
+// ignore the last number 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch8\UVa10911.java
+/* UVa 10911 - Forming Quiz Teams, 0.462s in Java, 0.032s in C++ */
+// this is 2^16, max N = 8
+// DP state = bitmask
+// we initialize `memo' with -1 in the main function
+// this state has been computed before
+// simply lookup the memo table
+// all students are already matched
+// the cost is 0
+// initialize with a large value
+// find the first bit that is off
+// then, try to match p1
+// with another bit p2 that is also off
+// pick the minimum
+// store result in a memo table and return
+// dummy
+// use DP to solve min weighted perfect matching on small general graph
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\GaussianElimination.java
+// adjust this value as needed
+// adjust this value as needed
+// input: N, Augmented Matrix Aug, output: Column vector X, the answer
+// the forward elimination phase
+// which row has largest column value
+// remember this row l
+// swap this pivot row, reason: minimize floating point error
+// t is a temporary double variable
+// the actual forward elimination phase
+// the back substitution phase
+// start from back
+// the answer is here
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\LCA.java
+// backtrack to current node
+// we assume that the root is at index 0
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\Pollardsrho.java
+// x = (x^2 % n + b) % n
+// special
+// rand for luck
+// initially y = x
+// x = f(x)
+// y = f(f(y))
+// d = (x-y) % n
+// if d != 1
+// d is one of the divisor of composite number n
+// special case, n = 1
+// n is a prime, the only factor is n
+// n is a composite number, can be split
+// recursive check to divisor
+// and n/divisor
+// Big
+// factorize n to 7 x 124418296927 x 143054969437
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\SparseTable.java
+// Range Minimum Query
+// adjust this value as needed
+// constructor as well as pre-processing routine
+// RMQ of sub array starting at index i + length 2^0=1
+// the two nested loops below have overall time complexity = O(n log n)
+// for each j s.t. 2^j <= n, O(log n)
+// for each valid i, O(n)
+// RMQ
+// start at index i of length 2^(j-1)
+// start at index i+2^(j-1) of length 2^(j-1)
+// 2^k <= (j-i+1)
+// same example as in chapter 2: segment tree
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\UVa10181.java
+// 15-Puzzle Problem with IDA*, 2.975s in Java, 1.758s in C++
+// ROW_SIZE is a matrix of 4 x 4
+// E,N,W,S
+// R,U,L,D
+// heuristic: sum of Manhattan distances (compute all)
+// Manhattan distance
+// heuristic: sum of manhattan distances (compute delta)
+// transform 16 numbers into 64 bits, exactly into ULL
+// move left 4 bits
+// add this digit (max 15 or 1111)
+// not pure backtracking... this is to prevent cycling
+// not good
+// mark this as visited
+// swap first
+// if ok, no need to restore, just go ahead
+// restore
+// next limit
+// nlim > lim
+// pruning condition in the problem
+// change to X (15)
+// remember the index
+// use 0-based indexing
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\UVa11616.java
+// Roman Numerals, 0.986s in Java (almost TLE), only 0.032s in C++
+// process from larger values to smaller values
+// check next char first
+// by definition
+// skip this char
+// Arabic to Roman Numerals
+// Roman to Arabic Numerals
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpbook-code-master\cpbook-code-master\ch9\UVa11817.java
+// Tunnelling the Earth
+// Great Circle distance + Euclidean distance
+// 0.852s in Java, 0.019s in C++
+// in meters
+// 3D version

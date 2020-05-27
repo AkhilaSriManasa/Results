@@ -1,0 +1,458 @@
+﻿//#include <Windows.h>
+//, ground_truth_shapes[i]);
+// std::cout << "error:" << e << std::endl;
+// DrawPredictedImage(images[i], res);
+//, ground_truth_shapes[i]);
+// else{
+// 	std::cout << "your validation dataset is 0" << std::endl;
+// }
+//offset_ = cv::Point2f(0, 0);
+//std::vector<cv::Mat_<double>>& regression_targets,
+//const std::vector<cv::Mat_<double>>& augmented_ground_truth_shapes,
+//std::cout << "build forest of landmark: " << landmark_index_ << " of stage: " << stage_ << std::endl;
+//regression_targets_ = &regression_targets;
+// random generate feature locations
+//std::cout << "generate feature locations" << std::endl;
+//std::cout << "get pixel differences" << std::endl;
+// matrix: features*images
+//getSimilarityTransform(ProjectShape(augmented_current_shapes[i], augmented_bboxes[i]),mean_shape_, rotation, scale);
+// which cols
+// which rows
+//real_y at first
+// which cols
+// which rows
+// train Random Forest
+// construct each tree in the forest
+//cv::Mat_<int> data = pixel_differences(cv::Range(0, local_features_num_), cv::Range(start_index, end_index));
+//cv::Mat_<int> sorted_data;
+//cv::sortIdx(data, sorted_data, cv::SORT_EVERY_ROW + cv::SORT_ASCENDING);
+/*int count = 0;
+// the node may not split under some cases
+// the node reaches max depth
+// actually it won't enter the if block, when the random function is good enough
+// the current node contain all sample when reaches max variance reduction, it is leaf node
+//if (current_depth + 1 < tree_depth_){
+//}
+// this case is not possible in this data structure
+//cv::Mat_<int> sorted_fea;
+// use -DBL_MAX will be better
+//int j = 0, tmp_index;
+// random generate threshold
+// do with regression target
+// actually feature_index will never be -1
+// the node can contain all the samples
+// the node in the tree is either leaf node or internal node that has both left and right children
+//p_current || !s.empty())
+/*while (!p_current && !s.empty()){
+// which cols
+// which rows
+//real_y at first
+// which cols
+// which rows
+// go left
+// go right
+// which cols
+// which rows
+//real_y at first
+// which cols
+// which rows
+// go left
+// go right
+//mean_shape_ = param.mean_shape_;
+// get the address pointer, not reference
+//SYSTEM MACORS LISTS: http://sourceforge.net/p/predef/wiki/OperatingSystems/
+// can be used under 32 and 64 bits both
+// just index in images_
+//
+//cv::RNG *random_generator = new cv::RNG();
+// check if validation set is add
+// calculate the regression targets
+// std::cout << "landmark: " << i << std::endl;
+// which cols
+// which rows
+//real_y at first
+// which cols
+// which rows
+// go left
+// go right
+//rd_forests_[j].GetBinaryFeatureIndex(k, images[augmented_images_index[i]], augmented_bboxes[i], augmented_current_shapes[i], rotations_[i], scales_[i]);
+//std::cout << global_binary_features[i][ind].index << " ";
+// if (i%500 == 0 && i > 0){
+//     std::cout << "extracted " << i << " images" << std::endl;
+// }
+// std::cout << "regress landmark " << i << std::endl;
+// = new double[augmented_current_shapes.size()];
+// if (i%500 == 0 && i > 0){
+//      std::cout << "predict " << i << " images" << std::endl;
+// }
+// std::cout << "\n";
+// if(i==0){
+// getSimilarityTransform(ProjectShape(ground_truth_shape, bbox), params_.mean_shape_, rotation, scale);
+// }else{
+// }
+/*
+// cur_landmark.store(0);
+//struct timeval tt1, tt2;
+//gettimeofday(&tt1, NULL);
+//t1 = std::thread(&Regressor::GetFeaThread, this);
+//gettimeofday(&tt2, NULL);
+//std::cout << "threads: " << tt2.tv_sec - tt1.tv_sec + (tt2.tv_usec - tt1.tv_usec)/1000000.0 << std::endl;
+/*
+//std::cout << stage_ << ": " << cur << std::endl;
+// which cols
+// which rows
+//real_y at first
+// which cols
+// which rows
+// go left
+// go right
+//int ind = j*params_.trees_num_per_forest_ + k;
+//rd_forests_[j].GetBinaryFeatureIndex(k,image, bbox, current_shape, rotation, scale);
+//std::cout << binary_features[ind].index << " ";
+//int ind = 0;
+// which cols
+// which rows
+//real_y at first
+// which cols
+// which rows
+// go left
+// go right
+//int ind = j*params_.trees_num_per_forest_ + k;
+//binary_features[ind].index = index + node->leaf_identity;//rd_forests_[j].GetBinaryFeatureIndex(k,image, bbox, current_shape, rotation, scale);
+//ind++;
+//std::cout << binary_features[ind].index << " ";
+//index += rd_forests_[j].all_leaf_nodes_;
+//std::cout << "\n";
+//std::cout << index << ":" << params_.trees_num_per_forest_*params_.landmarks_num_per_face_ << std::endl;
+// which cols
+// which rows
+//real_y at first
+// which cols
+// which rows
+// go left
+// go right
+//int ind = j*params_.trees_num_per_forest_ + k;
+//int ind = feature_node_index[j] + k;
+//binary_features[ind].index = leaf_index_count[j] + node->leaf_identity;
+//rd_forests_[j].GetBinaryFeatureIndex(k,image, bbox, current_shape, rotation, scale);
+//std::cout << binary_features[ind].index << " ";
+//std::cout << "\n";
+//std::cout << index << ":" << params_.trees_num_per_forest_*params_.landmarks_num_per_face_ << std::endl;
+// feature_node* binary_features = GetGlobalBinaryFeaturesThread(image, current_shape, bbox, rotation, scale);
+// feature_node* tmp_binary_features = GetGlobalBinaryFeaturesMP(image, current_shape, bbox, rotation, scale);
+//delete[] tmp_binary_features;
+//regressors_[i].SaveRegressor(fout);
+//regressors_[i].params_ = params_;
+//strcpy(buffer, ModelName.c_str());
+// can be used under 32 and 64 bits
+//_mkdir(buffer);
+//#include "facedetect-dll.h"
+//#pragma comment(lib,"libfacedetect.lib")
+// project the global shape coordinates to [-1, 1]x[-1, 1]
+// reproject the shape to global coordinates
+// get the mean shape, [-1, 1]x[-1, 1]
+// get the rotation and scale parameters by transferring shape_from to shape_to, shape_to = M*shape_from
+// center the data
+// calculate covariance matrix
+//CV_COVAR_COLS
+// read first line
+// read '\n' of the second line
+// read third line
+//const std::vector<cv::Mat_<double> >& current_shapes,
+// change this function to satisfy your own needs
+// for .box files I just use another program before this LoadImage() function
+// the contents in .box is just the bounding box of a face, including the center point of the box
+// you can just use the face rectangle detected by opencv with a little effort calculating the center point's position yourself.
+// you may use some utils function is this utils.cpp file
+// delete unnecessary lines below, my codes are just an example
+// train_jpgs.txt contains all the paths for each image, one image per line
+// for example: in Linux you can use ls *.jpg > train_jpgs.txt to get the paths
+// the file looks like as below
+/*
+//std::cout << name << std::endl;
+//std::cout << "reading file: " << name << std::endl;
+// check if the detected face rectangle is in the ground_truth_shape
+// std::cout << "image size: " << image.size() << std::endl;
+// this position may not contain a face
+// double CalculateError(cv::Mat_<double>& ground_truth_shape, cv::Mat_<double>& predicted_shape){
+// 	cv::Mat_<double> temp;
+// 	double sum = 0;
+// 	for (int i = 0; i<ground_truth_shape.rows; i++){
+// 		sum += norm(ground_truth_shape.row(i) - predicted_shape.row(i));
+// 	}
+//     return sum / (ground_truth_shape.rows);
+// }
+// generate index set I
+// A coordinate descent algorithm for
+// multi-class support vector machines by Crammer and Singer
+//
+//  min_{\alpha}  0.5 \sum_m ||w_m(\alpha)||^2 + \sum_i \sum_m e^m_i alpha^m_i
+//    s.t.     \alpha^m_i <= C^m_i \forall m,i , \sum_m \alpha^m_i=0 \forall i
+//
+//  where e^m_i = 0 if y_i  = m,
+//        e^m_i = 1 if y_i != m,
+//  C^m_i = C if m  = y_i,
+//  C^m_i = 0 if m != y_i,
+//  and w_m(\alpha) = \sum_i \alpha^m_i x_i
+//
+// Given:
+// x, y, C
+// eps is the stopping tolerance
+//
+// solution will be put in w
+//
+// See Appendix of LIBLINEAR paper, Fan et al. (2008)
+// To support weights for instances, use GETI(i) (i)
+// stopping tolerance for shrinking
+// Initial alpha can be set here. Note that
+// sum_m alpha[i*nr_class+m] = 0, for all i=1,...,l-1
+// alpha[i*nr_class+m] <= C[GETI(i)] if prob->y[i] == m
+// alpha[i*nr_class+m] <= 0 if prob->y[i] != m
+// If initial alpha isn't zero, uncomment the for loop below to initialize w
+// Uncomment the for loop if initial alpha isn't zero
+// for(m=0; m<nr_class; m++)
+//	w[(xi->index-1)*nr_class+m] += alpha[i*nr_class+m]*val;
+// calculate objective value
+// A coordinate descent algorithm for
+// L1-loss and L2-loss SVM dual problems
+//
+//  min_\alpha  0.5(\alpha^T (Q + D)\alpha) - e^T \alpha,
+//    s.t.      0 <= \alpha_i <= upper_bound_i,
+//
+//  where Qij = yi yj xi^T xj and
+//  D is a diagonal matrix
+//
+// In L1-SVM case:
+// 		upper_bound_i = Cp if y_i = 1
+// 		upper_bound_i = Cn if y_i = -1
+// 		D_ii = 0
+// In L2-SVM case:
+// 		upper_bound_i = INF
+// 		D_ii = 1/(2*Cp)	if y_i = 1
+// 		D_ii = 1/(2*Cn)	if y_i = -1
+//
+// Given:
+// x, y, Cp, Cn
+// eps is the stopping tolerance
+//
+// solution will be put in w
+//
+// See Algorithm 3 of Hsieh et al., ICML 2008
+// To support weights for instances, use GETI(i) (i)
+// PG: projected gradient, for shrinking and stopping
+// default solver_type: L2R_L2LOSS_SVC_DUAL
+// Initial alpha can be set here. Note that
+// 0 <= alpha[i] <= upper_bound[GETI(i)]
+// calculate objective value
+// A coordinate descent algorithm for
+// L1-loss and L2-loss epsilon-SVR dual problem
+//
+//  min_\beta  0.5\beta^T (Q + diag(lambda)) \beta - p \sum_{i=1}^l|\beta_i| + \sum_{i=1}^l yi\beta_i,
+//    s.t.      -upper_bound_i <= \beta_i <= upper_bound_i,
+//
+//  where Qij = xi^T xj and
+//  D is a diagonal matrix
+//
+// In L1-SVM case:
+// 		upper_bound_i = C
+// 		lambda_i = 0
+// In L2-SVM case:
+// 		upper_bound_i = INF
+// 		lambda_i = 1/(2*C)
+//
+// Given:
+// x, y, p, C
+// eps is the stopping tolerance
+//
+// solution will be put in w
+//
+// See Algorithm 4 of Ho and Lin, 2012
+// To support weights for instances, use GETI(i) (i)
+// Gnorm1_init is initialized at the first iteration
+// L2R_L2LOSS_SVR_DUAL
+// Initial beta can be set here. Note that
+// -upper_bound <= beta[i] <= upper_bound
+// obtain Newton direction d
+//if(iter % 10 == 0)
+//info(".");
+// info("\noptimization finished, #iter = %d\n", iter);
+//if(iter >= max_iter)
+//    info("\nWARNING: reaching max number of iterations\nUsing -s 11 may be faster\n\n");
+// calculate objective value
+//info("Objective value = %lf\n", v);
+//info("nSV = %d\n",nSV);
+// A coordinate descent algorithm for
+// the dual of L2-regularized logistic regression problems
+//
+//  min_\alpha  0.5(\alpha^T Q \alpha) + \sum \alpha_i log (\alpha_i) + (upper_bound_i - \alpha_i) log (upper_bound_i - \alpha_i),
+//    s.t.      0 <= \alpha_i <= upper_bound_i,
+//
+//  where Qij = yi yj xi^T xj and
+//  upper_bound_i = Cp if y_i = 1
+//  upper_bound_i = Cn if y_i = -1
+//
+// Given:
+// x, y, Cp, Cn
+// eps is the stopping tolerance
+//
+// solution will be put in w
+//
+// See Algorithm 5 of Yu et al., MLJ 2010
+// To support weights for instances, use GETI(i) (i)
+// store alpha and C - alpha
+// for inner Newton
+// Initial alpha can be set here. Note that
+// 0 < alpha[i] < upper_bound[GETI(i)]
+// alpha[2*i] + alpha[2*i+1] = upper_bound[GETI(i)]
+// Decide to minimize g_1(z) or g_2(z)
+//  g_t(z) = z*log(z) + (C-z)*log(C-z) + 0.5a(z-alpha_old)^2 + sign*b(z-alpha_old)
+// Newton method on the sub-problem
+// xi in the paper
+// tmpz in (0, C)
+// update w
+// calculate objective value
+// A coordinate descent algorithm for
+// L1-regularized L2-loss support vector classification
+//
+//  min_w \sum |wj| + C \sum max(0, 1-yi w^T xi)^2,
+//
+// Given:
+// x, y, Cp, Cn
+// eps is the stopping tolerance
+//
+// solution will be put in w
+//
+// See Yuan et al. (2010) and appendix of LIBLINEAR paper, Fan et al. (2008)
+// To support weights for instances, use GETI(i) (i)
+// Gnorm1_init is initialized at the first iteration
+// b = 1-ywTx
+// Initial w can be set here.
+// x->value stores yi*xij
+// obtain Newton direction d
+// recompute b[] if line search takes too many steps
+// calculate objective value
+// restore x->value
+// A coordinate descent algorithm for
+// L1-regularized logistic regression problems
+//
+//  min_w \sum |wj| + C \sum log(1+exp(-yi w^T xi)),
+//
+// Given:
+// x, y, Cp, Cn
+// eps is the stopping tolerance
+//
+// solution will be put in w
+//
+// See Yuan et al. (2011) and appendix of LIBLINEAR paper, Fan et al. (2008)
+// To support weights for instances, use GETI(i) (i)
+// Gnorm1_init is initialized at the first iteration
+// Initial w can be set here.
+//outer-level shrinking
+// optimize QP over wpd
+//inner-level shrinking
+// obtain solution of one-variable problem
+//inner stopping
+//active set reactivation
+// Recompute some info due to too many line search steps
+// calculate objective value
+// transpose matrix X from row format to column format
+// starts from 1
+// label: label name, start: begin of each class, count: #data of classes, perm: indices to the original data
+// perm, length l, must be allocated before calling this subroutine
+//
+// Labels are ordered by their first occurrence in the training set.
+// However, for two-class sets with -1/+1 labels and -1 appears first,
+// we swap labels to ensure that internally the binary SVM has positive data corresponding to the +1 instances.
+//
+//
+// Interface functions
+//
+// group training data of the same class
+// calculate weighted C
+// constructing the subproblem
+// multi-class svm by Crammer and Singer
+// the dimension of testing data may exceed that of training
+// for binary classification
+/* my own save and load model*/
+//    fprintf(fp, "solver_type %s\n", solver_type_table[param.solver_type]);
+//    fprintf(fp, "nr_class %d\n", model_->nr_class);
+//        fprintf(fp, "label");
+//        for(i=0; i<model_->nr_class; i++)
+//            fprintf(fp, " %d", model_->label[i]);
+//        fprintf(fp, "\n");
+//    fprintf(fp, "nr_feature %d\n", nr_feature);
+//    
+//    fprintf(fp, "bias %.16g\n", model_->bias);
+//    
+//    fprintf(fp, "w\n");
+//    for(i=0; i<w_size; i++)
+//    {
+//        int j;
+//        for(j=0; j<nr_w; j++)
+//            fprintf(fp, "%.16g ", model_->w[i*nr_w+j]);
+//        fprintf(fp, "\n");
+//    }
+//    for(i=0; i<w_size; i++)
+//    {
+//        int j;
+//        for(j=0; j<nr_w; j++)
+//            fscanf(fp, "%lf ", &model_->w[i*nr_w+j]);
+//        fscanf(fp, "\n");
+//    }
+/*****************************/
+// use inline here for better performance (around 20% faster than the non-inline one)
+// feat_idx: starting from 1 to nr_feature
+// label_idx: starting from 0 to nr_class-1 for classification models;
+//            for regression models, label_idx is ignored.
+// Parameters for updating the iterates.
+// Parameters for updating the trust region size delta.
+// Compute the actual reduction.
+// On the first iteration, adjust the initial step bound.
+// Compute prediction alpha*snorm of the step.
+// Update the trust region bound according to the ratio of actual to predicted reduction.
+/* constant times a vector plus a vector.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* daxpy_ */
+/* forms the dot product of two vectors.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* ddot_ */
+/* Needed for fabs() and sqrt() */
+/*  DNRM2 returns the euclidean norm of a vector via the function   
+/* Dereference inputs */
+/* The following loop is equivalent to this call to the LAPACK 
+/* dnrm2_ */
+/* scales a vector by a constant.   
+/* Dereference inputs */
+/* code for increment equal to 1 */
+/* clean-up loop */
+/* code for increment not equal to 1 */
+/* dscal_ */
+/* constant times a vector plus a vector.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* daxpy_ */
+/* forms the dot product of two vectors.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* ddot_ */
+/* Needed for fabs() and sqrt() */
+/*  DNRM2 returns the euclidean norm of a vector via the function   
+/* Dereference inputs */
+/* The following loop is equivalent to this call to the LAPACK 
+/* dnrm2_ */
+/* scales a vector by a constant.   
+/* Dereference inputs */
+/* code for increment equal to 1 */
+/* clean-up loop */
+/* code for increment not equal to 1 */
+/* dscal_ */

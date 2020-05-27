@@ -1,0 +1,4403 @@
+﻿MIT License
+
+Copyright (c) 2017 Nima Ara
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+[![NuGet](https://img.shields.io/nuget/v/Easy.Common.svg)](https://www.nuget.org/packages/Easy.Common) [![Build status](https://ci.appveyor.com/api/projects/status/ar3dp6i0kg9ii80o?svg=true)](https://ci.appveyor.com/project/NimaAra/easy-common)
+
+# Easy Common
+
+A set of useful utilities and helpers used across Easy.\* projects.
+
+Supports _.NET Core_ (_.NET 4.5_ & _netstandard2.0_) running on:
+
+- .NET Core
+- .NET Framework 4.5 and above
+- Mono 5.4
+- Xamarin.iOS 10.14
+- Xamarin.Mac 3.8
+- Xamarin.Android 7.5
+
+---
+
+#### Includes:
+
+- [`EasyDictionary`](https://github.com/NimaAra/Easy.Common/blob/master/Easy.Common/EasyDictionary.cs) featured in [Tranquillity in C# with EasyDictionary](http://www.nimaara.com/2019/04/10/easier-dictionary-in-c/)
+- [`IDGenerator`](https://github.com/NimaAra/Easy.Common/blob/master/Easy.Common/IDGenerator.cs) featured in [Generating IDs in C#, 'safely' and efficiently](http://www.nimaara.com/2018/10/10/generating-ids-in-csharp/)
+- [`StreamExtensions.CountLines`](https://github.com/NimaAra/Easy.Common/blob/master/Easy.Common/Extensions/StreamExtensions.cs#L46) featured in [Counting Lines of a Text File in C#, the Smart Way](http://www.nimaara.com/2018/03/20/counting-lines-of-a-text-file/)
+- [`DiagnosticReport`](https://github.com/NimaAra/Easy.Common/blob/master/Easy.Common/DiagnosticReport/DiagnosticReport.cs) featured in [Stuff Every .NET App Should be Logging at Startup](http://www.nimaara.com/2017/11/07/stuff-every-dotnet-app-should-be-logging-at-startup/)
+- [`ProducerConsumerQueue`](https://github.com/NimaAra/Easy.Common/blob/master/Easy.Common/ProducerConsumerQueue.cs) featured in [Practical Parallelization in C#](http://www.nimaara.com/2017/07/01/practical-parallelization-with-map-reduce-in-c/)
+- [`RestClient`](https://github.com/NimaAra/Easy.Common/blob/master/Easy.Common/RestClient.cs) featured in [Beware of the .NET HttpClient](http://www.nimaara.com/2016/11/01/beware-of-the-net-httpclient/)
+- [`Clock`](https://github.com/NimaAra/Easy.Common/blob/master/Easy.Common/Clock.cs) featured in [High Resolution Clock in .NET](http://www.nimaara.com/2016/07/06/high-resolution-clock-in-net/)
+
+And more to come...
+
+##### If you enjoy what I build then please <a href="https://www.buymeacoffee.com/sP0BhM9n6" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" width="120px" ></a> :-)
+/// <summary>
+/// A helper class for working with <c>Active Directory</c>.
+/// </summary>
+/// <summary>
+/// Returns the groups the current user is member of.
+/// </summary>
+/// <summary>
+/// Returns the groups the given <paramref name="userPrincipalName"/> is a member of.
+/// </summary>
+/// <summary>
+/// Returns the groups the given <paramref name="identity"/> is a member of.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="userLogon"/> is a member of
+/// the given <paramref name="groupName"/>.
+/// </summary>
+// if contains domain
+/// <summary>
+/// Compares the group membership for each of the items in <paramref name="nameToUserLogonMap"/>
+/// and generates a <c>HTML</c> report indicating the commonality as well as differences 
+/// between each users.
+/// </summary>
+/// <summary>
+/// A set of helpful methods
+/// </summary>
+/// <summary>
+/// Returns the time taken to start the current process.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the current <c>OS</c> is <c>Windows</c>.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the current <c>OS</c> is <c>Linux</c>.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the current <c>OS</c> is <c>OSX</c>.
+/// </summary>
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Gets the type of the current <c>OS</c>.
+/// </summary>
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Queries the process's headers to find if it is <c>LARGEADDRESSAWARE</c>.
+/// <remarks>The method is equivalent to running <c>DumpBin</c> on the executable.</remarks>
+/// </summary>
+/// <summary>
+/// <see href="https://helloacm.com/large-address-aware/"/>
+/// </summary>
+//No MZ Header
+//Get the PE header location.
+//No PE header
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// An abstraction which can update it's <see cref="Value"/> without resorting to locks.
+/// </summary>
+/// <typeparam name="T">The type of the value to be updated.</typeparam>
+/// <summary>
+/// Creates an instance of the <see cref="AtomicUpdater{T}"/>.
+/// </summary>
+/// <summary>
+/// Gets the latest value.
+/// </summary>
+/// <summary>
+/// Updates the <see cref="Value"/> atomically without locking.
+/// </summary>
+/// <param name="updater">The action which would update the <see cref="Value"/>.</param>
+// Let's first get the _secondary updated
+// Anyone reading the Value is will still get the _primary
+// now atomically set the _primary to be the latest update value
+// time to also update the old primary location to the latest value
+/// <summary>
+/// A Base36 Encoder and Decoder
+/// </summary>
+/// <summary>
+/// Encode the given number into a <see cref="Base36"/>string.
+/// </summary>
+/// <param name="input">The number to encode.</param>
+/// <returns>Encoded <paramref name="input"/> as string.</returns>
+/// <summary>
+/// Decode the <see cref="Base36"/> encoded string into a long.
+/// </summary>
+/// <param name="input">The number to decode.</param>
+/// <returns>Decoded <paramref name="input"/> as long.</returns> 
+/// <summary>
+/// Base 64 encoder using URL and filename-safe alphabet.
+/// </summary>
+/// <summary>
+/// Encodes the given <see langword="byte"/>[] into a URL and filename-safe Base64 encoded string.
+/// </summary>
+/// <param name="arg">The argument to encode</param>
+/// <returns>Encoded result as string</returns>
+// Standard base64 encoder
+// Remove any trailing '='s
+// 62nd char of encoding
+// 63rd char of encoding
+/// <summary>
+/// Decodes the given URL and filename-safe Base64 string into a 
+/// <see langword="byte"/>[].
+/// </summary>
+/// <param name="arg">The argument to decode</param>
+/// <returns>Decoded result as <see langword="byte"/>[]</returns>
+/// <exception cref="InvalidDataException">Thrown when the given 
+/// <paramref name="arg"/> is not a valid Base64 encoded string.
+/// </exception>
+// 62nd char of encoding
+// 63rd char of encoding
+// Pad with trailing '='s
+// No pad chars in this case
+// Two pad chars
+// One pad char
+// Standard base64 decoder
+/// <summary>
+/// An abstraction for notifying when an incomplete <see cref="Task"/> is blocked.
+/// </summary>
+/// <summary>
+/// Invoked when an incomplete task is blocked.
+/// </summary>
+/// <summary>
+/// Starts the alerter.
+/// </summary>
+/// <summary>
+/// Called for all existing event sources when the event listener is created 
+/// and when a new event source is attached to the listener.
+/// </summary>
+// 3 == Task|TaskTransfer
+/// <summary>
+/// Called whenever an event has been written by an event source for which the 
+/// event listener has enabled events.
+/// </summary>
+// TASKWAITBEGIN_ID
+// Behavior
+// TaskWaitBehavior.Synchronous
+/// <summary>
+/// An efficient helper class for converting between <see cref="T:byte[]"/> and <c>Hexadecimal</c> values.
+/// <remarks>
+/// <see href="https://www.codeproject.com/Tips/447938/High-performance-Csharp-byte-array-to-hex-string-t"/>
+/// </remarks>
+/// </summary>
+// assigned int values for bytes (0-255)
+// values for '\0' to 'f' where 255 indicates invalid input character
+// starting from '\0' and not from '0' costs 48 bytes
+// but results 0 subtractions and less if conditions
+// same as above but valid values are multiplied by 16
+/// <summary>
+/// Converts the given <paramref name="bytes"/> to <c>Hexadecimal</c> representation.
+/// </summary>
+// freeze toHexTable position in memory
+// freeze source position in memory
+// take first parsing position of source - allow inline pointer positioning
+// calculate result length
+// initialize result string with any character expect '\0'
+// take the first character address of result
+// pairs of characters explain the endiness of toHexTable
+// move on by pairs of characters (2 x 2 bytes) - allow in-line pointer positioning
+// more to go
+// set the value of the current pair and move to next pair and source byte
+/// <summary>
+/// Converts the given <paramref name="hexadecimalInput"/> to <see cref="T:byte[]"/>.
+/// </summary>
+// source length must be even
+// start position for parsing source
+// initial length of result
+// take the first character address of source
+// source starts with "0x"
+// source must not be just a "0x")
+// start position (bypass "0x")
+// result length (exclude "0x")
+// initialization of result for known length
+// freeze fromHexTable16 position in memory
+// freeze fromHexTable position in memory
+// take the first byte address of result
+// take first parsing position of source - allow incremental memory position
+// take first byte position of result - allow incremental memory position
+// source has more characters to parse
+// check for non valid characters in pairs
+// you may split it if you don't like its readability
+// keeps a fromHexTable value
+// check for character > 'f'
+// assign source value to current result position and increment source position
+// and check if is a valid character
+// check for character > 'f'
+// assign source value to "add" parameter and increment source position
+// and check if is a valid character
+// set final value of current result byte and move pointer to next byte
+/// <summary>
+/// This class provides a high resolution clock by using the new API available in <c>Windows 8</c>/ 
+/// <c>Windows Server 2012</c> and higher. In all other operating systems it returns time by using 
+/// a manually tuned and compensated <c>DateTime</c> which takes advantage of the high resolution
+/// available in <see cref="Stopwatch"/>.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="Clock"/>.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the instance of <see cref="Clock"/> provides high resolution time.
+/// <remarks>
+/// <para>
+/// This only returns <c>True</c> on <c>Windows 8</c>/<c>Windows Server 2012</c> and higher.
+/// </para>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the date and time in <c>UTC</c>.
+/// </summary>
+/* FYI
+/// <summary>
+/// Gets the local date time.
+/// </summary>
+/// <summary>
+/// Releases all resources used by the instance of <see cref="Clock"/>.
+/// </summary>
+/// <summary>
+/// A class returning configuration values as static objects.
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the <see cref="ConfigReader"/> class.
+/// <remarks>
+/// This constructor searches for default config file of the calling assembly.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Initializes a new instance of the <see cref="ConfigReader"/> class. 
+/// by loading <paramref name="configFile"/> and reading the values from it.
+/// </summary>
+/// <param name="configFile">Path to the configuration file</param>
+/// <param name="element">Name of the node which stores the key value pairs</param>
+/// <param name="keyAttribute">Attribute identifying the key</param>
+/// <param name="valueAttribute">Attribute identifying the value</param>
+/// <summary>
+/// Gets the file storing the config entries.
+/// </summary>
+/// <summary>
+/// Gets all of the settings retrieved from the configuration.
+/// </summary>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="values"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="values">The set of values associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// <remarks>
+/// The following values can be parsed (case-insensitive): 
+///     <c>True/False</c>,
+///     <c>Yes/No</c>,
+///     <c>0/1</c>
+/// </remarks>
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="separator">The <see cref="string"/> separating the values</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="formatSpecifier">The format used to parse the value as <paramref name="value"/></param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Maps three letter country codes to country names
+/// </summary>
+/// <summary>
+/// Returns a copy of the Country-Code mappings.
+/// <remarks>The mappings use the <see cref="StringComparer.OrdinalIgnoreCase"/></remarks>
+/// </summary>
+/// <summary>
+/// Returns the country name for the given three-letter country code.
+/// <remarks>
+/// For more information see: https://en.wikipedia.org/wiki/Three-letter_acronym
+/// </remarks>
+/// </summary>
+/// <param name="code">The three-letter country code, case does not matter</param>
+/// <param name="countryName">The country name</param>
+/// <returns><c>True</c> if mapping exists otherwise <c>False</c></returns>
+/// <summary>
+/// Provides HTTP content based on a <c>JSON</c> string.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="JSONContent"/> with the default encoding of <see cref="Encoding.UTF8"/>.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="JSONContent"/> with the given <paramref name="encoding"/>.
+/// </summary>
+/// <summary>
+/// Provides HTTP content based on an <c>XML</c> string.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="XMLContent"/> with the default encoding of <see cref="Encoding.UTF8"/>.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="XMLContent"/> with the given <paramref name="encoding"/>.
+/// </summary>
+/// <summary>
+/// Contains most commonly used delimiters as <see cref="T:char[]"/>.
+/// </summary>
+/// <summary>
+/// Gets a delimiter as <c>','</c>.
+/// </summary>
+/// <summary>
+/// Gets a delimiter as <c>'.'</c>.
+/// </summary>
+/// <summary>
+/// Gets a delimiter as <c>';'</c>.
+/// </summary>
+/// <summary>
+/// Gets a delimiter as <c>':'</c>.
+/// </summary>
+/// <summary>
+/// Gets a delimiter as <c>' '</c>.
+/// </summary>
+/// <summary>
+/// Gets a delimiter as <c>'\t'</c>.
+/// </summary>
+/// <summary>
+/// Gets a delimiter as <c>'|'</c>.
+/// </summary>
+/// <summary>
+/// Provides an abstraction for an object to be used dynamically as a key value pair
+/// where the property name is the key and value is an <see cref="object"/>.
+/// </summary>
+/// <summary>
+/// Creates a new instance of <see cref="DynamicDictionary"/>.
+/// </summary>
+/// <param name="ignoreCase">
+/// The flag indicating whether property names should be treated case sensitively.
+/// </param>
+/// <summary>
+/// Add the given <paramref name="item"/> to this instance.
+/// </summary>
+/// <param name="item"></param>
+/// <summary>
+/// Removes all the items from this instance.
+/// </summary>
+/// <summary>
+/// Determines whether this instance contains the given <paramref name="item"/>.
+/// </summary>
+/// <summary>
+/// Copies the elements of this instance to the given <paramref name="array"/>, starting at a particular <paramref name="array"/>.
+/// </summary>
+/// <summary>
+/// Removes the given <paramref name="item"/> from this instance.
+/// </summary>
+/// <summary>
+/// Gets the number of elements contained in this instance.
+/// </summary>
+/// <summary>
+/// Determines whether this instance is <c>Read-Only</c>.
+/// </summary>
+/// <summary>
+/// Returns an enumerator that iterates through the keys and values of this instance.
+/// </summary>
+/// <summary>
+/// Returns an enumerator that iterates through the keys and values of this instance.
+/// </summary>
+/// <summary>
+/// Determines whether this instance contains an element with the given <paramref name="key"/>.
+/// </summary>
+/// <summary>
+/// Adds an element for the given <paramref name="key"/> and associated <paramref name="value"/> to this instance.
+/// </summary>
+/// <summary>
+/// Removes the element with the given <paramref name="key"/> from this instance.
+/// </summary>
+/// <summary>
+/// Attempts to get the value associated to the given <paramref name="key"/>.
+/// </summary>
+/// <summary>
+/// Gets or sets the value stored against the given <paramref name="key"/>.
+/// <remarks>If the given <paramref name="key"/> does not exist, <c>NULL</c> is returned.</remarks>
+/// </summary>
+/// <summary>
+/// Gets an <see cref="ICollection{String}"/> containing the keys of this instance.
+/// </summary>
+/// <summary>
+/// Gets an <see cref="ICollection{Object}"/> containing the values of this instance.
+/// </summary>
+/// <summary>
+/// Attempts to get the member.
+/// </summary>
+// always return null if not found.
+/// <summary>
+/// Attempts to set the member.
+/// </summary>
+/// <summary>
+/// Attempts to invoke the member.
+/// </summary>
+/// <summary>
+/// Attempts to delete the member.
+/// </summary>
+/// <summary>
+/// Returns the enumeration of all dynamic member names.
+/// </summary>
+/// <summary>
+/// A dictionary whose <typeparamref name="TKey"/> can be defined as a delegate over 
+/// any property of the <typeparamref name="TValue"/>. 
+/// <remarks>
+/// <para>This class is not thread-safe.</para>
+/// <para>The keys associated to the values must not be changed after insertion.</para>
+/// </remarks> 
+/// </summary>
+/// <summary>
+/// Creates an instance of <see cref="EasyDictionary{TKey,TValue}"/>.
+/// </summary>
+/// <param name="keySelector">
+/// The delegate used to select the key against which the item will be stored.
+/// </param>
+/// <param name="sequence">
+/// A sequence to initialize the dictionary with.
+/// </param>
+/// <param name="comparer">
+/// The implementation of the <see cref="IEqualityComparer{TKey}"/> generic 
+/// interface to use when comparing keys, or null to use the default equality 
+/// comparer for the type of the key, obtained from <see cref="EqualityComparer{TKey}.Default"/>.
+/// </param>
+/// <summary>
+/// Creates an instance of <see cref="EasyDictionary{TKey,TValue}"/>.
+/// </summary>
+/// <param name="keySelector">
+/// The delegate used to select the key against which the item will be stored.
+/// </param>
+/// <param name="collection">
+/// A collection to initialize the dictionary with.
+/// </param>
+/// <param name="comparer">
+/// The implementation of the <see cref="IEqualityComparer{TKey}"/> generic 
+/// interface to use when comparing keys, or null to use the default equality 
+/// comparer for the type of the key, obtained from <see cref="EqualityComparer{TKey}.Default"/>.
+/// </param>
+/// <summary>
+/// Creates an instance of <see cref="EasyDictionary{TKey,TValue}"/>.
+/// </summary>
+/// <param name="keySelector">
+/// The delegate used to select the key against which the item will be stored.
+/// </param>
+/// <param name="dictionary">
+/// A dictionary to initialize the dictionary with.
+/// <remarks>
+/// Note a new key based on the <paramref name="keySelector"/> will be used to 
+/// store every value of the dictionary.
+/// </remarks>
+/// </param>
+/// <param name="comparer">
+/// The implementation of the <see cref="IEqualityComparer{TKey}"/> generic 
+/// interface to use when comparing keys, or null to use the default equality 
+/// comparer for the type of the key, obtained from <see cref="EqualityComparer{TKey}.Default"/>.
+/// </param>
+/// <summary>
+/// Creates an instance of <see cref="EasyDictionary{TKey,TValue}"/>.
+/// </summary>
+/// <param name="keySelector">
+/// The delegate used to select the key against which the item will be stored.
+/// </param>
+/// <param name="capacity">The initial number of elements this instance can contain.</param>
+/// <param name="comparer">
+/// The implementation of the <see cref="IEqualityComparer{TKey}"/> generic 
+/// interface to use when comparing keys, or null to use the default equality 
+/// comparer for the type of the key, obtained from <see cref="EqualityComparer{TKey}.Default"/>.
+/// </param>
+/// <summary>
+/// Gets the delegate used to select the key against which the item will be stored.
+/// </summary>
+/// <summary>
+/// Gets the count of items in the collection.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the <see cref="ICollection{TValue}"/> is read-only.
+/// </summary>
+/// <summary>
+/// Gets the <see cref="IEqualityComparer{TKey}"/> that is used to determine 
+/// equality of keys for the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the keys stored in the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the items stored as values stored in the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the keys stored in the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the items stored as values stored in the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the value associated with the given <paramref name="key"/>.
+/// </summary>
+/// <summary>
+/// Adds the given <paramref name="value"/> to the dictionary.
+/// </summary>
+/// <summary>
+/// Adds the <paramref name="value"/> if it does not already exist or replaces the existing value.
+/// </summary>
+/// <summary>
+/// Removes the given <paramref name="key"/> from the dictionary.
+/// </summary>
+/// <summary>
+/// Removes the given <paramref name="value"/> from the dictionary.
+/// </summary>
+/// <summary>
+/// Removes all items from the dictionary.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="value"/> exists.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="key"/> exists.
+/// </summary>
+/// <summary>
+/// Attempts to get the value associated with the specified <paramref name="key"/>.
+/// </summary>
+/// <summary>
+/// Copies the elements of the <see cref="ICollection{TValue}"/> to 
+/// the given <paramref name="array"/> starting at the given <paramref name="startIndex"/>.
+/// </summary>
+/// <summary>
+/// Return an enumerator that iterates through the dictionary.
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Returns an enumerator that iterates through the collection.
+/// </summary>
+/// <summary>
+/// Returns an enumerator that iterates through the sequence.
+/// </summary>
+// ReSharper disable once ForCanBeConvertedToForeach
+/// <summary>
+/// A generic thread-safe object pool.
+/// </summary>
+/// <typeparam name="T">The type of object to pool.</typeparam>
+/// <summary>
+/// Creates an instance of the <see cref="EasyPool{T}"/>.
+/// </summary>
+/// <param name="factory">
+/// The factory used to create an instance of <typeparamref name="T"/>
+/// </param>
+/// <param name="reset">The delegate used to reset the item returning to the pool.</param>
+/// <param name="maxCount">The maximum number of objects to store in the pool</param>
+/// <summary>
+/// Gets the count of items in the pool.
+/// </summary>
+/// <summary>
+/// Gets an item from the pool or creates a new one if none exists.
+/// </summary>
+/// <summary>
+/// Returns an item to the pool.
+/// </summary>
+/// <param name="item">The item to pool.</param>
+/// <param name="reset">
+/// The flag indicating whether the pool should reset the item to its default state.
+/// </param>
+/// <returns><c>True</c> if added or <c>False</c> if discarded</returns>
+/// <summary>
+/// Clears the pool.
+/// </summary>
+/* ignore */ }
+/// <summary>
+/// Helper class that will <see langword="throw"/> exceptions when conditions are not satisfied.
+/// </summary>
+/// <summary>
+/// Ensures that the given expression is <see langword="true"/>.
+/// </summary>
+/// <typeparam name="TException">Type of exception to throw</typeparam>
+/// <param name="condition">Condition to test/ensure</param>
+/// <param name="message">Message for the exception</param>
+/// <exception>
+///     Thrown when <cref>TException</cref> <paramref name="condition"/> is <see langword="false"/>.
+/// </exception>
+/// <summary>
+/// Ensures given <paramref name="condition"/> is <see langword="true"/>.
+/// </summary>
+/// <param name="condition">Condition to test</param>
+/// <param name="message">Message for the exception</param>
+/// <exception cref="ArgumentException">
+///     Thrown when <paramref name="condition"/> is <see langword="false"/>.
+/// </exception>
+/// <summary>
+/// Ensures given <paramref name="condition"/> is <see langword="false"/>.
+/// </summary>
+/// <typeparam name="TException">Type of exception to throw</typeparam>
+/// <param name="condition">Condition to test</param>
+/// <param name="message">Message for the exception</param>
+/// <exception> 
+///     Thrown when <paramref name="condition"/> is <see langword="false"/>.
+/// </exception>
+/// <summary>
+/// Ensures given <paramref name="condition"/> is <see langword="false"/>.
+/// </summary>
+/// <param name="condition">Condition to test</param>
+/// <param name="message">Message for the exception</param>
+/// <exception cref="ArgumentException">
+///     Thrown when <paramref name="condition"/> is <see langword="false"/>.
+/// </exception>
+/// <summary>
+/// Ensures given <see langword="object"/> is not null.
+/// </summary>
+/// <typeparam name="T">Type of the given <see langword="object"/> .</typeparam>
+/// <param name="value"> Value of the <see langword="object"/> to check for <see langword="null"/> reference.</param>
+/// <param name="argName"> Name of the argument.</param>
+/// <exception cref="ArgumentNullException">
+///     Thrown when <paramref name="value"/> is null
+/// </exception>
+/// <returns> The <typeparamref name="T"/>.</returns>
+/// <summary>
+/// Ensures given objects are equal.
+/// </summary>
+/// <typeparam name="T">Type of objects to compare for equality</typeparam>
+/// <param name="left">The left item</param>
+/// <param name="right">The right item</param>
+/// <param name="message">Message for the exception</param>
+/// <exception cref="ArgumentException">
+///     Thrown when <paramref name="left"/> not equal to <paramref name="right"/>
+/// </exception>
+/// <remarks>Null values will cause an exception to be thrown</remarks>
+/// <summary>
+/// Ensures given objects are not equal.
+/// </summary>
+/// <typeparam name="T">Type of objects to compare for equality</typeparam>
+/// <param name="left">The left item</param>
+/// <param name="right">The right item</param>
+/// <param name="message">Message for the exception</param>
+/// <exception cref="ArgumentException">
+///     Thrown when <paramref name="left"/> equal to <paramref name="right"/>
+/// </exception>
+/// <remarks>Null values will cause an exception to be thrown</remarks>
+/// <summary>
+/// Ensures a given <paramref name="collection"/> is not null or empty.
+/// </summary>
+/// <typeparam name="T">Collection type.</typeparam>
+/// <param name="collection">Collection to check.</param>
+/// <param name="message">Message for the exception</param>
+/// <returns>The evaluated collection.</returns>
+/// <exception cref="ArgumentNullException">
+///     Thrown when <paramref name="collection"/> is null.
+/// </exception>
+/// <exception cref="ArgumentException">
+///     Thrown when <paramref name="collection"/> is empty.
+/// </exception>
+/// <summary>
+/// Ensures the given string is not <see langword="null"/> or empty or whitespace.
+/// </summary>
+/// <param name="value"><c>String</c> <paramref name="value"/> to check.</param>
+/// <param name="message">Message for the exception</param>
+/// <returns>Value to return if it is not null, empty or whitespace.</returns>
+/// <exception cref="ArgumentException">
+///     Thrown when <paramref name="value"/> is null or empty or whitespace.
+/// </exception>
+/// <summary>
+/// Ensures given <see cref="DirectoryInfo"/> exists.
+/// </summary>
+/// <param name="directoryInfo">DirectoryInfo object representing the directory to check for existence.</param>
+/// <returns>DirectoryInfo to return if the directory exists.</returns>
+/// <exception cref="ArgumentNullException">
+///     Thrown when <paramref name="directoryInfo"/> is null.
+/// </exception>
+/// <exception cref="DirectoryNotFoundException">
+///     Thrown when <paramref name="directoryInfo"/> is not found.
+/// </exception>
+/// <exception cref="IOException">
+///     A device such as a disk drive is not ready.
+/// </exception>
+/// <summary>
+/// Ensures given <paramref name="fileInfo"/> exists.
+/// </summary>
+/// <param name="fileInfo">FileInfo object representing the file to check for existence.</param>
+/// <returns>FileInfo to return if the file exists.</returns>
+/// <exception cref="ArgumentNullException">
+///     Thrown when <paramref name="fileInfo"/> is null.
+/// </exception>
+/// <exception cref="FileNotFoundException">
+///     Thrown when <paramref name="fileInfo"/> does not exist.
+/// </exception>
+/// <summary>
+/// Provides a helper class for implementing <see cref="System.IEquatable{T}"/>.
+/// </summary>
+/// <typeparam name="T">The type of object to provide equability</typeparam>
+/// <summary>
+/// Provides the hash code for the object.
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Determines whether this object is equal <paramref name="other"/>.
+/// </summary>
+/// <summary>
+/// Determines whether this object is equal <paramref name="obj"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="left"/> is equal <paramref name="right"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="left"/> is equal <paramref name="right"/>.
+/// </summary>
+/// <summary>
+/// Provides a set of methods to help work with <see cref="Guid"/>.
+/// </summary>
+// see: 
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Creates a sequential UUID.
+/// <remarks>
+/// This is used by <c>MSSQL</c> and it is much faster than using <see cref="Guid.NewGuid()"/>.
+/// <see Href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa379322%28v=vs.85%29.aspx"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Generates a sequential Guid.
+/// </summary>
+/// <remarks>
+/// Taken from the NHibernate project, original contribution of Donald Mull.
+/// See: https://github.com/nhibernate/nhibernate-core/blob/5e71e83ac45439239b9028e6e87d1a8466aba551/src/NHibernate/Id/GuidCombGenerator.cs
+/// </remarks>
+// Get the days and milliseconds which will be used to build the byte string 
+// Convert to a byte array 
+// SQL Server is accurate to 1/300th of a millisecond so we divide by 3.333333 
+// Reverse the bytes to match SQL Servers ordering 
+// Copy the bytes into the Guid 
+/// <summary>
+/// Helper class for generating hash code.
+/// </summary>
+/// <summary>
+/// A relatively large prime number.
+/// </summary>
+/// <summary>
+/// 31 is shift and subtract hence very fast.
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the hash using the given parameters.
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Generates a hash code using the given <paramref name="parameters"/> 
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// <remarks>
+/// See <see href="@ http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode"/>
+/// </remarks>
+/// </summary>
+// ReSharper disable once LoopCanBeConvertedToQuery  [PERF]
+// ReSharper disable once ForCanBeConvertedToForeach [PERF]
+/// <summary>
+/// Inspired by <see href="https://github.com/aspnet/KestrelHttpServer/blob/6fde01a825cffc09998d3f8a49464f7fbe40f9c4/src/Kestrel.Core/Internal/Infrastructure/CorrelationIdGenerator.cs"/>,
+/// this class generates an efficient 20-bytes ID which is the concatenation of a <c>base36</c> encoded
+/// machine name and <c>base32</c> encoded <see cref="long"/> using the alphabet <c>0-9</c> and <c>A-V</c>.
+/// </summary>
+/// <summary>
+/// Returns a single instance of the <see cref="IDGenerator"/>.
+/// </summary>
+/// <summary>
+/// Returns an ID. e.g: <c>XOGLN1-0HLHI1F5INOFA</c>
+/// </summary>
+/// <summary>
+/// This is a helper class providing lock-free updates using <c>CAS</c>.
+/// </summary>
+/// <summary>
+/// Atomically updates the variable at the given <paramref name="location"/>.
+/// </summary>
+/// <param name="location">The location of the variable to be updated</param>
+/// <param name="generator">
+/// The delegate providing the updated value.
+/// <remarks>The <paramref name="generator"/> may run more than once</remarks>
+/// </param>
+/// <summary>
+/// Atomically updates the variable at the given <paramref name="location"/>.
+/// </summary>
+/// <param name="location">The location of the variable to be updated</param>
+/// <param name="generator">
+/// The delegate providing the updated value.
+/// <remarks>The <paramref name="generator"/> may run more than once</remarks>
+/// </param>
+/// <summary>
+/// Atomically updates the variable at the given <paramref name="location"/>.
+/// </summary>
+/// <param name="location">The location of the variable to be updated</param>
+/// <param name="generator">
+/// The delegate providing the updated value.
+/// <remarks>The <paramref name="generator"/> may run more than once</remarks>
+/// </param>
+/// <summary>
+/// Atomically updates the variable at the given <paramref name="location"/>.
+/// </summary>
+/// <param name="location">The location of the variable to be updated</param>
+/// <param name="generator">
+/// The delegate providing the updated value.
+/// <remarks>The <paramref name="generator"/> may run more than once</remarks>
+/// </param>
+/// <summary>
+/// Atomically updates the variable at the given <paramref name="location"/>.
+/// </summary>
+/// <param name="location">The location of the variable to be updated</param>
+/// <param name="generator">
+/// The delegate providing the updated value.
+/// <remarks>The <paramref name="generator"/> may run more than once</remarks>
+/// </param>
+/// <summary>
+/// Atomically updates the variable at the given <paramref name="location"/>.
+/// </summary>
+/// <param name="location">The location of the variable to be updated</param>
+/// <param name="generator">
+/// The delegate providing the updated value.
+/// <remarks>The <paramref name="generator"/> may run more than once</remarks>
+/// </param>
+/// <summary>
+/// Maps file extensions to MIME/Media types
+/// </summary>
+/// <summary>
+/// Returns a copy of the mappings.
+/// <remarks>The mappings use the <see cref="StringComparer.OrdinalIgnoreCase"/></remarks>
+/// </summary>
+/// <summary>
+/// Returns the MIME/Media mapped to the <paramref name="fileName"/>
+/// </summary>
+/// <param name="fileName">The file for which MIME should be returned</param>
+/// <param name="mime">The out value for the MIME</param>
+/// <returns><c>True</c> if mapping exists otherwise <c>False</c></returns>
+/// <summary>
+/// Returns the MIME/Media mapped to the <paramref name="extension"/>
+/// </summary>
+/// <param name="extension">The file-extension for which MIME should be returned</param>
+/// <param name="mime">The out value for the MIME</param>
+/// <returns><c>True</c> if mapping exists otherwise <c>False</c></returns>
+/// <summary>
+/// Adds a mapping to the <see cref="MimeMappings"/>.
+/// </summary>
+/// <param name="extension">The file-extension of the MIME</param>
+/// <param name="mimeType">The type of the MIME</param>
+/// <summary>
+/// Contains all the native methods used by this library.
+/// </summary>
+/// <summary>
+/// Provides a set of methods to help work with network related activities.
+/// </summary>
+/// <summary>
+/// Returns the LocalHost Fully Qualified Domain Name
+/// <see href="http://stackoverflow.com/questions/804700/how-to-find-fqdn-of-local-machine-in-c-net"/>
+/// </summary>
+/// <returns>The <c>localhost</c> Fully Qualified Domain Name</returns>
+/// <summary>
+/// Gets the local IP address for the machine or VM running the code.
+/// <remarks>
+/// <see href="http://stackoverflow.com/a/27376368"/>
+/// </remarks>
+/// </summary>
+/// <returns>The local IP address</returns>
+// can be any address
+// ReSharper disable once PossibleNullReferenceException
+/// <summary>
+/// Gets all the IP (v4 and not v6) addresses of the local computer together with 
+/// the interface to which the IP belongs.
+/// <see href="https://blog.stephencleary.com/2009/05/getting-local-ip-addresses.html"/>
+/// </summary>
+// Get a list of all network interfaces (usually one per network card, dial-up, and VPN connection)
+// Read the IP configuration for each network
+// Each network interface may have multiple IP addresses
+// We're only interested in IPv4 addresses for now
+// Ignore loopback addresses (e.g., 127.0.0.1)
+/// <summary>
+/// Helps with the creation of predicates.
+/// <see href="http://www.albahari.com/nutshell/predicatebuilder.aspx"/>
+/// </summary>
+/// <summary>
+/// Creates a predicate expression from the given lambda expression.
+/// </summary>
+/// <summary>
+/// Creates a predicate that evaluates to <c>True</c>.
+/// </summary>
+/// <summary>
+/// Creates a predicate that evaluates to <c>False</c>.
+/// </summary>
+/// <summary>
+/// Combines the first predicate with the second using the logical <c>OR</c>.
+/// </summary>
+/// <summary>
+/// Combines the first predicate with the second using the logical <c>AND</c>.
+/// </summary>
+/// <summary>
+/// Negates a given predicate.
+/// </summary>
+/// <summary>
+/// Provides a set of methods to help work with a <see cref="Process"/>.
+/// </summary>
+/// <summary>
+/// Starts a Process Asynchronously.
+/// <remarks><see href="http://www.levibotelho.com/development/async-processes-with-taskcompletionsource/"/></remarks>
+/// </summary>
+/// <param name="processInfo">The information for the process to run.</param>
+/// <param name="cToken">The cancellation token.</param>
+/// <returns>A task representing the started process which you can await until process exits.</returns>
+// Since the Exited event can happen asynchronously to the output and error events, 
+// we use the task results for stdout/stderr to ensure they are both closed
+/// <summary>
+/// Starts a process represented by <paramref name="processPath"/> asynchronously.
+/// <remarks><see href="http://www.levibotelho.com/development/async-processes-with-taskcompletionsource/"/></remarks>
+/// </summary>
+/// <param name="processPath">The path to the process.</param>
+/// <param name="args">The arguments to be passed to the process.</param>
+/// <param name="cToken">The cancellation token.</param>
+/// <returns>A task representing the started process which you can await until process exits.</returns>
+/// <summary>
+/// Starts a process represented by <paramref name="processPath"/> and <paramref name="args"/> asynchronously.
+/// <remarks><see href="http://www.levibotelho.com/development/async-processes-with-taskcompletionsource/"/></remarks>
+/// </summary>
+/// <param name="processPath">The path to the process.</param>
+/// <param name="args">The arguments to be passed to the process.</param>
+/// <param name="cToken">The cancellation token.</param>
+/// <returns>A task representing the started process which you can await until process exits.</returns>
+/// <summary>
+/// Represents the result of executing a process.
+/// </summary>
+/// <summary>
+/// Gets the process ID.
+/// </summary>
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Gets the execution time of the process.
+/// </summary>
+/// <summary>
+/// Gets the standard output of the process.
+/// </summary>
+/// <summary>
+/// Gets the standard error of the process.
+/// </summary>
+/// <summary>
+/// Read the value of the process property identified by the given <paramref name="selector"/>.
+/// </summary>
+/// <summary>
+/// Releases all resources used by the underlying process.
+/// </summary>
+/// <summary>
+/// An implementation of the <c>Producer/Consumer</c> pattern using <c>TPL</c>.
+/// </summary>
+/// <typeparam name="T">Type of the item to produce/consume</typeparam>
+/// <summary>
+/// Creates an unbounded instance of <see cref="ProducerConsumerQueue{T}"/>.
+/// </summary>
+/// <param name="consumer">The action to be executed when consuming the queued items</param>
+/// <param name="maxConcurrencyLevel">Maximum number of consumers</param>
+/// <summary>
+/// Creates an instance of <see cref="ProducerConsumerQueue{T}"/>.
+/// </summary>
+/// <param name="consumer">The action to be executed when consuming the queued items</param>
+/// <param name="maxConcurrencyLevel">Maximum number of consumers</param>
+/// <param name="boundedCapacity">
+/// The bounded capacity of the queue. Any more items added will block the publisher 
+/// until there is more space available.
+/// </param>
+/// <summary>
+/// Gets the maximum number of consumer threads.
+/// </summary>
+/// <summary>
+/// Gets the bounded capacity of the underlying queue. -1 for unbounded.
+/// </summary>
+/// <summary>
+/// Gets the count of items that are pending consumption.
+/// </summary>
+/// <summary>
+/// Gets the pending items in the queue. 
+/// <remarks>
+/// Note, the items are valid as a snapshot at the time of invocation.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the <see cref="Task"/> which completes when all the consumers have finished their work.
+/// </summary>
+/// <summary>
+/// Thrown when an error occurs during the consumption or publication of items.
+/// </summary>
+/// <summary>
+/// Adds the specified item to the <see cref="ProducerConsumerQueue{T}"/>. 
+/// This method blocks if the queue is full and until there is more room.
+/// </summary>
+/// <param name="item">The item to be added to the collection. The value can be a null reference.</param>
+/// <summary>
+/// Adds the specified item to the <see cref="ProducerConsumerQueue{T}"/>. 
+/// This method blocks if the queue is full and until there is more room.
+/// </summary>
+/// <param name="item">The item to be added to the collection. The value can be a null reference.</param>
+/// <param name="cancellationToken">The cancellation token to observe.</param>
+/// <summary>
+/// Tries to add the specified item to the <see cref="ProducerConsumerQueue{T}"/>.
+/// </summary>
+/// <param name="item">The item to be added.</param>
+/// <returns>
+/// <c>True</c> if <paramref name="item"/> could be added to the collection within the specified time, 
+/// otherwise <c>False</c>. If the item is a duplicate, and the underlying collection does 
+/// not accept duplicate items, then an <see cref="InvalidOperationException"/> is thrown wrapped 
+/// in a <see cref="ProducerConsumerQueueException"/>.
+/// </returns>
+/// <summary>
+/// Tries to add the specified item to the <see cref="ProducerConsumerQueue{T}"/> within the specified time period.
+/// </summary>
+/// <param name="item">The item to be added.</param>
+/// <param name="timeout">Represents the time to wait.</param>
+/// <returns>
+/// <c>True</c> if <paramref name="item"/> could be added to the collection within the specified time, 
+/// otherwise <c>False</c>. If the item is a duplicate, and the underlying collection does 
+/// not accept duplicate items, then an <see cref="InvalidOperationException"/> is thrown wrapped 
+/// in a <see cref="ProducerConsumerQueueException"/>.
+/// </returns>
+/// <summary>
+/// Tries to add the specified item to the <see cref="ProducerConsumerQueue{T}"/> within the specified time period.
+/// </summary>
+/// <param name="item">The item to be added.</param>
+/// <param name="timeout">Represents the time to wait.</param>
+/// <param name="cancellationToken">The cancellation token to observe.</param>
+/// <returns>
+/// <c>True</c> if <paramref name="item"/> could be added to the collection within the specified time, 
+/// otherwise <c>False</c>. If the item is a duplicate, and the underlying collection does 
+/// not accept duplicate items, then an <see cref="InvalidOperationException"/> is thrown wrapped 
+/// in a <see cref="ProducerConsumerQueueException"/>.
+/// </returns>
+/// <summary>
+/// Marks the <see cref="ProducerConsumerQueue{T}"/> instance as not accepting any new items.
+/// </summary>
+/// <summary>
+/// Releases all the resources used by this instance.
+/// </summary>
+/// <summary>
+/// The <see cref="Exception"/> thrown by the <see cref="ProducerConsumerQueue{T}"/>.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="ProducerConsumerQueueException"/>.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="ProducerConsumerQueueException"/>.
+/// </summary>
+/// <param name="message">The message for the <see cref="Exception"/></param>
+/// <summary>
+/// Creates an instance of the <see cref="ProducerConsumerQueueException"/>.
+/// </summary>
+/// <param name="message">The message for the <see cref="Exception"/></param>
+/// <param name="innerException">The inner exception</param>
+/// <summary>
+/// Creates an instance of the <see cref="ProducerConsumerQueueException"/>.
+/// </summary>
+/// <param name="info">The serialization information</param>
+/// <param name="context">The streaming context</param>
+/// <summary>
+/// Provides a set of methods to help work with <see cref="System.Text.RegularExpressions.Regex"/>.
+/// </summary>
+/// <summary>
+///  Contains characters that may be used as regular expression arguments.
+/// </summary>
+/// <summary>
+/// Evaluates the given <paramref name="input"/> as a valid email address.
+/// <see href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format"/>
+/// </summary>
+/// <summary>
+/// Converts the given regex <paramref name="pattern"/> to a case-insensitive version.
+/// <example>
+///<c>BaR</c> will be converted to <c>[bB][aA][rR]</c>.
+/// </example>
+/// <remarks>
+/// This should be used as a much faster alternative to adding
+/// <see cref="System.Text.RegularExpressions.RegexOptions.IgnoreCase"/> or using the
+/// <c>(?i)</c> for example <c>(?i)BaR(?-i)</c>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// An abstraction over <see cref="HttpClient"/> to address the following issues:
+/// <para><see href="http://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/"/></para>
+/// <para><see href="http://byterot.blogspot.co.uk/2016/07/singleton-httpclient-dns.html"/></para>
+/// <para><see href="http://naeem.khedarun.co.uk/blog/2016/11/30/httpclient-dns-settings-for-azure-cloud-services-and-traffic-manager-1480285049222/"/></para>
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="RestClient"/>.
+/// </summary>
+// https://github.com/dotnet/corefx/issues/26895
+// https://github.com/dotnet/corefx/issues/26331
+// https://github.com/dotnet/corefx/pull/26839
+/// <summary>
+/// Gets the headers which should be sent with each request.
+/// </summary>
+/// <summary>
+/// Gets the time to wait before the request times out.
+/// </summary>
+/// <summary>
+/// Gets the maximum number of bytes to buffer when reading the response content.
+/// </summary>
+/// <summary>
+/// Gets the base address of Uniform Resource Identifier (URI) of the Internet resource used when sending requests.
+/// </summary>
+/// <summary>
+/// Sends the given <paramref name="request"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends the given <paramref name="request"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends the given <paramref name="request"/> with the given <paramref name="option"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends the given <paramref name="request"/> with the given <paramref name="option"/> and <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/> and <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/> and <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>     
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>     
+/// <exception cref="ArgumentException"/>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="InvalidOperationException"/>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="InvalidOperationException"/>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="InvalidOperationException"/>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="InvalidOperationException"/>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <exception cref="InvalidOperationException"/>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <exception cref="ArgumentNullException"/>
+/// <exception cref="InvalidOperationException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentException"/>
+///<exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentException"/>
+///<exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+///<exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+///<exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <exception cref="ArgumentException"/>
+///<exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="ArgumentException"/>
+///<exception cref="UriFormatException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+///<exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+///<exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+///<exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+///<exception cref="UriFormatException"/>
+/// <exception cref="ArgumentException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+///<exception cref="ArgumentNullException"/>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+///<exception cref="ArgumentNullException"/>
+/// <summary>
+/// Cancels all pending requests on this instance.
+/// </summary>
+/// <summary>
+/// Releases the unmanaged resources and disposes of the managed resources used by the <see cref="HttpClient"/>.
+/// </summary>
+// Default is 2 minutes, see https://msdn.microsoft.com/en-us/library/system.net.servicepointmanager.dnsrefreshtimeout(v=vs.110).aspx
+// Increases the concurrent outbound connections
+// ReSharper disable once MemberCanBeMadeStatic.Local
+// ReSharper disable once UnusedParameter.Local
+/// <summary>
+/// Provides a set of methods to help work with <see cref="Stopwatch"/>.
+/// </summary>
+/// <summary>
+/// Returns the duration between now and the given <paramref name="startTime"/> in milliseconds.
+/// </summary>
+/// <summary>
+/// Returns the duration between now and the given <paramref name="startTime"/> in seconds.
+/// </summary>
+/// <summary>
+/// Returns the duration between now and the given <paramref name="startTime"/>.
+/// </summary>
+/// <summary>
+/// Returns the duration between <paramref name="from"/> and <paramref name="to"/>.
+/// </summary>
+/// <summary>
+/// Returns the duration between <paramref name="from"/> and <paramref name="to"/> in milliseconds.
+/// </summary>
+/// <summary>
+/// Returns the duration between <paramref name="from"/> and <paramref name="to"/> in seconds.
+/// </summary>
+/// <summary>
+/// Provides a cached reusable instance of <see cref="StringBuilder"/> per thread 
+/// it is an optimization that reduces the number of instances constructed and collected.
+/// <remarks>
+/// <para>A StringBuilder instance is cached in <c>Thread Local Storage</c> and so there is one per thread.</para>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Acquires a cached instance of <see cref="StringBuilder"/> if one exists otherwise a new instance.
+/// </summary>
+/// <returns>An instance of <see cref="StringBuilder"/></returns>
+// of that if caller forgets to release and return it is not kept alive by this class
+/// <summary>
+/// Gets the string representation of the <paramref name="builder"/> and releases it to the cache.
+/// </summary>
+/// <param name="builder">The <see cref="StringBuilder"/></param>
+/// <returns>The string representation of the <paramref name="builder"/></returns>
+/// <summary>
+/// A class similar to <see cref="ThreadLocal{T}"/> with the ability to dispose 
+/// all the underlying <typeparamref name="T"/>s.
+/// <para><see href="http://stackoverflow.com/a/7670762/1226568"/>.</para>
+/// </summary>
+/// <summary>
+/// Create an instance of the <see cref="ThreadLocalDisposable{T}"/>.
+/// </summary>
+/// <summary>
+/// Gets whether the <c>Value</c> is initialized on the current thread.
+/// </summary>
+/// <summary>
+/// Gets the <c>Value</c> of this instance for the current thread.
+/// </summary>
+/// <summary>
+/// Creates and returns the <see cref="string"/> representation of this instance for the current thread.
+/// </summary>
+/// <summary>
+/// Releases all the resources used by this instance.
+/// </summary>
+/// <summary>
+/// A class representing a clock which ticks at a given interval.
+/// </summary>
+/// <summary>
+/// Gets the clock used by this instance of <see cref="TimerClock"/>.
+/// </summary>
+/// <summary>
+/// The event is raised at every clock tick specified by the <see cref="TickInterval"/>.
+/// </summary>
+/// <summary>
+/// Gets the interval at which to raise the <see cref="Tick"/> event.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="TimerClock"/>.
+/// </summary>
+/// <param name="interval">The interval at which to raise the <see cref="Tick"/> event</param>
+/// <summary>
+/// Enables or disables the clock which controls whether 
+/// the <see cref="Tick"/> should be raised.
+/// <remarks>
+/// <para>
+/// Note this does not <c>Pause</c> the clock but resets the timer every time it is set to <c>True</c>.
+/// </para>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// The dispose
+/// </summary>
+/// <summary>
+/// Converts the value of the <see cref="TimerClock"/> to its equivalent <see cref="string"/>.
+/// </summary>
+/// <returns>The <see cref="string"/> representation of the <see cref="TimerClock"/></returns>
+// ReSharper disable once FunctionNeverReturns
+/// <summary>
+/// A set of methods to convert between different units.
+/// </summary>
+/// <summary>
+/// Returns a more human friendly textual representation of the given <paramref name="bytes"/>.
+/// </summary>
+/// <summary>
+/// Converts <c>Bytes</c> to <c>Megabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Bytes</c> to <c>Gigabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Kilobytes</c> to <c>Megabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Megabytes</c> to <c>Gigabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Megabytes</c> to <c>Terabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Gigabytes</c> to <c>Megabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Gigabytes</c> to <c>Terabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Terabytes</c> to <c>Megabytes</c>.
+/// </summary>
+/// <summary>
+/// Converts <c>Terabytes</c> to <c>Gigabytes</c>.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// An abstraction for building a <see cref="ObjectAccessor"/> and
+/// <see cref="GenericAccessor{TInstance}"/>.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="Accessor"/> class.
+/// </summary>
+/// <param name="type">
+/// The type of the object instance to access.
+/// </param>
+/// <param name="ignoreCase">
+/// The flag indicating whether property names should be treated case insensitively
+/// </param>
+/// <param name="includeNonPublic">
+/// The flag indicating whether non-public properties should be accessible or not
+/// </param>
+/// <summary>
+/// Gets the <see cref="StringComparer"/> used by the <see cref="Accessor"/> to find 
+/// the properties on the given instance. 
+/// </summary>
+/// <summary>
+/// Gets the type of the object this instance supports.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether property names are treated in a case sensitive manner.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether non-public properties are supported by this instance.
+/// </summary>
+/// <summary>
+/// Gets the properties to which this instance can provide access to.
+/// </summary>
+/// <summary>
+/// Builds an <see cref="ObjectAccessor"/> which provides easy access to all of 
+/// the <see cref="PropertyInfo"/> of the given <paramref name="instance"/>.
+/// </summary>
+/// <summary>
+/// Builds an <see cref="ObjectAccessor"/> which provides easy access to all of 
+/// the <see cref="PropertyInfo"/> of the given <paramref name="instanceType"/>.
+/// </summary>
+/// <summary>
+/// Builds an <see cref="GenericAccessor{TInstance}"/> which provides easy access to all of 
+/// the <see cref="PropertyInfo"/> of the given <typeparamref name="TInstance"/>.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// Provides a very fast and efficient property setter and getter access as well
+/// as object creation.
+/// </summary>
+/// <summary>
+/// Builds a property setter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property type of <typeparamref name="TProperty"/> with the name of <paramref name="propertyName"/>.
+/// <remarks>
+/// The setters for a <typeparamref name="TInstance"/> of <see lang="struct"/> are 
+/// intentionally not supported as changing the values of immutable types is a bad practice.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Builds a property setter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property type of <typeparamref name="TProperty"/>.
+/// <remarks>
+/// The setters for a <typeparamref name="TInstance"/> of <see lang="struct"/> are 
+/// intentionally not supported as changing the values of immutable types is a bad practice.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Builds a property getter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property type of <typeparamref name="TProperty"/> with the name of <paramref name="propertyName"/>.
+/// </summary>
+/// <summary>
+/// Builds a property getter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property type of <typeparamref name="TProperty"/>.
+/// </summary>
+/// <summary>
+/// Builds a property setter for when both the instance and property type are unknown.
+/// </summary>
+// value as T is slightly faster than (T)value, so if it's not a value type, use that
+/// <summary>
+/// Builds a property getter for when both the instance and property type are unknown.
+/// </summary>
+/// <summary>
+/// Builds a property setter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property name of <paramref name="propertyName"/>.
+/// <remarks>
+/// The setters for a <typeparamref name="TInstance"/> of <see lang="struct"/> are 
+/// intentionally not supported as changing the values of immutable types is a bad practice.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Builds a property setter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property of <paramref name="propertyInfo"/>.
+/// <remarks>
+/// The setters for a <typeparamref name="TInstance"/> of <see lang="struct"/> are 
+/// intentionally not supported as changing the values of immutable types is a bad practice.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Builds a property getter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property name of <paramref name="propertyName"/>.
+/// </summary>
+/// <summary>
+/// Builds a property getter for a given instance type of <typeparamref name="TInstance"/> 
+/// and property of <paramref name="propertyInfo"/>.
+/// </summary>
+/// <summary>
+/// Builds a delegate for creating an instance of the <typeparamref name="TInstance"/>.
+/// </summary>
+// Call the ctor, all values on the stack are passed to the ctor
+// Return the new object
+/// <summary>
+/// Builds a delegate for creating an instance of the <typeparamref name="TInstance"/> 
+/// from its <paramref name="constructor"/>.
+/// <remarks>
+/// The order of arguments passed to the delegate should match the order set by the constructor.
+/// </remarks>
+/// <exception cref="IndexOutOfRangeException">
+/// Thrown if the count parameters passed to the constructor does not match the required 
+/// constructor parameter count.
+/// </exception>
+/// <exception cref="InvalidCastException">
+/// Thrown if parameters passed to the constructor are of invalid type.
+/// </exception>
+/// </summary>
+// Cast each argument of the input object array to the appropriate type.
+// Push Object array
+// Push the index to access
+// Push the element at the previously loaded index
+// Cast the object to the appropriate ctor Parameter Type
+// Call the ctor, all values on the stack are passed to the ctor
+// Return the new object
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// An abstraction for gaining fast access to all of the <see cref="PropertyInfo"/> of 
+/// the given <typeparamref name="TInstance"/>.
+/// </summary>
+/// <summary>
+/// Gets or sets the value of the given <paramref name="propertyName"/> for 
+/// the given <paramref name="instance"/>.
+/// </summary>
+/// <summary>
+/// Attempts to get the value of a property selected by the given <paramref name="propertyName"/> 
+/// for the given <paramref name="instance"/>.
+/// </summary>
+/// <summary>
+/// Attempts to set the value of the given <paramref name="propertyName"/>
+/// for the given <paramref name="instance"/>.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// An abstraction for gaining fast access to all of the <see cref="PropertyInfo"/>
+/// of the given <see cref="Type"/>.
+/// </summary>
+/// <summary>
+/// Gets or sets the value of the given <paramref name="propertyName"/> for 
+/// the given <paramref name="instance"/>.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// Represents the details of the assemblies referenced by the application.
+/// </summary>
+/// <summary>
+/// Gets the full name of the assembly.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the assembly has been loaded from the <c>GAC</c>.
+/// </summary>
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Gets the flag indicating whether the assembly is <c>64-bit</c>.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the assembly has been compiled in <c>Release</c> mode.
+/// </summary>
+/// <summary>
+/// Gets the framework for which the assembly has been compiled.
+/// </summary>
+/// <summary>
+/// Gets the location from which the assembly has been loaded from.
+/// </summary>
+/// <summary>
+/// Gets the path to the location where the assembly was found.
+/// <remarks>
+/// If the assembly was downloaded from the web, this value may start with <c>http</c>.
+/// </remarks> 
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// A helper class for generating a report containing details related to 
+/// <c>System</c>, <c>Process</c>, <c>Assemblies</c>, <c>Networks</c> and <c>Environment</c> 
+/// on which the application executes.
+/// </summary>
+/// <summary>
+/// Creates a new instance of the <see cref="DiagnosticReport"/>.
+/// </summary>
+/// <summary>
+/// Get the time at which this report was generated.
+/// </summary>
+/// <summary>
+/// Gets the time taken to generate this report.
+/// </summary>
+/// <summary>
+/// Gets the type of this report.
+/// </summary>
+/// <summary>
+/// Gets the information relating to the <c>System</c>.
+/// </summary>
+/// <summary>
+/// Gets the information relating to the <c>Process</c>.
+/// </summary>
+/// <summary>
+/// Gets the information relating to the <c>Drives</c>.
+/// </summary>
+/// <summary>
+/// Gets the information relating to the referenced <c>Assemblies</c>.
+/// </summary>
+/// <summary>
+/// Gets the <c>Environment Variables</c>.
+/// </summary>
+/// <summary>
+/// Gets the information relating to the <c>Networks</c>.
+/// </summary>
+/// <summary>
+/// Generates and returns an instance of <see cref="DiagnosticReport"/>.
+/// </summary>
+/// <summary>
+/// Returns this report as formatted <see cref="string"/>.
+/// </summary>
+// ReSharper disable once ConstantNullCoalescingCondition
+// ReSharper disable once RedundantToStringCall
+// initialize cellLengths first based on length of the headers
+// insert headers
+// insert headers underline
+// insert row values
+/// <summary>
+/// Returns the full CPU name using the registry. 
+/// See <see href="http://stackoverflow.com/questions/2376139/get-full-cpu-name-without-wmi"/>
+/// </summary>
+/// <returns>The CPU Name</returns>
+// This should be unreachable.
+// ReSharper disable once InconsistentNaming
+// ReSharper disable once InconsistentNaming
+// ReSharper disable once InconsistentNaming
+// https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
+/// <summary>
+/// <see href="https://msdn.microsoft.com/en-us/library/windows/desktop/cc300158(v=vs.85).aspx"/>
+/// </summary>
+// ReSharper disable once InconsistentNaming
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// Represents the different types of report which can 
+/// be generated by <see cref="DiagnosticReport"/>.
+/// <remarks>
+/// Reports can be mixed as: 
+/// <example>
+/// DiagnosticReportType.System | DiagnosticReportType.Process
+/// </example>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Includes details about the System.
+/// </summary>
+/// <summary>
+/// Includes details about the Process.
+/// </summary>
+/// <summary>
+/// Includes details about the Drives.
+/// </summary>
+/// <summary>
+/// Includes details about the referenced Assemblies.
+/// </summary>
+/// <summary>
+/// Includes details about the Environment Variables.
+/// </summary>
+/// <summary>
+/// Includes details about the Networks.
+/// </summary>
+/// <summary>
+/// Generates the full report.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// Represents the details of the drives installed in the system.
+/// </summary>
+/// <summary>
+/// Gets the name of the drive.
+/// </summary>
+/// <summary>
+/// Gets the type of the drive e.g. <c>Fixed, CDRom</c> etc.
+/// </summary>
+/// <summary>
+/// Gets the format of the drive e.g. <c>NTFS</c>.
+/// </summary>
+/// <summary>
+/// Gets the label of the drive.
+/// </summary>
+/// <summary>
+/// Gets the capacity of the drive.
+/// </summary>
+/// <summary>
+/// Gets the total amount of free space available on the drive 
+/// (not just what is available to the current user).
+/// </summary>
+/// <summary>
+/// Gets the amount of free space available on the drive.
+/// <remarks>This value takes into account disk quotas.</remarks>
+/// </summary>
+// ReSharper disable once CheckNamespace
+// ReSharper disable InconsistentNaming
+/// <summary>
+/// Represents the details of the network available in the local computer.
+/// </summary>
+/// <summary>
+/// Gets the <c>Dynamic Host Configuration Protocol</c> (DHCP) scope name.
+/// </summary>
+/// <summary>
+/// Gets the domain in which the local computer is registered.
+/// </summary>
+/// <summary>
+/// Gets the host name for the local computer.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the local computer is acting as a 
+/// <c>Windows Internet Name Service</c> (WINS) proxy.
+/// </summary>
+/// <summary>
+/// Gets the <c>Network Basic Input/Output System</c> (NetBIOS) node type of the local computer.
+/// </summary>
+/// <summary>
+/// Gets the details of the network interfaces in the local computer.
+/// </summary>
+/// <summary>
+/// Represents the details of the network interface in the local computer.
+/// </summary>
+/// <summary>
+/// Gets the physical address a.k.a. <c>Media Access Control</c> address of the interface.
+/// </summary>
+/// <summary>
+/// Gets the network interface.
+/// </summary>
+/// <summary>
+/// Gets all of the <c>IP</c> addresses currently assigned to the interface.
+/// </summary>
+/// <summary>
+/// Represents the details of the IP address
+/// </summary>
+/// <summary>
+/// Returns a <see cref="IPAddressDetails"/> from the given <paramref name="ipAddress"/>.
+/// </summary>
+/// <summary>
+/// Gets the address family of the IP address.
+/// </summary>
+/// <summary>
+/// Gets whether the address is an IPv6 multicast global address.
+/// </summary>
+/// <summary>
+/// Gets whether the address is an IPv6 link local address.
+/// </summary>
+/// <summary>
+/// Gets whether the address is an IPv6 site local address.
+/// </summary>
+/// <summary>
+/// Gets whether the address is an IPv6 Teredo address.
+/// </summary>
+/// <summary>
+/// Gets whether the IP address is an IPv4-mapped IPv6 address.
+/// </summary>
+/// <summary>
+/// Gets the IP address as string in dotted-quad notation for IPv4 and in colon-hexadecimal notation for IPv6.
+/// </summary>
+/// <summary>
+/// Returns a string that represents the current object.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// Represents the details of the process via which the application is running.
+/// </summary>
+/// <summary>
+/// Gets the process ID (PID).
+/// </summary>
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Gets the process name.
+/// </summary>
+/// <summary>
+/// Gets the time at which the process was started.
+/// </summary>
+/// <summary>
+/// Gets the time taken for the process to be loaded.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the application has been compiled in <c>Release</c> mode.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the process is <c>64-bit</c>.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the <c>GC</c> mode is <c>Server</c>.
+/// </summary>
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Gets the flag indicating whether the process is <c>Large Address Aware</c>.
+/// </summary>
+/// <summary>
+/// Gets the number of threads owned by the process.
+/// </summary>
+/// <summary>
+/// Gets the minimum number of worker threads in the <c>ThreadPool</c>.
+/// </summary>
+/// <summary>
+/// Gets the maximum number of worker threads in the <c>ThreadPool</c>.
+/// </summary>
+/// <summary>
+/// Gets the minimum number of completion port worker threads in the <c>ThreadPool</c>.
+/// </summary>
+/// <summary>
+/// Gets the maximum number of completion port worker threads in the <c>ThreadPool</c>.
+/// </summary>
+/// <summary>
+/// Gets the name of the process module.
+/// </summary>
+/// <summary>
+/// Gets the file representing the process module.
+/// </summary>
+/// <summary>
+/// Gets the name of the product the process is distributed with.
+/// </summary>
+/// <summary>
+/// Gets the name of the file the process was created as.
+/// </summary>
+/// <summary>
+/// Gets the file name representing the process.
+/// </summary>
+/// <summary>
+/// Gets the file version of the process.
+/// </summary>
+/// <summary>
+/// Gets the version of the product the process is distributed with
+/// </summary>
+/// <summary>
+/// Gets the default language for the process.
+/// </summary>
+/// <summary>
+/// Gets the copyright notices that apply to the process.
+/// </summary>
+/// <summary>
+/// Gets the current value of Working Set memory (RAM) in use by the process. 
+/// <remarks>This value includes both Shared and Private memory.</remarks>
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the process is running in <c>User Interactive</c> mode.
+/// <remarks>This will be false for a Windows Service or a service such as IIS that runs without a UI.</remarks>
+/// </summary>
+/// <summary>
+/// Gets the <c>CommandLine</c> including any arguments passed into the process.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// Represents the details of the system under which the application is running.
+/// </summary>
+/// <summary>
+/// Gets the name of the operating system.
+/// </summary>
+/// <summary>
+/// Gets the type of the operating system e.g <c>Windows, Linux or OSX</c>.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the operating system is 64-bit capable.
+/// </summary>
+/// <summary>
+/// Gets the version of the <c>.NET</c> framework.
+/// </summary>
+/// <summary>
+/// Gets the machine name.
+/// </summary>
+/// <summary>
+/// Gets the Fully Qualified Domain Name (FQDN).
+/// </summary>
+/// <summary>
+/// Gets the user under which the process is running.
+/// </summary>
+/// <summary>
+/// Gets the processor name.
+/// </summary>
+/// <summary>
+/// Gets the number of processor cores including <c>Hyper Threading</c>.
+/// </summary>
+/// <summary>
+/// Gets the number of installed <c>RAM</c>.
+/// </summary>
+/// <summary>
+/// Gets the location of the <c>System</c> directory.
+/// </summary>
+/// <summary>
+/// Gets the location of the <c>Current</c> directory the application is running.
+/// </summary>
+/// <summary>
+/// Gets the location where the <c>CLR</c> is installed.
+/// </summary>
+/// <summary>
+/// Gets the duration the system has been up.
+/// </summary>
+/// <summary>
+/// A utility class for comparing the property values of given objects against each other.
+/// </summary>
+/// <summary>
+/// Gets a single instance of the <see cref="EasyComparer"/>.
+/// </summary>
+/// <summary>
+/// Compares the values of all the properties for the given 
+/// <paramref name="left"/> and <paramref name="right"/> and returns the variance.
+/// </summary>
+// ReSharper disable once ForCanBeConvertedToForeach
+/// <summary>
+/// An abstraction for representing the difference between objects.
+/// </summary>
+/// <summary>
+/// Gets the property to which <see cref="LeftValue"/> and <see cref="RightValue"/>
+/// have been retrieved.
+/// </summary>
+/// <summary>
+/// Gets the value.
+/// </summary>
+/// <summary>
+/// Gets the value.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the <see cref="LeftValue"/> 
+/// and <see cref="RightValue"/> are different.
+/// </summary>
+/// <summary>
+/// A set of extension methods for <see cref="Assembly"/>.
+/// </summary>
+/// <summary>
+/// Obtains the .NET framework version against which the <paramref name="assembly"/> has been built.
+/// </summary>
+/// <param name="assembly">The assembly</param>
+/// <returns>The .NET framework version</returns>
+/// <summary>
+/// Obtains the location from which the <paramref name="assembly"/> was loaded.
+/// <remarks>
+/// <para>
+/// The <c>CodeBase</c> is a URL to the place where the file was found, while the <c>Location</c> is 
+/// the path from where it was actually loaded. For example, if the assembly was downloaded from the 
+/// web, its <c>CodeBase</c> may start with “http://”, but its <c>Location</c> may start with “C:\”. 
+/// If the file was shadow copied, the <c>Location</c> would be the path to the copy of the file in the 
+/// shadow-copy directory.
+/// </para>
+/// <para>
+/// Note  that the <c>CodeBase</c> is not guaranteed to be set for assemblies in the GAC. 
+/// <c>Location</c> will always be set for assemblies loaded from disk however.
+/// </para>
+/// </remarks>
+/// </summary>
+/// <param name="assembly">The assembly for which location is returned</param>
+/// <returns>The location as <see cref="DirectoryInfo"/></returns>
+// ReSharper disable once AssignNullToNotNullAttribute
+/// <summary>
+/// Obtains the location from which the <paramref name="assembly"/> was found.
+/// <remarks>
+/// <para>
+/// The <c>CodeBase</c> is a URL to the place where the file was found, while the <c>Location</c> is 
+/// the path from where it was actually loaded. For example, if the assembly was downloaded from the 
+/// web, its <c>CodeBase</c> may start with “http://”, but its <c>Location</c> may start with “C:\”. 
+/// If the file was shadow copied, the <c>Location</c> would be the path to the copy of the file in the 
+/// shadow-copy directory.
+/// </para>
+/// <para>
+/// Note  that the <c>CodeBase</c> is not guaranteed to be set for assemblies in the GAC. 
+/// <c>Location</c> will always be set for assemblies loaded from disk however.
+/// </para>
+/// </remarks>
+/// </summary>
+/// <param name="assembly">The assembly for which location is returned</param>
+/// <returns>The location as <see cref="DirectoryInfo"/></returns>
+// ReSharper disable once AssignNullToNotNullAttribute
+/// <summary>
+/// Determines whether the given <paramref name="assembly"/> has been compiled in <c>Release</c> mode.
+/// Credit to: <see href="http://www.hanselman.com/blog/HowToProgrammaticallyDetectIfAnAssemblyIsCompiledInDebugOrReleaseMode.aspx"/>
+/// </summary>
+/// <param name="assembly">The assembly to examine</param>
+/// <returns><c>True</c> if the <paramref name="assembly"/> is optimized otherwise <c>False</c></returns>
+// FYI
+// "Run time Optimizer is enabled: " + !d.IsJITOptimizerDisabled
+// "Run time Tracking is enabled: " + d.IsJITTrackingEnabled
+/// <summary>
+/// Gets the flag indicating whether the given <paramref name="assembly"/> is <c>32-bit</c>.
+/// </summary>
+/// <summary>
+/// Queries the assembly's headers to find if it is <c>LARGEADDRESSAWARE</c>.
+/// <remarks>The method is equivalent to running <c>DumpBin</c> on the assembly.</remarks>
+/// </summary>
+/// <summary>
+/// Provides a set of helper methods for working with <see cref="byte"/>.
+/// </summary>
+/// <summary>
+/// Compares the given <paramref name="left"/> with <paramref name="right"/>.
+/// </summary>
+/// <returns><c>True</c> if the two are equal otherwise <c>False</c></returns>
+// Validate buffers are the same length.
+// This also ensures that the count does not exceed the length of either buffer.  
+/// <summary>
+/// Extension methods for <see cref="ICollection{T}"/>
+/// </summary>
+/// <summary>
+/// Generates an array of <see cref="TreeNode{T}"/> from the given <paramref name="collection"/>
+/// based on parent-child relationship.
+/// </summary>
+/// <typeparam name="T">The type of each value in the node.</typeparam>
+/// <typeparam name="TId">The type of the key used for determining parent-child relationship.</typeparam>
+/// <summary>
+/// Represents a node of a tree.
+/// </summary>
+/// <typeparam name="T">The type of the value in each node.</typeparam>
+/// <summary>
+/// Gets the value of the node.
+/// </summary>
+/// <summary>
+/// Gets the children of this node.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="TreeNode{T}"/>.
+/// </summary>
+/// <summary>
+/// Extensions for DateTime
+/// </summary>
+/// <summary>
+/// Epoch represented as DateTime
+/// </summary>
+/// <summary>
+/// Converts a given <see cref="DateTime"/> to milliseconds from Epoch.
+/// </summary>
+/// <param name="dateTime">A given <see cref="DateTime"/></param>
+/// <returns>Milliseconds since Epoch</returns>
+/// <summary>
+/// Converts a given <see cref="DateTime"/> to seconds from Epoch.
+/// </summary>
+/// <param name="dateTime">A given <see cref="DateTime"/></param>
+/// <returns>The Unix time stamp</returns>
+/// <summary>
+/// Checks the given date is between the two provided dates
+/// </summary>
+/// <summary>
+/// Returns whether the given date is the last day of the month
+/// </summary>
+/// <summary>
+/// Returns whether the given date falls in a weekend
+/// </summary>
+/// <summary>
+/// Determines if a given year is a LeapYear or not.
+/// </summary>
+/// <summary>
+/// Returns the age based on <paramref name="birthDay"/>.
+/// </summary>
+/// <param name="birthDay">The birthday for which age should be calculated</param>
+/// <summary>
+/// Convert DateTime to Shamsi Date (YYYY/MM/DD)
+/// </summary>
+/// <summary>
+/// Convert DateTime to Shamsi Date (DD/MM/YYYY)
+/// </summary>
+/// <summary>
+/// Convert DateTime to Shamsi String
+/// </summary>
+/// <summary>
+/// Extension methods for <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/>.
+/// </summary>
+/// <summary>
+/// Adds the <paramref name="key"/> and <paramref name="value"/> to the <paramref name="dictionary"/>
+/// if the <paramref name="key"/> does not already exists and returns the inserted value.
+/// </summary>
+/// <summary>
+/// Adds the <paramref name="key"/> and the value created by <paramref name="valueCreator"/> to 
+/// the <paramref name="dictionary"/> if the <paramref name="key"/> does not already exists 
+/// and returns the inserted value.
+/// </summary>
+/// <summary>
+/// Gets the value associated with the specified key or the <paramref name="defaultValue"/> if it does not exist.
+/// </summary>
+/// <param name="dictionary">The Source Dictionary</param>
+/// <param name="key">The key whose value to get.</param>
+/// <param name="defaultValue">The default value to return if an item with the specified <paramref name="key"/> does not exist.</param>
+/// <returns>The value associated with the specified key or the <paramref name="defaultValue"/> if it does not exist.</returns>
+/// <summary>
+/// Adds the given <paramref name="pairsToAdd"/> to the given <paramref name="dictionary"/>.
+/// <remarks>This method is used to duck-type <see cref="IDictionary{TKey, TValue}"/> with multiple pairs.</remarks>
+/// </summary>
+/// <summary>
+/// Compares the given <paramref name="left"/> against <paramref name="right"/> for equality.
+/// </summary>
+/// <summary>
+/// Compares the given <paramref name="left"/> against <paramref name="right"/> for equality.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="NameValueCollection"/> as a Dictionary
+/// </summary>
+/// <summary>
+/// Returns a <see cref="ConcurrentDictionary{TKey,TValue}"/> from an <see cref="IDictionary{TKey,TValue}"/>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="ConcurrentDictionary{TKey,TValue}"/> from an <see cref="IDictionary{TKey,TValue}"/>.
+/// </summary>
+/// <summary>
+/// Provides a set of helper methods for working with <see cref="double"/>.
+/// </summary>
+/// <summary>
+/// Returns the number of decimal places for a given <paramref name="value"/>.
+/// </summary>
+/// <param name="value">The double value</param>
+/// <returns>The number of decimal places</returns>
+/// <summary>
+/// Returns the Floor of the given <paramref name="value"/> to the specified <paramref name="decimalPlaces"/> decimal places.
+/// </summary>
+/// <param name="value">The double value</param>
+/// <param name="decimalPlaces">The number of decimal places</param>
+/// <returns>The Floor as double value</returns>
+// We need to promote to decimal to avoid the double approximation
+/// <summary>
+/// Returns the Ceiling of the given <paramref name="value"/> to the specified <paramref name="decimalPlaces"/> decimal places.
+/// </summary>
+/// <param name="value">The double value</param>
+/// <param name="decimalPlaces">The number of decimal places</param>
+/// <returns>The Ceiling as double value</returns>
+// We need to promote to decimal to avoid the double approximation
+/// <summary>
+/// Determines if two double values are almost equal based on a specified tolerance.
+/// </summary>
+/// <param name="left">The left double</param>
+/// <param name="right">The right double</param>
+/// <param name="epsilon">The tolerance</param>
+/// <returns>Result of equality</returns>
+// ReSharper disable PossibleMultipleEnumeration
+/// <summary>
+/// Extension methods for <see cref="IEnumerable{T}"/>
+/// </summary>
+/// <summary>
+/// Convenience method for retrieving a specific page of items within the given <paramref name="sequence"/>.
+/// </summary>
+/// <typeparam name="T">The type of element in the sequence</typeparam>
+/// <param name="sequence">The sequence of elements</param>
+/// <param name="pageIndex">The 0-based index for the page</param>
+/// <param name="pageSize">The size of the elements in the page</param>
+/// <returns>The returned paged sequence</returns>
+/// <summary>
+/// Converts an Enumerable into a read-only collection
+/// </summary>
+/// <summary>
+/// Validates that the <paramref name="sequence"/> is not null and contains items.
+/// </summary>
+/// <summary>
+/// Concatenates the members of a collection, using the specified separator between each item.
+/// </summary>
+/// <summary>
+/// Converts <paramref name="sequence"/> to a <paramref name="delimiter"/> separated <see cref="string"/>.
+/// </summary>
+/// <summary>
+/// Converts <paramref name="sequence"/> to a <c>Comma</c> separated string.
+/// </summary>
+/// <summary>
+/// Executes an <paramref name="action"/> for each of the items in the sequence
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="sequence"></param>
+/// <param name="action"></param>
+/// <summary>
+/// Selects a random element from an Enumerable with only one pass (O(N) complexity); 
+/// It contains optimizations for arguments that implement ICollection{T} by using the 
+/// Count property and the ElementAt LINQ method. The ElementAt LINQ method itself contains 
+/// optimizations for <see cref="IList{T}"/>.
+/// </summary>
+/// <summary>
+/// Selects a random element from an Enumerable with only one pass (O(N) complexity); 
+/// It contains optimizations for arguments that implement ICollection{T} by using the 
+/// Count property and the ElementAt LINQ method. The ElementAt LINQ method itself contains 
+/// optimizations for <see cref="IList{T}"/>.
+/// </summary>
+// Select the current element with 1/count probability
+/// <summary>
+/// Randomizes a <paramref name="sequence"/>.
+/// </summary>
+/// <summary>
+/// Randomizes a <paramref name="sequence"/>.
+/// </summary>
+/// <summary>
+/// Returns all the distinct elements of the given source where <c>distictness</c> is determined
+/// via a projection and the <see cref="EqualityComparer{TKey}.Default"/> for the given <paramref name="sequence"/>.
+/// </summary>
+/// <summary>
+/// Returns all the distinct elements of the given source where <c>distictness</c> is determined
+/// via a projection and the <paramref name="comparer"/> and the given <paramref name="comparer"/>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="HashSet{T}"/> from the given <paramref name="sequence"/> 
+/// based on the <see cref="EqualityComparer{TKey}.Default"/> eliminating any duplicate values.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="HashSet{T}"/> from the given <paramref name="sequence"/> 
+/// base on the given <paramref name="comparer"/> eliminating any duplicate values.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="EasyDictionary{TKey,TValue}"/> for the given <paramref name="sequence"/>
+/// based on the <paramref name="keySelector"/>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="EasyDictionary{TKey,TValue}"/> for the given <paramref name="sequence"/>
+/// based on the <paramref name="keySelector"/>.
+/// </summary>
+/// <summary>
+/// Attempts to convert the given <paramref name="sequence"/> to an <see cref="IList{T}"/>
+/// by casting it first and if not successful then calling <c>ToList()</c>.
+/// </summary>
+/// <summary>
+/// Attempts to convert the given <paramref name="sequence"/> to an <see cref="IReadOnlyList{T}"/>
+/// by casting it first and if not successful then calling <c>ToList()</c>.
+/// </summary>
+/// <summary>
+/// Attempts to convert the given <paramref name="sequence"/> to an <see cref="T:T[]"/>
+/// by casting it first and if not successful then calling <c>ToArray()</c>.
+/// </summary>
+/// <summary>
+/// Allows exception handling when yield returning an IEnumerable
+/// <example>
+/// myList.HandleExceptionWhenYieldReturning{int}(e => 
+/// {
+///     Logger.Error(e);
+///     throw new SybaseException("Exception occurred", e);
+/// }, e => e is AseException || e is DbException);
+/// </example>
+/// </summary>
+/// <typeparam name="T">Type of data to enumerate.</typeparam>
+/// <param name="sequence">The sequence of <typeparamref name="T"/> which will be enumerated.</param>
+/// <param name="exceptionPredicate">The predicate specifying which exception(s) to handle.</param>
+/// <param name="actionToExecuteOnException">The action to which the handled exception will be passed to.</param>
+/// <returns></returns>
+/// <summary>
+/// Batches the source sequence into sized buckets.
+/// </summary>
+/// <typeparam name="TSource">Type of elements in <paramref name="source"/> sequence.</typeparam>
+/// <param name="source">The source sequence.</param>
+/// <param name="size">Size of buckets.</param>
+/// <returns>A sequence of equally sized buckets containing elements of the source collection.</returns>
+/// <remarks>
+/// This operator uses deferred execution and streams its results (buckets and bucket content).
+/// </remarks>
+/// <summary>
+/// Contains a set of helper methods for working with <see cref="Exception"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is of type <typeparamref name="TEx"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is any of the types <typeparamref name="TEx1"/>
+/// or <typeparamref name="TEx2"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is any of the types <typeparamref name="TEx1"/>,
+/// <typeparamref name="TEx2"/> or <typeparamref name="TEx3"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is any of the types <typeparamref name="TEx1"/>,
+/// <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/> or <typeparamref name="TEx4"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is any of the types <typeparamref name="TEx1"/>,
+/// <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>, <typeparamref name="TEx4"/>
+/// or <typeparamref name="TEx5"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is any of the types <typeparamref name="TEx1"/>,
+/// <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>, <typeparamref name="TEx4"/>,
+/// <typeparamref name="TEx5"/> or <typeparamref name="TEx6"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is any of the types <typeparamref name="TEx1"/>,
+/// <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>, <typeparamref name="TEx4"/>,
+/// <typeparamref name="TEx5"/>, <typeparamref name="TEx6"/> or <typeparamref name="TEx7"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is any of the <paramref name="exceptionTypes"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="ex"/> is the type matched by <paramref name="predicate"/>.
+/// </summary>
+/// <summary>
+/// Provides a set of helpful methods for <see cref="Expression"/>.
+/// </summary>
+/// <summary>
+/// Returns the name of the property specified by the <paramref name="selector"/>.
+/// </summary>
+/// <typeparam name="TInstance">The type of the model whose property is to be selected.</typeparam>
+/// <typeparam name="TProperty">The type of the property which should be selected.</typeparam>
+/// <summary>
+/// Returns the <see cref="PropertyInfo"/> specified by the <paramref name="selector"/>.
+/// </summary>
+/// <typeparam name="TInstance">The type of the model whose property is to be selected.</typeparam>
+/// <typeparam name="TProperty">The type of the property to be selected.</typeparam>
+/// <param name="selector">The expression to select the property.</param>
+/// <param name="instance">The instance for which the property should be selected.</param>
+// ReSharper disable once PossibleNullReferenceException
+/// <summary>
+/// Provides a set of useful methods for working with <see cref="FileInfo"/> and <see cref="DirectoryInfo"/>.
+/// </summary>
+/// <summary>
+/// Returns the size of the <paramref name="directoryInfo"/> and its sub-directories in bytes.
+/// </summary>
+/// <summary>
+/// Indicates if a given <paramref name="directoryInfo"/> is hidden.
+/// </summary>
+/// <param name="directoryInfo">The <paramref name="directoryInfo"/> to check.</param>
+/// <returns>Boolean indicating if the <paramref name="directoryInfo"/> is hidden.</returns>
+/// <summary>
+/// Indicates if a given <paramref name="fileInfo"/> is hidden.
+/// </summary>
+/// <param name="fileInfo">The <paramref name="fileInfo"/> to check.</param>
+/// <returns>
+/// Boolean indicating if the <paramref name="fileInfo"/> is hidden.
+/// </returns>
+/// <summary>
+/// Renames the given <paramref name="fileInfo"/> to <paramref name="newName"/> and returns the 
+/// renamed <see cref="FileInfo"/>.
+/// </summary>
+/// <summary>
+/// Opens a stream for reading with sequential optimization and providing 
+/// <see cref="FileShare.ReadWrite"/> for others.
+/// <remarks>
+/// A <see cref="FileNotFoundException"/> exception is 
+/// thrown if the file does not exist.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Opens or creates a stream for reading with sequential optimization and providing 
+/// <see cref="FileShare.ReadWrite"/> for others.
+/// </summary>
+/// <summary>
+/// Opens or creates a stream for writing with sequential optimization and providing 
+/// <see cref="FileShare.Read"/> for others.
+/// </summary>
+/// <summary>
+/// Opens or creates a stream for reading and writing with sequential optimization and providing 
+/// <see cref="FileShare.ReadWrite"/> for others.
+/// </summary>
+/// <summary>
+/// Lazily reads every line in the <paramref name="file"/> without requiring a file lock.
+/// <remarks>
+/// This method is preferred over the <see cref="File.ReadLines(string)"/> which requires 
+/// a file lock that may result <see cref="IOException"/> if the file is opened exclusively 
+/// by another process such as <c>Excel</c>.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Lazily reads every line in the <paramref name="file"/> without requiring a file lock.
+/// <remarks>
+/// This method is preferred over the <see cref="File.ReadLines(string)"/> which requires 
+/// a file lock that may result <see cref="IOException"/> if the file is opened exclusively 
+/// by another process such as <c>Excel</c>.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Enumerates every sub-directory inside the <paramref name="directory"/> in-parallel without 
+/// throwing <see cref="UnauthorizedAccessException"/>.
+/// </summary>
+/// <summary>
+/// Enumerates every file inside the <paramref name="directory"/> in-parallel without 
+/// throwing <see cref="UnauthorizedAccessException"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="file"/> is binary or a text file.
+/// </summary>
+// ReSharper disable AssignNullToNotNullAttribute
+/// <summary>
+/// A set of extension methods for generic types.
+/// </summary>
+/// <summary>
+/// This dictionary caches the delegates for each 'to-clone' type.
+/// </summary>
+/// <summary>
+/// Converts the given <paramref name="object"/> to a <see cref="DynamicDictionary"/>.
+/// </summary>
+/// <summary>
+/// Returns <c>True</c> if <paramref name="object"/> has the default value of <typeparamref name="T"/>.
+/// </summary>
+/// <param name="object">The object to check for default.</param>
+/// <returns><c>True</c> if <paramref name="object"/> has default or null value otherwise <c>False</c>.</returns>
+/// <summary>
+/// Returns an uninitialized instance of the <typeparamref name="T"/> without calling any of its constructor(s).
+/// <see href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.formatterservices.getuninitializedobject.aspx"/>
+/// </summary>
+/// <remarks>
+/// Because the new instance of the object is initialized to zero and no constructors are run, 
+/// the object might not represent a state that is regarded as valid by that object. 
+/// The current method should only be used for deserialization when the user intends to immediately
+/// populate all fields. It does not create an uninitialized string, 
+/// since creating an empty instance of an immutable type serves no purpose.
+/// </remarks>
+/// <typeparam name="T">Generic Type</typeparam>
+/// <returns>An instance of type <typeparamref name="T"/> 
+/// with all its <c>non-static</c> fields initialized to its default value.
+/// </returns>
+/// <summary>
+/// Gets all the private, public, inherited instance property names for the given <paramref name="object"/>.
+/// <remarks>
+/// This method can be used to return both a <c>public</c> or <c>non-public</c> property names
+/// and supports instances of <see cref="ExpandoObject"/>.
+/// </remarks>
+/// <param name="object">Object to get properties from</param>
+/// <param name="inherit">The flag indicating whether inherited properties should be included or not</param>
+/// <param name="includePrivate">The flag indicating whether private properties should be included or not</param>
+/// </summary>
+/// <summary>    
+/// Generic cloning method that clones an object using IL.    
+/// Only the first call of a certain type will hold back performance.    
+/// After the first call, the compiled IL is executed.    
+/// </summary>    
+/// <typeparam name="T">Type of object to clone</typeparam>    
+/// <param name="object">Object to clone</param>    
+/// <returns>Cloned object</returns>    
+// Create ILGenerator (both DM declarations work)
+/// <summary>
+/// Performs a deep copy of the object using the by generating IL.
+/// Only the first call for a certain type will have impact on performance; After the first call, the compiled IL is executed.
+/// <see href="http://whizzodev.blogspot.co.uk/2008/06/object-deep-cloning-using-il-in-c.html"/>
+/// </summary>    
+/// <typeparam name="T">The type of object being cloned.</typeparam>    
+/// <param name="myObject">The object instance to clone.</param>    
+/// <returns>the cloned object</returns>    
+// Create ILGenerator (both DM declarations work)
+/// <summary>
+/// Provides a lock with a timeout.
+/// </summary>
+/// <example>
+/// var locker = new object();
+/// using(locker.Lock(TimeSpan.FromSeconds(1)))
+/// {
+///     sharedVariable++;
+/// }
+/// </example>
+/// <param name="obj">Object on which lock is taken.</param>
+/// <param name="timeout">Timeout for the lock.</param>
+/// <returns>A locker on which lock will be taken.</returns>
+/// <summary>
+/// As part of the Lock extension method on <c>object</c>s 
+/// it provides a timeout mechanism for acquiring locks.
+/// </summary>
+/// <summary>
+/// Returns an instance of <see cref="Locker"/>.
+/// </summary>
+/// <param name="obj">The <c>object</c> on which lock is taken.</param>
+/// <summary>
+/// Releases any locks taken by this instance.
+/// </summary>
+/// <summary>
+/// Creates a Task that's completed successfully with the specified <paramref name="result"/>.
+/// </summary>
+/// <summary>
+/// Creates a ValueTask that's completed successfully with the specified <paramref name="result"/>.
+/// </summary>
+// We have a reference type.
+// We have a list type (generic).
+// Get argument of list type
+// Check that it has a constructor that accepts another IEnumerable.
+// It has! (Like the List<> class)
+// Get object from custom location and store it in right field of location 0
+/// <summary>
+/// Provides a set of helper methods for working with <see cref="Guid"/>.
+/// </summary>
+/// <summary>
+/// Returns a <c>Base64</c> encoded <see cref="Guid"/>.
+/// <example>
+/// DRfscsSQbUu8bXRqAvcWQA== or DRfscsSQbUu8bXRqAvcWQA depending on <paramref name="trimEnd"/>.
+/// </example>
+/// <remarks>
+/// The result of this method is not <c>URL</c> safe.
+/// See: <see href="https://blog.codinghorror.com/equipping-our-ascii-armor/"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Generates a maximum of 16 character, <see cref="Guid"/> based string with very little chance of collision. 
+/// <example>3c4ebc5f5f2c4edc</example>.
+/// <remarks>
+/// The result of this method is <c>URL</c> safe.
+/// Slower than <see cref="AsShortCodeBase64"/>. 
+/// See: <see href="http://madskristensen.net/post/generate-unique-strings-and-numbers-in-c"/>
+/// </remarks>
+/// </summary>
+// ReSharper disable once LoopCanBeConvertedToQuery
+/// <summary>
+/// Generates a 19 character, <see cref="Guid"/> based number. 
+/// <example>4801539909457287012</example>.
+/// <remarks>
+/// Faster than <see cref="AsShortCodeBase64"/>. 
+/// See: <see href="http://madskristensen.net/post/generate-unique-strings-and-numbers-in-c"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Extension methods for <see cref="long"/>.
+/// </summary>
+/// <summary>
+/// Converts milliseconds since Epoch to <see cref="DateTime"/>
+/// </summary>
+/// <param name="epochMilliseconds">Milliseconds since Epoch as <see cref="long"/></param>
+/// <returns><see cref="DateTime"/></returns>
+/// <summary>
+/// Returns an <see cref="IEnumerable{T}"/> containing <paramref name="times"/> item.
+/// </summary>
+/// <param name="times">The number of items to include in the result</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times and returns the result of each execution.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times and returns the result of each execution.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Ticks</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Milliseconds</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Seconds</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Minutes</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Hours</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Days</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Weeks</c>.
+/// </summary>
+/// <summary>
+/// Extension methods for <see cref="int"/>
+/// </summary>
+/// <summary>
+/// Returns an <see cref="IEnumerable{T}"/> containing <paramref name="times"/> item.
+/// </summary>
+/// <param name="times">The number of items to include in the result</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times and returns the result of each execution.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times and returns the result of each execution.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Ticks</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Milliseconds</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Seconds</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Minutes</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Hours</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Days</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Weeks</c>.
+/// </summary>
+/// <summary>
+/// Extension methods for <see cref="short"/>
+/// </summary>
+/// <summary>
+/// Returns an <see cref="IEnumerable{T}"/> containing <paramref name="times"/> item.
+/// </summary>
+/// <param name="times">The number of items to include in the result</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times and returns the result of each execution.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Executes the given <paramref name="actionFn"/> <paramref name="times"/> times and returns the result of each execution.
+/// </summary>
+/// <param name="times">The number of times the <paramref name="actionFn"/> should be executed</param>
+/// <param name="actionFn">The action to execute</param>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Ticks</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Milliseconds</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Seconds</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Minutes</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Hours</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Days</c>.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="TimeSpan"/> represented by <paramref name="number"/> as <c>Weeks</c>.
+/// </summary>
+/// <summary>
+/// Provides a set of useful methods for working with <see cref="Lazy{T}"/>.
+/// </summary>
+/// <summary>
+/// Allows asynchronously waiting for the value of the <paramref name="lazy"/>.
+/// </summary>
+/// <summary>
+/// Extension methods for <see cref="IList{T}"/>
+/// </summary>
+/// <summary>
+/// Adds the given <paramref name="items"/> to the given <paramref name="list"/>.
+/// <remarks>This method is used to duck-type <see cref="IList{T}"/> with multiple items.</remarks>
+/// </summary>
+/// <summary>
+/// Provides a set of useful methods for working with <see cref="Random"/>.
+/// </summary>
+/// <summary>
+/// Generates a random <see cref="double"/> between the given <paramref name="min"/> and <paramref name="max"/>.
+/// </summary>
+/// <summary>
+/// Generates a random set of numbers between the given <paramref name="min"/> and <paramref name="max"/>.
+/// <remarks>
+/// <paramref name="max"/> is exclusive. Credit goes to: <see href="http://codereview.stackexchange.com/a/61372"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// A set of extension methods for <see cref="Stream"/>.
+/// </summary>
+/// <summary>
+/// Detects the text encoding for the given <paramref name="stream"/>.
+/// </summary>
+/// <summary>
+/// Returns the number of lines in the given <paramref name="stream"/>.
+/// </summary>
+/// <summary>
+/// Gets a sequence containing every element with the name equal to <paramref name="name"/>.
+/// </summary>
+/// <param name="stream">The stream containing XML</param>
+/// <param name="name">The name of the elements to return</param>
+/// <param name="ignoreCase">The flag indicating whether the name should be looked up in a case sensitive manner</param>
+/// <returns>The sequence containing all the elements <see cref="XElement"/> matching the <paramref name="name"/></returns>
+/// <summary>
+/// Gets a sequence containing every element with the name equal to <paramref name="name"/>.
+/// </summary>
+/// <param name="stream">The stream containing XML</param>
+/// <param name="name">The name of the elements to return</param>
+/// <param name="settings">The settings used by the <see cref="XmlReader"/></param>
+/// <param name="ignoreCase">The flag indicating whether the name should be looked up in a case sensitive manner</param>
+/// <returns>The sequence containing all the elements <see cref="XElement"/> matching the <paramref name="name"/></returns>
+/// <summary>
+/// Extensions for <see cref="StringBuilder"/>.
+/// </summary>
+/// <summary>
+/// Appends the given <paramref name="text"/> <paramref name="count"/> times.
+/// </summary>
+/// <summary>
+/// Appends the given <paramref name="character"/> <paramref name="count"/> times.
+/// </summary>
+/// <summary>
+/// Appends space <paramref name="count"/> times.
+/// </summary>
+/// <returns></returns>
+/// <summary>
+/// Extensions for <see cref="string"/>
+/// </summary>
+/// <summary>
+/// A nicer way of calling <see cref="string.IsNullOrEmpty(string)"/>
+/// </summary>
+/// <param name="value">The string to test.</param>
+/// <returns>
+/// <see langword="true"/> if the format parameter is null or an empty string (""); otherwise, <see langword="false"/>.
+/// </returns>
+/// <summary>
+/// A nice way of calling the inverse of <see cref="string.IsNullOrEmpty(string)"/>
+/// </summary>
+/// <param name="value">The string to test.</param>
+/// <returns>
+/// <see langword="true"/> if the format parameter is not null or an empty string (""); otherwise, <see langword="false"/>.
+/// </returns>
+/// <summary>
+/// A nice way of checking if a string is null, empty or whitespace 
+/// </summary>
+/// <param name="value">The string to test.</param>
+/// <returns>
+/// <see langword="true"/> if the format parameter is null or an empty string (""); otherwise, <see langword="false"/>.
+/// </returns>
+/// <summary>
+/// A nice way of checking the inverse of (if a string is null, empty or whitespace) 
+/// </summary>
+/// <param name="value">The string to test.</param>
+/// <returns>
+/// <see langword="true"/> if the format parameter is not null or an empty string (""); otherwise, <see langword="false"/>.
+/// </returns>
+/// <summary>
+/// Parses a string as Boolean, valid inputs are: <c>true|false|yes|no|1|0</c>.
+/// <remarks>Input is parsed as Case-Insensitive.</remarks>
+/// </summary>
+/// <summary>
+/// Allows for using strings in <see langword="null"/> coalescing operations.
+/// </summary>
+/// <param name="value">The string value to check.</param>
+/// <returns>
+/// Null if <paramref name="value"/> is empty or the original <paramref name="value"/>.
+/// </returns>
+/// <summary>
+/// Tries to extract the value between the tag <paramref name="tagName"/> 
+/// from the <paramref name="input"/>.
+/// <remarks>This method is case insensitive.</remarks>
+/// </summary>
+/// <param name="input">The input string.</param>
+/// <param name="tagName">The tag whose value will be returned e.g <c>span, img</c>.</param>
+/// <param name="value">The extracted value.</param>
+/// <returns><c>True</c> if successful otherwise <c>False</c>.</returns>
+/// <summary>
+/// Returns a string array containing the trimmed substrings in this <paramref name="value"/>
+/// that are delimited by the provided <paramref name="separators"/>.
+/// </summary>
+/// <summary>
+/// Checks if the <paramref name="input"/> contains the <paramref name="stringToCheckFor"/> 
+/// based on the provided <paramref name="comparison"/> rules.
+/// </summary>
+/// <summary>
+/// Checks that given <paramref name="input"/> matches any of the potential matches.
+/// Inspired by: http://stackoverflow.com/a/20644611/23199
+/// </summary>
+/// <summary>
+/// Checks that given <paramref name="input"/> matches any of the potential matches.
+/// Inspired by: http://stackoverflow.com/a/20644611/23199
+/// </summary>
+/// <summary>
+/// Checks that given <paramref name="input"/> is in a list of 
+/// potential <paramref name="matches"/>.
+/// <remarks>Inspired by: <see href="http://stackoverflow.com/a/20644611/23199"/> </remarks>
+/// </summary>
+/// <summary>
+/// Checks to see if the given input is a valid palindrome or not.
+/// </summary>
+/// <summary>
+/// Truncates the <paramref name="input"/> to the maximum length of <paramref name="maxLength"/> 
+/// and replaces the truncated part with <paramref name="suffix"/>
+/// </summary>
+/// <param name="input">The input string</param>
+/// <param name="maxLength">Total length of characters to maintain before truncation.</param>
+/// <param name="suffix">The suffix to add to the end of the truncated <paramref name="input"/></param>
+/// <summary>
+/// Removes different types of new lines from a given string.
+/// </summary>
+/// <param name="input">input string.</param>
+/// <returns>The given input minus any new line characters.</returns>
+/// <summary>
+/// Separates a PascalCase string.
+/// </summary>
+/// <example> "ThisIsPascalCase".SeparatePascalCase(); // returns "This Is Pascal Case" </example>
+/// <param name="value">The format to split</param>
+/// <returns>The original string separated on each uppercase character.</returns>
+/// <summary>
+/// Converts string to Pascal Case
+/// <example>This Is A Pascal Case String.</example>
+/// </summary>
+/// <param name="input">The given input.</param>
+/// <returns>The given <paramref name="input"/> converted to Pascal Case.</returns>
+/// <summary>
+/// Compares <paramref name="input"/> against <paramref name="target"/>, 
+/// the comparison is case-sensitive.
+/// </summary>
+/// <param name="input">The input string</param>
+/// <param name="target">The target string</param>
+/// <summary>
+/// Handy method to print arguments to <c>System.Console</c>.
+/// </summary>
+/// <param name="input">The input string.</param>
+/// <param name="args">The arguments.</param>
+/// <summary>
+/// Generates a slug.
+/// <remarks>
+/// Credit goes to <see href="http://stackoverflow.com/questions/2920744/url-slugify-alrogithm-in-cs"/>.
+/// </remarks>
+/// </summary>
+// prepare string, remove diacritics, lower case and convert hyphens to whitespace
+// remove invalid characters
+// convert multiple spaces into one space
+/// <summary>
+/// Removes the diacritics from the given <paramref name="input"/> 
+/// </summary>
+/// <remarks>
+/// Credit goes to <see href="http://stackoverflow.com/a/249126"/>.
+/// </remarks>
+/// <summary>
+/// A method to convert English digits to Persian numbers.
+/// </summary>
+/// <summary>
+/// Gets a sequence containing every element with the name equal to <paramref name="name"/>.
+/// </summary>
+/// <param name="xmlInput">The input containing XML</param>
+/// <param name="name">The name of the elements to return</param>
+/// <param name="ignoreCase">The flag indicating whether the name should be looked up in a case sensitive manner</param>
+/// <returns>
+/// The sequence containing all the elements <see cref="XElement"/> matching the <paramref name="name"/>.
+/// </returns>
+/// <summary>
+/// Gets a sequence containing every element with the name equal to <paramref name="name"/>.
+/// </summary>
+/// <param name="xmlInput">The input containing XML</param>
+/// <param name="name">The name of the elements to return</param>
+/// <param name="settings">The settings used by the <see cref="XmlReader"/></param>
+/// <param name="ignoreCase">The flag indicating whether the name should be looked up in a case sensitive manner</param>
+/// <returns>
+/// The sequence containing all the elements <see cref="XElement"/> matching the <paramref name="name"/>.
+/// </returns>
+/// <summary>
+/// Compresses the given <paramref name="input"/> to <c>Base64</c> string.
+/// </summary>
+/// <param name="input">The string to be compressed</param>
+/// <returns>The compressed string in <c>Base64</c></returns>
+/// <summary>
+/// Decompresses a <c>Base64</c> compressed string.
+/// </summary>
+/// <param name="compressedInput">The string compressed in <c>Base64</c></param>
+/// <returns>The uncompressed string</returns>
+/// <summary>
+/// Ensures the given <paramref name="fileName"/> can be used as a file name.
+/// </summary>
+/// <summary>
+/// Ensures the given <paramref name="path"/> can be used as a path.
+/// </summary>
+/// <summary>
+/// Returns a <see cref="Guid"/> from a <c>Base64</c> encoded <paramref name="input"/>.
+/// <example>
+/// DRfscsSQbUu8bXRqAvcWQA== or DRfscsSQbUu8bXRqAvcWQA depending on <paramref name="trimmed"/>.
+/// </example>
+/// <remarks>
+/// See: <see href="https://blog.codinghorror.com/equipping-our-ascii-armor/"/>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Returns all the start and end indexes of the occurrences of the 
+/// given <paramref name="startTag"/> and <paramref name="endTag"/> 
+/// in the given <paramref name="input"/>.
+/// </summary>
+/// <param name="input">The input to search.</param>
+/// <param name="startTag">The starting tag e.g. <c>&lt;div></c>.</param>
+/// <param name="endTag">The ending tag e.g. <c>&lt;/div></c>.</param>
+/// <returns>
+/// A sequence <see cref="KeyValuePair{TKey,TValue}"/> where the key is 
+/// the starting position and value is the end position.
+/// </returns>
+/// <summary>
+/// Returns the size of the given <paramref name="input"/> encoded 
+/// as <c>UTF-16</c> characters in bytes.
+/// </summary>
+// ReSharper disable PossibleMultipleEnumeration
+/// <summary>
+/// A set of helper methods as extensions on <see cref="System.Threading.Tasks"/>
+/// </summary>
+/// <summary>
+/// Ensures that the given <paramref name="task"/> finishes before a timeout <see cref="Task"/> 
+/// with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="TimeoutException">
+/// Thrown when the <paramref name="task"/> times out.
+/// </exception>
+/// <summary>
+/// Ensures that every task in the given <paramref name="tasks"/> finishes before a timeout 
+/// <see cref="Task"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="TimeoutException">
+/// Thrown when any of the <paramref name="tasks"/> times out.
+/// </exception>
+/// <summary>
+/// Ensures that the given <paramref name="task"/> finishes before a timeout <see cref="Task"/> 
+/// with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="TimeoutException">
+/// Thrown the <paramref name="task"/> times out.
+/// </exception>
+/// <summary>
+/// Ensures that every task in the given <paramref name="tasks"/> finishes before a timeout 
+/// <see cref="Task"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <exception cref="TimeoutException">
+/// Thrown when any of the <paramref name="tasks"/> times out.
+/// </exception>
+/// <summary>
+/// Executes the given action on each of the tasks in turn, in the order of
+/// the sequence. The action is passed the result of each task.
+/// </summary>
+/// <summary>
+/// Executes the given action on each of the tasks in turn, in the order of
+/// the sequence. The action is passed the result of each task.
+/// </summary>
+/// <summary>
+/// Awaits all of the given <paramref name="tasks"/>.
+/// </summary>
+/// <summary>
+/// Awaits all of the given <paramref name="tasks"/>.
+/// </summary>
+/// <summary>
+/// Suppresses default exception handling of the given <paramref name="task"/>
+/// that would otherwise re-raise the exception on the finalizer thread.
+/// </summary>
+/// <param name="task">The Task to be monitored</param>
+/// <returns>The original task</returns>
+/// <summary>
+/// Suppresses default exception handling of the given <paramref name="task"/>
+/// that would otherwise re-raise the exception on the finalizer thread.
+/// </summary>
+/// <param name="task">The Task to be monitored</param>
+/// <returns>The original task</returns>
+/// <summary>
+/// Suppresses default exception handling of the given <paramref name="task"/>
+/// that would otherwise re-raise the exception on the finalizer thread.
+/// </summary>
+/// <param name="task">The Task to be monitored</param>
+/// <returns>The original task</returns>
+/// <summary>
+/// Handles all the exceptions thrown by the <paramref name="task"/>.
+/// </summary>
+/// <param name="task">The task which might throw exceptions</param>
+/// <param name="exceptionsHandler">The handler to which every exception is passed</param>
+/// <returns>The continuation task added to the <paramref name="task"/></returns>
+/// <summary>
+/// Handles expected exception(s) thrown by the <paramref name="task"/>
+/// which are specified by <paramref name="exceptionPredicate"/>.
+/// </summary>
+/// <param name="task">The task which might throw exceptions.</param>
+/// <param name="exceptionPredicate">The predicate specifying which exception(s) to handle</param>
+/// <param name="exceptionHandler">The handler to which every exception is passed</param>
+/// <returns>The continuation task added to the <paramref name="task"/></returns>
+/// <summary>
+/// Handles an expected exception thrown by the <paramref name="task"/>.
+/// </summary>
+/// <typeparam name="T">Type of exception to handle</typeparam>
+/// <param name="task">The task which might throw exceptions</param>
+/// <param name="exceptionHandler">The handler to which every exception is passed</param>
+/// <returns>The continuation task added to the <paramref name="task"/></returns>
+/// <summary>
+/// Extension methods for <see cref="Type"/>.
+/// </summary>
+/// <summary>
+/// Returns the <c>instance</c> property of the given <paramref name="type"/> regardless of it's access modifier.
+/// <remarks>This method can be used to return both a <c>public</c> or <c>non-public</c> property.</remarks>
+/// </summary>
+/// <summary>
+/// Returns all <c>instance</c> properties of the given <paramref name="type"/>.
+/// <remarks>This method can be used to return both a <c>public</c> or <c>non-public</c> property.</remarks>
+/// </summary>
+/// <summary>
+/// Returns all <c>instance</c> properties of the given <paramref name="typeInfo"/>.
+/// <remarks>This method can be used to return both a <c>public</c> or <c>non-public</c> property.</remarks>
+/// </summary>
+/// <summary>
+/// Returns the properties marked with an attribute of type <typeparamref name="T"/>.
+/// <remarks>It avoids materializing any attribute instances. <see href="http://stackoverflow.com/a/2282254/1226568"/></remarks>
+/// </summary>
+/// <typeparam name="T">Type of <c>Attribute</c> which has decorated the properties.</typeparam>
+/// <param name="type">Type of <c>Object</c> which has properties decorated with <typeparamref name="T"/>.</param>
+/// <param name="inherit">If <c>true</c> it also searches the ancestors for the <typeparamref name="T"/>.</param>
+/// <returns>A sequence containing properties decorated with <typeparamref name="T"/>.</returns>
+/// <summary>
+/// Returns a mapping of <typeparamref name="T"/> attribute to <see cref="PropertyInfo"/> for a given <paramref name="type"/>.
+/// </summary>
+/// <typeparam name="T">Type of attribute which will be used as the key</typeparam>
+/// <param name="type">Type whose properties will be mapped to the <typeparamref name="T"/> attributes</param>
+/// <param name="inherit">If <c>true</c> it also searches the ancestors for the <typeparamref name="T"/>.</param>
+/// <returns>A mapping between the attributes defined on the properties and the property infos</returns>
+/// <summary>
+/// Tries to get attributes of type <typeparamref name="T"/> defined on the given <paramref name="type"/>.
+/// </summary>
+/// <typeparam name="T">The type of the attribute to get</typeparam>
+/// <param name="type">The type on which the attribute has been defined</param>
+/// <param name="attributes">All of the attributes found on the given type</param>
+/// <param name="inherit">If <c>true</c> it also searches the ancestors for the <typeparamref name="T"/>.</param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Tries to get the generic type arguments for the given <paramref name="type"/>.
+/// <example>For a type of <see cref="List{Int32}"/> the generic type is <see cref="int"/>.</example>
+/// </summary>
+/// <param name="type">The type for which generic type should be retrieved</param>
+/// <param name="genericArguments">The result</param>
+/// <returns><see langword="true"/> if generic types can be retrieved otherwise <see langword="false"/></returns>
+/// <summary>
+/// Determines if the given <paramref name="type"/> is a sequence of elements.
+/// </summary>
+/// <param name="type">The type to inspect</param>
+/// <param name="sequenceType">The determined type of the sequence</param>
+/// <returns><c>True</c> if <paramref name="type"/> is a sequence otherwise <c>False</c></returns>
+/// <summary>
+/// Determines whether the <paramref name="type"/> implements <typeparamref name="T"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="type"/> has a default constructor.
+/// </summary>
+/// <param name="type">Type to check.</param>
+/// <returns><c>True</c> if <paramref name="type"/> has a default constructor, <c>False</c> otherwise.</returns>
+/// <summary>
+/// Determines whether the given <paramref name="type"/> is of simple type.
+/// </summary>
+/// <param name="type">The type.</param>
+/// <returns><c>True</c> if it is simple type otherwise <c>False</c>.</returns>
+/// <summary>
+/// Determines whether the given <paramref name="type"/> an array of <typeparamref name="T"/>
+/// </summary>
+/// <typeparam name="T">The Type of the elements in the array.</typeparam>
+/// <param name="type">The type of object.</param>
+/// <returns><c>True</c> or <c>False</c></returns>
+/// <summary>
+/// Determines whether the given <paramref name="type"/> is a generic list
+/// </summary>
+/// <param name="type">The type to evaluate</param>
+/// <returns><c>True</c> if is generic otherwise <c>False</c></returns>
+/// <summary>
+/// Determines if the given <paramref name="type"/> is numeric.
+/// </summary>
+// ReSharper disable once SwitchStatementMissingSomeCases
+/// <summary>
+/// Gets the <see cref="TypeCode"/> for the given <paramref name="type"/>.
+/// </summary>
+// ReSharper disable once TailRecursiveCall
+// ReSharper disable once ConvertIfStatementToReturnStatement
+/// <summary>
+/// Enum representing the possible types of a sequence.
+/// </summary>
+/// <summary>
+/// Represents an invalid type.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="String"/>.
+/// </summary>
+/// <summary>
+/// Represents an Array.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="BitArray"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="ArrayList"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Queue"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Stack"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Hashtable"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="SortedList"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Dictionary"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="ListDictionary"/>. This type is non generic.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="IList"/>. This interface type is non generic.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="ICollection"/>. This interface type is non generic.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="IDictionary"/>. This interface type is non generic.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="IEnumerable"/>. This interface type is non generic.
+/// </summary>
+/// <summary>
+/// Represents a custom implementation of <see cref="IEnumerable"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="List{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="LinkedList{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Collection{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Queue{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Stack{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="HashSet{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="SortedList{TKey,TValue}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="Dictionary{TKey,TValue}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="SortedDictionary{TKey, TValue}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="BlockingCollection{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="ConcurrentDictionary{TKey, TValue}"/>.
+/// </summary>
+/// <summary>
+/// Represents a <see cref="ConcurrentBag{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="IList{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="ICollection{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="IEnumerable{T}"/>.
+/// </summary>
+/// <summary>
+/// Represents an <see cref="IDictionary{TKey, TValue}"/>.
+/// </summary>
+/// <summary>
+/// Represents an <see> <cref>ICollection{KeyValuePair{TKey, TValue}}</cref></see>.
+/// </summary>
+/// <summary>
+/// Represents an <see> <cref>IEnumerable{KeyValuePair{TKey, TValue}}</cref></see>.
+/// </summary>
+/// <summary>
+/// Represents a custom implementation of <see cref="IEnumerable{T}"/>.
+/// </summary>
+/// <summary>
+/// Provides a set of helper methods for working with <see cref="Uri"/>.
+/// </summary>
+/// <summary>
+/// Extracts Parameters and Values from the Query String.
+/// <remarks>
+/// This method also correctly <c>URL-decode</c>s the parsed keys and values.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Adds or appends the given <paramref name="parameter"/> and <paramref name="value"/> 
+/// to the query-string of the <paramref name="uri"/>.
+/// <remarks>
+/// This method also correctly <c>URL-encode</c>s the given <paramref name="parameter"/> 
+/// and <paramref name="value"/>.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Adds or appends the given <paramref name="pairs"/> of keys and values
+/// to the query-string of the <paramref name="uri"/>.
+/// <remarks>
+/// This method also correctly <c>URL-encode</c>s the keys and values.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Extension methods for classes in the <see cref="System.Xml"/> namespace.
+/// </summary>
+/// <summary>
+/// Sets the default XML namespace of every element in the given XML element
+/// </summary>
+/// <summary>
+/// Gets a sequence containing every element with the name equal to <paramref name="name"/>.
+/// </summary>
+/// <param name="reader">The <see cref="XmlReader"/> used to read the XML</param>
+/// <param name="name">The name of the elements to return</param>
+/// <param name="ignoreCase">The flag indicating whether the name should be looked up in a case sensitive manner</param>
+/// <returns>The sequence containing all the elements <see cref="XElement"/> matching the <paramref name="name"/></returns>
+/// <summary>
+/// Converts the content of the given <paramref name="reader"/> to <see cref="DynamicDictionary"/>.
+/// </summary>
+/// <summary>
+/// Provides the contract for representing a clock.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the instance of <see cref="IClock"/> provides high resolution time.
+/// <remarks>
+/// <para>
+/// This only returns <c>True</c> on <c>Windows 8</c>/<c>Windows Server 2012</c> and higher.
+/// </para>
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Gets the date and time in <c>UTC</c>.
+/// </summary>
+/// <summary>
+/// Gets the local date time.
+/// </summary>
+/// <summary>
+/// A contact defining how configuration values should be returned as static objects.
+/// </summary>
+/// <summary>
+/// Gets the file storing the config entries.
+/// </summary>
+/// <summary>
+/// Gets all of the settings retrieved from the configuration.
+/// </summary>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="values"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="values">The set of values associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// <remarks>
+/// The following values can be parsed (case-insensitive): 
+///     <c>True/False</c>,
+///     <c>Yes/No</c>,
+///     <c>0/1</c>
+/// </remarks>
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="separator">The <see cref="string"/> separating the values</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+// ReSharper disable once InconsistentNaming
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="formatSpecifier">The format used to parse the value as <paramref name="value"/></param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Attempts to read a config value specified as <paramref name="key"/> into <paramref name="value"/>.
+/// </summary>
+/// <param name="key">The key to retrieve from the configuration</param>
+/// <param name="value">The value associated with the <paramref name="key"/></param>
+/// <returns><c>True</c> if successful otherwise <c>False</c></returns>
+/// <summary>
+/// Specifies the contract to be implemented by any instance of <see cref="IEasyDictionary{TKey,TValue}"/>.
+/// </summary>
+/// <summary>
+/// Gets the delegate used to select the key against which the item will be stored.
+/// </summary>
+/// <summary>
+/// Gets the <see cref="IEqualityComparer{TKey}"/> that is used to determine 
+/// equality of keys for the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the keys stored in the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the items stored as values stored in the dictionary.
+/// </summary>
+/// <summary>
+/// Gets the value associated with the given <paramref name="key"/>.
+/// </summary>
+/// <summary>
+/// Determines whether the given <paramref name="key"/> exists.
+/// </summary>
+/// <summary>
+/// Attempts to get the value associated with the specified <paramref name="key"/>.
+/// </summary>
+/// <summary>
+/// Removes the given <paramref name="key"/> from the dictionary.
+/// </summary>
+/// <summary>
+/// Adds the <paramref name="value"/> if it does not already exist or replaces the existing value.
+/// </summary>
+/// <summary>
+/// Specifies the contract for implementing an <see cref="IEasyPool{T}"/>.
+/// </summary>
+/// <typeparam name="T">The type of object to pool.</typeparam>
+/// <summary>
+/// Gets the count of items in the pool.
+/// </summary>
+/// <summary>
+/// Gets an item from the pool or creates a new one if none exists.
+/// </summary>
+/// <summary>
+/// Returns an item to the pool.
+/// </summary>
+/// <param name="item">The item to pool.</param>
+/// <param name="reset">
+/// The flag indicating whether the pool should reset the item to its default state.
+/// </param>
+/// <returns><c>True</c> if added or <c>False</c> if discarded</returns>
+/// <summary>
+/// Specifies the contract to be implemented by a rest client.
+/// </summary>
+/// <summary>
+/// Gets the headers which should be sent with each request.
+/// </summary>
+/// <summary>
+/// Gets the time to wait before the request times out.
+/// </summary>
+/// <summary>
+/// Gets the maximum number of bytes to buffer when reading the response content.
+/// </summary>
+/// <summary>
+/// Gets the base address of Uniform Resource Identifier (URI) of the Internet resource used when sending requests.
+/// </summary>
+/// <summary>
+/// Sends the given <paramref name="request"/>.
+/// </summary>
+/// <summary>
+/// Sends the given <paramref name="request"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends the given <paramref name="request"/> with the given <paramref name="option"/>.
+/// </summary>
+/// <summary>
+/// Sends the given <paramref name="request"/> with the given <paramref name="option"/> and <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>PUT</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>       
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>POST</c> request with the given <paramref name="content"/> to the specified <paramref name="uri"/> 
+/// with the given <paramref name="cToken"/>.
+/// </summary>     
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/> and <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>GET</c> request to the specified <paramref name="uri"/> with the given <paramref name="option"/> and <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="timeout"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Sends a <c>DELETE</c> request to the specified <paramref name="uri"/> with the given <paramref name="cToken"/>.
+/// </summary>
+/// <summary>
+/// Cancels all pending requests on this instance.
+/// </summary>
+/// <summary>
+/// An interface representing a clock which ticks at a given interval.
+/// </summary>
+/// <summary>
+/// Gets the event raised on every tick of the clock.
+/// </summary>
+/// <summary>
+/// Gets the clock used by this instance of <see cref="ITimerClock"/>.
+/// </summary>
+/// <summary>
+/// Gets the frequency at which the <see cref="Tick"/> is raised.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the clock is enabled or not.
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// A helper class which provides retry logic for actions and delegates.
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of an exception of 
+/// type <typeparamref name="TEx"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// <typeparamref name="TEx1"/> and <typeparamref name="TEx2"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/> and <typeparamref name="TEx3"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/> and <typeparamref name="TEx4"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>,
+/// <typeparamref name="TEx4"/> and <typeparamref name="TEx5"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>,
+/// <typeparamref name="TEx4"/>, <typeparamref name="TEx5"/> and <typeparamref name="TEx6"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>,
+/// <typeparamref name="TEx4"/>, <typeparamref name="TEx5"/>, <typeparamref name="TEx6"/>
+/// and <typeparamref name="TEx7"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// the <paramref name="exceptionPredicate"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// the <paramref name="exceptionPredicate"/>.
+/// <param name="func">The factory for the task to be retried.</param>
+/// <param name="exceptionPredicate">The predicate indicating which exception to retry on.</param>
+/// <param name="delayFactory">The factory for returning delay period between retries.</param>
+/// <param name="cToken">The cancellation token for canceling the retries.</param>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of an exception of 
+/// type <typeparamref name="TEx"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by 
+/// <typeparamref name="TEx1"/> and <typeparamref name="TEx2"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by 
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/> and <typeparamref name="TEx3"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by 
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>
+/// and <typeparamref name="TEx4"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by 
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>,
+/// <typeparamref name="TEx4"/> and <typeparamref name="TEx5"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by 
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>,
+/// <typeparamref name="TEx4"/>, <typeparamref name="TEx5"/> and <typeparamref name="TEx6"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by 
+/// <typeparamref name="TEx1"/>, <typeparamref name="TEx2"/>, <typeparamref name="TEx3"/>,
+/// <typeparamref name="TEx4"/>, <typeparamref name="TEx5"/>, <typeparamref name="TEx6"/>
+/// and <typeparamref name="TEx7"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// the <paramref name="exceptionPredicate"/>.
+/// <remarks>
+/// If the given <paramref name="delays"/> is not supplied then the given 
+/// <paramref name="func"/> will be retried once.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Retries the given <paramref name="func"/> in case of any of the given exceptions specified by
+/// the <paramref name="exceptionPredicate"/>.
+/// <param name="func">The factory for the task to be retried.</param>
+/// <param name="exceptionPredicate">The predicate indicating which exception to retry on.</param>
+/// <param name="delayFactory">The factory for returning delay period between retries.</param>
+/// <param name="cToken">The cancellation token for canceling the retries.</param>
+/// </summary>
+// ReSharper disable once CheckNamespace
+/// <summary>
+/// The <see cref="RetryException"/> thrown by the <see cref="Retry"/> class.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="RetryException"/>.
+/// </summary>
+/// <param name="retryCount">
+/// The number of attempts after which <paramref name="innerException"/> was thrown.
+/// </param>
+/// <param name="innerException">The inner exception.</param>
+/// <summary>
+/// Gets the number of attempts after which this exception was thrown.
+/// </summary>
+// ReSharper disable once ConvertToAutoPropertyWithPrivateSetter
+// ReSharper disable once ConvertToAutoPropertyWithPrivateSetter
+//www.google.com/api");
+//www.google.com/api/");
+//www.google.com:8080/");
+//www.google.com:8080/api/1");
+//www.google.com:8080/api/1/");
+//www.google.com:8080/param?v=foo_bar");
+// ReSharper disable once RedundantArgumentDefaultValue
+// Large
+// Negative Large
+// Around one
+// Around -one
+// Between 1 and 0
+// Between -1 and 0
+// Involving 0
+// Involving Extreme values (overflow potential
+// Involving Infinities
+// Involving NaN
+// Involving opposite sides of 0
+// Involving very close to 0
+/* ignored */ }
+/* ignored */ }
+// ReSharper disable once InconsistentNaming
+// ReSharper disable once ConvertToConstant.Local
+// ReSharper disable once UnusedVariable
+// ReSharper disable once UnusedVariable
+// This does not work
+// But this one does
+// So does this one
+// ReSharper disable once NotAccessedField.Local
+// ReSharper disable once NotAccessedField.Local
+/* do nothing; */ }, 1, BoundedCapacity);
+/* do nothing; */ }, 1);
+/* do nothing; */ }, 0, 1);
+/* do nothing; */ }, 2, 1);
+// Sanity checks
+/*
+//github.com/dotnet/docs/issues/5305
+// [ToDo] - helper.IsValidEmail("#foo@bar.com").ShouldBeTrue();
+//foo.bar:1234/");
+//foo.org/api");
+//example.org:33/api";
+//foo.bar/api/1");
+//foo.bar/api/2");
+//foo.bar/api/3");
+//foo.bar");
+//foo.bar/api/1");
+//foo.bar/api/2");
+//foo.bar/api/3");
+//foo.bar");
+//foo.bar/api/1");
+//foo.bar/api/2");
+//foo.bar/api/3");
+//foo.bar");
+//example.org/api/1");
+//example.org/api/2");
+//example.org/api/3");
+//example.org/api/4"), new MultipartFormDataContent(), cts.Token));
+//example.org/api/5", new MultipartFormDataContent(), cts.Token));
+//example.org/api/6");
+//example.org/api/7");
+//example.org/api/8");
+//example.org/api/9"), new MultipartFormDataContent(), cts.Token));
+//example.org/api/10", new MultipartFormDataContent(), cts.Token));
+//example.org/api/11");
+//example.org/api/12");
+//example.org/api/13"), cts.Token));
+//example.org/api/14", cts.Token));
+//example.org/api/15");
+//example.org/api/16");
+//example.org/api/17"), HttpCompletionOption.ResponseContentRead, cts.Token));
+//example.org/api/18", HttpCompletionOption.ResponseContentRead, cts.Token));
+//example.org/api/19");
+//example.org/api/20");
+//example.org/api/21");
+//example.org/api/22"), cts.Token));
+//example.org/api/23", cts.Token));
+//example.org/api/24")
+//example.org/api/25")
+//example.org/api/26")
+//example.org/api/27");
+//example.org/api/28");
+//example.org/api/29");
+//example.org/api/30");
+//example.org/api/31");
+//example.org/api/32");
+//example.org/test"), new HttpResponseMessage(HttpStatusCode.OK));
+//example.org/notthere");
+//example.org/test");
+//example.org/api/33");
+//example.org/api/34");
+//example.org/api/34");
+//example.org/api/35");
+//example.org/api/34");
+//example.org/api/35");
+//example.org/api/36");
+//example.org/api/37");
+//example.org/api/38");
+//example.org/api/39");
+//example.org/api/40");
+//example.org/api/41");
+//example.org/api/42");
+//example.org/api/43");
+//example.org/api/44");
+/// <summary>
+/// <see href="http://chimera.labs.oreilly.com/books/1234000001708/ch14.html#_creating_resuable_response_handlers"/>.
+/// </summary>
+/* Ignore */ }
+/* Ignore */ }
+/*
+// ReSharper disable once PossibleNullReferenceException
+// ReSharper disable once ExpressionIsAlwaysNull
+//www.baz.com/abc.svc?%23name=bar&age=10");
+//www.baz.com/abc.svc?foo=This+is+a+simple+%26+short+test.");
+//www.baz.com/abc.svc");
+//www.baz.com/abc.svc?name=abc");
+//www.baz.com/abc.svc");
+//www.baz.com/abc.svc?name=abc");
+//www.baz.com/abc.svc");
+//www.baz.com/abc.svc?name=abc");
+//www.baz.com/abc.svc?");
+//www.foo.com");
+//www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+/// <summary>
+/// A reusable implementation of <see cref="INotifyPropertyChanged"/> using <c>C# 6</c>.
+/// <remarks>
+/// See <see href="https://stackoverflow.com/a/35582811/1226568"/>.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// Notifies clients that a property value has changed.
+/// </summary>
+/// <summary>
+/// Raises the <c>PropertyChanged</c> event.
+/// </summary>
+/// <param name="propertyName"></param>
+/// <summary>
+/// Sets the value of the given <paramref name="field"/> to the given <paramref name="value"/>.
+/// </summary>
+// ReSharper disable once ExplicitCallerInfoArgument
+/// <summary>
+/// An abstraction for handling custom commands.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="CustomCommand"/>.
+/// </summary>
+/// <summary>
+/// Creates an instance of the <see cref="CustomCommand"/>.
+/// </summary>
+/// <summary>
+/// Defines the method that determines whether the command can execute in its current state.
+/// </summary>
+/// <param name="parameter">
+/// Data used by the command. If the command does not require data to be passed, 
+/// this object can be set to <see langword="null" />.
+/// </param>
+/// <returns>
+/// <see langword="true" /> if this command can be executed; otherwise, <see langword="false" />.
+/// </returns>
+/// <summary>Defines the method to be called when the command is invoked.</summary>
+/// <param name="parameter">
+/// Data used by the command. If the command does not require data to be passed, 
+/// this object can be set to <see langword="null" />.
+/// </param>
+/// <summary>
+/// Occurs when changes occur that affect whether or not the command should execute.
+/// </summary>
+/// <summary>
+/// Provides a set of helper methods for working with <see cref="IEnumerable{T}"/>.
+/// </summary>
+/// <summary>
+/// Returns an <see cref="ObservableCollection{T}"/> from the given <paramref name="sequence"/>.
+/// </summary>
+/// <summary>
+/// An abstraction for converting a <c>Base64</c> encoded image to a <see cref="BitmapSource"/>.
+/// </summary>
+/// <summary>
+/// Converts the given <paramref name="value"/> to <see cref="BitmapSource"/>.
+/// </summary>
+/// <returns>The resulting <see cref="BitmapSource"/>.</returns>
+/// <summary>
+/// This back conversion is not implemented.
+/// </summary>
+/// <summary>
+/// An abstraction for simplifying the usage of <see cref="IValueConverter"/>s.
+/// <remarks>
+/// See <see href="https://wpftutorial.net/ValueConverters.html"/>.
+/// </remarks>
+/// </summary>
+/// <summary>
+/// When implemented in a derived class, returns an object that is provided as 
+/// the value of the target property for this markup extension.
+/// </summary>
+/// <param name="serviceProvider">
+/// A service provider helper that can provide services for the markup extension.
+/// </param>
+/// <returns>The object value to set on the property where the extension is applied. </returns>
+/// <summary>Converts a value. </summary>
+/// <param name="value">The value produced by the binding source.</param>
+/// <param name="targetType">The type of the binding target property.</param>
+/// <param name="parameter">The converter parameter to use.</param>
+/// <param name="culture">The culture to use in the converter.</param>
+/// <returns>A converted value. If the method returns <see langword="null" />, the valid null value is used.</returns>
+/// <summary>Converts a value. </summary>
+/// <param name="value">The value that is produced by the binding target.</param>
+/// <param name="targetType">The type to convert to.</param>
+/// <param name="parameter">The converter parameter to use.</param>
+/// <param name="culture">The culture to use in the converter.</param>
+/// <returns>A converted value. If the method returns <see langword="null" />, the valid null value is used.</returns>
+/// <summary>
+/// An abstraction for converting between <see cref="bool"/> and <see cref="Style"/>.
+/// </summary>
+/// <summary>
+/// The key for the <see cref="Style"/> to be returned if the value is <c>True</c>.
+/// </summary>
+/// <summary>
+/// The key for the <see cref="Style"/> to be returned if the value is <c>False</c>.
+/// </summary>
+/// <summary>
+/// Converts the given <paramref name="value"/> to a <see cref="Style"/> specified 
+/// by <see cref="TrueStyleKey"/> and <see cref="FalseStyleKey"/>.
+/// </summary>
+/// <summary>
+/// This back conversion is not implemented.
+/// </summary>
+/// <summary>
+/// An abstraction for converting between <see cref="bool"/> and <see cref="Visibility"/>.
+/// </summary>
+/// <summary>
+/// Gets or set the <see cref="TrueValue"/>.
+/// </summary>
+/// <summary>
+/// Gets or set the <see cref="FalseValue"/>.
+/// </summary>
+/// <summary>
+/// Converts the given <paramref name="value"/>.
+/// </summary>
+/// <summary>
+/// Converts the given <paramref name="value"/>.
+/// </summary>
+/// <summary>
+/// A converter for helping with debugging data-binding. It allows breakpoints 
+/// to be set for the purpose of inspecting <c>XAML</c> data-binding.
+/// </summary>
+/// <summary>
+/// This method does nothing except launching the <see cref="Debugger"/> and returning the <paramref name="value"/>.
+/// </summary>
+/// <summary>
+/// This method does nothing except launching the <see cref="Debugger"/> and returning the <paramref name="value"/>.
+/// </summary>
+/// <summary>
+/// An abstraction for negating a <see cref="bool"/>.
+/// </summary>
+/// <summary>
+/// Negates the given <see cref="bool"/> <paramref name="value"/>.
+/// </summary>
+/// <summary>
+/// Negates the given <see cref="bool"/> <paramref name="value"/>.
+/// </summary>
+/// <summary>
+/// Interaction logic for App.xaml
+/// </summary>
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+/// <summary>
+/// Interaction logic for FormsPage.xaml
+/// </summary>
+/// <summary>
+/// Interaction logic for LogViewerPage.xaml
+/// </summary>
+/// <summary>
+/// Interaction logic for PageBoundToItself.xaml
+/// </summary>
+/// <summary>
+/// Interaction logic for Spinner.xaml
+/// </summary>
+/// <summary>
+/// Interaction logic for SpinnersPage.xaml
+/// </summary>
+/// <summary>
+/// Gets the sender of this message.
+/// </summary>
+/// <summary>
+/// Gets the flag indicating whether the view-model is busy or not.
+/// </summary>
+// General Information about an assembly is controlled through the following
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible
+// to COM components.  If you need to access a type in this assembly from
+// COM, set the ComVisible attribute to true on that type.
+//In order to begin building localizable applications, set
+//<UICulture>CultureYouAreCodingWith</UICulture> in your .csproj file
+//inside a <PropertyGroup>.  For example, if you are using US english
+//in your source files, set the <UICulture> to en-US.  Then uncomment
+//the NeutralResourceLanguage attribute below.  Update the "en-US" in
+//the line below to match the UICulture setting in the project file.
+//[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
+//where theme specific resource dictionaries are located
+//(used if a resource is not found in the page,
+// or application resource dictionaries)
+//where the generic resource dictionary is located
+//(used if a resource is not found in the page,
+// app, or any theme specific resource dictionaries)
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.42000
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+/// <summary>
+///   A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the StronglyTypedResourceBuilder
+// class via a tool like ResGen or Visual Studio.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/// <summary>
+///   Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///   Overrides the current thread's CurrentUICulture property for all
+///   resource lookups using this strongly typed resource class.
+/// </summary>
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.42000
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------

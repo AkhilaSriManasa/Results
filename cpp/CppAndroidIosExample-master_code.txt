@@ -1,0 +1,7 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/CppAndroidIosExample-master\CppAndroidIosExample-master\Android\app\src\main\cpp\native-lib.cpp
+/* this */, jstring myString) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/CppAndroidIosExample-master\CppAndroidIosExample-master\CPP\Core.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/CppAndroidIosExample-master\CppAndroidIosExample-master\Unix\Main.cpp

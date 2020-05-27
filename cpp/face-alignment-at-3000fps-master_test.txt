@@ -1,0 +1,60 @@
+﻿
+***********other formats****************
+DS_Store
+gitignore
+xml
+
+***********source code file list***************
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/main.cpp
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/randomforest.cpp
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/regressor.cpp
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/utils.cpp
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/linear.cpp
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/tron.cpp
+
+***********h file list***************
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/headers.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/randomforest.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/regressor.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/utils.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blas.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blasp.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/linear.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/tron.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blas/blas.h
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blas/blasp.h
+
+***********md file list***************
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/CMakeLists.txt
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/README.md
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/example/helen_test_config_images_without_ground_truth.txt
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/example/helen_test_config_images_with_ground_truth.txt
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/example/helen_test_images_list_without_ground_truth.txt
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/example/helen_test_images_list_with_ground_truth.txt
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/example/helen_train_config.txt
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/example/helen_train_images_list.txt
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/CMakeLists.txt
+
+***********img file list***************
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/bad_case.png
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/detect.png
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/final.png
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/initial.png
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/tang.jpg
+
+***********uml file list***************
+
+***********other file list***************
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/.DS_Store
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/.gitignore
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/haarcascade_frontalface_alt2.xml
+
+***********other code file list***************
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/daxpy.c
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/ddot.c
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/dnrm2.c
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/dscal.c
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blas/daxpy.c
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blas/ddot.c
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blas/dnrm2.c
+face-alignment-at-3000fps-master/face-alignment-at-3000fps-master/liblinear/blas/dscal.c

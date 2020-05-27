@@ -1,0 +1,2492 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\scripts\apntool\apntool.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\scripts\emoji-extractor\emoji-extractor.py
+#!/usr/bin/env python3
+# Clean working directory
+# Load font data
+# In case it's a path
+# Accelerate processing
+# Extract all emojis
+# TODO: parse missing emojis
+# Some flags aren't correctly sorted
+# Fix these flag names
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\scripts\emoji-extractor\gen-sprite.py
+#!/usr/bin/env python3
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\scripts\emoji-extractor\remove-emoji-margins.py
+#!/usr/bin/env python3
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ApplicationContext.java
+/*
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ApplicationPreferencesActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//silence.im/privacy")));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\BaseActionBarActivity.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\BaseActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\BindableConversationItem.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\BindableConversationListItem.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\BlockedContactsActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ContactSelectionActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ContactSelectionListFragment.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//////// Event Handlers
+//silence.im"));
+///// Initializers
+//////// Helper Methods
+// Listeners
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationAdapter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationFragment.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationItem.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//" + url;
+/// MessageRecord Attribute Parsers
+/*
+//noinspection ConstantConditions
+//noinspection ConstantConditions
+/// Helper Methods
+/// Event handlers
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationListActivity.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationListAdapter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationListArchiveActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationListFragment.java
+/**
+//www.gnu.org/licenses/>.
+/*", AttachmentDatabase.TRANSFER_PROGRESS_DONE));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationListItem.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationListItemAction.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationPopupActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationTitleView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ConversationUpdateItem.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\CountrySelectionActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\CountrySelectionFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\DatabaseMigrationActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\DatabaseUpgradeActivity.java
+/**
+//www.gnu.org/licenses/>.
+//      DecryptingQueue.schedulePendingDecrypts(DatabaseUpgradeActivity.this, masterSecret);
+//      DecryptingQueue.schedulePendingDecrypts(DatabaseUpgradeActivity.this, masterSecret);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\DummyActivity.java
+/**
+//code.google.com/p/android/issues/detail?id=53313
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ExitActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\GroupCreateActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\GroupMembersDialog.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ImageMediaAdapter.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ImportExportActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ImportExportFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\KeyScanningActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\LogSubmitActivity.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\MasterSecretListener.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\MediaOverviewActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\MediaPreviewActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\MessageDetailsActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/*
+//if (!intermediaryRecipients.isGroupRecipient()) {
+//  Log.w(TAG, "Recipient is not a group, resolving members immediately.");
+//  recipients = intermediaryRecipients;
+//} else {
+//  // TODO
+//}
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\MessageDetailsRecipientAdapter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\MessageRecipientListItem.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\MuteDialog.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\NewConversationActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PanicResponderActivity.java
+// Guardian Project Ripple
+// Amnesty International's Panic Button, made by iilab.org
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PassphraseActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PassphraseChangeActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PassphraseCreateActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PassphrasePromptActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PassphraseRequiredActionBarActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PromptMmsActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\PushContactSelectionActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ReceiveKeyDialog.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\RecipientPreferenceActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ShareActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ShareFragment.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ShareListAdapter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ShareListItem.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\SmsSendtoActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\TransportOption.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\TransportOptions.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\TransportOptionsAdapter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\TransportOptionsPopup.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\Unbindable.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\VerifyIdentityActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ViewIdentityActivity.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\ViewLocalIdentityActivity.java
+/*
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\WelcomeActivity.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\attachments\Attachment.java
+// XXX - This shouldn't be here.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\attachments\AttachmentId.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\attachments\AttachmentServer.java
+/**
+//127.0.0.1:%d/%s", port, auth));
+//    private String filePath;
+// Create a BufferedReader for parsing the header.
+//      filePath = request.getProperty("uri");
+// It is a seek or skip request if there's a Range
+// header
+//        dataSource.skipFully(data, cbSkip);//try to skip as much as possible
+// Loop as long as there's stuff to send and client has not closed
+// Cleanup
+/**
+/**
+// Read the request line
+// Decode parameters from the URI
+// If there's another token, it's protocol version,
+// followed by HTTP headers. Ignore version but parse headers.
+// NOTE: this now forces header names lowercase since they are
+// case insensitive and vary by client.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\attachments\DatabaseAttachment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\attachments\UriAttachment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\audio\AudioSlidePlayer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\color\MaterialColor.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\color\MaterialColors.java
+// Lime
+// Yellow
+// Amber
+//    MaterialColor.BROWN,
+// Grey
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\AlertView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\AnimatingToggle.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\AudioView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\AvatarImageView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\BubbleDrawableBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\ComposeText.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\CustomDefaultPreference.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\DeliveryStatusView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\FromTextView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\ImageDivet.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\InputAwareLayout.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\KeyboardAwareLinearLayout.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\OutgoingSmsPreference.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\PushRecipientsPanel.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\RecyclerViewFastScroller.java
+/**
+//github.com/AndroidDeveloperLB/LollipopContactsRecyclerViewFastScroller
+//www.apache.org/licenses/LICENSE-2.0
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\RemovableMediaView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\RepeatableImageKey.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\SendButton.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\SingleRecipientPanel.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\SquareFrameLayout.java
+//noinspection SuspiciousNameCombination
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\SquareLinearLayout.java
+//noinspection SuspiciousNameCombination
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\SwitchPreferenceCompat.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\ThumbnailView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\TransferControlView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\ZoomingImageView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\AnimatingImageSpan.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiDrawer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiEditText.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiFilter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiPageModel.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiPages.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiPageView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiProvider.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiSpan.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiTextView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiToggle.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\EmojiView.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\RecentEmojiPageModel.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\StaticEmojiPageModel.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\parsing\EmojiDrawInfo.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\parsing\EmojiPageBitmap.java
+///android_asset/" + model.getSprite(),
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\parsing\EmojiParser.java
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\parsing\EmojiTree.java
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\emoji\parsing\Fitzpatrick.java
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\reminder\DefaultSmsReminder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\reminder\DeliveryReportsReminder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\reminder\Reminder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\reminder\ReminderView.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\reminder\StoreRatingReminder.java
+//details?id=" + context.getPackageName());
+// App needs to be installed via Play/Amazon store to show the rating dialog
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\reminder\SystemSmsImportReminder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\subsampling\AttachmentBitmapDecoder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\components\subsampling\AttachmentRegionDecoder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\ArrayListCursor.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Add an _id column if not in columnNames
+// simply ignore it
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\ContactAccessor.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/***
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// ID
+// CONTACT_ID
+// TYPE
+// NUMBER
+/*
+// LABEL
+// NAME
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\ContactsCursorLoader.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\ContactsDatabase.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\ContactSelectionListAdapter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/*public static class HeaderViewHolder {
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\ContactSelectionListItem.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\NameAndNumber.java
+/** 
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\RecipientsAdapter.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Names with commas are the bane of the recipient editor's existence.
+// We've worked around them by using spans, but there are edge cases
+// where the spans get deleted. Furthermore, having commas in names
+// can be confusing to the user since commas are used as separators
+// between recipients. The best solution is to simply remove commas
+// from names.
+// Make sure we leave a space between parts of names.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\RecipientsEditor.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// For the focus to move to the message body when soft Next is pressed
+/*
+// inserting a character
+// Remember the delimiter the user typed to end this recipient. We'll
+// need it shortly in terminateToken().
+// If the user is in the middle of editing an existing recipient, don't offer the
+// auto-complete menu. Without this, when the user selects an auto-complete menu item,
+// it will get added to the list of recipients so we end up with the old before-editing
+// recipient and the new post-editing recipient. As a precedent, gmail does not show
+// the auto-complete menu when editing an existing recipient.
+/*if (isMms) {
+// TODO: PhoneNumberUtils.isWellFormedSmsAddress() only check if the number is a valid
+// GSM SMS address. If the address contains a dialable char, it considers it a well
+// formed SMS addr. CDMA doesn't work that way and has a different parser for SMS
+// address (see CdmaSmsAddress.parse(String address)). We should definitely fix this!!!
+/*public boolean hasInvalidRecipient(boolean isMms) {
+/* TODO if (MmsConfig.getEmailGateway() == null) {
+/*public boolean containsEmail() {
+// TODO: there's a situation where the span can lose its annotations:
+//   - add an auto-complete contact
+//   - add another auto-complete contact
+//   - delete that second contact and keep deleting into the first
+//   - we lose the annotation and can no longer get the span.
+// Need to fix this case because it breaks auto-complete contacts with commas in the name.
+/**
+/**
+/**
+// Use the same delimiter the user just typed.
+// This lets them have a mixture of commas and semicolons in their list.
+// calculate the recipients total length. This is so if the name contains
+// commas or semis, we'll skip over the whole name to the next
+// recipient, rather than parsing this single name into multiple
+// recipients.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\avatars\BitmapContactPhoto.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\avatars\ContactColors.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\avatars\ContactPhoto.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\avatars\ContactPhotoFactory.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\avatars\GeneratedContactPhoto.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\avatars\ResourceContactPhoto.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\contacts\avatars\TransparentContactPhoto.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\AsymmetricMasterCipher.java
+/** 
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\AsymmetricMasterSecret.java
+/** 
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\AttachmentCipherInputStream.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\DecryptingPartInputStream.java
+/** 
+//www.gnu.org/licenses/>.
+/**
+//mac.update(buffer, offset, flourish);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\EncryptingPartOutputStream.java
+/** 
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\IdentityKeyParcelable.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\IdentityKeyUtil.java
+/** 
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\InvalidPassphraseException.java
+/** 
+//www.gnu.org/licenses/>.
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\KeyExchangeInitiator.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\MasterCipher.java
+/** 
+//www.gnu.org/licenses/>.
+/**
+//		Mac hmac = Mac.getInstance("HmacSHA1");
+//		Cipher cipher      = Cipher.getInstance("AES/CBC/PKCS5Padding");
+//		Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\MasterSecret.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// SecretKeySpec does an internal copy in its constructor.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\MasterSecretUtil.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//XXX
+//XXX
+//ms
+//default for low-end devices
+//baseline starting iteration count
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\MmsCipher.java
+// NOTE - For some reason, Sprint seems to append a single character to the
+// end of message text segments.  I don't know why, so here we just try
+// truncating the message by one if the MAC fails.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\PreKeyUtil.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\PRNGFixes.java
+/*
+/**
+//android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html
+/**
+/** Hidden constructor to prevent instantiation. */
+/**
+/**
+// No need to apply the fix
+// Mix in the device- and invocation-specific seed.
+// Mix output of Linux PRNG into OpenSSL's PRNG
+/**
+// No need to apply the fix
+// Install a Linux PRNG-based SecureRandom implementation as the
+// default, if not yet installed.
+// Assert that new SecureRandom() and
+// SecureRandom.getInstance("SHA1PRNG") return a SecureRandom backed
+// by the Linux PRNG-based SecureRandom implementation.
+/**
+// Although /dev/urandom is not a SHA-1 PRNG, some apps
+// explicitly request a SHA1PRNG SecureRandom and we thus need to
+// prevent them from getting the default implementation whose output
+// may have low entropy.
+/**
+/*
+/**
+/**
+/**
+// On a small fraction of devices /dev/urandom is not writable.
+// Log and ignore.
+// Mix in the device- and invocation-specific seed.
+// NOTE: Consider inserting a BufferedInputStream between
+// DataInputStream and FileInputStream if you need higher
+// PRNG output performance and can live with future PRNG
+// output being pulled into this process prematurely.
+/**
+/**
+// We're using the Reflection API because Build.SERIAL is only available
+// since API Level 9 (Gingerbread, Android 2.3).
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\PublicKey.java
+/** 
+//www.gnu.org/licenses/>.
+// FIXME :: This not strictly an accurate copy constructor.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\SecurityEvent.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\SessionBuilder.java
+/**
+/**
+/**
+/*package*/ Optional<Integer> process(SessionRecord sessionRecord, PreKeySignalMessage message)
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\SessionUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\SmsCipher.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\storage\SilenceIdentityKeyStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\storage\SilencePreKeyStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\storage\SilenceSessionStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\crypto\storage\SilenceSignalProtocolStore.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\ApnDatabase.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//" + mmsc;
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\AttachmentDatabase.java
+/**
+//www.gnu.org/licenses/>.
+//noinspection ResultOfMethodCallIgnored
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\CanonicalAddressDatabase.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\CanonicalSessionMigrator.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\ContentValuesBuilder.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\CursorRecyclerViewAdapter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\Database.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\DatabaseContentProviders.java
+/**
+//org.smssecure.smssecure.database.conversationlist");
+//org.smssecure.smssecure.database.conversation/";
+//org.smssecure.smssecure.database.attachment");
+//org.smssecure.smssecure.database.identities");
+//org.smssecure.smssecure.database.recipients/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\DatabaseFactory.java
+/**
+//www.gnu.org/licenses/>.
+/*
+//noinspection ResultOfMethodCallIgnored
+// NOTE (4/21/14) -- At this moment in time, we're forgetting the ability to parse
+// V1 session records.  Despite our usual attempts to avoid using shared code in the
+// upgrade path, this is too complex to put here directly.  Thus, unfortunately
+// this operation is now lost to the ages.  From the git log, it seems to have been
+// almost exactly a year since this went in, so hopefully the bulk of people have
+// already upgraded.
+//              IdentityKey identityKey     = Session.getRemoteIdentityKey(context, masterSecret, recipientId);
+//    DecryptingQueue.schedulePendingDecrypts(context, masterSecret);
+// SMS Updates
+// MMS Updates
+// Thread Updates
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\DraftDatabase.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\EncryptedBackupExporter.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\EncryptingSmsDatabase.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\IdentityDatabase.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\ImageDatabase.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\MessagingDatabase.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\MmsAddressDatabase.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\MmsAddresses.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\MmsDatabase.java
+/**
+//www.gnu.org/licenses/>.
+//  public void markAsSending(long messageId) {
+//    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENDING_TYPE);
+//    notifyConversationListeners(getThreadIdForMessage(messageId));
+//  }
+//  public void markAsSecure(long messageId) {
+//    updateMailboxBitmask(messageId, 0, Types.SECURE_MESSAGE_BIT);
+//  }
+/*package*/ void deleteThreads(Set<Long> threadIds) {
+/*package*/void deleteMessagesInThreadBeforeDate(long threadId, long date) {
+//telephony/carriers"), "current");
+// NOTE - This is dumb, but on some devices there's an NPE in the Android framework
+// for the provider of this call, which gets rethrown back to here through a binder
+// call.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\MmsSmsColumns.java
+// Base Types
+// Message attributes
+// Key Exchange Information
+// Secure Message Information
+// Group Message Information
+// XMPP Message Information
+// Encrypted Storage Information
+//    public static final int NONE_TYPE           = 0;
+//    public static final int INBOX_TYPE          = 1;
+//    public static final int SENT_TYPE           = 2;
+//    public static final int SENT_PENDING        = 4;
+//    public static final int FAILED_TYPE         = 5;
+//
+//
+//
+//    public static final int NONE_TYPE           = 0;
+//    public static final int INBOX_TYPE          = 1;
+//    public static final int SENT_TYPE           = 2;
+//    public static final int SENT_PENDING        = 4;
+//    public static final int FAILED_TYPE         = 5;
+//
+//    public static final int OUTBOX_TYPE = 43;  // Messages are stored local encrypted and need delivery.
+//
+//
+//    public static final int ENCRYPTING_TYPE      = 42;  // Messages are stored local encrypted and need async encryption and delivery.
+//    public static final int SECURE_SENT_TYPE     = 44;  // Messages were sent with async encryption.
+//    public static final int SECURE_RECEIVED_TYPE = 45;  // Messages were received with async decryption.
+//    public static final int FAILED_DECRYPT_TYPE  = 46;  // Messages were received with async encryption and failed to decrypt.
+//    public static final int DECRYPTING_TYPE      = 47;  // Messages are in the process of being asymmetricaly decrypted.
+//    public static final int NO_SESSION_TYPE      = 48;  // Messages were received with async encryption but there is no session yet.
+//
+//    public static final int OUTGOING_KEY_EXCHANGE_TYPE  = 49;
+//    public static final int INCOMING_KEY_EXCHANGE_TYPE  = 50;
+//    public static final int STALE_KEY_EXCHANGE_TYPE     = 51;
+//    public static final int PROCESSED_KEY_EXCHANGE_TYPE = 52;
+//
+//    public static final int[] OUTGOING_MESSAGE_TYPES = {SENT_TYPE, SENT_PENDING, ENCRYPTING_TYPE,
+//                                                        OUTBOX_TYPE, SECURE_SENT_TYPE,
+//                                                        FAILED_TYPE, OUTGOING_KEY_EXCHANGE_TYPE};
+//
+//    public static boolean isFailedMessageType(long type) {
+//      return type == FAILED_TYPE;
+//    }
+//
+//    public static boolean isOutgoingMessageType(long type) {
+//      for (int outgoingType : OUTGOING_MESSAGE_TYPES) {
+//        if (type == outgoingType)
+//          return true;
+//      }
+//
+//      return false;
+//    }
+//
+//    public static boolean isPendingMessageType(long type) {
+//      return type == SENT_PENDING || type == ENCRYPTING_TYPE || type == OUTBOX_TYPE;
+//    }
+//
+//    public static boolean isSecureType(long type) {
+//      return
+//          type == SECURE_SENT_TYPE     || type == ENCRYPTING_TYPE ||
+//          type == SECURE_RECEIVED_TYPE || type == DECRYPTING_TYPE;
+//    }
+//
+//    public static boolean isKeyExchangeType(long type) {
+//      return type == OUTGOING_KEY_EXCHANGE_TYPE || type == INCOMING_KEY_EXCHANGE_TYPE;
+//    }
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\MmsSmsDatabase.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\NoExternalStorageException.java
+/** 
+//www.gnu.org/licenses/>.
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\NoSuchMessageException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\NotInDirectoryException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\PlaintextBackupExporter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\PlaintextBackupImporter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\RecipientPreferenceDatabase.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\SmsDatabase.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//      type |= Types.ENCRYPTION_REMOTE_BIT;
+//      type |= Types.ENCRYPTION_REMOTE_BIT;
+/*package */void deleteThread(long threadId) {
+/*package*/void deleteMessagesInThreadBeforeDate(long threadId, long date) {
+/*package*/ void deleteThreads(Set<Long> threadIds) {
+/*package */ void deleteAllThreads() {
+/*package*/ SQLiteDatabase beginTransaction() {
+/*package*/ void endTransaction(SQLiteDatabase database) {
+/*package*/ SQLiteStatement createInsertStatement(SQLiteDatabase database) {
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\SmsMigrator.java
+/**
+//www.gnu.org/licenses/>.
+//mms-sms/canonical-address/" + theirRecipientId);
+//sms/conversations/" + theirThreadId);
+/// Work around for weird sony-specific (?) bug: #4309
+//    if (context.getSharedPreferences("SecureSMS", Context.MODE_PRIVATE).getBoolean("migrated", false))
+//      return;
+//mms-sms/conversations?simple=true");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\ThreadDatabase.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\XmlBackup.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\documents\Document.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\documents\IdentityKeyMismatch.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\documents\IdentityKeyMismatchList.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\documents\NetworkFailure.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\documents\NetworkFailureList.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\loaders\BlockedContactsLoader.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\loaders\ConversationListLoader.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\loaders\ConversationLoader.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\loaders\CountryListLoader.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\loaders\IdentityLoader.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\loaders\MessageDetailsLoader.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\model\DisplayRecord.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\model\MediaMmsMessageRecord.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\model\MessageRecord.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\model\NotificationMmsMessageRecord.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\model\SmsMessageRecord.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\database\model\ThreadRecord.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\dependencies\InjectableType.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\events\PartProgressEvent.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\ContextJob.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\MasterSecretJob.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\MmsDownloadJob.java
+//
+//    toastHandler.makeToast(error);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\MmsReceiveJob.java
+// TODO
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\MmsSendJob.java
+//    MmsDatabase database = DatabaseFactory.getMmsDatabase(context);
+//    database.markAsSending(messageId);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\SendJob.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\SmsDecryptJob.java
+// TODO
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\SmsReceiveJob.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\SmsSendJob.java
+// See issue #1516 for bug report, and discussion on commits related to #4833 for problems
+// related to the original fix to #1516. This still may not be a correct fix if networks allow
+// SMS/MMS sending to alphanumeric recipients other than email addresses, but should also
+// help to fix issue #3099.
+// See issue #1516 for bug report, and discussion on commits related to #4833 for problems
+// related to the original fix to #1516. This still may not be a correct fix if networks allow
+// SMS/MMS sending to alphanumeric recipients other than email addresses, but should also
+// help to fix issue #3099.
+// NOTE 11/04/14 -- There's apparently a bug where for some unknown recipients
+// and messages, this will throw an NPE.  We have no idea why, so we're just
+// catching it and marking the message as a failure.  That way at least it doesn't
+// repeatedly crash every time you start the app.
+//" + messageId + System.currentTimeMillis()),
+//" + messageId + System.currentTimeMillis()),
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\SmsSentJob.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\TrimThreadJob.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\persistence\EncryptingJobSerializer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\requirements\MasterSecretRequirement.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\requirements\MasterSecretRequirementProvider.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\requirements\MediaNetworkRequirement.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\requirements\MediaNetworkRequirementProvider.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\requirements\NetworkOrServiceRequirement.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\requirements\ServiceRequirement.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\jobs\requirements\ServiceRequirementProvider.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\ApnUnavailableException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\AttachmentManager.java
+/**
+//www.gnu.org/licenses/>.
+/*", requestCode))
+/*", requestCode))
+/*", requestCode))
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\AttachmentStreamLocalUriFetcher.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\AttachmentStreamUriLoader.java
+/**
+/**
+// Do nothing.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\AttachmentTypeSelectorAdapter.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\AudioSlide.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\CompatMmsConnection.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\ContactPhotoLocalUriFetcher.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\ContactPhotoUriLoader.java
+/**
+// Do nothing.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\DecryptableStreamLocalUriFetcher.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\DecryptableStreamUriLoader.java
+/**
+/**
+// Do nothing.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\GifSlide.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\ImageSlide.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\IncomingLegacyMmsConnection.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\IncomingLollipopMmsConnection.java
+/**
+//www.gnu.org/licenses/>.
+// + Hex.dump(baos.toByteArray()));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\IncomingMediaMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\IncomingMmsConnection.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\LegacyMmsConnection.java
+/**
+//www.gnu.org/licenses/>.
+// We think Sprint supports direct connection over wifi/data, but not Verizon
+// TODO determine root cause
+// see: https://github.com/WhisperSystems/Signal-Android/issues/4379
+/*, application/vnd.wap.mms-message, application/vnd.wap.sic"));
+//www.google.com/oha/rdf/ua-profile-kila.xml"));
+//magic.google.com"));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\LollipopMmsConnection.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MediaConstraints.java
+// XXX - This is loading everything into memory! We want the send path to be stream-like.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MediaNotFoundException.java
+/** 
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MediaStream.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MediaTooLargeException.java
+/** 
+//www.gnu.org/licenses/>.
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+// TODO Auto-generated constructor stub
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MmsConfigManager.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MmsException.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MmsMediaConstraints.java
+// Reduce by 25% max size for encrypted MMS mesages
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MmsRadio.java
+///
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MmsRadioException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\MmsSendResult.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\OutgoingLegacyMmsConnection.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\OutgoingLollipopMmsConnection.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\OutgoingMediaMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\OutgoingMmsConnection.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\OutgoingSecureMediaMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\PartAuthority.java
+//org.smssecure.smssecure/part";
+//org.smssecure.smssecure/thumb";
+/*/#", PART_ROW);
+/*/#", THUMB_ROW);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\PartParser.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\PartUriParser.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\RoundedCorners.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\SilenceGlideModule.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\Slide.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\SlideClickListener.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\SlideDeck.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\TextTransport.java
+/** 
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\mms\VideoSlide.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\AbstractNotificationBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\AndroidAutoHeardReceiver.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//DatabaseFactory.getThreadDatabase(context).setLastSeen(threadId);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\AndroidAutoReplyReceiver.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//DatabaseFactory.getThreadDatabase(context).setLastSeen(replyThreadId);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\DeleteNotificationReceiver.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\FailedNotificationBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\LocaleChangedReceiver.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\MarkReadReceiver.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\MasterSecretBroadcastReceiver.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\MessageNotifier.java
+/**
+//www.gnu.org/licenses/>.
+/**
+//" + System.currentTimeMillis())));
+// XXX Appears to be a ROM bug, see https://github.com/WhisperSystems/Signal-Android/issues/6043
+// XXX Android ROM Bug, see https://github.com/WhisperSystems/Signal-Android/issues/6043
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\MultipleRecipientNotificationBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\NotificationChannels.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\NotificationItem.java
+//"+System.currentTimeMillis())));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\NotificationState.java
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+//"+System.currentTimeMillis())));
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\RemoteReplyReceiver.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\notifications\SingleRecipientNotificationBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\permissions\Permissions.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\permissions\PermissionsRequest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\permissions\RationaleDialog.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\AdvancedPreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\AppearancePreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\AppProtectionPreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\BlockedContactListItem.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\ChatsPreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\CorrectedPreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\ListSummaryPreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\MmsPreferencesActivity.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\MmsPreferencesFragment.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\NotificationsPreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\SmsMmsPreferenceFragment.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\AdvancedRingtonePreference.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\ColorPickerPreference.java
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\ColorPickerPreferenceDialogFragmentCompat.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\LEDColorListPreference.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\NotificationPrivacyPreference.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\RingtonePreference.java
+/**
+//  private CharSequence summaryHasRingtone;
+//  private CharSequence summary;
+//  static {
+//    PreferenceFragmentCompat.addDialogPreference(RingtonePreference.class, RingtonePreferenceDialogFragmentCompat.class);
+//  }
+//    summaryHasRingtone = a.getText(R.styleable.RingtonePreference_summaryHasRingtone);
+//    summary = super.getSummary();
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//  /**
+/**
+//   * displayed if no ringtone is selected; otherwise the ringtone title will be used.
+//   *
+//   * @return The summary.
+//   */
+//  @Override
+//  public CharSequence getSummary() {
+//    if (ringtoneUri == null) {
+//      return summary;
+//    } else {
+//      String ringtoneTitle = getRingtoneTitle();
+//      if (summaryHasRingtone != null && ringtoneTitle != null) {
+//        return String.format(summaryHasRingtone.toString(), ringtoneTitle);
+//      } else if (ringtoneTitle != null) {
+//        return ringtoneTitle;
+//      } else {
+//        return summary;
+//      }
+//    }
+//  }
+//  /**
+/**
+//   * set, this will be displayed if no ringtone is selected; otherwise the ringtone title will be
+//   * used.
+//   *
+//   * @param summary The summary for the preference.
+//   */
+//  @Override
+//  public void setSummary(CharSequence summary) {
+//    super.setSummary(summary);
+//    if (summary == null && this.summary != null) {
+//      this.summary = null;
+//    } else if (summary != null && !summary.equals(this.summary)) {
+//      this.summary = summary.toString();
+//    }
+//  }
+//  /**
+/**
+//   * has a persisted value or the default value is set. If the summary
+//   * has a {@linkplain java.lang.String#format String formatting}
+//   * marker in it (i.e. "%s" or "%1$s"), then the current ringtone's title
+//   * will be substituted in its place.
+//   *
+//   * @return The picked summary.
+//   */
+//  @Nullable
+//  public CharSequence getSummaryHasRingtone() {
+//    return summaryHasRingtone;
+//  }
+//  /**
+/**
+//   * preference has a persisted value or the default value is set. If the summary
+//   * has a {@linkplain java.lang.String#format String formatting}
+//   * marker in it (i.e. "%s" or "%1$s"), then the current ringtone's title
+//   * will be substituted in its place.
+//   *
+//   * @param resId The summary as a resource.
+//   * @see #setSummaryHasRingtone(CharSequence)
+//   */
+//  public void setSummaryHasRingtone(@StringRes int resId) {
+//    setSummaryHasRingtone(getContext().getString(resId));
+//  }
+//  /**
+/**
+//   * the preference has a persisted value or the default value is set. If the summary
+//   * has a {@linkplain java.lang.String#format String formatting}
+//   * marker in it (i.e. "%s" or "%1$s"), then the current ringtone's title
+//   * will be substituted in its place.
+//   *
+//   * @param summaryHasRingtone The summary for the preference.
+//   */
+//  public void setSummaryHasRingtone(@Nullable CharSequence summaryHasRingtone) {
+//    if (summaryHasRingtone == null && this.summaryHasRingtone != null) {
+//      this.summaryHasRingtone = null;
+//    } else if (summaryHasRingtone != null && !summaryHasRingtone.equals(this.summaryHasRingtone)) {
+//      this.summaryHasRingtone = summaryHasRingtone.toString();
+//    }
+//
+//    notifyChanged();
+//  }
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\RingtonePreferenceDialogFragmentCompat.java
+// "playing" silence
+// FIXME static field leak
+/*");
+/*", "application/ogg"});
+/*\"."
+// This will only happen if the Uri isn't either SCHEME_CONTENT or SCHEME_FILE, so we assume
+// it already represents the file's name.
+/**
+// Make sure the storage subdirectory exists
+//noinspection ResultOfMethodCallIgnored
+// Ensure the file has a unique name, as to not override any existing file
+// This might also be reached if the number of repeated files gets too high
+// Extract requested extension from display name
+//noinspection StatementWithEmptyBody
+// Extension maps back to requested MIME type; allow it
+// No match; insist that create file matches requested MIME
+/**
+// There was some issue with scanning. Delete the copied file so it is not oprhaned.
+//noinspection ResultOfMethodCallIgnored
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\SilenceListPreference.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\preferences\widgets\SilenceRingtonePreference.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\AutoInitiate.java
+// Be safe - err on the side of not tagging
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\EndSessionWirePrefix.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\KeyExchangeMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\KeyExchangeWirePrefix.java
+/** 
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\PrekeyBundleWirePrefix.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\SecureMessageWirePrefix.java
+/** 
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\WirePrefix.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\protocol\XmppExchangeWirePrefix.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\providers\BadgeWidgetProvider.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\providers\MmsBodyProvider.java
+/**
+//www.gnu.org/licenses/>.
+//org.smssecure.provider.smssecure.mms/mms";
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\providers\PartProvider.java
+/**
+//www.gnu.org/licenses/>.
+//org.smssecure.provider.smssecure/part";
+/*/#", SINGLE_ROW);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\providers\PersistentBlobProvider.java
+//org.smssecure.smssecure/capture";
+/*/*/#";
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\providers\SingleUseBlobProvider.java
+/*/#";
+//" + AUTHORITY + "/memory");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\recipients\Recipient.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\recipients\RecipientFactory.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\recipients\RecipientFormattingException.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\recipients\RecipientProvider.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\recipients\Recipients.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\recipients\RecipientsFormatter.java
+/**
+//www.gnu.org/licenses/>.
+// Format like this: Mike Cleron <(650) 555-1234>
+//                   Erick Tseng <(650) 555-1212>
+//                   Tutankhamun <tutank1341@gmail.com>
+//                   (408) 555-1289
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\ApplicationMigrationService.java
+// FIXME: This class is nuts.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\BootReceiver.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\DirectShareService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\KeyCachingService.java
+/**
+//www.gnu.org/licenses/>.
+/**
+/**
+//code.google.com/p/android/issues/detail?id=53313
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\MasterSecretIntentService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\MmsListener.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\QuickResponseService.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\SmsDeliveryListener.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\service\SmsListener.java
+/**
+//www.gnu.org/licenses/>.
+// ignore CLASS0 ("flash") messages
+// ignore OTP messages from Sparebank1 (Norwegian bank)
+//otp?")) {
+//ANDROID:") || // Sprint Visual Voicemail
+//BREW:")); //BREW stands for “Binary Runtime Environment for Wireless"
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\IncomingEncryptedMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\IncomingEndSessionMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\IncomingIdentityUpdateMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\IncomingKeyExchangeMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\IncomingPreKeyBundleMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\IncomingTextMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\IncomingXmppExchangeMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\MessageSender.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\MultipartSmsIdentifier.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\MultipartSmsMessageHandler.java
+/**
+//www.gnu.org/licenses/>.
+//return processSinglePartMessage(transportMessage);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\MultipartSmsTransportMessage.java
+/*
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\MultipartSmsTransportMessageFragments.java
+// 1 Hour
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\OutgoingEncryptedMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\OutgoingEndSessionMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\OutgoingKeyExchangeMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\OutgoingPrekeyBundleMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\OutgoingTextMessage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\SmsTransportDetails.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\sms\TelephonyServiceState.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\transport\UndeliverableMessageException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\AbstractCursorLoader.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\Base64.java
+/**
+//iharder.net/base64">http://iharder.net/base64</a>.</p>
+//www.faqs.org/rfcs/rfc3548.html">RFC3548</a>,
+//www.faqs.org/rfcs/rfc3548.html">RFC3548</a>.</li>
+//www.faqs.org/rfcs/rfc3548.html</li>
+//www.faqs.org/qa/rfcc-1940.html</li>
+//www.powerset.com/">http://www.powerset.com/</a>
+//iharder.net/base64">http://iharder.net/base64</a>
+/* ********  P U B L I C   F I E L D S  ******** */   
+/** No options specified. Value is zero. */
+/** Specify encoding in first bit. Value is one. */
+/** Specify decoding in first bit. Value is zero. */
+/** Specify that data should be gzip-compressed in second bit. Value is two. */
+/** Specify that gzipped data should <em>not</em> be automatically gunzipped. */
+/** Do break lines when encoding. Value is 8. */
+/** 
+//www.faqs.org/rfcs/rfc3548.html">http://www.faqs.org/rfcs/rfc3548.html</a>.
+/**
+//www.faqs.org/qa/rfcc-1940.html">http://www.faqs.org/qa/rfcc-1940.html</a>.
+/* ********  P R I V A T E   F I E L D S  ******** */  
+/** Maximum line length (76) of Base64 output. */
+/** The equals sign (=) as a byte. */
+/** The new line character (\n) as a byte. */
+/** Preferred encoding. */
+// Indicates white space in encoding
+// Indicates equals sign in encoding
+/* ********  S T A N D A R D   B A S E 6 4   A L P H A B E T  ******** */	
+/** The 64 valid Base64 values. */
+/* Host platform me be something funny like EBCDIC, so we hardcode these values. */
+/** 
+// Decimal  0 -  8
+// Whitespace: Tab and Linefeed
+// Decimal 11 - 12
+// Whitespace: Carriage Return
+// Decimal 14 - 26
+// Decimal 27 - 31
+// Whitespace: Space
+// Decimal 33 - 42
+// Plus sign at decimal 43
+// Decimal 44 - 46
+// Slash at decimal 47
+// Numbers zero through nine
+// Decimal 58 - 60
+// Equals sign at decimal 61
+// Decimal 62 - 64
+// Letters 'A' through 'N'
+// Letters 'O' through 'Z'
+// Decimal 91 - 96
+// Letters 'a' through 'm'
+// Letters 'n' through 'z'
+// Decimal 123 - 126
+// Decimal 127 - 139
+/*,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,     // Decimal 127 - 139
+// Decimal 153 - 165
+// Decimal 166 - 178
+// Decimal 179 - 191
+// Decimal 192 - 204
+// Decimal 205 - 217
+// Decimal 218 - 230
+// Decimal 231 - 243
+// Decimal 244 - 255 */
+/* ********  U R L   S A F E   B A S E 6 4   A L P H A B E T  ******** */
+/**
+//www.faqs.org/rfcs/rfc3548.html">http://www.faqs.org/rfcs/rfc3548.html</a>.
+/**
+// Decimal  0 -  8
+// Whitespace: Tab and Linefeed
+// Decimal 11 - 12
+// Whitespace: Carriage Return
+// Decimal 14 - 26
+// Decimal 27 - 31
+// Whitespace: Space
+// Decimal 33 - 42
+// Plus sign at decimal 43
+// Decimal 44
+// Minus sign at decimal 45
+// Decimal 46
+// Slash at decimal 47
+// Numbers zero through nine
+// Decimal 58 - 60
+// Equals sign at decimal 61
+// Decimal 62 - 64
+// Letters 'A' through 'N'
+// Letters 'O' through 'Z'
+// Decimal 91 - 94
+// Underscore at decimal 95
+// Decimal 96
+// Letters 'a' through 'm'
+// Letters 'n' through 'z'
+// Decimal 123 - 126
+// Decimal 127 - 139
+/*,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,     // Decimal 127 - 139
+// Decimal 153 - 165
+// Decimal 166 - 178
+// Decimal 179 - 191
+// Decimal 192 - 204
+// Decimal 205 - 217
+// Decimal 218 - 230
+// Decimal 231 - 243
+// Decimal 244 - 255 */
+/* ********  O R D E R E D   B A S E 6 4   A L P H A B E T  ******** */
+/**
+//www.faqs.org/qa/rfcc-1940.html">http://www.faqs.org/qa/rfcc-1940.html</a>.
+/**
+// Decimal  0 -  8
+// Whitespace: Tab and Linefeed
+// Decimal 11 - 12
+// Whitespace: Carriage Return
+// Decimal 14 - 26
+// Decimal 27 - 31
+// Whitespace: Space
+// Decimal 33 - 42
+// Plus sign at decimal 43
+// Decimal 44
+// Minus sign at decimal 45
+// Decimal 46
+// Slash at decimal 47
+// Numbers zero through nine
+// Decimal 58 - 60
+// Equals sign at decimal 61
+// Decimal 62 - 64
+// Letters 'A' through 'M'
+// Letters 'N' through 'Z'
+// Decimal 91 - 94
+// Underscore at decimal 95
+// Decimal 96
+// Letters 'a' through 'm'
+// Letters 'n' through 'z'
+// Decimal 123 - 126
+// Decimal 127 - 139
+/*,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,-9,     // Decimal 127 - 139
+// Decimal 153 - 165
+// Decimal 166 - 178
+// Decimal 179 - 191
+// Decimal 192 - 204
+// Decimal 205 - 217
+// Decimal 218 - 230
+// Decimal 231 - 243
+// Decimal 244 - 255 */
+/* ********  D E T E R M I N E   W H I C H   A L H A B E T  ******** */
+/**
+// end getAlphabet
+/**
+// end getAlphabet
+/** Defeats instantiation. */
+/* ********  E N C O D I N G   M E T H O D S  ******** */    
+/**
+// end encode3to4
+/**
+//           1         2         3  
+// 01234567890123456789012345678901 Bit position
+// --------000000001111111122222222 Array position from threeBytes
+// --------|    ||    ||    ||    | Six bit groups to index ALPHABET
+//          >>18  >>12  >> 6  >> 0  Right shift necessary
+//                0x3f  0x3f  0x3f  Additional AND
+// Create buffer with zero-padding if there are only one or two
+// significant bytes passed in the array.
+// We have to shift left 24 in order to flush out the 1's that appear
+// when Java treats a value as negative that is cast from a byte to an int.
+// end switch
+// end encode3to4
+/**
+// end input remaining
+/**
+// end input remaining
+/**
+// end encodeObject
+/**
+// end if: null
+// Streams
+// ObjectOutputStream -> (GZIP) -> Base64 -> ByteArrayOutputStream
+// Gzip
+// Not gzipped
+// end try
+// Catch it and then throw it immediately so that
+// the finally{} block is called for cleanup.
+// end catch
+// end finally
+// Return value according to relevant encoding.
+// end try
+// Fall back to some Java default
+// end catch
+// end encode
+/**
+// Since we're not going to have the GZIP encoding turned on,
+// we're not going to have an java.io.IOException thrown, so
+// we should not force the user to have to catch it.
+// end catch
+// end encodeBytes
+/**
+// end encodeBytes
+/**
+// Since we're not going to have the GZIP encoding turned on,
+// we're not going to have an java.io.IOException thrown, so
+// we should not force the user to have to catch it.
+// end catch
+// end encodeBytes
+/**
+// Return value according to relevant encoding.
+// end try
+// end catch
+// end encodeBytes
+/**
+/**
+// end if: null
+// end if: off < 0
+// end if: len < 0
+// end if: off < 0
+// Compress?
+// GZip -> Base64 -> ByteArray
+// end try
+// Catch it and then throw it immediately so that
+// the finally{} block is called for cleanup.
+// end catch
+// end finally
+// end if: compress
+// Else, don't compress. Better not to use streams at all then.
+//int    len43   = len * 4 / 3;
+//byte[] outBuff = new byte[   ( len43 )                      // Main 4:3
+//                           + ( (len % 3) > 0 ? 4 : 0 )      // Account for padding
+//                           + (breakLines ? ( len43 / MAX_LINE_LENGTH ) : 0) ]; // New lines
+// Try to determine more precisely how big the array needs to be.
+// If we get it right, we don't have to do an array copy, and
+// we save a bunch of memory.
+// Bytes needed for actual encoding
+// Plus extra newline characters
+// end if: end of line
+// en dfor: each piece of array
+// end if: some padding needed
+// Only resize array if we didn't guess it right.
+//System.err.println("Having to resize array from " + outBuff.length + " to " + e );
+//System.err.println("No need to resize array.");
+// end else: don't compress
+// end encodeBytesToBytes
+/* ********  D E C O D I N G   M E T H O D S  ******** */
+/**
+// Lots of error checking and exception throwing
+// end if
+// end if
+// end if
+// end if
+// Example: Dk==
+// Two ways to do the same thing. Don't know which way I like best.
+//int outBuff =   ( ( DECODABET[ source[ srcOffset    ] ] << 24 ) >>>  6 )
+//              | ( ( DECODABET[ source[ srcOffset + 1] ] << 24 ) >>> 12 );
+// Example: DkL=
+// Two ways to do the same thing. Don't know which way I like best.
+//int outBuff =   ( ( DECODABET[ source[ srcOffset     ] ] << 24 ) >>>  6 )
+//              | ( ( DECODABET[ source[ srcOffset + 1 ] ] << 24 ) >>> 12 )
+//              | ( ( DECODABET[ source[ srcOffset + 2 ] ] << 24 ) >>> 18 );
+// Example: DkLE
+// Two ways to do the same thing. Don't know which way I like best.
+//int outBuff =   ( ( DECODABET[ source[ srcOffset     ] ] << 24 ) >>>  6 )
+//              | ( ( DECODABET[ source[ srcOffset + 1 ] ] << 24 ) >>> 12 )
+//              | ( ( DECODABET[ source[ srcOffset + 2 ] ] << 24 ) >>> 18 )
+//              | ( ( DECODABET[ source[ srcOffset + 3 ] ] << 24 ) >>> 24 );
+// end decodeToBytes
+/**
+/**
+// Lots of error checking and exception throwing
+// end if
+// end if
+// end if
+// Estimate on array size
+// Upper limit on size of output
+// Keep track of where we're writing
+// Four byte buffer from source, eliminating white space
+// Keep track of four byte input buffer
+// Source array counter
+// Low seven bits (ASCII) of input
+// Special value from DECODABET
+// Loop through source
+// Only the low seven bits
+// Special value
+// White space, Equals sign, or legit Base64 character
+// Note the values such as -5 and -9 in the
+// DECODABETs at the top of the file.
+// Save non-whitespace
+// Time to decode?
+// If that was the equals sign, break out of 'for' loop
+// end if: equals sign
+// end if: quartet built
+// end if: equals sign or better
+// end if: white space, equals sign or better
+// There's a bad input character in the Base64 stream.
+// end else: 
+// each input character
+// end decode
+/**
+/**
+// end if
+// end try
+// end catch
+//</change>
+// Decode
+// Check to see if it's gzip-compressed
+// GZIP Magic Two-Byte Number: 0x8b1f (35615)
+// end while: reading input
+// No error? Get new bytes.
+// end try
+// Just return originally-decoded bytes
+// end catch
+// end finally
+// end if: gzipped
+// end if: bytes.length >= 2
+// end decode
+/**
+/**
+// Decode and gunzip if necessary
+// If no custom class loader is provided, use Java's builtin OIS.
+// end if: no loader provided
+// Else make a customized object input stream that uses
+// the provided class loader.
+// Class loader knows of this class.
+// end else: not null
+// end resolveClass
+// end ois
+// end else: no custom class loader
+// end try
+// Catch and throw in order to execute finally{}
+// end catch
+// Catch and throw in order to execute finally{}
+// end catch
+// end finally
+// end decodeObject
+/**
+// end iff
+// end try
+// Catch and throw to execute finally{} block
+// end catch: java.io.IOException
+// end finally
+// end encodeToFile
+/**
+// end try
+// Catch and throw to execute finally{} block
+// end catch: java.io.IOException
+// end finally
+// end decodeToFile
+/**
+// Set up some useful variables
+// Check for size of file
+// end if: file too big for int index
+// Open a stream
+// Read until done
+// end while
+// Save in a variable to return
+// end try
+// Catch and release to execute finally{}
+// end catch: java.io.IOException
+// end finally
+// end decodeFromFile
+/**
+// Set up some useful variables
+// Need max() for math on small files (v2.2.1)
+// Open a stream
+// Read until done
+// end while
+// Save in a variable to return
+// end try
+// Catch and release to execute finally{}
+// end catch: java.io.IOException
+// end finally
+// end encodeFromFile
+/**
+// Strict, 7-bit output.
+// end try
+// Catch and release to execute finally{}
+// end catch
+// end finally    
+// end encodeFileToFile
+/**
+// end try
+// Catch and release to execute finally{}
+// end catch
+// end finally    
+// end decodeFileToFile
+/* ********  I N N E R   C L A S S   I N P U T S T R E A M  ******** */
+/**
+// Encoding or decoding
+// Current position in the buffer
+// Small buffer holding converted data
+// Length of buffer (3 or 4)
+// Number of meaningful bytes in the buffer
+// Break lines at less than 80 characters
+// Record options used to create the stream.
+// Local copies to avoid extra method calls
+/**
+// end constructor
+/**
+// Record for later
+// end constructor
+/**
+// Do we need to get data?
+// If end of stream, b is -1.
+// out of for loop
+// end else: end of stream
+// end for: each needed input byte
+// end if: got data
+// Must be end of stream
+// end else
+// end if: encoding
+// Else decoding
+// Read four "meaningful" bytes:
+// Reads a -1 if end of stream
+// end if: end of stream
+// end for: each needed input byte
+// end if: got four characters
+// end else if: also padded correctly
+// Must have broken out from above.
+// end 
+// end else: decode
+// end else: get data
+// Got data?
+// End of relevant data?
+/*!encode &&*/ position >= numSigBytes ){
+// end if: got data
+// end if
+// This isn't important when decoding
+// but throwing an extra "if" seems
+// just as wasteful.
+// end if: end
+// This is how you "cast" a byte that's
+// intended to be unsigned.
+// end else
+// end if: position >= 0
+// Else error
+// end else
+// end read
+/**
+// Out of 'for' loop
+// Out of 'for' loop
+// end for: each byte read
+// end read
+// end inner class InputStream
+/* ********  I N N E R   C L A S S   O U T P U T S T R E A M  ******** */
+/**
+// Scratch used in a few places
+// Record for later
+// Local copies to avoid extra method calls
+/**
+// end constructor
+/**
+// end constructor
+/**
+// Encoding suspended?
+// end if: supsended
+// Encode?
+// Enough to encode.
+// end if: end of line
+// end if: enough to output
+// end if: encoding
+// Else, Decoding
+// Meaningful Base64 character?
+// Enough to output.
+// end if: enough to output
+// end if: meaningful base64 character
+// end else: not white space either
+// end else: decoding
+// end write
+/**
+// Encoding suspended?
+// end if: supsended
+// end for: each byte written
+// end write
+/**
+// end if: encoding
+// end else: decoding
+// end if: buffer partially full
+// end flush
+/** 
+// 1. Ensure that pending characters are written
+// 2. Actually close the stream
+// Base class both flushes and closes.
+// end close
+/**
+// end suspendEncoding
+/**
+// end resumeEncoding
+// end inner class OutputStream
+// end class Base64
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\BitmapDecodingException.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\BitmapUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\CharacterCalculator.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\Conversions.java
+/**
+//www.gnu.org/licenses/>.
+// The SSL patented 3-byte Value.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\DateUtils.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\Dialogs.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\DynamicIntroTheme.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\DynamicLanguage.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\DynamicNoActionBarTheme.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\DynamicTheme.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\EncryptedSmsCharacterCalculator.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\FileProviderUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\FutureTaskListener.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\Hex.java
+/**
+//www.gnu.org/licenses/>.
+/**
+// two characters form the hex value.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\InvalidNumberException.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\JsonUtils.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\LinkedBlockingLifoQueue.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\ListenableFutureTask.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\LRUCache.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\MediaUtil.java
+/*";
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\MmsCharacterCalculator.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\NumberUtil.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\ParcelUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\PhoneNumberFormatter.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\RedPhoneCallTypes.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\ResUtil.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\Rfc5724Uri.java
+/*
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\SaveAttachmentTask.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\SelectedRecipientsAdapter.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\ServiceUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\ShortCodeUtil.java
+// libphonenumber doesn't seem to be correct for Germany and Finland
+// libphonenumber seems incorrect for Russia and a few other countries with 4 digit short codes.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\SilencePreferences.java
+//TODO: Remove push
+//return getBooleanPreference(context, FALLBACK_SMS_ALLOWED_PREF, true);
+//TODO: Remove push
+//return getBooleanPreference(context, FALLBACK_SMS_ASK_REQUIRED_PREF, false);
+//TODO: Remove push
+//return getBooleanPreference(context, FALLBACK_MMS_ENABLED_PREF, true);
+//TODO: Remove push
+//return getBooleanPreference(context, DIRECT_SMS_ALLOWED_PREF, true);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\SmsCharacterCalculator.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\SpanUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\StickyHeaderDecoration.java
+/**
+/**
+/**
+//noinspection unchecked
+/**
+// find next view with header and compute the offscreen push if needed
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\TaggedFutureTask.java
+/**
+//www.gnu.org/licenses/>.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\TelephonyUtil.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\Trimmer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\Util.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\VersionTracker.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\ViewUtil.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\VisibleForTesting.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\WorkerThread.java
+/**
+//www.gnu.org/licenses/>.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\concurrent\AssertedSuccessListener.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\concurrent\ListenableFuture.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\concurrent\SettableFuture.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\deque\BlockingDeque.java
+/*
+//creativecommons.org/licenses/publicdomain
+/**
+/*
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// *** BlockingQueue methods ***
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// *** Stack methods ***
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\deque\Deque.java
+/*
+//creativecommons.org/licenses/publicdomain
+// BEGIN android-note
+// removed link to collections framework docs
+// changed {@link #offer(Object)} to {@link #offer} to satisfy DroidDoc
+// END android-note
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// *** Queue methods ***
+/**
+/**
+/**
+/**
+/**
+/**
+// *** Stack methods ***
+/**
+/**
+// *** Collection methods ***
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\deque\LinkedBlockingDeque.java
+/*
+//creativecommons.org/licenses/publicdomain
+/*
+/**
+/*
+/*
+/** Doubly-linked list node class */
+/**
+/**
+/**
+/**
+/**
+/** Number of items in the deque */
+/** Maximum number of items in the deque */
+/** Main lock guarding all access */
+/** Condition for waiting takes */
+/** Condition for waiting puts */
+/**
+/**
+/**
+// Never contended, but necessary for visibility
+// Basic linking and unlinking operations, called only while holding lock
+/**
+// assert lock.isHeldByCurrentThread();
+/**
+// assert lock.isHeldByCurrentThread();
+/**
+// assert lock.isHeldByCurrentThread();
+// help GC
+/**
+// assert lock.isHeldByCurrentThread();
+// help GC
+/**
+// assert lock.isHeldByCurrentThread();
+// Don't mess with x's links.  They may still be in use by
+// an iterator.
+// BlockingDeque methods
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// BlockingQueue methods
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// In this order, in case add() throws.
+// Stack methods
+/**
+/**
+// Collection methods
+/**
+/**
+/**
+/*
+//     /**
+/**
+//      * queue.  Attempts to addAll of a queue to itself result in
+//      * {@code IllegalArgumentException}. Further, the behavior of
+//      * this operation is undefined if the specified collection is
+//      * modified while the operation is in progress.
+//      *
+//      * @param c collection containing elements to be added to this queue
+//      * @return {@code true} if this queue changed as a result of the call
+//      * @throws ClassCastException            {@inheritDoc}
+//      * @throws NullPointerException          {@inheritDoc}
+//      * @throws IllegalArgumentException      {@inheritDoc}
+//      * @throws IllegalStateException         {@inheritDoc}
+//      * @see #add(Object)
+//      */
+//     public boolean addAll(Collection<? extends E> c) {
+//         if (c == null)
+//             throw new NullPointerException();
+//         if (c == this)
+//             throw new IllegalArgumentException();
+//         final ReentrantLock lock = this.lock;
+//         lock.lock();
+//         try {
+//             boolean modified = false;
+//             for (E e : c)
+//                 if (linkLast(e))
+//                     modified = true;
+//             return modified;
+//         } finally {
+//             lock.unlock();
+//         }
+//     }
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// set to initial position
+/**
+// Chains of deleted nodes ending in null or self-links
+// are possible if multiple interior nodes are removed.
+/**
+// assert next != null;
+/** Forward iterator */
+/** Descending iterator */
+/**
+// Write out capacity and any hidden stuff
+// Write out all elements in the proper order.
+// Use trailing null as sentinel
+/**
+// Read in all elements and place in queue
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\dualsim\SubscriptionInfoCompat.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\dualsim\SubscriptionManagerCompat.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\task\ProgressDialogAsyncTask.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\task\SnackbarAsyncTask.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\util\views\Stub.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\src\org\smssecure\smssecure\video\VideoPlayer.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\androidTest\java\org\smssecure\smssecure\SilenceTestCase.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\androidTest\java\org\smssecure\smssecure\database\CanonicalAddressDatabaseTest.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\BaseUnitTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\ConversationAdapterTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\crypto\MasterCipherTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\database\CursorRecyclerViewAdapterTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\util\HexTest.java
+//Just bytes
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\util\ListPartitionTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\util\PhoneNumberFormatterTest.java
+// success
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\util\Rfc5724UriTest.java
+/*
+//www.gnu.org/licenses/>.
+// success
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/Silence-master\Silence-master\test\unitTest\java\org\smssecure\smssecure\util\ShortCodeUtilTest.java

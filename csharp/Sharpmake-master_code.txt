@@ -1,0 +1,49 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\ConfigureOrder\codebase\main.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\ConfigureOrder\codebase\stdafx.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\CPPCLI\codebase\CLRCPPProj\AssemblyInfo.cpp
+//
+// General Information about an assembly is controlled through the following
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version
+//      Build Number
+//      Revision
+//
+// You can specify all the value or you can default the Revision and Build Numbers
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\CPPCLI\codebase\CLRCPPProj\CLRCPPProj.cpp
+// This is the main DLL file.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\CPPCLI\codebase\theEmptyCPPProject\TestClass.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\FastBuildSimpleExecutable\codebase\main.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\HelloWorld\codebase\main.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\HelloWorld\codebase\stdafx.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\QTFileCustomBuild\codebase\floatanglespinbox.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\QTFileCustomBuild\codebase\floatcosanglespinbox.cpp
+// Updates the UI field (in degrees) from the reference value (a cosine).
+// Updates the reference value (a cosine) from the UI field (in degrees).
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\QTFileCustomBuild\codebase\privatewidget.cpp
+/* = 0 */) : QWidget(parent), chilren(nullptr)
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\QTFileCustomBuild\codebase\stdafx.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\SimpleExeLibDependency\libstuff\hello.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\samples\SimpleExeLibDependency\src\main.cpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Sharpmake-master\Sharpmake-master\Sharpmake.FunctionalTests\FastBuildFunctionalTest\codebase\main.cpp

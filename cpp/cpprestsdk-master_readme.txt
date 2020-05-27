@@ -1,0 +1,1714 @@
+﻿cpprestsdk (2.10.14)
+* Potential breaking change warning: This release changes the "default" proxy for the WinHTTP backend to go back to WINHTTP_ACCESS_TYPE_DEFAULT_PROXY. See https://github.com/microsoft/cpprestsdk/commit/60e067e71aebebdda5d82955060f5f0821c9df1d for more details. To get automatic WPAD behavior, set the proxy to auto detect.
+* macOS with Brew and iOS builds have been disabled and are no longer being tested because our dependency boost for ios project appears to be broken with current releases of XCode as on the Azure Pipelines machines. We are interested in macOS / iOS folks who know what's going on here in contributing a repair to turn this back on.
+* PR##1133 Add switches to make apiscan happy.
+* PR##1130 json: {"meow"} is not a valid object
+* PR##1150 Undefine compress if it is defined by zconf.h
+* PR##1156 Fix broken CI Builds
+* PR##1155 Use EVP_MAX_MD_SIZE instead of HMAC_MAX_MD_CBLOCK
+* PR##1145 Remove the address_configured flag on tcp::resolver::query
+* PR##1143 add ping and pong to message handler
+* PR##539 Fix reusing ASIO http_client connecting to HTTPS server via proxy
+* PR##1175 Fix issue #1171: Order of object destruction
+* PR##1183 FIX: SSL proxy tunnel support with basic auth
+* PR##1184 Fix profile being set on the compiler instead of the linker.
+* PR##1185 Update boost-for-android for Android NDK r20 and disable macOS Homebrew.
+* PR##1187 Replace CPPREST_TARGET_XP with version checks, remove ""s, and other cleanup
+* PR##1188 Remove proxy settings detection behavior in "default proxy mode."
+-- cpprestsdk team <askcasablanca@microsoft.com>  TUE, 16 Jul 2019 09:06:00 +0200
+
+cpprestsdk (2.10.13)
+* PR#1120 Fix off by one error in leap years before year 2000, and bad day names
+* PR#1117 Parse and emit years from 1900 to 9999, and remove environment variable dependence on Android
+* PR#1106 Paranoia for overflow of sprintf buffer in the year 10000
+* PR#1101 Update request_timeout_microsecond timeout
+* PR#1097 Allow error handling for time out in http_client_asio handle_connect
+* PR#1094 Avoid tripping over 32 bit time_t mistakes.
+* PR#1093 Don't initialize atomic_flag with 0.
+-- cpprestsdk team <askcasablanca@microsoft.com>  WED, 24 Apr 2019 10:57:00 -0800
+
+cpprestsdk (2.10.12)
+* PR#1088 Fix data race, GitHub #1085
+* PR#1084 Fix oauth nonces containing nulls.
+* PR#1082 Workaround data-race on websocketpp's _htonll function
+* PR#1080 Fix thread not joined
+* PR#1076 Rewrite date formatting and parsing
+-- cpprestsdk team <askcasablanca@microsoft.com>  TUE, 26 Mar 2019 11:57:00 -0800
+
+cpprestsdk (2.10.11)
+* PR##1073 Move get_jvm_env back into the crossplat namespace
+* PR##1049 Add the missing ssl::context callback in websocket_client_config
+* PR##1072 Gate stdext::checked_array_iterator usage on _ITERATOR_DEBUG_LEVEL
+* PR##1051 Fix http_client_asio "https" with a proxy
+* PR##1071 Add --vcpkg-root to repair UWP.
+* PR##1041 Update Boost_for_android for Android R19
+* PR##1064 Enable testing from root directory
+* PR##1057 Returns int64 value in function of seeking to file end on x64 Windows.
+* PR##1068 Don't close the output stream when reporting errors reading the body.
+* PR##1053 Update vcpkg.
+* PR##1032 Fix HTTP/1.0 'Keep-Alive' handling in http_client
+* PR##1040 Disable WINHTTP_AUTOPROXY_OPTIONS machinery when using WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY.
+-- cpprestsdk team <askcasablanca@microsoft.com>  WED, 20 Mar 2019 02:30:00 -0800
+
+cpprestsdk (2.10.10)
+----------------------
+* PR#1023 Handle multi-byte unicode characters in json parsing
+* PR#1033 Temporary fix for VS2013. Note that VS2013 is still not in support.
+-- cpprestsdk team <askcasablanca@microsoft.com>  TUE, 29 Jan 2019 22:38:00 -0800
+
+cpprestsdk (2.10.9)
+----------------------
+* PR#973  Address gcc warnings-as-errors in compression code, test improvements
+* PR#986  Prevent infinite loop during proxy authentication
+* PR#987  Remove use of aligned_union that broke CentOS 7.
+* PR#1004 #993, #1002: Add flexibility for iOS building. Adds command line args…
+* PR#1009 gcc: Fix compilation with -fno-operator-names
+* PR#1019 FIX: crash with std::logic_error when reusing a connection that timed out on the server
+* PR#1021 handle null bytes when parsing utf8
+* PR#1017 Add in support for adding i386 slice when building for 32-bit targets. Also improve messaging and add means to clean
+* PR#1024 http_compression.cpp: fix build with gcc 4.7
+* PR#1022 Resolve double free when WinHttpSendRequest fails
+-- cpprestsdk team <askcasablanca@microsoft.com>  FRI, 18 Jan 2019 16:58:00 -0800
+
+cpprestsdk (2.10.8)
+----------------------
+* PR#938 Allow ppltasks.h and pplxtasks.h to co-exist
+* PR#951 Fix incorrect const in reinterpret_cast
+* PR#955 Fix UWP missing header
+* PR#956 Adds support for OpenSSL 1.1.1
+* PR#959 Fix Android build issue by remove the crossplat name space before android parameters
+* PR#960 Update vcpkg to latest master to fix VS2015 build.
+* PR#966 Fix string size for error message generated by windows_category
+* PR#958 Add uri_builder::append_path_raw(...) to allow adding elements to path intentionally beginning with '/' ("//" will result in the final path value)
+* PR#952 cmake: add code to detect system brotli library
+* PR#963 Fix Brotli compress_helper early termination issue
+* PR#961 Fixes iOS builds and makes it more future proof
+-- cpprestsdk team <askcasablanca@microsoft.com>  WED, 14 Nov 2018 10:24:00 -0800
+
+cpprestsdk (2.10.7)
+----------------------
+* cpprestsdk now has Azure Pipelines continuous integration.
+* Builds for Android and iOS were repaired, now checked in Azure Pipelines to make sure that doesn't bit-rot in the future.
+* Several race conditions in the listener were worked around; the listeners remain experimental and are unlikely to productized in their current form; the race conditions are structural, but at least the client tests pass most of the time.
+* Incorrect handling of connection pooling bug that caused segfaults on Ubuntu introduced in 2.10.4 has been repaired.
+* websocketpp checked in 0.5.1 version has been changed to a submodule and updated to 0.8.1.
+* Added an API to set the number of threads in the asio thread pool, see PR#883
+* Legacy unmaintained Visual Studio project files have been deleted, please use CMake instead.
+* PR#670 Export methods to set/get the ambient scheduler in cpprest dll
+* PR#866 Add Transfer-Encoding compression support and extensible compression API
+* PR#892 Improve utf8_to_utf16 speed for common path
+* PR#897 added URI resolution according to RFC3986
+* PR#935 Fix spelling mistakes across the library
+* PR#936 Use pplx namespace consistently
+* PR#937 Remove _ASYNCRTIMP from ~http_listener() and implement inline
+* PR#940 Avoid using identifiers reserved by C++ in header guards
+* PR#943 blackjack sample: use vector instead of shared pointer for array
+-- cpprestsdk team <askcasablanca@microsoft.com>  MON, 30 Oct 2018 20:32:00 -0800
+
+cpprestsdk (2.10.6)
+----------------------
+* PR#844 Fix clang build error
+-- cpprestsdk team <askcasablanca@microsoft.com>  MON, 30 Aug 2018 16:51:00 -0800
+
+cpprestsdk (2.10.5)
+----------------------
+* Issue#842 Fix incorrect `cpprest/version.h`
+-- cpprestsdk team <askcasablanca@microsoft.com>  FRI, 17 Aug 2018 09:47:00 -0800
+
+cpprestsdk (2.10.4)
+----------------------
+* Added a `.clang-format` to enable consistent formatting.
+* Added support for `Host:` headers changing the checked CNAME field for SSL certificates in WinHTTP and Asio.
+* PR#736 passes 0666 to open() for creating files to better match the default behavior for other http clients (wget, etc).
+* PR#732 fixes a build issue with clang
+* PR#737 taught our cmake to respect the GNUInstallDirs variables
+* PR#762 improved handling of dead connections in the connection pool on Asio.
+* PR#750 improved error handling in the accept() call in `http_listener`
+* PR#776 improved the iOS buildsystem
+-- cpprestsdk team <askcasablanca@microsoft.com>  WED, 15 Aug 2018 12:35:00 -0800
+
+cpprestsdk (2.10.3)
+----------------------
+* Added a root `CMakeLists.txt` to improve support for VS2017 Open Folder.
+* PR#809 improves support for `/permissive-` in MSVC
+* Issue#804 fixed a regression due to compression support; we no longer fail on unknown Content-Encoding headers if we did not set Accepts-Encoding
+* PR#813 fixes build failure with boost 1.63
+* PR#779 PR#787 suppress and fix some warnings with new versions of gcc and clang
+-- cpprestsdk team <askcasablanca@microsoft.com>  THU, 2 Aug 2018 15:52:00 -0800
+
+cpprestsdk (2.10.0)
+----------------------
+* Removed VS2013 MSBuild files. Use CMake with the "Visual Studio 12 2013" generator.
+* Added VS2017 MSBuild files for convenience. It is highly recommended to use vcpkg or CMake instead to build the product library.
+* Added UWP versions of the Windows Store samples for VS2017.
+* Updated minimum required cmake version to 3.0.
+* Added CMake config-file support to installation. This should be consumed by doing:
+```cmake
+find_package(cpprestsdk REQUIRED)
+target_link_libraries(my_executable PRIVATE cpprestsdk::cpprest)
+```
+* Fixed several race conditions and memory leaks in the ASIO `http_client`.
+* Fixed process termination bug around certain exceptional cases in all `http_client`s.
+* Improved handling of `/Zcwchar_t-` on MSVC. That doesn't make it a good idea.
+* Fixed use-after-free in the Windows Desktop `http_client` exposed by VS2017.
+* Totally overhaul the CMake buildsystem for much better support of Windows and more shared code between platforms.
+* PR#550 adds all remaining official HTTP status codes to `http::status_codes`.
+* PR#563 wraps SSL errors on Windows Desktop in `http_exception`s, with more readable descriptions.
+* PR#562 and PR#307 fixes building with LibreSSL.
+* PR#551 adds convenience wrappers `json::value::has_T_field(T)` for inspecting object values.
+* PR#549 fixes a race condition in the ASIO client during header parsing.
+* PR#495 fixes a memory leak during proxy autodetection on Windows Desktop.
+* PR#496 and PR#500 expand proxy autodetection to also consider Internet Explorer settings on Windows Desktop.
+* PR#498 fixes error when handling responses of type NoContent, NotModified, or from 100 to 199.
+* PR#398 enables specifying the User Agent used in OAuth2 requests.
+* PR#494 improves the BingRequest sample's handling of proxies.
+* PR#516 enables certificate revocation checks on Windows Desktop.
+* PR#502 improves compatibility with glibc 2.26.
+* PR#507 adds `http_request::get_remote_address()` to expose the client's IP address for `http_listener`.
+* PR#521 enables use of empty passwords on Windows in `web::credentials`.
+* PR#526 and PR#285 improve compatibility with openssl 1.1.0.
+* PR#527 fixes a bug in the ASIO `http_client` where the proxy is passed the same credentials as the target host.
+* PR#504 makes `uri_builder::to_string()` and `uri_builder::to_uri()` `const`.
+* PR#446 adds handling for the host wildchar `+` to the ASIO `http_listener`.
+* PR#465 improves compatibility with clang on Linux.
+* PR#454 improves compatibility with icc 17.0.
+* PR#487 fixes static library builds of `test_runner` on non-Windows platforms.
+* PR#415 handles malformed URL requests to the ASIO `http_listener` instead of crashing.
+* PR#393 fixes a race condition in the websocketpp `websocket_client`.
+* PR#259 fixes several races in the ASIO `http_listener` which result in memory leaks or use after free of the connection objects.
+* PR#376 adds `http_client_config::set_nativesessionhandle_options()` which enables customization of the session handle on Windows Desktop.
+* PR#365 updates our convenience OpenSSL build scripts for Android to use openssl 1.0.2k.
+* PR#336 makes the ASIO `http_client` more consistent with the Windows clients by not appending the port when it is default. This improves compatibility with AWS S3.
+* PR#251 dramatically improves UTF8/16 conversions from 6s per 1MB to 3s per 1GB (2000x improvement).
+* PR#246 enables TLS 1.1 and 1.2 on Windows 7 and Windows 8.
+* PR#308 enables limited IPv6 support to `http_client` and `http_server`, depending on the underlying platform.
+* PR#309 fixes a bug in base64 encoding that previously read beyond the input array, causing segfaults/AVs.
+* PR#233 adds compression support (deflate and gzip) for Windows Desktop and ASIO `http_client`s based on Zlib.
+* PR#218 fixes a memory leak in the UWP `http_client` when processing headers.
+* PR#260 fixes inappropriate handling of certain connections errors in the ASIO `http_listener`.
+
+-- cpprestsdk team <askcasablanca@microsoft.com>  SAT, 21 Oct 2017 00:52:00 -0800
+cmake_minimum_required(VERSION 3.1)
+project(cpprestsdk-root NONE)
+enable_testing()
+add_subdirectory(Release)
+Contributors should submit an update to this file with a commit in order to receive recognition. Thank you for your contributions.
+
+
+List of Contributors
+====================
+
+Microsoft Corporation
+Brian Wengert (bwengert79)
+Leslie Brody (Les1966)
+Michael M (M1xa)
+Matt Peterson (MattPeterson1)
+Dmitry Kolomiets (kolomiets)
+rdeterre
+DeCarabas
+luisfeliu
+intercommiura
+halex2005
+simonlep
+jracle
+gandziej
+adish
+LeonidCSIT
+kreuzerkrieg
+evanc
+Jesse Towner (jwtowner)
+
+Abinsula s.r.l.
+Gianfranco Costamagna (LocutusOfBorg)
+
+AutoDesk Inc.
+Cyrille Fauvel (cyrillef)
+
+Illumina Inc.
+Gery Vessere (gery@vessere.com)
+
+Cisco Systems
+Gergely Lukacsy (glukacsy)
+Chris Deering (deeringc)
+
+Ocedo GmbH
+Henning Pfeiffer (megaposer)
+
+thomasschaub
+
+Trimble
+Tim Boundy (gigaplex)
+
+Rami Abughazaleh (icnocop)
+
+TastenTrick
+Christian Deneke (chris0x44)
+
+leetal
+
+Benjamin Lee (mobileben)
+René Meusel (reneme)
+
+Sony Corporation
+Gareth Sylvester-Bradley (garethsb-sony)
+C++ REST SDK 
+
+The MIT License (MIT)
+
+Copyright (c) Microsoft Corporation
+
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+## Welcome!
+
+The C++ REST SDK is a Microsoft project for cloud-based client-server communication in native code using a modern asynchronous C++ API design. This project aims to help C++ developers connect to and interact with services.  
+
+## Getting Started
+
+[![Vcpkg package](https://repology.org/badge/version-for-repo/vcpkg/cpprestsdk.svg)](https://repology.org/metapackage/cpprestsdk)</br>
+[![Homebrew package](https://repology.org/badge/version-for-repo/homebrew/cpprestsdk.svg)](https://repology.org/metapackage/cpprestsdk)</br>
+[![Ubuntu 18.04 package](https://repology.org/badge/version-for-repo/ubuntu_18_04/cpprestsdk.svg)](https://repology.org/metapackage/cpprestsdk)</br>
+[![Fedora Rawhide package](https://repology.org/badge/version-for-repo/fedora_rawhide/cpprestsdk.svg)](https://repology.org/metapackage/cpprestsdk)</br>
+[![openSUSE Tumbleweed package](https://repology.org/badge/version-for-repo/opensuse_tumbleweed/cpprestsdk.svg)](https://repology.org/metapackage/cpprestsdk)</br>
+[![Debian Testing package](https://repology.org/badge/version-for-repo/debian_testing/cpprestsdk.svg)](https://repology.org/metapackage/cpprestsdk)</br>
+
+[![Build Status](https://dev.azure.com/vclibs/cpprestsdk/_apis/build/status/Microsoft.cpprestsdk.Ubuntu)](https://dev.azure.com/vclibs/cpprestsdk/_build/latest?definitionId=1)
+
+With [vcpkg](https://github.com/Microsoft/vcpkg) on Windows
+```
+PS> vcpkg install cpprestsdk cpprestsdk:x64-windows
+```
+With [apt-get](https://launchpad.net/ubuntu/+source/casablanca/2.8.0-2build2) on Debian/Ubuntu
+```
+$ sudo apt-get install libcpprest-dev
+```
+With [dnf](https://apps.fedoraproject.org/packages/cpprest) on Fedora
+```
+$ sudo dnf install cpprest-devel
+```
+With [brew](https://github.com/Homebrew/homebrew-core/blob/master/Formula/cpprestsdk.rb) on OSX
+```
+$ brew install cpprestsdk
+```
+With [NuGet](https://www.nuget.org/packages/cpprestsdk.android/) on Windows for Android
+```
+PM> Install-Package cpprestsdk.android
+```
+For other platforms, install options, how to build from source, and more, take a look at our [Documentation](https://github.com/Microsoft/cpprestsdk/wiki).
+
+Once you have the library, look at our [tutorial](https://github.com/Microsoft/cpprestsdk/wiki/Getting-Started-Tutorial) to use the http_client. It walks through how to setup a project to use the C++ Rest SDK and make a basic Http request.
+
+To use from CMake:
+```cmake
+cmake_minimum_required(VERSION 3.7)
+project(main)
+
+find_package(cpprestsdk REQUIRED)
+
+add_executable(main main.cpp)
+target_link_libraries(main PRIVATE cpprestsdk::cpprest)
+```
+
+## What's in the SDK:
+
+*   Features - HTTP client/server, JSON, URI, asynchronous streams, WebSockets client, oAuth
+*   PPL Tasks - A powerful model for composing asynchronous operations based on C++ 11 features
+*   Platforms - Windows desktop, Windows Store (UWP), Linux, OS X, Unix, iOS, and Android
+*   Support for [Visual Studio 2015 and 2017](https://visualstudio.microsoft.com/) with debugger visualizers
+
+## Contribute Back!
+
+Is there a feature missing that you'd like to see, or found a bug that you have a fix for? Or do you have an idea or just interest in helping out in building the library? Let us know and we'd love to work with you. For a good starting point on where we are headed and feature ideas, take a look at our [requested features and bugs](https://github.com/Microsoft/cpprestsdk/issues).  
+
+Big or small we'd like to take your [contributions](https://github.com/Microsoft/cpprestsdk/wiki/Make-a-contribution-and-report-issues) back to help improve the C++ Rest SDK for everyone. If interested contact us askcasablanca at Microsoft dot com.  
+
+## Having Trouble?
+
+We'd love to get your review score, whether good or bad, but even more than that, we want to fix your problem. If you submit your issue as a Review, we won't be able to respond to your problem and ask any follow-up questions that may be necessary. The most efficient way to do that is to open an issue in our [issue tracker](https://github.com/Microsoft/cpprestsdk/issues).  
+
+### Quick Links
+
+*   [FAQ](https://github.com/Microsoft/cpprestsdk/wiki/FAQ)
+*   [Documentation](https://github.com/Microsoft/cpprestsdk/wiki)
+*   [Issue Tracker](https://github.com/Microsoft/cpprestsdk/issues)
+*   Directly contact us: <askcasablanca@microsoft.com>
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+Do Not Translate or Localize
+
+C++ REST SDK incorporates third party material from the projects listed below. The original copyright notice and the license under which Microsoft received such third party material are set forth below. Microsoft reserves all other rights not expressly granted, whether by implication, estoppel or otherwise.  
+
+1.	Websocket++ (http://www.zaphoyd.com/websocketpp/)
+
+%% Websocket++ NOTICES, INFORMATION, AND LICENSE BEGIN HERE
+=========================================
+Main Library:
+
+Copyright (c) 2014, Peter Thorson. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the WebSocket++ Project nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL PETER THORSON BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Bundled Libraries:
+
+****** Base 64 Library (base64/base64.hpp) ******
+base64.hpp is a repackaging of the base64.cpp and base64.h files into a
+single header suitable for use as a header only library. This conversion was
+done by Peter Thorson (webmaster@zaphoyd.com) in 2012. All modifications to
+the code are redistributed under the same license as the original, which is
+listed below.
+
+base64.cpp and base64.h
+
+Copyright (C) 2004-2008 Ren Nyffenegger
+
+This source code is provided 'as-is', without any express or implied
+warranty. In no event will the author be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this source code must not be misrepresented; you must not
+  claim that you wrote the original source code. If you use this source code
+  in a product, an acknowledgment in the product documentation would be
+  appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be
+  misrepresented as being the original source code.
+
+3. This notice may not be removed or altered from any source distribution.
+
+Ren Nyffenegger rene.nyffenegger@adp-gmbh.ch
+
+****** SHA1 Library (sha1/sha1.hpp) ******
+sha1.hpp is a repackaging of the sha1.cpp and sha1.h files from the shallsha1
+library (http://code.google.com/p/smallsha1/) into a single header suitable for
+use as a header only library. This conversion was done by Peter Thorson
+(webmaster@zaphoyd.com) in 2013. All modifications to the code are redistributed
+under the same license as the original, which is listed below.
+
+ Copyright (c) 2011, Micael Hildenborg
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of Micael Hildenborg nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY Micael Hildenborg ''AS IS'' AND ANY
+ EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL Micael Hildenborg BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+****** MD5 Library (common/md5.hpp) ******
+md5.hpp is a reformulation of the md5.h and md5.c code from
+http://www.opensource.apple.com/source/cups/cups-59/cups/md5.c to allow it to
+function as a component of a header only library. This conversion was done by
+Peter Thorson (webmaster@zaphoyd.com) in 2012 for the WebSocket++ project. The
+changes are released under the same license as the original (listed below)
+
+Copyright (C) 1999, 2002 Aladdin Enterprises.  All rights reserved.
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+ claim that you wrote the original software. If you use this software
+ in a product, an acknowledgment in the product documentation would be
+ appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+ misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+L. Peter Deutsch
+ghost@aladdin.com
+
+****** UTF8 Validation logic (utf8_validation.hpp) ******
+utf8_validation.hpp is adapted from code originally written by Bjoern Hoehrmann
+<bjoern@hoehrmann.de>. See http://bjoern.hoehrmann.de/utf-8/decoder/dfa/ for
+details.
+
+The original license:
+
+Copyright (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+=========================================
+END OF Websocket++ NOTICES, INFORMATION, AND LICENSE
+
+
+openssl
+boost-system
+boost-date-time
+boost-regex
+boost-interprocess
+websocketpp
+brotli
+project(casablanca-ios NONE)
+cmake_minimum_required(VERSION 3.1)
+
+enable_testing()
+
+set(LIB_CPPREST libcpprest.a)
+set(LIB_CPPREST_LIB_DIR "${CMAKE_CURRENT_BINARY_DIR}/lib")
+
+if (CMAKE_XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET)
+  set (ENV{CMAKE_XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET} ${CMAKE_XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET})
+endif()
+
+set(TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/ios-cmake/ios.toolchain.cmake")
+
+set(SIM_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}/build.i386" CACHE INTERNAL "")
+set(SIM_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../Release" CACHE INTERNAL "")
+
+set(SIM64_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}/build.x86_64" CACHE INTERNAL "")
+set(SIM64_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../Release" CACHE INTERNAL "")
+
+set(ARM_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}/build.arm" CACHE INTERNAL "")
+set(ARM_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../Release" CACHE INTERNAL "")
+
+if (DISABLE_BITCODE)
+  set (ENABLE_BITCODE_ARG -DENABLE_BITCODE=OFF)
+endif()
+
+if (INCLUDE_32BIT)
+  set (IOS_PLATFORM_VALUE OS)
+else()
+  set (IOS_PLATFORM_VALUE OS64)
+endif()
+
+if (DEPLOYMENT_TARGET)
+  set (DEPLOYMENT_TARGET -DIOS_DEPLOYMENT_TARGET=${DEPLOYMENT_TARGET})
+endif()
+
+add_test(NAME ios_runner
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../Release/tests/common/testrunner/ios
+    COMMAND xcodebuild test -project ios_runner.xcodeproj -configuration=${CMAKE_BUILD_TYPE} -scheme ios_runner -destination "platform=iOS Simulator,name=iPhone 6" LIBRARY_SEARCH_PATH=${SIM64_BINARY_DIR}
+  )
+
+if (INCLUDE_32BIT)
+set (SIM_BINARY_LIB ${SIM_BINARY_DIR}/Binaries/${CMAKE_BUILD_TYPE}/${LIB_CPPREST})
+file(MAKE_DIRECTORY ${SIM_BINARY_DIR})
+execute_process(WORKING_DIRECTORY ${SIM_BINARY_DIR}
+  COMMAND ${CMAKE_COMMAND}
+    -GXcode
+    -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE}
+    -DIOS_PLATFORM=SIMULATOR
+    -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+    "${DEPLOYMENT_TARGET}"
+    "${SIM_SOURCE_DIR}"
+)
+else()
+set (SIM_BINARY_LIB "")
+endif()
+
+file(MAKE_DIRECTORY ${SIM64_BINARY_DIR})
+execute_process(WORKING_DIRECTORY ${SIM64_BINARY_DIR}
+  COMMAND ${CMAKE_COMMAND}
+    -GXcode
+    -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE}
+    -DIOS_PLATFORM=SIMULATOR64
+    -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+    "${DEPLOYMENT_TARGET}"
+    "${SIM64_SOURCE_DIR}"
+)
+
+file(MAKE_DIRECTORY ${ARM_BINARY_DIR})
+execute_process(WORKING_DIRECTORY ${ARM_BINARY_DIR}
+  COMMAND ${CMAKE_COMMAND}
+    -GXcode
+    -DCMAKE_TOOLCHAIN_FILE=${TOOLCHAIN_FILE}
+    -DIOS_PLATFORM=${IOS_PLATFORM_VALUE}
+    -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+    "${DEPLOYMENT_TARGET}"
+    "${ENABLE_BITCODE_ARG}"    
+    "${ARM_SOURCE_DIR}"
+    )
+
+if (INCLUDE_32BIT)
+set (SIM_TARGET sim)
+## Simulator i386 version
+add_custom_target(sim
+  COMMAND ${CMAKE_COMMAND}
+    --build ${SIM_BINARY_DIR}
+    --config ${CMAKE_BUILD_TYPE}
+    COMMENT "Building for i386 (simulator)"
+VERBATIM
+)
+else()
+set (SIM_TARGET "")
+endif()
+
+## Simulator x86_64 version
+add_custom_target(sim64
+  COMMAND ${CMAKE_COMMAND}
+    --build ${SIM64_BINARY_DIR}
+    --config ${CMAKE_BUILD_TYPE}
+    COMMENT "Building for x86_64 (simulator)"
+VERBATIM
+)
+
+## ARM version
+add_custom_target(arm
+  COMMAND ${CMAKE_COMMAND}
+    --build ${ARM_BINARY_DIR}
+    --config ${CMAKE_BUILD_TYPE}
+  COMMENT "Building for arm"
+  VERBATIM
+)
+
+add_custom_command(
+  OUTPUT ${LIB_CPPREST_LIB_DIR}/${LIB_CPPREST}
+  COMMAND mkdir -p "${LIB_CPPREST_LIB_DIR}"
+  COMMAND lipo -create
+    -output "${LIB_CPPREST_LIB_DIR}/${LIB_CPPREST}"
+    ${SIM_BINARY_LIB}
+    ${SIM64_BINARY_DIR}/Binaries/${CMAKE_BUILD_TYPE}/${LIB_CPPREST}
+    ${ARM_BINARY_DIR}/Binaries/${CMAKE_BUILD_TYPE}/${LIB_CPPREST}
+  COMMAND cp -R "${CMAKE_CURRENT_SOURCE_DIR}/../Release/include" "${CMAKE_CURRENT_BINARY_DIR}"
+  DEPENDS
+    ${SIM_TARGET}
+    sim64
+    arm
+    ${SIM_BINARY_LIB}
+    "${SIM64_BINARY_DIR}/Binaries/${CMAKE_BUILD_TYPE}/${LIB_CPPREST}"
+    "${ARM_BINARY_DIR}/Binaries/${CMAKE_BUILD_TYPE}/${LIB_CPPREST}"
+  VERBATIM
+)
+
+add_custom_target(cpprest ALL DEPENDS "${LIB_CPPREST_LIB_DIR}/${LIB_CPPREST}")
+Please consult the documentation [here](https://github.com/Microsoft/cpprestsdk/wiki/How-to-build-for-iOS) for iOS compilation.
+set(CMAKE_LEGACY_CYGWIN_WIN32 0)
+cmake_minimum_required(VERSION 3.1)
+if(POLICY CMP0042)
+  cmake_policy(SET CMP0042 NEW) # use MACOSX_RPATH
+endif()
+if(UNIX)
+  project(cpprestsdk C CXX)
+else()
+  project(cpprestsdk CXX)
+endif()
+
+set(CPPREST_VERSION_MAJOR 2)
+set(CPPREST_VERSION_MINOR 10)
+set(CPPREST_VERSION_REVISION 14)
+
+enable_testing()
+
+set(WERROR ON CACHE BOOL "Treat Warnings as Errors.")
+set(CPPREST_EXCLUDE_WEBSOCKETS OFF CACHE BOOL "Exclude websockets functionality.")
+set(CPPREST_EXCLUDE_COMPRESSION OFF CACHE BOOL "Exclude compression functionality.")
+set(CPPREST_EXCLUDE_BROTLI ON CACHE BOOL "Exclude Brotli compression functionality.")
+set(CPPREST_EXPORT_DIR cpprestsdk CACHE STRING "Directory to install CMake config files.")
+set(CPPREST_INSTALL_HEADERS ON CACHE BOOL "Install header files.")
+set(CPPREST_INSTALL ON CACHE BOOL "Add install commands.")
+
+if(IOS OR ANDROID)
+  set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build shared libraries")
+else()
+  set(BUILD_SHARED_LIBS ON CACHE BOOL "Build shared libraries")
+endif()
+
+if(IOS OR ANDROID OR WINDOWS_STORE OR WINDOWS_PHONE)
+  set(BUILD_TESTS OFF CACHE BOOL "Build tests.")
+  set(BUILD_SAMPLES OFF CACHE BOOL "Build sample applications.")
+else()
+  set(BUILD_TESTS ON CACHE BOOL "Build tests.")
+  set(BUILD_SAMPLES ON CACHE BOOL "Build sample applications.")
+endif()
+
+if(WIN32)
+  set(CMAKE_DEBUG_POSTFIX "d" CACHE STRING "Default filename postfix for libraries under configuration DEBUG")
+else()
+  set(CMAKE_DEBUG_POSTFIX "" CACHE STRING "Default filename postfix for libraries under configuration DEBUG")
+endif()
+
+if(WIN32)
+  set(TOOLSET)
+  if(CMAKE_VS_PLATFORM_TOOLSET)
+    string(REGEX REPLACE "^v" "" TOOLSET "${CMAKE_VS_PLATFORM_TOOLSET}")
+  endif()
+  set(CPPREST_ABI_TAG "${TOOLSET}_${CPPREST_VERSION_MAJOR}_${CPPREST_VERSION_MINOR}" CACHE STRING "Postfix tag for the cpprest abi")
+else()
+  set(CPPREST_ABI_TAG "" CACHE STRING "Postfix tag for the cpprest abi")
+endif()
+
+if(ANDROID)
+  set(Boost_USE_STATIC_LIBS ON CACHE BOOL "Link against boost statically.")
+else()
+  set(Boost_USE_STATIC_LIBS OFF CACHE BOOL "Link against boost statically.")
+endif()
+
+include(cmake/cpprest_find_boost.cmake)
+include(cmake/cpprest_find_zlib.cmake)
+include(cmake/cpprest_find_winhttppal.cmake)
+include(cmake/cpprest_find_openssl.cmake)
+include(cmake/cpprest_find_websocketpp.cmake)
+include(cmake/cpprest_find_brotli.cmake)
+include(CheckIncludeFiles)
+include(GNUInstallDirs)
+
+find_package(Threads REQUIRED)
+if(THREADS_HAVE_PTHREAD_ARG)
+  add_compile_options(-pthread)
+endif()
+if(CMAKE_THREAD_LIBS_INIT)
+  link_libraries(${CMAKE_THREAD_LIBS_INIT})
+endif()
+
+# Internal component selection logic. This allows us to avoid duplicating platform logic in multiple places.
+if(CPPREST_EXCLUDE_WEBSOCKETS)
+  set(CPPREST_WEBSOCKETS_IMPL none CACHE STRING "Internal use.")
+endif()
+
+if(NOT WIN32)
+  CHECK_INCLUDE_FILES(xlocale.h HAVE_XLOCALE_H)
+endif()
+
+if(APPLE) # Note: also iOS
+  set(CPPREST_PPLX_IMPL apple CACHE STRING "Internal use.")
+  set(CPPREST_WEBSOCKETS_IMPL wspp CACHE STRING "Internal use.")
+  set(CPPREST_FILEIO_IMPL posix CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_CLIENT_IMPL asio CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_LISTENER_IMPL asio CACHE STRING "Internal use.")
+elseif(UNIX AND NOT APPLE) # Note: also android
+  set(CPPREST_PPLX_IMPL linux CACHE STRING "Internal use.")
+  set(CPPREST_WEBSOCKETS_IMPL wspp CACHE STRING "Internal use.")
+  set(CPPREST_FILEIO_IMPL posix CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_CLIENT_IMPL asio CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_LISTENER_IMPL asio CACHE STRING "Internal use.")
+elseif(WINDOWS_PHONE OR WINDOWS_STORE)
+  set(CPPREST_PPLX_IMPL winrt CACHE STRING "Internal use.")
+  set(CPPREST_WEBSOCKETS_IMPL winrt CACHE STRING "Internal use.")
+  set(CPPREST_FILEIO_IMPL winrt CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_CLIENT_IMPL winrt CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_LISTENER_IMPL none CACHE STRING "Internal use.")
+elseif(WIN32)
+  set(CPPREST_PPLX_IMPL win CACHE STRING "Internal use.")
+  set(CPPREST_WEBSOCKETS_IMPL wspp CACHE STRING "Internal use.")
+  set(CPPREST_FILEIO_IMPL win32 CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_CLIENT_IMPL winhttp CACHE STRING "Internal use.")
+  set(CPPREST_HTTP_LISTENER_IMPL httpsys CACHE STRING "Internal use.")
+else()
+  message(FATAL_ERROR "Unknown platform. Cannot determine appropriate feature implementations.")
+endif()
+
+set(WARNINGS)
+set(ANDROID_LIBS)
+
+# Platform (not compiler) specific settings
+if(ANDROID)
+  # These are used in the shared library case
+  set(ANDROID_LIBS atomic dl)
+elseif(UNIX) # This includes OSX
+elseif(WIN32)
+  add_definitions(-DUNICODE -D_UNICODE -DWIN32 -D_SCL_SECURE_NO_WARNINGS)
+  if(CMAKE_SYSTEM_NAME STREQUAL "WindowsStore")
+    add_definitions(-D_WIN32_WINNT=0x0A00)
+  else()
+    add_definitions(-D_WIN32_WINNT=0x0600)
+  endif()
+
+  if(NOT BUILD_SHARED_LIBS)
+    # This causes cmake to not link the test libraries separately, but instead hold onto their object files.
+    set(TEST_LIBRARY_TARGET_TYPE OBJECT)
+  endif()
+
+  add_definitions(-D_WINSOCK_DEPRECATED_NO_WARNINGS)
+else()
+  message(FATAL_ERROR "-- Unsupported Build Platform.")
+endif()
+
+# Compiler (not platform) specific settings
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR IOS)
+  message("-- Setting clang options")
+
+  if(ANDROID)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-pedantic -Wno-attributes -Wno-pointer-arith")
+  elseif(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    set(WARNINGS -Wall -Wextra -Wcast-qual -Wconversion -Wformat=2 -Winit-self -Winvalid-pch -Wmissing-format-attribute -Wmissing-include-dirs -Wpacked -Wredundant-decls)
+    set(LINUX_SUPPRESSIONS -Wno-overloaded-virtual -Wno-sign-conversion -Wno-deprecated -Wno-unknown-pragmas -Wno-reorder -Wno-char-subscripts -Wno-switch -Wno-unused-parameter -Wno-unused-variable -Wno-deprecated -Wno-unused-value -Wno-unknown-warning-option -Wno-return-type-c-linkage -Wno-unused-function -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-unused-local-typedefs)
+    set(WARNINGS ${WARNINGS} ${LINUX_SUPPRESSIONS})
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-return-type-c-linkage -Wno-unneeded-internal-declaration")
+  else()
+    set(WARNINGS -Wall -Wextra -Wcast-qual -Wconversion -Wformat=2 -Winit-self -Winvalid-pch -Wmissing-format-attribute -Wmissing-include-dirs -Wpacked -Wredundant-decls)
+    set(OSX_SUPPRESSIONS -Wno-overloaded-virtual -Wno-sign-conversion -Wno-deprecated -Wno-unknown-pragmas -Wno-reorder -Wno-char-subscripts -Wno-switch -Wno-unused-parameter -Wno-unused-variable -Wno-deprecated -Wno-unused-value -Wno-unknown-warning-option -Wno-return-type-c-linkage -Wno-unused-function -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-unused-local-typedefs)
+    set(WARNINGS ${WARNINGS} ${OSX_SUPPRESSIONS})
+
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -Wno-return-type-c-linkage -Wno-unneeded-internal-declaration")
+    set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
+    set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD "c++11")
+  endif()
+
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-strict-aliasing")
+
+elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+  message("-- Setting gcc options")
+
+  set(WARNINGS -Wall -Wextra -Wunused-parameter -Wcast-align -Wcast-qual -Wconversion -Wformat=2 -Winit-self -Winvalid-pch -Wmissing-format-attribute -Wmissing-include-dirs -Wpacked -Wredundant-decls -Wunreachable-code)
+  set(LD_FLAGS "${LD_FLAGS} -Wl,-z,defs")
+
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-strict-aliasing")
+  if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.8)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive -D_GLIBCXX_USE_SCHED_YIELD -D_GLIBCXX_USE_NANOSLEEP")
+  endif()
+
+elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
+  message("-- Setting msvc options")
+  set(WARNINGS)
+  set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} /ignore:4264")
+  add_compile_options(/bigobj)
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MP")
+  set(CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL} /MP")
+  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MP")
+  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} /MP")
+
+  set(CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL "${CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL} /profile /OPT:REF /OPT:ICF")
+  set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} /profile /OPT:REF /OPT:ICF")
+
+  if (WINDOWS_STORE OR WINDOWS_PHONE)
+    add_compile_options(/ZW)
+  else()
+    if (NOT (MSVC_VERSION LESS 1920))
+      add_compile_options(/permissive-)
+    endif()
+  endif()
+else()
+  message("-- Unknown compiler, success is doubtful.")
+  message("CMAKE_CXX_COMPILER_ID=${CMAKE_CXX_COMPILER_ID}")
+endif()
+
+# Reconfigure final output directory
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/Binaries)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/Binaries)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/Binaries)
+
+function(configure_pch target precompile_header precomile_source) # optional additional compile arguments
+  if(MSVC)
+    get_target_property(_srcs ${target} SOURCES)
+
+    set(pch_output_filepath_arg)
+    if(NOT CMAKE_GENERATOR MATCHES "Visual Studio .*")
+      set_property(SOURCE ${precomile_source} APPEND PROPERTY OBJECT_OUTPUTS "${CMAKE_CURRENT_BINARY_DIR}/${target}.pch")
+      set_property(SOURCE ${_srcs} APPEND PROPERTY OBJECT_DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/${target}.pch")
+      set(pch_output_filepath_arg "/Fp${CMAKE_CURRENT_BINARY_DIR}/${target}.pch")
+    else()
+      # Don't specify output file so that VS may choose a config spefic location.
+	  # Otherwise Debug/Release builds will interfere with one another.
+    endif()
+
+    set_source_files_properties(${precomile_source} PROPERTIES COMPILE_FLAGS "/Yc${precompile_header}")
+    target_sources(${target} PRIVATE ${precomile_source})
+	# Note: as ${precomile_source} is also a SOURCE for ${target}, the below options will also be applied.
+	# ${precomile_source} has /Yc option that will cause the shared /Yu to be ignored.
+    target_compile_options(${target} PRIVATE /Yu${precompile_header} ${pch_output_filepath_arg} ${ARGN})
+  endif()
+endfunction()
+
+# These settings can be used by the test targets
+set(Casablanca_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set(Casablanca_LIBRARY cpprest)
+set(Casablanca_LIBRARIES cpprest)
+get_directory_property(PARENT_DIR PARENT_DIRECTORY)
+if(NOT PARENT_DIR STREQUAL "")
+  set(Casablanca_LIBRARIES ${Casablanca_LIBRARIES} PARENT_SCOPE)
+endif()
+
+# Finally, the tests all use the same style declaration to build themselves, so we use a function
+function(add_casablanca_test NAME SOURCES_VAR)
+  add_library(${NAME} ${TEST_LIBRARY_TARGET_TYPE} ${${SOURCES_VAR}})
+  message("-- Added test library ${NAME}")
+  if(TEST_LIBRARY_TARGET_TYPE STREQUAL "OBJECT")
+    foreach(_dep cpprest common_utilities unittestpp)
+      target_include_directories(${NAME} PRIVATE $<TARGET_PROPERTY:${_dep},INTERFACE_INCLUDE_DIRECTORIES>)
+      target_compile_definitions(${NAME} PRIVATE $<TARGET_PROPERTY:${_dep},INTERFACE_COMPILE_DEFINITIONS>)
+    endforeach()
+  else()
+    target_link_libraries(${NAME} PRIVATE
+      cpprest
+      common_utilities
+      unittestpp
+      ${ANDROID_LIBS}
+    )
+    if (BUILD_SHARED_LIBS)
+      add_test(NAME ${NAME}
+        WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+        COMMAND test_runner $<TARGET_FILE_NAME:${NAME}>
+      )
+    endif()
+  endif()
+endfunction()
+
+add_subdirectory(src)
+
+if(BUILD_TESTS)
+  add_subdirectory(tests)
+endif()
+
+if(BUILD_SAMPLES)
+  add_subdirectory(samples)
+endif()
+add_subdirectory(SearchFile)
+add_subdirectory(BingRequest)
+add_subdirectory(BlackJack)
+add_subdirectory(Oauth1Client)
+add_subdirectory(Oauth2Client)
+
+add_custom_target(samples
+  DEPENDS SearchFile BingRequest blackjackclient blackjackserver oauth1client oauth2client
+  )if (NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  add_executable(BingRequest bingrequest.cpp)
+  target_link_libraries(BingRequest cpprest)
+endif()if (NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  add_subdirectory(BlackJack_Server)
+  add_subdirectory(BlackJack_Client)
+else()
+  # TODO: add BlackJack_UIClient
+endif()
+if (UNIX)
+  add_definitions(-Wno-switch)
+endif()
+
+add_executable(blackjackclient
+  BlackJackClient.cpp
+  )
+
+target_link_libraries(blackjackclient cpprest)
+if (UNIX)
+  add_definitions(-Wno-sign-compare -Wno-enum-compare)
+endif()
+
+add_executable(blackjackserver
+  BlackJack_Server.cpp
+  Dealer.cpp
+  Table.cpp
+  )
+
+target_link_libraries(blackjackserver cpprest)
+
+configure_pch(blackjackserver stdafx.h stdafx.cpp /Zm120)
+========================================================================
+    CasaLens Project Overview
+========================================================================
+
+CasaLens is a data mash-up sample i.e use the Casablanca features to build a service that can collate data from different services and provide them to the user. 
+Given the postal code/city name, the service overlays events, movies, weather, pictures around the place.
+
+To run the sample, obtain the api keys from the different services (listed below) and update them in casalens.cpp (see Services section below for more details).
+The sample takes one parameter: the port to listen for requests.
+
+Services:
+Here are the details about the services the sample is interacting with, how to obtain the api keys for using these services and how to pass it to the sample. 
+1. Bing image search: http://datamarket.azure.com/dataset/bing/search
+   Sign UP at the above link to obtain the api key.
+   In casalens.cpp, set the value of bmaps_key variable to this key.
+   Query this service for pictures of a place and return it to the client.
+   This service is also used to collect movie posters.
+
+2. OpenWeatherMap:http://openweathermap.org/ 
+   Fetch weather data: current temperature, pressure at the location.
+
+3. Eventful: http://http://api.eventful.com/
+   Follow the "Get Started" steps -> "Register a new account" at the eventful website to obtain the application key.
+   In casalens.cpp, set the value of events_key variable to this key.
+   Fetch different events happening at the specified location.
+
+4. OnConnect tmsapi: http://developer.tmsapi.com/
+   Register at the above website and obtain a new key for the TMS API package.
+   In casalens.cpp, set the value of movies_key variable to this key.
+   Get currently playing movies in local theaters along with the show times.
+   
+5. Google maps: https://developers.google.com/maps
+   This does not require a key.
+   Given a postal code, use google maps API to get the location (city name) corresponding to that code.
+
+6. Bing maps: http://dev.virtualearth.net/
+   The key populated in step 1 should work for both bing maps and search.
+   Given a location (city name), use bing maps API to get the postal code.
+
+Files:
+1. casalens.cpp: 
+   Main file that contains code to initialize and start the http_listener.
+   We add two GET and POST handlers handle_get and handle_post and open the listener to listen for requests.
+
+2. datafetcher.cpp:
+   This file contains logic to collect data from different services, create JSON objects with the data and return it to the client.
+
+This sample is merely a demonstration of how one can use Casablanca to author data mash-ups. 
+If you plan to use/deploy the sample, do not forget to read and follow the "Terms and Conditions" for each service and ensure that you are adhering to all the requirements.
+if (NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  add_executable(oauth1client
+    Oauth1Client.cpp
+    )
+
+  target_link_libraries(oauth1client cpprest)
+endif()
+if (NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  add_executable(oauth2client
+    Oauth2Client.cpp
+    )
+
+  target_link_libraries(oauth2client cpprest)
+endif()
+if (NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  add_executable(SearchFile searchfile.cpp)
+  target_link_libraries(SearchFile cpprest)
+endif()
+cmake_policy(SET CMP0022 NEW)
+
+file(GLOB HEADERS_CPPREST "../include/cpprest/*.h" "../include/cpprest/*.hpp" "../include/cpprest/*.dat")
+file(GLOB HEADERS_PPLX "../include/pplx/*.h" "../include/pplx/*.hpp")
+file(GLOB HEADERS_DETAILS "../include/cpprest/details/*.h" "../include/cpprest/details/*.hpp" "../include/cpprest/details/*.dat" "../include/pplx/*.hpp" "../include/pplx/*.dat")
+source_group("Header Files\\cpprest" FILES ${HEADERS_CPPREST})
+source_group("Header Files\\pplx" FILES ${HEADERS_PPLX})
+source_group("Header Files\\cpprest\\details" FILES ${HEADERS_DETAILS})
+
+file(GLOB HEADER_PPLX_THREADPOOL "../include/pplx/threadpool.h")
+list(REMOVE_ITEM HEADERS_PPLX ${HEADER_PPLX_THREADPOOL})
+
+set(SOURCES
+  ${HEADERS_CPPREST}
+  ${HEADERS_PPLX}
+  ${HEADERS_DETAILS}
+  pch/stdafx.h
+  http/client/http_client.cpp
+  http/client/http_client_impl.h
+  http/client/http_client_msg.cpp
+  http/common/connection_pool_helpers.h
+  http/common/http_compression.cpp
+  http/common/http_helpers.cpp
+  http/common/http_msg.cpp
+  http/common/internal_http_helpers.h
+  http/listener/http_listener.cpp
+  http/listener/http_listener_msg.cpp
+  http/listener/http_server_api.cpp
+  http/listener/http_server_impl.h
+  http/oauth/oauth1.cpp
+  http/oauth/oauth2.cpp
+  json/json.cpp
+  json/json_parsing.cpp
+  json/json_serialization.cpp
+  uri/uri.cpp
+  uri/uri_builder.cpp
+  utilities/asyncrt_utils.cpp
+  utilities/base64.cpp
+  utilities/web_utilities.cpp
+)
+
+add_library(cpprest ${SOURCES})
+target_include_directories(cpprest
+  PUBLIC
+    $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+  PRIVATE
+    pch
+)
+
+## Sub-components
+# Websockets component
+if(CPPREST_WEBSOCKETS_IMPL STREQUAL "none")
+  target_compile_definitions(cpprest PUBLIC -DCPPREST_EXCLUDE_WEBSOCKETS=1)
+elseif(CPPREST_WEBSOCKETS_IMPL STREQUAL "winrt")
+  target_sources(cpprest PRIVATE
+    websockets/client/ws_msg.cpp
+    websockets/client/ws_client.cpp
+    websockets/client/ws_client_impl.h
+    websockets/client/ws_client_winrt.cpp
+  )
+elseif(CPPREST_WEBSOCKETS_IMPL STREQUAL "wspp")
+  target_sources(cpprest PRIVATE
+    websockets/client/ws_msg.cpp
+    websockets/client/ws_client.cpp
+    websockets/client/ws_client_impl.h
+    websockets/client/ws_client_wspp.cpp
+  )
+  cpprest_find_websocketpp()
+  target_link_libraries(cpprest PRIVATE cpprestsdk_websocketpp_internal)
+  cpprest_find_boost()
+  cpprest_find_openssl()
+  target_link_libraries(cpprest PUBLIC cpprestsdk_boost_internal cpprestsdk_openssl_internal)
+else()
+  message(FATAL_ERROR "Invalid implementation")
+endif()
+
+# Compression component
+if(CPPREST_EXCLUDE_COMPRESSION)
+  if(NOT CPPREST_EXCLUDE_BROTLI)
+    message(FATAL_ERROR "Use of Brotli requires compression to be enabled")
+  endif()
+  target_compile_definitions(cpprest PRIVATE -DCPPREST_EXCLUDE_COMPRESSION=1)
+else()
+  cpprest_find_zlib()
+  target_link_libraries(cpprest PRIVATE cpprestsdk_zlib_internal)
+  if(CPPREST_EXCLUDE_BROTLI)
+    target_compile_definitions(cpprest PRIVATE -DCPPREST_EXCLUDE_BROTLI=1)
+  else()
+    cpprest_find_brotli()
+  endif()
+endif()
+
+# PPLX component
+if(CPPREST_PPLX_IMPL STREQUAL "apple")
+  find_library(COREFOUNDATION CoreFoundation "/")
+  find_library(SECURITY Security "/")
+  target_link_libraries(cpprest PUBLIC ${COREFOUNDATION} ${SECURITY})
+  target_sources(cpprest PRIVATE pplx/pplxapple.cpp pplx/pplx.cpp pplx/threadpool.cpp ../include/pplx/threadpool.h)
+  if(CPPREST_INSTALL_HEADERS)
+    install(FILES ../include/pplx/threadpool.h DESTINATION include/pplx)
+  endif()
+elseif(CPPREST_PPLX_IMPL STREQUAL "linux")
+  target_sources(cpprest PRIVATE pplx/pplxlinux.cpp pplx/pplx.cpp pplx/threadpool.cpp ../include/pplx/threadpool.h)
+  if(CPPREST_INSTALL_HEADERS)
+    install(FILES ../include/pplx/threadpool.h DESTINATION include/pplx)
+  endif()
+elseif(CPPREST_PPLX_IMPL STREQUAL "win")
+  target_sources(cpprest PRIVATE pplx/pplxwin.cpp)
+  if(CPPREST_WEBSOCKETS_IMPL STREQUAL "wspp")
+    target_sources(cpprest PRIVATE pplx/threadpool.cpp ../include/pplx/threadpool.h)
+    if(CPPREST_INSTALL_HEADERS)
+      install(FILES ../include/pplx/threadpool.h DESTINATION include/pplx)
+    endif()
+  endif()
+elseif(CPPREST_PPLX_IMPL STREQUAL "winpplx")
+  target_compile_definitions(cpprest PUBLIC -DCPPREST_FORCE_PPLX=1)
+  target_sources(cpprest PRIVATE pplx/pplxwin.cpp pplx/pplx.cpp pplx/threadpool.cpp ../include/pplx/threadpool.h)
+  if(CPPREST_INSTALL_HEADERS)
+    install(FILES ../include/pplx/threadpool.h DESTINATION include/pplx)
+  endif()
+elseif(CPPREST_PPLX_IMPL STREQUAL "winrt")
+  target_sources(cpprest PRIVATE pplx/pplxwin.cpp)
+else()
+  message(FATAL_ERROR "Invalid implementation")
+endif()
+
+# Http client component
+if(CPPREST_HTTP_CLIENT_IMPL STREQUAL "asio")
+  cpprest_find_boost()
+  cpprest_find_openssl()
+  target_compile_definitions(cpprest PUBLIC -DCPPREST_FORCE_HTTP_CLIENT_ASIO)
+  target_sources(cpprest PRIVATE http/client/http_client_asio.cpp http/client/x509_cert_utilities.cpp)
+  target_link_libraries(cpprest PUBLIC cpprestsdk_boost_internal cpprestsdk_openssl_internal)
+elseif(CPPREST_HTTP_CLIENT_IMPL STREQUAL "winhttppal")
+  cpprest_find_boost()
+  cpprest_find_openssl()
+  cpprest_find_winhttppal()
+  target_compile_definitions(cpprest PUBLIC -DCPPREST_FORCE_HTTP_CLIENT_WINHTTPPAL)
+  target_sources(cpprest PRIVATE http/client/http_client_winhttp.cpp http/client/x509_cert_utilities.cpp)
+  target_link_libraries(cpprest PUBLIC cpprestsdk_boost_internal cpprestsdk_openssl_internal cpprestsdk_winhttppal_internal)
+elseif(CPPREST_HTTP_CLIENT_IMPL STREQUAL "winhttp")
+  target_link_libraries(cpprest PRIVATE
+    Winhttp.lib
+  )
+  target_sources(cpprest PRIVATE http/client/http_client_winhttp.cpp)
+  if(CPPREST_WEBSOCKETS_IMPL STREQUAL "wspp")
+    target_sources(cpprest PRIVATE http/client/x509_cert_utilities.cpp)
+  endif()
+elseif(CPPREST_HTTP_CLIENT_IMPL STREQUAL "winrt")
+  target_sources(cpprest PRIVATE http/client/http_client_winrt.cpp)
+else()
+  message(FATAL_ERROR "Invalid implementation")
+endif()
+
+# fileio streams component
+if(CPPREST_FILEIO_IMPL STREQUAL "win32")
+  target_sources(cpprest PRIVATE streams/fileio_win32.cpp)
+elseif(CPPREST_FILEIO_IMPL STREQUAL "winrt")
+  target_sources(cpprest PRIVATE streams/fileio_winrt.cpp)
+elseif(CPPREST_FILEIO_IMPL STREQUAL "posix")
+  target_sources(cpprest PRIVATE streams/fileio_posix.cpp)
+else()
+  message(FATAL_ERROR "Invalid implementation")
+endif()
+
+# http listener component
+if(CPPREST_HTTP_LISTENER_IMPL STREQUAL "asio")
+  cpprest_find_boost()
+  cpprest_find_openssl()
+  target_compile_definitions(cpprest PUBLIC -DCPPREST_FORCE_HTTP_LISTENER_ASIO)
+  target_sources(cpprest PRIVATE http/listener/http_server_asio.cpp)
+  target_link_libraries(cpprest PUBLIC cpprestsdk_boost_internal cpprestsdk_openssl_internal)
+elseif(CPPREST_HTTP_LISTENER_IMPL STREQUAL "httpsys")
+  target_sources(cpprest PRIVATE
+    http/listener/http_server_httpsys.cpp
+    http/listener/http_server_httpsys.h
+  )
+  target_link_libraries(cpprest PRIVATE
+    httpapi.lib
+  )
+elseif(CPPREST_HTTP_LISTENER_IMPL STREQUAL "none")
+else()
+  message(FATAL_ERROR "Invalid implementation")
+endif()
+
+configure_pch(cpprest stdafx.h pch/stdafx.cpp /Zm120)
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+  if(WERROR)
+    target_compile_options(cpprest PRIVATE -Werror)
+  endif()
+  target_compile_options(cpprest PRIVATE -pedantic ${WARNINGS})
+elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
+  if(WERROR)
+    target_compile_options(cpprest PRIVATE /WX ${WARNINGS})
+  endif()
+else()
+  message(FATAL_ERROR "Unknown compiler")
+endif()
+
+if(WIN32)
+  if (BUILD_SHARED_LIBS)
+    target_compile_definitions(cpprest PRIVATE -D_ASYNCRT_EXPORT -D_PPLX_EXPORT -D_USRDLL)
+  else()
+    target_compile_definitions(cpprest PUBLIC -D_NO_ASYNCRTIMP -D_NO_PPLXIMP)
+  endif()
+elseif(ANDROID)
+  target_link_libraries(cpprest PRIVATE ${ANDROID_STL_FLAGS})
+endif()
+
+if (WIN32 AND NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  target_link_libraries(cpprest PRIVATE
+    bcrypt.lib
+    crypt32.lib
+  )
+elseif(WINDOWS_STORE)
+  if(NOT CMAKE_GENERATOR MATCHES "Visual Studio .*")
+    target_compile_definitions(cpprest PRIVATE -DWINAPI_FAMILY=WINAPI_FAMILY_PC_APP)
+    get_target_property(LINK_FLAGS cpprest LINK_FLAGS)
+    if(NOT LINK_FLAGS)
+        set(LINK_FLAGS "")
+    endif()
+    set(LINK_FLAGS "${LINK_FLAGS} /APPCONTAINER")
+    set_target_properties(cpprest PROPERTIES LINK_FLAGS "${LINK_FLAGS}")
+  endif()
+endif()
+
+set_target_properties(cpprest PROPERTIES OUTPUT_NAME "cpprest${CPPREST_ABI_TAG}")
+if(WIN32)
+elseif(ANDROID)
+  # Do not use SOVERSION on android. It is completely unsupported (and causes problems).
+  # Perhaps revisit in the future? (NDK r9d, 8/7/14)
+else()
+  set_target_properties(cpprest PROPERTIES
+    SOVERSION ${CPPREST_VERSION_MAJOR}.${CPPREST_VERSION_MINOR})
+endif()
+
+if(CPPREST_INSTALL_HEADERS)
+  install(FILES ${HEADERS_CPPREST} DESTINATION include/cpprest)
+  install(FILES ${HEADERS_PPLX} DESTINATION include/pplx)
+  install(FILES ${HEADERS_DETAILS} DESTINATION include/cpprest/details)
+endif()
+
+if(CPPREST_INSTALL)
+  set(CPPREST_USES_BOOST OFF)
+  set(CPPREST_USES_ZLIB OFF)
+  set(CPPREST_USES_BROTLI OFF)
+  set(CPPREST_USES_OPENSSL OFF)
+  set(CPPREST_USES_WINHTTPPAL OFF)
+
+  set(CPPREST_TARGETS cpprest)
+  if(TARGET cpprestsdk_boost_internal)
+    list(APPEND CPPREST_TARGETS cpprestsdk_boost_internal)
+    set(CPPREST_USES_BOOST ON)
+  endif()
+  if(TARGET cpprestsdk_zlib_internal)
+    list(APPEND CPPREST_TARGETS cpprestsdk_zlib_internal)
+    set(CPPREST_USES_ZLIB ON)
+  endif()
+  if(TARGET cpprestsdk_brotli_internal)
+    list(APPEND CPPREST_TARGETS cpprestsdk_brotli_internal)
+    set(CPPREST_USES_BROTLI ON)
+  endif()
+  if(TARGET cpprestsdk_openssl_internal)
+    list(APPEND CPPREST_TARGETS cpprestsdk_openssl_internal)
+    set(CPPREST_USES_OPENSSL ON)
+  endif()
+  if(TARGET cpprestsdk_winhttppal_internal)
+    list(APPEND CPPREST_TARGETS cpprestsdk_winhttppal_internal)
+    set(CPPREST_USES_WINHTTPPAL ON)
+  endif()
+  if(TARGET cpprestsdk_websocketpp_internal)
+    list(APPEND CPPREST_TARGETS cpprestsdk_websocketpp_internal)
+  endif()
+  install(
+    TARGETS ${CPPREST_TARGETS}
+    EXPORT cpprestsdk-targets
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  )
+
+  configure_file(../cmake/cpprestsdk-config.in.cmake "${CMAKE_CURRENT_BINARY_DIR}/cpprestsdk-config.cmake" @ONLY)
+
+  install(
+    FILES "${CMAKE_CURRENT_BINARY_DIR}/cpprestsdk-config.cmake"
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CPPREST_EXPORT_DIR}
+  )
+  install(
+    EXPORT cpprestsdk-targets
+    FILE cpprestsdk-targets.cmake
+    NAMESPACE cpprestsdk::
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CPPREST_EXPORT_DIR}
+  )
+endif()
+set(UnitTestpp_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/common/UnitTestpp)
+set(Utilities_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/common/utilities/include)
+
+include_directories (${UnitTestpp_INCLUDE_DIR} ${Utilities_INCLUDE_DIR})
+
+add_subdirectory(common)
+add_subdirectory(functional)
+add_subdirectory(utilities)
+add_subdirectory(UnitTestpp)
+add_subdirectory(TestRunner)
+if (WIN32)
+  if (WINDOWS_STORE OR WINDOWS_PHONE)
+    add_definitions(-DWINRT_TEST_RUNNER -D_CONSOLE)
+  else()
+    add_definitions(-DDESKTOP_TEST_RUNNER)
+  endif()
+endif()
+
+add_executable(test_runner test_runner.cpp test_module_loader.cpp)
+target_link_libraries(test_runner PRIVATE unittestpp ${CMAKE_DL_LIBS})
+
+if(BUILD_SHARED_LIBS AND NOT TEST_LIBRARY_TARGET_TYPE STREQUAL "OBJECT")
+elseif(APPLE)
+  target_link_libraries(test_runner PRIVATE
+    -Wl,-force_load httpclient_test
+    -Wl,-force_load json_test
+    -Wl,-force_load uri_test
+    -Wl,-force_load pplx_test
+    -Wl,-force_load httplistener_test
+    -Wl,-force_load streams_test
+    -Wl,-force_load utils_test
+    )
+elseif(UNIX)
+  target_link_libraries(test_runner PRIVATE
+    -Wl,--whole-archive
+    httpclient_test
+    json_test
+    uri_test
+    pplx_test
+    httplistener_test
+    streams_test
+    utils_test
+    -Wl,--no-whole-archive
+    )
+else()
+  # In order to achieve --whole-archive on windows, we link all the test files into the test_runner directly
+  # This means that the tests themselves must be created as "OBJECT" libraries
+  target_sources(test_runner PRIVATE
+    $<TARGET_OBJECTS:httpclient_test>
+    $<TARGET_OBJECTS:json_test>
+    $<TARGET_OBJECTS:uri_test>
+    $<TARGET_OBJECTS:pplx_test>
+    $<TARGET_OBJECTS:streams_test>
+    $<TARGET_OBJECTS:utils_test>
+  )
+  if(NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+    target_sources(test_runner PRIVATE $<TARGET_OBJECTS:httplistener_test>)
+  endif()
+  target_link_libraries(test_runner PRIVATE
+    common_utilities
+    httptest_utilities
+    cpprest
+  )
+  if(TARGET websockettest_utilities)
+      target_link_libraries(test_runner PRIVATE websockettest_utilities)
+  endif()
+  if(CPPREST_WEBSOCKETS_IMPL STREQUAL "wspp")
+    cpprest_find_websocketpp()
+    target_link_libraries(test_runner PRIVATE cpprestsdk_websocketpp_internal)
+  endif()
+  if (WINDOWS_STORE)
+    target_link_libraries(test_runner PRIVATE ucrtd.lib vcruntimed.lib vccorlibd.lib msvcrtd.lib msvcprtd.lib concrtd.lib RuntimeObject.lib)
+  endif()
+endif()
+set(UT_SOURCES
+  src/AssertException.cpp
+  src/CompositeTestReporter.cpp
+  src/CurrentTest.cpp
+  src/DeferredTestReporter.cpp
+  src/DeferredTestResult.cpp
+  src/GlobalSettings.cpp
+  src/MemoryOutStream.cpp
+  src/ReportAssert.cpp
+  src/Test.cpp
+  src/TestDetails.cpp
+  src/TestList.cpp
+  src/TestReporter.cpp
+  src/TestReporterStdout.cpp
+  src/TestResults.cpp
+  src/TestRunner.cpp
+  src/XmlTestReporter.cpp
+  )
+
+set(TEST_SOURCES
+  src/tests/TestAssertHandler.cpp
+  src/tests/TestCheckMacros.cpp
+  src/tests/TestChecks.cpp
+  src/tests/TestCompositeTestReporter.cpp
+  src/tests/TestCurrentTest.cpp
+  src/tests/TestDeferredTestReporter.cpp
+  src/tests/TestMemoryOutStream.cpp
+  src/tests/TestTest.cpp
+  src/tests/TestTestList.cpp
+  src/tests/TestTestMacros.cpp
+  src/tests/TestTestResults.cpp
+  src/tests/TestTestRunner.cpp
+  src/tests/TestTestSuite.cpp
+  src/tests/TestUnitTestPP.cpp
+  src/tests/TestXmlTestReporter.cpp
+  )
+
+if(UNIX)
+  list(APPEND UT_SOURCES
+    src/Posix/SignalTranslator.cpp
+    src/Posix/TimeHelpers.cpp
+    )
+elseif(WIN32)
+  list(APPEND UT_SOURCES src/Win32/TimeHelpers.cpp)
+
+  add_definitions(-DWIN32 -D_USRDLL -D_CRT_SECURE_NO_DEPRECATE -DUNITTEST_DLL_EXPORT)
+endif()
+
+add_library(unittestpp ${UT_SOURCES})
+target_link_libraries(unittestpp PUBLIC cpprest)
+
+if(UNIX)
+  cpprest_find_boost()
+  target_link_libraries(unittestpp PUBLIC cpprestsdk_boost_internal)
+endif()
+target_link_libraries(unittestpp ${ANDROID_STL_FLAGS})
+
+target_include_directories(unittestpp PRIVATE src)
+target_include_directories(unittestpp PUBLIC .)
+----------------- ThirdPartyNotices----------------------------------------------
+
+This file is based on or incorporates material from the UnitTest++ r30 open source project.Microsoft is not the original author of this code but has modified it and is licensing the code under the MIT License. Microsoft reserves all other rights not expressly granted under the MIT License, whether by implication, estoppel or otherwise. 
+
+UnitTest++ r30 
+
+Copyright (c) 2006 Noel Llopis and Charles Nicholson
+Portions Copyright (c) Microsoft Corporation
+
+All Rights Reserved.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-------------End of ThirdPartyNotices---------------------------------------
+include_directories(include)
+
+if(WIN32)
+  add_definitions(-DCOMMONUTILITIES_EXPORTS)
+endif()
+
+add_library(common_utilities
+  os_utilities.cpp
+  )
+
+if(NOT BUILD_SHARED_LIBS)
+  target_compile_definitions(common_utilities INTERFACE -DTEST_UTILITY_API=)
+endif()
+
+target_link_libraries(common_utilities
+  cpprest
+  unittestpp
+)
+add_subdirectory(http)
+add_subdirectory(json)
+add_subdirectory(pplx)
+add_subdirectory(streams)
+add_subdirectory(uri)
+add_subdirectory(utils)
+add_subdirectory(websockets)add_subdirectory(utilities)
+add_subdirectory(client)
+add_subdirectory(listener)
+set(SOURCES
+  authentication_tests.cpp
+  building_request_tests.cpp
+  client_construction.cpp
+  compression_tests.cpp
+  connection_pool_tests.cpp
+  connections_and_errors.cpp
+  header_tests.cpp
+  http_client_fuzz_tests.cpp
+  http_client_tests.cpp
+  http_methods_tests.cpp
+  multiple_requests.cpp
+  oauth1_tests.cpp
+  oauth2_tests.cpp
+  outside_tests.cpp
+  pipeline_stage_tests.cpp
+  progress_handler_tests.cpp
+  proxy_tests.cpp
+  request_helper_tests.cpp
+  request_stream_tests.cpp
+  request_uri_tests.cpp
+  response_extract_tests.cpp
+  response_stream_tests.cpp
+  status_code_reason_phrase_tests.cpp
+  to_string_tests.cpp
+)
+
+add_casablanca_test(httpclient_test SOURCES)
+if(TEST_LIBRARY_TARGET_TYPE STREQUAL "OBJECT")
+  target_include_directories(httpclient_test PRIVATE ../utilities/include)
+else()
+  target_link_libraries(httpclient_test PRIVATE httptest_utilities)
+endif()
+
+configure_pch(httpclient_test stdafx.h stdafx.cpp)
+
+if(NOT WIN32)
+  cpprest_find_boost()
+  target_link_libraries(httpclient_test PRIVATE cpprestsdk_boost_internal)
+endif()
+if(NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  set (SOURCES
+    building_response_tests.cpp
+    connections_and_errors.cpp
+    header_tests.cpp
+    listener_construction_tests.cpp
+    reply_helper_tests.cpp
+    request_extract_tests.cpp
+    request_handler_tests.cpp
+    request_relative_uri_tests.cpp
+    request_stream_tests.cpp
+    requests_tests.cpp
+    response_stream_tests.cpp
+    status_code_reason_phrase_tests.cpp
+    to_string_tests.cpp
+  )
+
+  add_casablanca_test(httplistener_test SOURCES)
+  if(TEST_LIBRARY_TARGET_TYPE STREQUAL "OBJECT")
+    target_include_directories(httplistener_test PRIVATE ../utilities/include)
+  else()
+    target_link_libraries(httplistener_test PRIVATE httptest_utilities)
+  endif()
+
+  configure_pch(httplistener_test stdafx.h stdafx.cpp)
+endif()
+set(SOURCES
+  http_asserts.cpp
+  test_http_client.cpp
+  test_http_server.cpp
+  test_server_utilities.cpp
+)
+
+add_library(httptest_utilities ${SOURCES})
+if(WIN32)
+  target_compile_definitions(httptest_utilities PRIVATE -DHTTPTESTUTILITY_EXPORTS)
+endif()
+target_include_directories(httptest_utilities PUBLIC include)
+target_link_libraries(httptest_utilities PUBLIC
+  cpprest
+  unittestpp
+  common_utilities
+)
+if(WINDOWS_STORE)
+  target_compile_options(httptest_utilities PRIVATE /DWINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP)
+endif()
+set(SOURCES
+  construction_tests.cpp
+  negative_parsing_tests.cpp
+  parsing_tests.cpp
+  to_as_and_operators_tests.cpp
+  iterator_tests.cpp
+  json_numbers_tests.cpp
+)
+if(NOT WINDOWS_STORE AND NOT WINDOWS_PHONE)
+  list(APPEND SOURCES fuzz_tests.cpp)
+endif()
+
+add_casablanca_test(json_test SOURCES)
+if(UNIX AND NOT APPLE)
+  cpprest_find_boost()
+  target_link_libraries(json_test PRIVATE cpprestsdk_boost_internal)
+endif()
+
+configure_pch(json_test stdafx.h stdafx.cpp)
+add_subdirectory(pplx_test)
+set(SOURCES
+  pplx_op_test.cpp
+  pplx_task_options.cpp
+  pplxtask_tests.cpp
+)
+
+add_casablanca_test(pplx_test SOURCES)
+
+configure_pch(pplx_test stdafx.h stdafx.cpp)
+set(SOURCES
+  fstreambuf_tests.cpp
+  istream_tests.cpp
+  memstream_tests.cpp
+  ostream_tests.cpp
+  stdstream_tests.cpp
+)
+if(WINDOWS_STORE OR WINDOWS_PHONE)
+  list(APPEND SOURCES winrt_interop_tests.cpp)
+else()
+  list(APPEND SOURCES fuzz_tests.cpp)
+  if(WIN32)
+    list(APPEND SOURCES CppSparseFile.cpp)
+  endif()
+endif()
+
+add_casablanca_test(streams_test SOURCES)
+if(NOT WIN32 OR CPPREST_WEBSOCKETS_IMPL STREQUAL "wspp")
+  cpprest_find_boost()
+  if(NOT TEST_LIBRARY_TARGET_TYPE STREQUAL "OBJECT")
+    target_link_libraries(streams_test PRIVATE cpprestsdk_boost_internal)
+  else()
+    target_include_directories(streams_test PRIVATE $<TARGET_PROPERTY:cpprestsdk_boost_internal,INTERFACE_INCLUDE_DIRECTORIES>)
+  endif()
+endif()
+
+configure_pch(streams_test stdafx.h stdafx.cpp)
+set(SOURCES
+  accessor_tests.cpp
+  combining_tests.cpp
+  constructor_tests.cpp
+  conversions_tests.cpp
+  diagnostic_tests.cpp
+  encoding_tests.cpp
+  operator_tests.cpp
+  splitting_tests.cpp
+  uri_builder_tests.cpp
+  resolve_uri_tests.cpp
+)
+
+add_casablanca_test(uri_test SOURCES)
+
+configure_pch(uri_test stdafx.h stdafx.cpp)
+set(SOURCES
+  datetime.cpp
+  base64.cpp
+  strings.cpp
+  macro_test.cpp
+  nonce_generator_tests.cpp
+  win32_encryption_tests.cpp
+)
+
+add_casablanca_test(utils_test SOURCES)
+
+if(CMAKE_COMPILER_IS_GNUCXX)
+  target_compile_options(utils_test PRIVATE "-Wno-deprecated-declarations")
+endif()
+
+configure_pch(utils_test stdafx.h stdafx.cpp)
+if (NOT CPPREST_EXCLUDE_WEBSOCKETS)
+  add_library(websockettest_utilities utilities/test_websocket_server.cpp)
+  target_include_directories(websockettest_utilities PUBLIC utilities)
+  target_compile_definitions(websockettest_utilities PRIVATE -DWEBSOCKETTESTUTILITY_EXPORTS)
+  if(NOT WIN32)
+    target_compile_definitions(websockettest_utilities PRIVATE "-DWEBSOCKET_UTILITY_API=__attribute__ ((visibility (\"default\")))")
+    target_compile_definitions(websockettest_utilities INTERFACE "-DWEBSOCKET_UTILITY_API=")
+  endif()
+
+  cpprest_find_websocketpp()
+  target_link_libraries(websockettest_utilities
+    PRIVATE
+      cpprest
+      unittestpp
+      common_utilities
+      cpprestsdk_websocketpp_internal
+  )
+
+  # websocketsclient_test
+  set(SOURCES
+    client/authentication_tests.cpp
+    client/client_construction.cpp
+    client/close_tests.cpp
+    client/error_tests.cpp
+    client/receive_msg_tests.cpp
+    client/send_msg_tests.cpp
+    client/stdafx.cpp
+  )
+
+  add_casablanca_test(websocketsclient_test SOURCES)
+  if(NOT TEST_LIBRARY_TARGET_TYPE STREQUAL "OBJECT")
+    target_link_libraries(websocketsclient_test PRIVATE websockettest_utilities)
+  endif()
+  target_include_directories(websocketsclient_test PRIVATE utilities)
+endif()

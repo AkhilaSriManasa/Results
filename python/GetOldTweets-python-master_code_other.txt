@@ -1,0 +1,43 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\Exporter.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\Main.py
+# Example 1 - Get tweets by username
+### Example 1 - Get tweets by username [barackobama]", tweet)
+# Example 2 - Get tweets by query search
+### Example 2 - Get tweets by query search [europe refugees]", tweet)
+# Example 3 - Get tweets by username and bound dates
+### Example 3 - Get tweets by username and bound dates [barackobama, '2015-09-10', '2015-09-12']", tweet)
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got\manager\TweetCriteria.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got\manager\TweetManager.py
+#Remove incomplete tweets withheld by Twitter Guidelines
+# ', '#').replace('@ ', '@'))
+#\\w*)').findall(tweet.text))
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got\manager\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got\models\Tweet.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got\models\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got3\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got3\manager\TweetCriteria.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got3\manager\TweetManager.py
+#Remove incomplete tweets withheld by Twitter Guidelines
+# ', '#').replace('@ ', '@'))
+#\\w*)').findall(tweet.text))
+#print(url)
+#print("Twitter weird response. Try to see on browser: ", url)
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got3\manager\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got3\models\Tweet.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/GetOldTweets-python-master\GetOldTweets-python-master\got3\models\__init__.py

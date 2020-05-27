@@ -1,0 +1,1950 @@
+﻿// Library name
+// Library version
+// Library type (static or dynamic)
+// Data directory
+// Read file
+// namespace baselib
+/*argc*/, char* /*argv*/[])
+// Print library info
+// Calculate and print fibonacci number
+// Setup UI
+// namespace fiblib
+// ...
+#!/usr/bin/env python
+#
+# Copyright 2009, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# We assume that this file is in the scripts/ directory in the Google
+# Mock root directory.
+# We need to call into googletest/scripts/fuse_gtest_files.py.
+# Regex for matching '#include "gmock/..."'.
+#\s*include\s*"(gmock/.+)"')
+# Where to find the source seed files.
+# Where to put the generated files.
+# Holds all gmock headers we've processed.
+# We don't process the same header twice.
+# Reads each line in the given gmock header.
+# It's '#include "gmock/..."' - let's process it recursively.
+# It's '#include "gtest/foo.h"'.  We translate it to
+# "gtest/gtest.h", regardless of what foo is, since all
+# gtest headers are fused into gtest/gtest.h.
+# There is no need to #include gtest.h twice.
+#include "%s"\n' % (gtest.GTEST_H_OUTPUT,))
+# Otherwise we copy the line unchanged to the output file.
+# We don't process the same #included file twice.
+# Reads each line in the given gmock source file.
+# It's '#include "gmock/foo.h"'.  We treat it as '#include
+# "gmock/gmock.h"', as all other gmock headers are being fused
+# into gmock.h and cannot be #included directly.
+# There is no need to #include "gmock/gmock.h" more than once.
+#include "%s"\n' % (GMOCK_H_OUTPUT,))
+# It's '#include "gtest/..."'.
+# There is no need to #include gtest.h as it has been
+# #included by gtest-all.cc.
+# It's '#include "src/foo"' - let's process it recursively.
+# Otherwise we copy the line unchanged to the output file.
+# First, fuse gtest-all.cc into gmock-gtest-all.cc.
+# Next, append fused gmock-all.cc to gmock-gtest-all.cc.
+# fuse_gmock_files.py OUTPUT_DIR
+# fuse_gmock_files.py GMOCK_ROOT_DIR OUTPUT_DIR
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Matchers
+# Actions
+# Cardinalities
+# Sequences
+# Misc
+# Regex for matching source file path and line number in the compiler's errors.
+#include
+# This version works when the type is used as the mock function's return
+# type.
+# This version works when the type is used as the mock function's sole
+# parameter type.
+# This version works when the type is used as a parameter of a mock
+# function that has multiple parameters.
+# Avoid overlap with the NUS pattern.
+# Strips all color formatting.
+# Assuming the string is using the UTF-8 encoding, replaces the left and
+# the right single quote characters with apostrophes.
+#%s:' % (i,))
+#!/usr/bin/env python
+#
+# Copyright 2007 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# This code is derived from appcfg.py in the App Engine SDK (open source),
+# and from ASPN recipe #146306.
+# The logging verbosity:
+#  0: Errors only.
+#  1: Status messages.
+#  2: Info logs.
+#  3: Debug logs.
+# Max size of patch or base file.
+# Needed for use inside Google.
+# This is a dummy value to allow us to identify when we're successful.
+# TODO: Don't require authentication.  Let the server say
+# whether it is necessary.
+##           elif e.code >= 500 and e.code < 600:
+##             # Server Error - try again.
+##             continue
+# Failed to load cookies - just ignore them.
+# Create an empty cookie file with mode 600
+# Always chmod the cookie file
+# Don't save cookies across runs of update.py.
+# Logging
+# Review server
+# Issue
+# Upload options
+# If this is the dev_appserver, use fake authentication.
+# Don't try to talk to ClientLogin.
+# Use a shell for subcommands on Windows to get a PATH search.
+# On Windows if a file has property changes its filename uses '\'
+# instead of '/'.
+# Cache output from "svn list -r REVNO dirname".
+# Keys: dirname, Values: 2-tuple (ouput for start rev and end rev).
+# SVN base URL is required to fetch files deleted in an older revision.
+# Result is cached to not guess it over and over again in GetBaseFile().
+# svn cat translates keywords but svn diff doesn't. As a result of this
+# behavior patching.PatchChunks() fails with a chunk mismatch error.
+# This part was originally written by the Review Board development team
+# who had the same problem (http://reviews.review-board.org/r/276/).
+# Mapping of keywords to known aliases
+# Standard keywords
+# Aliases
+# If file is in a cl, the output will begin with
+# "\n--- Changelist 'cl_name':\n".  See
+# http://svn.collab.net/repos/svn/trunk/notes/changelist-design.txt
+# If we have a revision to diff against we need to run "svn list"
+# for the old and the new revision and compare the results to get
+# the correct status for a file.
+# If a file is copied its status will be "A  +", which signifies
+# "addition-with-history".  See "svn st" for more information.  We need to
+# upload the original file or else diff parsing will fail if the file was
+# edited.
+# We'll need to upload the new content if we're adding a binary file
+# since diff's output won't contain it.
+# Copied file.
+# Property change.
+# Don't change filename, it's needed later.
+# File does not exist in the requested revision.
+# Reset mimetype, it contains an error message.
+# Empty base content just to force an upload.
+# "svn cat -r REV delete_file.txt" doesn't work. cat requires
+# the full URL with "@REV" appended instead of using "-r" option.
+# Map of filename -> hash of base file.
+# This is more complicated than svn's GenerateDiff because we must convert
+# the diff output to include an svn-style "Index:" line as well as record
+# the hashes of the base files, so we can upload them along with our diff.
+# The "index" line in a git diff looks like this (long hashes elided):
+#   index 82c0d44..b2cee3f 100755
+# We want to save the left hash, as that identifies the base file.
+# All-zero hash indicates no base file.
+# Absolute path to repository (we can be in a subdir)
+# Compute the subdir
+# If no file specified, restrict to the current subdir
+# Modify line to make it look like as it comes from svn diff.
+# With this modification no changes on the server side are required
+# to make upload.py work with Mercurial repos.
+# NOTE: for proper handling of moved/copied files, we have to use
+# the second filename.
+# "hg status" and "hg cat" both take a path relative to the current subdir
+# rather than to the repo root, but "hg diff" has given us the full path
+# to the repo root.
+# "hg status -C" returns two lines for moved/copied files, one otherwise
+# HACK: strip error message about missing file/directory if it isn't in
+# the working copy
+# Moved/copied => considered as modified, use old filename to
+# retrieve base contents
+# Mercurial's heuristic
+# Fetch again without converting newlines
+# NOTE: The SplitPatch function is duplicated in engine.py, keep them in sync.
+# When a file is modified, paths use '/' between directories, however
+# when a property is modified '\' is used on Windows.  Make them the same
+# otherwise the file shows up twice.
+# File has property changes but no modifications, create a new diff.
+# Mercurial has a command to get the base directory of a repository
+# Try running it, but don't die if we don't have hg installed.
+# NOTE: we try Mercurial first as it can sit on top of an SVN working copy.
+# ENOENT -- they don't have hg installed.
+# Subversion has a .svn in all working directories.
+# Git has a command to test if you're in a git tree.
+# Try running it, but don't die if we don't have git installed.
+# ENOENT -- they don't have git installed.
+# base field is only allowed for Subversion.
+# Note: Fetching base files may become deprecated in future releases.
+# Send a hash of all the base file so the server can determine if a copy
+# already exists in an earlier patchset.
+# If we're uploading base files, don't send the email before the uploads, so
+# that it contains the file status.
+#!/usr/bin/env python
+#
+# Copyright 2009, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Finds the path to upload.py, assuming it is in the same directory
+# as this file.
+# Adds Google Mock discussion group to the cc line if it's not there
+# already.
+# Invokes upload.py with the modified command line flags.
+#!/usr/bin/env python
+#
+# Copyright 2008 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Add the directory of this script to the path so we can import gmock_class.
+# Fix the docstring in case they require the usage.
+#!/usr/bin/env python
+#
+# Copyright 2007 Neal Norwitz
+# Portions Copyright 2007 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# TODO:
+#  * Tokens should never be exported, need to convert to Nodes
+#    (return types, parameters, etc.)
+#  * Handle static class data for templatized classes
+#  * Handle casts (both C++ and C-style)
+#  * Handle conditions and loops (if/else, switch, for, while/do)
+#
+# TODO much, much later:
+#  * Handle #define
+#  * exceptions
+# Python 3.x
+# Python 2.x
+# Support Python 2.3 and earlier.
+# Support Python 2.5 and earlier.
+# TODO(nnorwitz): use this as a singleton for templated_types, etc
+# where we don't want to create a new empty dict each time.  It is also const.
+# TODO(nnorwitz): move AST nodes into a separate module.
+# TODO(nnorwitz): impl.
+# TODO(nnorwitz): handle namespaces, etc.
+# TODO(nnorwitz): merge with Parameter in some way?
+# TODO(nnorwitz): handle namespaces, etc.
+# TODO(nnorwitz): handle namespaces, etc.
+# TODO(nnorwitz): handle namespaces, etc.
+# TODO(nnorwitz): bases are tokens, do name comparision.
+# TODO(nnorwitz): search in body too.
+# TODO(nnorwitz): parameters are tokens, do name comparision.
+# TODO(nnorwitz): search in body too.
+# TODO(nnorwitz): add templated_types.
+# TODO(nnorwitz): in_class could also be a namespace which can
+# mess up finding functions properly.
+# By definition, Is* are always False.  A Type can only exist in
+# some sort of variable declaration, parameter, or return value.
+# Partition tokens into name and modifier tokens.
+# If there is a comma after the template, we need to consume
+# that here otherwise it becomes part of the name.
+# No '<' in the tokens, just a simple name and no template.
+# Handle default (initial) values properly.
+# TODO(nnorwitz): this is a hack that happens for code like
+# Register(Foo<T>); where it thinks this is a function call
+# but it's actually a declaration.
+# Don't add a spurious :: to data members being initialized.
+# These are handled elsewhere.
+# Ensure that names have a space between them.
+# Remove flag.
+# Just don't add to type_modifiers.
+# Got a default value.  Add any value (None) as a flag.
+# names is a list of strings.
+# TODO(nnorwitz): use a better data structure (deque) for the queue.
+# Switching directions of the "queue" improved perf by about 25%.
+# Using a deque should be even better since we access from both sides.
+# Keep the state whether we are currently handling a typedef or not.
+# Get the next token.
+# Dispatch on the next token type.
+# The token name is the same as the class, must be a ctor if
+# there is a paren.  Otherwise, it's the return type.
+# Peek ahead to get the next token to figure out which.
+# Fall through--handle like any other method.
+# Handle data or function declaration/definition.
+# If there is an assignment before the paren,
+# this is an expression, not a method.
+# Handle array, this isn't a method, unless it's an operator.
+# TODO(nnorwitz): keep the size somewhere.
+# unused_size = self._GetTokensUpTo(tokenize.SYNTAX, ']')
+# Handle data, this isn't a method.
+# Must be declaring a variable.
+# TODO(nnorwitz): handle the declaration.
+# Must be a dtor (probably not in method body).
+# self.in_class can contain A::Name, but the dtor will only
+# be Name.  Make sure to compare against the right value.
+# TODO(nnorwitz): handle a lot more syntax.
+# TODO(nnorwitz): handle more preprocessor directives.
+# token starts with a #, so remove it and strip whitespace.
+# Remove "include".
+# Handle #include \<newline> "header-on-second-line.h".
+# Remove "define".
+# TODO(nnorwitz): remove _IgnoreUpTo() it shouldn't be necesary.
+# Assumes the current token is open_paren and we will consume
+# and return up to the close_paren.
+# Two NAMEs in a row means the identifier should terminate.
+# It's probably some sort of variable declaration.
+# Handle templated names.
+# Handle templatized dtors.
+# Handle templatized ctors.
+# Get the open paren so _GetParameters() below works.
+# TODO(nnorwitz): store template_portion.
+# Force ctor for templatized ctors.
+# Remove trailing ')'.
+# Handling operator() is especially weird.
+# Remove trailing ')'.
+# TODO(nnorwitz): handle more __attribute__ details.
+# Consume everything between the (parens).
+# Consume everything between the (parens).
+# HACK(nnorwitz):  assume that all upper-case names
+# are some macro we aren't expanding.
+# Handle ctor initializers.
+# TODO(nnorwitz): anything else to handle for initializer list?
+# Handle pointer to functions that are really data but look
+# like method declarations.
+# name contains the return type.
+# parameters contains the name of the data.
+# Already at the ( to open the parameter list.
+# Remove trailing ')'.
+# TODO(nnorwitz): store the function_parameters.
+# At this point, we got something like:
+#  return_type (type::*name_)(params);
+# This is a data member called name_ that is a function pointer.
+# With this code: void (sq_type::*field_)(string&);
+# We get: name=void return_type=[] parameters=sq_type ... field_
+# TODO(nnorwitz): is return_type always empty?
+# TODO(nnorwitz): this isn't even close to being correct.
+# Just put in something so we don't crash and can move on.
+# Remove trailing ')'.
+# Remove trailing '}'.
+# Ignore explicitly defaulted and deleted special members
+# in C++11.
+# Handle pure-virtual declarations.
+# TODO(nnorwitz): store tokens and improve parsing.
+# template <typename T, size_t N> char (&ASH(T (&seq)[N]))[N];
+# Looks like we got a method, not a function.
+# Splitting the return type from the class name in a method
+# can be tricky.  For example, Return::Type::Is::Hard::To::Find().
+# Where is the return type and where is the class name?
+# The heuristic used is to pull the last name as the class name.
+# This includes all the templated type info.
+# TODO(nnorwitz): if there is only One name like in the
+# example above, punt and assume the last bit is the class name.
+# Ignore a :: prefix, if exists so we can find the first real name.
+# Ignore a :: suffix, if exists.
+# Make a copy of the sequence so we can append a sentinel
+# value. This is required for GetName will has to have some
+# terminating condition beyond the last name.
+# Iterate through the sequence parsing out each name.
+# We got a pointer or ref.  Add it to the name.
+# Now that we have the names, it's time to undo what we did.
+# Remove the sentinel value.
+# Flatten the token sequence for the return type.
+# The class name is the last name.
+# Handle forward declarations.
+# Must be the type declaration.
+# Remove trailing '}'.
+# A name means this is an anonymous type and the name
+# is the variable declaration.
+# Must be variable declaration using the type prefixed with keyword.
+# Special case the handling typedef/aliasing of structs here.
+# It would be a pain to handle in the class code.
+# Handle methods declared to return a struct.
+# TODO(nnorwitz): warn about using auto?  Probably not since it
+# will be reclaimed and useful for C++0x.
+# What follows must be a method.
+# HACK(nnorwitz): handle inline dtors by ignoring 'inline'.
+# )
+# Token must be struct/enum/union/class.
+# Get the remainder of the typedef up to the semi-colon.
+# TODO(nnorwitz): clean all this up.
+# HACK(nnorwitz): Handle pointers to functions "properly".
+# HACK(nnorwitz): Handle arrays properly.
+# Not needed yet.
+# Not needed yet.
+# Ignore trailing '>'.
+# We got something like: Type variable.
+# Re-adjust the key (variable) and type_name (Type).
+# TODO(nnorwitz): for now, just ignore the template params.
+# Must be a variable definition.
+# Nothing to do.
+# Nothing to do.
+# Not needed yet.
+# Get base classes.
+# TODO(nnorwitz): store kind of inheritance...maybe.
+# If inheritance type is not specified, it is private.
+# Just put the token back so we can form a name.
+# TODO(nnorwitz): it would be good to warn about this.
+# Check for virtual inheritance.
+# TODO(nnorwitz): store that we got virtual for this base.
+# Support multiple inheritance.
+# Skip any macro (e.g. storage class specifiers) after the
+# 'class' keyword.
+# Forward declaration.
+# Inline forward declaration.  Could be method or data.
+# Handle data
+# Assume this is a method.
+# Support anonymous namespaces.
+# Create an internal token that denotes when the namespace is complete.
+# TODO(nnorwitz): handle aliasing namespaces.
+# Replace the trailing } with the internal namespace pop token.
+# Handle namespace with nothing in it.
+# Nothing much to do.
+# TODO(nnorwitz): maybe verify the method name == class name.
+# This must be a ctor.
+# Nothing to do.
+# Pull off the next token(s?) and make that part of the method name.
+# Not needed yet.
+# Not needed yet.
+# Not needed yet.
+#print('Processing %s' % actual_filename)
+# Already printed a warning, print the traceback and continue.
+#!/usr/bin/env python
+#
+# Copyright 2008 Google Inc.  All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Preserve compatibility with Python 2.3.
+# The version of this script.
+# How many spaces to indent.  Can set me with the INDENT environment variable.
+# We only care about virtual functions.
+# Pick out all the elements we need from the original function.
+# Add modifiers like 'const'.
+# We must treat T(void) as a function with no parameters.
+# Due to the parser limitations, it is impossible to keep comments
+# while stripping the default parameters.  When defaults are
+# present, we choose to strip them and comments (and produce
+# compilable code).
+# TODO(nnorwitz@google.com): Investigate whether it is possible to
+# preserve parameter name when reconstructing parameter text from
+# the AST.
+# Get the full text of the parameters from the start
+# of the first parameter to the end of the last parameter.
+# Remove // comments.
+# Condense multiple spaces and eliminate newlines putting the
+# parameters together on a single line.  Ensure there is a
+# space in an argument which is split by a newline without
+# intervening whitespace, e.g.: int\nBar
+# Create the mock method definition.
+# desired_class_names being None means that all classes are selected.
+# Add namespace before the class.
+# }
+# Add template args for templated classes.
+# TODO(paulchang): The AST doesn't preserve template argument order,
+# so we have to make up names here.
+# TODO(paulchang): Handle non-type template arguments (e.g.
+# template<typename T, int N>).
+# Add the class prolog.
+# }
+# Add all the methods.
+# Close the class.
+# If there are no virtual methods, no need for a public label.
+# Only close the class if there really is a class.
+# Add an extra newline.
+# Close the namespace.
+# Add an extra newline.
+# None means all classes in the source file.
+# An error message was already printed since we couldn't parse.
+#!/usr/bin/env python
+#
+# Copyright 2009 Neal Norwitz All Rights Reserved.
+# Portions Copyright 2009 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Allow the cpp imports below to work when run as a standalone script.
+# <test> is a pseudo-filename, it is not read or written.
+# The constructors and destructor should be ignored.
+# The destructor should be ignored.
+# The constructors and destructor should be ignored.
+# The constructors and destructor should be ignored.
+# NOTE(nnorwitz): I'm not sure if it's the best behavior to keep these
+# comments.  Also note that C style comments after the last parameter
+# are still elided.
+# Comparing the comment text is brittle - we'll think of something
+# better in case this gets annoying, but for now let's keep it simple.
+# <test> is a pseudo-filename, it is not read or written.
+#!/usr/bin/env python
+#
+# Copyright 2007 Neal Norwitz
+# Portions Copyright 2007 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Python 3.x
+# Python 2.x
+# Nominal support for Python 2.3.
+# These only apply to methods, they can't be types by themselves.
+#!/usr/bin/env python
+#
+# Copyright 2007 Neal Norwitz
+# Portions Copyright 2007 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Python 3.x
+# Python 2.x
+# Nominal support for Python 2.3.
+# Add $ as a valid identifier char since so much code uses it.
+# C++0x string preffixes.
+# Token types.
+# Where the token originated from.  This can be used for backtracking.
+# It is always set to WHENCE_STREAM in this code.
+# Count the trailing backslashes.
+# When trailing backslashes are even, they escape each other.
+# NOTE(nnorwitz): may not be quite correct, should be good enough.
+# Need to special case '\\'.
+# Try to handle unterminated single quotes (in a #if 0 block).
+# Cache various valid character sets for speed.
+# Only ignore errors while in a #if 0 block.
+# Skip whitespace.
+# Find a string token.
+# String and character constants can look like a name if
+# they are something like L"".
+# u, U, and L are valid C++0x character preffixes.
+# Find // comments.
+# Handle EOF.
+# Find /* comments. */
+# : or :: (plus other chars).
+# Treat ">>" as two tokens.
+# Handle single char tokens.
+# Handle float suffixes.
+# Find integer.
+# Handle hex digits.
+# Handle integer (and float) suffixes.
+# Find string.
+# Find char.
+#':                           # Find pre-processor command.
+#if' and source[i+3:i+4].isspace()
+#endif':
+# TODO(nnorwitz): handle preprocessor statements (\ continuations).
+# NOTE(nnorwitz): doesn't handle comments in #define macros.
+# Get the first important symbol (newline, comment, EOF/end).
+# Handle #include "dir//foo.h" properly.
+# Keep going if end of the line and the line ends with \.
+# Handle \ in code.
+# This is different from the pre-processor \ handling.
+# The tokenizer seems to be in pretty good shape.  This
+# raise is conditionally disabled so that bogus code
+# in an #if 0 block can be handled.  Since we will ignore
+# it anyways, this is probably fine.  So disable the
+# exception and  return the bogus char.
+# print('\r%6.2f%%' % (100.0 * index / token.end),)
+#!/usr/bin/env python
+#
+# Copyright 2007 Neal Norwitz
+# Portions Copyright 2007 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Set to True to see the start/end token indices.
+#!/usr/bin/env python
+#
+# Copyright 2009, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Tests in this file run a Google-Test-based test program and expect it
+# to terminate prematurely.  Therefore they are incompatible with
+# the premature-exit-file protocol by design.  Unset the
+# premature-exit filepath to prevent Google Test from creating
+# the file.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# where BUILD/DIR contains the built gmock_output_test_ file.
+# The flag for generating the golden file
+#: '.
+#:', output)
+#', output)
+# findall() returns a list of all matches of the regex in output.
+# For example, if '(used in test FooTest.Bar)' is in output, the
+# list will contain 'FooTest.Bar'.
+# Disables exception pop-ups on Windows.
+# The normalized output should match the golden file.
+# The raw output should contain 2 leaked mock object errors for
+# test GMockOutputTest.CatchesLeakedMocks.
+#!/usr/bin/env python
+#
+# Copyright 2006, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Determines path to gtest_test_utils and imports it.
+# isdir resolves symbolic links.
+# pylint: disable-msg=C6204
+# On Windows, os.WEXITSTATUS() doesn't work and os.system() returns
+# the argument to exit() directly.
+# On Unix, os.WEXITSTATUS() must be used to extract the exit status
+# from the result of os.system().
+# Suppresses the "Invalid const name" lint complaint
+# pylint: disable-msg=C6409
+# Exposes utilities from gtest_test_utils.
+# pylint: enable-msg=C6409
+# Copyright 2013 Google Inc. All Rights Reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Matches the line from 'svn info .' output that describes what SVN
+# path the current local directory corresponds to.  For example, in
+# a googletest SVN workspace's trunk/test directory, the output will be:
+#
+# URL: https://googletest.googlecode.com/svn/trunk/test
+# googletest or googlemock
+#!/usr/bin/env python
+#
+# Copyright 2009, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# For Python 2.3 compatibility
+# We assume that this file is in the scripts/ directory in the Google
+# Test root directory.
+# Regex for matching '#include "gtest/..."'.
+#\s*include\s*"(gtest/.+)"')
+# Regex for matching '#include "src/..."'.
+#\s*include\s*"(src/.+)"')
+# Where to find the source seed files.
+# Where to put the generated files.
+# Makes sure the output file either doesn't exist or can be overwritten.
+# TODO(wan@google.com): The following user-interaction doesn't
+# work with automated processes.  We should provide a way for the
+# Makefile to force overwriting the files.
+# Makes sure the directory holding the output file exists; creates
+# it and all its ancestors if necessary.
+# Holds all gtest headers we've processed.
+# We don't process the same header twice.
+# Reads each line in the given gtest header.
+# It's '#include "gtest/..."' - let's process it recursively.
+# Otherwise we copy the line unchanged to the output file.
+# We don't process the same #included file twice.
+# Reads each line in the given gtest source file.
+# It's '#include "gtest/gtest-spi.h"'.  This file is not
+# #included by "gtest/gtest.h", so we need to process it.
+# It's '#include "gtest/foo.h"' where foo is not gtest-spi.
+# We treat it as '#include "gtest/gtest.h"', as all other
+# gtest headers are being fused into gtest.h and cannot be
+# #included directly.
+# There is no need to #include "gtest/gtest.h" more than once.
+#include "%s"\n' % (GTEST_H_OUTPUT,))
+# It's '#include "src/foo"' - let's process it recursively.
+# fuse_gtest_files.py OUTPUT_DIR
+# fuse_gtest_files.py GTEST_ROOT_DIR OUTPUT_DIR
+#!/usr/bin/env python
+#
+# Copyright 2006, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Where this script is.
+# Where to store the generated header.
+# Where to store the generated unit test.
+# A map that defines the values used in the preamble template.
+#ifndef GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_
+#define GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_
+#ifndef GTEST_INCLUDE_GTEST_GTEST_H_
+# error Do not include gtest_pred_impl.h directly.  Include gtest.h instead.
+#endif  // GTEST_INCLUDE_GTEST_GTEST_H_
+#define GTEST_ASSERT_(expression, on_failure) \\
+# How many '%s' specs are in format?
+# A map the defines the values used in the implementation template.
+#v%s', sep=', '),
+#define GTEST_PRED_FORMAT%(n)s_(pred_format, %(vs)s, on_failure)\\
+#define GTEST_PRED%(n)s_(pred, %(vs)s, on_failure)\\
+#pred""" % DEFS
+#v%s""")
+#define EXPECT_PRED_FORMAT%(n)s(pred_format, %(vs)s) \\
+#define EXPECT_PRED%(n)s(pred, %(vs)s) \\
+#define ASSERT_PRED_FORMAT%(n)s(pred_format, %(vs)s) \\
+#define ASSERT_PRED%(n)s(pred, %(vs)s) \\
+#endif  // GTEST_INCLUDE_GTEST_GTEST_PRED_IMPL_H_
+# A map that defines the values used in the preamble template.
+#include <iostream>
+#include "gtest/gtest.h"
+#include "gtest/gtest-spi.h"
+# A map that defines the values used in the template for the tests.
+#v%s', sep=', '),
+# 'assert' is reserved, so we cannot use
+# that identifier here.
+# A map that defines the values used in the test template.
+# Generates tests for all 2**6 = 64 combinations.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Special cursor to indicate the end-of-file.
+# We found regex in lines
+# We found a regex in line.
+# We failed to find str in lines
+# First, completely remove lines containing nothing but a meta
+# comment, including the trailing \n.
+# Then, remove meta comments from contentful lines.
+# If value looks like an int, store it as an int.
+#'):
+# Prefix of the current line
+# Maximum length of the current line
+# Prefix of a continuation line
+# Maximum length of a continuation line
+# Prefers to wrap a line after a ',' or ';'.
+# The current line without leading spaces.
+# If the line is still too long, wrap at a space.
+#(ifndef|define|endif\s*//)\s*[\w_]+\s*$', line) or
+#include\s', line) or
+# Don't break IWYU pragmas, either; that causes iwyu.py problems.
+# The style guide made an exception to allow long header guard lines,
+# includes and IWYU pragmas.
+# The style guide made an exception to allow long header guard lines,
+# includes and IWYU pragmas.
+#!/usr/bin/env python
+#
+# Copyright 2013 Google Inc. All Rights Reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#Anchor will now point to V2_6_Primer.wiki#Anchor).
+# create wiki pages for v2.6
+# verify the file list
+# verify the file contents
+# Wiki pages that shouldn't be branched for every gtest/gmock release.
+# Turn '2.6' to 'V2_6_'.
+# A link to Foo.wiki is in one of the following forms:
+#   [Foo words]
+#   [Foo#Anchor words]
+#   [http://code.google.com/.../wiki/Foo words]
+#   [http://code.google.com/.../wiki/Foo#Anchor words]
+# We want to replace 'Foo' with 'V2_6_Foo' in the above cases.
+# This regex matches either
+#   [Foo
+# or
+#   /wiki/Foo
+# followed by a space or a #, where Foo is the name of an
+# unversioned wiki page.
+#])' % '|'.join(page_names))
+# Excluded versioned .wiki files.
+#!/usr/bin/env python
+#
+# Copyright 2007 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# This code is derived from appcfg.py in the App Engine SDK (open source),
+# and from ASPN recipe #146306.
+# The logging verbosity:
+#  0: Errors only.
+#  1: Status messages.
+#  2: Info logs.
+#  3: Debug logs.
+# Max size of patch or base file.
+# Needed for use inside Google.
+# This is a dummy value to allow us to identify when we're successful.
+# TODO: Don't require authentication.  Let the server say
+# whether it is necessary.
+##           elif e.code >= 500 and e.code < 600:
+##             # Server Error - try again.
+##             continue
+# Failed to load cookies - just ignore them.
+# Create an empty cookie file with mode 600
+# Always chmod the cookie file
+# Don't save cookies across runs of update.py.
+# Logging
+# Review server
+# Issue
+# Upload options
+# If this is the dev_appserver, use fake authentication.
+# Don't try to talk to ClientLogin.
+# Use a shell for subcommands on Windows to get a PATH search.
+# On Windows if a file has property changes its filename uses '\'
+# instead of '/'.
+# Cache output from "svn list -r REVNO dirname".
+# Keys: dirname, Values: 2-tuple (output for start rev and end rev).
+# SVN base URL is required to fetch files deleted in an older revision.
+# Result is cached to not guess it over and over again in GetBaseFile().
+# svn cat translates keywords but svn diff doesn't. As a result of this
+# behavior patching.PatchChunks() fails with a chunk mismatch error.
+# This part was originally written by the Review Board development team
+# who had the same problem (http://reviews.review-board.org/r/276/).
+# Mapping of keywords to known aliases
+# Standard keywords
+# Aliases
+# If file is in a cl, the output will begin with
+# "\n--- Changelist 'cl_name':\n".  See
+# http://svn.collab.net/repos/svn/trunk/notes/changelist-design.txt
+# If we have a revision to diff against we need to run "svn list"
+# for the old and the new revision and compare the results to get
+# the correct status for a file.
+# If a file is copied its status will be "A  +", which signifies
+# "addition-with-history".  See "svn st" for more information.  We need to
+# upload the original file or else diff parsing will fail if the file was
+# edited.
+# We'll need to upload the new content if we're adding a binary file
+# since diff's output won't contain it.
+# Copied file.
+# Property change.
+# Don't change filename, it's needed later.
+# File does not exist in the requested revision.
+# Reset mimetype, it contains an error message.
+# Empty base content just to force an upload.
+# "svn cat -r REV delete_file.txt" doesn't work. cat requires
+# the full URL with "@REV" appended instead of using "-r" option.
+# Map of filename -> hash of base file.
+# This is more complicated than svn's GenerateDiff because we must convert
+# the diff output to include an svn-style "Index:" line as well as record
+# the hashes of the base files, so we can upload them along with our diff.
+# The "index" line in a git diff looks like this (long hashes elided):
+#   index 82c0d44..b2cee3f 100755
+# We want to save the left hash, as that identifies the base file.
+# All-zero hash indicates no base file.
+# Absolute path to repository (we can be in a subdir)
+# Compute the subdir
+# If no file specified, restrict to the current subdir
+# Modify line to make it look like as it comes from svn diff.
+# With this modification no changes on the server side are required
+# to make upload.py work with Mercurial repos.
+# NOTE: for proper handling of moved/copied files, we have to use
+# the second filename.
+# "hg status" and "hg cat" both take a path relative to the current subdir
+# rather than to the repo root, but "hg diff" has given us the full path
+# to the repo root.
+# "hg status -C" returns two lines for moved/copied files, one otherwise
+# HACK: strip error message about missing file/directory if it isn't in
+# the working copy
+# Moved/copied => considered as modified, use old filename to
+# retrieve base contents
+# Mercurial's heuristic
+# Fetch again without converting newlines
+# NOTE: The SplitPatch function is duplicated in engine.py, keep them in sync.
+# When a file is modified, paths use '/' between directories, however
+# when a property is modified '\' is used on Windows.  Make them the same
+# otherwise the file shows up twice.
+# File has property changes but no modifications, create a new diff.
+# Mercurial has a command to get the base directory of a repository
+# Try running it, but don't die if we don't have hg installed.
+# NOTE: we try Mercurial first as it can sit on top of an SVN working copy.
+# ENOENT -- they don't have hg installed.
+# Subversion has a .svn in all working directories.
+# Git has a command to test if you're in a git tree.
+# Try running it, but don't die if we don't have git installed.
+# ENOENT -- they don't have git installed.
+# base field is only allowed for Subversion.
+# Note: Fetching base files may become deprecated in future releases.
+# Send a hash of all the base file so the server can determine if a copy
+# already exists in an earlier patchset.
+# If we're uploading base files, don't send the email before the uploads, so
+# that it contains the file status.
+#!/usr/bin/env python
+#
+# Copyright 2009, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Finds the path to upload.py, assuming it is in the same directory
+# as this file.
+# Adds Google Test discussion group to the cc line if it's not there
+# already.
+# Invokes upload.py with the modified command line flags.
+#!/usr/bin/env python
+#
+# Copyright 2006, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Constants.
+# The environment variable for enabling/disabling the break-on-failure mode.
+# The command line flag for enabling/disabling the break-on-failure mode.
+# The environment variable for enabling/disabling the throw-on-failure mode.
+# The environment variable for enabling/disabling the catch-exceptions mode.
+# Path to the gtest_break_on_failure_unittest_ program.
+# Tests in this file run a Google-Test-based test program and expect it
+# to terminate prematurely.  Therefore they are incompatible with
+# the premature-exit-file protocol by design.  Unset the
+# premature-exit filepath to prevent Google Test from creating
+# the file.
+# The tests.
+#!/usr/bin/env python
+#
+# Copyright 2010 Google Inc.  All Rights Reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Constants.
+# Path to the gtest_catch_exceptions_ex_test_ binary, compiled with
+# exceptions enabled.
+# Path to the gtest_catch_exceptions_test_ binary, compiled with
+# exceptions disabled.
+# Tests in this file run a Google-Test-based test program and expect it
+# to terminate prematurely.  Therefore they are incompatible with
+# the premature-exit-file protocol by design.  Unset the
+# premature-exit filepath to prevent Google Test from creating
+# the file.
+# The tests.
+# pylint:disable-msg=C6302
+# Filters out SEH exception tests on Windows. Unhandled SEH exceptions
+# cause tests to show pop-up windows there.
+# By default, Google Test doesn't catch the exceptions.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# For 'output' test
+#!/usr/bin/env python
+#
+# Copyright 2005 Google Inc. All Rights Reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# For Python 2.3 compatibility
+# Constants.
+# Checks if this platform can pass empty environment variables to child
+# processes.  We set an env variable to an empty string and invoke a python
+# script in a subprocess to print whether the variable is STILL in
+# os.environ.  We then use 'eval' to parse the child's output so that an
+# exception is thrown if the input is anything other than 'True' nor 'False'.
+# Check if this platform can unset environment variables in child processes.
+# We set an env variable to a non-empty string, unset it, and invoke
+# a python script in a subprocess to print whether the variable
+# is NO LONGER in os.environ.
+# We use 'eval' to parse the child's output so that an exception
+# is thrown if the input is neither 'True' nor 'False'.
+# Checks if we should test with an empty filter. This doesn't
+# make sense on platforms that cannot pass empty env variables (Win32)
+# and on platforms that cannot unset variables (since we cannot tell
+# the difference between "" and NULL -- Borland and Solaris < 5.10)
+# The environment variable for specifying the test filters.
+# The environment variables for test sharding.
+# The command line flag for specifying the test filters.
+# The command line flag for including disabled tests.
+# Command to run the gtest_filter_unittest_ program.
+# Regex for determining whether parameterized tests are enabled in the binary.
+# Regex for parsing test case names from Google Test's output.
+# Regex for parsing test names from Google Test's output.
+# The command line flag to tell Google Test to output the list of tests it
+# will run.
+# Indicates whether Google Test supports death tests.
+# Full names of all tests in gtest_filter_unittests_.
+# All the non-disabled tests.
+# Utilities.
+# The unit test.
+# Utilities.
+# First, tests using the environment variable.
+# Windows removes empty variables from the environment when passing it
+# to a new process.  This means it is impossible to pass an empty filter
+# into a process using the environment variable.  However, we can still
+# test the case when the variable is not supplied (i.e., gtest_filter is
+# None).
+# pylint: disable-msg=C6403
+# pylint: enable-msg=C6403
+# Next, tests using the command line flag.
+# Windows removes empty variables from the environment when passing it
+# to a new process.  This means it is impossible to pass an empty filter
+# into a process using the environment variable.  However, we can still
+# test the case when the variable is not supplied (i.e., gtest_filter is
+# None).
+# pylint: disable-msg=C6403
+# pylint: enable-msg=C6403
+# Construct the command line.
+# An empty pattern + a non-empty one
+# The 2nd pattern is empty.
+# The last 2 patterns are empty.
+# Tests without leading '*'.
+# Value parameterized tests.
+# Value parameterized tests filtering by the sequence name.
+# Value parameterized tests filtering by the test name.
+# This assertion ensures that Google Test enumerated the tests as
+# opposed to running them.
+#!/usr/bin/env python
+#
+# Copyright 2009, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# where BUILD/DIR contains the built gtest_help_test_ file.
+# The help message must match this regex.
+#!/usr/bin/env python
+#
+# Copyright 2006, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Constants.
+# The command line flag for enabling/disabling listing all tests.
+# Path to the gtest_list_tests_unittest_ program.
+# The expected output when running gtest_list_tests_unittest_ with
+# --gtest_list_tests
+# TypeParam = (VeryLo{245}|class VeryLo{239})\.\.\.
+# TypeParam = int\s*\*( __ptr64)?
+# TypeParam = .*MyArray<bool,\s*42>
+# TypeParam = (VeryLo{245}|class VeryLo{239})\.\.\.
+# TypeParam = int\s*\*( __ptr64)?
+# TypeParam = .*MyArray<bool,\s*42>
+# GetParam\(\) = one line
+# GetParam\(\) = two\\nlines
+# GetParam\(\) = a very\\nlo{241}\.\.\.
+# GetParam\(\) = one line
+# GetParam\(\) = two\\nlines
+# GetParam\(\) = a very\\nlo{241}\.\.\.
+# The expected output when running gtest_list_tests_unittest_ with
+# --gtest_list_tests and --gtest_filter=Foo*.
+# Utilities.
+# The unit test.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# where BUILD/DIR contains the built gtest_output_test_ file.
+# The flag for generating the golden file
+# TODO(vladl@google.com): remove the _lin suffix.
+# At least one command we exercise must not have the
+# 'internal_skip_environment_and_ad_hoc_tests' argument.
+#: '.
+#: ', test_output)
+# *? means "find the shortest string that matches".
+# *? means "find the shortest string that matches".
+# some compilers output the name of type 'unsigned int' as 'unsigned'
+# Removes the color information that is not present on Windows.
+# Changes failure message headers into the Windows format.
+# Changes file(line_number) to file:line_number.
+# Spawns cmd in a sub-process, and gets its standard I/O file objects.
+# Set and save the environment properly.
+# Disables exception pop-ups on Windows.
+# Ensures we are modifying a copy.
+# A mis-configured source control system can cause \r appear in EOL
+# sequences when we read the golden file irrespective of an operating
+# system used. Therefore, we need to strip those \r's from newlines
+# unconditionally.
+# We want the test to pass regardless of certain features being
+# supported or not.
+# We still have to remove type name specifics in all cases.
+# This code is very handy when debugging golden file differences:
+#!/usr/bin/env python
+#
+# Copyright 2009 Google Inc. All Rights Reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Command to run the gtest_shuffle_test_ program.
+# The environment variables for test sharding.
+# 'TestCaseName.TestName'
+# Get the test lists in all 3 iterations, using random seed 1, 2,
+# and 3 respectively.  Google Test picks a different seed in each
+# iteration, and this test depends on the current implementation
+# picking successive numbers.  This dependency is not ideal, but
+# makes the test much easier to write.
+# Make sure running the tests with random seed 1 gets the same
+# order as in iteration 1 above.
+# Make sure running the tests with random seed 2 gets the same
+# order as in iteration 2 above.  Success means that Google Test
+# correctly restores the test order before re-shuffling at the
+# beginning of iteration 2.
+# Make sure running the tests with random seed 3 gets the same
+# order as in iteration 3 above.  Success means that Google Test
+# correctly restores the test order before re-shuffling at the
+# beginning of iteration 3.
+# If we run M tests on N shards, the same M tests should be run in
+# total, regardless of the random seeds used by the shards.
+#!/usr/bin/env python
+#
+# Copyright 2006, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Suppresses the 'Import not at the top of the file' lint complaint.
+# pylint: disable-msg=C6204
+# pylint: enable-msg=C6204
+# The environment variable for specifying the path to the premature-exit file.
+# Here we expose a class from a particular module, depending on the
+# environment. The comment suppresses the 'Invalid variable name' lint
+# complaint.
+# pylint: disable-msg=C6409
+# Initially maps a flag to its default value. After
+# _ParseAndStripGTestFlags() is called, maps a flag to its actual value.
+# Suppresses the lint complaint about a global variable since we need it
+# here to maintain module-wide state.
+# pylint: disable-msg=W0603
+# The environment variable overrides the default value.
+# The command line flag overrides the environment variable.
+# Skips the program name.
+# We don't increment i in case we just found a --gtest_* flag
+# and removed it from argv.
+# In case GetFlag() is called before Main(), we always call
+# _ParseAndStripGTestFlags() here to make sure the --gtest_* flags
+# are parsed.
+# On Windows, os.WEXITSTATUS() doesn't work and os.system() returns
+# the argument to exit() directly.
+# On Unix, os.WEXITSTATUS() must be used to extract the exit status
+# from the result of os.system().
+# The subprocess module is the preferrable way of running programs
+# since it is available and behaves consistently on all platforms,
+# including Windows. But it is only available starting in python 2.4.
+# In earlier python versions, we revert to the popen2 module, which is
+# available in python 2.0 and later but doesn't provide required
+# functionality (Popen4) under Windows. This allows us to support Mac
+# OS X 10.4 Tiger, which has python 2.3 installed.
+# communicate returns a tuple with the file object for the child's
+# output.
+# Changes made by os.environ.clear are not inheritable by child
+# processes until Python 2.6. To produce inheritable changes we have
+# to delete environment items with the del statement.
+# When 'env' is not None, backup the environment variables and replace
+# them with the passed 'env'. When 'env' is None, we simply use the
+# current 'os.environ' for compatibility with the subprocess.Popen
+# semantics used above.
+# Restore the old environment variables
+# if they were replaced.
+# Converts ret_code to match the semantics of
+# subprocess.Popen.returncode.
+# os.WIFEXITED(ret_code) should return True here.
+# We must call _ParseAndStripGTestFlags() before calling
+# unittest.main().  Otherwise the latter will be confused by the
+# --gtest_* flags.
+# The tested binaries should not be writing XML output files unless the
+# script explicitly instructs them to.
+# TODO(vladl@google.com): Move this into Subprocess when we implement
+# passing environment into it as a parameter.
+#!/usr/bin/env python
+#
+# Copyright 2009, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Constants.
+# The command line flag for enabling/disabling the throw-on-failure mode.
+# Path to the gtest_throw_on_failure_test_ program, compiled with
+# exceptions disabled.
+# Utilities.
+# The tests.  TODO(wan@google.com): refactor the class to share common
+# logic with code in gtest_break_on_failure_unittest.py.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Verifies that 'command' exits with code 1.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# We want the trailing '/' that the last "" provides in os.path.join, for
+# telling Google Test to create an output directory instead of a single file
+# for xml output.
+# TODO(wan@google.com): libtool causes the built test binary to be
+#   named lt-gtest_xml_outfiles_test_ instead of
+#   gtest_xml_outfiles_test_.  To account for this possibility, we
+#   allow both names in the following code.  We should remove this
+#   hack when Chandler Carruth's libtool replacement tool is ready.
+#!/usr/bin/env python
+#
+# Copyright 2006, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#x0A;Expected equality of these values:&#x0A;  1&#x0A;  2" type=""><![CDATA[gtest_xml_output_unittest_.cc:*
+#x0A;Expected equality of these values:&#x0A;  1&#x0A;  2" type=""><![CDATA[gtest_xml_output_unittest_.cc:*
+#x0A;Expected equality of these values:&#x0A;  2&#x0A;  3" type=""><![CDATA[gtest_xml_output_unittest_.cc:*
+#x0A;Failed&#x0A;XML output: &lt;?xml encoding=&quot;utf-8&quot;&gt;&lt;top&gt;&lt;![CDATA[cdata text]]&gt;&lt;/top&gt;" type=""><![CDATA[gtest_xml_output_unittest_.cc:*
+#x0A;Failed&#x0A;Invalid characters in brackets []" type=""><![CDATA[gtest_xml_output_unittest_.cc:*
+# This test currently breaks on platforms that do not support typed and
+# type-parameterized tests, so we don't run it under them.
+# datetime.strptime() is only available in Python 2.5+ so we have to
+# parse the expected datetime manually.
+# timestamp value should be near the current local time
+# p.signal is available only if p.terminated_by_signal is True.
+#!/usr/bin/env python
+#
+# Copyright 2006, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Replaces the source line information with a normalized form.
+# Replaces the source line information with a normalized form.
+# Removes the actual stack trace.
+#!/usr/bin/env python
+#
+# Copyright 2008, Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following disclaimer
+# in the documentation and/or other materials provided with the
+# distribution.
+#     * Neither the name of Google Inc. nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#defines in this header file will be included in during the generation of
+# Read the command line argument (the output directory for Version.h)
+# Read the first 1024 characters of the configure.ac file
+# Extract the version string from the AC_INIT macro
+#   The following init_expression means:
+#     Extract three integers separated by periods and surrounded by square
+#     brackets(e.g. "[1.0.1]") between "AC_INIT(" and ")". Do not be greedy
+#     (*? is the non-greedy flag) since that would pull in everything between
+#     the first "(" and the last ")" in the file.
+# Write the version information to a header file to be included in the
+# Info.plist file.
+#define GTEST_VERSIONINFO_SHORT %s.%s
+#define GTEST_VERSIONINFO_LONG %s.%s.%s

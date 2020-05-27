@@ -1,0 +1,2660 @@
+﻿/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/** no instance necessary */
+/**
+// Show that the client is started with arguments at command line
+// add an client side interceptor to provide the client machine name to the server application
+//EJBClientContext.getCurrent().registerInterceptor(0, new ClientInterceptor());
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
+//EL name
+//Read more about the @Model stereotype in this FAQ:
+//http://www.cdi-spec.org/faq/#accordion6
+// generate random name
+// generate random phone number
+// Generate a duplicate name;
+// initialize the map if null
+// Update the jobExecution if is newer
+// It's ok if when doesn't have any jobs yet to show
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class is used to show the latest job execution from each job instance
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class will update the contact to the proper case and apply a mask to the phone number
+// Update the name to use just the first letter as upper case
+// Apply mask to the phone number
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class will persist the contacts chunk at the database. It cleans the database if it's the first execution (no checkpoint)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class will read the file and return an instance of Contact to be imported
+// Here you can inject a property defined in import-file.xml
+// Here you can inject a property defined in import-file.xml
+// Verify if we have an previous checkpoint
+// update the checkpoint
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This batchlet just reports how many records was imported to database
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This listener modifies the Job to ABANDONED state if it was restarted once
+//If the JOB was already restarted once, mark it as abandoned
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This listener updates the exit status to show the exception
+// Write a custom Exit status
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/** Default value included to remove warning. Remove or modify at will. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// enable JPA
+// add sample data
+// enable CDI
+// Deploy our test datasource
+// Get configured validator directly from Server environment
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Linking the AddressValidator class with @Address annotation.
+// This constraint annotation can be used only on fields and method parameters.
+// The message to return when the instance of MyAddress fails the validation.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/* Asserts that the annotated string, collection, map or array is not null or empty. */
+/*
+// Custom Constraint @Address for bean validation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//community.jboss.org/people/giriraj.sharma27">Giriraj Sharma</a>
+/**
+// enable JPA
+// add sample data
+// enable CDI
+// Deploy our test datasource
+// Get configured validator directly from JBoss EAP environment
+/**
+/**
+/**
+// Setting city field of address.
+// Setting pin code equal to valid length of 6 characters.
+// Setting country name with valid length of more than 4 characters
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+// tell the container not to manage transactions
+/**
+// Inject a UserTransaction for manual transaction demarcation.
+// Inject a utility class for updating JPA entities
+/**
+/*
+/*
+/*
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/*
+/*
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/*
+/*
+// make some transactional changes
+/*
+// We tried to commit the transaction but it has already been rolled back (adding duplicate keys would
+// generate this condition although the example does check for duplicates).
+/*
+/*
+// ignore
+/**
+// list all key value pairs
+// retrieve the value associated with key
+// insert into the key/value table
+// update an existing row in the key/value table
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Transaction will be marked rollback only anyway utx.rollback();
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// It could be done before all the 'storing' but this is just to show that
+// the invoice is not delivered when we cause an EJBException
+// after the fact but before the transaction is committed.
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/** Default value included to remove warning. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+//Test fixtures
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/** Default value included to remove warning. Remove or modify at will. **/
+/*
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new feature in JPA 2.0.
+// criteria.select(contact).where(cb.equal(contact.get(Contact_.firstName), firstName));
+/**
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new feature in JPA 2.0.
+// criteria.select(contact).where(cb.equal(contact.get(Contact_.lastName), lastName));
+/**
+// Write the contact to the database.
+/**
+//    Map<String, Object> update(Contact contact) throws Exception {
+// Either update the contact or add it if it can't be found.
+/**
+//    Map<String, Object> delete(Contact contact) throws Exception {
+/*
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/**
+/**
+/**
+/**
+// Go add the new Contact.
+// Construct a location of created contact.
+// IGNORED: UriInfo methods throw this if called outside the scope of request,
+// that happens in ContactRegistrationTest.testRegister method.
+// Create an CREATED Response and pass the URI location back in case it is needed.
+// Handle bean validation issues
+// Handle the unique constrain violation
+// Handle generic exceptions
+/**
+// The client attempted to update the read-only Id. This is not permitted.
+// Verify if the contact exists. Return 404, if not present.
+// Apply the changes the Contact.
+// Create an OK Response and pass the contact back in case it is needed.
+// Handle bean validation issues
+// Handle the unique constrain violation
+// Handle generic exceptions
+/**
+// Handle generic exceptions
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// The @Dependent is the default scope is listed here so that you know what scope is being used.
+/**
+/**
+/**
+/**
+/**
+/**
+// Check to make sure the data fits with the parameters in the Contact model and passes validation.
+// Write the contact to the database.
+/**
+//    Map<String, Object> update(Contact contact) throws Exception {
+// Check to make sure the data fits with the parameters in the Contact model and passes validation.
+// Either update the contact or add it if it can't be found.
+/**
+//    Map<String, Object> delete(Contact contact) throws Exception {
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Create a bean validator and check for issues.
+// Check the uniqueness of the email address
+/**
+// ignore
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Configure the Date coming from the client to be in ISO-8601 instead of milliseconds from the epoch.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*</i> path, and contain a query parameter call
+/*")
+// The callback method to use
+// This is a simple safe pattern check for the callback method
+// Nothing needed
+// extract the callback method from the request query parameters
+// Request is not a JSONP request move on
+// Need to check if the callback method is safe
+// Will stream updated response
+// Create a custom response wrapper to adding in the padding
+// The stream is always ready
+// Nothing to do
+// Process the rest of the filter chain, including the JAX-RS request
+// Override response content and encoding
+// Write the padded updates to the output stream.
+// A simple check to see if the query parameter has been set.
+// Nothing to do
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// JAX-RS 2.0 import statement
+/**
+//        File[] libs = Maven.resolver().loadPomFromFile("pom.xml").resolve(
+//                "org.hibernate.javax.persistence:hibernate-jpa-2.1-api"
+//        ).withTransitivity().asFile();
+//            .addAsLibraries(libs)
+//.addAsWebInfResource("jboss-web.xml")
+//Set millis 498484800000 from 1985-10-10T12:00:00.000Z
+// Register an initial user
+// Register a different user with the same email
+//POSTs a null Contact
+// GETs a Contact with an non-existent ID 0000
+// POSTs a Contact
+// With the location, GETs the Contact
+// GETs the Contact ID and DELETEs it
+// GETs the Contact and checks if it has been deleted
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+// Start a call with a short duration
+// simulate something
+// wait below 200ms will force a timeout during get
+// If you handle the TimeoutException you are able to ignore the result
+// WARNING: there might be an ERROR at server side that the result is not delivered
+/**
+// Start a call with a short duration
+// you might do something here
+// get() without a timeout will wait until the remote result is present.
+/**
+/**
+/**
+// this method will return successfully, because the invocation will be successful!
+// this will not return successfully
+// the IllegalAccessException is thrown by the bean method
+// This is the expected behavior
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// call the example method with interface annotation
+// wait for the result and log it
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+//AppOneBean!org.jboss.as.quickstarts.ejb.multi.server.app.AppOne")
+/**
+// Call AppOne with the direct ejb: naming
+// Call AppTwo with the direct ejb: naming
+//AppTwoBean!" + AppTwo.class.getName();
+// Call AppTwo by using the local alias configured in
+// META-INF/ejb-jar.xml
+/**
+// invoke on the bean
+/**
+//AppTwoBean!org.jboss.as.quickstarts
+// invoke on the bean
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+//jaitechwriteups.blogspot.co.uk/2011/02/resource-and-new-lookup-attribute-how.html">Jaikiran's technical blog<a>
+//AppOneBean!org.jboss.as.quickstarts.ejb.multi.server.app.AppOne")
+/**
+//AppTwoBean!org.jboss.as.quickstarts.ejb.multi.server.app.AppTwo")
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*")
+//AppOneBean!org.jboss.as.quickstarts.ejb.multi.server.app.AppOne");
+// second invocation shows whether the same or a different node is reached
+//AppTwoBean!org.jboss.as.quickstarts.ejb.multi.server.app.AppTwo");
+// second invocation shows whether the same or a different node is reached
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// suppress output of client messages
+//localhost:8080");
+//MainAppBean!" + MainApp.class.getName();
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Invoke a stateless bean
+// Invoke a stateful bean
+/**
+// Let's lookup the remote stateless calculator
+// invoke on the remote calculator
+// try one more invocation, this time for subtraction
+/**
+// Let's lookup the remote stateful counter
+// invoke on the remote counter bean
+// now decrementing
+/**
+//use HTTP based invocation. Each invocation will be a HTTP request
+//localhost:8080/wildfly-services");
+//use HTTP upgrade, an initial upgrade requests is sent to upgrade to the remoting protocol
+//localhost:8080");
+// The JNDI lookup name for a stateless session bean has the syntax of:
+// ejb:<appName>/<moduleName>/<distinctName>/<beanName>!<viewClassName>
+//
+// <appName> The application name is the name of the EAR that the EJB is deployed in
+// (without the .ear). If the EJB JAR is not deployed in an EAR then this is
+// blank. The app name can also be specified in the EAR's application.xml
+//
+// <moduleName> By the default the module name is the name of the EJB JAR file (without the
+// .jar suffix). The module name might be overridden in the ejb-jar.xml
+//
+// <distinctName> : EAP allows each deployment to have an (optional) distinct name.
+// This example does not use this so leave it blank.
+//
+// <beanName> : The name of the session been to be invoked.
+//
+// <viewClassName>: The fully qualified classname of the remote interface. Must include
+// the whole package name.
+// let's do the lookup
+/**
+//jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+//use HTTP based invocation. Each invocation will be a HTTP request
+//localhost:8080/wildfly-services");
+//use HTTP upgrade, an initial upgrade requests is sent to upgrade to the remoting protocol
+//localhost:8080");
+// The JNDI lookup name for a stateful session bean has the syntax of:
+// ejb:<appName>/<moduleName>/<distinctName>/<beanName>!<viewClassName>?stateful
+//
+// <appName> The application name is the name of the EAR that the EJB is deployed in
+// (without the .ear). If the EJB JAR is not deployed in an EAR then this is
+// blank. The app name can also be specified in the EAR's application.xml
+//
+// <moduleName> By the default the module name is the name of the EJB JAR file (without the
+// .jar suffix). The module name might be overridden in the ejb-jar.xml
+//
+// <distinctName> : EAP allows each deployment to have an (optional) distinct name.
+// This example does not use this so leave it blank.
+//
+// <beanName> : The name of the session been to be invoked.
+//
+// <viewClassName>: The fully qualified classname of the remote interface. Must include
+// the whole package name.
+// let's do the lookup
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+//localhost:8080");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Inject the Session Context
+/**
+// Session context injected using the resource annotation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// invoke the intermediate bean using the identity configured in wildfly-config.xml
+// now lets programmatically setup an authentication context to switch users before invoking the intermediate bean
+//localhost:8080");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+//localhost:8080");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Inject the Session Context
+/**
+// Session context injected using the resource annotation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Inject the Secured EJB
+/**
+// Get security principal
+// Get user name from login principal
+// Get authentication type
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+//localhost:8080");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Inject the Session Context
+/**
+// Session context injected using the resource annotation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* Inject the Local interface of the GreeterEJB so we can invoke sayHello */
+/* An instance variable to hold the data bound in the inputText of the JSF page */
+/* And instance variable to hold the EJB response or exception message that is bound to the outputText on the JSF page */
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Set schedule to every 3 seconds (starting at second 0 of every minute).
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Expose an entity manager using the resource producer pattern
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// User is a keyword in some SQL dialects!
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.fsf.org.
+/**
+// For the demonstration just output a Hello World log every 5 seconds.
+// Persistent must be set to false (since it defaults to true) because the timer is not specific to this JVM.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Set up all the default values
+//127.0.0.1:8080";
+// Set up the namingContext for the JNDI lookup
+// Perform the JNDI lookups
+// Send the specified number of messages
+// Create the JMS consumer
+// Then receive the same number of messages that were sent
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Left empty intentionally
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
+/* Create a list with just the one value */
+/**
+/*
+/*
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+//www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld", "HelloWorldService");
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// Get a response from the WebService
+// Get a response from the WebService
+// Create the array of names for the WebService to say hello to.
+// Get a response from the WebService
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+//localhost:8080/";
+// Check that the server URL property was set. If it wasn't then use the default.
+// Ensure that the URL ends with a forward slash
+// Ensure the App Name is specified in the URL
+// Add the WDSL Document location to the URL
+// Set the deployment url
+// Get a response from the WebService
+// Get a response from the WebService
+// Create the array of names for the WebService to say hello to.
+// Get a response from the WebService
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Default to general error message that registration failed.
+// This shouldn't happen, but return the default messages
+// Start with the exception and recurse to find the root cause
+// Get the message from the Throwable class instance
+// This is the root cause message
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// @Named provides access the return value via the EL variable name "members" in the UI (e.g.,
+// Facelets or JSP view)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// using Hibernate Session and Criteria Query via Hibernate Native API
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// em.persist(member);
+// using Hibernate session(Native API) and JPA entitymanager
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// No-op
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Disable instantiation of this class
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// No-op
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Disable instantiation of this class
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Store the contact
+// Create an "ok" response with the persisted contact
+// Handle generic exceptions
+// delete all contacts
+// delete a specific contact
+// Fetch all contacts
+// Fetch a specific contact
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* class body intentionally left blank */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//localhost:8080/jaxrs-client/rest/contacts";
+// This test shows basic operations
+// 1 - drop all contacts
+// 2 - Create a new contact
+// 3 - Fetch Contact by Id
+// 4 - Fetch all Contacts
+// 5 - Delete a Contact
+// This test shows some basic operations using ASYNC invocations and java.util.concurrent.Future
+// 1 - drop all contacts ASYNC
+// 2 - Create a new Contact ASYNC
+// 3 - Delete a contact ASYNC
+// 4 - Fetch All Contacts ASYNC
+// This test shows how to use javax.ws.rs.client.InvocationCallback
+// 1 - drop all contacts
+// 2 - Create a InvocationCallback
+// Completed the invocation with no contact
+// It should fail
+// 3 - Invoke the service
+// Shows how to use a delayed REST invocation
+// 1 - Drop all contacts
+// 2 - Create a new Contact Invocation
+// 3 - Create a new list Contacts Invocation
+// 4 - Synch Save contact
+// 5 - Async List contacts
+// Shows how to use Request and Response filters
+// 1 - Drop all contacts
+// 2 - Create a new Contact Invocation
+// 3 - Fetch all Contacts
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//private static final String getRequestUrl() = "http://localhost:8080/jaxrs-client/rest/contacts";
+// This test shows basic operations
+// 1 - drop all contacts
+// 2 - Create a new contact
+// 3 - Fetch Contact by Id
+// 4 - Fetch all Contacts
+// 5 - Delete a Contact
+// This test shows some basic operations using ASYNC invocations and java.util.concurrent.Future
+// 1 - drop all contacts ASYNC
+// 2 - Create a new Contact ASYNC
+// 3 - Delete a contact ASYNC
+// 4 - Fetch All Contacts ASYNC
+// This test shows how to use javax.ws.rs.client.InvocationCallback
+// 1 - drop all contacts
+// 2 - Create a InvocationCallback
+// Completed the invocation with no contact
+// It should fail
+// 3 - Invoke the service
+// Shows how to use a delayed REST invocation
+// 1 - Drop all contacts
+// 2 - Create a new Contact Invocation
+// 3 - Create a new list Contacts Invocation
+// 4 - Synch Save contact
+// 5 - Async List contacts
+// Shows how to use Request and Response filters
+// 1 - Drop all contacts
+// 2 - Create a new Contact Invocation
+// 3 - Fetch all Contacts
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This filter will log response date and status
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This filter adds a username to SavedBy field
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//localhost:8080/jaxws-addressing/AddressingService";
+// construct proxy
+//www.jboss.org/jbossws/ws-extensions/wsaddressing",
+// invoke method
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jbossws/ws-extensions/wsaddressing")
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jbossws/ws-extensions/wsaddressing",
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//localhost:8080/jaxws-ejb-endpoint/EJB3Bean";
+//jsr181pojo.samples.jaxws.ws.quickstarts.jboss.org/", "EJB3BeanService");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//localhost:8080/jaxws-pojo-endpoint/JSEBean";
+//jsr181pojo.samples.jaxws.ws.quickstarts.jboss.org/", "JSEBeanService");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//jsr181pojo.samples.jaxws.ws.quickstarts.jboss.org/", name = "JSEBean")
+//jsr181pojo.samples.jaxws.ws.quickstarts.jboss.org/", partName = "return")
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//localhost:8080/jaxws-retail/ProfileMgmtService/ProfileMgmt";
+//org.jboss.ws/samples/retail/profile", "ProfileMgmtService");
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//org.jboss.ws/samples/retail/profile",
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// A helper service for persisting key value pairs
+// only process messages of the form key=value
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/*
+// we want to deliver JMS messages withing an XA transaction
+// use our JMS queue. Note that messages must be persistent in order for them to survive an AS restart
+// must be called inside a transaction
+// list all key value pairs
+/**
+// delete the requested key
+// delete all entities
+// insert a new entry into the key/value table
+// there is already a value for this key - update it with the new value
+/**
+// a row was inserted or modified notify the message consumer
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// page content describing the quickstart and providing a form to perform basic operations against a database
+// use CDI to inject a bean that will perform JPA and JMS operations
+/**
+/*
+// perform the database operation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Transaction will be marked rollback only anyway utx.rollback();
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
+// EL name
+// Read more about the @Model stereotype in this FAQ:
+// http://www.cdi-spec.org/faq/#accordion6
+// Default to general error message that registration failed.
+// This shouldn't happen, but return the default messages
+// Start with the exception and recurse to find the root cause
+// Get the message from the Throwable class instance
+// This is the root cause message
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// @Named provides access the return value via the EL variable name "members" in the UI (e.g.
+// Facelets or JSP view)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).where(cb.equal(member.get(Member_.email), email));
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* class body intentionally left blank */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Validates member using bean validation
+// Create an "ok" response
+// Handle bean validation issues
+// Handle the unique constrain violation
+// Handle generic exceptions
+/**
+// Create a bean validator and check for issues.
+// Check the uniqueness of the email address
+/**
+/**
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Stateless annotation eliminates the need for manual transaction demarcation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Deploy our test datasource
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// @Named provides access the return value via the EL variable name "members" in the UI (e.g.
+// Facelets or JSP view)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).where(cb.equal(member.get(Member_.email), email));
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* class body intentionally left blank */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Validates member using bean validation
+// Create an "ok" response
+// Handle bean validation issues
+// Handle the unique constrain violation
+// Handle generic exceptions
+/**
+// Create a bean validator and check for issues.
+// Check the uniqueness of the email address
+/**
+/**
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Stateless annotation eliminates the need for manual transaction demarcation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Deploy our test datasource
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// @Named provides access the return value via the EL variable name "members" in the UI (e.g.,
+// Facelets or JSP view)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).where(cb.equal(member.get(Member_.email), email));
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/** Default value included to remove warning. Remove or modify at will. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Stateless annotation eliminates the need for manual transaction demarcation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Deploy our test datasource
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
+// EL name
+// Read more about the @Model stereotype in this FAQ:
+// http://www.cdi-spec.org/faq/#accordion6
+// Default to general error message that registration failed.
+// This shouldn't happen, but return the default messages
+// Start with the exception and recurse to find the root cause
+// Get the message from the Throwable class instance
+// This is the root cause message
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* class body intentionally left blank */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Validates member using bean validation
+// Create an "ok" response
+// Handle bean validation issues
+// Handle the unique constrain violation
+// Handle generic exceptions
+/**
+// Create a bean validator and check for issues.
+// Check the uniqueness of the email address
+/**
+/**
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Stateful annotation eliminates the need for manual transaction demarcation
+// The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
+// EL name
+// Read more about the @Model stereotype in this FAQ:
+// http://www.cdi-spec.org/faq/#accordion6
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// @Named provides access the return value via the EL variable name "members" in the UI (e.g.,
+// Facelets or JSP view)
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/** Default value included to remove warning. Remove or modify at will. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* class body intentionally left blank */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Use @SupressWarnings to force IDE to ignore warnings about "genericizing" the results of
+// this query
+// We recommend centralizing inline queries such as this one into @NamedQuery annotations on
+// the @Entity class
+// as described in the named query blueprint:
+// https://blueprints.dev.java.net/bpcatalog/ee5/persistence/namedquery.html
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// TODO Auto-generated constructor stub
+/**
+// create a new member, remember :) the memberservice do not
+// call the initMethod if an error occur during the previous persist request
+// all parameters are filled, register
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
+// EL name
+// Read more about the @Model stereotype in this FAQ:
+// http://www.cdi-spec.org/faq/#accordion6
+// Default to general error message that registration failed.
+// This shouldn't happen, but return the default messages
+// Start with the exception and recurse to find the root cause
+// Get the message from the Throwable class instance
+// This is the root cause message
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// @Named provides access the return value via the EL variable name "members" in the UI (e.g.
+// Facelets or JSP view)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).where(cb.equal(member.get(Member_.email), email));
+// Swap criteria statements if you would like to try out type-safe criteria queries, a new
+// feature in JPA 2.0
+// criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* class body intentionally left blank */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Validates member using bean validation
+// Create an "ok" response
+// Handle bean validation issues
+// Handle the unique constrain violation
+// Handle generic exceptions
+/**
+// Create a bean validator and check for issues.
+// Check the uniqueness of the email address
+/**
+/**
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// The @Stateless annotation eliminates the need for manual transaction demarcation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Deploy our test datasource
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// a JBoss Logging 3 style level (FATAL, ERROR, WARN, INFO, DEBUG, TRACE), or a special level (OFF, ALL).
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// ** DISCLAIMER **
+// This example is contrived and overly verbose for the purposes of showing the
+// different logging methods. It's generally not recommended to recreate exceptions
+// or log exceptions that are being thrown.
+// create localized ParseException using method from bundle with details from ex
+// log a message using nex as the cause
+// throw a WebApplicationException (400) with the localized message from nex
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// used to demonstrate exceptions
+// ======================================================================
+// Hello "name"!
+// ======================================================================
+// The name "crashme" is a contrived example to demonstrate how to throw
+// a localized exception with another exception as the cause.
+// ======================================================================
+// Hello "name" in language
+// ======================================================================
+// The localized name "crashme" is a alos contrived example to demonstrate how to throw
+// a localized exception with another exception as the cause.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//docs.oracle.com/javaee/6/api/javax/ws/rs/WebApplicationException.html
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This Runnable class is used to delete all Products
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class simulates a long running task that could take many seconds to be executed.
+// here we simulate an access to Products listing
+// We simulate now a long running task
+// after executing a long running task we return a result
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This Runnable class is used to persist any Product
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/* class body intentionally left blank */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Here we use Instance so PersistTask can have CDI injections available
+// Here we use Instance so LongRunningTask can have CDI injections available
+// Here we use Instance so DeleteTask can have CDI injections available
+/**
+// Store the product on a separated Thread
+// Create an "ok" response with the persisted contact
+// Handle generic exceptions
+// wait for the result to be available
+// Return the result
+// Delete all Products on a separated Thread
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//private static final String REST_TARGET_URL = "http://localhost:8080/managed-executor-service/rest/products";
+// This test shows basic operations
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// a number between 1 and 100
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Events producers
+// Pay Action
+// paymentAction
+// Reset Action
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// credit or debit
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Using the RESTEasy libraries, initiate a client request
+// Set url as target
+// Be sure to set the mediatype of the request
+// Request has been made, now let's get the response
+// Check the HTTP status of the request
+// HTTP 200 indicates the request is OK
+// We have a good response, let's now read it
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Here the request is put in asynchronous mode
+// This method will return immediately when invoked,
+// the actual execution will run in a separate thread.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// This is just to simulate a long running operation for demonstration purposes.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// to see log messages at runtime, check the terminal window where you started JBoss EAP.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//oxforddictionaries.com/page/200">sometimes y</a>) from all request parameter values. To achieve this, a wrapper
+/*")
+// It is common to save a reference to the ServletContext here in case it is needed
+// in the destroy() call.
+// To see this log message at run time, check out the terminal window where you started JBoss EAP.
+// Here, we wrap the request so that the servlet (and other filters further down the chain)
+// will see our filteredParams rather than the original request's parameters. Wrappers can be
+// as benign or as crazy as you like. Use your imagination!
+// Some notes on other filter use cases:
+// 1. We could have also wrapped the response object if we wanted to capture
+// or manipulate the output
+// 2. If we just wanted to examine the request or session, we could do that in
+// a filter or in a Request Listener (see ParameterDumpingRequestListener)
+// 3. You don't have to wrap the request or response at all if you just want
+// to set request or session attributes
+// 4. You don't have to call chain.doFilter(). The filter can handle the request
+// directly (for example, to forward to a login page or send a "403 Forbidden"
+// response if the user is not logged in)
+// This is where other filters, and ultimately the servlet or JSP, get a chance to handle the request
+// The try .. finally is important here because another filter or the
+// servlet itself may throw an exception
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Get security principal
+// Get user name from login principal
+// Get authentication type
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// avoid INFO output for the client demo
+// Create the JNDI InitialContext, configuring it for use with JBoss EJB
+/*
+/*
+/*
+/*
+/* The remote view fully qualified class name */
+/* Lookup the remote interface of the shopping cart */
+/* invoke on the remote interface */
+/* Try to access the cart after checkout */
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// do nothing
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Check the uniqueness of the email address
+/**
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+/*
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// Check the uniqueness of the email address
+/**
+// ignore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+/*
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// given
+// when
+// then
+// when
+// then
+// when
+// then
+// given
+// when
+// then
+// given
+// when
+// then
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// given
+// when
+// then
+// given
+// when
+// then
+// given
+// when
+// then
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// JSON: uncomment to include json support (note json is not part of the JAX-RS standard)
+// import com.fasterxml.jackson.annotation.JsonIgnore;
+/**
+// JSON: uncomment to include json support (note json is not part of the JAX-RS standard)
+// @JsonIgnore
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Construct the URI for the newly created resource and put in into the Location header of the response
+// (assumes that there is only one occurrence of the task title in the request)
+// JSON: include "application/json" in the @Produces annotation to include json support
+// @Produces({ "application/xml", "application/json" })
+// JSON: include "application/json" in the @Produces annotation to include json support
+// @Produces({ "application/xml", "application/json" })
+// JSON: include "application/json" in the @Produces annotation to include json support
+// @Produces({ "application/xml", "application/json" })
+// Utility Methods
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// given
+// when
+// then
+// when
+// then
+// when
+// then
+// given
+// when
+// then
+// given
+// when
+// then
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// given
+// when
+// then
+// given
+// when
+// then
+// given
+// when
+// then
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/*
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/**
+/**
+// Extract the temperature
+// Use the scale included with the sourceTemperature OR the defaultScale provided.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// Convert our Temperature
+// Celsius to Fahrenheit
+// Easter egg for Absolute Zero.
+// Fahrenheit to Celsius
+// Easter egg for Absolute Zero.
+// Should never get here!
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// the racer is ready
+// race on, run baby run
+// game over
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// retrieve the job operator
+// start the race.xml job
+// would be nice if the job start would provide a Future object wrt the job execution, perhaps something for next spec revision
+// just check every 1ms if the job status is completed
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// TODO this app must have one, but here you process a read item, in case the item should be discarded just return null
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+// retrieve the items to read, let's just simulate something, a list containing a random number of objects
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// simulate a item write op, sleep 10ms for each item to write
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// the task to submit (to the managed executor service)
+// this task will run in a different thread, but it will be executed with the app invocation context available when the task was submitted, which means class loading, JNDI lookups, or even security roles, will work as expected
+// as an example, let's lookup the managed scheduled executor service's default instance, from the standard JNDI name, scoped to the web app
+// schedule a task and wait for its execution
+// TODO all apps have at least one
+// submit the task and wait for its execution
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// a pit stop simulation, a random 1-5ms thread sleep
+// the response may include payload, such as JSON data, here we just return the basic "OK" response.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// build the REST service uri from race's environment
+//")
+// create and setup the new standard JAX-RS client (and its web target)
+// get current time
+// box box box, i.e. send a request to the Box rest service, with the racers name provided as param 'racer'
+// broadcast a msg indicating the duration of the pit stop operation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+// create response tmp queue
+// send request
+// receive response
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// just echo the msg
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// 1. build an object with nested structure
+// simple pairs
+// nested object
+// nested object array
+// 2. write the object to a string
+// 3. read object from the string
+// 4. sanity check :)
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// This class is the WebSocket client
+//echo.websocket.org";
+// .encoders(Arrays.asList(SessionMessageEncoder.class)) // too bad this doesn't work...
+// To use secure WebSocket (wss://) we must supply an SSLContext via the ClientEndpointConfig
+// Unfortunately there is no API standard way to do this, so it's being set here via a user property which is Undertow
+// specific.
+// Additionally, there is no connectToServer method that accepts an annotated Object and a ClientEndpointConfig
+// Therefore we're forced to use the method that accepts an Endpoint instance, so we're forced to implement Endpoint,
+// making annotations irrelevant.
+// reconnect; probably should do this asynchronously and add an exponential backoff
+// reconnect?
+// JSON is overkill for this but it's good as an example
+// JSON is overkill for this but it's good as an example
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//monospacesoftware.com">Paul Cowan</a>
+// the following states are used in the AQS.
+// return 1 if we allow the requestor to proceed, -1 if we want the requestor to block.
+// used as a mechanism to set the state of the Sync.
+// do not use setState() directly since this won't notify parked threads.
+// do not use setState() directly since this won't notify parked threads.
+// the 1 is a dummy value that is not used.
+// the 1 is a dummy value that is not used.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// WebSocket does not honor CDI contexts in the default configuration; by default a new object is created for each new
+// websocket.
+// We can work around this by supplying a custom ServerEndpointConfig.Configurator that returns the same instance of the
+// endpoint for each new websocket. Unfortunately this precludes us from using annotations, and forces us to extend the
+// abstract class Endpoint, and forces us to add the server endpoint programmatically upon startup of the servlet
+// context.
+// Endpoint does not handle onMessage; messages are handled by a subclass of MessageHandler.
+// Unfortunately onMessage does not pass the Session as a parameter (although it can be injected when using
+// annotations).
+// Therefore we do not know which session the message came from, which precludes us from using a single instance
+// of MessageHandler to handle all session.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// This class is responsible to encode the Bidding object in a String
+// that will be sent to clients
+// It uses the JSON-P API to create a JSON representation
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// It starts a Thread that notifies all sessions each second
+// store the session once that it's opened
+// remove the session after it's closed
+// This method receives a Message that contains a command
+// The Message object is "decoded" by the MessageDecoder class
+// Exception handling
+// This method sends the same Bidding object to all opened sessions
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class represents the message from clients to the Websocket endpoint
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// This class is responsible to "decode" the received String
+// from clients in a Message object
+// create a Message object from JSON
+// It uses the JSON-P API to parse JSON content
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class represents the Bidding of an item
+// millisecs
+// The bids uses a comparator to order it based on the its date.
+// Just update the price if the bidding is not SOLD or EXPIRED
+// Update the status and due date if the bidding had not started yet
+// change the status to SOLD if the bidding is more than the buyNowPrice
+// Sell the item using its item "buy now" price
+// calculate how much seconds left to the bidding to become EXPIRED
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// obtain a singleton instance of the Bidding
+// expire the Bidding if there's no more seconds left for the due date
+// creates a new bidding
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+//This class represents a Item that is being offered
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// The singleton instance of this class.
+// A thread safe booking counter
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// The back-end resource for managing bookings
+// The transaction ID for this transaction
+/**
+/**
+// Log the event and invoke the prepare operation
+// on the back-end logic.
+// Map the return value from
+// the business logic to the appropriate Vote type.
+/**
+// Log the event and invoke the commit operation
+// on the backend business logic.
+/**
+// Log the event and invoke the rollback operation
+// on the backend business logic.
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant")
+/**
+// get the transaction ID associated with this thread
+// enlist the Participant for this service:
+// invoke the backend business logic:
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant")
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant")
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant", "RestaurantServiceATService"));
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant",
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant",
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/*
+//" + openshift + "/RestaurantServiceAT");
+/**
+// do nothing, not active
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+//localhost:8080/wsat-simple/RestaurantServiceAT?wsdl");
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant",
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/wsat/simple/Restaurant",
+/*
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// Check the booking is visible after the transaction has committed.
+/**
+// Check the booking is visible after the transaction has committed.
+/**
+// do nothing, not active
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// The ID of the corresponding transaction
+// A list of values added to the set. These are removed from the set at
+// compensation time.
+// table of currently active participants
+/**
+/**
+/**
+// nothing to do here as the item has already been added to the set
+/**
+/**
+/**
+/************************************************************************/
+/* tracking active participants */
+/************************************************************************/
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/coordinatorcompletion/set")
+/**
+/*
+/*
+// enlist the Participant for this service:
+// invoke the back-end business logic
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/coordinatorcompletion/set")
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/coordinatorcompletion/set")
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/Set",
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/Set", "SetServiceBA"), SetServiceBA.class);
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+//localhost:8080/test/SetServiceBA?wsdl");
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/coordinatorcompletion/set",
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/coordinatorcompletion/set",
+/*
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// do nothing, already closed
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// nothing to do here as the item has already been added to the set
+/**
+// Compensate work
+/**
+// Compensate work done by the service
+// Compensate work done by the service
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/participantcompletion/set")
+/**
+// enlist the Participant for this service:
+// invoke the back-end business logic
+/*
+// tell the coordinator manager we have finished our work
+/*
+/*
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/** Default value included to remove warning. **/
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/participantcompletion/set")
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/participantcompletion/set")
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/Set",
+/**
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/Set", "SetServiceBA"), SetServiceBA.class);
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+//localhost:8080/test/SetServiceBA?wsdl");
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/participantcompletion/set",
+//www.jboss.org/jboss-jdf/jboss-as-quickstart/helloworld/wsba/participantcompletion/set",
+/*
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+// do nothing, already closed
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Inject instance of error holder
+/*
+// Set SAX error handler. So errors atleast show up in console
+/*
+// empty/text nodes dont have name
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Inject instance of error holder
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+// validate against schema.
+//www.w3.org/2001/XMLSchema").newSchema(schema)
+// parse file into catalog
+// ask extending class to parse
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/*
+/**
+// data, catalog which is displayed in h:dataTable
+/*
+/**
+/**
+// Trigger parser and clear errors
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+// Mark this class as servlet and indicates that requests to
+// '/upload' URL in application be handled by this servlet.
+// configure Servlet 3.0 multipart. Limit file size to 1MB.
+/**
+// name of form fields which are looked up in multipart request
+// override 'POST' handler. Appliction will use 'POST' to send 'multipart/form-data'
+/*
+/*
+/*
+/*
+// this is bad thing, lets throw exception to make user aware of that?

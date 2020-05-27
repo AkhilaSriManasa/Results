@@ -1,0 +1,202 @@
+﻿Copyright (C) 2012 Justin Rusbatch
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+# Compilify.net
+
+Compilify makes the .NET compiler completely portable and accessible through a fast, simple interface that fosters sharing and collaboration.
+
+Based on a [blog post](https://github.com/fekberg/Roslyn-Hosted-Execution) by Filip Ekberg.
+
+## Running Compilify locally
+
+Debugging this project requires that [MongoDB](http://www.mongodb.org/display/DOCS/Home) and [RabbitMQ](http://www.rabbitmq.com/) be running locally.
+
+Nuget packages will be missing the first time the solution is opened. They will be retrieved from Nuget the first time you attempt to build. 
+
+The solution contains the web application and the background worker. Visual Studio can be configured to start both simultaneously while debugging.
+
+In Visual Studio:
+
+1.  Right-click the Solution node in the Solution Explorer window.
+2.  Select "Set StartUp Projects".
+3.  Choose "Multiple startup projects".
+4.  Set the "Action" for "Web" and "Worker" to "Start".
+Copyright (C) 2008 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+  
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+##########
+
+This directory contains the fonts for the platform. They are licensed
+under the Apache 2 license.
+/// <summary>
+/// The ID of the user who created the post, or null if the post was created by an anonymous user.</summary>
+/// <summary>
+/// If <c>true</c>, the post will not be displayed in search results. However, it will still be accessible via 
+/// direct access.</summary>
+/// <summary>
+/// The page lanage.</summary>
+/// <summary>
+/// The UTC date and time that the post was first persisted to the data store.</summary>
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+// No slug was specified, so we need to get the next one
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+// var info = model.GetSemanticInfo(node);
+// This smells terrible.
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+// ReSharper disable UnusedVariable
+// ReSharper restore UnusedVariable
+/// <summary>
+/// Passes a task returning function into another task returning function so that
+/// it can decide when it starts and returns a task that completes when all are finished
+/// </summary>
+// Then extesions
+// NOTE: This test will fail when executed by NCrunch.
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+//", "rabbitmq://");
+// 404s
+// ensure response is the right code
+// Redirect the user to /:slug instead of /:slug/1
+// There should only be one URL to represent a given resource, this is just a shortcut for the 
+// user to locate the URL representing the latest version of a given post
+// TODO: Remove dependency on ViewBag
+/// <summary>
+/// Redirects HTTP requests to HTTPS.</summary>
+/// <remarks>
+/// Overriding the default behavior is necessary to avoid a redirect loop. See this article for details:
+/// http://support.appharbor.com/kb/tips-and-tricks/ssl-and-certificates </remarks>
+/// <summary>
+/// Inserts the Google Analytics script if a valid account token is specified in the web.config and 
+/// debugging is not enabled for the current HttpContext.</summary>
+//ssl' : 'http://www') + '.google-analytics.com/ga.js';
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+// Log the exception, but do not mark it as observed. The process will be terminated and restarted 
+// automatically by AppHarbor
+//", "rabbitmq://");
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]

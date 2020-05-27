@@ -1,0 +1,33 @@
+﻿
+***********other formats****************
+VC.db
+gitattributes
+gitignore
+sln
+vcxproj
+vcxproj.filters
+
+***********source code file list***************
+02_BullCowGame-master/02_BullCowGame-master/BullCowGame/FBullCowGame.cpp
+02_BullCowGame-master/02_BullCowGame-master/BullCowGame/main.cpp
+
+***********h file list***************
+02_BullCowGame-master/02_BullCowGame-master/BullCowGame/FBullCowGame.h
+
+***********md file list***************
+02_BullCowGame-master/02_BullCowGame-master/LICENSE.md
+02_BullCowGame-master/02_BullCowGame-master/README.md
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+02_BullCowGame-master/02_BullCowGame-master/.gitattributes
+02_BullCowGame-master/02_BullCowGame-master/.gitignore
+02_BullCowGame-master/02_BullCowGame-master/Section_02.sln
+02_BullCowGame-master/02_BullCowGame-master/Section_02.VC.db
+02_BullCowGame-master/02_BullCowGame-master/BullCowGame/BullCowGame.vcxproj
+02_BullCowGame-master/02_BullCowGame-master/BullCowGame/BullCowGame.vcxproj.filters
+
+***********other code file list***************

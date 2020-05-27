@@ -1,0 +1,12 @@
+﻿/*
+//github.com/mohaps/lrucache11
+//github.com/mohaps/lrucache
+// compile with g++ -std=c++11 -o sample_test LRUCache11Test.cpp
+// test the vanilla version of the cache
+// with no lock
+// Test a thread-safe version of the cache with a std::mutex
+// with a lock
+// this is a simple example, seen in the Readme
+// tests LRUCache with vectors as key
+// types for our cache
+//must be const for LRUCache(?)

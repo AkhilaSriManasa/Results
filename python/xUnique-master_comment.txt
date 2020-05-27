@@ -1,0 +1,21 @@
+﻿#!/usr/bin/env python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# check project path
+# initialize root content
+# project.pbxproj is an utf-8 encoded file
+# Backward compatibility using suffix
+# project file must be in ASCII format
+# project.pbxproj is an utf-8 encoded file
+# remove line with non-existing element
+# remove incorrect entry that somehow does not exist in project node tree
+# project.pbxproj is an utf-8 encoded file
+# files search and sort
+# children search and sort
+# PBX search and sort
+# normal output
+# workaround for PBXTargetDependency referring target that have not been iterated
+# re-calculate remoteGlobalIDString to a new length 32 MD5 digest
+#{}'.format(self.nodes[container_item_proxy_hex]['isa'],
+# no useful key in some build phase types, use its isa value
+# root PBXGroup has neither path nor name, give a new name 'PBXRootGroup'

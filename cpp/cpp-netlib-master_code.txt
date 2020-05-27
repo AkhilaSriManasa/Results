@@ -1,0 +1,530 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\mime\example\basic_parsing.cpp
+//
+//          Copyright Marshall Clow 2009-2010
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//
+//
+//	typedef std::pair < std::string, string_type > header_type;
+// typedef boost::mime::mime_part<>	mime_part;
+//	std::cout << "    " << berr.what () << std::endl;
+//	std::ofstream out ( (std::string ( argv[i] ) + "-Results").c_str (),
+// std::ios::binary );
+//	out << rmp;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\mime\example\basic_usage.cpp
+//
+//          Copyright Marshall Clow 2009-2010
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//
+//
+//	typedef std::pair < std::string, string_type > header_type;
+//	(1) a really simple part
+//	Three trips around the house before we go through the door.
+//	Make a part, copy it onto the heap, and wrap it into a shared pointer.
+//	Build a multipart
+//	stream it out to a string, then make a new part from the string
+//	Write the differences out to files for examination
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\mime\test\mime-roundtrip.cpp
+/*
+//	typedef std::pair < std::string, string_type > header_type;
+// using namespace boost::mime;
+// Following test is removed because the file it used often tripped
+// false-positives when scanned by virus checkers.
+//    framework::master_test_suite().add ( BOOST_TEST_CASE( boost::bind (
+// test_roundtrip, "TestMessages/00001136" )));
+//	test cases that fail
+//  framework::master_test_suite().add ( BOOST_TEST_CASE( boost::bind (
+// test_roundtrip, "TestMessages/0019-NoBoundary" )));
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\mime\test\mime-structure.cpp
+/*
+//	typedef std::pair < std::string, string_type > header_type;
+//	std::cout << "    " << berr.what () << std::endl;
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http_client.cpp
+// Copyright 2008, 2014 Dean Michael Berris <dberris@google.com>
+// Copyright 2014 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//[ http_client_main
+/*`
+//]
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http_client1.cpp
+//          Copyright Dean Michael Berris 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\simple_wget.cpp
+//            Copyright (c) Glyn Matthews 2009, 2010.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//[ simple_wget_main
+/*`
+// namespace
+//]
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\trivial_google.cpp
+// Copyright 2014 Dean Michael Berris <dberris@google.com>
+// Copyright 2014 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.google.com/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\uri_builder.cpp
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\atom\atom.cpp
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+// namespace atom
+// namespace network
+// namespace boost
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\atom\main.cpp
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http\fileserver.cpp
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// chunk it up page by page
+// Maximum size for incoming request bodies.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http\hello_world_async_server_with_work_queue.cpp
+/*
+//www.boost.org/LICENSE_1_0.txt)
+// This is needed to terminate the worker queue, and must be visible to the signal handler.
+/**
+/**
+/**
+/**
+/**
+// some heavy work!
+// the thread group
+// setup asio::io_service
+// io_service threads
+// the shared work queue
+// worker threads that will process the request; off the queue
+// setup the async server
+// setup clean shutdown
+// run the async server
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http\hello_world_client.cpp
+//            Copyright (c) Glyn Matthews 2010.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//[ hello_world_client_main
+/*`
+/*<< Creates the client. >>*/
+/*<< Creates a request using a URI supplied on the command
+/*<< Gets a response from the HTTP server. >>*/
+/*<< Prints the response body to the console. >>*/
+//]
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http\hello_world_server.cpp
+// Copyright 2009 (c) Tarro, Inc.
+// Copyright 2009 (c) Dean Michael Berris <mikhailberis@gmail.com>
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//
+//[ hello_world_server_main
+/*`
+/*<< Defines the server. >>*/
+/*<< Defines the request handler.  It's a class that defines two
+/*<< This is the function that handles the incoming request. >>*/
+/*<< Creates the request handler. >>*/
+/*<< Creates the server. >>*/
+/*<< Runs the server. >>*/
+//]
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http\one_liner.cpp
+// Copyright Dean Michael Berris 2010.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//[ http_one_liner_main
+/*`
+/*<< The client sends an HTTP request to the server, and the output
+//www.boost.org/")));
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\http\ssl\ssl_server.cpp
+/*
+//www.openssl.org/)
+//www.boost.org/LICENSE_1_0.txt)
+/**
+/**
+// setup boost::asio::io_service
+// Initialize SSL context
+// Set keys
+// setup the async server
+// setup clean shutdown
+// run the async server
+// we are stopped - shutting down
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\rss\main.cpp
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\example\rss\rss.cpp
+//            Copyright (c) Glyn Matthews 2011.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+// namespace rss
+// namespace network
+// namespace boost
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\experiment\utils_base64_experiment.cpp
+// Since we're having issues with libc++ on OS X we're excluding this in the
+// meantime if we're using libc++
+// the main entry point does nothing; the tests are run by constructors
+// of testing classes, which are executed by global variables
+// macros to build names of test classes ans gobal runner variables
+// testing block sizes (im MB) which let the tests run approximately
+// 5s on my machine in the optimized mode
+// testing block sizes (im MB) which let the tests run approximately
+// 5s on my machine in the not optimized mode
+// the class name of a test suite; base64 has to be defined as a namespace
+// name with an alternative implementation of the base64 encoding interface
+// the code which actually performs the encoding; base64 has to be defined
+// as a namespace name - see above
+// testing the code from experimental/base64-stateless.hpp
+// NOTE(dberris): Only do this if we're NOT using libc++.
+// enable the second test case, which encodes the input buffer chunk by chunk
+// and remembers the encoding state to be able to continue
+// testing the code from experimental/base64-stateful_buffer.hpp
+// _LIBCPP_VERSION
+// testing the code from experimental/base64-stateful_transform.hpp
+// testing the code from experimental/base64-stateful_iterator.hpp
+// testing the code from experimental/base64-standalone.hpp,
+// which has become the code in boost/network/utils/base64/encode.hpp
+// redefine the testing code to use the iostream implementation from
+// boost/network/utils/base64/encode-io.hpp which depends on the
+// interface from boost/network/utils/base64/encode.hpp
+// testing the iostream implementation with the code from
+// boost/network/utils/base64/encode.hpp
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\src\client.cpp
+// Copyright 2011 Dean Michael Berris (dberris@google.com).
+// Copyright 2011 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\src\server_request_parsers_impl.cpp
+// Copyright 2013 Google, Inc.
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// <typename Attrib, typename T, typename Enable>
+// namespace traits
+// namespace spirit
+// namespace boost
+// namespace http
+// namespace network
+// namespace boost
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\client_server_include_failure.cpp
+//            Copyright (c) Glyn Matthews 2010.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+//
+// The problem here is a bizarre compilation failure in including
+// these two files, and instantiating a client.  It's described at
+// http://github.com/cpp-netlib/cpp-netlib/issues#issue/13
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http_server_async_less_copy.cpp
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// do nothing here.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\utils_base64_test.cpp
+// proves that all public functions are compilable; the result check
+// is very minimum here, so that the test doesn't look so stupid ;-)
+// check string literal
+// check std::string
+// check array of chars
+// check boost::array of chars
+// check std::vector of chars
+// check array of ints
+// check boost::array of ints
+// check std::vector of ints
+// check that base64::encode_rest is compilable and callable
+// check that the iostream interface is compilable and callable
+// checks that functions encoding a single chunk append the correct padding
+// if the input byte count is not divisible by 3
+// check that functions using encoding state interrupt and resume encoding
+// correcly if the byte count of the partial input is not divisible by 3
+// check encoding empty input; including the state value
+// check one third of quantum which needs two character padding;
+// including how the state develops when encoded by single character
+// check two thirds of quantum which needs one character padding;
+// including how the state develops when encoded by single character
+// check a complete quantum which needs no padding; including
+// how the state develops when encoded by single character
+// checks that the base64 output can be returned as wchar_t too
+// checks that the base64-io manipulators are compilable and work
+// check complete quantum where no state has to be remembered
+// check that encode_rest clears the state
+// check that forced clearing the state works
+// check one third of quantum which has to be remembered in state
+// check two thirds of quantum which have to be remembered in state.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\utils_thread_pool.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2015 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// This test specifies the requirements for a thread pool interface. At the
+// very least any thread pool implementation should be able to pass the simple
+// tests that this unit test requires of thread pools. Ultimately the
+// requirements will show up in the Concept documentation, but this test is the
+// canonical definition of what a thread pool should look like at least
+// syntactically.
+//
+// require that pool is destroyed here, RAII baby
+// Test using multiple threads.
+// nice round number of threads.
+// Wait for threads to be done.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_constructor_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2015 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// Migrated from using Boost.Test to using googletest intead.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_get_different_port_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.boost.org:80/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_get_ready_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//cpp-netlib.org/");
+// XXX we should find a better way to check if `ready()` has done his job
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_get_streaming_test.cpp
+// Copyright 2011 Dean Michael Berris &lt;mikhailberis@gmail.com&gt;.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.boost.org");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_get_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2017 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//cpp-netlib.org/");
+//www.github.com/");
+//cpp-netlib.org/");
+//malformed.google.comq");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_get_timeout_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//localhost:12121/");
+//localhost:8000/cgi-bin/sleep.py?3");
+//localhost:8000/cgi-bin/sleep.py?3");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_localhost_normal_test.cpp
+// Copyright Divye Kapoor 2008.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//
+// Changes by Kim Grasman 2008
+// Changes by Dean Michael Berris 2008, 2010, 2016
+//localhost:8000";
+// Uncomment the below if you're running Python pre-2.6. There was a bug
+// in the Python HTTP server for earlier versions that causes this test
+// case to fail.
+// BOOST_AUTO_TEST_CASE_EXPECTED_FAILURES(text_query_preserves_crlf, 2);
+// Tests presence of body in http responses
+// Tests correct parsing of the content-type header sent by the server
+// Tests correct parsing of content-type for binary files such as .zip files
+// Uses the test.xml file to ensure that the file was received at the correct
+// length for a text encoding
+// Tests proper transfer of a text file
+// Tests proper transfer of a binary image
+// Get a dynamic request with no Content-Length header
+// Ensure that we have a body
+// Request for a non existing file.
+// Ensure that we have a body even in the presence of an error response
+// This test checks that the headers echoed through echo_headers.py
+// are in fact the same as what are sent through the POST request
+// This test checks that post(request, body) derives Content-Length
+// and Content-Type
+// This test checks that post(request, content_type, body) derives
+// Content-Length,
+// and keeps Content-Type
+// This test checks that post(request, body) gets the post data
+// through to the server
+// This test checks that custom headers pass through to the server
+// when posting
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client_localhost_ssl_test.cpp
+// Copyright Divye Kapoor 2008.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// https://www.boost.org/LICENSE_1_0.txt)
+//
+// Changes by Kim Grasman 2008
+// Changes by Dean Michael Berris 2008, 2009, 2016
+//localhost:8443";
+// Uncomment the below if you're running Python pre-2.6. There was a bug
+// in the Python HTTP server for earlier versions that causes this test
+// case to fail.
+// BOOST_AUTO_TEST_CASE_EXPECTED_FAILURES(text_query_preserves_crlf, 2);
+// Tests presence of body in http responses
+// Tests correct parsing of the content-type header sent by the server
+// Tests correct parsing of content-type for binary files such as .zip files
+// Uses the test.xml file to ensure that the file was received at the correct
+// length for a text encoding
+// Tests proper transfer of a text file
+// Tests proper transfer of a binary image
+// Request for a non existing file.
+// Ensure that we have a body even in the presence of an error response
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\message_async_ready_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\message_test.cpp
+// Copyright 2010 (c) Dean Michael Berris.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//boost.org");
+//boost.org/handler.php");
+//boost.org/handler.php");
+//boost.org/");
+// ADL
+//boost.org/");
+//boost.org/");
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\request_incremental_parser_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+/** Synopsis
+// default constructible
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\request_linearize_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//www.boost.org");
+/*\r\n"
+/*\r\n"
+//www.boost.org");
+// We can override the defaulted headers and test that here.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\response_incremental_parser_test.cpp
+// Copyright Dean Michael Berris 2010.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+/** Synopsis
+// default constructible
+/** In this test we want to be able to parse incrementally a
+// default constructible
+/** In this test we then want to check that we can parse a status
+// We want to create a parser that has been initialized to a specific
+// state. In this case we assume that the parser has already parsed
+// the version part of the HTTP Response.
+/** In this test then we get the rest of the first line of the HTTP
+/** This test specifices how one-line-per-header parsing happens incrementally.
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\server_async_run_stop_concurrency.cpp
+// Really, this is just for testing purposes
+// In this batch of tests we ensure that calling run and stop on an
+// async_server, in any sequence, is thread safe.
+// stop from main thread
+// run-stop from main thread
+// run-stop from another thread
+// run-stop-run-stop from another thread
+// run-run-stop from another thread
+// run-stop-stop from another thread
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\server_constructor_test.cpp
+// Copyright 2010 Dean Michael Berris.
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+// Really, this is just for testing purposes
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\server_header_parser_test.cpp
+// Copyright 2013 Rudolfs Bundulis
+// Copyright 2016 Google, Inc.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+/** Synopsis
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client\request_test.cpp
+// Copyright 2016 Glyn Matthews.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)
+//cpp-netlib.org/"));
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/cpp-netlib-master\cpp-netlib-master\libs\network\test\http\client\response_test.cpp
+// Copyright 2016 Glyn Matthews.
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// http://www.boost.org/LICENSE_1_0.txt)

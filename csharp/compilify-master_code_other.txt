@@ -1,0 +1,305 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Core\CompilifyException.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Core\Models\IPostRepository.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Core\Models\Post.cs
+/// <summary>
+/// The ID of the user who created the post, or null if the post was created by an anonymous user.</summary>
+/// <summary>
+/// If <c>true</c>, the post will not be displayed in search results. However, it will still be accessible via 
+/// direct access.</summary>
+/// <summary>
+/// The page lanage.</summary>
+/// <summary>
+/// The UTC date and time that the post was first persisted to the data store.</summary>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Core\Models\WorkerResult.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Core\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\DataAccess\Incrementor.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\DataAccess\MongoDB\IMongoConnectionFactory.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\DataAccess\MongoDB\MongoConnectionFactory.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\DataAccess\MongoDB\MongoDbInitializer.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\DataAccess\MongoDB\MongoDbPostRepository.cs
+// No slug was specified, so we need to get the next one
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\DataAccess\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Document.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\ICodeAssembly.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\ICodeProject.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\ICodeRunResult.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Extensions\CompilationExtensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Extensions\GeneralExtensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Extensions\SyntaxTreeExtensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\ConsoleRewriter.cs
+// var info = model.GetSemanticInfo(node);
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\CSharpCompiler.cs
+// This smells terrible.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\CSharpValidator.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\DocumentLineSpan.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\EditorError.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\EvaluateCodeCommand.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\ExecutionResult.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\ICodeCompiler.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\ICodeEvaluator.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\ICodeExecutor.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\ICodeValidator.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\ProgramAssembly.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\Sandbox.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\LanguageServices\TextPosition.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Utilities\Base36Encoder.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Utilities\Hash.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\LanguageServices\Utilities\TaskAsyncHelper.cs
+// ReSharper disable UnusedVariable
+// ReSharper restore UnusedVariable
+/// <summary>
+/// Passes a task returning function into another task returning function so that
+/// it can decide when it starts and returns a task that completes when all are finished
+/// </summary>
+// Then extesions
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Tests\LanguageServices.Tests\LanguageServices\CSharpCompilerTests.cs
+// NOTE: This test will fail when executed by NCrunch.
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Tests\LanguageServices.Tests\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Tests\Web.Tests\Controllers\ErrorControllerTests.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Tests\Web.Tests\Controllers\HomeControllerTests.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Tests\Web.Tests\Extensions\MoqExtensions.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Tests\Web.Tests\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Global.asax.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\App_Start\BundleConfig.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\App_Start\DbInitializer.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\App_Start\DependencyInjection.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\App_Start\FilterConfig.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\App_Start\MessagingConfig.cs
+//", "rabbitmq://");
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\App_Start\RouteConfig.cs
+// 404s
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\App_Start\ViewEngineConfig.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Commands\ICommand.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Commands\SavePostCommand.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Controllers\CompilifyController.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Controllers\ErrorController.cs
+// ensure response is the right code
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Controllers\HomeController.cs
+// Redirect the user to /:slug instead of /:slug/1
+// There should only be one URL to represent a given resource, this is just a shortcut for the 
+// user to locate the URL representing the latest version of a given post
+// TODO: Remove dependency on ViewBag
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\EndPoints\ExecuteEndPoint.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\RequireHttpsOnAppHarborAttribute.cs
+/// <summary>
+/// Redirects HTTP requests to HTTPS.</summary>
+/// <remarks>
+/// Overriding the default behavior is necessary to avoid a redirect loop. See this article for details:
+/// http://support.appharbor.com/kb/tips-and-tricks/ssl-and-certificates </remarks>
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\ServiceNotFoundException.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\DependencyInjection\AutofacDepenedencyResolverForSignalR.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\DependencyInjection\MessagingModule.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\DependencyInjection\MongoDbModule.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\DependencyInjection\MvcModule.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\DependencyInjection\RoslynModule.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Infrastructure\Extensions\HtmlHelperExtensions.cs
+/// <summary>
+/// Inserts the Google Analytics script if a valid account token is specified in the web.config and 
+/// debugging is not enabled for the current HttpContext.</summary>
+//ssl' : 'http://www') + '.google-analytics.com/ga.js';
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Models\DocumentModel.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Models\PostViewModel.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Queries\ErrorsInPostQuery.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Queries\IQuery.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Queries\LatestVersionOfPostQuery.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Queries\PostByIdAndVersionQuery.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Web\Queries\SamplePostQuery.cs
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Worker\Program.cs
+// Log the exception, but do not mark it as observed. The process will be terminated and restarted 
+// automatically by AppHarbor
+//", "rabbitmq://");
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/compilify-master\compilify-master\Worker\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]

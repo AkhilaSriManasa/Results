@@ -1,0 +1,62 @@
+﻿/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// To fight color banding.
+/*
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**Method edited by
+// remove already create preview image
+//30dip
+/**
+/**
+/**
+/**
+/**
+// Didn't save state for us in onSaveInstanceState
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+/**
+/*
+//Needed for receiving trackball motion events.
+//If calculated height (based on the width) is more than the allowed height.
+// (mode == MeasureSpec.UNSPECIFIED)
+// (mode == MeasureSpec.UNSPECIFIED)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+/**
+/**
+/**
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**

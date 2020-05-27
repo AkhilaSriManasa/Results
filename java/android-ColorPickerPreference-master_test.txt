@@ -1,0 +1,78 @@
+﻿
+***********other formats****************
+bat
+classpath
+eclipse.buildship.core.prefs
+gitattributes
+gitignore
+gradle
+iml
+jar
+pro
+project
+properties
+rst
+xml
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/LICENSE
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/README.rst
+
+***********img file list***************
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/screen_1.png
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/screen_2.png
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/res/drawable-hdpi/icon.png
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/res/drawable-ldpi/icon.png
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/res/drawable-mdpi/icon.png
+
+***********uml file list***************
+
+***********other file list***************
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/.gitattributes
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/.gitignore
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/.project
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/android-ColorPickerPreference.iml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/build.gradle
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/CHANGELOG.rst
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference.iml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/gradle.properties
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/gradlew
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/gradlew.bat
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/settings.gradle
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/.settings/org.eclipse.buildship.core.prefs
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/.classpath
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/.gitignore
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/.project
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/build.gradle
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/ColorPickerPreference-ColorPickerPreference.iml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/ColorPickerPreference.iml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/proguard-rules.pro
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/.settings/org.eclipse.buildship.core.prefs
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/AndroidManifest.xml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/res/layout/dialog_color_picker.xml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/res/layout-land/dialog_color_picker.xml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/res/values/strings.xml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/gradle/wrapper/gradle-wrapper.jar
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/gradle/wrapper/gradle-wrapper.properties
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/.classpath
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/.project
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/build.gradle
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/Sample.iml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/.settings/org.eclipse.buildship.core.prefs
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/AndroidManifest.xml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/res/values/integer.xml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/res/values/strings.xml
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/res/xml/settings.xml
+
+***********other code file list***************
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/androidTest/java/net/margaritov/colorpickerpreference/ApplicationTest.java
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/java/net/margaritov/preference/colorpicker/AlphaPatternDrawable.java
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/java/net/margaritov/preference/colorpicker/ColorPickerDialog.java
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/java/net/margaritov/preference/colorpicker/ColorPickerPanelView.java
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/java/net/margaritov/preference/colorpicker/ColorPickerPreference.java
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/ColorPickerPreference/src/main/java/net/margaritov/preference/colorpicker/ColorPickerView.java
+android-ColorPickerPreference-master/android-ColorPickerPreference-master/Sample/src/main/java/net/margaritov/preference/colorpicker/Test.java

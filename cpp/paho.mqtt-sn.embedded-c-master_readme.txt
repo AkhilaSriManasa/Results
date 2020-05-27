@@ -1,0 +1,541 @@
+﻿#*******************************************************************************
+#  Copyright (c) 2017 IBM Corp.
+#
+#  All rights reserved. This program and the accompanying materials
+#  are made available under the terms of the Eclipse Public License v1.0
+#  and Eclipse Distribution License v1.0 which accompany this distribution.
+#
+#  The Eclipse Public License is available at
+#     http://www.eclipse.org/legal/epl-v10.html
+#  and the Eclipse Distribution License is available at
+#    http://www.eclipse.org/org/documents/edl-v10.php.
+#
+#  Contributors:
+#     Ian Craggs - initial version
+#*******************************************************************************/
+
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT("paho-mqttsn" CXX)
+MESSAGE(STATUS "CMake version: " ${CMAKE_VERSION})
+MESSAGE(STATUS "CMake system name: " ${CMAKE_SYSTEM_NAME})
+
+SET(CMAKE_SCRIPTS "${CMAKE_SOURCE_DIR}/cmake")
+SET(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
+
+## build settings
+SET(PAHO_VERSION_MAJOR 1)
+SET(PAHO_VERSION_MINOR 0)
+SET(PAHO_VERSION_PATCH 0)
+SET(CLIENT_VERSION ${PAHO_VERSION_MAJOR}.${PAHO_VERSION_MINOR}.${PAHO_VERSION_PATCH})
+
+STRING(TIMESTAMP BUILD_TIMESTAMP UTC)
+MESSAGE(STATUS "Timestamp is ${BUILD_TIMESTAMP}")
+
+SET(CPACK_PACKAGE_VERSION_MAJOR ${PAHO_VERSION_MAJOR})
+SET(CPACK_PACKAGE_VERSION_MINOR ${PAHO_VERSION_MINOR})
+SET(CPACK_PACKAGE_VERSION_PATCH ${PAHO_VERSION_PATCH})
+INCLUDE(CPack)
+
+ENABLE_TESTING()
+
+ADD_SUBDIRECTORY(MQTTSNPacket)
+# Contributing to Paho
+
+Thanks for your interest in this project!
+
+You can contribute bugfixes and new features by sending pull requests through GitHub.
+
+## Legal
+
+In order for your contribution to be accepted, it must comply with the Eclipse Foundation IP policy.
+
+Please read the [Eclipse Foundation policy on accepting contributions via Git](http://wiki.eclipse.org/Development_Resources/Contributing_via_Git).
+
+1. Sign the [Eclipse ECA](http://www.eclipse.org/legal/ECA.php)
+  1. Register for an Eclipse Foundation User ID. You can register [here](https://dev.eclipse.org/site_login/createaccount.php).
+  2. Log into the [Eclipse projects forge](https://www.eclipse.org/contribute/cla), and click on 'Eclipse Contributor Agreement'.
+2. Go to your [account settings](https://dev.eclipse.org/site_login/myaccount.php#open_tab_accountsettings) and add your GitHub username to your account.
+3. Make sure that you _sign-off_ your Git commits in the following format:
+  ``` Signed-off-by: Alex Smith <alexsmith@nowhere.com> ``` This is usually at the bottom of the commit message. You can automate this by adding the '-s' flag when you make the commits. e.g.   ```git commit -s -m "Adding a cool feature"```
+4. Ensure that the email address that you make your commits with is the same one you used to sign up to the Eclipse Foundation website with.
+
+## Contributing a change
+
+## Contributing a change
+
+1. [Fork the repository on GitHub](https://github.com/eclipse/paho.mqtt-sn.embedded-c/fork)
+2. Clone the forked repository onto your computer: ``` git clone https://github.com/<your username>/paho.mqtt-sn.embedded-c.git ```
+3. Create a new branch from the latest ```develop``` branch with ```git checkout -b YOUR_BRANCH_NAME origin/develop```
+4. Make your changes
+5. If developing a new feature, make sure to include JUnit tests.
+6. Ensure that all new and existing tests pass.
+7. Commit the changes into the branch: ``` git commit -s ``` Make sure that your commit message is meaningful and describes your changes correctly.
+8. If you have a lot of commits for the change, squash them into a single / few commits.
+9. Push the changes in your branch to your forked repository.
+10. Finally, go to [https://github.com/eclipse/paho.mqtt-sn.embedded-c](https://github.com/eclipse/paho.mqtt-sn.embedded-c) and create a pull request from your "YOUR_BRANCH_NAME" branch to the ```develop``` one to request review and merge of the commits in your pushed branch.
+
+
+What happens next depends on the content of the patch. If it is 100% authored
+by the contributor and is less than 1000 lines (and meets the needs of the
+project), then it can be pulled into the main repository. If not, more steps
+are required. These are detailed in the
+[legal process poster](http://www.eclipse.org/legal/EclipseLegalProcessPoster.pdf).
+
+
+
+## Developer resources:
+
+
+Information regarding source code management, builds, coding standards, and more.
+
+- [https://projects.eclipse.org/projects/iot.paho/developer](https://projects.eclipse.org/projects/iot.paho/developer)
+
+Contact:
+--------
+
+Contact the project developers via the project's development
+[mailing list](https://dev.eclipse.org/mailman/listinfo/paho-dev).
+
+Search for bugs:
+----------------
+
+This project uses GitHub Issues here: [github.com/eclipse/paho.mqtt-sn.embedded-c/issues](https://github.com/eclipse/paho.mqtt-sn.embedded-c/issues) to track ongoing development and issues.
+
+Create a new bug:
+-----------------
+
+Be sure to search for existing bugs before you create another one. Remember that contributions are always welcome!
+
+- [Create new Paho bug](https://github.com/eclipse/paho.mqtt-sn.embedded-c/issues/new)
+# Eclipse Paho MQTT-SN C/C++ client for Embedded platforms
+
+This repository contains the source code for the [Eclipse Paho](http://eclipse.org/paho) MQTT-SN C/C++ client library for Embedded platorms.
+
+It is dual licensed under the EPL and EDL (see about.html and notice.html for more details).  You can choose which of these licenses you want to use the code under.  The EDL allows you to embed the code into your application, and distribute your application in binary or source form without contributing any of your code, or any changes you make back to Paho.  See the EDL for the exact conditions.
+
+There are three sub-projects:
+
+1. MQTTSNPacket - simple de/serialization of MQTT-SN packets, plus helper functions
+2. MQTTGateway - MQTT-SN transparent/aggregating gateway - connects MQTT-SN clients with an MQTT server.  See the README within the project for more information.
+3. MQTTSNClient - high(er) level C++ client (not yet complete)
+
+The *MQTTSNPacket* directory contains the lowest level C library with the smallest requirements.  This supplies simple serialization
+and deserialization routines.  They serve as a base for the higher level libraries, but can also be used on their own.
+It is mainly up to you to write and read to and from the network.
+
+The *MQTTSNGateway* directory contains an MQTT-SN to MQTT transparent/aggregating gateway (see the MQTT-SN specification for a description of that.)  It can
+be used to connect the MQTT-SN client to an MQTT server.
+
+The *MQTTSNClient* directory contains the next level C++ library.  This is intended to mirror the way the MQTTClient works in the Paho embedded
+MQTT project, but it's not yet complete.
+
+## Build requirements / compilation
+
+CMake builds for MQTTSNPacket with a Makefile for MQTTSNGateway have been introduced, along with Travis-CI configuration for automated build & testing.
+
+The travis-build.sh file has the full build and test sequence for Linux.
+
+
+## Usage and API
+
+See the samples directories for examples of intended use.  Doxygen config files are available in the doc directory.
+
+## Runtime tracing
+
+
+## Reporting bugs
+
+This project uses GitHub Issues here: [github.com/eclipse/paho.mqtt-sn.embedded-c/issues](https://github.com/eclipse/paho.mqtt-sn.embedded-c/issues) to track ongoing development and issues.
+
+## More information
+
+Discussion of the Paho clients takes place on the [Eclipse Mattermost Paho channel](https://mattermost.eclipse.org/eclipse/channels/paho) and the [Eclipse paho-dev mailing list](https://dev.eclipse.org/mailman/listinfo/paho-dev).
+
+General questions about the MQTT protocol are discussed in the [MQTT Google Group](https://groups.google.com/forum/?hl=en-US&fromgroups#!forum/mqtt).
+
+More information is available via the [MQTT community](http://mqtt.org).
+
+# MQTT-SN Transparent / Aggrigating Gateway
+
+**MQTT-SN** requires a MQTT-SN Gateway which acts as a protocol converter to convert **MQTT-SN messages to MQTT messages**. MQTT-SN client over SensorNetwork can not communicate directly with MQTT broker(TCP/IP).   
+This Gateway can run as a transparent or aggrigating Gateway by specifying the gateway.conf.
+
+### **step1. Build the gateway**   
+````
+$ git clone -b experiment https://github.com/eclipse/paho.mqtt-sn.embedded-c   
+$ cd paho.mqtt-sn.embedded-c/MQTTSNGateway       
+$ make [SENSORNET={udp6|xbee}] 
+$ make install   
+$ make clean    
+````      
+By default, a gateway for UDP is built.    
+In order to create a gateway for UDP6 or XBee, SENSORNET argument is required.  
+ 
+MQTT-SNGateway, MQTT-SNLogmonitor and *.conf files are copied into ../ directory.    
+If you want to install the gateway into specific directories, enter a command line as follows:
+````
+$ make install INSTALL_DIR=/path/to/your_directory CONFIG_DIR=/path/to/your_directory
+````
+
+    
+### **step2. Execute the Gateway.**     
+
+````    
+$ cd ../   
+$ ./MQTT-SNGateway [-f Config file name]
+````   
+
+
+### **How to Change the configuration of the gateway**    
+**../gateway.conf**   Contents are follows: 
+   
+<pre><dev>    
+
+# config file of MQTT-SN Gateway
+#
+
+BrokerName=iot.eclipse.org
+BrokerPortNo=1883
+BrokerSecurePortNo=8883
+
+#
+# When AggregatingGateway=YES or ClientAuthentication=YES,
+# All clients must be specified by the ClientList File  
+#
+
+ClientAuthentication=NO
+AggregatingGateway=NO
+QoS-1=NO
+Forwarder=NO
+
+#ClientsList=/path/to/your_clients.conf
+
+PredefinedTopic=NO
+#PredefinedTopicList=/path/to/your_predefinedTopic.conf
+
+#RootCAfile=/etc/ssl/certs/ca-certificates.crt
+#RootCApath=/etc/ssl/certs/
+#CertsFile=/path/to/certKey.pem
+#PrivateKey=/path/to/privateKey.pem
+
+GatewayID=1
+GatewayName=PahoGateway-01
+KeepAlive=900
+#LoginID=your_ID
+#Password=your_Password
+
+
+# UDP
+GatewayPortNo=10000
+MulticastIP=225.1.1.1
+MulticastPortNo=1883
+
+# XBee
+Baudrate=38400
+SerialDevice=/dev/ttyUSB0
+ApiMode=2
+
+# LOG
+ShearedMemory=NO;
+
+</dev></pre>    
+
+**BrokerName** to specify a domain name of the Broker, and **BrokerPortNo** is a port No of the Broker. **BrokerSecurePortNo** is for TLS connection.       
+**MulticastIP** and **MulticastPortNo** is a multicast address for GWSEARCH messages. Gateway is waiting GWSEARCH  and when receiving it send GWINFO message via MulticastIP address. Clients can get the gateway address (Gateway IP address and **GatewayPortNo**) from GWINFO message by means of std::recvfrom().
+Client should know the MulticastIP and MulticastPortNo to send a SEARCHGW message.    
+**GatewayId** is used by GWINFO message.    
+**KeepAlive** is a duration of ADVERTISE message in seconds.    
+when **AggregatingGateway** or **ClientAuthentication** is **YES**, All clients which connect to the gateway must be declared by a **ClientsList** file.       
+Format of the file is ClientId and SensorNetwork Address. e.g. IP address and Port No etc, in CSV. more detail see clients.conf.    
+When **QoS-1** is **YES**, QoS-1 PUBLISH is available. All clients which send QoS-1 PUBLISH must be specified by Client.conf file. 
+When **PredefinedTopic** is **YES**, **Pre-definedTopicId**s  specified by **PredefinedTopicList** are effective. This file defines Pre-definedTopics of the clients. In this file, ClientID,TopicName and TopicID are declared in CSV format.    
+When **Forwarder** is **YES**, Forwarder Encapsulation Message is available. Connectable Forwarders must be declared by a **ClientsList** file.     
+ 
+### ** How to monitor the gateway from remote. **
+Change gateway.conf as follows:
+```
+# LOG
+ShearedMemory=YES;
+````
+
+Restart the gateway with sudo only once to create shared memories.    
+
+open ssh terminal and execute LogMonitor.
+
+`$ ./MQTT-SNLogmonitor`    
+
+Now you can get the Log on your terminal.
+
+
+## ** Tips **
+Uncomment the line 62, 63 in MQTTSNDefines.h then you can get more precise logs.
+```
+/*=================================
+ *    Log controls
+ ==================================*/
+//#define DEBUG          // print out log for debug
+//#define DEBUG_NWSTACK  // print out SensorNetwork log
+```
+
+
+
+###Gateway Test Program.    
+**sample/mainTest.cpp** is a Test sample coading.   
+Each test is described as one function. test1(), test2()...     
+````
+/*------------------------------------------------------
+ *    Test functions
+ *
+ *    you can use 4 commands in Test functions
+ *
+ *    1) PUBLISH(const char* topicName,
+ *               uint8_t*    payload,
+ *               uint16_t    len,
+ *               uint8_t     qos,
+ *               bool        retain = false);
+ *
+ *    2) SUBSCRIBE(const char*   topicName,
+ *                 TopicCallback onPublish,
+ *                 uint8_t qos);
+ *
+ *    3) UNSUBSCRIBE(const char* topicName);
+ *
+ *    4) DISCONNECT(uint16_t sleepInSecs);
+ *
+ *------------------------------------------------------*/
+
+void test1(void)
+{
+	char payload[300];
+	sprintf(payload, "ESP8266-08b133 ");
+	uint8_t qos = 0;
+	PUBLISH(topic1,(uint8_t*)payload, strlen(payload), qos);
+}
+
+void test2(void)
+{
+	uint8_t qos = 1;
+	SUBSCRIBE(topic2, on_publish02, qos);
+}
+````
+**TEST_LIST** is a test senario. Test functions are executed one by one. 
+```` 
+/*------------------------------------------------------
+ *    A List of Test Tasks
+ *------------------------------------------------------*/
+
+TEST_LIST = {// e.g. TEST( Label, Test),
+			 TEST("Publish topic1",     test1),
+			 TEST("Subscribe topic2",   test2),
+			 TEST("Publish topic2",     test3),
+			 TEST("Unsubscribe topic2", test4),
+			 TEST("Publish topic2",     test3),
+			 TEST("Disconnect",         test5),
+			 END_OF_TEST_LIST
+			};
+```` 
+
+### **step1. Build **   
+````
+$ git clone https://github.com/eclipse/paho.mqtt-sn.embedded-c 
+$ cd paho.mqtt-sn.embedded-c/MQTTSNGateway/GatewayTester       
+$ make   
+$ make install   
+$ make clean
+```       
+MQTT-SNGatewayTester program is copied into ../../../ directory.
+
+    
+### **step2. Execute Gateway Tester.**     
+
+````    
+$ cd ../../..   
+$ ./MQTT-SNGatewayTester
+  
+ ***************************************************************************
+ * MQTT-SN Gateway Tester
+ * Part of Project Paho in Eclipse
+ * (http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt-sn.embedded-c.git/)
+ *
+ * Author : Tomoaki YAMAGUCHI
+ * Version: 0.0.0
+ ***************************************************************************
+
+Attempting to Connect the Broker.....
+
+sendto 225.1.1.1      :1883   03 01 00
+
+recved 192.168.11.5   :1883   03 01 00
+sendto 225.1.1.1      :1883   03 01 00
+
+recved 192.168.11.5   :1883   03 01 00
+
+recved 192.168.11.17  :10000  03 02 01
+sendto 192.168.11.17  :10000  13 04 0c 01 03 84 47 61 74 65 77 61 79 54 65 73 74 65 72
+
+recved 192.168.11.17  :10000  02 06
+sendto 192.168.11.17  :10000  0c 07 00 77 69 6c 6c 54 6f 70 69 63
+
+recved 192.168.11.17  :10000  02 08
+sendto 192.168.11.17  :10000  0d 09 77 69 6c 6c 4d 65 73 73 61 67 65
+
+recved 192.168.11.17  :10000  03 05 00
+
+
+ Connected to the Broker
+
+ Attempting OnConnect.....
+sendto 192.168.11.17  :10000  13 12 20 00 01 74 79 34 74 77 2f 63 6c 69 65 6e 74 49 64
+
+recved 192.168.11.17  :10000  08 13 20 00 01 00 01 00
+
+
+ SUBSCRIBE complete. ty4tw/clientId
+
+ OnConnect complete
+ Test Ready.
+
+Execute Publish topic1 Test ? ( Y/N ) :  
+
+````    
+#*******************************************************************************
+#  Copyright (c) 2017 IBM Corp.
+#
+#  All rights reserved. This program and the accompanying materials
+#  are made available under the terms of the Eclipse Public License v1.0
+#  and Eclipse Distribution License v1.0 which accompany this distribution.
+#
+#  The Eclipse Public License is available at
+#     http://www.eclipse.org/legal/epl-v10.html
+#  and the Eclipse Distribution License is available at
+#    http://www.eclipse.org/org/documents/edl-v10.php.
+#
+#  Contributors:
+#     Ian Craggs - initial version
+#*******************************************************************************/
+
+PROJECT("paho-mqttsnpacket" C)
+
+ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(samples)
+ADD_SUBDIRECTORY(test)
+#*******************************************************************************
+#  Copyright (c) 2017 IBM Corp.
+#
+#  All rights reserved. This program and the accompanying materials
+#  are made available under the terms of the Eclipse Public License v1.0
+#  and Eclipse Distribution License v1.0 which accompany this distribution.
+#
+#  The Eclipse Public License is available at
+#     http://www.eclipse.org/legal/epl-v10.html
+#  and the Eclipse Distribution License is available at
+#    http://www.eclipse.org/org/documents/edl-v10.php.
+#
+#  Contributors:
+#     Ian Craggs - initial version
+#*******************************************************************************/
+
+PROJECT(mqtt-sn-samples)
+
+INCLUDE_DIRECTORIES(../src)
+
+ADD_EXECUTABLE(
+  qos0pub
+  qos0pub.c transport.c
+)
+
+TARGET_LINK_LIBRARIES(qos0pub MQTTSNPacketClient)
+
+ADD_EXECUTABLE(
+  qos0pub_register
+  qos0pub_register.c transport.c
+)
+
+TARGET_LINK_LIBRARIES(qos0pub_register MQTTSNPacketClient)
+
+ADD_EXECUTABLE(
+  qos-1pub
+  qos-1pub.c transport.c
+)
+
+TARGET_LINK_LIBRARIES(qos-1pub MQTTSNPacketClient)
+
+ADD_EXECUTABLE(
+  qos-1pub_extended
+  qos-1pub_extended.c transport.c
+)
+
+TARGET_LINK_LIBRARIES(qos-1pub_extended MQTTSNPacketClient)
+
+ADD_EXECUTABLE(
+  qos1pub
+  qos1pub.c transport.c
+)
+
+TARGET_LINK_LIBRARIES(qos1pub MQTTSNPacketClient)
+
+ADD_EXECUTABLE(
+  pub0sub1
+  pub0sub1.c transport.c
+)
+
+TARGET_LINK_LIBRARIES(pub0sub1 MQTTSNPacketClient)
+#*******************************************************************************
+#  Copyright (c) 2017 IBM Corp.
+#
+#  All rights reserved. This program and the accompanying materials
+#  are made available under the terms of the Eclipse Public License v1.0
+#  and Eclipse Distribution License v1.0 which accompany this distribution.
+#
+#  The Eclipse Public License is available at
+#     http://www.eclipse.org/legal/epl-v10.html
+#  and the Eclipse Distribution License is available at
+#    http://www.eclipse.org/org/documents/edl-v10.php.
+#
+#  Contributors:
+#     Ian Craggs - initial version
+#*******************************************************************************/
+
+
+PROJECT(mqtt-sn-packet C)
+
+ADD_LIBRARY(MQTTSNPacketClient SHARED MQTTSNConnectClient.c MQTTSNPacket.c MQTTSNSearchClient.c MQTTSNSubscribeClient.c
+            MQTTSNUnsubscribeClient.c MQTTSNSerializePublish.c MQTTSNDeserializePublish.c)
+
+ADD_LIBRARY(MQTTSNPacketServer SHARED MQTTSNConnectServer.c MQTTSNPacket.c MQTTSNSearchServer.c MQTTSNSubscribeServer.c
+            MQTTSNUnsubscribeServer.c MQTTSNSerializePublish.c MQTTSNDeserializePublish.c)
+#*******************************************************************************
+#  Copyright (c) 2017 IBM Corp.
+#
+#  All rights reserved. This program and the accompanying materials
+#  are made available under the terms of the Eclipse Public License v1.0
+#  and Eclipse Distribution License v1.0 which accompany this distribution.
+#
+#  The Eclipse Public License is available at
+#     http://www.eclipse.org/legal/epl-v10.html
+#  and the Eclipse Distribution License is available at
+#    http://www.eclipse.org/org/documents/edl-v10.php.
+#
+#  Contributors:
+#     Ian Craggs - initial version
+#*******************************************************************************/
+
+PROJECT(mqtt-sn-tests)
+
+INCLUDE_DIRECTORIES(../src)
+
+ADD_EXECUTABLE(
+  test1
+  test1.c
+)
+
+TARGET_LINK_LIBRARIES(test1 MQTTSNPacketClient MQTTSNPacketServer)
+
+ADD_TEST(NAME test1 COMMAND test1)
+
+ADD_EXECUTABLE(
+  test2
+  test2.c
+)
+
+TARGET_LINK_LIBRARIES(test2 MQTTSNPacketClient MQTTSNPacketServer)

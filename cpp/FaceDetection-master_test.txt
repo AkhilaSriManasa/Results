@@ -1,0 +1,66 @@
+﻿
+***********other formats****************
+caffemodel
+hpp
+json
+mk
+params
+pb
+prototxt
+sh
+so
+
+***********source code file list***************
+FaceDetection-master/FaceDetection-master/camera.cpp
+FaceDetection-master/FaceDetection-master/test.cpp
+FaceDetection-master/FaceDetection-master/libmtcnn/caffe_mtcnn.cpp
+FaceDetection-master/FaceDetection-master/libmtcnn/comm_lib.cpp
+FaceDetection-master/FaceDetection-master/libmtcnn/mtcnn.cpp
+FaceDetection-master/FaceDetection-master/libmtcnn/mxnet_mtcnn.cpp
+FaceDetection-master/FaceDetection-master/libmtcnn/tensorflow_mtcnn.cpp
+FaceDetection-master/FaceDetection-master/libmtcnn/utils.cpp
+
+***********h file list***************
+FaceDetection-master/FaceDetection-master/tf_dist/include/tensorflow/c/c_api.h
+
+***********md file list***************
+FaceDetection-master/FaceDetection-master/LICENSE
+FaceDetection-master/FaceDetection-master/README.md
+FaceDetection-master/FaceDetection-master/tf_dist/include/tensorflow/c/LICENSE
+
+***********img file list***************
+FaceDetection-master/FaceDetection-master/test.jpg
+
+***********uml file list***************
+
+***********other file list***************
+FaceDetection-master/FaceDetection-master/Makefile
+FaceDetection-master/FaceDetection-master/makefile.mk
+FaceDetection-master/FaceDetection-master/run.sh
+FaceDetection-master/FaceDetection-master/include/caffe_mtcnn.hpp
+FaceDetection-master/FaceDetection-master/include/comm_lib.hpp
+FaceDetection-master/FaceDetection-master/include/mtcnn.hpp
+FaceDetection-master/FaceDetection-master/include/mxnet_mtcnn.hpp
+FaceDetection-master/FaceDetection-master/include/tensorflow_mtcnn.hpp
+FaceDetection-master/FaceDetection-master/include/utils.hpp
+FaceDetection-master/FaceDetection-master/libmtcnn/Makefile
+FaceDetection-master/FaceDetection-master/models/det1-0001.params
+FaceDetection-master/FaceDetection-master/models/det1-symbol.json
+FaceDetection-master/FaceDetection-master/models/det1.caffemodel
+FaceDetection-master/FaceDetection-master/models/det1.prototxt
+FaceDetection-master/FaceDetection-master/models/det2-0001.params
+FaceDetection-master/FaceDetection-master/models/det2-symbol.json
+FaceDetection-master/FaceDetection-master/models/det2.caffemodel
+FaceDetection-master/FaceDetection-master/models/det2.prototxt
+FaceDetection-master/FaceDetection-master/models/det3-0001.params
+FaceDetection-master/FaceDetection-master/models/det3-symbol.json
+FaceDetection-master/FaceDetection-master/models/det3.caffemodel
+FaceDetection-master/FaceDetection-master/models/det3.prototxt
+FaceDetection-master/FaceDetection-master/models/det4-0001.params
+FaceDetection-master/FaceDetection-master/models/det4-symbol.json
+FaceDetection-master/FaceDetection-master/models/det4.caffemodel
+FaceDetection-master/FaceDetection-master/models/det4.prototxt
+FaceDetection-master/FaceDetection-master/models/mtcnn_frozen_model.pb
+FaceDetection-master/FaceDetection-master/tf_dist/lib/libtensorflow.so
+
+***********other code file list***************

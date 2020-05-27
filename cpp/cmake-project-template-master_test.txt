@@ -1,0 +1,58 @@
+﻿
+***********other formats****************
+git-keep
+gitignore
+gitmodules
+iml
+travis.yml
+xml
+xml.example
+
+***********source code file list***************
+cmake-project-template-master/cmake-project-template-master/src/main.cpp
+cmake-project-template-master/cmake-project-template-master/src/division/division.cpp
+cmake-project-template-master/cmake-project-template-master/test/main.cpp
+cmake-project-template-master/cmake-project-template-master/test/src/divider_tests.cpp
+
+***********h file list***************
+cmake-project-template-master/cmake-project-template-master/src/main.h
+cmake-project-template-master/cmake-project-template-master/src/division/division.h
+
+***********md file list***************
+cmake-project-template-master/cmake-project-template-master/CMakeLists.txt
+cmake-project-template-master/cmake-project-template-master/LICENSE
+cmake-project-template-master/cmake-project-template-master/README.md
+cmake-project-template-master/cmake-project-template-master/src/CMakeLists.txt
+cmake-project-template-master/cmake-project-template-master/src/division/CMakeLists.txt
+cmake-project-template-master/cmake-project-template-master/test/CMakeLists.txt
+
+***********img file list***************
+cmake-project-template-master/cmake-project-template-master/doc/build-and-run.png
+cmake-project-template-master/cmake-project-template-master/doc/cmake-clion.png
+
+***********uml file list***************
+
+***********other file list***************
+cmake-project-template-master/cmake-project-template-master/.gitignore
+cmake-project-template-master/cmake-project-template-master/.gitmodules
+cmake-project-template-master/cmake-project-template-master/.travis.yml
+cmake-project-template-master/cmake-project-template-master/build-and-run
+cmake-project-template-master/cmake-project-template-master/.idea/.gitignore
+cmake-project-template-master/cmake-project-template-master/.idea/cmake-project-template.iml
+cmake-project-template-master/cmake-project-template-master/.idea/externalDependencies.xml
+cmake-project-template-master/cmake-project-template-master/.idea/markdown-navigator.xml
+cmake-project-template-master/cmake-project-template-master/.idea/misc.xml
+cmake-project-template-master/cmake-project-template-master/.idea/modules.xml
+cmake-project-template-master/cmake-project-template-master/.idea/vcs.xml
+cmake-project-template-master/cmake-project-template-master/.idea/workspace.xml.example
+cmake-project-template-master/cmake-project-template-master/.idea/dictionaries/kig.xml
+cmake-project-template-master/cmake-project-template-master/.idea/inspectionProfiles/Project_Default.xml
+cmake-project-template-master/cmake-project-template-master/.idea/markdown-navigator/profiles_settings.xml
+cmake-project-template-master/cmake-project-template-master/bin/.git-keep
+cmake-project-template-master/cmake-project-template-master/doc/.git-keep
+cmake-project-template-master/cmake-project-template-master/include/.git-keep
+cmake-project-template-master/cmake-project-template-master/lib/.git-keep
+cmake-project-template-master/cmake-project-template-master/test/.git-keep
+cmake-project-template-master/cmake-project-template-master/test/lib/.git-keep
+
+***********other code file list***************

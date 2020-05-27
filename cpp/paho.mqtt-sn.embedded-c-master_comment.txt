@@ -1,0 +1,1026 @@
+﻿/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//if (errno != EINTR && errno != EAGAIN && errno != EINPROGRESS && errno != EWOULDBLOCK)
+//{
+//}
+/* prefer ip4 addresses */
+//int opt = 1;
+//if (setsockopt(mysock, SOL_SOCKET, SO_NOSIGPIPE, (void*)&opt, sizeof(opt)) != 0)
+//	printf("Could not set SO_NOSIGPIPE for socket %d", mysock);
+/* 30 Secs Timeout */
+// Not init'ing this can cause strange errors
+//printf("write rc %d\n", rc);
+//printf("left %d ms\n", (res.tv_sec < 0) ? 0 : res.tv_sec * 1000 + res.tv_usec / 1000);
+//if (res.tv_sec > 0 || res.tv_usec > 0)
+//	printf("expired %d %d\n", res.tv_sec, res.tv_usec);
+//printf("interval %d %d\n", interval.tv_sec, interval.tv_usec);
+//printf("left %d ms\n", (res.tv_sec < 0) ? 0 : res.tv_sec * 1000 + res.tv_usec / 1000);
+/****************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*------------------------------------------------------
+// ClientId
+// Multicast group IP
+// Multicast group Port
+// Local PortNo
+/*------------------------------------------------------
+//KeepAlive [seconds]
+//Clean session
+//Sleep duration [seconds]
+//WillTopic
+//WillMessage
+//WillQos
+//WillRetain
+/*------------------------------------------------------
+/*------------------------------------------------------
+// set null terminator
+// set null terminator
+// set null terminator
+/*------------------------------------------------------
+// e.g. SUB(TopicType, topicName, TopicId, callback, QoSx),
+/*------------------------------------------------------
+/*------------------------------------------------------
+//#define CLIENT_MODE
+// e.g. TEST( Label, Test),
+/*------------------------------------------------------
+// e.g. TASK( task, executing duration in second),
+// publishTopic1() is executed every 4 seconds
+// publishTopic2() is executed every 7 seconds
+/*------------------------------------------------------
+/*****************  END OF  PROGRAM ********************/
+/****************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*------------------------------------------------------
+// ClientId
+// Multicast group IP
+// Multicast group Port
+// Local PortNo
+/*------------------------------------------------------
+//KeepAlive [seconds]
+//Clean session
+//Sleep duration [seconds]
+//WillTopic
+//WillMessage
+//WillQos
+//WillRetain
+/*------------------------------------------------------
+/*------------------------------------------------------
+/*------------------------------------------------------
+// e.g. SUB(topic, callback, QoS),
+/*------------------------------------------------------
+/*------------------------------------------------------
+//#define CLIENT_MODE
+// e.g. TEST( Label, Test),
+/*------------------------------------------------------
+// e.g. TASK( task, executing duration in second),
+// publishTopic1() is executed every 4 seconds
+// publishTopic2() is executed every 7 seconds
+/*------------------------------------------------------
+/*****************  END OF  PROGRAM ********************/
+/****************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*------------------------------------------------------
+// ClientId
+// Multicast group IP
+// Multicast group Port
+// Local PortNo
+/*------------------------------------------------------
+//KeepAlive [seconds]
+//Clean session
+//Sleep duration [seconds]
+//WillTopic
+//WillMessage
+//WillQos
+//WillRetain
+/*------------------------------------------------------
+/*------------------------------------------------------
+/*------------------------------------------------------
+// e.g. SUB(TopicType, topicName, TopicId, callback, QoSx),
+/*------------------------------------------------------
+/*------------------------------------------------------
+//#define CLIENT_MODE
+// e.g. TEST( Label, Test),
+/*------------------------------------------------------
+// e.g. TASK( task, executing duration in second),
+// publishTopic1() is executed every 4 seconds
+// publishTopic2() is executed every 7 seconds
+/*------------------------------------------------------
+/*****************  END OF  PROGRAM ********************/
+/****************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*------------------------------------------------------
+// ClientId
+// Multicast group IP
+// Multicast group Port
+// Local PortNo
+/*------------------------------------------------------
+//KeepAlive [seconds]
+//Clean session
+//Sleep duration [seconds]
+//WillTopic
+//WillMessage
+//WillQos
+//WillRetain
+/*------------------------------------------------------
+/*------------------------------------------------------
+// set null terminator
+// set null terminator
+// set null terminator
+// set null terminator
+/*------------------------------------------------------
+// e.g. SUB(TopicType, topicName, TopicId, callback, QoSx),
+// SUB(MQTTSN_TOPIC_TYPE_NORMAL, topic5, 0, on_Topic05, QoS1),
+//SUB(MQTTSN_TOPIC_TYPE_NORMAL, topic2, 0, on_Topic02, QoS1),
+/*------------------------------------------------------
+/*------------------------------------------------------
+//#define CLIENT_MODE
+// e.g. TEST( Label, Test),
+//TEST("Step2:Subscribe topic2",     subscribeTopic2),
+/*------------------------------------------------------
+// e.g. TASK( task, executing duration in second),
+/*------------------------------------------------------
+/*****************  END OF  PROGRAM ********************/
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+// SERCHGW
+// WILLMSG
+// WILLTOPIC
+// CONNECT
+// Not writeGwMsg() : not to reset the counter.
+// SUBSCRIBEs are conducted
+/* Wake up and starts from this point. */
+//error
+// Check PINGREQ required
+// Check ADVERTISE valid
+// Check Timeout of REGISTERs
+// Check Timeout of PUBLISHes,
+// Check Timeout of SUBSCRIBEs,
+// create a forwarder encapsulation message  WirelessNodeId is a 4bytes fake data
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*-------------------------------------
+/*=====================================
+// ToDo:  set WDT and sleep mode
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=========================================
+//if(recvLen != *len){
+//	*len = 0;
+//	return 0;
+//}else{
+//}
+/*=========================================
+// -20 for Escape sequence
+// 50 msec
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*========================================
+// PUBLISH Done
+// PUBLISH Done
+// PUBLISH Done
+/*
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+// Add Topic to TopicTable
+// *msg is terminated with 0x00 by Network::getMessage()
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*========================================
+//theClient->getGwProxy()->getTopicTable()->setCallback(elm->topicName, 0);
+/* SubElement operations */
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//using namespace std;
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*======================
+/*======================
+/*
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*--- For Little endianness ---*/
+/*--- For Big endianness ---*/
+// CPU_LITTLEENDIANN
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* convert MQTT ReturnCode to MQTT-SN one */
+// update the client's status
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/* if there are more digits to encode, set the top bit of this digit */
+/**
+/**
+/* enough length to read the integer? */
+/**
+/**
+/**
+/**
+/**
+/**
+/* read First Byte of Packet */
+/* read RemainingLength */
+/* allocate buffer */
+/* read Payload */
+// Reserved
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* client is sleeping. save PUBLISH */
+/* create MQTTSN_topicid */
+/* This message might be subscribed with wild card. */
+/* add the Topic and get a TopicId */
+/* create REGISTER */
+/* send REGISTER */
+/* send PUBLISH */
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*
+/* return CONNACK when the client is sleeping */
+//* clear ConnectData of Client */
+/* clear ConnectData of Client */
+/* CONNECT was not sent yet. prepare Connect data */
+/* reset the table of msgNo and TopicId pare */
+/* renew the TopicList */
+/* create & send WILLTOPICREQ message to the client */
+/* Send WILLTOPICREQ to the client */
+/* create CONNACK & send it to the client */
+/*
+//Connect* connectData = client->getConnectData();
+/* save WillMsg in the client */
+/* Send CONNACK to the client */
+/*
+/*
+/* create and send PINGRESP to the PacketHandler */
+// ToDo:  This version can't re-send PUBLISH when PUBACK is not returned.
+// pop the que to delete element.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*  ClientList and Adapters  Initialize  */
+/*  Setup predefined topics  */
+/* write prompts */
+/* Run Tasks until CTRL+C entred */
+/* stop Tasks */
+/* wait until all Task stop */
+/*=====================================
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*=====================================
+// blank
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* Create Aggregated Clients */
+//testMessageIdTable();
+/* set Non secure client`s nextMsgId. otherwise Id is duplicated.*/
+// ToDo: AggregateGW this method called when the client disconnect and erase it`s Topics. this method call */
+// ToDo: AggregateGW this method called when the client disconnect and erase it`s Topics. this method call */
+// ToDo: AggregateGW  */
+// ToDo: AggregateGW  */
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*=====================================
+/*=====================================
+//ToDo: AggregateGW
+//ToDo: AggregateGW
+// ToDo: AggregateGW
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/**
+/**
+// 500 msec
+/* Prepare sockets list to read */
+/* Check sockets is ready to read */
+/* read sockets */
+/* post a BrokerRecvEvent */
+// Disconnected
+/* delete client when the client is not authorized & session is clean */
+/* disconnect the client */
+/**
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/**
+/**
+/* Check Client is managed by Adapters */
+/* connect to the broker and send a packet */
+/* disconnect the broker and the client */
+/* send a packet */
+/* Disconnect the client */
+/**
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/* save clientId into (char*)_clientId NULL terminated */
+/* save willTopic into (char*)_willTopic  with NULL termination */
+/* save willMsg into (char*)_willMsg  with NULL termination */
+/*=====================================
+/*=====================================
+// Do not delete element. Element is deleted after sending to Client.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/**
+/*  anonimous clients */
+// full of clients
+/* creat a new client */
+/* add the list */
+/*  anonimous clients */
+// full of clients
+/* creat a new client */
+/* add the list */
+// create Topic & Add it
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//#include "MQTTSNGWForwarder.h"
+/*=====================================
+/**
+/*
+/* write log and post Event */
+/* get the packet from the encapsulation message */
+/*   Check the client belonging to QoS-1Proxy  ?    */
+/* write log and post Event */
+/* new client */
+/* create a new client */
+/* Add to af forwarded client list of forwarder. */
+/* Client exists. Set SensorNet Address of it. */
+/* create a new client */
+/* post Client RecvEvent */
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*
+//broadcast
+/*
+/*
+/* return CONNACK when the client is sleeping */
+//* clear ConnectData of Client */
+/* clear ConnectData of Client */
+/* CONNECT was not sent yet. prepare Connect data */
+/* reset the table of msgNo and TopicId pare */
+/* renew the TopicList */
+/* create & send WILLTOPICREQ message to the client */
+/* Send WILLTOPICREQ to the client */
+/* CONNECT message was not qued in.
+/*
+/* add the connectData for MQTT CONNECT message */
+/* Send WILLMSGREQ to the client */
+/*
+/* save WillMsg in the client */
+/* create CONNECT message */
+/* Send CONNECT to the broker */
+/*
+/*
+/* send NOT_SUPPORTED responce to the client */
+/*
+/* send NOT_SUPPORTED responce to the client */
+/*
+/* send PINGREQ to the broker */
+// ToDo:  This version can't re-send PUBLISH when PUBACK is not returned.
+// pop the que to delete element.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*
+/*  Do not delete the MQTTSNPacket.  MQTTSNPacket is deleted by delete Event */
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*=====================================
+/*
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*===============================
+/*===============================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//unsigned char* ptr = 0;
+//ptr = _buf + p + 4;
+//writeInt(&ptr, msgId);
+//ptr = _buf + 4;
+//writeInt(&ptr, msgId);
+//ptr = _buf + 2;
+//writeInt(&ptr, msgId);
+//ptr = _buf + p + 2;
+//writeInt(&ptr, msgId);
+//ptr = _buf + 5;
+//writeInt(&ptr, msgId);
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+// 2000 msecs
+/*=====================================
+/**
+/* wait Event */
+/*------ Check Keep Alive Timer & send Advertise ------*/
+/*------ Check Adapters   Connect or PINGREQ ------*/
+/*------    Handle SEARCHGW Message     ---------*/
+/*------    Handle Messages form Clients      ---------*/
+/* Reset the Timer for PINGREQ. */
+/*------  Handle Messages form Broker      ---------*/
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*
+/*=====================================
+/*=====================================
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* Reply PubAck with INVALID_TOPIC_ID to the client */
+/* Save a msgId & a TopicId pare for PUBACK */
+/* send PINGREQ to the broker */
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*  Create QoS-1 Clients */
+/* initialize Adapter */
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//MQTTSN_TOPIC_TYPE_SHORT
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*=====================================
+// For MQTTSN_TOPIC_TYPE_NORMAL */
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*========================================
+/*========================================
+//TCPStack::close();
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*=====================================
+/*=========================================
+// Buffer is empty.
+// Buffer is empty.
+// *_end < *_start
+/*=====================================
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*=====================================
+/*============================================
+/*=====================================
+//Turn Green on & turn Red off
+//Turn Green off & turn Red on
+// eliminate unused warnning of compiler
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*===========================================
+/**
+/*================================================================
+/**
+/*
+/*  Prepare UDP sockets */
+/*=========================================
+/*------ Create unicast socket --------*/
+/*------ Create Multicast socket --------*/
+// 1 sec
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//using namespace std;
+/*===========================================
+/**
+/**
+/*===========================================
+/*=========================================
+// use IPv6
+//use local IF address
+//select the interface
+//restrict the socket to IPv6 only
+//init the structs for getaddrinfo
+//according to: https://beej.us/guide/bgnet/output/html/multipage/
+// use IPv6, whichever
+// fill in my IP for me
+//no specific address, bind to available ones...
+//create the socket
+//if given, set a given device name to bind to
+//socket option: bind to a given interface name
+//socket option: reuse address
+//finally: bind...
+//if given, set a broadcast address; otherwise it will be ::
+//everything went fine...
+// use IPv6
+//TODO: test if this is working properly (GW works, but this function is not completely tested)
+// 1 sec
+//TODO: test if this is working properly (GW works, but this function is not completely tested)
+//D_NWSTACK("recved from %s:%d length = %d\n", inet_ntoa(sender.sin_addr),ntohs(sender.sin_port), status);
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*===========================================
+/*===========================================
+/*===========================================
+// MSB length
+// LSB length
+// checksum
+// Message Length
+// Message Length
+// Transmit Request API
+// Frame ID
+// Address64
+// Address16
+// Broadcast Radius
+// Option: Use the extended transmission timeout 0x40
+// Payload
+/* wait Txim Status 0x8B */
+/*=========================================
+// 1 sec.
+// 500ms
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//TestTask* task = new TestTask(test);
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* Test command line parameter */
+/* Test RingBuffer */
+/* Test Timer */
+/* Test Que */
+/* Test Tree23 */
+//printf("Test  Tree23         ");
+//TestTree23* tree23 = new TestTree23();
+//tree23->test();
+//delete tree23;
+/* Test TopicTable */
+/* Test TopicIdMap */
+/* Test EventQue */
+/*
+//MultiTaskProcess::run();
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//printf("msgid=%d id=%d type=%d\n", msgid, elm->getTopicId(), elm->getTopicType());
+//printf("msgid=%d\n", msgid);
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* create Topic */
+/* Test EraseNorma() */
+//printf("Topic=%s ID=%d\n", t->getTopicName()->c_str(), t->getTopicId());
+/* Add Topic to Topics */
+//printf("Topic=%s ID=%d\n", t->getTopicName()->c_str(), t->getTopicId());
+//printf("Topic=%s ID=%d\n", t->getTopicName()->c_str(), t->getTopicId());
+/* Get Topic by MQTTSN_topicid  by Name*/
+//printf("Topic=%s ID=%d\n", t->getTopicName()->c_str(), t->getTopicId());
+/* Get Topic by MQTTSN_topicid  by ID*/
+//printf("Topic=%s ID=%d ID=%d\n", t->getTopicName()->c_str(), t->getTopicId(), st->getTopicId());
+/* Test Wildcard */
+/*
+/*
+/*
+// examples from MQTT specification
+/**************************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//printf("key=%d  val=%d\n", i, rc->_val);
+//printf("key=%d  str=%s\n", i, r1[i]->_key.c_str());
+//printf("key=%d  find=%d\n", i, rc);
+//printf("key=%d  val=%d\n", i, val->_val);
+//printf("key=%d  find=%d\n", i, rc);
+//printf("key=%d  find=%d\n", i, rc);
+//printf("key=%d  val=%d\n", i, val->_val);
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+// Configuration values needed to connect to IBM IoT Cloud
+// For a registered connection, replace with your org
+// For a registered connection, replace with your id
+// For a registered connection, replace with your auth-token
+// For a registered connection, replace with your type
+// mac without colons
+// Auth_token is only used in non-quickstart mode
+// Construct clientId - d:org:type:id
+// MQTT Connect
+// First 10 attempts try within 3 seconds, next 10 attempts retry after every 1 minute
+// after 20 attempts, retry every 10 minutes
+// if ipstack and client were on the heap we could deconstruct and goto a label where they are constructed
+//  or maybe just add the proper members to do this disconnect and call attemptConnect(...)
+//MMA.x(), MMA.y(), MMA.z(), sensor.temp(), joystickPos, ain1.read(), ain2.read());
+// Command topic: iot-2/cmd/blink/fmt/json - cmd is the string between cmd/ and /fmt/
+// Publish a message every second
+// if we have lost the connection
+// allow the MQTT client to receive messages
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* subscribe */
+/* wait for suback */
+/* publish with short name */
+/* wait for puback */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* publish with short name */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//	char *topicname = "a long topic name";
+/* wait for connack */
+/* publish with short name */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* register topic name */
+/* wait for regack */
+/* publish with obtained id */
+// Publish a message every second
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* publish with short name */
+/* wait for puback */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/** error in socket operation */
+/* default on Windows is 64 - increase to make Linux and Windows the same */
+/**
+//printf("received %d bytes count %d\n", rc, (int)count);
+/**
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/** error in socket operation */
+/* default on Windows is 64 - increase to make Linux and Windows the same */
+/**
+//printf("received %d bytes count %d\n", rc, (int)count);
+/**
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* subscribe */
+/* wait for suback */
+/* publish with short name */
+/* wait for puback */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* publish with short name */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+//	char *topicname = "a long topic name";
+/* wait for connack */
+/* publish with short name */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* register topic name */
+/* wait for regack */
+/* publish with obtained id */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* wait for connack */
+/* publish with short name */
+/* wait for puback */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/* write length */
+/* write message type */
+/* protocol ID */
+/**
+/* read length */
+/**
+/**
+/* write length */
+/* write message type */
+/**
+/* write length */
+/* write message type */
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+/**
+/**
+/**
+/* write length */
+/* write message type */
+/**
+/**
+/**
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/**
+/* write length */
+/**
+/* read length */
+/**
+/* write length */
+/**
+/* write length */
+/**
+/* read length */
+/**
+/* write length */
+/**
+/* read length */
+/**
+/**
+/**
+/* read length */
+/**
+/**
+/**
+/* write length */
+/**
+/* write length */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/* special arrangement for long topic names in QoS -1 publishes.  The length of the topic is in the topicid field */
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+/**
+/* read length */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/* the length of the whole packet including length field */
+/* 1. read a packet - UDP style */
+/* 2. read the length.  This is variable in itself */
+/* there was an error */
+/* return the packet type */
+/* the length of the whole packet including length field */
+/* 2. read the length.  This is variable in itself */
+/* there was an error */
+/* return the packet type */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+/**
+/* read length */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* write length */
+/* write message type */
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/* write length */
+/* write message type */
+/* special arrangement for long topic names in QoS -1 publishes.  The length of the topic is in the topicid field */
+/* topic length */
+/* write length */
+/* write message type */
+/**
+/* ack packet length */
+/* write length */
+/* write packet type */
+/**
+/**
+/**
+/**
+/**
+/* write length */
+/* write message type */
+/**
+/* write length */
+/* write message type */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/**
+/* write length */
+/* write message type */
+/* now the topic id or name */
+/* means long topic name */
+/**
+/* read length */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* read length */
+/**
+/* write length */
+/* write message type */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**
+/* write length */
+/* write message type */
+/* now the topic id or name */
+/* means long topic name */
+/**
+/* read length */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/* read length */
+/* write length */
+/* write message type */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/**< connection to system under test. */
+//m2m.eclipse.org:1883",
+/* TODO - unused - remove? static struct timeval start_time; */
+/* data after should be the same as data before */
+/* Pingreq without clientid */
+/* data after should be the same as data before */
+/* Pingreq with clientid */
+/* data after should be the same as data before */
+/* Disconnect without duration */
+/* data after should be the same as data before */
+/* Disconnect with duration */
+/* data after should be the same as data before */
+/* Pingreq with clientid */
+/* exit: */
+/* data after should be the same as data before */
+/*exit:*/
+/* exit: */
+/* data after should be the same as data before */
+/*exit:*/
+/* data after should be the same as data before */
+/*exit:*/
+/* data after should be the same as data before */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* exit: */
+/* run all the tests */
+/* return number of failures.  0 = test succeeded */
+/* run just the selected test */
+/*******************************************************************************
+//www.eclipse.org/legal/epl-v10.html
+//www.eclipse.org/org/documents/edl-v10.php.
+/** error in socket operation */
+/* TODO - unused - remove? static struct timeval start_time; */
+//printf("received %d bytes count %d\n", rc, (int)count);
+/* wait for connack */
+/* wait for connack */
+/* subscribe */
+/*msgid*/ 1, &topic);
+/* wait for suback */
+/*
+/* exit: */
+/* data after should be the same as data before */
+/*exit:*/
+/* data after should be the same as data before */
+/* exit: */
+/* data after should be the same as data before */
+/* exit: */
+/* data after should be the same as data before */
+/* exit: */
+/* run all the tests */
+/* return number of failures.  0 = test succeeded */
+/* run just the selected test */

@@ -1,0 +1,62 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\daxpy.c
+/* constant times a vector plus a vector.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* daxpy_ */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\ddot.c
+/* forms the dot product of two vectors.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* ddot_ */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\dnrm2.c
+/* Needed for fabs() and sqrt() */
+/*  DNRM2 returns the euclidean norm of a vector via the function   
+/* Dereference inputs */
+/* The following loop is equivalent to this call to the LAPACK 
+/* dnrm2_ */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\dscal.c
+/* scales a vector by a constant.   
+/* Dereference inputs */
+/* code for increment equal to 1 */
+/* clean-up loop */
+/* code for increment not equal to 1 */
+/* dscal_ */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\blas\daxpy.c
+/* constant times a vector plus a vector.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* daxpy_ */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\blas\ddot.c
+/* forms the dot product of two vectors.   
+/* Dereference inputs */
+/* code for both increments equal to 1 */
+/* clean-up loop */
+/* code for unequal increments or equal increments not equal to 1 */
+/* ddot_ */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\blas\dnrm2.c
+/* Needed for fabs() and sqrt() */
+/*  DNRM2 returns the euclidean norm of a vector via the function   
+/* Dereference inputs */
+/* The following loop is equivalent to this call to the LAPACK 
+/* dnrm2_ */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/face-alignment-at-3000fps-master\face-alignment-at-3000fps-master\liblinear\blas\dscal.c
+/* scales a vector by a constant.   
+/* Dereference inputs */
+/* code for increment equal to 1 */
+/* clean-up loop */
+/* code for increment not equal to 1 */
+/* dscal_ */

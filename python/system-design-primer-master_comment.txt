@@ -1,0 +1,31 @@
+﻿# key: query, value: node
+# Key exists in cache, update the value
+# Key does not exist in cache
+# Remove the oldest entry from the linked list and lookup
+# Add the new key and value
+# key: user id, value: User
+# key: friend id, value: User
+# key: friend id, value: private chats
+# key: chat id, value: GroupChat
+# key: friend id, value: AddRequest
+# key: friend id, value: AddRequest
+# List of Levels
+# List of ParkingSpots
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# ...
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# Key exists in cache, update the value
+# Key does not exist in cache
+# Remove the oldest entry from the linked list and lookup
+# Add the new key and value
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# key: person_id, value: person_server
+# key: person_id, value: person
+# Use self.visited_ids to track visited nodes
+# Use self.lookup to translate a person_id to a Person
+# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+# Create signature based on url and contents

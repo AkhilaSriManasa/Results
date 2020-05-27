@@ -1,0 +1,38 @@
+﻿
+***********other formats****************
+gitignore
+py.bak
+
+***********source code file list***************
+
+***********h file list***************
+
+***********md file list***************
+GetOldTweets-python-master/GetOldTweets-python-master/exporter_help_text.txt
+GetOldTweets-python-master/GetOldTweets-python-master/LICENSE
+GetOldTweets-python-master/GetOldTweets-python-master/README.md
+GetOldTweets-python-master/GetOldTweets-python-master/requirements.txt
+
+***********img file list***************
+
+***********uml file list***************
+
+***********other file list***************
+GetOldTweets-python-master/GetOldTweets-python-master/.gitignore
+GetOldTweets-python-master/GetOldTweets-python-master/got3/manager/__init__.py.bak
+
+***********other code file list***************
+GetOldTweets-python-master/GetOldTweets-python-master/Exporter.py
+GetOldTweets-python-master/GetOldTweets-python-master/Main.py
+GetOldTweets-python-master/GetOldTweets-python-master/got/__init__.py
+GetOldTweets-python-master/GetOldTweets-python-master/got/manager/TweetCriteria.py
+GetOldTweets-python-master/GetOldTweets-python-master/got/manager/TweetManager.py
+GetOldTweets-python-master/GetOldTweets-python-master/got/manager/__init__.py
+GetOldTweets-python-master/GetOldTweets-python-master/got/models/Tweet.py
+GetOldTweets-python-master/GetOldTweets-python-master/got/models/__init__.py
+GetOldTweets-python-master/GetOldTweets-python-master/got3/__init__.py
+GetOldTweets-python-master/GetOldTweets-python-master/got3/manager/TweetCriteria.py
+GetOldTweets-python-master/GetOldTweets-python-master/got3/manager/TweetManager.py
+GetOldTweets-python-master/GetOldTweets-python-master/got3/manager/__init__.py
+GetOldTweets-python-master/GetOldTweets-python-master/got3/models/Tweet.py
+GetOldTweets-python-master/GetOldTweets-python-master/got3/models/__init__.py

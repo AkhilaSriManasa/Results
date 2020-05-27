@@ -1,0 +1,85 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\call_center\call_center.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\call_center\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\deck_of_cards\deck_of_cards.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\deck_of_cards\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\hash_table\hash_map.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\hash_table\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\lru_cache\lru_cache.py
+# key: query, value: node
+# Key exists in cache, update the value
+# Key does not exist in cache
+# Remove the oldest entry from the linked list and lookup
+# Add the new key and value
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\lru_cache\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\online_chat\online_chat.py
+# key: user id, value: User
+# key: friend id, value: User
+# key: friend id, value: private chats
+# key: chat id, value: GroupChat
+# key: friend id, value: AddRequest
+# key: friend id, value: AddRequest
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\online_chat\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\parking_lot\parking_lot.py
+# List of Levels
+# List of ParkingSpots
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\object_oriented_design\parking_lot\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\mint\mint_mapreduce.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\mint\mint_snippets.py
+# -*- coding: utf-8 -*-
+# ...
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\mint\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\pastebin\pastebin.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\pastebin\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\query_cache\query_cache_snippets.py
+# -*- coding: utf-8 -*-
+# Key exists in cache, update the value
+# Key does not exist in cache
+# Remove the oldest entry from the linked list and lookup
+# Add the new key and value
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\query_cache\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\sales_rank\sales_rank_mapreduce.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\sales_rank\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\social_graph\social_graph_snippets.py
+# -*- coding: utf-8 -*-
+# key: person_id, value: person_server
+# key: person_id, value: person
+# Use self.visited_ids to track visited nodes
+# Use self.lookup to translate a person_id to a Person
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\social_graph\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\web_crawler\web_crawler_mapreduce.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\web_crawler\web_crawler_snippets.py
+# -*- coding: utf-8 -*-
+# Create signature based on url and contents
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/system-design-primer-master\system-design-primer-master\solutions\system_design\web_crawler\__init__.py

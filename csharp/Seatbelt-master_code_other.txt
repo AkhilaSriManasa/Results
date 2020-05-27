@@ -1,0 +1,600 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Seatbelt-master\Seatbelt-master\Seatbelt\Program.cs
+// used to fignal whether filtering should be done on results
+// from boboes' code at https://stackoverflow.com/questions/33935825/pinvoke-netlocalgroupgetmembers-runs-into-fatalexecutionengineerror/33939889#33939889
+// LOCALGROUP_MEMBERS_INFO_2 - Structure for holding members details
+// documented in MSDN
+// found by testing
+// pulled directly from @djhohnstein's SharpWeb project: https://github.com/djhohnstein/SharpWeb/blob/master/Edge/SharpEdge.cs
+// PInvoke signature definitions
+// for GetSystem()
+// PInvoke structures/contants
+// from winnt.h
+// from TOKEN_INFORMATION_CLASS
+// public readonly UInt32 Flags;
+//[MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+// TODO: double check these flags...
+// https://docs.microsoft.com/en-us/windows/desktop/api/ntsecapi/ns-ntsecapi-_kerb_external_ticket
+//cname_in_pa_data = 0x00040000,
+// public KERB_TICKET_CACHE_INFO[] Tickets;
+// public KERB_TICKET_CACHE_INFO[] Tickets;
+// logging on interactively.
+// logging using a network.
+// logon for a batch process.
+// logon for a service account.
+// Not supported.
+// Tattempt to unlock a workstation.
+// network logon with cleartext credentials
+// caller can clone its current token and specify new credentials for outbound connections
+// terminal server session that is both remote and interactive
+// attempt to use the cached credentials without going out across the network
+// same as RemoteInteractive, except used internally for auditing purposes
+// attempt to unlock a workstation
+// helpers (registry, UNC paths, etc.)
+// adapted from http://www.pinvoke.net/default.aspx/advapi32.LookupAccountSid
+////(((&%%%%%#%################//((((###%%%%%%%%%%%%%%%");
+////(((&%%%%%%######################(((((((((((((((((((");
+////(((&%%%%%#%#####################(((((((((((((((((((");
+////(((&%%%%%%%######################(#(((#(#((((((((((");
+////(((&%%%%%%%###############%######((#(#(####((((((((");
+////(((&%%%%%#########################(#(#######((#####");
+////(((&%%%%%%%%##############%#######(#########((#####");
+////(((&%%%%%%%################                        ");
+////(((&%%%%%%%%#############*                         ");
+// returns a single registry value under the specified path in the specified hive (HKLM/HKCU)
+// returns a byte array of single registry value under the specified path in the specified hive (HKLM/HKCU)
+// returns all registry values under the specified path in the specified hive (HKLM/HKCU)
+// returns an array of the subkeys names under the specified path in the specified hive (HKLM/HKCU/HKU)
+// uses WNetGetConnection to map a drive letter to a possible UNC mount path
+// Pulled from @ambyte's gist at https://gist.github.com/ambyte/01664dc7ee576f69042c
+// look for the {LETTER}: combination ...
+// don't use char.IsLetter here - as that can be misleading
+// the only valid drive letters are a-z && A-Z.
+// returns true if the current process is running with adminstrative privs in a high integrity context
+// returns the "DOMAIN\user" members for a specified local group name
+// adapted from boboes' code at https://stackoverflow.com/questions/33935825/pinvoke-netlocalgroupgetmembers-runs-into-fatalexecutionengineerror/33939889#33939889
+// null for the local machine
+//x64 safe
+// Returns all SIDs that the current user is a part of, whether they are disabled or not.
+// slightly adapted from https://stackoverflow.com/questions/2146153/how-to-get-the-logon-sid-in-c-sharp/2146418#2146418
+// first call gets length of TokenInformation
+// helper to elevate to SYSTEM for Kerberos ticket enumeration via token impersonation
+// Open winlogon's token with TOKEN_DUPLICATE accesss so ca can make a copy of the token with DuplicateToken
+// TOKEN_DUPLICATE = 0x0002
+//Console.WriteLine("OpenProcessToken failed!");
+// make a copy of the NT AUTHORITY\SYSTEM token from winlogon
+// 2 == SecurityImpersonation
+//Console.WriteLine("DuplicateToken failed!");
+//Console.WriteLine("ImpersonateLoggedOnUser failed!");
+// clean up the handles we created
+// helper that establishes a connection to the LSA server and verifies that the caller is a logon application
+//  used for Kerberos ticket enumeration
+// checks if the "S-1-5-32-544" in the current token groups set, meaning the user is a local administrator
+// returns true if the system is likely a virtual machine
+// Adapted from RobSiklos' code from https://stackoverflow.com/questions/498371/how-to-detect-if-my-application-is-running-in-a-virtual-machine/11145280#11145280
+// checks if the current user has the specified AccessRight to the specified file or folder
+// adapted from https://stackoverflow.com/questions/1410127/c-sharp-test-if-user-has-write-access-to-a-folder/21996345#21996345
+// checks if the current user has rights to modify the given file/directory
+// adapted from https://stackoverflow.com/questions/1410127/c-sharp-test-if-user-has-write-access-to-a-folder/21996345#21996345
+// TODO: check if file exists, check file's parent folder
+// finds files matching one or more patterns under a given path, recursive
+// adapted from http://csharphelper.com/blog/2015/06/find-files-that-match-multiple-patterns-in-c/
+//      pattern: "*pass*;*.png;"
+// search every pattern in this directory's files
+// go recurse in all sub-directories
+// start of checks
+// system-focused checks
+// returns basic OS/host information, including:
+//      Windows version information
+//      integrity/admin levels
+//      processor count/architecture
+//      basic user and domain information
+//      whether the system is a VM
+//      etc.
+// queries event IDs 12 (kernel boot) and 13 (kernel shutdown), sorts, and gives reboot schedule
+// grab events from the last X days - 15 for default
+// eventID 12 == start up
+// eventID 13 == shutdown
+// Returns all privileges that the current process/user possesses
+// adapted from https://stackoverflow.com/questions/4349743/setting-size-of-token-privileges-luid-and-attributes-array-returned-by-gettokeni
+// dumps out current user environment variables
+// dumps out current system environment variables
+// lists installed servics that don't have "Microsoft Corporation" as the company name in their file info
+//      or all services if "full" is passed
+//OLD - if ((result["PathName"] != null) && ((!FilterResults.filter) || (!Regex.IsMatch(result["PathName"].ToString(), "C:\\\\WINDOWS\\\\", RegexOptions.IgnoreCase))))
+// System.Console.WriteLine("The file cannot be found.");
+// System.Console.WriteLine("The assembly has already been loaded.");
+// lists the folders in C:\Users\, showing users who have logged onto the system
+// dump out various UAC system policies
+// lists user/system internet settings, including default proxy info
+// adapted partially from Vincent LE TOUX' work
+//      https://github.com/vletoux/MakeMeEnterpriseAdmin/blob/master/MakeMeEnterpriseAdmin.ps1#L2939-L2950
+// and https://www.dreamincode.net/forums/topic/135033-increment-memory-pointer-issue/
+// also Jared Atkinson's work at https://github.com/Invoke-IR/ACE/blob/master/ACE-Management/PS-ACE/Scripts/ACE_Get-KerberosTicketCache.ps1
+// if the original call fails then it is likely we don't have SeTcbPrivilege
+// to get SeTcbPrivilege we can Impersonate a NT AUTHORITY\SYSTEM Token
+// should now have the proper privileges to get a Handle to LSA
+// we don't need our NT AUTHORITY\SYSTEM Token anymore so we can revert to our original token
+// first return all the logon sessions
+//win32 systemdate
+// get an array of pointers to LUIDs
+// if we have a valid logon
+// user session data
+// now we want to get the tickets for this logon ID
+// obtains the unique identifier for the kerberos authentication package.
+// input object for querying the ticket cache for a specific logon ID
+// query LSA, specifying we want the ticket cache
+// parse the returned pointer into our initial KERB_QUERY_TKT_CACHE_RESPONSE structure
+// get the size of the structures we're iterating over
+// iterate through the structures
+// parse the new ptr to the appropriate structure
+// extract our fields
+// move the pointer forward
+// disconnect from LSA
+// adapted partially from Vincent LE TOUX' work
+//      https://github.com/vletoux/MakeMeEnterpriseAdmin/blob/master/MakeMeEnterpriseAdmin.ps1#L2939-L2950
+// and https://www.dreamincode.net/forums/topic/135033-increment-memory-pointer-issue/
+// also Jared Atkinson's work at https://github.com/Invoke-IR/ACE/blob/master/ACE-Management/PS-ACE/Scripts/ACE_Get-KerberosTicketCache.ps1
+// If we want to look at tickets from a session other than our own
+// then we need to use LsaRegisterLogonProcess instead of LsaConnectUntrusted
+// obtains the unique identifier for the kerberos authentication package.
+// input object for querying the ticket cache (https://docs.microsoft.com/en-us/windows/desktop/api/ntsecapi/ns-ntsecapi-_kerb_query_tkt_cache_request)
+// query LSA, specifying we want the ticket cache
+// parse the returned pointer into our initial KERB_QUERY_TKT_CACHE_RESPONSE structure
+// get the size of the structures we're iterating over
+// iterate through the structures
+// parse the new ptr to the appropriate structure
+// extract our fields
+// disconnect from LSA
+// adapted partially from Vincent LE TOUX' work
+//      https://github.com/vletoux/MakeMeEnterpriseAdmin/blob/master/MakeMeEnterpriseAdmin.ps1#L2939-L2950
+// and https://www.dreamincode.net/forums/topic/135033-increment-memory-pointer-issue/
+// also Jared Atkinson's work at https://github.com/Invoke-IR/ACE/blob/master/ACE-Management/PS-ACE/Scripts/ACE_Get-KerberosTicketCache.ps1
+// if the original call fails then it is likely we don't have SeTcbPrivilege
+// to get SeTcbPrivilege we can Impersonate a NT AUTHORITY\SYSTEM Token
+// should now have the proper privileges to get a Handle to LSA
+// we don't need our NT AUTHORITY\SYSTEM Token anymore so we can revert to our original token
+// first return all the logon sessions
+//win32 systemdate
+// get an array of pointers to LUIDs
+// if we have a valid logon
+// user session data
+// now we want to get the tickets for this logon ID
+// obtains the unique identifier for the kerberos authentication package.
+// input object for querying the TGT for a specific logon ID (https://docs.microsoft.com/en-us/windows/desktop/api/ntsecapi/ns-ntsecapi-_kerb_retrieve_tkt_request)
+// indicate we want kerb creds yo'
+// query LSA, specifying we want the the TGT data
+// parse the returned pointer into our initial KERB_RETRIEVE_TKT_RESPONSE structure
+// extract the session key
+// extract the TGT and base64 encode it
+// display the TGT, columns of 100 chararacters
+//move the pointer forward
+//free the SECURITY_LOGON_SESSION_DATA memory in the struct
+//free the array of LUIDs
+// disconnect from LSA
+// adapted partially from Vincent LE TOUX' work
+//      https://github.com/vletoux/MakeMeEnterpriseAdmin/blob/master/MakeMeEnterpriseAdmin.ps1#L2939-L2950
+// and https://www.dreamincode.net/forums/topic/135033-increment-memory-pointer-issue/
+// also Jared Atkinson's work at https://github.com/Invoke-IR/ACE/blob/master/ACE-Management/PS-ACE/Scripts/ACE_Get-KerberosTicketCache.ps1
+// If we want to look at tickets from a session other than our own
+// then we need to use LsaRegisterLogonProcess instead of LsaConnectUntrusted
+// obtains the unique identifier for the kerberos authentication package.
+// input object for querying the TGT (https://docs.microsoft.com/en-us/windows/desktop/api/ntsecapi/ns-ntsecapi-_kerb_retrieve_tkt_request)
+// indicate we want kerb creds yo'
+//tQuery.CacheOptions = KERB_CACHE_OPTIONS.KERB_RETRIEVE_TICKET_AS_KERB_CRED;
+// query LSA, specifying we want the the TGT data
+// parse the returned pointer into our initial KERB_RETRIEVE_TKT_RESPONSE structure
+// extract the session key
+// extract the TGT and base64 encode it
+// display the TGT, columns of 100 chararacters
+// disconnect from LSA
+// https://github.com/pauldotknopf/WindowsSDK7-Samples/blob/master/security/authorization/klist/KList.c#L585
+// currently not working :(
+//public static void ListKerberosTicketDataCurrentUser()
+//{
+//    // adapted partially from Vincent LE TOUX' work
+//    //      https://github.com/vletoux/MakeMeEnterpriseAdmin/blob/master/MakeMeEnterpriseAdmin.ps1#L2939-L2950
+//    // and https://www.dreamincode.net/forums/topic/135033-increment-memory-pointer-issue/
+//    // also Jared Atkinson's work at https://github.com/Invoke-IR/ACE/blob/master/ACE-Management/PS-ACE/Scripts/ACE_Get-KerberosTicketCache.ps1
+//    Console.WriteLine("\r\n\r\n=== Kerberos Ticket Data (Current User) ===\r\n");
+//    //try
+//    //{
+//    string name = "kerberos";
+//    LSA_STRING_IN LSAString;
+//    LSAString.Length = (ushort)name.Length;
+//    LSAString.MaximumLength = (ushort)(name.Length + 1);
+//    LSAString.Buffer = name;
+//    IntPtr ticketPointer = IntPtr.Zero;
+//    IntPtr ticketsPointer = IntPtr.Zero;
+//    int authPack;
+//    int returnBufferLength = 0;
+//    int protocalStatus = 0;
+//    IntPtr lsaHandle;
+//    int retCode;
+//    // If we want to look at tickets from a session other than our own
+//    // then we need to use LsaRegisterLogonProcess instead of LsaConnectUntrusted
+//    retCode = LsaConnectUntrusted(out lsaHandle);
+//    // obtains the unique identifier for the kerberos authentication package.
+//    retCode = LsaLookupAuthenticationPackage(lsaHandle, ref LSAString, out authPack);
+//    UNICODE_STRING targetName = new UNICODE_STRING("krbtgt/TESTLAB.LOCAL");
+//    UNICODE_STRING target = new UNICODE_STRING();
+//    KERB_RETRIEVE_TKT_RESPONSE CacheResponse = new KERB_RETRIEVE_TKT_RESPONSE();
+//    // LMEM_ZEROINIT -> 0x0040
+//    IntPtr temp = LocalAlloc(0x0040, (uint)(targetName.Length + Marshal.SizeOf(typeof(KERB_RETRIEVE_TKT_REQUEST))));
+//    IntPtr unmanagedAddr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(KERB_RETRIEVE_TKT_REQUEST)));
+//    //Marshal.StructureToPtr(managedObj, unmanagedAddr, true);
+//    KERB_RETRIEVE_TKT_REQUEST_UNI CacheRequest = (KERB_RETRIEVE_TKT_REQUEST_UNI)Marshal.PtrToStructure(temp, typeof(KERB_RETRIEVE_TKT_REQUEST_UNI));
+//    CacheRequest.MessageType = KERB_PROTOCOL_MESSAGE_TYPE.KerbRetrieveEncodedTicketMessage;
+//    // KERB_RETRIEVE_TKT_REQUEST_UNI
+//    IntPtr CacheRequestPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(KERB_RETRIEVE_TKT_REQUEST)));
+//    Marshal.StructureToPtr(CacheRequest, CacheRequestPtr, false);
+//    target.buffer = (IntPtr)(CacheRequestPtr.ToInt64() + 1);
+//    target.Length = targetName.Length;
+//    target.MaximumLength = targetName.MaximumLength;
+//    CopyMemory(target.buffer, targetName.buffer, targetName.Length);
+//    CacheRequest.TargetName = target;
+//    IntPtr responsePointer = IntPtr.Zero;
+//    int returnBufferLength2 = 0;
+//    // query LSA, specifying we want the the specified ticket data
+//    retCode = LsaCallAuthenticationPackage_KERB_RETRIEVE_TKT_UNI(lsaHandle, authPack, ref CacheRequest, Marshal.SizeOf(CacheRequest) + targetName.Length, out responsePointer, out returnBufferLength2, out protocalStatus);
+//    Console.WriteLine("LsaCallAuthenticationPackage_KERB_RETRIEVE_TKT_UNI retCode: {0}", retCode);
+//    Console.WriteLine("returnBufferLength: {0}", returnBufferLength2);
+//    Console.WriteLine("responsePointer: {0}\r\n", responsePointer);
+//    Console.WriteLine("protocalStatus: {0}\r\n", (uint)protocalStatus);
+//    Console.Out.Flush();
+//    //string clientName = Marshal.PtrToStringUni(CacheResponse.Ticket.ClientName, CacheResponse.Ticket.ClientName.L / 2);
+//    DateTime startTime = DateTime.FromFileTime(CacheResponse.Ticket.StartTime);
+//    DateTime endTime = DateTime.FromFileTime(CacheResponse.Ticket.EndTime);
+//    Console.WriteLine("startTime: {0}", startTime);
+//    Console.WriteLine("endTime: {0}", endTime);
+//    //// query LSA, specifying we want the ticket cache
+//    //retCode = LsaCallAuthenticationPackage(lsaHandle, authPack, ref tQuery, Marshal.SizeOf(tQuery), out ticketPointer, out returnBufferLength, out protocalStatus);
+//    //// parse the returned pointer into our initial KERB_QUERY_TKT_CACHE_RESPONSE structure
+//    //tickets = (KERB_QUERY_TKT_CACHE_EX_RESPONSE)Marshal.PtrToStructure((System.IntPtr)ticketPointer, typeof(KERB_QUERY_TKT_CACHE_EX_RESPONSE));
+//    //int count = tickets.CountOfTickets;
+//    //Console.WriteLine("  [*] Returned {0} tickets\r\n", count);
+//    //// get the size of the structures we're iterating over
+//    //Int32 dataSize = Marshal.SizeOf(typeof(KERB_TICKET_CACHE_INFO_EX));
+//    //for (int i = 0; i < count; i++)
+//    //{
+//    //    // iterate through the structures
+//    //    IntPtr currTicketPtr = (IntPtr)(long)((ticketPointer.ToInt64() + (int)(8 + i * dataSize)));
+//    //    // parse the new ptr to the appropriate structure
+//    //    ticket = (KERB_TICKET_CACHE_INFO_EX)Marshal.PtrToStructure(currTicketPtr, typeof(KERB_TICKET_CACHE_INFO_EX));
+//    //    // extract our fields
+//    //    string clientName = Marshal.PtrToStringUni(ticket.ClientName.Buffer, ticket.ClientName.Length / 2);
+//    //    string clientRealm = Marshal.PtrToStringUni(ticket.ClientRealm.Buffer, ticket.ClientRealm.Length / 2);
+//    //    string serverName = Marshal.PtrToStringUni(ticket.ServerName.Buffer, ticket.ServerName.Length / 2);
+//    //    string serverRealm = Marshal.PtrToStringUni(ticket.ServerRealm.Buffer, ticket.ServerRealm.Length / 2);
+//    //    Console.WriteLine("clientName: {0}", clientName);
+//    //    Console.WriteLine("clientRealm: {0}", clientRealm);
+//    //    Console.WriteLine("serverName: {0}", serverName);
+//    //    Console.WriteLine("serverRealm: {0}", serverRealm);
+//    //    DateTime startTime = DateTime.FromFileTime(ticket.StartTime);
+//    //    DateTime endTime = DateTime.FromFileTime(ticket.EndTime);
+//    //    DateTime renewTime = DateTime.FromFileTime(ticket.RenewTime);
+//    //    string encryptionType = ((KERB_ENCRYPTION_TYPE)ticket.EncryptionType).ToString();
+//    //    string ticketFlags = ((KERB_TICKET_FLAGS)ticket.TicketFlags).ToString();
+//    //KERB_RETRIEVE_TKT_REQUEST ticketQuery = new KERB_RETRIEVE_TKT_REQUEST();
+//    //KERB_RETRIEVE_TKT_RESPONSE response = new KERB_RETRIEVE_TKT_RESPONSE();
+//    //// input object for querying the ticket cache
+//    ////ticketQuery.LogonId = new LUID();
+//    //ticketQuery.MessageType = KERB_PROTOCOL_MESSAGE_TYPE.KerbRetrieveEncodedTicketMessage;
+//    //// indicate we want kerb creds yo'
+//    //ticketQuery.CacheOptions = KERB_CACHE_OPTIONS.KERB_RETRIEVE_TICKET_AS_KERB_CRED;
+//    //ticketQuery.TicketFlags = ticket.TicketFlags;
+//    ////ticketQuery.TargetName = ticket.ServerName;
+//    //string targetName2 = "krbtgt/TESTLAB.LOCAL";
+//    //LSA_STRING_IN LSAString2;
+//    //LSAString2.Length = (ushort)targetName2.Length;
+//    //LSAString2.MaximumLength = (ushort)(targetName2.Length + 1);
+//    //LSAString2.Buffer = targetName2;
+//    //ticketQuery.TargetName = LSAString2;
+//    //Console.WriteLine("flags: {0}\r\n", ticket.TicketFlags.ToString("X2"));
+//    //IntPtr responsePointer = IntPtr.Zero;
+//    //int returnBufferLength2 = 0;
+//    //// query LSA, specifying we want the the specified ticket data
+//    //retCode = LsaCallAuthenticationPackage_KERB_RETRIEVE_TKT(lsaHandle, authPack, ref ticketQuery, Marshal.SizeOf(ticketQuery), out responsePointer, out returnBufferLength2, out protocalStatus);
+//    //Console.WriteLine("LsaCallAuthenticationPackage_KERB_RETRIEVE_TKT retCode: {0}", retCode);
+//    //Console.WriteLine("returnBufferLength: {0}", returnBufferLength2);
+//    //Console.WriteLine("responsePointer: {0}\r\n", responsePointer);
+//    //// parse the returned pointer into our initial KERB_RETRIEVE_TKT_RESPONSE structure
+//    //response = (KERB_RETRIEVE_TKT_RESPONSE)Marshal.PtrToStructure((System.IntPtr)responsePointer, typeof(KERB_RETRIEVE_TKT_RESPONSE));
+//    //KERB_EXTERNAL_NAME serviceNameStruct = (KERB_EXTERNAL_NAME)Marshal.PtrToStructure(response.Ticket.ServiceName, typeof(KERB_EXTERNAL_NAME));
+//    //string serviceName = Marshal.PtrToStringUni(serviceNameStruct.Names.Buffer, serviceNameStruct.Names.Length / 2).Trim();
+//    //string targetName = "";
+//    //if (response.Ticket.TargetName != IntPtr.Zero)
+//    //{
+//    //    KERB_EXTERNAL_NAME targetNameStruct = (KERB_EXTERNAL_NAME)Marshal.PtrToStructure(response.Ticket.TargetName, typeof(KERB_EXTERNAL_NAME));
+//    //    targetName = Marshal.PtrToStringUni(targetNameStruct.Names.Buffer, targetNameStruct.Names.Length / 2).Trim();
+//    //}
+//    //KERB_EXTERNAL_NAME clientNameStruct = (KERB_EXTERNAL_NAME)Marshal.PtrToStructure(response.Ticket.ClientName, typeof(KERB_EXTERNAL_NAME));
+//    ////string clientName = Marshal.PtrToStringUni(clientNameStruct.Names.Buffer, clientNameStruct.Names.Length / 2).Trim();
+//    //string domainName = Marshal.PtrToStringUni(response.Ticket.DomainName.Buffer, response.Ticket.DomainName.Length / 2).Trim();
+//    //string targetDomainName = Marshal.PtrToStringUni(response.Ticket.TargetDomainName.Buffer, response.Ticket.TargetDomainName.Length / 2).Trim();
+//    //string altTargetDomainName = Marshal.PtrToStringUni(response.Ticket.AltTargetDomainName.Buffer, response.Ticket.AltTargetDomainName.Length / 2).Trim();
+//    //// extract the session key
+//    //KERB_ENCRYPTION_TYPE sessionKeyType = (KERB_ENCRYPTION_TYPE)response.Ticket.SessionKey.KeyType;
+//    //Int32 sessionKeyLength = response.Ticket.SessionKey.Length;
+//    //byte[] sessionKey = new byte[sessionKeyLength];
+//    //Marshal.Copy(response.Ticket.SessionKey.Value, sessionKey, 0, sessionKeyLength);
+//    //string base64SessionKey = Convert.ToBase64String(sessionKey);
+//    //DateTime keyExpirationTime = DateTime.FromFileTime(response.Ticket.KeyExpirationTime);
+//    //DateTime startTime2 = DateTime.FromFileTime(response.Ticket.StartTime);
+//    //DateTime endTime2 = DateTime.FromFileTime(response.Ticket.EndTime);
+//    //DateTime renewUntil = DateTime.FromFileTime(response.Ticket.RenewUntil);
+//    //Int64 timeSkew = response.Ticket.TimeSkew;
+//    //Int32 encodedTicketSize = response.Ticket.EncodedTicketSize;
+//    //string ticketFlags2 = ((KERB_TICKET_FLAGS)response.Ticket.TicketFlags).ToString();
+//    //// extract the ticket and base64 encode it
+//    //byte[] encodedTicket = new byte[encodedTicketSize];
+//    //Marshal.Copy(response.Ticket.EncodedTicket, encodedTicket, 0, encodedTicketSize);
+//    //string base64Ticket = Convert.ToBase64String(encodedTicket);
+//    //Console.WriteLine("  ServiceName              : {0}", serviceName);
+//    //Console.WriteLine("  TargetName               : {0}", targetName);
+//    //Console.WriteLine("  ClientName               : {0}", clientName);
+//    //Console.WriteLine("  DomainName               : {0}", domainName);
+//    //Console.WriteLine("  TargetDomainName         : {0}", targetDomainName);
+//    //Console.WriteLine("  AltTargetDomainName      : {0}", altTargetDomainName);
+//    //Console.WriteLine("  SessionKeyType           : {0}", sessionKeyType);
+//    //Console.WriteLine("  Base64SessionKey         : {0}", base64SessionKey);
+//    //Console.WriteLine("  KeyExpirationTime        : {0}", keyExpirationTime);
+//    //Console.WriteLine("  TicketFlags              : {0}", ticketFlags2);
+//    //Console.WriteLine("  StartTime                : {0}", startTime2);
+//    //Console.WriteLine("  EndTime                  : {0}", endTime2);
+//    //Console.WriteLine("  RenewUntil               : {0}", renewUntil);
+//    //Console.WriteLine("  EncodedTicketSize        : {0}", encodedTicketSize);
+//    //Console.WriteLine("  Base64EncodedTicket      :\r\n");
+//    //// display the TGT, columns of 80 chararacters
+//    //foreach (string line in Split(base64Ticket, 80))
+//    //{
+//    //    Console.WriteLine("    {0}", line);
+//    //}
+//    //Console.WriteLine();
+//    //}
+//    // disconnect from LSA
+//    LsaDeregisterLogonProcess(lsaHandle);
+//    //}
+//    //catch (Exception ex)
+//    //{
+//    //    Console.WriteLine("  [X] Exception: {0}", ex.Message);
+//    //}
+//}
+// https://www.pinvoke.net/default.aspx/secur32.lsalogonuser
+// list user logons combined with logon session data via WMI
+// heavily adapted from from Jared Hill:
+//      https://www.codeproject.com/Articles/18179/Using-the-Local-Security-Authority-to-Enumerate-Us
+//win32 systemdate
+// get an array of pointers to LUIDs
+// if we have a valid logon
+// get the account username
+// convert the security identifier of the user
+// domain for this account
+// authentication package
+// logon type
+// datetime the session was logged in
+// user's logon server
+// logon server's DNS domain
+// user principalname
+// move the pointer forward
+// adapted from https://stackoverflow.com/questions/33935825/pinvoke-netlocalgroupgetmembers-runs-into-fatalexecutionengineerror/33939889#33939889
+// localization for @cnotin ;)
+// Administrators
+// RDP
+// COM
+// Remote Management
+// e.g. "S-1-5-32-580" for "Remote Management Users" can be missing on older versions of Windows
+// grab all drive letters
+// try to resolve each drive to a UNC mapped location
+// lists current network shares for this system via WMI
+// lists installed VA products via WMI (the AntiVirusProduct class)
+// TODO: check out https://github.com/harleyQu1nn/AggressorScripts/blob/master/ProcessColor.cna#L10
+// from https://github.com/threatexpress/red-team-scripts/blob/master/HostEnum.ps1#L985-L1033
+// TODO: cyberark? other password managers?
+// adapted from http://www.pinvoke.net/default.aspx/wtsapi32.wtsenumeratesessions
+// Now use WTSQuerySessionInformation to get the remote IP (if any) for the connection
+// lists local firewall policies and rules
+//      by default, only "deny" result are output unless "full" is passed
+// GUID for HNetCfg.FwPolicy2 COM object
+// NET_FW_PROFILE2_DOMAIN = 1, NET_FW_PROFILE2_PRIVATE = 2, NET_FW_PROFILE2_PUBLIC = 4
+// now grab all the rules
+// manually get the enumerator() method
+// move to the first item
+// only display enabled rules
+// extract all of our fields
+// TODO: other protocols!
+// manually move the enumerator
+// lists the local DNS cache via WMI (MSFT_DNSClientCache class)
+// adapted from Fred's code at https://social.technet.microsoft.com/Forums/lync/en-US/e949b8d6-17ad-4afc-88cd-0019a3ac9df9/powershell-alternative-to-arp-a?forum=ITCG
+// build a mapping of index -> interface information
+// grab all the IPv4 addresses
+// build a "Ethernet1 (172.16.213.246) --- Index 8" type string for the index
+// call the function, expecting an insufficient buffer.
+// allocate sufficient memory for the result structure
+// now we have the buffer, we have to marshal it. We can read the first 4 bytes to get the length of the buffer
+// increment the memory pointer by the size of the int
+// allocate a list of entries
+// cycle through the entries
+// sort the list by interface index
+// helper that gets a service name from a service tag
+// IP_v4
+// Adapted from https://stackoverflow.com/questions/577433/which-pid-listens-on-a-given-port-in-c-sharp/577660#577660
+// Build a PID -> process name lookup table
+// Figure out how much memory we need for the result struct
+// 122 == insufficient buffer size
+// get the number of entries in the table
+// next entry
+// IP_v4
+// Adapted from https://stackoverflow.com/questions/577433/which-pid-listens-on-a-given-port-in-c-sharp/577660#577660
+// Build a PID -> process name lookup table
+// Figure out how much memory we need for the result struct
+// 122 == insufficient buffer size
+// get the number of entries in the table
+// next entry
+// lists currently running processes that don't have "Microsoft Corporation" as the company name in their file info
+//      or all processes if "full" is passed
+//OLD -  if ((item.Path != null) && ((!FilterResults.filter) || (!Regex.IsMatch(item.Path, "C:\\\\WINDOWS\\\\", RegexOptions.IgnoreCase))))
+// System.Console.WriteLine("The file cannot be found.");
+// System.Console.WriteLine("The assembly has already been loaded.");
+// elevated system checks
+// grab events from the last X days - 7 for default, 30 for "full" collection
+//string SubjectUserSid = eventdetail.Properties[0].Value.ToString();
+//string SubjectUserName = eventdetail.Properties[1].Value.ToString();
+//string SubjectDomainName = eventdetail.Properties[2].Value.ToString();
+//string SubjectLogonId = eventdetail.Properties[3].Value.ToString();
+//string TargetLogonId = eventdetail.Properties[7].Value.ToString();
+//string LogonType = eventdetail.Properties[8].Value.ToString();
+//string LogonProcessName = eventdetail.Properties[9].Value.ToString();
+//string LogonGuid = eventdetail.Properties[12].Value.ToString();
+//string TransmittedServices = eventdetail.Properties[13].Value.ToString();
+//string KeyLength = eventdetail.Properties[15].Value.ToString();
+//string ProcessId = eventdetail.Properties[16].Value.ToString();
+//string IpAddress = eventdetail.Properties[18].Value.ToString();
+//string IpPort = eventdetail.Properties[19].Value.ToString();
+//string ImpersonationLevel = eventdetail.Properties[20].Value.ToString();
+//string RestrictedAdminMode = eventdetail.Properties[21].Value.ToString();
+//string TargetOutboundUserName = eventdetail.Properties[22].Value.ToString();
+//string TargetOutboundDomainName = eventdetail.Properties[23].Value.ToString();
+//string VirtualAccount = eventdetail.Properties[24].Value.ToString();
+//string TargetLinkedLogonId = eventdetail.Properties[25].Value.ToString();
+//string ElevatedToken = eventdetail.Properties[26].Value.ToString();
+// filter out SYSTEM, computer accounts, local service accounts, UMFD-X accounts, and DWM-X accounts (for now)
+//Console.WriteLine(eventdetail.FormatDescription());
+//break;
+// grab events from the last X days - 7 for default, 30 for "full" collection
+//string SubjectLogonId = eventdetail.Properties[3].Value.ToString();
+//string LogonGuid = eventdetail.Properties[4].Value.ToString();
+//string TargetLogonGuid = eventdetail.Properties[7].Value.ToString();
+//string TargetInfo = eventdetail.Properties[9].Value.ToString();
+//string ProcessId = eventdetail.Properties[10].Value.ToString();
+//string IpAddress = eventdetail.Properties[12].Value.ToString();
+//string IpPort = eventdetail.Properties[13].Value.ToString();
+// filter out accounts (for now)
+// user-focused checks
+//shows saved RDP connections, including username hints (if present)
+// lists any found DPAPI master keys
+// lists any found files in Local\Microsoft\Credentials\*
+// jankily parse the bytes to extract the credential type and master key GUID
+// reference- https://github.com/gentilkiwi/mimikatz/blob/3d8be22fff9f7222f9590aa007629e18300cf643/modules/kull_m_dpapi.h#L24-L54
+// jankily parse the bytes to extract the credential type and master key GUID
+// reference- https://github.com/gentilkiwi/mimikatz/blob/3d8be22fff9f7222f9590aa007629e18300cf643/modules/kull_m_dpapi.h#L24-L54
+// jankily parse the bytes to extract the credential type and master key GUID
+// reference- https://github.com/gentilkiwi/mimikatz/blob/3d8be22fff9f7222f9590aa007629e18300cf643/modules/kull_m_dpapi.h#L24-L54
+// lists any found files in Local\Microsoft\Credentials\*
+// grab the recent RDG files
+// grab the recent RDG files
+// Lists currently open Internet Explorer tabs, via COM
+// Notes:
+//  https://searchcode.com/codesearch/view/9859954/
+//  https://gist.github.com/yizhang82/a1268d3ea7295a8a1496e01d60ada816
+// Shell.Application COM GUID
+// actually instantiate the Shell.Application COM object
+// grab all the current windows
+// grab the open tab count
+// grab the acutal tab
+// extract the tab properties
+// ensure we have a site address
+//.+)|(^ftp://)"))
+//
+// lists Internt explorer history (last 7 days by default) and favorites
+// Helper function to extract the ItemValue field from a VAULT_ITEM_ELEMENT struct
+// pulled directly from @djhohnstein's SharpWeb project: https://github.com/djhohnstein/SharpWeb/blob/master/Edge/SharpEdge.cs
+// VAULT_ELEMENT_TYPE == String; These are the plaintext passwords!
+// VAULT_ELEMENT_TYPE == bool
+// VAULT_ELEMENT_TYPE == Short
+// VAULT_ELEMENT_TYPE == Unsigned Short
+// VAULT_ELEMENT_TYPE == Int
+// VAULT_ELEMENT_TYPE == Unsigned Int
+// VAULT_ELEMENT_TYPE == Double
+// VAULT_ELEMENT_TYPE == GUID
+// VAULT_ELEMENT_TYPE == Sid
+/* Several VAULT_ELEMENT_TYPES are currently unimplemented according to
+// pulled directly from @djhohnstein's SharpWeb project: https://github.com/djhohnstein/SharpWeb/blob/master/Edge/SharpEdge.cs
+//var result = CallVaultEnumerateVaults(VaultEnum, 0, ref vaultCount, ref vaultGuidPtr);
+// Create dictionary to translate Guids to human readable elements
+// Open vault block
+// Vault opened successfully! Continue.
+// Fetch all items within Vault
+// For each vault item...
+// Begin fetching vault item...
+// Field Info retrieval
+// Newer versions have package sid
+// Fetch the credential from the authenticator element
+// Indicates successful fetch
+// Console.WriteLine("  --- IE/Edge Credential ---");
+// Console.WriteLine("  Vault Type   : {0}", vaultType);
+// Stupid datetime
+// checks if Chrome has a history database
+//github.com/djhohnstein/SharpWeb)\r\n");
+//github.com/djhohnstein/SharpWeb)");
+// parses a Chrome history file via regex
+//([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?");
+// parses a Chrome bookmarks
+// reference: http://www.tomasvera.com/programming/using-javascriptserializer-to-parse-json-objects/
+// checks if Firefox has a history database
+//github.com/djhohnstein/SharpWeb) \r\n");
+//github.com/djhohnstein/SharpWeb) \r\n");
+//github.com/djhohnstein/SharpWeb)\r\n");
+//github.com/djhohnstein/SharpWeb)\r\n");
+// parses a Firefox history file via regex
+//([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?");
+// lists recently run commands via the RunMRU registry key
+// extracts saved putty sessions and basic configs (via the registry)
+// extracts saved putty host keys (via the registry)
+//Console.WriteLine("\r\n\r\n=== Putty SSH Host Key Recent Hosts ===\r\n");
+//Dictionary<string, object> sessions = GetRegValues("HKCU", "Software\\SimonTatham\\PuTTY\\SshHostKeys\\");
+//if (sessions != null)
+//{
+//    foreach (KeyValuePair<string, object> kvp in sessions)
+//    {
+//        Console.WriteLine("    {0,-10}", kvp.Key);
+//    }
+//}
+// checks for various cloud credential files (AWS, Microsoft Azure, and Google Compute)
+// adapted from https://twitter.com/cmaddalena's SharpCloud project (https://github.com/chrismaddalena/SharpCloud/)
+// parses recent file shortcuts via COM
+// WshShell COM object GUID 
+// invoke the WshShell com object, creating a shortcut to then extract the TargetPath from
+// old method (needed interop dll)
+//WshShell shell = new WshShell();
+//IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(recentFile);
+// invoke the WshShell com object, creating a shortcut to then extract the TargetPath from
+// release the WshShell COM object
+// returns files (w/ modification dates) that match the given pattern below
+// misc checks
+// lists current patches via WMI (win32_quickfixengineering)
+// lists recently deleted files (needs to be run from a user context!)
+// Reference: https://stackoverflow.com/questions/18071412/list-filenames-in-the-recyclebin-with-c-sharp-without-using-any-external-files
+// Shell COM object GUID
+// namespace for recycle bin == 10 - https://msdn.microsoft.com/en-us/library/windows/desktop/bb762494(v=vs.85).aspx
+// grab all the deletes items
+// grab the number of deleted items
+// iterate through each item
+// grab the specific deleted item
+// additional extended properties from https://blogs.msdn.microsoft.com/oldnewthing/20140421-00/?p=1183
+// meta-functions for running various checks
+// list patches and List4624Events/List4648Events if we're doing "full" collection
+// if "full" is the only argument, run System and User triage
+// try to grab the function name via reflection
+// if TriageX(), all good
+// if DumpX, all good
+// build List<name>()
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/Seatbelt-master\Seatbelt-master\Seatbelt\Properties\AssemblyInfo.cs
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]

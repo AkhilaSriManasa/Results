@@ -1,0 +1,76 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/android-ColorPickerPreference-master\android-ColorPickerPreference-master\ColorPickerPreference\src\androidTest\java\net\margaritov\colorpickerpreference\ApplicationTest.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/android-ColorPickerPreference-master\android-ColorPickerPreference-master\ColorPickerPreference\src\main\java\net\margaritov\preference\colorpicker\AlphaPatternDrawable.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/android-ColorPickerPreference-master\android-ColorPickerPreference-master\ColorPickerPreference\src\main\java\net\margaritov\preference\colorpicker\ColorPickerDialog.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+// To fight color banding.
+/*
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/android-ColorPickerPreference-master\android-ColorPickerPreference-master\ColorPickerPreference\src\main\java\net\margaritov\preference\colorpicker\ColorPickerPanelView.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/android-ColorPickerPreference-master\android-ColorPickerPreference-master\ColorPickerPreference\src\main\java\net\margaritov\preference\colorpicker\ColorPickerPreference.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**Method edited by
+// remove already create preview image
+//30dip
+/**
+/**
+/**
+/**
+/**
+// Didn't save state for us in onSaveInstanceState
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/android-ColorPickerPreference-master\android-ColorPickerPreference-master\ColorPickerPreference\src\main\java\net\margaritov\preference\colorpicker\ColorPickerView.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+/**
+/*
+//Needed for receiving trackball motion events.
+//If calculated height (based on the width) is more than the allowed height.
+// (mode == MeasureSpec.UNSPECIFIED)
+// (mode == MeasureSpec.UNSPECIFIED)
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/*
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/android-ColorPickerPreference-master\android-ColorPickerPreference-master\Sample\src\main\java\net\margaritov\preference\colorpicker\Test.java
+/*
+//www.apache.org/licenses/LICENSE-2.0
+/**

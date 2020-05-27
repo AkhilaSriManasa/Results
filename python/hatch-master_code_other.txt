@@ -1,0 +1,348 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\setup.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\build.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\clean.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\cli.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\conda.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\config.py
+# no cov
+# no cov
+# no cov
+# no cov
+# no cov
+# no cov
+# no cov
+# no cov
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\create.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\env.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\exceptions.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\grow.py
+# https://hynek.me/articles/testing-packaging
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\project.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\settings.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\shells.py
+# Just in case pyenv works with xonsh, supersede it.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\structures.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\utils.py
+# Will be length 4, so 16777216 possibilities.
+# no cov
+# Should we indeed use -H here?
+# no cov
+# https://stackoverflow.com/a/12578715/5854007
+# no cov
+# FUTURE: Remove this when we drop 3.5.
+# no cov
+# no cov
+# no cov
+#+\sMaintained by Hatch\s#+')
+#+\sBEGIN USER OVERRIDES\s#+')
+#+\sEND USER OVERRIDES\s#+')
+# Add your customizations in this section.']
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\venv.py
+# no cov
+# no cov
+# no cov
+# no cov
+# no cov
+# no cov
+#!':
+# Remove the #! and trailing whitespace.
+# If the executable path contains spaces it will be wrapped in quotes.
+# Remove the first pair of quotes.
+# Otherwise, the executable path is whatever precedes the first space.
+# Removing all instances of characters in filename from the right side
+# is safe because of the path separator. Indeed, we want to remove only
+# the filename and keep the separator.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\__main__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\build.py
+# basic handling of https://github.com/pypa/setuptools/issues/1185
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\clean.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\conda.py
+# no cov
+#miniconda-glossary"""
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\config.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\env.py
+# I don't want to move users' virtual environments
+# temporarily for tests as one may be in use.
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\grow.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\init.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\install.py
+# Windows' `runas` allows only a single argument for the
+# command so we catch this case and turn our command into
+# a string later.
+# no cov
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\new.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\pypath.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\python.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\release.py
+# Fall back when 'pypi_username' value is '' or None
+# Print all error messages before exiting
+# Disallow these combinations, since it is ambiguous whether they are intended
+# to be used as the test repository (if a custom test repository is desired,
+# then users can omit the '--test'.)
+# no cov
+# Only pass these to twine if they are given to us. Otherwise,
+# fall back onto the default twine behavior
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\shed.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\shell.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\test.py
+# no cov
+# no cov
+# For testing we need to pipe because Click changes stdio streams.
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\uninstall.py
+# Windows' `runas` allows only a single argument for the
+# command so we catch this case and turn our command into
+# a string later.
+# no cov
+# no cov
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\update.py
+# no cov
+# Windows' `runas` allows only a single argument for the
+# command so we catch this case and turn our command into
+# a string later.
+# no cov
+# no cov
+# no cov
+# When https://github.com/pypa/pipfile is finalized, we'll use it.
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\commands\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\pyproject.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\setup.py
+#################### Maintained by Hatch ####################
+# This file is auto-generated by hatch. If you'd like to customize this file
+# please add your changes near the bottom marked for 'USER OVERRIDES'.
+# EVERYTHING ELSE WILL BE OVERWRITTEN by hatch.
+#############################################################
+#################### BEGIN USER OVERRIDES ####################
+# Add your customizations in this section.{user_overrides}
+###################### END USER OVERRIDES ####################
+# For testing we use https://github.com/r1chardj0n3s/parse and its
+# `parse` function breaks on empty inputs.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\ci\tox.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\ci\travis.py
+# for `parse`
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\ci\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\coverage\codecov.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\coverage\coveragerc.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\coverage\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\ignore\git.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\ignore\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\licenses\apache2.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\licenses\cc0.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\licenses\mit.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\licenses\mpl.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\licenses\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\readme\markdown.py
+# {title}
+#installation)
+#license)
+## Installation
+## License
+# For testing we use https://github.com/r1chardj0n3s/parse and its
+# `parse` function breaks on empty inputs.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\readme\restructuredtext.py
+# For testing we use https://github.com/r1chardj0n3s/parse and its
+# `parse` function breaks on empty inputs.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\readme\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\vc\git.py
+# Auto detect text files and perform LF normalization\n'
+# no cov
+# no cov
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\hatch\files\vc\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\test_env_utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\test_files.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\test_project_class.py
+#################### Maintained by Hatch ###################\n'
+########### BEGIN USER OVERRIDES #######\n'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\test_setup.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\test_test_utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\test_utils.py
+# pass in a unmanaged file and watch it fumble
+# pass in a managed file with wrong user section
+# pass in a managed file and check for user section and everything else
+# pass in a non-existent file
+########## BEGIN USER OVERRIDES #######\n'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\test_venv.py
+# no cov
+#!'
+#!/home/Klaatu/.local/share/hatch/venvs/Gort/bin/python\n'
+# -*- coding: utf-8 -*-\n'
+#!{}python\n'
+# -*- coding: utf-8 -*-\n'
+#!"/home/me/.local/share/hatch/venvs/a space/bin/python"\n'
+# -*- coding: utf-8 -*-\n'
+#!{}python\n'
+# -*- coding: utf-8 -*-\n'
+#!/home/Klaatu/.local/share/hatch/venvs/Gort/bin/python\n'
+# -*- coding: utf-8 -*-\n'
+#!"{}python"\n'
+# -*- coding: utf-8 -*-\n'
+#!"/home/me/.local/share/hatch/venvs/a space/bin/python"\n'
+# -*- coding: utf-8 -*-\n'
+#!"{}python"\n'
+# -*- coding: utf-8 -*-\n'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\utils.py
+# no cov
+# no cov
+# https://github.com/kennethreitz/pipenv/pull/403
+# no cov
+# Test availability of DNS first
+# Test connection
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_build.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_clean.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_config.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_env.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_grow.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_init.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_install.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_new.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_pypath.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_release.py
+# Make sure there's no configuration
+# Will error, since there's no configuration parameter for
+# this URL
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_shed.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_test.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_uninstall.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\test_update.py
+# no cov
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\commands\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\ci\test_tox.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\ci\test_travis.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\ci\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\coverage\test_codecov.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\coverage\test_coveragerc.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\coverage\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\ignore\test_gitignore.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\ignore\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\licenses\test_apache2.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\licenses\test_cc0.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\licenses\test_mit.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\licenses\test_mpl.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\licenses\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\readme\test_markdown.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\readme\test_restructuredtext.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\readme\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\vc\test_git.py
+# Auto detect text files and perform LF normalization\n'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/hatch-master\hatch-master\tests\files\vc\__init__.py

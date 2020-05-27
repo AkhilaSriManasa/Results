@@ -1,0 +1,350 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\setup.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# noqa
+# -*- Python 3 -*-
+# -*- Distribution Meta -*-
+# -eof meta-':
+# Ignore dirnames that start with '.'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\admin.py
+# noqa
+# convert to local timezone
+# ### Periodic Tasks
+# noqa
+# ChoiceField.__init__ sets ``self.choices = choices``
+# which would override ours.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\admin_utils.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\app.py
+#: The Django-Celery app instance.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\common.py
+# localize something.
+# Pass the current language on to the task
+# or set the language explicitly
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\compat.py
+# noqa
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\db.py
+# pragma: no cover
+# noqa
+# noqa
+# pragma: no cover
+# noqa
+# pragma: no cover
+# noqa
+# noqa
+# ignore stupid warnings and errors
+# noqa
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\humanize.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\loaders.py
+# TypeError added for celery#962
+# Need to close any open database connection after
+# any embedded celerybeat process forks.
+# Default backend needs to be the database backend for backward
+# compatibility.
+# Django 1.6+
+# pre multidb
+# See http://groups.google.com/group/django-users/
+#            browse_thread/thread/78200863d0c07c6d/
+# the parent process may have established these,
+# so need to close them.
+# calling db.close() on some DB connections will cause
+# the inherited DB conn to also get broken in the parent
+# process so we need to remove it without triggering any
+# network IO that close() might cause.
+# use the _ version to avoid DB_REUSE preventing the conn.close() call
+# f is returned None when app_path is a module
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\managers.py
+# pre-Django 1.2
+# noqa
+# pragma: no cover
+# Depending on the database backend used we can experience
+# various exceptions. E.g. psycopg2 raises an exception
+# if some operation breaks the transaction, so saving
+# the task result won't be possible until we rollback
+# the transaction.
+# Pre django 1.6
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\models.py
+# TODO compression was enabled by mistake, we need to disable it
+# but this is a backwards incompatible change that needs planning.
+# Use UTC timestamp if USE_TZ is true, or else use local timestamp
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\mon.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\picklefield.py
+#1694
+#513
+# noqa
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\schedulers.py
+# This scheduler must wake up more frequently than the
+# regular of 5 minutes because it needs to take external
+# changes to the schedule into account.
+# seconds
+# timezone sanity
+# 5 second delay for re-enable.
+# for 2to3
+# Object may not be synchronized, so only
+# change the fields we care about.
+# reset schedule
+# If MySQL is running with transaction isolation level
+# REPEATABLE-READ (default), then we won't see changes done by
+# other transactions until the current transaction is
+# committed (Issue #41).
+# not in transaction management.
+# Close the connection when it is broken
+# Need to store entry by name, because the entry may change
+# in the mean time.
+# retry later
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\snapshot.py
+# limit worker timestamp write freq.
+# Expiry can be timedelta or None for never expire.
+# Some fields are only stored in the RECEIVED event,
+# so we should remove these from default values,
+# so that they are not overwritten by subsequent states.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\urls.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\utils.py
+# -- XXX This module must not use translation as that causes
+# -- a recursive loader import!
+# Database-related exceptions.
+# noqa
+# noqa
+# noqa
+# noqa
+# naive datetimes are assumed to be in UTC.
+# then convert to the Django configured timezone.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\views.py
+# Ensure built-in tasks are loaded for task_list view
+# noqa
+# no multivalue
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\__init__.py
+# :copyright: (c) 2009 - 2015 by Ask Solem.
+# :license:   BSD, see LICENSE for more details.
+# -eof meta-
+# noqa
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\backends\cache.py
+# CELERY_CACHE_BACKEND overrides the django-global(tm) backend settings.
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\backends\database.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\backends\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\contrib\test_runner.py
+# Issue #75
+# Monkey-patch Task.on_success() method
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\contrib\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\base.py
+# monkey patch django.
+# This patch make sure that we use real threads to get the ident which
+# is going to happen if we are using gevent or eventlet.
+# -- patch taken from gunicorn
+# --settings and --pythonpath are also handled
+# by BaseCommand.handle_default_options, but that is
+# called with the resulting options parsed by optparse.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\celery.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\celerybeat.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\celerycam.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\celeryd.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\celeryd_detach.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\celeryd_multi.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\celerymon.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\djcelerymon.py
+# see http://code.djangoproject.com/changeset/13319
+# see http://code.djangoproject.com/changeset/13319.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\management\commands\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\migrations\0001_initial.py
+# -*- coding: utf-8 -*-
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\migrations\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\monproj\urls.py
+# Uncomment the admin/doc line below and add 'django.contrib.admindocs'
+# to INSTALLED_APPS to enable admin documentation:
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\monproj\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\req.py
+#the-test-client
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_admin.py
+# We have no content, so the number of results if we search on
+# something should be zero.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_commands.py
+# coding: utf-8
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_discovery.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_loaders.py
+# Execute cached branch.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_models.py
+# Have to avoid save() because it applies the auto_now=True.
+# Have to avoid save() because it applies the auto_now=True.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_schedulers.py
+# update schedule
+# Get the entry for m2
+# Increment the entry (but make sure it doesn't sync)
+# Fetch the raw object from db, change the args
+# and save the changes.
+# get_schedule should now see the schedule has changed.
+# and also sync the dirty objects.
+# assert not raises
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_snapshot.py
+# 2016-06-01T15:00:00Z
+# Cleanup leftovers from previous tests
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_views.py
+# Django 1.10+
+# On Py2.4 repr(exc) includes the object id, so comparing
+# texts is pointless when the id the "same" KeyError does not match.
+# pre Django 1.5
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_worker_job.py
+# -*- coding: utf-8 -*-
+# checks to make sure attr exists
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\utils.py
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\_compat.py
+# coding: utf-8
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_backends\test_cache.py
+# is serialized properly.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_backends\test_database.py
+# is serialized properly.
+# bug in 3.1.10 means result did not clear cache after forget.
+# Have to avoid save() because it applies the auto_now=True.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\tests\test_backends\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\djcelery\transport\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\docs\conf.py
+# -*- coding: utf-8 -*-
+# If your extensions are in another directory, add it here. If the directory
+# is relative to the documentation root, use os.path.abspath to make it
+# absolute, like shown here.
+# noqa
+# noqa
+# General configuration
+# ---------------------
+# Add any paths that contain templates here, relative to this directory.
+# The suffix of source filenames.
+# The master toctree document.
+# General information about the project.
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+# The full version, including alpha/beta/rc tags.
+# If true, '()' will be appended to :func: etc. cross-reference text.
+# The name of the Pygments (syntax highlighting) style to use.
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# If false, no module index is generated.
+# If false, no index is generated.
+# ## Issuetracker
+#(\d+)'
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\docs\settings.py
+# Django settings for docs project.
+# import source code dir
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\docs\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\docs\_ext\applyxrefs.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\docs\_ext\literals_to_xrefs.py
+# special
+# Skip always-skip stuff
+# skip when the next line is a title
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\extra\release\sphinx-to-rst.py
+#!/usr/bin/even/python
+# Find the first previous line with text to append "::" to it.
+# non-destructive
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\manage.py
+#!/usr/bin/env python
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\settings.py
+# Django settings for testproj project.
+# import source code dir
+# noqa
+# ('Your Name', 'your_email@domain.com'),
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\urls.py
+# Example:
+# (r'^tests/', include('tests.foo.urls')),
+# Uncomment the admin/doc line below and add 'django.contrib.admindocs'
+# to INSTALLED_APPS to enable admin documentation:
+# (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+# Uncomment the next line to enable the admin:
+# (r'^admin/(.*)', admin.site.root),
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someapp\models.py
+# noqa
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someapp\tasks.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someapp\tests.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someapp\views.py
+# Create your views here.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someapp\__init__.py
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someappwotask\models.py
+# noqa
+# Create your models here.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someappwotask\views.py
+# Create your views here.
+________________________________________________________________________________________
+E:/AllLangDS/ds/python/django-celery-master\django-celery-master\tests\someappwotask\__init__.py

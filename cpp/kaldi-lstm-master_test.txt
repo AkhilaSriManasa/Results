@@ -1,0 +1,49 @@
+﻿
+***********other formats****************
+cc
+cu
+pdf
+proto
+sh
+
+***********source code file list***************
+
+***********h file list***************
+kaldi-lstm-master/kaldi-lstm-master/google/cudamatrix/bd-cu-kernels-ansi.h
+kaldi-lstm-master/kaldi-lstm-master/google/cudamatrix/bd-cu-kernels.h
+kaldi-lstm-master/kaldi-lstm-master/google/cudamatrix/cu-matrix.h
+kaldi-lstm-master/kaldi-lstm-master/google/matrix/kaldi-matrix.h
+kaldi-lstm-master/kaldi-lstm-master/google/nnet/bd-nnet-lstm-projected-streams.h
+kaldi-lstm-master/kaldi-lstm-master/google/nnet/nnet-loss.h
+kaldi-lstm-master/kaldi-lstm-master/google/nnet/nnet-nnet.h
+kaldi-lstm-master/kaldi-lstm-master/standard/nnet/nnet-lstm-projected.h
+kaldi-lstm-master/kaldi-lstm-master/standard/nnet/nnet-time-shift.h
+kaldi-lstm-master/kaldi-lstm-master/standard/nnet/nnet-transmit-component.h
+
+***********md file list***************
+kaldi-lstm-master/kaldi-lstm-master/README.md
+kaldi-lstm-master/kaldi-lstm-master/google/feature_transform.nnet.txt
+kaldi-lstm-master/kaldi-lstm-master/google/README.md
+kaldi-lstm-master/kaldi-lstm-master/standard/README.md
+
+***********img file list***************
+kaldi-lstm-master/kaldi-lstm-master/misc/LSTM_DIAG_EQUATION.jpg
+
+***********uml file list***************
+
+***********other file list***************
+kaldi-lstm-master/kaldi-lstm-master/google/nnet.proto
+kaldi-lstm-master/kaldi-lstm-master/google/train_lstm_streams.sh
+kaldi-lstm-master/kaldi-lstm-master/google/cudamatrix/bd-cu-kernels.cu
+kaldi-lstm-master/kaldi-lstm-master/google/cudamatrix/cu-matrix.cc
+kaldi-lstm-master/kaldi-lstm-master/google/matrix/kaldi-matrix.cc
+kaldi-lstm-master/kaldi-lstm-master/google/nnet/nnet-loss.cc
+kaldi-lstm-master/kaldi-lstm-master/google/nnetbin/bd-nnet-train-lstm-streams.cc
+kaldi-lstm-master/kaldi-lstm-master/google/papers/1990-williams-BPTT.pdf
+kaldi-lstm-master/kaldi-lstm-master/google/papers/2014-icassp-google-LSTM-ASR.pdf
+kaldi-lstm-master/kaldi-lstm-master/google/papers/2014-interspeech-google-LSTM-LVCSR.pdf
+kaldi-lstm-master/kaldi-lstm-master/google/papers/2014-interspeech-google-LSTM-sequential-discriminative-LVCSR.pdf
+kaldi-lstm-master/kaldi-lstm-master/google/papers/LSTM_dropout.pdf
+kaldi-lstm-master/kaldi-lstm-master/standard/nnet.proto
+
+***********other code file list***************

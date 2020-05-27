@@ -1,0 +1,267 @@
+﻿CMAKE_MINIMUM_REQUIRED(VERSION 3.12)
+
+PROJECT(blink)
+
+SET(CMAKE_CXX_STANDARD 17)
+
+FILE(GLOB blink_sources CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/source/*)
+
+ADD_EXECUTABLE(blink ${blink_sources})
+Copyright (C) 2016 Patrick Mours. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+blink
+=====
+
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/crosire/blink?svg=true)](https://ci.appveyor.com/project/crosire/blink)
+
+A tool that lets you edit the source code of a Windows C++ application live, while it is running, without having to go through the usual compile-and-restart cycle. It is effectivly a runtime linker that detects changes to source code files, compiles them and links them back into the running application, while patching all updated functions to jump to the new code.
+
+In contrast to similar projects, **blink does not require you to modify your C++ project in any way**. In fact it works on all x86 and x86-64 applications as long as they were compiled with debug symbols (so that a PDB file is created) and you have their source code somewhere on your system.
+
+![Demo](https://i.imgur.com/sUu3asj.gif)
+
+There now is a library which implements the same concept as blink but for Unix based systems: [jet-live](https://github.com/ddovod/jet-live)
+
+## Build
+
+There are no dependencies, blink is fully standalone (apart from the Windows SDK). You only need a C++17 compliant version of MSVC 2017. Then just build the provided Visual Studio solution.
+
+A quick overview of what each of the source code files contain:
+
+|File                                       |Description                                                            |
+|-------------------------------------------|-----------------------------------------------------------------------|
+|[blink.cpp](source/blink.cpp)              |Application logic, filesystem watcher, main loop                       |
+|[blink_linker.cpp](source/blink_linker.cpp)|COFF loader and linker, symbol resolving, function patching            |
+|[main.cpp](source/main.cpp)                |Main entry point, remote thread injection, console output loop         |
+|[coff_reader.cpp](source/coff_reader.cpp)  |Abstraction around COFF to deal with extended OBJ files (`/bigobj`)    |
+|[msf_reader.cpp](source/msf_reader.cpp)    |Parser for the MSF file format (which PDB files are based on)          |
+|[pdb_reader.cpp](source/pdb_reader.cpp)    |Parser for the Microsoft PDB file format                               |
+
+## Usage
+
+Once you build blink, there are two ways to use it:
+1) Either launch your application via blink:\
+	```blink.exe foo.exe -arguments```
+2) Or attach blink to an already running application:\
+	```blink.exe PID``` where PID is the process ID to attach to
+
+Now simply do changes to any of the source code files of your application and see how they are reflected right away. Keep in mind that since blink patches on a function-level, you need a function that is repeatedly called, since **changes are only made visible the next time a function is entered**.
+
+If blink has trouble finding the right compilation command-line for your project or you get a `cl.exe not found` error, make sure to check your build is generating PDB files with the `/ZI` compile option!
+
+Optionally, if you define the following functions in your application, blink will call them before and after linking, which can be used to synchronize or save/restore application state:
+```c++
+extern "C" void __blink_sync(const char *source_file);
+extern "C" void __blink_release(const char *source_file, bool success);
+```
+
+## Concept
+
+Here is a quick run-down on how blink works:
+
+When you attach it to an application it will start by finding the path to the matching PDB (program debug database) file generated by the compiler. This information is stored in the executable headers. After finding said file it parses it to obtain the list of source code files that were used to build the application and initialize the symbol table with all internal and external symbols of the application. Then it figures out the common parent path of all user source code files and starts listening for file modifications on that path.
+
+Every time a change is registered, blink looks for the compilation command that was used to compile that source file in the application debug information, executes it to get a new object file reflecting the change and then links that object file into the application process.
+
+The linking for the most part works like a traditional linker would, except that it also replicates some of what the Windows loader would do when you launch an executable, so that it can perform at runtime, rather than at compile-time. It parses the object file (which is in COFF format) and allocates and copies all necessary sections into the application process memory space. It then finds the symbol table of the object file and resolves all of them using symbol information that was previously extracted from the PDB file. The state of global variables is preserved by using the address of the existing symbols, so that the new code references the existing memory, rather than new one. Afterwards the relocation table of the object file is used to adjust all address references in memory to point to the correct addresses. And finally, blink writes a x86 jump instruction to the beginning of all functions in the application that are also part of the new code that was just loaded. This jump targets the new functions, so that every time the old function is called, the call is immediately redirected to the new code.
+
+## Contributing
+
+Any contributions to the project are welcomed, it's recommended to use GitHub [pull requests](https://help.github.com/articles/using-pull-requests/).
+
+## License
+
+All source code in this repository is licensed under a [BSD 2-clause license](LICENSE.md).
+/**
+//github.com/crosire/blink#license
+// The linker is invoked in solution directory, which may be out of source directory. Use source common path instead.
+// Launch compiler process
+// Open handle to the common source code directory
+// Check for modifications to any of the source code files
+// Iterate over all notification items
+// Ignore changes to files that are not C++ source files
+// Ignore duplicated notifications by comparing times and skipping any changes that are not older than 3 seconds
+// Build compiler command line
+// Append special completion message
+// Message used to confirm that compile finished in message loop above
+// Execute compiler command line
+// Read and react to compiler output messages
+// Listen for special completion message
+// Only load the compiled module if compilation was successful
+// Notify application that we want to link an object file
+// Notify application that we have finished work
+// The OBJ file is not needed anymore.
+// Search debug directory for program debug database file name
+// RSDS
+// Check if the debug information actually matches the executable
+// The linker working directory should equal the project root directory
+// Search import directory for additional symbols
+// The module should have already been loaded by Windows when the application was launched, so just get its handle here
+// Bail out if that is not the case to be safe
+// We need to figure out the name of symbols imported by ordinal by going through the export table of the target module
+// Ignore ordinal imports for which the name could not be resolved
+// Prevent file system error in the next few code lines, TODO: figure out what causes this
+// Check if this source file already exists in the application in which case we can read some information from the original object file
+// Read original object file
+// Find first debug symbol section and read it
+// Skip header in front of CodeView records (version, ...)
+// Skip 32-bit signature (this should be CV_SIGNATURE_C13, aka 4)
+// CV_DebugSSubsectionHeader_t
+/*DEBUG_S_SYMBOLS*/)
+// S_ENVBLOCK
+// Skip all records that are not about the compiler environment
+// Add compiler directories to path, so that 'mspdbcore.dll' is found
+// Subsection headers are 4-byte aligned
+// Fall back to default command-line if unable to extract it
+// Suppress copyright message
+// Enable COFF debug information
+// Link with 'MSVCRTD.lib'
+// Disable optimizations
+// Enable C++ exceptions
+// C++ standard version
+// C++ language conformance
+// Make sure to only compile and not link too
+// Remove some arguments from the command-line since they are set to different values below
+// The program debug database is currently in use by the running application, so cannot write to it
+// Do not create a program debug database, since all required debug information can be stored in the object file instead
+// Disable pre-compiled headers, since the data is not accessible here
+// Always write to a separate object file since the original one may be in user by a debugger
+// Append input source file to command-line
+// Append output object file to command-line
+/**
+//github.com/crosire/blink#license
+// JMP
+// MOV RAX, [target_address]
+// JMP RAX
+// Round up to the next allocation granularity
+// Do not suspend the current thread (which belongs to blink)
+// Object file can be a normal COFF or an extended COFF
+// Make sure the application doesn't access any of the code pages while they are being modified
+// Read section headers from input file (there is no optional header in COFF files, so it is right after the header read above)
+// Read symbol table from input file
+// The string table follows after the symbol table and is usually at the end of the file
+// Calculate total module size
+// Add space for section data and potential alignment
+// Add space for relay thunk
+// Allocate executable memory region close to the executable image base (this is done so that relative jumps like 'IMAGE_REL_AMD64_REL32' fit into the required 32-bit).
+// Successfully loaded object files are never deallocated again to avoid corrupting the function rerouting generated below. The virtual memory is freed at process exit by Windows.
+// Initialize sections
+// Skip over all sections that do not need linking
+// Mark this section as being unused
+// Ensure that these are not handled by relocation below
+// Check section alignment
+// Align section memory base pointer to its required alignment
+// Uninitialized sections do not have any data attached and they were already zeroed by 'VirtualAlloc', so skip them here
+// Read any relocation data attached to this section
+// Protect section memory with requested protection flags
+// Resolve internal and external symbols
+// Get symbol name from string table if it is a long name
+// Skip sections that do not need linking (see section initialization above)
+// Continue to use existing data from previous uninitialized (.bss) and initialized (.data) sections instead of replacing it
+// Perform relocation on each section
+// Add relay thunk if distance to target exceeds 32-bit range
+// No relocation necessary
+// Absolute virtual address
+// Relative virtual address to __ImageBase
+// Relative to next instruction after relocation
+// TODO: This was found by comparing generated ASM, probably not correct
+// Absolute virtual 64-bit address
+// Absolute virtual 32-bit address
+// Relative virtual address to __ImageBase
+// Relative virtual address to next instruction after relocation
+// TODO: This was found by comparing generated ASM, probably not correct
+// Reroute old functions to new code
+/**
+//github.com/crosire/blink#license
+// Read COFF header from input file and check that it is of a valid format
+// Need to adjust file position if this is not an extended COFF, since the normal header is smaller
+/**
+//github.com/crosire/blink#license
+// GetProcessByName
+// This exists to imitate the behavior of the CRT initialization code
+// Walk through all processes and search for the name
+// Apply base relocations
+// No need to relocate anything if the delta is zero
+// This one does not do anything and exists only for table alignment, so ignore it
+// Exit when encountering an unknown relocation type
+// Update import address table (IAT)
+// It is safe to call 'LoadLibrary' here because the IAT entry for it was copied from the parent process and KERNEL32.dll is always loaded at the same address
+// Import by ordinal
+// Import by function name
+// Call global C/C++ constructors
+// Run main loop
+// Attach to running process
+// Is numerical PID
+// Try to look up PID of running process by name
+// Attach to running process by PID
+// Launch target application and determine PID
+// Open target application process
+// Create a pipe for communication between this process and the target application
+// Use 'LoadLibrary' to create image in target application so that debug information is loaded
+// Write 'LoadLibrary' call argument to target application
+// Execute 'LoadLibrary' in target application
+// Wait for loading to finish and clean up parameter memory afterwards
+// Find address of the now loaded module in the target application process
+// Make the entire image writable so the copy operation below can succeed
+// Copy current module image to target application (including the IAT and value of the global 'console' variable)
+// Launch module main entry point in target application
+// Run main loop and pass on incoming messages to console
+/**
+//github.com/crosire/blink#license
+/**
+// Read and verify MSF header from file
+// Read root directory
+// Read content stream sizes
+// Read content stream page indices (located directly after stream sizes)
+// Advance to next root page
+// Allocate enough memory to hold all associated pages
+// Iterate through all pages associated with this stream and read their data
+// Shrink result to the actual stream size
+/**
+//github.com/crosire/blink#license
+/**
+// Example: link.exe -re -out:foo.exe
+// Example: 18 (index of 'foo.exe' in command)
+// IMAGE_DEBUG_TYPE_FPO
+// IMAGE_DEBUG_TYPE_EXCEPTION
+// IMAGE_DEBUG_TYPE_FIXUP
+// IMAGE_DEBUG_TYPE_OMAP_TO_SRC
+// IMAGE_DEBUG_TYPE_OMAP_FROM_SRC
+// A dump of all section headers from the executable
+// A dump of the .xdata section from the executable
+// PDB files should have 4 streams at the beginning that are always at the same index
+// Read PDB info stream
+// Read stream names from string hash map
+// Seek into the string table that stores the name
+// Seek previous position in stream to read next name offset in the next iteration of this loop
+// Find debug header stream (https://llvm.org/docs/PDB/DbiStream.html#optional-debug-header-stream)
+// Read section headers
+// Read symbol table records in CodeView format
+// S_PUB32
+// Skip all records that are not about public symbols
+// Relative address
+// Absolute address
+// Read module information stream (https://llvm.org/docs/PDB/DbiStream.html#dbi-mod-info-substream)
+// Contains the name of the ".lib" if this object file is part of a library
+// Find absolute path to if necessary
+/*-1*/)
+// Look up current working directory in symbol stream https://llvm.org/docs/PDB/ModiStream.html
+// Skip 32-bit signature (this should be CV_SIGNATURE_C13, aka 4)
+// S_ENVBLOCK
+// Find file information stream (https://llvm.org/docs/PDB/DbiStream.html#file-info-substream)
+// Skip old number of file names (see comment on counting the number below)
+// Count number of source files instead of reading the value from the header, since there may be more source files that would fit into a 16-bit value
+// Append source files to array
+// See https://github.com/Microsoft/microsoft-pdb/blob/master/langapi/include/pdb.h#L500
+// Followed by another null-terminated string with all linked libraries
+// Read names stream
+// Read the string table
+// Skip empty entries
+// Seek previous position in stream to read next name offset in the next iteration of this loop
+no other source code files

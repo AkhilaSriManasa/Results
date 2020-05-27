@@ -1,0 +1,23 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/DotNetZip.Semverd-master\DotNetZip.Semverd-master\src\Examples\C++\CreateWithProgress.cpp
+// CreateWithProgress.cpp
+//
+// Example: creating a zip file, with progress events, from C++.
+//
+// This code is part of DotNetZip.
+//
+//
+// Last saved: <2010-June-01 10:32:21>
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/csharp/DotNetZip.Semverd-master\DotNetZip.Semverd-master\src\Examples\C++\CreateZipfile.cpp
+// CreateZipFile.cpp
+//
+// Example: creating a zip file from C++.
+//
+// This code is part of DotNetZip.
+//
+//
+// Last saved: <2010-June-01 10:32:15>
+//
+//zip->~ZipFile();

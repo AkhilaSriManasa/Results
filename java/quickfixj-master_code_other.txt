@@ -1,0 +1,3338 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-codegenerator\src\main\java\org\quickfixj\codegenerator\CodeGenerationException.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-codegenerator\src\main\java\org\quickfixj\codegenerator\GenerateMojo.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-codegenerator\src\main\java\org\quickfixj\codegenerator\MavenMessageCodeGenerator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-codegenerator\src\main\java\org\quickfixj\codegenerator\MessageCodeGenerator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// An arbitrary serial UID which will have to be changed when messages and fields won't be compatible with next versions in terms
+// of java serialization.
+// The String representation of the UID
+// The name of the param in the .xsl files to pass the serialVersionUID
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\CharsetSupport.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// ASCII and ISO-8859-1 are unique in that their encoded byte representation
+// is equivalent to their respective Java String (UTF-16BE) chars
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\QFJException.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\SimpleCache.java
+/*
+//www.quickfixengine.org/LICENSE for licensing information.
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\Version.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\JmxExporter.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+//static.springframework.org/spring/docs/2.0.x/api/org/springframework/jmx/support/MBeanRegistrationSupport.html">MBeanRegistrationSupport</a>
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\JmxSupport.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\ObjectNameFactory.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\connector\ConnectorAdmin.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\connector\ConnectorAdminMBean.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\connector\ConnectorJmxExporter.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\connector\SocketAcceptorAdmin.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\connector\SocketAcceptorAdminMBean.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\connector\SocketInitiatorAdmin.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\connector\SocketInitiatorAdminMBean.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\session\SessionAdmin.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/**
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+//
+// Session State Notifications
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\session\SessionAdminMBean.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// TODO JMX Add schedule support
+//String getSchedule();
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\session\SessionJmxExporter.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\mbean\session\SessionSettingsAdmin.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\openmbean\CompositeDataBeanAdapter.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\openmbean\CompositeDataFactory.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\openmbean\CompositeTypeFactory.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+// NOTE: Do not parameterize OpenType for Java6 since it will
+// be incompatible with Java 5
+// Java 5/6 incompatibility
+// Java 5/6 incompatibility
+// Java 5/6 incompatibility
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\org\quickfixj\jmx\openmbean\TabularDataAdapter.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\AbstractLog.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// default is to do nothing
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\AbstractSessionConnectorBuilder.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Acceptor.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Application.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ApplicationAdapter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/* (non-Javadoc)
+// EMPTY
+/* (non-Javadoc)
+// EMPTY
+/* (non-Javadoc)
+// EMPTY
+/* (non-Javadoc)
+// EMPTY
+/* (non-Javadoc)
+// EMPTY
+/* (non-Javadoc)
+// EMPTY
+/* (non-Javadoc)
+// EMPTY
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ApplicationExtended.java
+/*******************************************************************************
+//www.quickfixj.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ApplicationExtendedFunctionalAdapter.java
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ApplicationFunctionalAdapter.java
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\BooleanField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\BusinessRejectReasonText.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// the BusinessRejectReason field values change from version to version,
+// so for cross-version compatibility we convert the constant names to
+// text reflectively on startup instead of hard-coding them
+// shouldn't happen
+/**
+// first character is upper
+// character after space is upper
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\BytesField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\CachedFileStore.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/*
+/**
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/**
+/*
+// I changed this from explicitly using a StringBuffer because of
+// recommendations from Sun. The performance also appears higher
+// with this implementation. -- smb.
+// http://bugs.sun.com/bugdatabase/view_bug.do;:WuuT?bug_id=4259569
+/*
+/*
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\CachedFileStoreFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\CharField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\CompositeLog.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// Test Support
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\CompositeLogFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ConfigError.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Connector.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DataDictionary.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// Categories are interned
+/**
+// Categories are interned
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// MultipleValueString
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/** copy groups including their data dictionaries and validation settings
+/**
+/**
+/** Check if message type is defined in spec. **/
+/** Check if field tag number is defined in spec. **/
+/** Check if field tag is defined for message or group **/
+// use different validation for groups and messages
+// String
+// otherwise it's a String, for older FIX versions
+/** Check if a field has a value. **/
+/** Check if group count matches number of groups in **/
+/** Check if a message has all required fields. **/
+// Index Components
+// FIELDS
+// HEADER
+// TRAILER
+// MSGTYPE
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DataDictionaryProvider.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DateField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DayConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DecimalField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DefaultDataDictionaryProvider.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DefaultMessageFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+// To loosen the coupling between this factory and generated code, the
+// message factories are discovered at run time using reflection
+// ignore - this factory is not available
+/**
+// try to load the class
+// try using our own classloader
+// try using context classloader (i.e. allow caller to specify it)
+// if factory is found, add it
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DefaultSessionFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+//
+// Session registration and creation callback is done here instead of in
+// session constructor to eliminate the possibility of other threads
+// accessing the session before it's fully constructed.
+//
+// Process qualified app data dictionary properties
+// value should be a beginString
+// default value
+// default value
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DefaultSessionSchedule.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// Now the localized equivalents, if necessary
+// this can't happen as these are created using DayConverter.toInteger
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DefaultSessionScheduleFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Dictionary.java
+/****************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// JNI API doesn't allow a ConfigError to be thrown
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DoNotSend.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\DoubleField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// QFJ-808: NaN or infinity values cannot be transmitted via FIX in a DoubleField
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ExecutorFactory.java
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Field.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/*abstract*/ class Field<T> implements Serializable {
+/**
+/**
+/**
+/**
+/**
+/*package*/ void toString(StringBuilder buffer) {
+/**
+/*package*/ int getLength() {
+/**
+/*package*/ int getChecksum() {
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FieldConvertError.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FieldException.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FieldMap.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+// unspecified fields are last
+// order by rank if it is specified for either tag
+// order by tag if both tags have unspecified ordering
+/**
+// Shouldn't happen
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FieldNotFound.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FieldType.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// QFJ-881
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FileLog.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// QFJ-459: no point trying to log the error in the file if we had an IOException
+// we will end up with a java.lang.StackOverflowError
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FileLogFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FileStore.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// also creates file
+/* (non-Javadoc)
+// this part is unnecessary if no offsets are being stored in memory
+// Remove the lowest indexed sequence number if this addition
+// would result the index growing to larger than maxCachedMsgs.
+/**
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+/* (non-Javadoc)
+// Use a treemap to make sure the messages are sorted by sequence num
+// parse the header file to find missing messages
+/**
+// can't read fully
+/* (non-Javadoc)
+/*
+/* (non-Javadoc)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FileStoreFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FileUtil.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/*
+/**
+/**
+/**
+/**
+/**
+// ignore
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FixVersions.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// FIXT.x.x support
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FromAdminListener.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\FromAppListener.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Group.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\HasFieldAndReason.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\IncorrectDataFormat.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\IncorrectTagValue.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Initiator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\IntField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\InvalidMessage.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\JdbcLog.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// One table is sampled for the extended session ID columns. Be sure
+// that all tables are extended if you extend any of them.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\JdbcLogFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\JdbcSetting.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//proxool.sourceforge.net/properties.html">http://proxool.sourceforge.net/properties.html</a>
+/**
+//proxool.sourceforge.net/properties.html">http://proxool.sourceforge.net/properties.html</a>
+/**
+//proxool.sourceforge.net/properties.html">http://proxool.sourceforge.net/properties.html</a>
+/**
+//proxool.sourceforge.net/properties.html">http://proxool.sourceforge.net/properties.html</a>
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\JdbcStore.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// One table is sampled for the extended session ID columns. Be sure
+// that all tables are extended if you extend any of them.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\JdbcStoreFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\JdbcUtil.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// Bug in Proxool 0.9RC2. Must set both delegate properties and individual setters. :-(
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ListenerSupport.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\LocationAwareLogFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Log.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\LogFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\LogUtil.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+// QFJ-335
+// It's possible the session has been deregistered by the time
+// we log the message, so this is the fallback logging.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MemoryStore.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/* package */void setCreationTime(Calendar creationTime) {
+// IOException is declared to maintain strict compatibility with QF JNI
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MemoryStoreFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Message.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// length & checksum can easily be calculated after message is built
+// better than sum % 256 since it avoids overflow issues
+/**
+/**
+/**
+// shouldn't happen
+// Body length is checked at the protocol layer
+// message will be ignored if checksum is wrong or missing
+// Invalid message preamble (first three fields) is a serious
+// condition and is handled differently from other message parsing errors.
+// An acceptance test requires the sequence number to
+// be available even if the related field is out of order
+// Group case
+// Group case
+// QFJ-533
+// QFJ-760: stop parsing since current position is greater than message length
+// QFJ-742
+// QFJ-934: message should be rejected and not ignored when first field not found
+// QFJ-792: add what we've already got and leave the rest to the validation (if enabled)
+// QFJ-169/QFJ-791: handle unknown repeating group fields in the body
+// add what we've already got and leave the rest to the validation (if enabled)
+// For later validation that the group size matches the parsed group count
+//
+// Extract field
+//
+/* Assume length field is 1 less. */
+/* Special case for Signature which violates above assumption. */
+// since length is in bytes but data is a string, and it may also contain an SOH,
+// we find the real field-ending SOH by checking the encoded bytes length
+// (we avoid re-encoding when the chars length equals the bytes length, e.g. ASCII text,
+// by assuming the chars length is always smaller than the encoded bytes length)
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MessageComponent.java
+/**
+// should not happen
+// should not happen
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MessageCracker.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MessageFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MessageParseError.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MessageStore.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MessageStoreFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\MessageUtils.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// ignore, should never happen
+/**
+/**
+/**
+// found tag, get value
+// No support for earlier versions of FIX
+/**
+// No support for earlier versions of FIX
+/**
+/**
+// better than sum % 256 since it avoids overflow issues
+/**
+// optimization - skip charset encoding
+// better than sum % 256 since it avoids overflow issues
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\NoopStore.java
+/*
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\NoopStoreFactory.java
+/*
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\NoTagValue.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\NumbersCache.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\RejectLogon.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Responder.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\RuntimeError.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ScreenLog.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// For Testing
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ScreenLogFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\Session.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// @GuardedBy(this)
+// unique instance
+// @GuardedBy(responderLock)
+// The session time checks were causing performance problems
+// so we are checking only once per second.
+// no resend range
+// QFJ-721: for non-FIXT sessions we do not need to set targetDefaultApplVerID from Logon
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// QFJ-650
+// QFJ-648
+// related to QFJ-367 : just warn invalid incoming field/tags
+/* InvalidMessage means a low-level error (e.g. checksum problem) and we should
+// Only increment seqnum if we are at the expected seqnum
+// 1d_InvalidLogonWrongBeginString.def appears to require
+// a disconnect although the C++ didn't appear to be doing it.
+// ???
+// QFJ-572
+// If there are any other Throwables we might catch them here if desired.
+// They were most probably thrown out of fromCallback().
+// Re-throw as quickfix.RuntimeError to keep close to the former behaviour
+// and to have a clear notion of what is thrown out of this method.
+// Throwing RuntimeError here means that the target seqnum is not incremented
+// and a resend will be triggered by the next incoming message.
+// QFJ-788: prevent StackOverflow on large queue
+/**
+// do not interfere in admin and logon/logout messages etc.
+// QFJ-653: Check if seqnums are too low.
+// QFJ-673: Do not check if seqnums are too high in verify() since in case of a seqnum mismatch this will
+// enqueue the ResendRequest for later processing. This might lead to a deadlock situation in
+// which the counterparty waits for our messages to be resent and we are also waiting for our
+// ResendRequest to be satisfied in order to process the queued ResendRequest of the counterparty.
+// Instead, send out the requested messages and afterwards enqueue the ResendRequest in order to
+// later increase the target seqnum in method nextQueued(int).
+/**
+// Adjust the ending sequence number for older versions of FIX
+// Just do a gap fill when messages aren't persisted
+/**
+// should not happen as MsgSeqNum must be present
+// Any exception other than DoNotSend will not stop the message from being resent
+// QFJ-750
+/**
+// should not happen as MsgSeqNum must be present
+// If new seq no is beyond the range of the current chunk
+// and if we are not done with all resend chunks,
+// we send out a ResendRequest at once.
+// Alternatively, we could also wait for the next incoming message
+// which would trigger another resend.
+// New sequence is the sequence number of the next message that
+// should be received, so it must be included in requested range
+// QFJ-728: newSequence will be the seqnum of the next message so we
+// delete all older messages from the queue since they are effectively skipped.
+// QFJ-557: Only advance the sequence number if we are at the expected number.
+// This is a set and increment of target msg sequence number, the sequence
+// number must be locked to guard against race conditions.
+// QFJ-557: Only advance the sequence number if we are at the expected number.
+// Handle poss dup where msgSeq is as expected
+// FIX 4.4 Vol 2, test case 2f&g
+// Application exceptions will prevent the incoming sequence number from being incremented
+// and may result in resend requests and the next startup. This way, a buggy application
+// can be fixed and then reprocess previously sent messages.
+// QFJ-572: Behaviour depends on the setting of flag rejectMessageOnUnhandledException.
+/**
+// Only check the session time once per second at most. It isn't
+// necessary to do for every message received.
+// only reset if seq nums are != 1
+// since we are outside of session time window
+// reset when session becomes active
+// Return if we are not connected
+// ApplicationExtended can prevent the automatic login
+// QFJ-926 - reset session before initiating Logon
+/**
+// QFJ-457 now enabled again if acceptor
+// QFJ-357
+// If this check is not done here, the Logon would be accepted and
+// immediately followed by a Logout (due to check in Session.next()).
+// QFJ-926 - reset session before accepting Logon
+// QFJ-383
+// reset logout messages
+// remember the expected sender sequence number of any logon response for future use
+/*
+// if we have a tag 789 sent to us...
+// Is the 789 we received too high ??
+// barf! we can't resend what we never sent! something unrecoverable has happened.
+/*
+// we increment for the logon later (after Logon response sent) in this method if and only if in sequence
+// logon was fine take account of it in 789
+// Check for proper sequence reset response
+// Looking at the sequence number of the incoming Logon, is it too high indicating possible missed messages ? ..
+// if 789 was sent then we effectively have already sent a resend request
+// Mark state as if we have already sent a resend request from the logon's 789 (we sent) to infinity.
+// This will supress the resend request in doTargetTooHigh ...
+// Do we have a 789
+// is the 789 lower (we checked for higher previously) than our next message after receiving the logon
+// Just do a gap fill when messages aren't persisted
+// 34=
+// (NewSeqNo 36=)
+// resend missed messages
+// QFJ-626
+// Note: a SequenceReset message will be generated to fill the gap
+/*
+// continue
+// Logon and ResendRequest processing has already been done, so we just need to increment the target seqnum.
+/**
+/**
+// QFJ-703
+/**
+/**
+// sequence number must be locked until application
+// callback returns since it may be effectively rolled
+// back if the callback fails.
+/**
+// For pre-FIXT sessions, the session data dictionary is the same as the application
+// data dictionary.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// clean up session just in case close() was not called from Session.unregisterSession()
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionException.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionID.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionNotFound.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionRejectReasonText.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionSchedule.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionScheduleFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionSettings.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// This was using the line.separator system property but that caused
+// problems with moving configuration files between *nix and Windows.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// shouldn't happen
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+//public static final int NONE_TOKEN = 1;
+// check ]
+// skip ]
+/**
+// Custom properties with System properties as default
+// Custom properties with System properties as override
+/**
+/**
+/**
+/**
+/**
+// Always a default section
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionState.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// MessageStore implementation must be thread safe
+/*
+// The messageQueue should be accessed from a single thread
+// QFJ-448: allow 10 ms leeway since exact comparison causes skipped heartbeats occasionally
+/**
+/**
+// we have already requested all msgs from nextExpectedMsgSeqNum to infinity
+// clean up the variable (not really needed)
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SessionStateListener.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SleepycatStore.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// session key
+/*
+/*
+/*
+/*
+//public void setCreationTime(Calendar creationTime) {
+//    this.creationTime = creationTime;
+//}
+// Open the environment. Create it if it does not already exist.
+// Open the database. Create it if it does not already exist.
+// Must start at start-1 because db will look for next record larger
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SleepycatStoreFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SLF4JLog.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SLF4JLogFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// it's actually code in AbstractLog that makes the final code to Log4J and not SLF4JLog itself
+// so send the AbstractLog here
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SocketAcceptor.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SocketInitiator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\StringField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SystemTime.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\SystemTimeSource.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ThreadedSocketAcceptor.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ThreadedSocketInitiator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\ToAppListener.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UnsupportedMessageType.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UnsupportedVersion.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UtcDateField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UtcDateOnlyField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UtcTimeField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UtcTimeOnlyField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UtcTimeStampField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\UtcTimestampPrecision.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\AbstractDateTimeConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\BooleanConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\CharConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\DecimalConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\DoubleConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// FieldConvertError not supported in setDouble methods on Message
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\IntConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\UtcDateOnlyConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// SimpleDateFormats are not thread safe. A thread local is being
+// used to maintain high concurrency among multiple session threads
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\UtcTimeOnlyConverter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// SimpleDateFormats are not thread safe. A thread local is being
+// used to maintain high concurrency among multiple session threads
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\field\converter\UtcTimestampConverter.java
+/** *****************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+// format has already been verified
+// accept up to picosenconds but parse only up to milliseconds
+/**
+// Performance optimization: the calendar for the start of the day is cached.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\AbstractIoHandler.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\CompositeIoFilterChainBuilder.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\CriticalProtocolCodecException.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\EventHandlingStrategy.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// will be put to the eventQueue to signal a disconnection
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\IoSessionResponder.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// Check for and disconnect slow consumers.
+// The data is written asynchronously in a MINA thread
+// We cannot call join() on the CloseFuture returned
+// by the following call. We are using a minimal
+// threading model and calling join will prevent the
+// close event from being processed by this thread (if
+// this thread is the MINA IO processor thread.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\NetworkingOptions.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// Try parsing the enums
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\ProtocolFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// Create proxy connector.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\QueueTracker.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\QueueTrackers.java
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\SessionConnector.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+/**
+/**
+/**
+// if no session, not logged on
+// at least one session not logged on
+// all the sessions are logged on
+/**
+//visible for testing only
+// if no session, not logged on
+// at least one session logged on
+// no sessions are logged on
+// Be sure we don't look forever
+// visible for testing
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\SingleThreadedEventHandlingStrategy.java
+/*
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// reset the stoptime
+/**
+/**
+/**
+// we only have one queue for all sessions
+/**
+/* No-Op. Already set for DedicatedThreadExecutor. Not relevant for externally supplied Executors. */
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\ThreadPerSessionEventHandlingStrategy.java
+/*
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// dispatchersToShutdown is backed by the map itself so changes in one are reflected in the other
+// wait for threads to stop
+/**
+/**
+// no message available in polling interval
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\WatermarkTracker.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\acceptor\AbstractSocketAcceptor.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// TODO SYNC Does this method really need synchronization?
+// Unknown transport type
+// Check for cached descriptor
+/**
+// Acceptors don't use qualifiers.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\acceptor\AcceptorIoHandler.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Session is already bound to another connection
+// QFJ-592
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\acceptor\AcceptorSessionProvider.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\acceptor\DynamicAcceptorSessionProvider.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\initiator\AbstractSocketInitiator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// QFJ-482
+// Check if use of socket local/bind address
+// Unknown transport type
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\initiator\InitiatorIoHandler.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\initiator\InitiatorProxyIoHandler.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\initiator\IoSessionInitiator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// QFJ-482
+// QFJ-266 Recreate socket address for unresolved addresses
+// QFJ-822 Reset cached DNS resolution information on connection failure.
+// TODO JMX Expose reconnect property
+// exposed via JMX
+// exposed via JMX
+// exposed via JMX
+// The following logon reenabled the session. The actual logon will take
+// place as a side-effect of the session timer task (not the reconnect task).
+// only enables the session
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\message\FIXMessageDecoder.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// Parsing states
+// If QFJ receives more garbage data than this between messages, then
+// the connection is considered corrupt.
+// Mina will compact the buffer because we can't detect a header
+// Mina will compact the buffer
+/**
+// while data remains
+// if not digit
+// QFJ-903 - we started to parse length but encountered no digit
+// if data remains
+// if remaining data is less than body
+// we are trying to parse the checksum but should
+// check if the CHECKSUM_PATTERN is preceded by SOH
+// or if the pattern just occurs inside of another field
+// FEATURE allow configurable recovery position
+// int recoveryPosition = in.position() + 1;
+// Following recovery position is compatible with QuickFIX C++
+// but drops messages unnecessarily in corruption scenarios.
+// eventually invokes AbstractIoHandler.messageReceived
+// empty
+/**
+/**
+/**
+// Set up a read-only memory-mapped file
+// ignored
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\message\FIXMessageEncoder.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// get message bytes
+// write bytes to buffer and output it
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\message\FIXProtocolCodecFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\message\PatternMatcher.java
+/**
+/**
+/**
+/**
+// if not optional character (lowercase)
+/**
+/**
+// check exact character match or wildcard match
+// check optional character match
+// lowercase is optional
+// at this point we know it's not an exact match, so we only need to check the
+// uppercase character. If there's a match we go on as usual, and if not we
+// ignore the optional character by rewinding the buffer offset
+// no uppercase match
+// no match
+// when minPatternLength(pattern) != pattern.length we might run out of buffer before we run out of pattern
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\ssl\SSLConfig.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\ssl\SSLContextFactory.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// for backwards compatibility we shoudln't use empty truststore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\ssl\SSLFilter.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\ssl\SSLSupport.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\main\java\quickfix\mina\ssl\X509TrustManagerWrapper.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\org\quickfixj\jmx\mbean\ObjectNameFactoryTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\org\quickfixj\jmx\mbean\session\SessionAdminTest.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\AbstractMessageStoreTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Automatically disable tests if database isn't available
+// test reset again after values have been set
+// message 111 == äbcfödçé
+// does nothing, by default
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\ApplicationExtendedFunctionalAdapterTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\ApplicationFunctionalAdapterTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\BigDecimalFieldTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+/**
+// check to see if we have a BigDecimal constructor
+// we are using doubles only. this isn't the testcase we are looking for
+// skip the test
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\BusinessRejectReasonTextTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\CachedFileStoreTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Initialize the session settings from the defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\CompositeLogTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\DataDictionaryTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// component field
+// group->component field
+//assertTrue("incorrect message field", dd.isMsgField("6", 311));
+// Expected
+// now tests for fields that aren't actually in the dictionary - should come back false
+// TODO: This is unexpected for pre-FIX 5.0 messages:
+//   If bodyOnly is true, the correct data dictionary is not checked.
+// QF C++ treats the string argument as a filename although it's
+// named 'url'. QFJ string argument can be either but this test
+// ensures the DD works correctly with a regular file path.
+// It worked!
+// Support finding DD in classpath
+// It worked!
+// QFJ-235
+// Invalid field for this message
+// QFJ-535
+// QFJ-535
+// in any case, it must be validated as the message is correct
+//doValidation and checkFieldsOutOfOrder
+//doNotValidation and checkFieldsOutOfOrder
+//doValidation and no checkFieldsOutOfOrder
+//doNotValidation and no checkFieldsOutOfOrder
+//doValidation and checkFieldsOutOfOrder -> should fail
+// expected exception
+//doNotValidation and checkFieldsOutOfOrder -> should NOT fail
+//doValidation and no checkFieldsOutOfOrder -> should NOT fail
+//doNotValidation and no checkFieldsOutOfOrder -> should NOT fail
+// set to false on ORIGINAL DD
+// should be still true on COPIED DD and its group
+/**
+/**
+/**
+/**
+/**
+/**
+// QFJ-971
+// use some more threads to make it more likely that the problem will occur
+// submit threads to pausable executor and try to let them start at the same time
+// start all threads
+// validate results
+// if unsuccessful, this will throw an ExecutionException
+//
+// Group Validation Tests in RepeatingGroupTest
+//
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\DayConverterTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// expected
+// check that day values are US days either default local is set to France
+// expected
+// check that day values are US days either default local is set to France
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\DefaultDataDictionaryProviderTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\DefaultMessageFactoryTest.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\DefaultSessionFactoryTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// no exception
+// no exception
+// ignore
+// QFJ-629
+// QFJ-873
+// QFJ-973
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\DictionaryTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// Tested dictionary("name") already
+// From C++ tests
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\DummySLF4JLogger.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\ExceptionTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FieldConvertersTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// just accept up to picoseconds but truncate after millis
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+// expected
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FieldMapTest.java
+/**
+// now set it with preserving millis
+// now set it with preserving millis
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FieldTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// QFJ-881
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FileLogTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Also, tests encoding
+// äbcfödçé
+// Bug #140
+// Test append - Bug #140
+// The last output should still be in the file
+// QFJ-459
+// no stack overflow exception thrown
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FileStoreLowMemTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Initialize the session settings from the defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FileStoreTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Initialize the session settings from the defaults
+// it is ok for this to fail
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FileStoreZeroMemTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Initialize the session settings from the defaults
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\FileUtilTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Assumption: current directory is QFJ project base directory
+// Assumption: Internet access
+//www.quickfixj.org/");
+// QFJ-775
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\JdbcLogLegacyTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\JdbcLogTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// need to register the session since we are going to log errors through LogUtil
+// remove the messages and events tables
+// now try to log an error
+// put the tables back so they can be cleaned up in tearDown()
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\JdbcStoreLegacyTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\JdbcStoreTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// No JNDI data source name is set up here
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\JdbcTestSupport.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\ListenerSupportTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// No change
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\LoginTestCase.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\LogUtilTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// ignore
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\MemoryStoreTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\MessageCrackerTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// toString smoke test
+//
+// Legacy Tests
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\MessageTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Test that field is in body not the header
+// Test that field is correctly classified in header with customSessionDictionary
+// Chinese with SOH in the middle
+//        doTestMessageWithEncodedField("UTF-16", text); // double-byte charset not supported yet
+// checksum is not verified in these tests
+// checksum is not verified in these tests
+// with validation
+// without validation
+// QFJ-675: Message.clear() should reset position field to zero to enable Message to be reused
+// QFJ-426 Message header will not validate when containing 'Hop' group
+// Test the generic group constructor (QFJ-95)
+// QFJ-66 Should not throw exception when parsing data field in header
+// QFJ-52
+// expected
+// expected
+/**
+/**
+// expected
+// Includes test for QFJ-413. Repeating group check for size = 0
+/**
+// checksum is "merged" into field 452, i.e. SOH is missing between field 452 and 10
+// Remove all
+// Remove one at a time
+// Remove all
+// Remove one at a time
+// ensure no exception when groups are empty
+// expected
+// duplicated tag 98
+// QFJ-65
+// For now, this will not cause an exception if the length and checksum are correct
+// duplicated tag 98
+// QFJ-65
+// 8=FIX.4.4\0019=941\00135=AE\00149=ICE\00134=63\00152=20091117-18:59:04.780\00156=XXXX\001
+// 57=X\001571=219449\001487=0\001856=0\001828=0\001150=F\00117=44750544433\00139=2\001
+// 570=N\00155=480120\00148=WBS FMG0010-BRN FMG0010\00122=8\001461=FXXXXX\001916=20100201\001
+// 917=20100228\00132=1.0\00131=0.69\0019018=1\0019022=1\00175=20091117\00160=20091117-18:59:04.775\001
+// 552=1\00154=2\00137=41296064\00111=557859232\001453=7\001448=trader\001447=D\001452=11\001
+// 448=Trading Corp\001447=D\001452=13\001448=2757\001447=D\001452=56\001448=805\001447=D\001
+// 452=4\001448=11122556\001447=D\001452=51\001448=FCM\001447=D\001452=60\001448=U\001447=D\001
+// 452=5 4\00158=41293051\001555=2\001600=460130\001602=WBS FMG0010!\001603=8\001608=FXXXXX\001
+// 624=2\001637=80.78\001687=1.0\001654=41296074\0019019=1\0019023=1\0019020=20100201\001
+// 9021=20100228\001539=4\001524=805\001525=D\001538=4\001524=11122556\001525=D\001538=51\001
+// 524=FCM\001525=D\001538=60 524=U\001525=D\001538=54\001600=217927\001
+// 602=BRN FMG0010! 63=8 608-FXXXXX 624=1 637=80.09 687=1.0 654=41296073 9019=1 9023=1 9020=20100201 9021=20100228 539=4 524=805\001
+// 525=D\001538=4\001524=11122556 525=D\001538=51 524=Newedge 525=D 538=60 524=U 525=D 538=54 10=112
+// For now, this will not cause an exception if the length and checksum are correct
+// duplicated raw data length
+// QFJ-121
+/**
+//logon.set(new RawData(data));
+// QFJ-786
+// QFJ-791
+/*
+/*
+/*
+// add unexpected tag to leg1
+// do not use validation to parse full message
+// regardless of errors in message structure
+/*
+// QFJ-791
+// will add a user-defined tag (i.e. greater than 5000) that is not defined in that group
+// add unexpected tag to leg1
+// parsing without validation should succeed
+// validation should fail
+// but without checking user-defined fields, validation should succeed
+// will add a normal tag that is not in the dictionary for that group
+// remove user-defined tag from before
+// add unexpected tag to leg1
+// parsing without validation should succeed
+// validation should fail
+// but without checking for unknown message fields, validation should succeed
+// QFJ-169
+// add invalid field for this FIX version
+// make sure that tag 297 is reported as invalid, NOT tag 55
+// (which is the first field after the invalid 297 field)
+// make sure that tag 297 is reported as invalid, NOT tag 55
+// (which is the first field after the invalid 297 field)
+// parse message again without validation
+// QFJ-169/QFJ-791
+// tag 20000 is not defined, tag 22000 is defined for NewOrderSingle in FIX44_Custom_Test.xml
+// using custom dictionary with user-defined tag 22000
+// defined tag should be set on the message
+// undefined tag should not be set on the message
+// undefined tag should be set on the group instead
+// Given
+// tag 20000 is not defined for NewOrderSingle
+// When
+// Then
+// QFJ-169/QFJ-791
+// tag 20000 is not defined, tag 22000 is defined for NewOrderSingle in FIX44_Custom_Test.xml
+// using custom dictionary with user-defined tag 22000
+// defined tag should be set on the message
+// undefined tag should not be set on the message
+// undefined tag should be set on the subgroup instead
+// QFJ-792
+// correct order would be 600, 687, 654, 566 
+/*
+/*
+// without checking order of repeating group it should work
+// when checking order of repeating group, an error should be reported
+// but we still should have the repeating group set and not ignore it
+// QFJ-533
+// QFJ-770/QFJ-792
+// QFJ-940
+// QFJ-722
+// QFJ-722
+// expected
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\MessageUtilsTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// expected
+// expected
+// QFJ-973
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\MockSystemTimeSource.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// empty
+// TODO maybe we need nano-precision later on
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\MultiAcceptorTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\PausableThreadPoolExecutor.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\RepeatingGroupTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// In this testcase we use only FIX4.4 message, but we could use the others
+// FIX version. Indeed the group
+// management is independent from the version
+// NON NESTED Groups
+// We assume that checksum equality s enough - DV
+// Custom tag is
+// 9001
+// Custom tag is
+// 9001
+// We assume that checksum equality s enough - DV
+// Custom tag is
+// 9001
+// Custom tag is
+// 9001
+// Standard Field
+// NESTED Groups outside messages
+// The root group
+// The nested group
+// Adding a second fake nested group to avoid being the case of having
+// one element which is not relevant :-)
+// The root group
+// The nested group
+// Adding a second fake nested group to avoid being the case of having
+// one element which is not relevant :-)
+// Getting part
+// Standard Field
+// The root group
+// The nested group
+// Adding a second fake nested group to avoid being the case of having
+// one element which is not relevant :-)
+// The root group
+// Getting part
+// Custom Field
+// The root group
+// The nested group
+// Adding a second fake nested group to avoid being the case of having
+// one element which is not relevant :-)
+// Getting part
+// Custom Field
+// Standard Field
+// Testing group re-usability when setting values
+// The root group
+// Create the initial group
+// Create the second group by re-using the same group and changing one value of only one field
+// Getting part
+// Custom Field
+// Standard Field
+// Ensures that the field overriden has been set correctly
+// Ensures that the field not overriden has been set correctly
+// Testing Message validation
+// The root group
+// The nested group
+// The non ordered field
+// The custom non ordered field
+// Adding a second fake nested group to avoid being the case of having
+// one element which is not relevant :-)
+// The non ordered field
+// The custom non ordered field
+// expected
+// expected
+// expected
+// Missing group tag 304
+// expected
+// Excessive group counts in nested group
+// expected
+// Excessive group counts
+// expected
+// not expected
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\ScreenLogTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SerializationTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Check messages
+// Check fields
+// The srcDir might be the Eclipse and/or Ant srcDir. We'll
+// take the first one we find.
+// We want to take ONLY messages into account
+// We want to take ONLY fields into account
+// Extract
+// package
+// Remove .java extension
+// Replace \ by . to build package names
+// Checking
+// Checking
+// Default values creation
+// Setting Fields
+// Setting Groups
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionDisconnectConcurrentlyTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// QFJ-738
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionDisconnectTest.java
+/**
+// we are not verifying the return value of this call to #await as once the issue is fixed with locking this will return false
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionFactoryTestSupport.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionIDTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// expected
+// expected
+// expected
+//    public void testFromString() throws Exception {
+//        SessionID sessionID = new SessionID((String) null, (String) null, (String) null);
+//        sessionID.fromString("FIX.4.2:SENDER->TARGET:QUALIFIER");
+//        assertEquals("FIX.4.2", sessionID.getBeginString());
+//        assertEquals("SENDER", sessionID.getSenderCompID());
+//        assertEquals("TARGET", sessionID.getTargetCompID());
+//        assertEquals("QUALIFIER", sessionID.getSessionQualifier());
+//        assertEquals("FIX.4.2:SENDER->TARGET:QUALIFIER", sessionID.toString());
+//    }
+//
+//    public void testFromStringNoQualifier() throws Exception {
+//        SessionID sessionID = new SessionID((String) null, (String) null, (String) null);
+//        sessionID.fromString("FIX.4.2:SENDER->TARGET");
+//        assertEquals("FIX.4.2", sessionID.getBeginString());
+//        assertEquals("SENDER", sessionID.getSenderCompID());
+//        assertEquals("TARGET", sessionID.getTargetCompID());
+//        assertEquals("", sessionID.getSessionQualifier());
+//        assertEquals("FIX.4.2:SENDER->TARGET", sessionID.toString());
+//    }
+//
+//    public void testFromStringError1() throws Exception {
+//        SessionID sessionID = new SessionID((String) null, (String) null, (String) null);
+//        try {
+//            sessionID.fromString("FIX.4.2@SENDER->TARGET");
+//            fail("no exception");
+//        } catch (RuntimeError e) {
+//            // expected
+//        }
+//    }
+//
+//    public void testFromStringError2() throws Exception {
+//        SessionID sessionID = new SessionID((String) null, (String) null, (String) null);
+//        try {
+//            sessionID.fromString("FIX.4.2:SENDER=>TARGET");
+//            fail("no exception");
+//        } catch (RuntimeError e) {
+//            // expected
+//        }
+//    }
+//
+//    public void testFromStringError3() throws Exception {
+//        SessionID sessionID = new SessionID((String) null, (String) null, (String) null);
+//        sessionID.fromString("FIX.4.2:SENDER->TARGET:");
+//        assertEquals("FIX.4.2", sessionID.getBeginString());
+//        assertEquals("SENDER", sessionID.getSenderCompID());
+//        assertEquals("TARGET", sessionID.getTargetCompID());
+//        assertEquals("", sessionID.getSessionQualifier());
+//    }
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionResetTest.java
+// QFJ-645, QFJ-716
+// submit threads to pausable executor and try to let them start at the same time
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionScheduleTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// July 24, 2004 - Saturday
+// July 25, 2004 - Sunday
+// Schedule Saturday 18:00 to following Saturday 03:00
+// =====================================================
+// start time is less than end time
+// same time
+// time 2 in same session but greater
+// time 2 in same session but less
+// time 1 not in session
+// time 2 not in session
+// same time (in session window) two different days
+// =====================================================
+// start time is greater than end time
+// same session same day
+// same time (in session window) two different days
+// same session time 2 is in next day
+// same session time 1 is in next day
+// time 1 is 25 hours greater than time 2
+// ------------
+// =====================================================
+// start time is equal to end time
+// Reset start/end time so that they fall within an hour of midnight
+// Make it a week-long session
+// Check that ST-->DST (Sunday is missing one hour) is handled
+// Check that DST-->ST (Sunday has an extra hour) is handled
+// Check that everything works across a year boundary
+// QFJ-228
+// The Friday day must roll over to Saturday when the time is converted to UTC
+// This test is very susceptible to whether the system time starts
+// in daylight time or not, so we just force it that way.  Otherwise
+// the first time the mock time source gets set to a time with daylight time
+// then the schedule appears to change 1 hr.
+// The end time is actually 16:00 Eastern time but specified as
+// 15:00 Central time.
+// Time interval is 1:00 - 15:00
+// Monday is out of session interval
+// Monday is out of session interval, time is in.
+// Tuesday is in interval, time is out.
+// Friday in interval, time is out
+// Saturday is out of interval
+/**
+//bugs.sun.com/bugdatabase/view_bug.do?bug_id=4644278
+//bugs.sun.com/bugdatabase/view_bug.do?bug_id=4832236
+// In 1970, a session configured to end at 21:50 UTC would end at
+// 22:50 London time any time of year.
+// Now, at least in winter, it should end at 21:50 in both zones --
+// if the end time session setting is being parsed correctly.
+// When summer time (BST) is in effect, London time will be an hour
+// ahead again, and the session will end at 22:50 there.
+// In 1970, a session configured to end at 21:50 GMT would end at
+// 20:50 UTC any time of year.
+// Now, at least in winter, it should end at 21:50 in both zones --
+// if the end time session setting is being parsed correctly.
+// When summer time (BST) is in effect, London time will be an hour
+// ahead again, and the session will end at 20:50 UTC there.
+// Just be sure it doesn't throw exceptions
+// Just be sure it doesn't throw exceptions
+// seconds
+//
+//
+//
+//
+//
+//
+// -> this is 03:16 !
+//
+//System.out.println(schedule);
+// November,2 -> Sunday
+// November,7 -> Friday
+//System.out.println(schedule);
+// November,2 -> Sunday
+// November,7 -> Friday
+// QFJ-767
+// one week later
+//System.out.println(formatCalendar(sessionCreateTime));
+// seconds
+// This should be an impossible situation. "Now" should always be
+// after the session create time.
+// do nothing
+// do nothing
+// do nothing
+// Sunday
+// Monday
+// Tuesday
+// Wednesday
+// Thursday
+// Friday
+// Saturday
+// Sunday
+// Monday
+// Tuesday
+// Wednesday
+// Thursday
+// Friday
+// Saturday
+// =====================================================
+// start time is less than end time
+// same time
+// time 2 in same session but greater
+// time 2 in same session but less
+// time 1 not in session
+// time 2 not in session
+// same time (in session window) two different days
+// =====================================================
+// start time is greater than end time
+// same session same day
+// same time (in session window) two different days
+// same session time 2 is in next day
+// same session time 1 is in next day
+// time 1 is 25 hours greater than time 2
+// =====================================================
+// start time is equal to end time
+// This test is very susceptible to whether the system time starts
+// in daylight time or not, so we just force it that way.  Otherwise
+// the first time the mock time source gets set to a time with daylight time
+// then the schedule appears to change 1 hr.
+// The end time is actually 16:00 Eastern time but specified as
+// 15:00 Central time.
+/**
+//bugs.sun.com/bugdatabase/view_bug.do?bug_id=4644278
+//bugs.sun.com/bugdatabase/view_bug.do?bug_id=4832236
+// In 1970, a session configured to end at 21:50 UTC would end at
+// 22:50 London time any time of year.
+// Now, at least in winter, it should end at 21:50 in both zones --
+// if the end time session setting is being parsed correctly.
+// When summer time (BST) is in effect, London time will be an hour
+// ahead again, and the session will end at 22:50 there.
+// In 1970, a session configured to end at 21:50 GMT would end at
+// 20:50 UTC any time of year.
+// Now, at least in winter, it should end at 21:50 in both zones --
+// if the end time session setting is being parsed correctly.
+// When summer time (BST) is in effect, London time will be an hour
+// ahead again, and the session will end at 20:50 UTC there.
+// Just be sure it doesn't throw exceptions
+//
+//
+//
+//
+//
+//
+// -> this is 03:16 !
+//
+// November,2 -> Sunday
+// November,7 -> Friday
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionSettingsTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// expected
+// expected
+// expected
+// Only defined in defaults
+// QFJ-204
+// Passes if no exception is thrown
+// expected
+// OK
+// wait for everyone to be ready
+// individual thread to sleep at random interval, to simulate spread connection attempt
+// sleep at the end, before we verify the outcome
+// go go go , everyone!
+// ok.. wait for everyone to finish
+// verify test has passed
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionStateTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// set the heartbeat interval to something small and we shouldn't need it again
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SessionTest.java
+/**
+// Simulate socket disconnect
+/**
+// Simulate socket disconnect
+// QFJ-703
+// test default behaviour, i.e. that the message is rejected
+// when not setting 122/OrigSendingTime
+// test that the message is NOT rejected when
+// setting requiresOrigSendingTime=false
+// and not setting 122/OrigSendingTime
+// QFJ-603
+// set a BeginString unsupported by the session
+// QFJ-650
+// this should disconnect the session due to the missing MsgSeqNum
+// make sure that the target seq num has not been incremented
+// QFJ-750
+// make sure that the target seq num has not been incremented
+// make sure that the target seq num has not been incremented
+// Reject with unexpected seqnum should not increment target seqnum
+// Reject with unexpected seqnum should not increment target seqnum
+/**
+// set up some basic stuff
+// Session gets constructed, triggering a reset
+// we should only answer with a Logon message
+// no reset should have been triggered by QF/J after the Logon attempt
+// QFJ-773
+// set up some basic stuff
+// Session gets constructed, triggering a reset
+// we should only answer with a Logon message
+// no reset should have been triggered by QF/J after the Logon attempt
+// increment time to force logout and reset
+// we should only reset once outside of the session time window
+// this should get rejected since we are outside of the session time
+// window
+// if we now logon to the session, it will be considered new
+// and a reset will be done
+// jump one day but stay inside
+// session time
+// check that the creation time is not updated inside of the session
+// time window
+// QFJ-716
+// set up some basic stuff
+// we want to start the initiator before the StartTime
+// Session gets constructed, triggering a reset
+// we should send no messages since we are outside of session time
+// no reset should have been triggered by QF/J (since we were not logged
+// on)
+// increase time to be within session time
+// we should have sent a Logon since the StartTime has been reached now
+// increase time to be out of session time
+// QFJ-716 - we need to make sure that the first message sent is a Logon
+// set up some basic stuff
+// we want to start the initiator before the StartTime
+// make sure we start inside the Session time
+// Session gets constructed, triggering a reset
+// we should have sent a Logon since we are inside of the SessionTime
+// no reset should have been triggered by QF/J
+// QFJ-926
+// truncate to seconds, otherwise the session time check in Session.next()
+// might already reset the session since the session schedule has only precision of seconds
+// set up some basic stuff
+// we want to start the session before the StartTime
+// Session gets constructed, triggering a reset
+// we should send no messages since we are outside of session time
+// no reset should have been triggered by QF/J (since we were not logged on)
+// increase time to be within session time
+// there should be a Logon but no subsequent reset
+// call next() to provoke SessionTime check which should NOT reset seqnums now
+// check that no reset is done on next Logon
+// QFJ-926
+// truncate to seconds, otherwise the session time check in Session.next()
+// might already reset the session since the session schedule has only precision of seconds
+// set up some basic stuff
+// we want to start the session before the StartTime
+// Session gets constructed, triggering a reset
+// we should send no messages since we are outside of session time
+// no reset should have been triggered by QF/J (since we were not logged on)
+// increase time to be almost within session time to check if session needs to be reset
+// (will not reset since it is not yet within session time)
+// increase time further so that Logon is sent but reset is not done since last check
+// of session time was done within one second
+// check that no reset is done on next Logon
+// QFJ-929/QFJ-933
+// calculate length and checksum
+// session should not be logged on due to empty EncryptMethod
+// calculate length and checksum
+// session should not be logged on due to missing EncryptMethod
+// calculate length and checksum
+// session should not be logged on due to IncorrectDataFormat
+// calculate length and checksum
+// session should not be logged on due to IncorrectTagValue
+// calculate length and checksum
+// session should not be logged on due to IncorrectTagValue
+/**
+// set up some basic stuff
+// construct a session schedule which is not active at the moment
+// add 30 minutes
+// Session gets constructed, triggering a reset
+// we should only answer with a Logout message
+// Normally, next() is called periodically; we only do it here to reset
+// the seqNums.
+// The seqNums should be reset because it was tried to establish a
+// connection
+// outside of the session schedule.
+// QFJ-357
+// construct the path to the filestore (mostly c&p from FileStore class)
+// removing the file does NOT trigger the reset in the Session
+// constructor, so we fake an outdated session
+// delete files to have the message store reset seqNums to 1
+// (on QF/J 1.5.1 this triggered the needReset() method to return false)
+// QFJ-60
+// Create application that rejects all logons
+// QFJ-696
+// Create application that rejects all logons
+// QFJ-339
+// QFJ-339
+// Create application that rejects all logons
+// To avoid resendRequest
+// QFJ-271
+// QFJ-626
+// calculate length/checksum
+// ugly hack: alter the store to get an invalid checksum
+// calculate length/checksum
+// calculate length/checksum
+// all messages should have been resent
+// QFJ-493
+// QFJ-673
+// we need to satisfy the resendrequest of the opposing side
+// test seqnum too low
+// test seqnum too high
+// satisfy ResendRequest
+// QFJ-658 and acceptance test 20_SimultaneousResendRequests.def
+// we need to satisfy the resendrequest of the opposing side
+// QFJ-750
+// Create a sequence reset which will cause deletion of almost all
+// messages
+// from the sessionState queue since former messages are skipped.
+// The remaining two messages will then be dequeued and processed by the
+// app.
+/**
+// calculate checksum, length
+/**
+// construct example messages
+// calculate checksum, length
+// calculate checksum, length
+// retry Logon
+// This simulated the behavior of the QFJ connectors
+// They will just discard a message with an error (without
+// incrementing the sequence number).
+// should increment target
+// seqnum
+// should increment target
+// seqnum
+// should increment target
+// seqnum
+// should NOT increment target
+// seqnum
+// should increment target
+// seqnum
+// QFJ-572
+/**
+// do not initialize the SQL tables so that the JdbcLog will fail
+// this test does not work in Eclipse but we
+// catch the Exception in order to ignore the test
+// QFJ-457
+// session.reset();
+// QFJ-444
+/*
+// onLogout was called
+// QFJ-557
+// QFJ-776
+// session should not be logged on due to missing TargetCompID
+// create session which has checkCompID=N
+// QFJ-751
+// QFJ-751
+// QFJ-751
+// QFJ-751
+// QFJ-751
+// Deliver Logon response with too high sequence 20 instead of 1.
+// The expected target sequence should still be 1.
+// Deliver the missing message #1.
+// Deliver the missing message #2.
+// Deliver SequenceReset-GapFill from 3 to 5
+// Deliver the missing message #5.
+/*
+// seqnum 20 will be retrieved from the queue, so we should be at 21 now
+//simulate a bunch of admin messages that were not persisted
+//simulate a bunch of admin messages that were not persisted
+// QFJ-795
+// Deliver Logon response with too high sequence number 100
+// Deliver application message with too high sequence number 101
+// Check, if session is still connected.
+// QFJ-873
+// QFJ-788
+/*
+/*
+// Deliver Logon response with sequnce number 101.
+/*
+// The expected target sequence should still be 1.
+/*
+// Deliver SequenceReset-GapFill from 1 to 100
+/*
+// Each message gets queued in a temporary queue.
+/*
+// Deliver the last missing application message #100.
+// Check the expected target sequence number after the queue has been
+// fully processed.
+/*
+//Do Something
+//Logon
+//Rejected
+//Logon
+//Accepted
+//ResendRequest
+// create a regular app message and and add the PossDup
+// and OrigSendingTime tags to it
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SleepycatStoreTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SLF4JLogTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// The conditional is required because of a bug in SLF4J 1.0
+// when used with JDK 1.4 logging. The wrapper does not pass
+// the logger name.
+//System.err.println("Removing unexpected handler: " + handlers[i]);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SocketAcceptorTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// store static Session count before the test to check cleanup
+// we expect one thread for acceptor, one for initiator
+// QFJ-825
+// QFJ-825
+// second start should be ignored
+// ignore
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\SocketInitiatorTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// store static Session count before the test to check cleanup
+// QFJ-825
+// QFJ-907
+// make sure socket is connected
+// make sure socket is NOT connected after initiator is stopped
+// QFJ-698: check that we were still able to write to the messageLog after the restart
+// ignore
+// Only countdown the latch if a logout message is actually sent
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\UnitTestApplication.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\CriticalSessionProtocolExceptionTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// For coverage
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\IoSessionResponderTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\LostLogoutTest.java
+/**
+// create server (acceptor)
+// create client (initiator) and start the FIX session (log on)
+// wait until until client is logged on
+// send application message from client to server
+// and wait some time to make sure the logout is sent
+// separately from the application message
+// send logout request from client to server and close the socket
+// give the server plenty of time to process the logout request
+// verify if the server received the logout message via the fromAdmin() call-back
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\LostLogoutThreadedTest.java
+/**
+// create server (acceptor)
+// create client (initiator) and start the FIX session (log on)
+// wait until until client is logged on
+// send application message from client to server
+// and wait some time to make sure the logout is sent
+// separately from the application message
+// send logout request from client to server and close the socket
+// give the server plenty of time to process the logout request
+// verify if the server received the logout message via the fromAdmin() call-back
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\SessionConnectorStub.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\SessionConnectorTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Acceptors should get re-enabled after Logout
+// test add/remove
+/**
+// one-time use connector to create a slightly different session
+// the list can be in arbitrary order so let's make sure that we get both
+/**
+//Two sessions to test dynamic sessions while check initializers
+//Check sessions created and available
+//Check initiators created and not null
+//Check if initiators are re - created for this sessions but not sessions available
+//Sessions re created during session initiatore re creation, initiators are stacked
+//This should remove initiators
+//Tear down
+// connector is initialised with the wildcard sessions.
+// register a listener on the connector, e.g. to simulate MBean registration
+// wait for everyone to be ready
+// individual thread to sleep at random interval, to simulate spread connection attempt
+// sleep at the end, before we verify the outcome
+// go go go , everyone!
+// ok.. wait for everyone to finish
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\SingleThreadedEventHandlingStrategyTest.java
+/**
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// ignored
+/**
+// ignored
+// ignored
+// ignored
+// ignored
+// since ManagementFactory.getThreadMXBean().dumpAllThreads(false, false)
+// might return threads which are already terminated, we try again once more
+// ignored
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\ThreadPerSessionEventHandlingStrategyTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// Wait for a received message
+// Dispatcher threads are not daemon threads
+// We should have found the dispatcher thread
+// Stop the threads and then check the thread state
+// Dispatcher thread should be dead
+/**
+// Wait for a received message
+// Dispatcher threads are not daemon threads
+// QFJ-790: we do not check the state of the responder anymore
+// but wait for the END_OF_STREAM message to stop the threads.
+// sleep some time to let the thread stop
+// Dispatcher threads are not daemon threads
+// the session dispatcher should be dead and hence not listed in the threads array
+// verify the assumption that this always returns null
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\WatermarkTrackerTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/*
+// cross lower watermark up
+// cross lower watermark down while not suspended
+// cross lower then upper watermarks up
+// cross upper watermark down
+// 3
+// cross upper watermark back up (without reaching the lower)
+// cross upper then lower watermarks down
+// 2
+// 2
+// 1
+// === helpers ===
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\acceptor\AcceptorIoHandlerTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// to create a new Session
+// Expect that onMessage will not be called
+//mockEventHandlingStrategy.onMessage(qfSession, logout);
+// QFJ-933
+// to create a new Session
+// remove HeartBtInt field and make sure there is no Exception
+// No exception should be thrown!
+// QFJ-950
+// to create a new Session
+// wait some time for EventHandlingStrategy to poll the message
+// garbled: character as group count
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+// garbled: missing msgtype
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+// garbled: wrong checksum
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+// garbled: invalid tag 49garbled
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+// QFJ-976
+// to create a new Session
+// garbled: missing msgtype
+// wait some time for EventHandlingStrategy to poll the message
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\acceptor\DynamicAcceptorSessionProviderTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Expected
+// be sure there are no NPEs, etc.
+// Should actually throw an exception if it fails (see previous test)
+/**
+// try again with same sesionID - should still be 1
+// only use own template
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\initiator\InitiatorIoHandlerTest.java
+// QFJ-976
+// to create a new Session
+// wait some time for EventHandlingStrategy to poll the message
+// garbled: character as group count
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+// garbled: missing msgtype
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+// garbled: wrong checksum
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+// garbled: invalid tag 49garbled
+// wait some time for EventHandlingStrategy to poll the message
+// ensure that seqnums are incremented (i.e. message is not ignored)
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\message\FIXMessageDecoderTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// expected
+// Should work with default encoding
+// Should break
+// expected
+// äbcfödçé
+// QFJ-376
+/**
+// expected
+// expected
+//assertEquals("wrong decoder result", MessageDecoderResult.NOT_OK, decoderResult);
+// =========================================================================================
+// QFJ-505
+// 8=FIXT.1.1_9=
+// 8=FIXT.1.1_9======
+// 8=FIXT.1.1_9
+// 8=FIX.4.4_9=
+// 8=FIX.4.4_9======
+// 8=FIX.4.4_9
+// QFJ-903
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\message\FIXMessageEncoderTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// reset charset after every test
+// Default encoding, should work
+// This will break because of European characters
+// expected
+// This will break because of Chinese characters
+// expected
+// This should work
+// äbcfödçé
+// expected
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\message\FIXProtocolCodecFactoryTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Unfortunately, there's not a lot of testing that can be done here
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\message\IoSessionStub.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\message\ProtocolDecoderOutputForTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// empty
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\message\ProtocolEncoderOutputForTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\ssl\SecureSocketTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// reset client side to invalid certs
+//public void stopAfterLogon(Initiator initiator) {
+//    this.initiator = initiator;
+//    this.stopAfterLogon = true;
+//}
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\ssl\SSLAndNonSSLTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// defaults
+// TW1 is a SSL client at 9897
+// TW2 is a non SSL client at 9898
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\ssl\SSLCertificateTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Note: To diagnose cipher suite errors, run with -Djavax.net.debug=ssl:handshake
+// client disconnects before acceptor throws an exception
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\ssl\SSLContextFactoryTest.java
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\ssl\SSLSupportTest.java
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\mina\ssl\X509TrustManagerWrapperTest.java
+// underlying trust manager should throw runtime exception
+// underlying trust manager should throw runtime exception
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\AcceptanceTestSuite.java
+//printDatabasePoolingStatistics();
+//        private Thread serverThread;
+// default server
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\ATApplication.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// ignore
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\ATMessageCracker.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\ATServer.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// defaults
+//localhost/quickfix");
+// New for FIXT/FIX5
+//MessageStoreFactory factory = new JdbcStoreFactory(settings);
+//LogFactory logFactory = new CommonsLogFactory(settings);
+//quickfix.LogFactory logFactory = new JdbcLogFactory(settings);
+// running all acceptance tests should hopefully not take longer than 30 mins
+// This is a strange place for this test, but it wasn't convenient
+// to put it elsewhere. Bug #153
+// settings.setString(sessionID, "DataDictionary", "etc/" + beginString.replaceAll("\\.", "")
+//         + ".xml");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\ConfigureSessionStep.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\ConnectToServerStep.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\ExpectDisconnectStep.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\ExpectMessageStep.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\InitiateMessageStep.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Matches FIX.X.X or FIXT.X.X style begin string
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\PrintComment.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\TestConnection.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// 10 seconds more than retry time in ATServer.run()
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\TestStep.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\resynch\ResynchTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\resynch\ResynchTestClient.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// Cracked
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\resynch\ResynchTestServer.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// There were intermittent errors when running ResynchTest
+// that the session was not initialized in onCreate().
+// A PropertyChangeListener has been implemented to correct this.
+// settings.setString(sessionID, "DataDictionary", "etc/" + FixVersions.BEGINSTRING_FIX44.replaceAll("\\.", "")
+//         + ".xml");
+// XXX wait some time?
+//acceptor.waitForInitialization();
+// NB: there is a chance that lookupSession will fail since
+// the sessions are kept in a ConcurrentHashMap which does not block.
+// From JavaDoc: Retrievals reflect the results of the most recently
+// completed update operations.
+// For the sake of completion of the AcceptanceTests, we will try again once.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\timer\TimerTest.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\timer\TimerTestClient.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\acceptance\timer\TimerTestServer.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+// not going to happen
+// sleep to move our timer off from the client's
+//acceptor.waitForInitialization();
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\util\ExpectedTestFailure.java
+/**
+/**
+/**
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\util\ExpectedTestFailureTest.java
+/**
+// run the test repeatedly since we can have a race condition
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-core\src\test\java\quickfix\test\util\ReflectionUtil.java
+/**
+/**
+/**
+/**
+// ignore, probably wrong JVM version
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\Component.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\ComponentComponent.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\ComponentField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\Enum.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\Field.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\Generator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+//fixprotocol.org/repository-2008).
+// for versions below FIX5.0
+// Header
+// Message
+// Components
+// Fields
+// remove stuff in parentheses
+// replace ticks (as in DON'T_KNOW_TRADE)
+// trim leading and trailing whitespaces
+// replace rest of non-word characters by _
+// make it a valid JAVA identifier
+// FIXME ugly workaround to avoid duplicate entries
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\Message.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\MsgType.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\MsgTypeComponent.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\MsgTypeField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-dictgenerator\src\main\java\org\quickfixj\dictgenerator\Repository.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+//dataroot/MsgType[NotReqXML=" + notReqXML + "]");
+// Add msgContents
+//if (allFields.containsKey(tagText) && notReqXML.equals(allFields.get(tagText).getNotReqXML())) {
+//} else if (allComponents.containsKey(tagText) && notReqXML.equals(allComponents.get(tagText).getNotReqXML())) {
+//dataroot/Fields");
+// Find enums
+//dataroot/Enums[Tag=" + tag + "]");
+//dataroot/Components");
+// Add msgContents
+// Handle msgContents for the component in question first!
+//dataroot/MsgContents[MsgID=" + msgID + "]");
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\Banzai.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\BanzaiApplication.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+// For OpenFIX certification testing
+// This is here to support OpenFIX certification
+// > FIX 4.1
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\DoubleNumberTextField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\Execution.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ExecutionTableModel.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\IntegerNumberTextField.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\LogonEvent.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\Order.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\OrderSide.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\OrderTableModel.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\OrderTIF.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\OrderType.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\TwoWayMap.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\BanzaiFrame.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\BanzaiPanel.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\CancelReplacePanel.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\ExecutionPanel.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\ExecutionTable.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+//Execution execution = (Execution) ((ExecutionTableModel) dataModel).getExecution(row);
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\OrderEntryPanel.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\OrderPanel.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\banzai\src\main\java\quickfix\examples\banzai\ui\OrderTable.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\executor\src\main\java\quickfix\examples\executor\Application.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\executor\src\main\java\quickfix\examples\executor\Executor.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+//
+// If a session template is detected in the settings, then
+// set up a dynamic session provider.
+//
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\executor\src\main\java\quickfix\examples\executor\MarketDataProvider.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+/**
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\ordermatch\src\main\java\quickfix\examples\ordermatch\Application.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+//String mdReqId = message.getString(MDReqID.FIELD);
+//int marketDepth = message.getInt(MarketDepth.FIELD);
+// empty
+// empty
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\ordermatch\src\main\java\quickfix\examples\ordermatch\IdGenerator.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\ordermatch\src\main\java\quickfix\examples\ordermatch\Main.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\ordermatch\src\main\java\quickfix\examples\ordermatch\Market.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\ordermatch\src\main\java\quickfix\examples\ordermatch\Order.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.
+________________________________________________________________________________________
+E:/AllLangDS/ds/java/quickfixj-master\quickfixj-master\quickfixj-examples\ordermatch\src\main\java\quickfix\examples\ordermatch\OrderMatcher.java
+/*******************************************************************************
+//www.quickfixengine.org/LICENSE for licensing information.

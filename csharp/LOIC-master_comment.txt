@@ -1,0 +1,2977 @@
+﻿/* collection of some upper layer protocol stress-testing
+/// <summary>
+/// Abstract class cHLDos contributed by B²
+/// </summary>
+/// <summary>
+/// Shows if all possible sockets are build.
+/// TRUE as long as the maximum amount of sockets is NOT reached.
+/// </summary>
+/// <summary>
+/// Set or get the current working state.
+/// </summary>
+/// <summary>
+/// Amount of send requests.
+/// </summary>
+/// <summary>
+/// Amount of received responses / packets.
+/// </summary>
+/// <summary>
+/// Amount of failed packets / requests.
+/// </summary>
+/// <summary>
+/// The time in milliseconds between the creation of new sockets
+/// </summary>
+/// <summary>
+/// The timeout in seconds between requests for the same connection.
+/// </summary>
+/// <summary>
+/// override this if you want to test the settings before spreading the word to the hivemind!
+/// should make a single connection and check for the expected outcome!
+/// </summary>
+/// <summary>
+/// ReCoil basically does a "reverse" DDOS
+/// Requirements: the targeted "file" has to be larger than 24 KB (bigger IS better ;) !)
+/// </summary>
+/// <remarks>
+/// it sends a complete legimit request but throttles the download down to nearly nothing .. just enough to keep the connection alive
+/// the attack-method is basically the same as slowloris ... bind the socket as long as possible and eat up as much as you can
+/// apache servers crash nearly in an instant. this attack however can NOT be mitigated with http-ready and mods like that.
+/// this attack simulates sth like a massive amount of mobile devices running shortly out of coverage (like driving through a tunnel)
+///
+/// due to the nature of the congestian-response this could maybe taken a step further to self-feeding congestion-cascades
+/// if done "properly" in a distributed manner together with packet-floods.(??)
+///
+/// Limitations / Disadvantages:
+/// this does NOT work if you are behind anything like a proxy / caching-stuff.
+/// in this implementation however we are bound to the underlying system-/net-buffers ...
+/// due to that the required size of the targeted file differs -.-
+/// Dataflow: {NET} --> {WINSOCK-Buffer} --> ClientSocket .. so we have to make sure the actual data exceeds
+/// the winsock-buffer + clientsocket-buffer, but we can ONLY change the latter.
+/// from what i could find on a brief search / test the winsock buffer for a 10/100 links lies around 16-18KB
+/// where 1 GBit links have an underlying buffer around 64KB (size really does matter :P )
+///
+/// what to target?:
+/// although it might makes sense to target pictures or other large files on the server this doesn't really makes sense!
+/// the server could (and in most cases does - except for apache) always read directly from the file-stream resulting in nearly 0 needed RAM
+/// --> always target dynamic content! this has to be generated on the fly / pulled fom a DB
+/// and therefor most likely ends up in the RAM!
+///
+/// high-value targets / worst case szenario:
+/// as it seems the echo statement in php writes directly to the socket .. considering this it should be possible to
+/// take down the back-end infrastructure if the page does an early flush causing the congestation while still holding DB-conns etc.
+/// </remarks>
+/// <summary>
+/// creates the ReCoil object. <.<
+/// </summary>
+/// <param name="dns">DNS string of the target</param>
+/// <param name="ip">IP string of a specific server. Use this ONLY if the target does loadbalancing between different IPs and you want to target a specific IP. normally you want to provide an empty string!</param>
+/// <param name="port">the Portnumber. however so far this class only understands HTTP.</param>
+/// <param name="subsite">the path to the targeted site / document. (remember: the file has to be at least around 24KB!)</param>
+/// <param name="delay">time in milliseconds between the creation of new sockets.</param>
+/// <param name="timeout">time in seconds between request on the same connection. the higher the better .. but should be UNDER the timout from the server. (30 seemed to be working always so far!)</param>
+/// <param name="random">adds a random string to the subsite so that every new connection requests a new file. (use on searchsites or to bypass the cache / proxy)</param>
+/// <param name="nSockets">the amount of sockets for this object</param>
+/// <param name="usegZip">turns on the gzip / deflate header to check for: CVE-2009-1891 - keep in mind, that the compressed file still has to be larger than ~24KB! (maybe use on large static files like pdf etc?)</param>
+//hopefully they know what they are doing :)
+// 30 seconds
+// we reset this! - meaning of this counter changes in this context!
+// set minimal content-length to 16KB
+// SET STATE TO CONNECTING //
+// forget about slow! .. we have enough saveguards in place!
+// beware of shitstorm of 10035 - 10037 errors o.O
+// some damn fail checks (and resolving dynamic redirects -.-)
+// parse and follow the redirect
+// checking if the content-length is long enough to work with this!
+//well, what doo?
+// we rely on this in the dl-loop!
+// keep the sockets alive
+// here's the downfall: if the server at one point decides to just discard the socket
+// and not close / reset the connection we are stuck with a half-closed connection
+// testing for it doesn't work, because the server than resets the connection in order
+// to respond to the new request ... so we have to rely on the connection timeout!
+// the "requested" number in the stats shows the actual open sockets
+// not so sure about the graceful shutdown ... but why not?
+// class ReCoil
+/// <summary>
+/// SlowLoic is the port of RSnake's SlowLoris
+/// </summary>
+/// <summary>
+/// creates the SlowLoic / -Loris object. <.<
+/// </summary>
+/// <param name="dns">DNS string of the target</param>
+/// <param name="ip">IP string of a specific server. Use this ONLY if the target does loadbalancing between different IPs and you want to target a specific IP. normally you want to provide an empty string!</param>
+/// <param name="port">the Portnumber. however so far this class only understands HTTP.</param>
+/// <param name="subsite">the path to the targeted site / document. (remember: the file has to be at least around 24KB!)</param>
+/// <param name="delay">time in milliseconds between the creation of new sockets.</param>
+/// <param name="timeout">time in seconds between a new partial header is sent on the same connection. the higher the better .. but should be UNDER the READ-timeout from the server. (30 seemed to be working always so far!)</param>
+/// <param name="random">adds a random string to the subsite</param>
+/// <param name="nSockets">the amount of sockets for this object</param>
+/// <param name="randcmds">randomizes the sent header for every request on the same socket. (however all sockets send the same partial header during the same cyclus)</param>
+/// <param name="useGet">if set to TRUE it uses the GET-command - due to the fact that http-Ready mitigates this change this to FALSE to use POST</param>
+/// <param name="usegZip">turns on the gzip / deflate header to check for: CVE-2009-1891</param>
+//hopefully they know what they are doing :)
+// 30 seconds
+// we reset this! - meaning of this counter changes in this context!
+// header set-up
+// SET STATE TO CONNECTING //
+// we have to do this really slow
+// keep the sockets alive
+// the "requested" number in the stats shows the actual open sockets
+// this number is actually BS .. but we wanna see sth happen :D
+// not so sure about the graceful shutdown ... but why not?
+// class SlowLoic
+//start of ICMP class
+/// <summary>
+/// Create the ICMP object, because we need that, for reasons
+/// </summary>
+//if we're sending messages, fragment as greater processing power needed on server to reconstruct
+//not sending messages, don't fragment, ddos through straight volume of requests
+//while working away
+//fill an array with 0 to 65499 random bytes bytes
+//send the data with a timeout value of 10ms
+//dispose of the pingSender because why do WE need to see the replies ;)
+/* LOIC - Low Orbit Ion Cannon
+/// <summary>
+/// Required designer variable.
+/// </summary>
+/// <summary>
+/// Clean up any resources being used.
+/// </summary>
+/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+/// <summary>
+/// Required method for Designer support - do not modify
+/// the contents of this method with the code editor.
+/// </summary>
+//
+// txtEULA
+//
+//
+// btnAccept
+//
+//
+// btnDecline
+//
+//
+// chkEULA
+//
+//
+// frmEULA
+//
+//bit.ly/?u=";
+//is.gd/create.php?longurl=";
+/// <summary>
+/// Erforderliche Designervariable.
+/// </summary>
+/// <summary>
+/// Verwendete Ressourcen bereinigen.
+/// </summary>
+/// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+/// <summary>
+/// Erforderliche Methode für die Designerunterstützung.
+/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+/// </summary>
+//
+// btnUpdate
+//
+//
+// groupBox1
+//
+//
+// txtHivemind
+//
+//
+// label2
+//
+//
+// txtDate
+//
+//
+// btnShorten
+//
+//
+// groupBox2
+//
+//
+// txtOverlord
+//
+//
+// rbbitly
+//
+//
+// rbisgd
+//
+//
+// btnCancel
+//
+//
+// frmEZGrab
+//
+/* LOIC - Low Orbit Ion Cannon
+/// <summary>
+/// Initializes a new instance of the <see cref="LOIC.frmMain"/> class.
+/// </summary>
+/// <param name="hive">Whether to enter hive mode.</param>
+/// <param name="hide">Whether to hide the form.</param>
+/// <param name="ircserver">The irc server.</param>
+/// <param name="ircport">The irc port.</param>
+/// <param name="ircchannel">The irc channel.</param>
+/* Lets try this! */
+// Display EULA
+// Bail out if declined
+// Save EULA acceptance
+// IRC
+/// <summary>
+/// Attack the specified target
+/// </summary>
+/// <param name="toggle">Whether to toggle.</param>
+/// <param name="on">Whether the attack should start.</param>
+/// <param name="silent">Whether to silence error output.</param>
+// Protect against race condition
+// Analysis disable once EmptyGeneralCatchClause
+//let's lock down the controls, that could actually change the creation of new sockets
+/// <summary>
+/// What the fuck?
+/// </summary>
+/// <param name="message">Message.</param>
+/// <param name="silent">If set to <c>true</c> silent.</param>
+/// <summary>
+/// Lock on IP target.
+/// </summary>
+/// <param name="silent">Silent?</param>
+/// <summary>
+/// Lock on URL target.
+/// </summary>
+/// <param name="silent">Silent?</param>
+//"))
+//", tURL);
+/// <summary>
+/// Hive stuff.
+/// </summary>
+/// <param name="enabled">If set to <c>true</c> enabled.</param>
+// Is everything ok?
+// We are starting connection. Disable input in IRC boxes.
+// Lets try this!
+// Spawn a thread to handle the listen.
+// Analysis disable once EmptyGeneralCatchClause
+// Analysis disable once EmptyGeneralCatchClause
+/// <summary>
+/// IRC listening thread.
+/// </summary>
+/// <summary>
+/// Handles the IRC OnDisconnected event.
+/// </summary>
+/// <param name="o">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnConnected event.
+/// </summary>
+/// <param name="o">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnNames event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+// we don't want to overwrite the Topic thingy on connect!
+/// <summary>
+/// Handles the IRC OnOp event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnDeOp event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnPart event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnQuit event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnTopic event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnTopicChange event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnNickChange event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the IRC OnKick event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Sets the status.
+/// </summary>
+/// <param name="status">Status.</param>
+/// <summary>
+/// Handles the IRC OnMessage event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+//authenticate
+/// <summary>
+/// Checks the parameters.
+/// </summary>
+/// <param name="pars">Pars.</param>
+//HTTP
+//TCP_UDP
+//HTTP
+//TCP_UDP
+/// <summary>
+/// Handles the IRC OnReadLine event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+// 422: motd missing // 376: end of motd
+/// <summary>
+/// Handles the Form Load event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the Form Closed event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+// Analysis disable once EmptyGeneralCatchClause
+/// <summary>
+/// Handles the cmdTargetURL Click event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the cmdTargetIP Click event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the txtTarget Enter event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the cmdAttack Click event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the tShowStats Tick event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+// Protect against null reference and race condition
+/// <summary>
+/// Handles the tbSpeed ValueChanged event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the enableHive CheckedChanged event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the disableHive CheckedChanged event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+/// <summary>
+/// Handles the label24 Click event.
+/// </summary>
+/// <param name="sender">Sender.</param>
+/// <param name="e">EventArgs.</param>
+//github.com/NewEraCracker/LOIC");
+/// <summary>
+/// Decodes the commands and if necessary (re)starts the Attack.
+/// Works with the Captures from RegEx.
+/// </summary>
+/// <param name="cmds">the CaptureCollection containing a collection of commands</param>
+/// <param name="vals">the CaptureCollection containing a collection of values corresponding to the commands.</param>
+/// <returns>True if the commands were successfully loaded. False in case of any error.</returns>
+//HTTP
+//TCP_UDP
+//HTTP
+//TCP_UDP
+//ret = true;
+// might be not a bad idea to include a NTP-lookup before this?
+// let's reset the other values -.-
+/// <summary>
+/// Resolves and decodes the commands from the <paramref name="url"/> URL. (ONLY HTTP!)
+/// Calls <seealso cref="parseOLUrlCmd"/> for the actual decoding.
+/// </summary>
+/// <param name="url">URL-String. Either a shortened URL (from url-redirect-services) or the direct URL-encoded commands</param>
+/// <returns>True if the commands were successfully loaded. False in case of any error.</returns>
+// most likely the url was either not an URI at all or it was not a redirect ... maybe consider it a backup?
+/// <summary>
+/// Refreshes and maintains the Overlord-controlled Settings.
+/// </summary>
+/// <param name="enabled">true to enable and autorefresh - false to stop</param>
+// who knows at which door we are knocking o_O
+//(\\S+))+";
+//string s = var_dump(matches, 0);
+// <a class="LO bu|tar r?" href="target">
+// LOIC: URL
+// oops .. the entered URI seems to be the command
+//OMG ... Panic.Start(); .. btw: we switch to manual control and keep lazoring :D
+//no OverLord .. no need for the Zergrush anymore?
+//hive.mind/go?@targetip=" + txtTargetIP.Text + "@&@targethost=" + txtTargetURL.Text
+// TCP_UDP or ICMP
+// TCP_UDP
+// HTTP_ReCoil_slowLoic
+// HTTP_ReCoil_slowLoic
+// ReCoil_slowLoic_ICMP
+// HTTP_ReCoil_slowLoic
+// TCP_UDP_HTTP_ReCoil
+// HTTP_slowLoic
+/// <summary>
+/// Required designer variable.
+/// </summary>
+/// <summary>
+/// Clean up any resources being used.
+/// </summary>
+/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+/// <summary>
+/// Required method for Designer support - do not modify
+/// the contents of this method with the code editor.
+/// </summary>
+//
+// groupBox1
+//
+//
+// label2
+//
+//
+// cmdTargetIP
+//
+//
+// txtTargetIP
+//
+//
+// label1
+//
+//
+// cmdTargetURL
+//
+//
+// txtTargetURL
+//
+//
+// groupBox2
+//
+//
+// txtTarget
+//
+//
+// groupBox3
+//
+//
+// chkAllowGzip
+//
+//
+// chkUseGet
+//
+//
+// label3
+//
+//
+// txtSLSpT
+//
+//
+// chkMsgRandom
+//
+//
+// chkRandom
+//
+//
+// lbSepOptions
+//
+//
+// label18
+//
+//
+// label17
+//
+//
+// label9
+//
+//
+// label7
+//
+//
+// label4
+//
+//
+// label6
+//
+//
+// label20
+//
+//
+// chkWaitReply
+//
+//
+// txtData
+//
+//
+// txtSubsite
+//
+//
+// txtTimeout
+//
+//
+// txtThreads
+//
+//
+// cbMethod
+//
+//
+// txtPort
+//
+//
+// tbSpeed
+//
+//
+// groupBox4
+//
+//
+// cmdAttack
+//
+//
+// groupBox5
+//
+//
+// lbSepStatus
+//
+//
+// lbFailed
+//
+//
+// lbRequested
+//
+//
+// label22
+//
+//
+// label23
+//
+//
+// lbDownloaded
+//
+//
+// lbDownloading
+//
+//
+// lbRequesting
+//
+//
+// lbConnecting
+//
+//
+// lbIdle
+//
+//
+// label12
+//
+//
+// label13
+//
+//
+// label14
+//
+//
+// label15
+//
+//
+// label16
+//
+//
+// label24
+//
+//
+// textOLServer
+//
+//overlord.com:8100/hidden/go.lcs");
+//
+// textOLTime
+//
+//
+// chkbOLUp
+//
+//
+// tShowStats
+//
+//
+// disableHive
+//
+//
+// enableHive
+//
+//
+// label25
+//
+//
+// txtIRCserver
+//
+//
+// txtIRCport
+//
+//
+// txtIRCchannel
+//
+//
+// pBanner
+//
+//
+// label8
+//
+//
+// label26
+//
+//
+// label27
+//
+//
+// enableOverlord
+//
+//
+// labelOLStatus
+//
+//
+// label28
+//
+//
+// tCheckOL
+//
+//
+// tZergRush
+//
+//
+// frmMain
+//
+/* LOIC - Low Orbit Ion Cannon
+/// <summary>
+/// Required designer variable.
+/// </summary>
+/// <summary>
+/// Clean up any resources being used.
+/// </summary>
+/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+/// <summary>
+/// Required method for Designer support - do not modify
+/// the contents of this method with the code editor.
+/// </summary>
+//
+// frmWtf
+//
+/* LOIC - Low Orbit Ion Cannon
+/*{7}{5}{6}{7}", method, subsite, (subsite_random ? RandomString() : ""), host, RandomUserAgent(), (gzip ? "Accept-Encoding: gzip, deflate\r\n" : ""), (keep_alive > 0 ? String.Format("Keep-Alive: {0}\r\nConnection: keep-alive\r\n", keep_alive) : ""), "\r\n"));
+/* LOIC - Low Orbit Ion Cannon
+// Protect against race condition
+// SET STATE TO READY //
+// SET STATE TO CONNECTING //
+// SET STATE TO REQUESTING //
+// SET STATE TO DOWNLOADING // REQUESTED++
+// SET STATE TO COMPLETED // DOWNLOADED++
+// Analysis disable once EmptyGeneralCatchClause
+/* LOIC - Low Orbit Ion Cannon
+/* LOIC - Low Orbit Ion Cannon
+/* LOIC - Low Orbit Ion Cannon
+// IRC
+//if no server entered let it crash
+//default
+//default
+/* LOIC - Low Orbit Ion Cannon
+/// <summary>
+/// Protocol.
+/// </summary>
+/// <summary>
+/// No (invalid) protocol.
+/// </summary>
+/// <summary>
+/// Transmission Control Protocol.
+/// </summary>
+/// <summary>
+/// User Datagram Protocol.
+/// </summary>
+/// <summary>
+/// HyperText Transfer Protocol.
+/// </summary>
+/// <summary>
+/// XXX: Must be documented.
+/// </summary>
+/// <summary>
+/// XXX: Must be documented.
+/// </summary>
+///<summary>
+/// ICMP Protocol method
+/// </summary>
+/* LOIC - Low Orbit Ion Cannon
+/* LOIC - Low Orbit Ion Cannon
+/* LOIC - Low Orbit Ion Cannon
+// SET STATE TO READY //
+// SET STATE TO CONNECTING //
+// SET STATE TO REQUESTING //
+// SET STATE TO REQUESTING //
+// Analysis disable once EmptyGeneralCatchClause
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/Consts.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/EventArgs.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/// <summary>
+///
+/// </summary>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/Exceptions.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <threadsafety static="true" instance="true" />
+/// <threadsafety static="true" instance="true" />
+/// <threadsafety static="true" instance="true" />
+/// <threadsafety static="true" instance="true" />
+/// <threadsafety static="true" instance="true" />
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/Logger.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/*
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/Channel.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/// <summary>
+///
+/// </summary>
+/// <param name="name"> </param>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/ChannelUser.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+/// This class manages the information of a user within a channel.
+/// </summary>
+/// <remarks>
+/// only used with channel sync
+/// </remarks>
+/// <threadsafety static="true" instance="true" />
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"> </param>
+/// <param name="ircuser"> </param>
+/// <summary>
+/// Gets the channel name
+/// </summary>
+/// <summary>
+/// Gets the server operator status of the user
+/// </summary>
+/// <summary>
+/// Gets or sets the op flag of the user (+o)
+/// </summary>
+/// <remarks>
+/// only used with channel sync
+/// </remarks>
+/// <summary>
+/// Gets or sets the voice flag of the user (+v)
+/// </summary>
+/// <remarks>
+/// only used with channel sync
+/// </remarks>
+/// <summary>
+/// Gets the away status of the user
+/// </summary>
+/// <summary>
+/// Gets the underlaying IrcUser object
+/// </summary>
+/// <summary>
+/// Gets the nickname of the user
+/// </summary>
+/// <summary>
+/// Gets the identity (username) of the user, which is used by some IRC networks for authentication.
+/// </summary>
+/// <summary>
+/// Gets the hostname of the user,
+/// </summary>
+/// <summary>
+/// Gets the supposed real name of the user.
+/// </summary>
+/// <summary>
+/// Gets the server the user is connected to.
+/// </summary>
+/// <value> </value>
+/// <summary>
+/// Gets or sets the count of hops between you and the user's server
+/// </summary>
+/// <summary>
+/// Gets the list of channels the user has joined
+/// </summary>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/Delegates.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/EventArgs.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/IrcClient.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+/// This layer is an event driven high-level API with all features you could need for IRC programming.
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+// private bool             _PassiveChannelSyncing;
+/// <summary>
+/// Enables/disables the active channel sync feature.
+/// Default: false
+/// </summary>
+/// <summary>
+/// Enables/disables the passive channel sync feature. Not implemented yet!
+/// </summary>
+/*
+/// <summary>
+/// Sets the ctcp version that should be replied on ctcp version request.
+/// </summary>
+/// <summary>
+/// Enables/disables auto joining of channels when invited.
+/// Default: false
+/// </summary>
+/// <summary>
+/// Enables/disables automatic rejoining of channels when a connection to the server is lost.
+/// Default: false
+/// </summary>
+/// <summary>
+/// Enables/disables auto rejoining of channels when kicked.
+/// Default: false
+/// </summary>
+/// <summary>
+/// Enables/disables auto relogin to the server after a reconnect.
+/// Default: false
+/// </summary>
+/// <summary>
+/// Enables/disables auto nick handling on nick collisions
+/// Default: true
+/// </summary>
+/// <summary>
+/// Enables/disables support for non rfc features.
+/// Default: false
+/// </summary>
+/// <summary>
+/// Gets the nickname of us.
+/// </summary>
+/// <summary>
+/// Gets the list of nicknames of us.
+/// </summary>
+/// <summary>
+/// Gets the supposed real name of us.
+/// </summary>
+/// <summary>
+/// Gets the username for the server.
+/// </summary>
+/// <remarks>
+/// System username is set by default
+/// </remarks>
+/// <summary>
+/// Gets the alphanumeric mode mask of us.
+/// </summary>
+/// <summary>
+/// Gets the numeric mode mask of us.
+/// </summary>
+/// <summary>
+/// Returns if we are away on this connection
+/// </summary>
+/// <summary>
+/// Gets the password for the server.
+/// </summary>
+/// <summary>
+/// Gets the list of channels we are joined.
+/// </summary>
+/// <summary>
+/// Gets the server message of the day.
+/// </summary>
+/// <summary>
+/// This class manages the connection server and provides access to all the objects needed to send and receive messages.
+/// </summary>
+/// <summary>
+/// Connection parameters required to establish an server connection.
+/// </summary>
+/// <param name="addresslist">The list of server hostnames.</param>
+/// <param name="port">The TCP port the server listens on.</param>
+/// <overloads>
+/// Reconnects to the current server.
+/// </overloads>
+/// <param name="login">If the login data should be sent, after successful connect.</param>
+/// <param name="channels">If the channels should be rejoined, after successful connect.</param>
+//reset the nick to the original nicklist
+/// <param name="login">If the login data should be sent, after successful connect.</param>
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nicklist">The users list of 'nick' names which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <param name="usermode">A numeric mode parameter.
+///   <remark>
+///     Set to 0 to recieve wallops and be invisible.
+///     Set to 4 to be invisible and not receive wallops.
+///   </remark>
+/// </param>
+/// <param name="username">The user's machine logon name</param>
+/// <param name="password">The optional password can and MUST be set before any attempt to register
+///  the connection is made.</param>
+// here we set the nickname which we will try first
+// XXX: IRCv3.1 Client Capability Negotiation
+// RFC 2812
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nicklist">The users list of 'nick' names which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <param name="usermode">A numeric mode parameter.
+/// Set to 0 to recieve wallops and be invisible.
+/// Set to 4 to be invisible and not receive wallops.</param>
+/// <param name="username">The user's machine logon name</param>
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nicklist">The users list of 'nick' names which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <param name="usermode">A numeric mode parameter.
+/// Set to 0 to recieve wallops and be invisible.
+/// Set to 4 to be invisible and not receive wallops.</param>
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nicklist">The users list of 'nick' names which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nick">The users 'nick' name which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <param name="usermode">A numeric mode parameter.
+/// Set to 0 to recieve wallops and be invisible.
+/// Set to 4 to be invisible and not receive wallops.</param>
+/// <param name="username">The user's machine logon name</param>
+/// <param name="password">The optional password can and MUST be set before any attempt to register
+///  the connection is made.</param>
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nick">The users 'nick' name which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <param name="usermode">A numeric mode parameter.
+/// Set to 0 to recieve wallops and be invisible.
+/// Set to 4 to be invisible and not receive wallops.</param>
+/// <param name="username">The user's machine logon name</param>
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nick">The users 'nick' name which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <param name="usermode">A numeric mode parameter.
+/// Set to 0 to recieve wallops and be invisible.
+/// Set to 4 to be invisible and not receive wallops.</param>
+/// <summary>
+/// Login parameters required identify with server connection
+/// </summary>
+/// <remark>Login is used at the beginning of connection to specify the username, hostname and realname of a new user.</remark>
+/// <param name="nick">The users 'nick' name which may NOT contain spaces</param>
+/// <param name="realname">The users 'real' name which may contain space characters</param>
+/// <summary>
+/// Determine if a specifier nickname is you
+/// </summary>
+/// <param name="nickname">The users 'nick' name which may NOT contain spaces</param>
+/// <returns>True if nickname belongs to you</returns>
+/// <summary>
+/// Determines if your nickname can be found in a specified channel
+/// </summary>
+/// <param name="channelname">The name of the channel you wish to query</param>
+/// <returns>True if you are found in channel</returns>
+/// <summary>
+/// Determine if a specified nickname can be found in a specified channel
+/// </summary>
+/// <param name="channelname">The name of the channel you wish to query</param>
+/// <param name="nickname">The users 'nick' name which may NOT contain spaces</param>
+/// <returns>True if nickname is found in channel</returns>
+/// <summary>
+/// Returns user information
+/// </summary>
+/// <param name="nickname">The users 'nick' name which may NOT contain spaces</param>
+/// <returns>IrcUser object of requested nickname</returns>
+/// <summary>
+/// Returns extended user information including channel information
+/// </summary>
+/// <param name="channelname">The name of the channel you wish to query</param>
+/// <param name="nickname">The users 'nick' name which may NOT contain spaces</param>
+/// <returns>ChannelUser object of requested channelname/nickname</returns>
+/// <summary>
+///
+/// </summary>
+/// <param name="channelname">The name of the channel you wish to query</param>
+/// <returns>Channel object of requested channel</returns>
+/// <summary>
+/// Gets a list of all joined channels on server
+/// </summary>
+/// <returns>String array of all joined channel names</returns>
+// conform to RFC 2812
+// we want the exact position of ":" not beginning from the space
+// lets see if we have events or internal messagehandler for it
+// AutoReconnect is handled in IrcConnection._OnConnectionError
+// store the key using channel sync
+// lets clean it baby, powered by Mr. Proper
+/// <summary>
+///
+/// </summary>
+//if we reach the end stay there
+// check if this replycode is known in the RFC
+// special IRC messages
+// XXX: IRCv3.1 Client Capability Negotiation
+/// <summary>
+/// Removes a specified user from all channel lists
+/// </summary>
+/// <param name="nickname">The users 'nick' name which may NOT contain spaces</param>
+// he is nowhere else, lets kill him
+/// <summary>
+/// Removes a specified user from a specified channel list
+/// </summary>
+/// <param name="channelname">The name of the channel you wish to query</param>
+/// <param name="nickname">The users 'nick' name which may NOT contain spaces</param>
+/// <summary>
+///
+/// </summary>
+/// <param name="ircdata">Message data containing channel mode information</param>
+/// <param name="mode">Channel mode</param>
+/// <param name="parameter">List of supplied paramaters</param>
+// bring the enumerator to the 1. element
+// sanity check
+// update the op list
+// update the user op status
+// sanity check
+// update the op list
+// update the user op status
+// sanity check
+// update the halfop list
+// update the user halfop status
+// sanity check
+// update the halfop list
+// update the user halfop status
+// sanity check
+// update the voice list
+// update the user voice status
+// sanity check
+// update the voice list
+// update the user voice status
+// <internal messagehandler>
+/// <summary>
+/// Event handler for ping messages
+/// </summary>
+/// <param name="ircdata">Message data containing ping information</param>
+/// <summary>
+/// Event handler for PONG messages
+/// </summary>
+/// <param name="ircdata">Message data containing pong information</param>
+/// <summary>
+/// Event handler for error messages
+/// </summary>
+/// <param name="ircdata">Message data containing error information</param>
+/// <summary>
+/// Event handler for join messages
+/// </summary>
+/// <param name="ircdata">Message data containing join information</param>
+// we joined the channel
+// request channel mode
+// request wholist
+// request banlist
+// someone else joined the channel
+// request the who data
+/// <summary>
+/// Event handler for part messages
+/// </summary>
+/// <param name="ircdata">Message data containing part information</param>
+/// <summary>
+/// Event handler for kick messages
+/// </summary>
+/// <param name="ircdata">Message data containing kick information</param>
+/// <summary>
+/// Event handler for quit messages
+/// </summary>
+/// <param name="ircdata">Message data containing quit information</param>
+// no need to handle if we quit, disconnect event will take care
+// sanity checks, freshirc is very broken about RFC
+/// <summary>
+/// Event handler for private messages
+/// </summary>
+/// <param name="ircdata">Message data containing private message information</param>
+/// <summary>
+/// Event handler for notice messages
+/// </summary>
+/// <param name="ircdata">Message data containing notice information</param>
+/// <summary>
+/// Event handler for topic messages
+/// </summary>
+/// <param name="ircdata">Message data containing topic information</param>
+/// <summary>
+/// Event handler for nickname messages
+/// </summary>
+/// <param name="ircdata">Message data containing nickname information</param>
+// nickname change is your own
+// if we don't have any info about him, don't update him!
+// (only queries or ourself in no channels)
+// update his nickname
+// remove the old entry
+// remove first to avoid duplication, Foo -> foo
+// add him as new entry and new nickname as key
+// now the same for all channels he is joined
+// remove first to avoid duplication, Foo -> foo
+/// <summary>
+/// Event handler for invite messages
+/// </summary>
+/// <param name="ircdata">Message data containing invite information</param>
+/// <summary>
+/// Event handler for mode messages
+/// </summary>
+/// <param name="ircdata">Message data containing mode information</param>
+// my user mode changed
+// channel mode changed
+/// <summary>
+/// Event handler for channel mode reply messages
+/// </summary>
+/// <param name="ircdata">Message data containing reply information</param>
+/// <summary>
+/// Event handler for welcome reply messages
+/// </summary>
+/// <remark>
+/// Upon success, the client will receive an RPL_WELCOME (for users) or
+/// RPL_YOURESERVICE (for services) message indicating that the
+/// connection is now registered and known the to the entire IRC network.
+/// The reply message MUST contain the full client identifier upon which
+/// it was registered.
+/// </remark>
+/// <param name="ircdata">Message data containing reply information</param>
+// updating our nickname, that we got (maybe cutted...)
+/// <summary>
+/// Event handler for topic reply messages
+/// </summary>
+/// <param name="ircdata">Message data containing topic information</param>
+/// <summary>
+/// Event handler for topic reply messages == null
+/// </summary>
+/// <param name="ircdata">Message data containing topic information</param>
+/// <summary>
+/// Event handler for name reply messages
+/// </summary>
+/// <param name="ircdata">Message data containing name reply information</param>
+// RFC VIOLATION
+// some IRC network do this and break our channel sync...
+/// <summary>
+/// Event handler for end of names reply messages
+/// </summary>
+/// <param name="ircdata">Message data containing end of names reply information</param>
+/// <summary>
+/// Event handler for away messages
+/// </summary>
+/// <param name="ircdata">Message data containing away reply information</param>
+/// <summary>
+/// Event handler for unaway messages
+/// </summary>
+/// <param name="ircdata">Message data containing unaway reply information</param>
+/// <summary>
+/// Event handler for nowaway messages
+/// </summary>
+/// <param name="ircdata">Message data containing nowaway reply information</param>
+/// <summary>
+/// Event handler for who reply messages
+/// </summary>
+/// <param name="ircdata">Message data containing who reply information</param>
+// checking the irc and channel user I only do for sanity!
+// according to RFC they must be known to us already via RPL_NAMREPLY
+// psyBNC is not very correct with this... maybe other bouncers too
+// this channel may not be where we are joined!
+// see RFC 1459 and RFC 2812, it must return a channelname
+// we use this channel info when possible...
+/// <summary>
+/// Event handler for mesage of the day reply messages
+/// </summary>
+/// <param name="ircdata">Message data containing mesage of the day information</param>
+/// <summary>
+/// Event handler for end of mesage of the day reply messages
+/// </summary>
+/// <param name="ircdata">Message data containing end of mesage of the day information</param>
+// TODO, need to sync with the banlist!
+/// <summary>
+/// Event handler for error messages
+/// </summary>
+/// <param name="ircdata">Message data containing error information</param>
+/// <summary>
+/// Event handler for nickname in use error messages
+/// </summary>
+/// <param name="ircdata">Message data containing nickname in use error information</param>
+// if a nicklist has been given loop through the nicknames
+// if the upper limit of this list has been reached and still no nickname has registered
+// then generate a random nick
+// change the nickname
+// </internal messagehandler>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/IrcMessageData.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+/// This class contains an IRC message in a parsed form
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/// <summary>
+/// Gets the IrcClient object the message originated from
+/// </summary>
+/// <summary>
+/// Gets the combined nickname, identity and hostname of the user that sent the message
+/// </summary>
+/// <example>
+/// nick!ident@host
+/// </example>
+/// <summary>
+/// Gets the nickname of the user that sent the message
+/// </summary>
+/// <summary>
+/// Gets the identity (username) of the user that sent the message
+/// </summary>
+/// <summary>
+/// Gets the hostname of the user that sent the message
+/// </summary>
+/// <summary>
+/// Gets the channel the message originated from
+/// </summary>
+/// <summary>
+/// Gets the message
+/// </summary>
+/// <summary>
+/// Gets the message as an array of strings (splitted by space)
+/// </summary>
+/// <summary>
+/// Gets the raw message sent by the server
+/// </summary>
+/// <summary>
+/// Gets the raw message sent by the server as array of strings (splitted by space)
+/// </summary>
+/// <summary>
+/// Gets the message type
+/// </summary>
+/// <summary>
+/// Gets the message reply code
+/// </summary>
+/// <summary>
+/// Constructor to create an instace of IrcMessageData
+/// </summary>
+/// <param name="ircclient">IrcClient the message originated from</param>
+/// <param name="from">combined nickname, identity and host of the user that sent the message (nick!ident@host)</param>
+/// <param name="nick">nickname of the user that sent the message</param>
+/// <param name="ident">identity (username) of the userthat sent the message</param>
+/// <param name="host">hostname of the user that sent the message</param>
+/// <param name="channel">channel the message originated from</param>
+/// <param name="message">message</param>
+/// <param name="rawmessage">raw message sent by the server</param>
+/// <param name="type">message type</param>
+/// <param name="replycode">message reply code</param>
+// message is optional
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/IrcUser.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+/// This class manages the user information.
+/// </summary>
+/// <remarks>
+/// only used with channel sync
+/// <seealso cref="IrcClient.ActiveChannelSyncing">
+///   IrcClient.ActiveChannelSyncing
+/// </seealso>
+/// </remarks>
+/// <threadsafety static="true" instance="true" />
+/// <summary>
+/// Gets or sets the nickname of the user.
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets or sets the identity (username) of the user which is used by some IRC networks for authentication.
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets or sets the hostname of the user.
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets or sets the supposed real name of the user.
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets or sets the server operator status of the user
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets or sets away status of the user
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets or sets the server the user is connected to
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets or sets the count of hops between you and the user's server
+/// </summary>
+/// <remarks>
+/// Do _not_ set this value, it will break channel sync!
+/// </remarks>
+/// <summary>
+/// Gets the list of channels the user has joined
+/// </summary>
+//return joinedchannels;
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/NonRfcChannel.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/// <summary>
+///
+/// </summary>
+/// <param name="name"> </param>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcClient/NonRfcChannelUser.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"> </param>
+/// <param name="ircuser"> </param>
+/// <summary>
+///
+/// </summary>
+/// <value> </value>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcCommands/IrcCommands.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+// API commands
+/// <summary>
+///
+/// </summary>
+/// <param name="type"></param>
+/// <param name="destination"></param>
+/// <param name="message"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="type"></param>
+/// <param name="destination"></param>
+/// <param name="message"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="data"></param>
+/// <param name="message"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="data"></param>
+/// <param name="message"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="hostmask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="hostmask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="hostmask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="hostmask"></param>
+// non-RFC commands
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+// RFC commands
+/// <summary>
+///
+/// </summary>
+/// <param name="password"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="password"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="username"></param>
+/// <param name="usermode"></param>
+/// <param name="realname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="username"></param>
+/// <param name="usermode"></param>
+/// <param name="realname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="name"></param>
+/// <param name="password"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="name"></param>
+/// <param name="password"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="destination"></param>
+/// <param name="message"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="destination"></param>
+/// <param name="message"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="destination"></param>
+/// <param name="message"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="destination"></param>
+/// <param name="message"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="key"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="key"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="keys"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="keys"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="partmessage"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="partmessage"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="partmessage"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="partmessage"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nicknames"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nicknames"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nicknames"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nicknames"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="comment"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nickname"></param>
+/// <param name="comment"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nickname"></param>
+/// <param name="comment"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nickname"></param>
+/// <param name="comment"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nicknames"></param>
+/// <param name="comment"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="nicknames"></param>
+/// <param name="comment"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nicknames"></param>
+/// <param name="comment"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="nicknames"></param>
+/// <param name="comment"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="query"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="query"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="query"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="query"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="servermask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="servermask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="remoteserver"></param>
+/// <param name="servermask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="remoteserver"></param>
+/// <param name="servermask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="targetserver"></param>
+/// <param name="port"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="targetserver"></param>
+/// <param name="port"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="targetserver"></param>
+/// <param name="port"></param>
+/// <param name="remoteserver"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="targetserver"></param>
+/// <param name="port"></param>
+/// <param name="remoteserver"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="type"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="type"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="servicename"></param>
+/// <param name="servicetext"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="servicename"></param>
+/// <param name="servicetext"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channels"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="newtopic"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="channel"></param>
+/// <param name="newtopic"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="newmode"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="newmode"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="distribution"></param>
+/// <param name="info"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="distribution"></param>
+/// <param name="info"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="newnickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="newnickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="ircop"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="ircop"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="mask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="masks"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="masks"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="mask"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="mask"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="masks"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="masks"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="count"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="count"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <param name="count"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <param name="count"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="count"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="count"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <param name="count"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <param name="count"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="comment"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="comment"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="server2"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="server2"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="server2"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="server2"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="awaytext"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="awaytext"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="user"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="user"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="user"></param>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="user"></param>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="user"></param>
+/// <param name="target"></param>
+/// <param name="channel"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="user"></param>
+/// <param name="target"></param>
+/// <param name="channel"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="target"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="wallopstext"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="wallopstext"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nickname"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="nicknames"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="quitmessage"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="comment"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="server"></param>
+/// <param name="comment"></param>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcCommands/Rfc2812.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+// nickname   =  ( letter / special ) *8( letter / digit / special / "-" )
+// letter     =  %x41-5A / %x61-7A       ; A-Z / a-z
+// digit      =  %x30-39                 ; 0-9
+// special    =  %x5B-60 / %x7B-7D
+//                  ; "[", "]", "\", "`", "_", "^", "{", "|", "}"
+/// <summary>
+/// Checks if the passed nickname is valid according to the RFC
+///
+/// Use with caution, many IRC servers are not conform with this!
+/// </summary>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcConnection/Delegates.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcConnection/EventArgs.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcConnection/IrcConnection.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/// <event cref="OnReadLine">
+/// Raised when a \r\n terminated line is read from the socket
+/// </event>
+/// <event cref="OnWriteLine">
+/// Raised when a \r\n terminated line is written to the socket
+/// </event>
+/// <event cref="OnConnect">
+/// Raised before the connect attempt
+/// </event>
+/// <event cref="OnConnect">
+/// Raised on successful connect
+/// </event>
+/// <event cref="OnConnect">
+/// Raised before the connection is closed
+/// </event>
+/// <event cref="OnConnect">
+/// Raised when the connection is closed
+/// </event>
+/// <event cref="OnConnectionError">
+/// Raised when the connection got into an error state
+/// </event>
+/// <event cref="AutoConnectErrorEventHandler">
+/// Raised when the connection got into an error state during auto connect loop
+/// </event>
+/// <summary>
+/// When a connection error is detected this property will return true
+/// </summary>
+/// <summary>
+/// Gets the current address of the connection
+/// </summary>
+/// <summary>
+/// Gets the address list of the connection
+/// </summary>
+/// <summary>
+/// Gets the used port of the connection
+/// </summary>
+/// <summary>
+/// By default nothing is done when the library looses the connection
+/// to the server.
+/// Default: false
+/// </summary>
+/// <value>
+/// true, if the library should reconnect on lost connections
+/// false, if the library should not take care of it
+/// </value>
+/// <summary>
+/// If the library should retry to connect when the connection fails.
+/// Default: false
+/// </summary>
+/// <value>
+/// true, if the library should retry to connect
+/// false, if the library should not retry
+/// </value>
+/// <summary>
+/// Delay between retry attempts in Connect() in seconds.
+/// Default: 30
+/// </summary>
+/// <summary>
+/// To prevent flooding the IRC server, it's required to delay each
+/// message, given in milliseconds.
+/// Default: 200
+/// </summary>
+/// <summary>
+/// On successful registration on the IRC network, this is set to true.
+/// </summary>
+/// <summary>
+/// On successful connect to the IRC server, this is set to true.
+/// </summary>
+/// <summary>
+/// Gets the SmartIrc4net version number
+/// </summary>
+/// <summary>
+/// Gets the full SmartIrc4net version string
+/// </summary>
+/// <summary>
+/// Encoding which is used for reading and writing to the socket
+/// Default: encoding of the system
+/// </summary>
+/// <summary>
+/// Timeout in seconds for receiving data from the socket
+/// Default: 300
+/// </summary>
+/// <summary>
+/// Timeout in seconds for sending data to the socket
+/// Default: 300
+/// </summary>
+/// <summary>
+/// Interval in seconds to run the idle worker
+/// Default: 60
+/// </summary>
+/// <summary>
+/// Interval in seconds to send a PING
+/// Default: 60
+/// </summary>
+/// <summary>
+/// Timeout in seconds for server response to a PING
+/// Default: 150
+/// </summary>
+/// <summary>
+/// Latency between client and the server
+/// </summary>
+/// <summary>
+/// Initializes the message queues, read and write thread
+/// </summary>
+// setup own callbacks
+/// <overloads>this method has 2 overloads</overloads>
+/// <summary>
+/// Connects to the specified server and port, when the connection fails
+/// the next server in the list will be used.
+/// </summary>
+/// <param name="addresslist">List of servers to connect to</param>
+/// <param name="port">Portnumber to connect to</param>
+/// <exception cref="CouldNotConnectException">The connection failed</exception>
+/// <exception cref="AlreadyConnectedException">If there is already an active connection</exception>
+// set timeout, after this the connection will be aborted
+// HACK: we have an encoding that has some kind of preamble
+// like UTF-8 has a BOM, this will confuse the IRCd!
+// Thus we send a \r\n so the IRCd can safely ignore that
+// garbage.
+// Connection was succeful, reseting the connect counter
+// updating the connection error state, so connecting is possible again
+// lets power up our threads
+/// <summary>
+/// Connects to the specified server and port.
+/// </summary>
+/// <param name="address">Server address to connect to</param>
+/// <param name="port">Port number to connect to</param>
+/// <summary>
+/// Reconnects to the server
+/// </summary>
+/// <exception cref="NotConnectedException">
+/// If there was no active connection
+/// </exception>
+/// <exception cref="CouldNotConnectException">
+/// The connection failed
+/// </exception>
+/// <exception cref="AlreadyConnectedException">
+/// If there is already an active connection
+/// </exception>
+/// <summary>
+/// Disconnects from the server
+/// </summary>
+/// <exception cref="NotConnectedException">
+/// If there was no active connection
+/// </exception>
+/// <summary>
+///
+/// </summary>
+/// <param name="blocking"></param>
+// loop as long as we receive messages
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="blocking"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="blocking"></param>
+/// <returns></returns>
+// block till the queue has data, but bail out on connection error
+/// <summary>
+///
+/// </summary>
+/// <param name="data"></param>
+/// <param name="priority"></param>
+/// <summary>
+///
+/// </summary>
+/// <param name="data"></param>
+// lets try to recover the connection
+// make sure we clean up
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="connection"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="connection"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+// WARNING: complex scheduler, don't even think about changing it!
+// only send data if we are succefully registered on the IRC network
+// everything is sent, resetting all counters
+//_CheckBuffer();
+// there is more data to send
+// END OF WARNING, below this you can read/change again ;)
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+/// <param name="connection"></param>
+/// <summary>
+///
+/// </summary>
+/// <summary>
+///
+/// </summary>
+// determines if the response time is ok
+// determines if it need to send another ping yet
+// else connection is fine, just continue
+/*
+//svn.qnetp.net/svn/smartirc/SmartIrc4net/trunk/src/IrcConnection/IrcConnection.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+/*
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/IrcConnection/IrcTcpClient.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+/// <summary>
+///
+/// </summary>
+/// <threadsafety static="true" instance="true" />
+// https://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient%28v=vs.110%29.aspx
+/*
+//svn.qnetp.net/smartirc/SmartIrc4net/tags/0.4.0/src/AssemblyInfo.cs $
+//smartirc4net.sf.net>
+//www.meebey.net>
+//www.gnu.org/licenses/lgpl.txt>
+// Information about this assembly is defined by the following
+// attributes.
+//
+// change them to the information which is associated with the assembly
+// you compile.
+// The assembly version has following format :
+//
+// Major.Minor.Build.Revision
+//
+// You can specify all values by your own or you can build default build and revision
+// numbers with the '*' character (the default):
+// The following attributes specify the key for the sign of your assembly. See the
+// .NET Framework documentation for more information about signing.
+// This is not required, if you don't want signing let these attributes like they're.
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:2.0.50727.5018
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+/// <summary>
+///   A strongly-typed resource class, for looking up localized strings, etc.
+/// </summary>
+// This class was auto-generated by the StronglyTypedResourceBuilder
+// class via a tool like ResGen or Visual Studio.
+// To add or remove a member, edit your .ResX file then rerun ResGen
+// with the /str option, or rebuild your VS project.
+/// <summary>
+///   Returns the cached ResourceManager instance used by this class.
+/// </summary>
+/// <summary>
+///   Overrides the current thread's CurrentUICulture property for all
+///   resource lookups using this strongly typed resource class.
+/// </summary>

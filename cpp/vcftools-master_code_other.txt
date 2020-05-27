@@ -1,0 +1,101 @@
+﻿________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/vcftools-master\vcftools-master\src\cpp\bgzf.c
+/* The MIT License
+// ~defined(_USE_KNETFILE)
+// ~defined(_WIN32)
+// ~defined(_WIN32)
+// ~define(_USE_KNETFILE)
+/* BGZF/GZIP header (speciallized from RFC 1952; little endian):
+// compress_level==-1 for the default level
+// Z_DEFAULT_COMPRESSION==-1
+// get the compress level from the mode string
+// compress the body
+// -15 to disable zlib header/footer
+// write the header
+// the last two bytes are a place holder for the length of the block
+// write the compressed length; -1 to fit 2 bytes
+// write the footer
+// Deflate the block in fp->uncompressed_block into fp->compressed_block. Also adds an extra field that stores the compressed block length.
+// Inflate the block in fp->compressed_block into fp->uncompressed_block
+/* A better way would be to remove the oldest block in the
+// if this happens, a bug!
+// no data read
+// +1 because when writing this number, we used "-1"
+// Do not reset offset if this read follows a seek.
+// wait for condition: to process or all done
+// to quit the thread
+// tid[0] is not used, as the worker 0 is launched by the master
+// worker 0 is effectively launched by the master thread
+// signal all workers to quit
+// worker 0 is effectively launched by the master thread
+// free other data allocated on heap
+// guaranteed by the caller
+// guaranteed that assertion does not fail
+// signal all the workers to compress
+// worker 0 is doing things here
+// wait for all the threads to complete
+// dump data to disk
+// ~ #ifdef BGZF_MT
+// possibly truncated file
+// write an empty block
+// indicates current block has not been loaded
+/* error */
+/* end-of-file */
+________________________________________________________________________________________
+E:/AllLangDS/ds/cpp/vcftools-master\vcftools-master\src\cpp\knetfile.c
+/* The MIT License
+/* Probably I will not do socket programming in the next few years and
+/* In winsock.h, the type of a socket is SOCKET, which is: "typedef
+/* This function tests if the file handler is ready for reading (or
+// 5 seconds time out
+/* This function does not work with Windows due to the lack of
+//beej.us/guide/bgnet/). */
+/* In Unix/Mac, getaddrinfo() is the most convenient way to get
+/* The following two setsockopt() are used by ftplib
+/* MinGW's printf has problem with "%lld" */
+/* In windows, the first thing is to establish the TCP connection. */
+/* A slightly modfied version of the following function also works on
+// open socket
+// get host info
+// connect
+// freehostent(hp); // strangely in MSDN, hp is NOT freed (memory leak?!)
+/* recv() and read() may not read the required length of data with
+// socket is not ready for reading
+/* According to the glibc manual, section 13.2, a zero returned
+/*************************
+// FIXME: this is *VERY BAD* for unbuffered I/O
+//fputc(c, stderr);
+// socket is not ready for writing
+// initialize ->type, ->host, ->retr and ->size
+//") != fn) return 0;
+/* the Linux/Mac version of socket_connect() also recognizes a port
+// place ->fd at offset off
+/**************************
+//") != fn) return 0;
+// set ->http_host
+// get http_proxy
+// set ->host, ->port and ->path
+// when there is no proxy, server name is identical to http_host name.
+//") == proxy)? strdup(proxy + 7) : strdup(proxy);
+// FIXME: I am lazy... But in principle, 64KB should be large enough.
+// read HTTP header; FIXME: bad efficiency
+// prematured header
+// HTTP return code
+// 200 (complete result); then skip beginning of the file
+/********************
+//") == fn) {
+//") == fn) {
+// local file
+/* In windows, O_BINARY is necessary. In Linux/Mac, O_BINARY may
+// on Windows, the following block is necessary; not on UNIX
+/* Be aware that lseek() returns the offset after seeking, while fseek() returns zero on success. */
+// FIXME: can we allow SEEK_END in future?
+// FTP specific
+/* On Linux/Mac, netclose() is an alias of close(), but on
+// FTP specific
+// HTTP specific
+// NCBI FTP, large file
+//ftp.ncbi.nih.gov/1000genomes/ftp/data/NA12878/alignment/NA12878.chrom6.SLX.SRP000032.2009_06.bam", "r");
+//ftp.sanger.ac.uk/pub4/treefam/tmp/index.shtml", "r");
+//www.sanger.ac.uk/Users/lh3/index.shtml", "r");
+//www.sanger.ac.uk/Users/lh3/ex1.bam", "r");

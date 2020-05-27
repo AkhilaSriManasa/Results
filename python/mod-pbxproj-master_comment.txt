@@ -1,0 +1,170 @@
+﻿# MIT License
+#
+# Copyright (c) 2016 Ignacio Calderon aka kronenthaler
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+# This is a backwards-compatibility file. For Unity developers this is the only file it needs to be added to the Unity
+# project.
+# This file will install the proper python package into the user's python's local space, if it's not present at run-time
+# of this script. Afterwards, it will import all necessary modules to the developer to make his/her own script work as
+# before.
+# check if file exists
+# install it if not present
+# force the refresh of the packages
+# import publicly
+#!/usr/bin/env python
+# Inspired by the example at https://pytest.org/latest/goodpractises.html
+# Run nose ensuring that argv simulates running nosetests directly
+# Run nose ensuring that argv simulates running nosetests directly
+# all top level objects are added as variables to this object
+# check if the key maps to a kind of object
+# use key decorators, could simplify the generation of the comments.
+# sections: dict<isa, [tuple(id, obj)]>
+# sections get aggregated under the isa type. Each contains a list of tuples (id, obj) with every object defined
+# iterate over the keys and fill the sections
+# safe-guard: delegate to the parent how to deal with non-object values
+# override to change the way the object is printed out
+# Do a special behavior here while saving to avoid the linear lookup below and therefore
+# be significantly faster.
+# It's not safe to do the above optimization "normally" (outside of saving) since the objects
+# may have been modified by the user, and the cache may therefore be invalid. So we fall back
+# to a linear search.
+# remove empty phases
+# Used to speed up saving the project.
+# initialize the structure using the given tree
+# Initialize the save cache to indicate that we're in a save
+# Clear the cache since future modifications may make it invalid (and we're no longer in a save).
+# MIT License
+#
+# Copyright (c) 2016 Ignacio Calderon aka kronenthaler
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+# make a decision of what function to call based on the -D flag
+# print some information about the build files created.
+# Future addition to the command line:
+# pbxproj flag [options] (--delete | -D) (--all | -A) <project> [--] <flag_name>...
+# make a decision of what function to call based on the -D flag
+# make a decision of what function to call based on the -D flag
+# print some information about the build files created.
+# make a decision of what function to call based on the -D flag
+# remove backup if everything was ok.
+# if it's not forced to add the file stop if the file already exists.
+# no need to create the build_files, done
+# create build_files for the targets
+# special case for the frameworks and libraries to update the search paths
+# the path is absolute and it's outside the scope of the project for linking purposes
+# if it's not forced to add the file stop if the file already exists.
+# load project and add the things
+# create an special group without parent (ref proxies)
+# create the container proxies
+# create the reference proxies
+# add reference proxy to the product group
+# append the result
+# add new PBXFileReference and PBXGroup to the PBXProject object
+# remove the build file from the phase
+# if the build_phase is empty remove it too, unless it's a shell script.
+# remove the build phase from the target
+# remove it iff it's removed from all targets or no build file reference it
+# remove the file from any groups if there is no reference from any target
+# the file is not referenced in any build file, remove it
+# add the top folder as a group, make it the new parent
+# iterate over the objects in the directory
+# exclude dirs or files matching any of the expressions
+# check if the file exists already, if not add it
+# if recursive is true, go deeper, otherwise create the group here.
+# miscellaneous functions, candidates to be extracted and decouple implementation
+# decide the proper tree and path to add
+# create a PBXFileReference for the new file
+# determine the type of the new file:
+# set the file type on the file ref add the files
+# determine the parent and add it to it
+# determine if there is a suitable build phase created
+# if it's a framework and it needs to be embedded
+# add runpath search flag
+# create the build file and add it to the phase
+# returns the absolute path, the relative path and the tree
+# iterate over the children and determine if they are file/group and call the right method.
+# remove the reference from any other group object that could be containing it.
+# search for the mainGroup of the project
+# search for the group without name
+# if there is no parent, create and empty parent group, add it to the objects
+# it's not a group instance, assume it's an id
+# Do a special behavior here while saving to avoid the linear lookup below and therefore
+# be significantly faster.
+# It's not safe to do the above optimization "normally" (outside of saving) since the objects
+# may have been modified by the user, and the cache may therefore be invalid. So we fall back
+# to a linear search.
+# append, if it's assigned and the list only has 1 element it will turn it into a string
+# nothing to remove
+# nothing to remove
+# no attributes remain, remove the element
+# no flags remain, remove the element
+# search on the BuildFiles if there is a build file to be removed, and remove it
+# search for each phase that has a reference to the build file and remove it from it.
+# remove the file reference from it's parent
+# if it's not the right type of children for the group
+# remove from the objects reference
+# remove children if necessary
+# nothing to remove
+# build the recursive/escaped strings and add the flags accordingly
+# groups
+# create tmp directory for results
+# remove tmp directory
+# copy the project.pbxproj, into a file that can be used by the tests
+# copy the project.pbxproj, into a file that can be used by the tests
+# copy the project.pbxproj, into a file that can be used by the tests
+# copy the project.pbxproj, into a file that can be used by the tests
+# groups
+# unknown files are added as resources
+# no tree or no path cannot be added
+# no create build file flag
+# 2 source files are created 1 x target
+# 2 source files are created 1 x target
+# 2 source files are created 1 x target
+# nothing to do if the file is absolute but doesn't exist
+# 2 source files are created 1 x target
+# should add test.framework and testLibrary.a and 2 groups, samples, dirA
+# dirA, test.framework, testLibrary.a
+# should add test.framework and testLibrary.a and 2 groups, samples, dirA
+# dirA, test.framework, testLibrary.a
+# dirB, fileA.m
+# fileB.m
+# should add test.framework and testLibrary.a and 2 groups, samples, dirA
+# dirA, -test.framework, -testLibrary.a
+# dirB, -fileA.m
+# -fileB.m
+# check that the buildFiles where added
+# check that the buildFiles where added
+# nothing to do if the file is absolute but doesn't exist
