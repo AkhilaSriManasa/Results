@@ -13,12 +13,12 @@ def sent_to_words(sentences):
     for sentence in sentences:
         yield(gensim.utils.simple_preprocess(str(sentence), deacc=True))  # deacc=True removes punctuations
 
-with open('resultpython_comment.csv', 'w', newline='',encoding="utf-8-sig", errors='ignore') as result_file:
+with open('resultcsharp_comment.csv', 'w', newline='',encoding="utf-8-sig", errors='ignore') as result_file:
     writer = csv.writer(result_file)
     writer.writerow(["Name", "T0","T1","T2","T3","T4","Topics"])
 
 
-    for root, dirs, files in os.walk(('./python')):
+    for root, dirs, files in os.walk(('./csharp')):
         for file in files:
             # print(file)
             if(file.endswith("comment.txt")):
